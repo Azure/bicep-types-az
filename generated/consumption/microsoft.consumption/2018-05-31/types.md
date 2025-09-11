@@ -1,7 +1,8 @@
 # Microsoft.Consumption @ 2018-05-31
 
-## Resource Microsoft.Consumption/pricesheets@2018-05-31 (ReadOnly)
-* **Valid Scope(s)**: Subscription, Extension
+## Resource Microsoft.Consumption/pricesheets@2018-05-31
+* **Readable Scope(s)**: Subscription, Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-05-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

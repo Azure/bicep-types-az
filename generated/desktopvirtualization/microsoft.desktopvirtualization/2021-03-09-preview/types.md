@@ -1,7 +1,8 @@
 # Microsoft.DesktopVirtualization @ 2021-03-09-preview
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -18,7 +19,8 @@
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,8 +28,9 @@
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/applicationGroups/desktops@2021-03-09-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DesktopVirtualization/applicationGroups/desktops@2021-03-09-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/desktops' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -53,7 +57,8 @@
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,8 +66,9 @@
 * **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Detailed properties for MSIX Package
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts@2021-03-09-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts@2021-03-09-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -70,8 +76,9 @@
 * **properties**: [SessionHostProperties](#sessionhostproperties) (ReadOnly): Detailed properties for SessionHost
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2021-03-09-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2021-03-09-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -80,7 +87,8 @@
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -97,7 +105,8 @@
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2021-03-09-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-09-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.

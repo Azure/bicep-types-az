@@ -1725,11 +1725,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1804,11 +1804,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/120"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2229,11 +2229,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/deployments@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/124"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2566,11 +2566,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/commitmentPlans@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/152"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2678,11 +2678,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/commitmentPlans@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/175"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2778,11 +2778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/180"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3000,11 +3000,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/encryptionScopes@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/186"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3339,11 +3339,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/raiPolicies@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/206"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3439,11 +3439,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/raiBlocklists@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/234"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3546,11 +3546,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/240"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3668,11 +3668,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/defenderForAISettings@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/246"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3882,11 +3882,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/projects@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/255"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -5428,11 +5428,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/connections@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/272"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5486,11 +5486,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/projects/connections@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/438"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -5714,11 +5714,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/capabilityHosts@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/443"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5772,11 +5772,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/projects/capabilityHosts@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/462"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5887,11 +5887,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2025-04-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/466"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5994,11 +5994,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/locations/raiContentFilters@2025-04-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/471"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -6395,11 +6395,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2025-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/480"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

@@ -1,7 +1,8 @@
 # Microsoft.DeviceRegistry @ 2025-07-01-preview
 
 ## Resource Microsoft.DeviceRegistry/assetEndpointProfiles@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DeviceRegistry/assetEndpointProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/assets@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -26,8 +28,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceRegistry/assets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceRegistry/billingContainers@2025-07-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DeviceRegistry/billingContainers@2025-07-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.DeviceRegistry/billingContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.DeviceRegistry/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/assets@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -64,7 +69,8 @@
 * **type**: 'Microsoft.DeviceRegistry/namespaces/assets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/devices@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Tag.
@@ -78,7 +84,8 @@
 * **type**: 'Microsoft.DeviceRegistry/namespaces/devices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/discoveredAssets@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -91,7 +98,8 @@
 * **type**: 'Microsoft.DeviceRegistry/namespaces/discoveredAssets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/discoveredDevices@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -104,7 +112,8 @@
 * **type**: 'Microsoft.DeviceRegistry/namespaces/discoveredDevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -117,7 +126,8 @@
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries/schemas@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,7 +137,8 @@
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries/schemas/schemaVersions@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

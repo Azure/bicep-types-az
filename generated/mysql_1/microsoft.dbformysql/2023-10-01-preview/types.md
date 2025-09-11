@@ -1,7 +1,8 @@
 # Microsoft.DBforMySQL @ 2023-10-01-preview
 
 ## Resource Microsoft.DBforMySQL/flexibleServers@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,8 +15,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/flexibleServers/backups@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/flexibleServers/backupsV2@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,8 +48,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/backupsV2' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/flexibleServers/maintenances@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMySQL/flexibleServers/maintenances@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

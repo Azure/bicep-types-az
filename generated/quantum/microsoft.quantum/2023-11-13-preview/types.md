@@ -1,7 +1,8 @@
 # Microsoft.Quantum @ 2023-11-13-preview
 
 ## Resource Microsoft.Quantum/workspaces@2023-11-13-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

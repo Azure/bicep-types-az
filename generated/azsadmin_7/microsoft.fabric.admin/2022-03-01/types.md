@@ -1,7 +1,8 @@
 # Microsoft.Fabric.Admin @ 2022-03-01
 
-## Resource Microsoft.Fabric.Admin/fabricLocations@2022-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations@2022-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

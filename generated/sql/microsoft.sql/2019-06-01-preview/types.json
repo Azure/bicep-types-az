@@ -430,11 +430,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -539,11 +539,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/37"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -645,11 +645,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/43"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -777,11 +777,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/administrators@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/50"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1055,11 +1055,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/58"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1388,11 +1388,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/77"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2124,11 +2124,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/108"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2437,11 +2437,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/165"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2813,11 +2813,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/operations@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/188"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2968,10 +2968,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/restoreDetails@2019-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/214"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

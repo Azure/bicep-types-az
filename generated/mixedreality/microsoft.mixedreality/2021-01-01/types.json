@@ -372,11 +372,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MixedReality/spatialAnchorsAccounts@2021-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -487,11 +487,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MixedReality/remoteRenderingAccounts@2021-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/30"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

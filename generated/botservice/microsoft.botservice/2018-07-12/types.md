@@ -1,7 +1,8 @@
 # Microsoft.BotService @ 2018-07-12
 
 ## Resource Microsoft.BotService/botServices@2018-07-12
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/channels@2018-07-12
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
@@ -29,7 +31,8 @@
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/Connections@2018-07-12
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
@@ -43,7 +46,8 @@
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/enterpriseChannels@2018-07-12
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag

@@ -1,7 +1,8 @@
 # Microsoft.Automanage @ 2020-06-30-preview
 
 ## Resource Microsoft.Automanage/accounts@2020-06-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfilePreferences@2020-06-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

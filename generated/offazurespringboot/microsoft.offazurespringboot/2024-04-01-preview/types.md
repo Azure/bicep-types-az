@@ -1,7 +1,8 @@
 # Microsoft.OffAzureSpringBoot @ 2024-04-01-preview
 
 ## Resource Microsoft.OffAzureSpringBoot/springbootsites@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [SpringbootsitesModelExtendedLocation](#springbootsitesmodelextendedlocation): The extended location definition.
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OffAzureSpringBoot/springbootsites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzureSpringBoot/springbootsites/errorSummaries@2024-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzureSpringBoot/springbootsites/errorSummaries@2024-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.OffAzureSpringBoot/springbootsites/errorSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzureSpringBoot/springbootsites/springbootapps@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.OffAzureSpringBoot/springbootsites/springbootapps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzureSpringBoot/springbootsites/springbootservers@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,8 +48,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzureSpringBoot/springbootsites/springbootservers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzureSpringBoot/springbootsites/summaries@2024-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzureSpringBoot/springbootsites/summaries@2024-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

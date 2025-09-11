@@ -1,7 +1,8 @@
 # Microsoft.HDInsight @ 2015-03-01-preview
 
 ## Resource Microsoft.HDInsight/clusters@2015-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag for the resource
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag for the application

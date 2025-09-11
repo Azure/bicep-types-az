@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2021-04-01
 
 ## Resource Microsoft.Compute/availabilitySets@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/capacityReservationGroups@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **zones**: string[]: Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
 
 ## Resource Microsoft.Compute/capacityReservationGroups/capacityReservations@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,7 +41,8 @@
 * **zones**: string[]: Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
 
 ## Resource Microsoft.Compute/diskAccesses@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the disk access will be created. Extended location cannot be changed.
@@ -50,7 +54,8 @@
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/diskAccesses/privateEndpointConnections@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,7 +64,8 @@
 * **type**: 'Microsoft.Compute/diskAccesses/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/diskEncryptionSets@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -71,7 +77,8 @@
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/disks@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the disk will be created. Extended location cannot be changed.
@@ -87,7 +94,8 @@
 * **zones**: string[]: The Logical zone list for Disk.
 
 ## Resource Microsoft.Compute/hostGroups@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,7 +107,8 @@
 * **zones**: string[]: Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
 
 ## Resource Microsoft.Compute/hostGroups/hosts@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +120,8 @@
 * **type**: 'Microsoft.Compute/hostGroups/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/images@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Image.
@@ -122,8 +132,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/edgeZones/publishers/artifacttypes/offers/skus/versions@2021-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/edgeZones/publishers/artifacttypes/offers/skus/versions@2021-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the Virtual Machine.
@@ -134,8 +145,9 @@
 * **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
 * **type**: 'Microsoft.Compute/locations/edgeZones/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2021-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2021-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the Virtual Machine.
@@ -146,8 +158,9 @@
 * **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2021-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2021-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -158,7 +171,8 @@
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/proximityPlacementGroups@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -169,7 +183,8 @@
 * **type**: 'Microsoft.Compute/proximityPlacementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/restorePointCollections@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -180,7 +195,8 @@
 * **type**: 'Microsoft.Compute/restorePointCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/restorePointCollections/restorePoints@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -189,7 +205,8 @@
 * **type**: 'Microsoft.Compute/restorePointCollections/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/snapshots@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the snapshot will be created. Extended location cannot be changed.
@@ -203,7 +220,8 @@
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/sshPublicKeys@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -214,7 +232,8 @@
 * **type**: 'Microsoft.Compute/sshPublicKeys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Virtual Machine.
@@ -230,7 +249,8 @@
 * **zones**: string[]: The virtual machine zones.
 
 ## Resource Microsoft.Compute/virtualMachines/extensions@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -241,7 +261,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines/runCommands@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -252,7 +273,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines/runCommands' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Virtual Machine Scale Set.
@@ -268,7 +290,8 @@
 * **zones**: string[]: The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -276,8 +299,9 @@
 * **properties**: [VirtualMachineScaleSetExtensionProperties](#virtualmachinescalesetextensionproperties): Describes the properties of a Virtual Machine Scale Set Extension.
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2021-04-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2021-04-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -288,7 +312,8 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -304,7 +329,8 @@
 * **zones**: string[] (ReadOnly): The virtual machine zones.
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -313,7 +339,8 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands@2021-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

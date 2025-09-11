@@ -1,5 +1,5 @@
 Generating types for 'specification/datamigration/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -201,10 +201,10 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (3 differences):
   - properties: {"id":{"$ref":"#/components/schemas/schemas:39","readOnly":true},"name":{"$ref":"#/components/schemas/schemas:40","readOnly":true},"type":{"$ref":"#/components/schemas/schemas:41","readOnly":true},"systemData":{"$ref":"#/components/schemas/schemas:147","description":"Metadata pertaining to creation and last modification of the resource.","readOnly":true}} => <none>
   - title: <none> => "Proxy Resource"
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:1518"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:1575"}]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TrackedResource' (12 differences):
   - properties.location.description: <none> => "The geo-location where the resource lives"
-  - properties.tags.$ref: "#/components/schemas/schemas:169" => "#/components/schemas/schemas:1536"
+  - properties.tags.$ref: "#/components/schemas/schemas:169" => "#/components/schemas/schemas:1593"
   - properties.tags.x-ms-mutability: <none> => ["read","create","update"]
   - properties.tags.description: <none> => "Resource tags."
   - properties.id: {"$ref":"#/components/schemas/schemas:171","readOnly":true} => <none>
@@ -213,14 +213,14 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TrackedResource' (1
   - properties.systemData: {"$ref":"#/components/schemas/schemas:147","readOnly":true} => <none>
   - x-ms-azure-resource: true => <none>
   - title: <none> => "Tracked Resource"
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:1518"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:1575"}]
   - required: <none> => ["location"]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (6 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:298" => "#/components/schemas/schemas:1519"
+  - properties.id.$ref: "#/components/schemas/schemas:298" => "#/components/schemas/schemas:1576"
   - properties.id.description: "Resource ID." => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.name.description: "Resource name." => "The name of the resource"
   - properties.type.description: "Resource type." => "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:1546","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
+  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:1603","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
   - title: <none> => "Resource"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMISyncTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMISyncTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMISyncTaskOutputError

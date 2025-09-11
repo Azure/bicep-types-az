@@ -1,7 +1,8 @@
 # Microsoft.ContainerStorage @ 2023-07-01-preview
 
 ## Resource Microsoft.ContainerStorage/pools@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.ContainerStorage/pools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerStorage/pools/snapshots@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.ContainerStorage/pools/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerStorage/pools/volumes@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.DataFactory @ 2018-06-01
 
 ## Resource Microsoft.DataFactory/factories@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Etag identifies change in the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/adfcdcs@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/credentials@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/datasets@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/globalParameters@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -64,7 +70,8 @@
 * **type**: 'Microsoft.DataFactory/factories/globalParameters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -74,7 +81,8 @@
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/linkedservices@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -84,7 +92,8 @@
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -94,7 +103,8 @@
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -104,7 +114,8 @@
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/pipelines@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -114,7 +125,8 @@
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
@@ -124,7 +136,8 @@
 * **type**: 'Microsoft.DataFactory/factories/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.

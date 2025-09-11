@@ -1,7 +1,8 @@
 # Microsoft.DeviceRegistry @ 2023-11-01-preview
 
 ## Resource Microsoft.DeviceRegistry/assetEndpointProfiles@2023-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DeviceRegistry/assetEndpointProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/assets@2023-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.

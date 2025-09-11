@@ -1,7 +1,8 @@
 # Microsoft.DatabaseWatcher @ 2024-07-19-preview
 
 ## Resource Microsoft.DatabaseWatcher/watchers@2024-07-19-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DatabaseWatcher/watchers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DatabaseWatcher/watchers/alertRuleResources@2024-07-19-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DatabaseWatcher/watchers/alertRuleResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DatabaseWatcher/watchers/sharedPrivateLinkResources@2024-07-19-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.DatabaseWatcher/watchers/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DatabaseWatcher/watchers/targets@2024-07-19-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

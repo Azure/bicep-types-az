@@ -1,7 +1,8 @@
 # Microsoft.HybridCompute @ 2020-08-02
 
 ## Resource Microsoft.HybridCompute/machines@2020-08-02
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2020-08-02
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

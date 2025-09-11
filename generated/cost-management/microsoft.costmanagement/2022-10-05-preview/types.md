@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2022-10-05-preview
 
-## Resource Microsoft.CostManagement/alerts@2022-10-05-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.CostManagement/alerts@2022-10-05-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/markupRules@2022-10-05-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-10-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.CostManagement/markupRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/settings@2022-10-05-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -38,7 +41,8 @@
 
 
 ## Resource Microsoft.CostManagement/views@2022-10-05-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.

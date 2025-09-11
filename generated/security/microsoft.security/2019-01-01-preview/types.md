@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2019-01-01-preview
 
 ## Resource Microsoft.Security/alertsSuppressionRules@2019-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/alertsSuppressionRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessmentMetadata@2019-01-01-preview
-* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessments@2019-01-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,8 +30,9 @@
 * **properties**: [SecurityAssessmentProperties](#securityassessmentproperties): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/assessments/subAssessments@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Security/assessments/subAssessments@2019-01-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +41,8 @@
 * **type**: 'Microsoft.Security/assessments/subAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/automations@2019-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
@@ -49,8 +54,9 @@
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/regulatoryComplianceStandards@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/regulatoryComplianceStandards@2019-01-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,8 +64,9 @@
 * **properties**: [RegulatoryComplianceStandardProperties](#regulatorycompliancestandardproperties) (ReadOnly): Regulatory compliance standard data
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls@2019-01-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -67,8 +74,9 @@
 * **properties**: [RegulatoryComplianceControlProperties](#regulatorycompliancecontrolproperties) (ReadOnly): Regulatory compliance control data
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments@2019-01-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Edge @ 2025-03-01-preview
 
 ## Resource Microsoft.Edge/sites@2025-03-01-preview
-* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
+* **Readable Scope(s)**: Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2023-05-01
 
 ## Resource Microsoft.Security/serverVulnerabilityAssessmentsSettings@2023-05-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 * **Discriminator**: kind
 
 ### Base Properties

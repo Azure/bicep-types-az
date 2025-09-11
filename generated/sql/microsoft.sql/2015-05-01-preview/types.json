@@ -146,11 +146,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/encryptionProtector@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -437,11 +437,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/failoverGroups@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/13"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -572,11 +572,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/keys@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/37"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -717,11 +717,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/syncAgents@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/45"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -845,11 +845,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/virtualNetworkRules@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/55"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1268,11 +1268,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/66"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1403,11 +1403,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/90"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1667,11 +1667,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/96"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1979,11 +1979,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups/syncMembers@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/115"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2153,11 +2153,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/auditingSettings@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/148"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2231,11 +2231,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/firewallRules@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/157"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2527,11 +2527,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/automaticTuning@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/163"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2619,11 +2619,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/usages@2015-05-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/195"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2732,11 +2732,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/virtualClusters@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/200"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3557,11 +3557,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/207"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3629,11 +3629,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors/recommendedActions@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/271"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3701,10 +3701,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/advisors@2015-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/275"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.DevHub @ 2025-03-01-preview
 
 ## Resource Microsoft.DevHub/iacProfiles@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevHub/iacProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevHub/locations/adooauth@2025-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DevHub/locations/adooauth@2025-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,8 +25,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevHub/locations/adooauth' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevHub/templates@2025-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DevHub/templates@2025-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevHub/templates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevHub/templates/versions@2025-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DevHub/templates/versions@2025-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.DevHub/templates/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevHub/workflows@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

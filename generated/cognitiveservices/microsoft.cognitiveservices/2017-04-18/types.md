@@ -1,7 +1,8 @@
 # Microsoft.CognitiveServices @ 2017-04-18
 
 ## Resource Microsoft.CognitiveServices/accounts@2017-04-18
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Entity Tag
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Entity Tag

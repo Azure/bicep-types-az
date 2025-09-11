@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2022-07-01-preview
 
 ## Resource Microsoft.Security/applications@2022-07-01-preview
-* **Valid Scope(s)**: Subscription, Extension
+* **Readable Scope(s)**: Subscription, Extension
+* **Writable Scope(s)**: Subscription, Extension
 ### Properties
 * **apiVersion**: '2022-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

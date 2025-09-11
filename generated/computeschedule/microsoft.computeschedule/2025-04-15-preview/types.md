@@ -1,7 +1,8 @@
 # Microsoft.ComputeSchedule @ 2025-04-15-preview
 
 ## Resource Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ComputeSchedule/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ComputeSchedule/scheduledActions/occurrences@2025-04-15-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ComputeSchedule/scheduledActions/occurrences@2025-04-15-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.AppComplianceAutomation @ 2022-11-16-preview
 
 ## Resource Microsoft.AppComplianceAutomation/reports@2022-11-16-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-11-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppComplianceAutomation/reports' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppComplianceAutomation/reports/snapshots@2022-11-16-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.AppComplianceAutomation/reports/snapshots@2022-11-16-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-11-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

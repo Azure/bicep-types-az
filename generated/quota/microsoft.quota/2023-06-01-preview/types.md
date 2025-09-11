@@ -1,7 +1,8 @@
 # Microsoft.Quota @ 2023-06-01-preview
 
 ## Resource Microsoft.Quota/groupQuotas@2023-06-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/groupQuotas/groupQuotaRequests@2023-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ManagementGroup
+## Resource Microsoft.Quota/groupQuotas/groupQuotaRequests@2023-06-01-preview
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas/groupQuotaRequests' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/groupQuotas/quotaAllocationRequests@2023-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Quota/groupQuotas/quotaAllocationRequests@2023-06-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/quotaAllocationRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/groupQuotas/resourceProviders/groupQuotaRequests@2023-06-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/groupQuotaRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/groupQuotas/resourceProviders/locationSettings@2023-06-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -51,7 +56,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/locationSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/groupQuotas/resourceProviders/quotaAllocationRequests@2023-06-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,8 +66,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/quotaAllocationRequests' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/groupQuotas/subscriptionRequests@2023-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ManagementGroup
+## Resource Microsoft.Quota/groupQuotas/subscriptionRequests@2023-06-01-preview
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -71,7 +78,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/subscriptionRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/groupQuotas/subscriptions@2023-06-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -81,7 +89,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/quotas@2023-06-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -89,8 +98,9 @@
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the specified resource, based on the API called, Quotas or Usages.
 * **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/usages@2023-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Quota/usages@2023-06-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

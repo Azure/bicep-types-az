@@ -7081,11 +7081,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/customRollouts@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -7816,11 +7816,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/640"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -8109,11 +8109,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/699"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9026,11 +9026,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/operations@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/730"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9126,11 +9126,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/763"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9226,11 +9226,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/771"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9778,11 +9778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/779"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9842,11 +9842,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/825"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9906,11 +9906,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/829"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -9970,11 +9970,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/833"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringType",
@@ -10239,11 +10239,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/authorizedApplications@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/838"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringType",
@@ -10441,11 +10441,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerMonitorSettings@2024-09-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/865"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11023,10 +11023,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ProviderHub/providerRegistrations/newRegionFrontloadRelease@2024-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/885"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   }
 ]

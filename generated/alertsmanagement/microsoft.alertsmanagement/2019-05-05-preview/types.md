@@ -1,7 +1,8 @@
 # Microsoft.AlertsManagement @ 2019-05-05-preview
 
 ## Resource Microsoft.AlertsManagement/actionRules@2019-05-05-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ManagedResourceTags](#managedresourcetags): Resource tags
 * **type**: 'Microsoft.AlertsManagement/actionRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AlertsManagement/alerts@2019-05-05-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AlertsManagement/alerts@2019-05-05-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-05-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Alert property bag
 * **type**: 'Microsoft.AlertsManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AlertsManagement/smartGroups@2019-05-05-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AlertsManagement/smartGroups@2019-05-05-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-05-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

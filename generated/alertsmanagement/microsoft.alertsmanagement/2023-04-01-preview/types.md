@@ -1,7 +1,8 @@
 # Microsoft.AlertsManagement @ 2023-04-01-preview
 
 ## Resource Microsoft.AlertsManagement/tenantActivityLogAlerts@2023-04-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2023-06-01
 
 ## Resource Microsoft.Insights/workbooks@2023-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource etag
@@ -15,8 +16,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/workbooks/revisions@2023-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Insights/workbooks/revisions@2023-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource etag

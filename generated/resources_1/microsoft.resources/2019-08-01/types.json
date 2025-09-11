@@ -661,10 +661,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/deployments@2019-08-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

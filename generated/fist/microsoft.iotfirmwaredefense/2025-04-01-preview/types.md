@@ -1,7 +1,8 @@
 # Microsoft.IoTFirmwareDefense @ 2025-04-01-preview
 
 ## Resource Microsoft.IoTFirmwareDefense/workspaces@2025-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.IoTFirmwareDefense/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTFirmwareDefense/workspaces/firmwares@2025-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,8 +25,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IoTFirmwareDefense/workspaces/firmwares' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries@2025-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries@2025-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.IoTFirmwareDefense/workspaces/usageMetrics@2025-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.IoTFirmwareDefense/workspaces/usageMetrics@2025-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

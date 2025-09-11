@@ -1,7 +1,8 @@
 # Microsoft.Communication @ 2023-04-01
 
 ## Resource Microsoft.Communication/communicationServices@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Communication/emailServices@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.Communication/emailServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Communication/emailServices/domains@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.Communication/emailServices/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Communication/emailServices/domains/senderUsernames@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

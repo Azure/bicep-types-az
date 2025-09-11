@@ -575,11 +575,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Monitor/accounts@2025-05-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -716,10 +716,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Monitor/accounts/metricsContainers@2025-05-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

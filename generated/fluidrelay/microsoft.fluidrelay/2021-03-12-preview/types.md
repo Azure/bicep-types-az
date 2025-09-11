@@ -1,7 +1,8 @@
 # Microsoft.FluidRelay @ 2021-03-12-preview
 
 ## Resource Microsoft.FluidRelay/fluidRelayServers@2021-03-12-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

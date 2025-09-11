@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2022-05-01-preview
 
 ## Resource Microsoft.Migrate/modernizeProjects@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [ModernizeProjectModelTags](#modernizeprojectmodeltags): Gets or sets the resource tags.
 * **type**: 'Microsoft.Migrate/modernizeProjects' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/modernizeProjects/deployedResources@2022-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/modernizeProjects/deployedResources@2022-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **tags**: [DeployedResourceModelTags](#deployedresourcemodeltags) (ReadOnly): Gets or sets the resource tags.
 * **type**: 'Microsoft.Migrate/modernizeProjects/deployedResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/modernizeProjects/jobs@2022-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/modernizeProjects/jobs@2022-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.Migrate/modernizeProjects/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/modernizeProjects/migrateAgents@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -47,7 +51,8 @@
 * **type**: 'Microsoft.Migrate/modernizeProjects/migrateAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,7 +63,8 @@
 * **type**: 'Microsoft.Migrate/modernizeProjects/workloadDeployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/modernizeProjects/workloadInstances@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

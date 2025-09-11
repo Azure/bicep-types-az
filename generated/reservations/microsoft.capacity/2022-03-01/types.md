@@ -1,7 +1,8 @@
 # Microsoft.Capacity @ 2022-03-01
 
 ## Resource Microsoft.Capacity/reservationOrders@2022-03-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)
@@ -13,8 +14,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Capacity/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Capacity/reservationOrders/reservations@2022-03-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Capacity/reservationOrders/reservations@2022-03-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)

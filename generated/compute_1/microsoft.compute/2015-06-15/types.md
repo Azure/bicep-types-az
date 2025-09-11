@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2015-06-15
 
 ## Resource Microsoft.Compute/availabilitySets@2015-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2015-06-15 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2015-06-15
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2015-06-15 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2015-06-15
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines@2015-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -47,7 +51,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines/extensions@2015-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,7 +63,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets@2015-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -69,8 +75,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2015-06-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2015-06-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.AppPlatform @ 2023-01-01-preview
 
 ## Resource Microsoft.AppPlatform/Spring@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apiPortals@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/apiPortals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apiPortals/domains@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/apiPortals/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/applicationAccelerators@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +50,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/applicationAccelerators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,8 +61,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators@2023-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +74,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/applicationLiveViews@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +85,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/applicationLiveViews' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -90,7 +98,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/bindings@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -100,7 +109,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/deployments@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +121,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/domains@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -120,8 +131,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/buildServices@2023-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AppPlatform/Spring/buildServices@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -131,7 +143,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/buildServices/agentPools@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +154,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/buildServices/builders@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -151,7 +165,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/buildServices/builders/buildpackBindings@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -161,7 +176,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builders/buildpackBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/buildServices/builds@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -170,8 +186,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/buildServices/builds/results@2023-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AppPlatform/Spring/buildServices/builds/results@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -180,8 +197,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builds/results' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/buildServices/supportedBuildpacks@2023-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AppPlatform/Spring/buildServices/supportedBuildpacks@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -190,8 +208,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/supportedBuildpacks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/buildServices/supportedStacks@2023-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AppPlatform/Spring/buildServices/supportedStacks@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -201,7 +220,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/supportedStacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/certificates@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -211,7 +231,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/configServers@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -221,7 +242,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/configServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/configurationServices@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -231,7 +253,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/configurationServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/DevToolPortals@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -241,7 +264,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/DevToolPortals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/gateways@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -252,7 +276,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/gateways/domains@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -262,7 +287,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/gateways/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/gateways/routeConfigs@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -272,7 +298,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/gateways/routeConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/monitoringSettings@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -282,7 +309,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/serviceRegistries@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -292,7 +320,8 @@
 * **type**: 'Microsoft.AppPlatform/Spring/serviceRegistries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/storages@2023-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

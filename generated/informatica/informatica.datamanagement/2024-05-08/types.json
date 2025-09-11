@@ -549,11 +549,11 @@
   {
     "$type": "ResourceType",
     "name": "Informatica.DataManagement/organizations@2024-05-08",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1037,10 +1037,10 @@
   {
     "$type": "ResourceType",
     "name": "Informatica.DataManagement/organizations/serverlessRuntimes@2024-05-08",
-    "scopeType": 8,
     "body": {
       "$ref": "#/42"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.BillingBenefits @ 2024-11-01-preview
 
 ## Resource Microsoft.BillingBenefits/discounts@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -19,7 +20,8 @@
 * **type**: 'Microsoft.BillingBenefits/discounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BillingBenefits/reservationOrderAliases@2024-11-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +33,8 @@
 * **type**: 'Microsoft.BillingBenefits/reservationOrderAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BillingBenefits/savingsPlanOrderAliases@2024-11-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -42,8 +45,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrderAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.BillingBenefits/savingsPlanOrders@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.BillingBenefits/savingsPlanOrders@2024-11-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,8 +57,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2024-11-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

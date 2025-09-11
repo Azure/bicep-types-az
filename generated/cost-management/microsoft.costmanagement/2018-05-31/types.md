@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2018-05-31
 
 ## Resource Microsoft.CostManagement/reportconfigs@2018-05-31
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

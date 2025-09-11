@@ -1,7 +1,8 @@
 # Microsoft.RecoveryServices @ 2019-06-15
 
 ## Resource Microsoft.RecoveryServices/vaults/backupconfig@2019-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2019-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
@@ -24,8 +26,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults@2019-06-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults@2019-06-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
@@ -36,8 +39,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2019-06-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2019-06-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
@@ -48,8 +52,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/backupJobs@2019-06-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.RecoveryServices/vaults/backupJobs@2019-06-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
@@ -61,7 +66,8 @@
 * **type**: 'Microsoft.RecoveryServices/vaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2019-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
@@ -72,8 +78,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/backupPolicies/operationResults@2019-06-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.RecoveryServices/vaults/backupPolicies/operationResults@2019-06-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.

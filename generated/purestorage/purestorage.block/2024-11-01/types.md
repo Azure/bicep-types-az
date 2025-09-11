@@ -1,7 +1,8 @@
 # PureStorage.Block @ 2024-11-01
 
 ## Resource PureStorage.Block/reservations@2024-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'PureStorage.Block/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PureStorage.Block/storagePools@2024-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,8 +27,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'PureStorage.Block/storagePools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource PureStorage.Block/storagePools/avsStorageContainers@2024-11-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource PureStorage.Block/storagePools/avsStorageContainers@2024-11-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,8 +38,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/avsStorageContainers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource PureStorage.Block/storagePools/avsStorageContainers/volumes@2024-11-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource PureStorage.Block/storagePools/avsStorageContainers/volumes@2024-11-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +49,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/avsStorageContainers/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource PureStorage.Block/storagePools/avsVms@2024-11-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource PureStorage.Block/storagePools/avsVms@2024-11-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,8 +60,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/avsVms' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource PureStorage.Block/storagePools/avsVms/avsVmVolumes@2024-11-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource PureStorage.Block/storagePools/avsVms/avsVmVolumes@2024-11-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2020-01-01
 
 ## Resource Microsoft.Security/assessmentMetadata@2020-01-01
-* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessments@2020-01-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -18,8 +20,9 @@
 * **properties**: [SecurityAssessmentProperties](#securityassessmentproperties): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/alerts@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Security/locations/alerts@2020-01-01
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,8 +30,9 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): describes security alert properties.
 * **type**: 'Microsoft.Security/locations/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/allowedConnections@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/allowedConnections@2020-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,8 +41,9 @@
 * **properties**: [AllowedConnectionsResourceProperties](#allowedconnectionsresourceproperties) (ReadOnly): Describes the allowed traffic between Azure resources
 * **type**: 'Microsoft.Security/locations/allowedConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2020-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -47,8 +52,9 @@
 * **properties**: [DiscoveredSecuritySolutionProperties](#discoveredsecuritysolutionproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/locations/discoveredSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/ExternalSecuritySolutions@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/ExternalSecuritySolutions@2020-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,7 +64,8 @@
 * **type**: 'Microsoft.Security/locations/ExternalSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2020-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,8 +75,9 @@
 * **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/securitySolutions@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/securitySolutions@2020-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,8 +86,9 @@
 * **properties**: [SecuritySolutionProperties](#securitysolutionproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/locations/securitySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/topologies@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/topologies@2020-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -88,8 +97,9 @@
 * **properties**: [TopologyResourceProperties](#topologyresourceproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/locations/topologies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/secureScores@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/secureScores@2020-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -98,7 +108,8 @@
 * **type**: 'Microsoft.Security/secureScores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/serverVulnerabilityAssessments@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

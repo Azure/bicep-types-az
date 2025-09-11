@@ -1,7 +1,8 @@
 # Microsoft.PolicyInsights @ 2024-10-01
 
 ## Resource Microsoft.PolicyInsights/attestations@2024-10-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.PolicyInsights/remediations@2024-10-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Authorization @ 2020-05-01
 
 ## Resource Microsoft.Authorization/locks@2020-05-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Authorization/locks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/privateLinkAssociations@2020-05-01
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,7 +22,8 @@
 * **type**: 'Microsoft.Authorization/privateLinkAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/resourceManagementPrivateLinks@2020-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

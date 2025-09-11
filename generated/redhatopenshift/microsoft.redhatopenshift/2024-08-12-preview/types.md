@@ -1,7 +1,8 @@
 # Microsoft.RedHatOpenShift @ 2024-08-12-preview
 
-## Resource Microsoft.RedHatOpenShift/locations/openShiftVersions@2024-08-12-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.RedHatOpenShift/locations/openShiftVersions@2024-08-12-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RedHatOpenShift/locations/openShiftVersions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RedHatOpenShift/locations/platformWorkloadIdentityRoleSets@2024-08-12-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.RedHatOpenShift/locations/platformWorkloadIdentityRoleSets@2024-08-12-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.RedHatOpenShift/locations/platformWorkloadIdentityRoleSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RedHatOpenShift/openShiftClusters@2024-08-12-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.HardwareSecurityModules @ 2024-06-30-preview
 
 ## Resource Microsoft.HardwareSecurityModules/cloudHsmClusters@2024-06-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.HardwareSecurityModules/cloudHsmClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HardwareSecurityModules/cloudHsmClusters/privateEndpointConnections@2024-06-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.HardwareSecurityModules/cloudHsmClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HardwareSecurityModules/dedicatedHSMs@2024-06-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

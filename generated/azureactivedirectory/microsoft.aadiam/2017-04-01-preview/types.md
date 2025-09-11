@@ -1,7 +1,8 @@
 # microsoft.aadiam @ 2017-04-01-preview
 
 ## Resource microsoft.aadiam/diagnosticSettings@2017-04-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

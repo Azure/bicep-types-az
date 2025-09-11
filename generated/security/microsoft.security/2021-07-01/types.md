@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2021-07-01
 
 ## Resource Microsoft.Security/settings@2021-07-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 * **Discriminator**: kind
 
 ### Base Properties

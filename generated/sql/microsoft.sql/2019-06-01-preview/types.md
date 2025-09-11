@@ -1,7 +1,8 @@
 # Microsoft.Sql @ 2019-06-01-preview
 
 ## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2019-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2019-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/operations@2019-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/operations@2019-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +33,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -52,7 +57,8 @@
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -76,7 +82,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +92,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -94,7 +102,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -103,7 +112,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

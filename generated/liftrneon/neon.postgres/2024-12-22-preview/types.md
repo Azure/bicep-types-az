@@ -1,7 +1,8 @@
 # Neon.Postgres @ 2024-12-22-preview
 
 ## Resource Neon.Postgres/organizations@2024-12-22-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-22-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

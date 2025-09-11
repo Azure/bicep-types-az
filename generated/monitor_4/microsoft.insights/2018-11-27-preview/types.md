@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2018-11-27-preview
 
-## Resource Microsoft.Insights/vmInsightsOnboardingStatuses@2018-11-27-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Insights/vmInsightsOnboardingStatuses@2018-11-27-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-11-27-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

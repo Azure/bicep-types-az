@@ -1,7 +1,8 @@
 # Microsoft.Monitor @ 2025-05-03-preview
 
 ## Resource Microsoft.Monitor/accounts@2025-05-03-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Monitor/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Monitor/accounts/metricsContainers@2025-05-03-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

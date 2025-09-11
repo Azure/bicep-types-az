@@ -561,11 +561,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -626,11 +626,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/privateEndpointConnections@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/47"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1843,11 +1843,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/avsAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/51"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2126,11 +2126,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/heterogeneousAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/180"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3303,11 +3303,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/assessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/207"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5282,11 +5282,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/345"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6718,11 +6718,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/585"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7260,11 +7260,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/701"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7541,11 +7541,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppCompoundAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/754"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8136,11 +8136,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/aksAssessments@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/779"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8374,11 +8374,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/hypervcollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/842"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8530,11 +8530,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/importSqlCollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/857"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8686,11 +8686,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/importcollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/870"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8751,11 +8751,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/servercollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/883"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8816,11 +8816,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlcollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/887"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8881,11 +8881,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/vmwarecollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/891"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8946,11 +8946,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppCollectors@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/895"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9050,11 +9050,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/privateLinkResources@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/899"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -9196,11 +9196,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/projectSummary@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/906"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -10272,11 +10272,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/avsAssessmentOptions@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/914"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -12403,11 +12403,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/avsAssessments/avsAssessedMachines@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1054"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14151,11 +14151,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/avsAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1250"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14723,11 +14723,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/heterogeneousAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1433"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16317,11 +16317,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/assessmentOptions@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1491"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17609,11 +17609,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/assessments/assessedMachines@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1702"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17788,11 +17788,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/assessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1808"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19627,11 +19627,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessmentOptions@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1823"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20739,11 +20739,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessments/assessedSqlDatabases@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2066"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21333,11 +21333,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessments/assessedSqlInstances@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2151"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -22185,11 +22185,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessments/assessedSqlMachines@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2187"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -22250,11 +22250,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/sqlAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2248"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -23665,11 +23665,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/avsSummaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2252"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -23835,11 +23835,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/evaluatedAvsMachines@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2345"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24005,11 +24005,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/evaluatedMachines@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2355"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24182,11 +24182,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/evaluatedSqlEntities@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2365"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24302,11 +24302,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/evaluatedWebApps@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2375"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24642,11 +24642,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/iaasSummaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2380"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25037,11 +25037,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/overviewSummaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2396"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25847,11 +25847,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/businessCases/paasSummaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2406"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -26825,11 +26825,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppAssessmentOptions@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2448"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -27339,11 +27339,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppAssessments/assessedWebApps@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2576"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -27552,11 +27552,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2620"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -27785,11 +27785,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppAssessments/webAppServicePlans@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2635"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -28129,11 +28129,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/webAppCompoundAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2649"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -29173,11 +29173,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/aksAssessmentOptions@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2676"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -29727,11 +29727,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/aksAssessments/assessedWebApps@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2812"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -29980,11 +29980,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/aksAssessments/clusters@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2858"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -30180,10 +30180,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Migrate/assessmentProjects/aksAssessments/summaries@2024-03-03-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2871"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

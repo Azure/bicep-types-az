@@ -1,7 +1,8 @@
 # Microsoft.Confluent @ 2021-09-01-preview
 
 ## Resource Microsoft.Confluent/agreements@2021-09-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2021-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

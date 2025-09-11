@@ -1,7 +1,8 @@
 # Microsoft.LabServices @ 2021-10-01-preview
 
 ## Resource Microsoft.LabServices/labPlans@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.LabServices/labPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labPlans/images@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.LabServices/labPlans/images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labs@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.LabServices/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labs/schedules@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,7 +49,8 @@
 * **type**: 'Microsoft.LabServices/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labs/users@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,8 +59,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the user resource.
 * **type**: 'Microsoft.LabServices/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LabServices/labs/virtualMachines@2021-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.LabServices/labs/virtualMachines@2021-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

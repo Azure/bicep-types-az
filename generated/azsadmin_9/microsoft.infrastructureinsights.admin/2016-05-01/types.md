@@ -1,7 +1,8 @@
 # Microsoft.InfrastructureInsights.Admin @ 2016-05-01
 
-## Resource Microsoft.InfrastructureInsights.Admin/regionHealths@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.InfrastructureInsights.Admin/regionHealths@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.InfrastructureInsights.Admin/regionHealths' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/alerts@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/alerts@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.InfrastructureInsights.Admin/regionHealths/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths/resourceHealths@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths/resourceHealths@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

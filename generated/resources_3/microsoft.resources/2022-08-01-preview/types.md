@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2022-08-01-preview
 
 ## Resource Microsoft.Resources/deploymentStacks@2022-08-01-preview
-* **Valid Scope(s)**: ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

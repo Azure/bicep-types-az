@@ -1,7 +1,8 @@
 # Microsoft.CognitiveServices @ 2024-06-01-preview
 
 ## Resource Microsoft.CognitiveServices/accounts@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -17,7 +18,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/commitmentPlans@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -32,7 +34,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/commitmentPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/defenderForAISettings@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -44,7 +47,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/defenderForAISettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/deployments@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -57,7 +61,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/encryptionScopes@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -68,8 +73,9 @@
 * **tags**: [EncryptionScopeTags](#encryptionscopetags): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/accounts/encryptionScopes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2024-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2024-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +84,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -90,7 +97,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/raiBlocklists@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -102,7 +110,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/raiBlocklists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -114,7 +123,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/raiPolicies@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -126,7 +136,8 @@
 * **type**: 'Microsoft.CognitiveServices/accounts/raiPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/commitmentPlans@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -141,7 +152,8 @@
 * **type**: 'Microsoft.CognitiveServices/commitmentPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2024-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -152,8 +164,9 @@
 * **tags**: [CommitmentPlanAccountAssociationTags](#commitmentplanaccountassociationtags): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/commitmentPlans/accountAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/locations/raiContentFilters@2024-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.CognitiveServices/locations/raiContentFilters@2024-06-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -161,8 +174,9 @@
 * **properties**: [RaiContentFilterProperties](#raicontentfilterproperties) (ReadOnly): Azure OpenAI Content Filter Properties.
 * **type**: 'Microsoft.CognitiveServices/locations/raiContentFilters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2024-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2024-06-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.

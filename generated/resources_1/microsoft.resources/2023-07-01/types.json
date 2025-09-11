@@ -1301,10 +1301,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/deployments@2023-07-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

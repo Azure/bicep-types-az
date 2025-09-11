@@ -1,7 +1,8 @@
 # Microsoft.StorageCache @ 2023-03-01-preview
 
 ## Resource Microsoft.StorageCache/amlFilesystems@2023-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -16,7 +17,8 @@
 * **zones**: string[]: Availability zones for resources. This field should only contain a single element in the array.
 
 ## Resource Microsoft.StorageCache/caches@2023-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +32,8 @@
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2023-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

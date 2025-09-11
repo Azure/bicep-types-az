@@ -1,7 +1,8 @@
 # Microsoft.DelegatedNetwork @ 2020-08-08-preview
 
 ## Resource Microsoft.DelegatedNetwork/controller@2020-08-08-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DelegatedNetwork/delegatedSubnets@2020-08-08-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DelegatedNetwork/orchestrators@2020-08-08-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

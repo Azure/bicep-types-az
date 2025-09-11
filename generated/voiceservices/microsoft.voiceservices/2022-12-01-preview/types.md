@@ -1,7 +1,8 @@
 # Microsoft.VoiceServices @ 2022-12-01-preview
 
 ## Resource Microsoft.VoiceServices/communicationsGateways@2022-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.VoiceServices/communicationsGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VoiceServices/communicationsGateways/contacts@2022-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.VoiceServices/communicationsGateways/contacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VoiceServices/communicationsGateways/testLines@2022-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

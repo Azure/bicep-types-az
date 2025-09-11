@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2018-08-01-preview
 
 ## Resource Microsoft.CostManagement/connectors@2018-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/reports@2018-08-01-preview
-* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
+* **Readable Scope(s)**: Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

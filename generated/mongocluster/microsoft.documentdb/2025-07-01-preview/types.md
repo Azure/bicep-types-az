@@ -1,7 +1,8 @@
 # Microsoft.DocumentDB @ 2025-07-01-preview
 
 ## Resource Microsoft.DocumentDB/mongoClusters@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DocumentDB/mongoClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/mongoClusters/firewallRules@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DocumentDB/mongoClusters/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/mongoClusters/privateEndpointConnections@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.DocumentDB/mongoClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/mongoClusters/users@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.BillingBenefits @ 2022-11-01
 
 ## Resource Microsoft.BillingBenefits/reservationOrderAliases@2022-11-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.BillingBenefits/reservationOrderAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BillingBenefits/savingsPlanOrderAliases@2022-11-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrderAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.BillingBenefits/savingsPlanOrders@2022-11-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.BillingBenefits/savingsPlanOrders@2022-11-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,8 +38,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2022-11-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2022-11-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Management @ 2017-11-01-preview
 
 ## Resource Microsoft.Management/managementGroups@2017-11-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **displayName**: string (WriteOnly): The friendly name of the management group.
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Management/managementGroups/subscriptions@2017-11-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

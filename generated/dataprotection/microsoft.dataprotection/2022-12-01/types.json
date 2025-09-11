@@ -771,11 +771,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1771,11 +1771,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupPolicies@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/73"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2550,11 +2550,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/164"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2760,11 +2760,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/resourceGuards@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/219"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2861,11 +2861,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/operationResults@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/234"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2941,11 +2941,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/239"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3202,11 +3202,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/244"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3628,11 +3628,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupJobs@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/259"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3930,10 +3930,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/deletedBackupInstances@2022-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/272"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

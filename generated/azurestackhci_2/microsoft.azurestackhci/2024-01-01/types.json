@@ -728,11 +728,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1908,11 +1908,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/81"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2965,11 +2965,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/deploymentSettings@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/182"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3285,11 +3285,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/edgeDevices@2024-01-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/246"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -4021,11 +4021,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/274"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -4614,11 +4614,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/galleryImages@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/348"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -5293,11 +5293,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/logicalNetworks@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/399"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5748,11 +5748,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/marketplaceGalleryImages@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/453"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -6190,11 +6190,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/networkInterfaces@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/495"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6595,11 +6595,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/securitySettings@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/532"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6939,11 +6939,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/storageContainers@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/576"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7297,11 +7297,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updates/updateRuns@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/607"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8009,11 +8009,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updateSummaries@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/639"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8674,11 +8674,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updates@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/705"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -9100,11 +9100,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualHardDisks@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/770"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10453,11 +10453,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances@2024-01-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/808"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -10605,11 +10605,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances/guestAgents@2024-01-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/917"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -10750,11 +10750,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers/offers@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/927"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -10828,11 +10828,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/935"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -10947,11 +10947,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers/offers/skus@2024-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/940"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -11050,10 +11050,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata@2024-01-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/947"
     },
-    "flags": 1
+    "readableScopes": 15,
+    "writableScopes": 0
   }
 ]

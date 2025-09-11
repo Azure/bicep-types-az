@@ -1,7 +1,8 @@
 # Microsoft.EnterpriseKnowledgeGraph @ 2018-12-03
 
 ## Resource Microsoft.EnterpriseKnowledgeGraph/services@2018-12-03
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

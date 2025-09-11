@@ -1,7 +1,8 @@
 # Microsoft.SecretSyncController @ 2024-08-21-preview
 
 ## Resource Microsoft.SecretSyncController/azureKeyVaultSecretProviderClasses@2024-08-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The complex type of the extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.SecretSyncController/azureKeyVaultSecretProviderClasses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecretSyncController/secretSyncs@2024-08-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The complex type of the extended location.

@@ -1,7 +1,8 @@
 # Microsoft.AzureLargeInstance @ 2024-04-10
 
-## Resource Microsoft.AzureLargeInstance/azureLargeInstances@2024-04-10 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureLargeInstance/azureLargeInstances@2024-04-10
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureLargeInstance/azureLargeInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureLargeInstance/azureLargeStorageInstances@2024-04-10 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureLargeInstance/azureLargeStorageInstances@2024-04-10
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

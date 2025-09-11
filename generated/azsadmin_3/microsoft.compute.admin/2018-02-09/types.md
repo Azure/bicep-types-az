@@ -1,7 +1,8 @@
 # Microsoft.Compute.Admin @ 2018-02-09
 
 ## Resource Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions@2018-02-09
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions@2018-02-09
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **properties**: [VMExtensionProperties](#vmextensionproperties): Properties of a Virtual Machine Extension Image.
 * **type**: 'Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute.Admin/locations/computeScaleUnits@2018-02-09 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute.Admin/locations/computeScaleUnits@2018-02-09
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Compute.Admin/locations/computeScaleUnits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute.Admin/locations/diskmigrationjobs@2018-02-09
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,8 +44,9 @@
 * **properties**: [DiskMigrationJobProperties](#diskmigrationjobproperties) (ReadOnly): Disk migration properties.
 * **type**: 'Microsoft.Compute.Admin/locations/diskmigrationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute.Admin/locations/disks@2018-02-09 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute.Admin/locations/disks@2018-02-09
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,8 +55,9 @@
 * **properties**: [DiskProperties](#diskproperties) (ReadOnly): Disk properties.
 * **type**: 'Microsoft.Compute.Admin/locations/disks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute.Admin/locations/features@2018-02-09 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute.Admin/locations/features@2018-02-09
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,7 +67,8 @@
 * **type**: 'Microsoft.Compute.Admin/locations/features' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute.Admin/locations/quotas@2018-02-09
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-02-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

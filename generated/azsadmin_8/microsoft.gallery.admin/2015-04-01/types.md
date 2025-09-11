@@ -1,7 +1,8 @@
 # microsoft.gallery.admin @ 2015-04-01
 
-## Resource microsoft.gallery.admin/galleryItems@2015-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource microsoft.gallery.admin/galleryItems@2015-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

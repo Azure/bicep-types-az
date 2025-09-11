@@ -1,7 +1,8 @@
 # Microsoft.HealthcareApis @ 2022-10-01-preview
 
 ## Resource Microsoft.HealthcareApis/services@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,8 +27,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/services/privateLinkResources@2022-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HealthcareApis/services/privateLinkResources@2022-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.HealthcareApis/services/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -49,7 +53,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/analyticsconnectors@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -63,7 +68,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces/analyticsconnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/dicomservices@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -77,7 +83,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces/dicomservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/fhirservices@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -92,7 +99,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces/fhirservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/iotconnectors@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -106,7 +114,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -118,7 +127,8 @@
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/privateEndpointConnections@2022-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,8 +137,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/privateLinkResources@2022-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HealthcareApis/workspaces/privateLinkResources@2022-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

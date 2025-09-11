@@ -1,7 +1,8 @@
 # Microsoft.KubernetesConfiguration @ 2021-11-01-preview
 
 ## Resource Microsoft.KubernetesConfiguration/extensions@2021-11-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KubernetesConfiguration/fluxConfigurations@2021-11-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.KubernetesConfiguration/fluxConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KubernetesConfiguration/sourceControlConfigurations@2021-11-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

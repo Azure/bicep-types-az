@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2019-04-01-preview
 
-## Resource Microsoft.Billing/billingPeriods/Microsoft.Consumption@2019-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ManagementGroup
+## Resource Microsoft.Billing/billingPeriods/Microsoft.Consumption@2019-04-01-preview
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.ManagedServices @ 2020-02-01-preview
 
-## Resource Microsoft.ManagedServices/marketplaceRegistrationDefinitions@2020-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.ManagedServices/marketplaceRegistrationDefinitions@2020-02-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.ManagedServices/marketplaceRegistrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedServices/registrationAssignments@2020-02-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,7 +22,8 @@
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedServices/registrationDefinitions@2020-02-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

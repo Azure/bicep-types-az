@@ -1,7 +1,8 @@
 # Microsoft.AzurePlaywrightService @ 2024-08-01-preview
 
 ## Resource Microsoft.AzurePlaywrightService/accounts@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzurePlaywrightService/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzurePlaywrightService/accounts/quotas@2024-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzurePlaywrightService/accounts/quotas@2024-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzurePlaywrightService/accounts/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzurePlaywrightService/locations/quotas@2024-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AzurePlaywrightService/locations/quotas@2024-08-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

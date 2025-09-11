@@ -1,7 +1,8 @@
 # Microsoft.AzureStackHCI @ 2023-07-01-preview
 
 ## Resource Microsoft.AzureStackHCI/galleryImages@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AzureStackHCI/galleryImages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/marketplaceGalleryImages@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.AzureStackHCI/marketplaceGalleryImages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/networkInterfaces@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.AzureStackHCI/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/storageContainers@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -53,7 +57,8 @@
 * **type**: 'Microsoft.AzureStackHCI/storageContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualHardDisks@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -66,7 +71,8 @@
 * **type**: 'Microsoft.AzureStackHCI/virtualHardDisks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualMachineInstances@2023-07-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -78,7 +84,8 @@
 * **type**: 'Microsoft.AzureStackHCI/virtualMachineInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualMachineInstances/guestAgents@2023-07-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,8 +94,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/virtualMachineInstances/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata@2023-07-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata@2023-07-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -98,7 +106,8 @@
 * **type**: 'Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualNetworks@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.

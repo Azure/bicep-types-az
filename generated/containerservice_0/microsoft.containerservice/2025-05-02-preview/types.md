@@ -1,7 +1,8 @@
 # Microsoft.ContainerService @ 2025-05-02-preview
 
-## Resource Microsoft.ContainerService/locations/guardrailsVersions@2025-05-02-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ContainerService/locations/guardrailsVersions@2025-05-02-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/locations/guardrailsVersions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/locations/meshRevisionProfiles@2025-05-02-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ContainerService/locations/meshRevisionProfiles@2025-05-02-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/locations/meshRevisionProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/locations/safeguardsVersions@2025-05-02-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ContainerService/locations/safeguardsVersions@2025-05-02-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.ContainerService/locations/safeguardsVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal etag convention.
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,7 +62,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools/machines@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -67,7 +73,8 @@
 * **zones**: string[]: The Availability zone in which machine is located.
 
 ## Resource Microsoft.ContainerService/managedClusters/loadBalancers@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,7 +84,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,7 +95,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/managedNamespaces@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal etag convention.
@@ -99,8 +108,9 @@
 * **tags**: [ManagedNamespaceTags](#managednamespacetags): The tags to be persisted on the managed cluster namespace.
 * **type**: 'Microsoft.ContainerService/managedClusters/managedNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2025-05-02-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2025-05-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,7 +120,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/meshUpgradeProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/privateEndpointConnections@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -119,7 +130,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -129,7 +141,8 @@
 * **type**: 'Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedclustersnapshots@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +154,8 @@
 * **type**: 'Microsoft.ContainerService/managedclustersnapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/snapshots@2025-05-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

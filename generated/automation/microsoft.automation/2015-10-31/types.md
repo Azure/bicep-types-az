@@ -1,7 +1,8 @@
 # Microsoft.Automation @ 2015-10-31
 
 ## Resource Microsoft.Automation/automationAccounts@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/certificates@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/compilationjobs@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/configurations@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -45,7 +49,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,7 +69,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -72,7 +79,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/jobs@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -81,7 +89,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/jobSchedules@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -90,7 +99,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/modules@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -102,7 +112,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration of the node.
@@ -114,8 +125,9 @@
 * **source**: [ContentSource](#contentsource) (Required, WriteOnly): Gets or sets the source.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/nodes@2015-10-31 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Automation/automationAccounts/nodes@2015-10-31
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **accountId**: string (ReadOnly): Gets or sets the account id of the node.
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
@@ -132,7 +144,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/nodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -144,7 +157,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: name
 
 ### Base Properties
@@ -176,7 +190,8 @@
 
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -185,7 +200,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/variables@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -194,7 +210,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/watchers@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets or sets the etag of the resource.
@@ -206,7 +223,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/webhooks@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

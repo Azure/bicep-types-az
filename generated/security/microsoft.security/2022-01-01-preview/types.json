@@ -176,11 +176,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/assessments/governanceAssignments@2022-01-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -502,10 +502,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/governanceRules@2022-01-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/13"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

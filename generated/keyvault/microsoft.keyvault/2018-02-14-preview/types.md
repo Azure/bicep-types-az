@@ -1,7 +1,8 @@
 # Microsoft.KeyVault @ 2018-02-14-preview
 
 ## Resource Microsoft.KeyVault/vaults@2018-02-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/accessPolicies@2018-02-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/secrets@2018-02-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

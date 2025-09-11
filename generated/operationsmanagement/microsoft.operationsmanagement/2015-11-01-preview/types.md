@@ -1,7 +1,8 @@
 # Microsoft.OperationsManagement @ 2015-11-01-preview
 
 ## Resource Microsoft.OperationsManagement/ManagementAssociations@2015-11-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.DataReplication @ 2024-09-01
 
 ## Resource Microsoft.DataReplication/replicationFabrics@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.DataReplication/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationFabrics/fabricAgents@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DataReplication/replicationFabrics/fabricAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/alertSettings@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +49,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataReplication/replicationVaults/events@2024-09-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataReplication/replicationVaults/events@2024-09-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,8 +60,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/events' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataReplication/replicationVaults/jobs@2024-09-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataReplication/replicationVaults/jobs@2024-09-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,7 +72,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/privateEndpointConnectionProxies@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets or sets ETag.
@@ -77,7 +84,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/privateEndpointConnectionProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/privateEndpointConnections@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,8 +94,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataReplication/replicationVaults/privateLinkResources@2024-09-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataReplication/replicationVaults/privateLinkResources@2024-09-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +106,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/protectedItems@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -106,8 +116,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataReplication/replicationVaults/protectedItems/recoveryPoints@2024-09-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataReplication/replicationVaults/protectedItems/recoveryPoints@2024-09-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -117,7 +128,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/protectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/replicationExtensions@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,7 +139,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/replicationExtensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/replicationPolicies@2024-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

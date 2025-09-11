@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2022-01-01
 
-## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces@2022-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -13,8 +14,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Compute/cloudServices/roleInstances/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses@2022-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -28,8 +30,9 @@
 * **type**: 'Microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2022-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -41,8 +44,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipConfigurations@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipConfigurations@2022-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -51,8 +55,9 @@
 * **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat) (ReadOnly): Network interface IP configuration properties.
 * **type**: 'microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses@2022-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.

@@ -1,7 +1,8 @@
 # Microsoft.DBforPostgreSQL @ 2018-06-01
 
-## Resource Microsoft.DBforPostgreSQL/servers/advisors@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/advisors@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: any (ReadOnly): The properties of a recommendation action advisor.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/advisors/recommendedActions@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/advisors/recommendedActions@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/servers/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/servers/privateEndpointConnections@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,8 +30,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/privateLinkResources@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/privateLinkResources@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,8 +40,9 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource group id.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/queryTexts@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/queryTexts@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +50,9 @@
 * **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/topQueryStatistics@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/topQueryStatistics@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,8 +60,9 @@
 * **properties**: [QueryStatisticProperties](#querystatisticproperties) (ReadOnly): The properties of a query statistic.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/topQueryStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/waitStatistics@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/servers/waitStatistics@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

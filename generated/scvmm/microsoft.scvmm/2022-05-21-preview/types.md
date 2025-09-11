@@ -1,7 +1,8 @@
 # Microsoft.ScVmm @ 2022-05-21-preview
 
 ## Resource Microsoft.ScVmm/availabilitySets@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.ScVmm/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/clouds@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.ScVmm/clouds' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualMachines@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -41,7 +44,8 @@
 * **type**: 'Microsoft.ScVmm/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualMachines/extensions@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,7 +57,8 @@
 * **type**: 'Microsoft.ScVmm/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualMachines/guestAgents@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,7 +68,8 @@
 * **type**: 'Microsoft.ScVmm/virtualMachines/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualMachines/hybridIdentityMetadata@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.ScVmm/virtualMachines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualMachineTemplates@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -86,7 +93,8 @@
 * **type**: 'Microsoft.ScVmm/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/virtualNetworks@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -99,7 +107,8 @@
 * **type**: 'Microsoft.ScVmm/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/vmmServers@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -112,7 +121,8 @@
 * **type**: 'Microsoft.ScVmm/vmmServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ScVmm/vmmServers/inventoryItems@2022-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.ContainerService @ 2018-03-31
 
 ## Resource Microsoft.ContainerService/managedClusters@2018-03-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

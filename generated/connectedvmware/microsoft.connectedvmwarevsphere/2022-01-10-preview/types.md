@@ -1,7 +1,8 @@
 # Microsoft.ConnectedVMwarevSphere @ 2022-01-10-preview
 
 ## Resource Microsoft.ConnectedVMwarevSphere/clusters@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/datastores@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -29,7 +31,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/hosts@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -43,7 +46,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/resourcePools@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -57,7 +61,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/resourcePools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/vcenters@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -71,7 +76,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/vcenters/inventoryItems@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -82,7 +88,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -97,7 +104,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -109,7 +117,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/guestAgents@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -119,7 +128,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -129,7 +139,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -143,7 +154,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualNetworks@2022-01-10-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.

@@ -566,10 +566,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CostManagement/scheduledActions@2022-06-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

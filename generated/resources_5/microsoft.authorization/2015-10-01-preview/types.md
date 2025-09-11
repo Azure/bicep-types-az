@@ -1,7 +1,8 @@
 # Microsoft.Authorization @ 2015-10-01-preview
 
 ## Resource Microsoft.Authorization/policyassignments@2015-10-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Authorization/policyassignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policydefinitions@2015-10-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

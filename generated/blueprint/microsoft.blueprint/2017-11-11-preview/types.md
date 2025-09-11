@@ -1,7 +1,8 @@
 # Microsoft.Blueprint @ 2017-11-11-preview
 
 ## Resource Microsoft.Blueprint/blueprintAssignments@2017-11-11-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints@2017-11-11-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2017-11-11-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -47,7 +50,8 @@
 
 
 ## Resource Microsoft.Blueprint/blueprints/versions@2017-11-11-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,8 +59,9 @@
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (ReadOnly): Detailed properties for published Blueprint
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2017-11-11-preview (ReadOnly)
-* **Valid Scope(s)**: ManagementGroup
+## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2017-11-11-preview
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: None
 * **Discriminator**: kind
 
 ### Base Properties

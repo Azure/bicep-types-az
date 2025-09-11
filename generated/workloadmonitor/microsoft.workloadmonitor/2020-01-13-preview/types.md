@@ -1,7 +1,8 @@
 # Microsoft.WorkloadMonitor @ 2020-01-13-preview
 
-## Resource Microsoft.WorkloadMonitor/monitors@2020-01-13-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.WorkloadMonitor/monitors@2020-01-13-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [HealthMonitorProperties](#healthmonitorproperties) (ReadOnly): Properties of the monitor's health status.
 * **type**: 'Microsoft.WorkloadMonitor/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.WorkloadMonitor/monitors/history@2020-01-13-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.WorkloadMonitor/monitors/history@2020-01-13-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

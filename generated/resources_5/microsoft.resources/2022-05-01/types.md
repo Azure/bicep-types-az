@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2022-05-01
 
-## Resource Microsoft.Resources/changes@2022-05-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Resources/changes@2022-05-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

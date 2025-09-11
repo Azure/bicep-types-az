@@ -1,7 +1,8 @@
 # Microsoft.DeviceUpdate @ 2022-10-01
 
 ## Resource Microsoft.DeviceUpdate/accounts@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DeviceUpdate/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceUpdate/accounts/instances@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.DeviceUpdate/accounts/instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): ETag from NRP.
@@ -39,7 +42,8 @@
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnections@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -48,8 +52,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceUpdate/accounts/privateLinkResources@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DeviceUpdate/accounts/privateLinkResources@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

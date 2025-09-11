@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2022-03-01
 
 ## Resource Microsoft.Security/pricings@2022-03-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

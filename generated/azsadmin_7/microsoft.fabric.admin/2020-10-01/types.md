@@ -1,7 +1,8 @@
 # Microsoft.Fabric.Admin @ 2020-10-01
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/computeOperationResults@2020-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/computeOperationResults@2020-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/computeOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes@2020-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes@2020-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits@2020-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits@2020-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

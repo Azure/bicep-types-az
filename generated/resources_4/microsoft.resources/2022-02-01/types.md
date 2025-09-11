@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2022-02-01
 
-## Resource Microsoft.Resources/builtInTemplateSpecs@2022-02-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Resources/builtInTemplateSpecs@2022-02-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TemplateSpecTags](#templatespectags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Resources/builtInTemplateSpecs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Resources/builtInTemplateSpecs/versions@2022-02-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Resources/builtInTemplateSpecs/versions@2022-02-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Resources/builtInTemplateSpecs/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/templateSpecs@2022-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.Resources/templateSpecs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/templateSpecs/versions@2022-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

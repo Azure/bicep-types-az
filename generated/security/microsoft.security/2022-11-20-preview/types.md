@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2022-11-20-preview
 
 ## Resource Microsoft.Security/apiCollections@2022-11-20-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

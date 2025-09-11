@@ -1,7 +1,8 @@
 # Microsoft.AzureArcData @ 2023-01-15-preview
 
 ## Resource Microsoft.AzureArcData/dataControllers@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AzureArcData/dataControllers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/dataControllers/activeDirectoryConnectors@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.AzureArcData/dataControllers/activeDirectoryConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/postgresInstances@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.AzureArcData/postgresInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/sqlManagedInstances@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -52,7 +56,8 @@
 * **type**: 'Microsoft.AzureArcData/sqlManagedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/sqlManagedInstances/failoverGroups@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.AzureArcData/sqlManagedInstances/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/sqlServerInstances@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +80,8 @@
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureArcData/sqlServerInstances/databases@2023-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

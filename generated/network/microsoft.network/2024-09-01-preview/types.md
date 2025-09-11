@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2024-09-01-preview
 
 ## Resource Microsoft.Network/networkManagers/routingConfigurations@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Network/networkManagers/routingConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkManagers/routingConfigurations/ruleCollections@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Network/networkManagers/routingConfigurations/ruleCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkManagers/routingConfigurations/ruleCollections/rules@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.

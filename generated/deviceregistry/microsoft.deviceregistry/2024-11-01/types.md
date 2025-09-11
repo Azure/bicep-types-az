@@ -1,7 +1,8 @@
 # Microsoft.DeviceRegistry @ 2024-11-01
 
 ## Resource Microsoft.DeviceRegistry/assetEndpointProfiles@2024-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DeviceRegistry/assetEndpointProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/assets@2024-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -26,8 +28,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceRegistry/assets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceRegistry/billingContainers@2024-11-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DeviceRegistry/billingContainers@2024-11-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag

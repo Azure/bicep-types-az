@@ -1,7 +1,8 @@
 # Microsoft.Automanage @ 2021-04-30-preview
 
-## Resource Microsoft.Automanage/bestPractices@2021-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Automanage/bestPractices@2021-04-30-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automanage/bestPractices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/bestPractices/versions@2021-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Automanage/bestPractices/versions@2021-04-30-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Automanage/bestPractices/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2021-04-30-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,8 +33,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/configurationProfileAssignments/reports@2021-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Automanage/configurationProfileAssignments/reports@2021-04-30-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments/reports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles@2021-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,7 +58,8 @@
 * **type**: 'Microsoft.Automanage/configurationProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles/versions@2021-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -64,8 +70,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/servicePrincipals@2021-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Automanage/servicePrincipals@2021-04-30-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

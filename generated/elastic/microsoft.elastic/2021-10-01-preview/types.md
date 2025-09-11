@@ -1,7 +1,8 @@
 # Microsoft.Elastic @ 2021-10-01-preview
 
 ## Resource Microsoft.Elastic/monitors@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.Elastic/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/tagRules@2021-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2015-06-01-preview
 
-## Resource Microsoft.Security/locations@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/locations@2015-06-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: any (ReadOnly): An empty set of properties
 * **type**: 'Microsoft.Security/locations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/alerts@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Security/locations/alerts@2015-06-01-preview
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -18,8 +20,9 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): describes security alert properties.
 * **type**: 'Microsoft.Security/locations/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/allowedConnections@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/allowedConnections@2015-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,8 +31,9 @@
 * **properties**: [AllowedConnectionsResourceProperties](#allowedconnectionsresourceproperties) (ReadOnly): Describes the allowed traffic between Azure resources
 * **type**: 'Microsoft.Security/locations/allowedConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2015-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,8 +42,9 @@
 * **properties**: [DiscoveredSecuritySolutionProperties](#discoveredsecuritysolutionproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/locations/discoveredSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/ExternalSecuritySolutions@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/ExternalSecuritySolutions@2015-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +54,8 @@
 * **type**: 'Microsoft.Security/locations/ExternalSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,8 +65,9 @@
 * **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/tasks@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Security/locations/tasks@2015-06-01-preview
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,8 +75,9 @@
 * **properties**: [SecurityTaskProperties](#securitytaskproperties) (ReadOnly): Describes properties of a task.
 * **type**: 'Microsoft.Security/locations/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/topologies@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/locations/topologies@2015-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.MobileNetwork @ 2024-02-01
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks/dataNetworks@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks/dataNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks/services@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks/simPolicies@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +54,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks/simPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks/sites@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks/sites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/mobileNetworks/slices@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +80,8 @@
 * **type**: 'Microsoft.MobileNetwork/mobileNetworks/slices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/packetCoreControlPlanes@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,7 +94,8 @@
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/diagnosticsPackages@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +105,8 @@
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes/diagnosticsPackages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/packetCaptures@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,7 +116,8 @@
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -119,7 +129,8 @@
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes/attachedDataNetworks@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -130,8 +141,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes/attachedDataNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/ues/extendedInformation@2024-02-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.MobileNetwork/packetCoreControlPlanes/ues/extendedInformation@2024-02-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -140,8 +152,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlanes/ues/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MobileNetwork/packetCoreControlPlaneVersions@2024-02-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant, Subscription
+## Resource Microsoft.MobileNetwork/packetCoreControlPlaneVersions@2024-02-01
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -151,7 +164,8 @@
 * **type**: 'Microsoft.MobileNetwork/packetCoreControlPlaneVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/simGroups@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -164,7 +178,8 @@
 * **type**: 'Microsoft.MobileNetwork/simGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MobileNetwork/simGroups/sims@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

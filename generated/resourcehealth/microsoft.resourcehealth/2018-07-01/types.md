@@ -1,7 +1,8 @@
 # Microsoft.ResourceHealth @ 2018-07-01
 
-## Resource Microsoft.ResourceHealth/emergingIssues@2018-07-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.ResourceHealth/emergingIssues@2018-07-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [EmergingIssue](#emergingissue) (ReadOnly): The emerging issue entity properties.
 * **type**: 'Microsoft.ResourceHealth/emergingIssues' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/metadata@2018-07-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.ResourceHealth/metadata@2018-07-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

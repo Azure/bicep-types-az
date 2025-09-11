@@ -1,7 +1,8 @@
 # Microsoft.IoTOperationsOrchestrator @ 2023-10-04-preview
 
 ## Resource Microsoft.IoTOperationsOrchestrator/instances@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.IoTOperationsOrchestrator/instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsOrchestrator/solutions@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.IoTOperationsOrchestrator/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsOrchestrator/targets@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.

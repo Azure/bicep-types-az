@@ -1,7 +1,8 @@
 # Microsoft.ResourceGraph @ 2018-09-01-preview
 
 ## Resource Microsoft.ResourceGraph/queries@2018-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.

@@ -1,7 +1,8 @@
 # Microsoft.OperationalInsights @ 2015-11-01-preview
 
 ## Resource Microsoft.OperationalInsights/workspaces@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: The ETag of the workspace.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataSources@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: The ETag of the data source.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

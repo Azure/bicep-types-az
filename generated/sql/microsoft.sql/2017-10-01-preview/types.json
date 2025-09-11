@@ -111,11 +111,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -254,11 +254,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/16"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -536,11 +536,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/instanceFailoverGroups@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/24"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -657,11 +657,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/keys@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -793,11 +793,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/58"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -879,11 +879,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/68"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1133,11 +1133,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/elasticPools@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/73"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1791,11 +1791,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/88"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1995,11 +1995,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/141"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2053,11 +2053,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/156"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2124,10 +2124,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/recoverableDatabases@2017-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/160"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

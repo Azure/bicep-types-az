@@ -1,7 +1,8 @@
 # Microsoft.VoiceServices @ 2023-04-03
 
 ## Resource Microsoft.VoiceServices/communicationsGateways@2023-04-03
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.VoiceServices/communicationsGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VoiceServices/communicationsGateways/testLines@2023-04-03
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

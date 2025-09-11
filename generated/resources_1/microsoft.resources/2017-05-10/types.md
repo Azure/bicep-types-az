@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2017-05-10
 
 ## Resource Microsoft.Resources/deployments@2017-05-10
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-05-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2018-09-01-preview
 
 ## Resource Microsoft.Migrate/migrateProjects@2018-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Gets or sets the eTag for concurrency control.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets or sets the ETAG for optimistic concurrency control.

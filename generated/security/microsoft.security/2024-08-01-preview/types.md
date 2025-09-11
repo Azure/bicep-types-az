@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2024-08-01-preview
 
 ## Resource Microsoft.Security/defenderForStorageSettings@2024-08-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/defenderForStorageSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.

@@ -1,7 +1,8 @@
 # Microsoft.ConfidentialLedger @ 2022-05-13
 
 ## Resource Microsoft.ConfidentialLedger/ledgers@2022-05-13
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-13' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

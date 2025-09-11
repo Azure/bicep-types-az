@@ -125,11 +125,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataMaskingPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -353,11 +353,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/12"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -479,11 +479,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/29"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2979,11 +2979,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/37"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3149,11 +3149,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/extensions@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/315"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3370,11 +3370,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/elasticPools@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/327"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3462,11 +3462,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/communicationLinks@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/343"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3588,11 +3588,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/connectionPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/350"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3801,11 +3801,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/securityAlertPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/361"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3893,11 +3893,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/firewallRules@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/376"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3973,11 +3973,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/transparentDataEncryption@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/383"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4156,11 +4156,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/387"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4256,11 +4256,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/administrators@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/400"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4421,11 +4421,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/advisors@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/406"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4493,11 +4493,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/420"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4722,11 +4722,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/424"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4892,11 +4892,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/auditingPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/446"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5069,11 +5069,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/auditingPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/453"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5211,11 +5211,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/connectionPolicies@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/460"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5298,11 +5298,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/elasticPools/databases@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/465"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5385,11 +5385,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/recommendedElasticPools/databases@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/470"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5484,11 +5484,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/serviceObjectives@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/475"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5576,11 +5576,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/recoverableDatabases@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/480"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5703,11 +5703,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/restorableDroppedDatabases@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/485"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5989,11 +5989,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/recommendedElasticPools@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/490"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6246,11 +6246,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/replicationLinks@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/506"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6304,10 +6304,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/serviceTierAdvisors@2014-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/528"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

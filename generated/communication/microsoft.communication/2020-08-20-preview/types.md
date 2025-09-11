@@ -1,7 +1,8 @@
 # Microsoft.Communication @ 2020-08-20-preview
 
 ## Resource Microsoft.Communication/communicationServices@2020-08-20-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

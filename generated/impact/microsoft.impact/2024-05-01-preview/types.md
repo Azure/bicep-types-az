@@ -1,7 +1,8 @@
 # Microsoft.Impact @ 2024-05-01-preview
 
 ## Resource Microsoft.Impact/connectors@2024-05-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Impact/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Impact/impactCategories@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Impact/impactCategories@2024-05-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Impact/impactCategories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Impact/workloadImpacts@2024-05-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Impact/workloadImpacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Impact/workloadImpacts/insights@2024-05-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

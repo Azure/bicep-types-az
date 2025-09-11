@@ -1,7 +1,8 @@
 # Microsoft.Features @ 2021-07-01
 
 ## Resource Microsoft.Features/featureProviders/subscriptionFeatureRegistrations@2021-07-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

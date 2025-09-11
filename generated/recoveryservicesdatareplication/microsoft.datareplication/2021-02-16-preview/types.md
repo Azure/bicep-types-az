@@ -1,7 +1,8 @@
 # Microsoft.DataReplication @ 2021-02-16-preview
 
 ## Resource Microsoft.DataReplication/replicationFabrics@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.DataReplication/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationFabrics/fabricAgents@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DataReplication/replicationFabrics/fabricAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/alertSettings@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,8 +48,9 @@
 * **systemData**: [EmailConfigurationModelSystemData](#emailconfigurationmodelsystemdata) (ReadOnly)
 * **type**: 'Microsoft.DataReplication/replicationVaults/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataReplication/replicationVaults/jobs@2021-02-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataReplication/replicationVaults/jobs@2021-02-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,7 +60,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/protectedItems@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -65,7 +71,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/replicationExtensions@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,7 +82,8 @@
 * **type**: 'Microsoft.DataReplication/replicationVaults/replicationExtensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataReplication/replicationVaults/replicationPolicies@2021-02-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2019-11-01
 
 ## Resource Microsoft.Network/NetworkExperimentProfiles@2019-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

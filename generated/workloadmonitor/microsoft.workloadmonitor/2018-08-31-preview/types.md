@@ -1,7 +1,8 @@
 # Microsoft.WorkloadMonitor @ 2018-08-31-preview
 
-## Resource Microsoft.WorkloadMonitor/components@2018-08-31-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.WorkloadMonitor/components@2018-08-31-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.
@@ -10,8 +11,9 @@
 * **properties**: [ComponentProperties](#componentproperties) (ReadOnly): Properties of the component.
 * **type**: 'Microsoft.WorkloadMonitor/components' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.WorkloadMonitor/monitorInstances@2018-08-31-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.WorkloadMonitor/monitorInstances@2018-08-31-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.
@@ -20,8 +22,9 @@
 * **properties**: [MonitorInstanceProperties](#monitorinstanceproperties) (ReadOnly): Properties of the monitor instance.
 * **type**: 'Microsoft.WorkloadMonitor/monitorInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.WorkloadMonitor/monitors@2018-08-31-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.WorkloadMonitor/monitors@2018-08-31-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.WorkloadMonitor/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.WorkloadMonitor/notificationSettings@2018-08-31-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.

@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2021-03-08
 
 ## Resource Microsoft.Insights/myWorkbooks@2021-03-08
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [MyWorkbookResourceEtag](#myworkbookresourceetag): Resource etag
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/workbooks@2021-03-08
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [ResourceEtag](#resourceetag): Resource etag
@@ -30,8 +32,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/workbooks/revisions@2021-03-08 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Insights/workbooks/revisions@2021-03-08
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [ResourceEtag](#resourceetag) (ReadOnly): Resource etag

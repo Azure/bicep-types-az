@@ -1,7 +1,8 @@
 # Microsoft.DBforMySQL @ 2017-12-01-preview
 
 ## Resource Microsoft.DBforMySQL/servers@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/administrators@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/configurations@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/databases@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/firewallRules@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +55,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,7 +65,8 @@
 * **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/virtualNetworkRules@2017-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

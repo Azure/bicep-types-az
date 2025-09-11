@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2017-04-24-preview
 
-## Resource Microsoft.Billing/billingPeriods@2017-04-24-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/billingPeriods@2017-04-24-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-04-24-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [BillingPeriodProperties](#billingperiodproperties) (ReadOnly): The properties of the billing period.
 * **type**: 'Microsoft.Billing/billingPeriods' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/invoices@2017-04-24-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/invoices@2017-04-24-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-04-24-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

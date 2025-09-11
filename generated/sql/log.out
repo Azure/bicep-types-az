@@ -1,7 +1,7 @@
 Generating types for 'specification/sql/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/sql.core_legacy.json"
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/usages_legacy.json"
-AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -77,7 +77,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AdvisorProperties' (1 differences):
   - properties.recommendedActions.$ref: "#/components/schemas/schemas:121" => "#/components/schemas/schemas:2708"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedAction' (4 differences):
-  - allOf: [{"$ref":"#/components/schemas/schemas:3470"}] => <none>
+  - allOf: [{"$ref":"#/components/schemas/schemas:3576"}] => <none>
   - properties.id: <none> => {"$ref":"#/components/schemas/schemas:2712","description":"Resource ID.","readOnly":true}
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:2713","description":"Resource name.","readOnly":true}
   - properties.type: <none> => {"$ref":"#/components/schemas/schemas:2714","description":"Resource type.","readOnly":true}

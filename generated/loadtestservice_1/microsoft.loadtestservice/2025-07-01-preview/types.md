@@ -1,7 +1,8 @@
 # Microsoft.LoadTestService @ 2025-07-01-preview
 
-## Resource Microsoft.LoadTestService/locations/playwrightQuotas@2025-07-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.LoadTestService/locations/playwrightQuotas@2025-07-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.LoadTestService/locations/playwrightQuotas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LoadTestService/playwrightWorkspaces@2025-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LoadTestService/playwrightWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LoadTestService/playwrightWorkspaces/quotas@2025-07-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.LoadTestService/playwrightWorkspaces/quotas@2025-07-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

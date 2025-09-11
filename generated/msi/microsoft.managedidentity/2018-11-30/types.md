@@ -1,7 +1,8 @@
 # Microsoft.ManagedIdentity @ 2018-11-30
 
-## Resource Microsoft.ManagedIdentity/identities@2018-11-30 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.ManagedIdentity/identities@2018-11-30
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-11-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.ManagedIdentity/identities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

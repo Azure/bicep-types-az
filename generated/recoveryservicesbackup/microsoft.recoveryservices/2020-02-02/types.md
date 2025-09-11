@@ -1,7 +1,8 @@
 # Microsoft.RecoveryServices @ 2020-02-02
 
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2020-02-02
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.

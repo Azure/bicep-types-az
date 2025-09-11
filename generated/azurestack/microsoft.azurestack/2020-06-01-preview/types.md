@@ -1,7 +1,8 @@
 # Microsoft.AzureStack @ 2020-06-01-preview
 
-## Resource Microsoft.AzureStack/cloudManifestFiles@2020-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.AzureStack/cloudManifestFiles@2020-06-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.AzureStack/cloudManifestFiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStack/linkedSubscriptions@2020-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.AzureStack/linkedSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStack/registrations@2020-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
@@ -39,7 +42,8 @@
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStack/registrations/customerSubscriptions@2020-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The entity tag used for optimistic concurrency when modifying the resource.
@@ -49,8 +53,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureStack/registrations/customerSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureStack/registrations/products@2020-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureStack/registrations/products@2020-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.

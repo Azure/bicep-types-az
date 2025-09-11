@@ -519,11 +519,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes/attachedDataNetworks@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -683,11 +683,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/dataNetworks@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/45"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -873,11 +873,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/diagnosticsPackages@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/60"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1072,11 +1072,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/78"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1309,11 +1309,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCaptures@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/95"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2217,11 +2217,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/116"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2381,11 +2381,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/200"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2960,11 +2960,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/services@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/215"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3370,11 +3370,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/simGroups/sims@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/265"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3578,11 +3578,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/simGroups@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/302"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4101,11 +4101,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/simPolicies@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/319"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4284,11 +4284,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/sites@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/366"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4479,11 +4479,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/slices@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/382"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4791,10 +4791,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlaneVersions@2023-06-01",
-    "scopeType": 5,
     "body": {
       "$ref": "#/398"
     },
-    "flags": 1
+    "readableScopes": 5,
+    "writableScopes": 0
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2015-05-01
 
 ## Resource Microsoft.Insights/components@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **Content**: string: The content of this item
@@ -30,7 +32,8 @@
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **ApplicationName**: string (ReadOnly): The name of the Application Insights component.
@@ -60,7 +63,8 @@
 * **type**: 'Microsoft.Insights/components/exportconfiguration' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/components/favorites@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **Category**: string: Favorite category, as defined by the user at creation time.
@@ -79,7 +83,8 @@
 * **Version**: string: This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
 
 ## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **Content**: string: The content of this item
@@ -96,7 +101,8 @@
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
 ## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **customEmails**: string[]: Custom email addresses for this rule notifications
@@ -109,7 +115,8 @@
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -121,7 +128,8 @@
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/webtests@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -133,7 +141,8 @@
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/workbooks@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

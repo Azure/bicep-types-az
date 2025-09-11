@@ -1,7 +1,8 @@
 # Microsoft.SecurityInsights @ 2020-01-01
 
 ## Resource Microsoft.SecurityInsights/alertRules@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 * **Discriminator**: kind
 
 ### Base Properties
@@ -28,7 +29,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -37,8 +39,9 @@
 * **properties**: [ActionRequestPropertiesOrActionResponseProperties](#actionrequestpropertiesoractionresponseproperties): Action properties for put request
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/alertRuleTemplates@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/alertRuleTemplates@2020-01-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 * **Discriminator**: kind
 
 ### Base Properties
@@ -64,7 +67,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -74,7 +78,8 @@
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 * **Discriminator**: kind
 
 ### Base Properties
@@ -126,7 +131,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/incidents@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -136,7 +142,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2020-01-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

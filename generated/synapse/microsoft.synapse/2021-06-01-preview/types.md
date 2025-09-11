@@ -1,7 +1,8 @@
 # Microsoft.Synapse @ 2021-06-01-preview
 
 ## Resource Microsoft.Synapse/privateLinkHubs@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/privateLinkHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/privateLinkHubs/privateLinkResources@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/privateLinkHubs/privateLinkResources@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Synapse/privateLinkHubs/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.Synapse/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/administrators@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -42,7 +46,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/auditingSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -51,7 +56,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/azureADOnlyAuthentications@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,7 +66,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/bigDataPools@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -71,7 +78,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/bigDataPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/dedicatedSQLminimalTlsSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -81,7 +89,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/dedicatedSQLminimalTlsSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/encryptionProtector@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -92,7 +101,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/extendedAuditingSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,7 +111,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/firewallRules@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,7 +121,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -120,7 +132,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/keys@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -129,7 +142,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -143,7 +157,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/attachedDatabaseConfigurations@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -154,7 +169,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/databases@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -177,7 +193,8 @@
 
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -205,7 +222,8 @@
 
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -215,7 +233,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/principalAssignments@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -224,8 +243,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/libraries@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/libraries@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -235,7 +255,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/libraries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -244,7 +265,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -252,8 +274,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties.
 * **type**: 'Microsoft.Synapse/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/privateLinkResources@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/privateLinkResources@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -261,8 +284,9 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/recoverableSqlPools@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/recoverableSqlPools@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -270,8 +294,9 @@
 * **properties**: [RecoverableSqlPoolProperties](#recoverablesqlpoolproperties) (ReadOnly): The properties of a recoverable sql pool
 * **type**: 'Microsoft.Synapse/workspaces/recoverableSqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/restorableDroppedSqlPools@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/restorableDroppedSqlPools@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -281,7 +306,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/restorableDroppedSqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/securityAlertPolicies@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -289,8 +315,9 @@
 * **properties**: [ServerSecurityAlertPolicyProperties](#serversecurityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sparkconfigurations@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sparkconfigurations@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -300,7 +327,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sparkconfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlAdministrators@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -309,7 +337,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlAdministrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -321,7 +350,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/auditingSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -330,8 +360,9 @@
 * **properties**: [SqlPoolBlobAuditingPolicyProperties](#sqlpoolblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/connectionPolicies@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/connectionPolicies@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -342,7 +373,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -354,7 +386,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -364,8 +397,9 @@
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): The properties of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -374,7 +408,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -383,7 +418,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -394,7 +430,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/metadataSync@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -402,8 +439,9 @@
 * **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties): Metadata Sync Config properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/operationResults@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/operationResults@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -414,8 +452,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/replicationLinks@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/replicationLinks@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -424,8 +463,9 @@
 * **properties**: [ReplicationLinkProperties](#replicationlinkproperties) (ReadOnly): The properties representing the resource.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/restorePoints@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/restorePoints@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -434,24 +474,27 @@
 * **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/schemas@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -460,7 +503,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -470,7 +514,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -479,7 +524,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -489,7 +535,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -498,7 +545,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -506,8 +554,9 @@
 * **properties**: [SqlPoolVulnerabilityAssessmentRuleBaselineProperties](#sqlpoolvulnerabilityassessmentrulebaselineproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -516,7 +565,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -525,7 +575,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -534,7 +585,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/trustedServiceByPassConfiguration@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -542,7 +594,8 @@
 * **type**: 'Microsoft.Synapse/workspaces/trustedServiceByPassConfiguration' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/vulnerabilityAssessments@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

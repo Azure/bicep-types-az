@@ -109,11 +109,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.HybridData/dataManagers@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -576,11 +576,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/10"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -707,10 +707,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.HybridData/dataManagers/dataStores@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/61"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

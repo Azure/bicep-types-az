@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2023-11-15
 
 ## Resource Microsoft.Security/apiCollections@2023-11-15
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

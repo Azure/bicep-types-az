@@ -1,7 +1,8 @@
 # Microsoft.DBForMySql @ 2020-07-01-preview
 
 ## Resource Microsoft.DBForMySql/flexibleServers@2020-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMySql/flexibleServers/configurations@2020-07-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBForMySql/flexibleServers/configurations@2020-07-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DBForMySql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.DBForMySql/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/firewallRules@2020-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

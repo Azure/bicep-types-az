@@ -1,7 +1,8 @@
 # Microsoft.EventGrid @ 2018-05-01-preview
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2018-05-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2018-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topicTypes@2018-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.EventGrid/topicTypes@2018-05-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

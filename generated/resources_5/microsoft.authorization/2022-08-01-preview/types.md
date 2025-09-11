@@ -1,7 +1,8 @@
 # Microsoft.Authorization @ 2022-08-01-preview
 
 ## Resource Microsoft.Authorization/variables@2022-08-01-preview
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Readable Scope(s)**: ManagementGroup, Subscription
+* **Writable Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2022-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Authorization/variables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/variables/values@2022-08-01-preview
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Readable Scope(s)**: ManagementGroup, Subscription
+* **Writable Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2022-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.EdgeMarketplace @ 2023-08-01
 
-## Resource Microsoft.EdgeMarketplace/offers@2023-08-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.EdgeMarketplace/offers@2023-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EdgeMarketplace/offers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EdgeMarketplace/publishers@2023-08-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.EdgeMarketplace/publishers@2023-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

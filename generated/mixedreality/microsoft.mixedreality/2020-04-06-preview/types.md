@@ -1,7 +1,8 @@
 # Microsoft.MixedReality @ 2020-04-06-preview
 
 ## Resource Microsoft.MixedReality/remoteRenderingAccounts@2020-04-06-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

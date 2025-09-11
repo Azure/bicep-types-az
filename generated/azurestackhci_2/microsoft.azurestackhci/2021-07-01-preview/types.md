@@ -1,7 +1,8 @@
 # Microsoft.AzureStackHCI @ 2021-07-01-preview
 
 ## Resource Microsoft.AzureStackHCI/galleryimages@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AzureStackHCI/galleryimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/networkinterfaces@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.AzureStackHCI/networkinterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualharddisks@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.AzureStackHCI/virtualharddisks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualmachines@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
@@ -53,7 +57,8 @@
 * **type**: 'Microsoft.AzureStackHCI/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureStackHCI/virtualnetworks@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.

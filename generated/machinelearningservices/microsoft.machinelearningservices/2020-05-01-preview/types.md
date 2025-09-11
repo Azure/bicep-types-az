@@ -1,7 +1,8 @@
 # Microsoft.MachineLearningServices @ 2020-05-01-preview
 
 ## Resource Microsoft.MachineLearningServices/workspaces@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datasets@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **datasetType**: 'file' | 'tabular' | string (Required, WriteOnly): Specifies dataset type.
@@ -45,7 +48,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **accountKey**: string (WriteOnly): Account Key of storage account.
 * **accountName**: string (WriteOnly): The name of the storage account.
@@ -88,7 +92,8 @@
 * **workspaceSystemAssignedIdentity**: bool (WriteOnly): If set to true, datastore support data access authenticated with Workspace MSI.
 
 ## Resource Microsoft.MachineLearningServices/workspaces/linkedWorkspaces@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +102,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/linkedWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,7 +116,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/services@2020-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: computeType
 
 ### Base Properties

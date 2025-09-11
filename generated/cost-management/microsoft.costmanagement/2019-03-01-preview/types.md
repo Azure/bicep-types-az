@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2019-03-01-preview
 
 ## Resource Microsoft.CostManagement/cloudConnectors@2019-03-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **properties**: [ConnectorProperties](#connectorproperties): Connector properties
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.CostManagement/externalBillingAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
-* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -29,7 +32,8 @@
 * **type**: 'Microsoft.CostManagement/externalSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/showbackRules@2019-03-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

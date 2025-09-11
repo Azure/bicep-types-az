@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2016-04-30-preview
 
 ## Resource Microsoft.Compute/availabilitySets@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/disks@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/images@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,8 +37,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2016-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2016-04-30-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +49,9 @@
 * **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2016-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2016-04-30-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,7 +62,8 @@
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/snapshots@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +74,8 @@
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -82,7 +89,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachines/extensions@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -93,7 +101,8 @@
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -106,8 +115,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

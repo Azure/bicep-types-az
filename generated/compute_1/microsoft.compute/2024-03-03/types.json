@@ -721,11 +721,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -995,11 +995,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/applications@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/64"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1983,11 +1983,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/applications/versions@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/81"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2466,11 +2466,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/images@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/161"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3382,11 +3382,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/images/versions@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/194"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3591,11 +3591,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/inVMAccessControlProfiles@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/265"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4033,10 +4033,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Compute/galleries/inVMAccessControlProfiles/versions@2024-03-03",
-    "scopeType": 8,
     "body": {
       "$ref": "#/284"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

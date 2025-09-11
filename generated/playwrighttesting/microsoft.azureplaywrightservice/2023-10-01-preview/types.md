@@ -1,7 +1,8 @@
 # Microsoft.AzurePlaywrightService @ 2023-10-01-preview
 
 ## Resource Microsoft.AzurePlaywrightService/accounts@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzurePlaywrightService/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzurePlaywrightService/locations/quotas@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AzurePlaywrightService/locations/quotas@2023-10-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

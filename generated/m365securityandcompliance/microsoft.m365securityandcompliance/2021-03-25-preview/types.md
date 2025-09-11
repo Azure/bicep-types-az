@@ -1,7 +1,8 @@
 # Microsoft.M365SecurityAndCompliance @ 2021-03-25-preview
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,8 +27,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,8 +65,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -71,7 +77,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -86,7 +93,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -95,8 +103,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -106,7 +115,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -121,7 +131,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -130,8 +141,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +153,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -156,7 +169,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -165,8 +179,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -176,7 +191,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -191,7 +207,8 @@
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections@2021-03-25-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -200,8 +217,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Required property for system data
 * **type**: 'Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources@2021-03-25-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.M365SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources@2021-03-25-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

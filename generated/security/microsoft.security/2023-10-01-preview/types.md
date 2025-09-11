@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2023-10-01-preview
 
 ## Resource Microsoft.Security/securityConnectors@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.

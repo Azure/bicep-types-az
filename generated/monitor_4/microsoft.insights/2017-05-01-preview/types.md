@@ -1,7 +1,8 @@
 # microsoft.insights @ 2017-05-01-preview
 
 ## Resource microsoft.insights/diagnosticSettings@2017-05-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **properties**: [SubscriptionDiagnosticSettings](#subscriptiondiagnosticsettings): Properties of a Subscription Diagnostic Settings Resource.
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/diagnosticSettingsCategories@2017-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Insights/diagnosticSettingsCategories@2017-05-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

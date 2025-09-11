@@ -1,7 +1,8 @@
 # microsoft.insights @ 2019-10-17-preview
 
 ## Resource microsoft.insights/workbooktemplates@2019-10-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

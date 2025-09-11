@@ -1,7 +1,8 @@
 # Microsoft.Storage.Admin @ 2019-08-08-preview
 
 ## Resource Microsoft.Storage.Admin/locations/quotas@2019-08-08-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **properties**: [StorageQuotaProperties](#storagequotaproperties): Storage quota properties.
 * **type**: 'Microsoft.Storage.Admin/locations/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Storage.Admin/locations/storageAccounts@2019-08-08-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Storage.Admin/locations/storageAccounts@2019-08-08-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Storage.Admin/locations/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage.Admin/storageServices@2019-08-08-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

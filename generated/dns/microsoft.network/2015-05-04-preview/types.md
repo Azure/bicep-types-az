@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2015-05-04-preview
 
 ## Resource Microsoft.Network/dnszones@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets or sets the ETag of the zone that is being updated, as received from a Get operation.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/A@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Network/dnszones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/AAAA@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.Network/dnszones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/CNAME@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.Network/dnszones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/MX@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -53,7 +58,8 @@
 * **type**: 'Microsoft.Network/dnszones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/NS@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -63,7 +69,8 @@
 * **type**: 'Microsoft.Network/dnszones/NS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/PTR@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -73,7 +80,8 @@
 * **type**: 'Microsoft.Network/dnszones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/SOA@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -83,7 +91,8 @@
 * **type**: 'Microsoft.Network/dnszones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/SRV@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -93,7 +102,8 @@
 * **type**: 'Microsoft.Network/dnszones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/TXT@2015-05-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.

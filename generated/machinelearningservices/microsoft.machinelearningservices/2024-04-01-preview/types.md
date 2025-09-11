@@ -1,7 +1,8 @@
 # Microsoft.MachineLearningServices @ 2024-04-01-preview
 
 ## Resource Microsoft.MachineLearningServices/capacityReserverationGroups@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.MachineLearningServices/capacityReserverationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +33,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/codes@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +44,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/codes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/codes/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/codes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/components@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,7 +66,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/components' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/components/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -71,7 +77,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/components/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/data@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -81,7 +88,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/data' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/data/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -91,7 +99,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/data/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/environments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,7 +110,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/environments/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +121,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/environments/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/models@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -121,7 +132,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/models' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/registries/models/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -131,7 +143,8 @@
 * **type**: 'Microsoft.MachineLearningServices/registries/models/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -146,7 +159,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/batchEndpoints@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -161,7 +175,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/batchEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -176,7 +191,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/codes@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -186,7 +202,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/codes/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -196,7 +213,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/components@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -206,7 +224,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/components' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/components/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -216,7 +235,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/components/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -230,7 +250,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -240,7 +261,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections/deployments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -251,7 +273,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -261,7 +284,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -271,7 +295,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections/raiPolicies@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -281,7 +306,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections/raiPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/data@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -291,7 +317,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/data/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -301,7 +328,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -311,7 +339,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/endpoints@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -321,7 +350,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/endpoints/deployments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -332,7 +362,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/endpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -342,7 +373,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/environments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -352,7 +384,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/environments/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -362,7 +395,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/featuresets@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -372,7 +406,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/featuresets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/featuresets/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -381,8 +416,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/featuresets/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2024-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2024-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -392,7 +428,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/featuresets/versions/features' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/featurestoreEntities@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -402,7 +439,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/featurestoreEntities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/featurestoreEntities/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -412,7 +450,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/featurestoreEntities/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/inferencePools@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -427,7 +466,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/inferencePools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/inferencePools/endpoints@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -442,7 +482,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/inferencePools/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/inferencePools/groups@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -457,7 +498,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/inferencePools/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/jobs@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -467,7 +509,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/labelingJobs@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -477,7 +520,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/labelingJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -487,7 +531,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/models@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -497,7 +542,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/models/versions@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -507,7 +553,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -522,7 +569,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/onlineEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -537,7 +585,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/outboundRules@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -547,7 +596,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/outboundRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -561,7 +611,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/schedules@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -571,7 +622,8 @@
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2024-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

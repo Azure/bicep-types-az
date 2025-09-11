@@ -1,7 +1,8 @@
 # Microsoft.EventGrid @ 2022-06-15
 
 ## Resource Microsoft.EventGrid/domains@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.EventGrid/domains/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,7 +58,8 @@
 * **type**: 'Microsoft.EventGrid/domains/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,8 +68,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/extensionTopics@2022-06-15 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.EventGrid/extensionTopics@2022-06-15
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +80,8 @@
 * **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerConfigurations@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +93,8 @@
 * **type**: 'Microsoft.EventGrid/partnerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +106,8 @@
 * **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/channels@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,7 +117,8 @@
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/channels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -116,7 +127,8 @@
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerRegistrations@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -128,7 +140,8 @@
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerTopics@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +154,8 @@
 * **type**: 'Microsoft.EventGrid/partnerTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -151,7 +165,8 @@
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/systemTopics@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -164,7 +179,8 @@
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -174,7 +190,8 @@
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -187,7 +204,8 @@
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics/eventSubscriptions@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -197,7 +215,8 @@
 * **type**: 'Microsoft.EventGrid/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2022-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -205,8 +224,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topicTypes@2022-06-15 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.EventGrid/topicTypes@2022-06-15
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -214,8 +234,9 @@
 * **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
 * **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/verifiedPartners@2022-06-15 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.EventGrid/verifiedPartners@2022-06-15
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

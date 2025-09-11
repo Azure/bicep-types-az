@@ -1,7 +1,8 @@
 # Microsoft.Monitor @ 2024-10-01-preview
 
 ## Resource Microsoft.Monitor/pipelineGroups@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The complex type of the extended location.

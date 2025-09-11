@@ -1,7 +1,8 @@
 # Microsoft.Kusto @ 2019-09-07
 
 ## Resource Microsoft.Kusto/clusters@2019-09-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -15,7 +16,8 @@
 * **zones**: string[]: The availability zones of the cluster.
 
 ## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-09-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases@2019-09-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -47,7 +50,8 @@
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-09-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties

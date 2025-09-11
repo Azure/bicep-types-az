@@ -1,7 +1,8 @@
 # Dynatrace.Observability @ 2024-04-24
 
 ## Resource Dynatrace.Observability/monitors@2024-04-24
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-24' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Dynatrace.Observability/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Dynatrace.Observability/monitors/monitoredSubscriptions@2024-04-24
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-24' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Dynatrace.Observability/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Dynatrace.Observability/monitors/singleSignOnConfigurations@2024-04-24
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-24' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Dynatrace.Observability/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Dynatrace.Observability/monitors/tagRules@2024-04-24
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-24' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

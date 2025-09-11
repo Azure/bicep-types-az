@@ -1,7 +1,8 @@
 # Microsoft.Consumption @ 2018-01-31
 
 ## Resource Microsoft.Consumption/budgets@2018-01-31
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -10,8 +11,9 @@
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Consumption/pricesheets@2018-01-31 (ReadOnly)
-* **Valid Scope(s)**: Subscription, Extension
+## Resource Microsoft.Consumption/pricesheets@2018-01-31
+* **Readable Scope(s)**: Subscription, Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-01-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

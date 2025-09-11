@@ -1,7 +1,8 @@
 # Microsoft.TestBase @ 2020-12-16-preview
 
 ## Resource Microsoft.TestBase/testBaseAccounts@2020-12-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -13,8 +14,9 @@
 * **tags**: [Tags](#tags): The tags of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/availableOSs@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/availableOSs@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.TestBase/testBaseAccounts/availableOSs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/customerEvents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/emailEvents@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/emailEvents@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,8 +47,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/emailEvents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/flightingRings@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/flightingRings@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.TestBase/testBaseAccounts/flightingRings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -67,7 +73,8 @@
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses@2020-12-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -76,8 +83,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/packages/osUpdates@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/packages/osUpdates@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,8 +94,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/osUpdates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/packages/testResults@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/packages/testResults@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -96,8 +105,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/testResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/packages/testResults/analysisResults@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/packages/testResults/analysisResults@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -106,8 +116,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/testResults/analysisResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/testSummaries@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/testSummaries@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -116,8 +127,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/testSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/testTypes@2020-12-16-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.TestBase/testBaseAccounts/testTypes@2020-12-16-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

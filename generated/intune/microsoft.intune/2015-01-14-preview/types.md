@@ -1,7 +1,8 @@
 # Microsoft.Intune @ 2015-01-14-preview
 
-## Resource Microsoft.Intune/locations@2015-01-14-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Intune/locations@2015-01-14-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Intune/locations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/androidPolicies@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Intune/locations/androidPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/androidPolicies/apps@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.Intune/locations/androidPolicies/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/androidPolicies/groups@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,8 +44,9 @@
 * **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/androidPolicies/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Intune/locations/flaggedUsers@2015-01-14-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Intune/locations/flaggedUsers@2015-01-14-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -52,7 +57,8 @@
 * **type**: 'Microsoft.Intune/locations/flaggedUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,7 +69,8 @@
 * **type**: 'Microsoft.Intune/locations/iosPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies/apps@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -72,7 +79,8 @@
 * **type**: 'Microsoft.Intune/locations/iosPolicies/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies/groups@2015-01-14-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -80,8 +88,9 @@
 * **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/iosPolicies/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Intune/locations/statuses@2015-01-14-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Intune/locations/statuses@2015-01-14-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -92,8 +101,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource Tags
 * **type**: 'Microsoft.Intune/locations/statuses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Intune/locations/users/devices@2015-01-14-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Intune/locations/users/devices@2015-01-14-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

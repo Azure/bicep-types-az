@@ -1,7 +1,8 @@
 # Microsoft.ServiceFabric @ 2025-03-01-preview
 
 ## Resource Microsoft.ServiceFabric/managedClusters@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.",
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/applications@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,7 +30,8 @@
 * **type**: 'Microsoft.ServiceFabric/managedClusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/applications/services@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.ServiceFabric/managedClusters/applications/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/applicationTypes@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -52,7 +56,8 @@
 * **type**: 'Microsoft.ServiceFabric/managedClusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/applicationTypes/versions@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -64,7 +69,8 @@
 * **type**: 'Microsoft.ServiceFabric/managedClusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

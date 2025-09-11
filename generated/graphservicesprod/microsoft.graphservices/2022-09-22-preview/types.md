@@ -1,7 +1,8 @@
 # Microsoft.GraphServices @ 2022-09-22-preview
 
 ## Resource Microsoft.GraphServices/accounts@2022-09-22-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-22-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

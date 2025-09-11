@@ -1,7 +1,8 @@
 # Microsoft.ContainerService @ 2017-08-31
 
 ## Resource Microsoft.ContainerService/managedClusters@2017-08-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

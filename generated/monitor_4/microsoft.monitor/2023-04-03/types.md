@@ -1,7 +1,8 @@
 # Microsoft.Monitor @ 2023-04-03
 
 ## Resource Microsoft.Monitor/accounts@2023-04-03
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag)

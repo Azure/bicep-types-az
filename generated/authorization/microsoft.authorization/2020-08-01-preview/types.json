@@ -180,10 +180,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/roleAssignments@2020-08-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

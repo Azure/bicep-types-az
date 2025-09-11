@@ -547,11 +547,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1917,11 +1917,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/40"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -15324,11 +15324,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/linkedservices@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/139"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -20840,11 +20840,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/datasets@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/686"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -36722,11 +36722,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/pipelines@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1032"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -37915,11 +37915,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/triggers@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1850"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38472,11 +38472,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/dataflows@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1943"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -38566,11 +38566,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1973"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38715,11 +38715,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1978"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38903,11 +38903,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/credentials@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1985"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -39034,11 +39034,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1997"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -39107,11 +39107,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/globalParameters@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2004"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -39758,11 +39758,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataFactory/factories/adfcdcs@2018-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2009"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

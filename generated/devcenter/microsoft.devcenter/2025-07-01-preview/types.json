@@ -689,11 +689,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1007,11 +1007,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/encryptionSets@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/67"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1322,11 +1322,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/projectPolicies@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/98"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1926,11 +1926,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/130"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2238,11 +2238,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/attachednetworks@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/185"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2704,11 +2704,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/catalogs@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/219"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2909,11 +2909,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/galleries@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/259"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2974,11 +2974,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/catalogs@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/281"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3194,11 +3194,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/environmentTypes@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/285"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3555,11 +3555,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/environmentTypes@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/308"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4049,11 +4049,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/devboxdefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/340"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4858,11 +4858,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/pools@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/386"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -5171,11 +5171,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/pools/schedules@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/461"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5537,11 +5537,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/networkConnections@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/491"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5602,11 +5602,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/attachednetworks@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/527"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5844,11 +5844,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/catalogs/environmentDefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/531"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5909,11 +5909,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/551"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -6217,11 +6217,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/galleries/images@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/556"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -6288,11 +6288,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/images@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/584"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -6520,11 +6520,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/galleries/images/versions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/589"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6585,11 +6585,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/images/versions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/611"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6790,11 +6790,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/allowedEnvironmentTypes@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/615"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6877,11 +6877,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/devboxdefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/637"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7069,11 +7069,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/catalogs/tasks@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/642"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7505,11 +7505,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/658"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7681,11 +7681,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/692"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7746,11 +7746,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/catalogs/imageDefinitions@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/705"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7811,11 +7811,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/709"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -8025,11 +8025,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevCenter/networkConnections/healthChecks@2025-07-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/714"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

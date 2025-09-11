@@ -1,7 +1,8 @@
 # Microsoft.Authorization @ 2021-01-01-preview
 
-## Resource Microsoft.Authorization/roleAssignmentApprovals@2021-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Authorization/roleAssignmentApprovals@2021-01-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Authorization/roleAssignmentApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleAssignmentApprovals/stages@2021-01-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **assignedToMe**: bool (ReadOnly, WriteOnly): Indicates whether the stage is assigned to me for review

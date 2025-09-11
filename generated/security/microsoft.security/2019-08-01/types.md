@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2019-08-01
 
 ## Resource Microsoft.Security/deviceSecurityGroups@2019-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2019-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,8 +23,9 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,8 +33,9 @@
 * **properties**: [IoTSecuritySolutionAnalyticsModelProperties](#iotsecuritysolutionanalyticsmodelproperties) (ReadOnly): Security Solution  Aggregated Alert data
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,8 +44,9 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,8 +55,9 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/iotAlerts@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/iotAlerts@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,8 +65,9 @@
 * **properties**: [IotAlertProperties](#iotalertproperties) (ReadOnly): Alert properties
 * **type**: 'Microsoft.Security/iotSecuritySolutions/iotAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/iotAlertTypes@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/iotAlertTypes@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,8 +75,9 @@
 * **properties**: [IotAlertTypeProperties](#iotalerttypeproperties) (ReadOnly): Alert type properties
 * **type**: 'Microsoft.Security/iotSecuritySolutions/iotAlertTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/iotRecommendations@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/iotRecommendations@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,8 +85,9 @@
 * **properties**: [IotRecommendationProperties](#iotrecommendationproperties) (ReadOnly): Recommendation properties
 * **type**: 'Microsoft.Security/iotSecuritySolutions/iotRecommendations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/iotRecommendationTypes@2019-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/iotRecommendationTypes@2019-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

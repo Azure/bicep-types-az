@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2022-06-01-preview
 
 ## Resource Microsoft.CostManagement/scheduledActions@2022-06-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Resource Etag.

@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2023-04-01-preview
 
 ## Resource Microsoft.Migrate/assessmentProjects@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/aksAssessmentOptions@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/aksAssessmentOptions@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/aksAssessments@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -34,8 +37,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/assessedWebApps@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/assessedWebApps@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -45,8 +49,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessments/assessedWebApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/clusters@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/clusters@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -56,8 +61,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessments/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/summaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/aksAssessments/summaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -67,8 +73,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/assessmentOptions@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/assessmentOptions@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,8 +84,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/assessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/avsAssessmentOptions@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/avsAssessmentOptions@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -88,7 +96,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/avsAssessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/businessCases@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,8 +106,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/avsSummaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/avsSummaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,8 +117,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/avsSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedAvsMachines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedAvsMachines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -117,8 +128,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/evaluatedAvsMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedMachines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedMachines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,8 +139,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/evaluatedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedSqlEntities@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedSqlEntities@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -137,8 +150,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/evaluatedSqlEntities' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedWebApps@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/evaluatedWebApps@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -147,8 +161,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/evaluatedWebApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/iaasSummaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/iaasSummaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -157,8 +172,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/iaasSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/overviewSummaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/overviewSummaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -167,8 +183,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/overviewSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/businessCases/paasSummaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/businessCases/paasSummaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -178,7 +195,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/paasSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -188,7 +206,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -197,8 +216,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -208,7 +228,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/avsAssessments@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -217,8 +238,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/avsAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/avsAssessments/avsAssessedMachines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/avsAssessments/avsAssessedMachines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -228,7 +250,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/avsAssessments/avsAssessedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -237,8 +260,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlDatabases@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlDatabases@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -247,8 +271,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlInstances@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlInstances@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -257,8 +282,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlMachines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlMachines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -267,8 +293,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/assessedSqlMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/recommendedAssessedEntities@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/recommendedAssessedEntities@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -277,8 +304,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/recommendedAssessedEntities' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/summaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/summaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -288,7 +316,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/sqlAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -297,8 +326,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/webAppAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/assessedWebApps@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/assessedWebApps@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -307,8 +337,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/assessedWebApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/summaries@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/summaries@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -317,8 +348,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/webAppServicePlans@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/webAppServicePlans@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -328,7 +360,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/webAppAssessments/webAppServicePlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -338,7 +371,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/importcollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -347,8 +381,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/importcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/machines@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/machines@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -358,7 +393,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/privateEndpointConnections@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -367,8 +403,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/privateLinkResources@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/privateLinkResources@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -377,8 +414,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/projectSummary@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/projectSummary@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -388,7 +426,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/projectSummary' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/servercollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -397,8 +436,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/servercollectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/sqlAssessmentOptions@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/sqlAssessmentOptions@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -408,7 +448,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/sqlAssessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/sqlcollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -418,7 +459,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/sqlcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/vmwarecollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -427,8 +469,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/webAppAssessmentOptions@2023-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/webAppAssessmentOptions@2023-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -438,7 +481,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/webAppAssessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/webAppCollectors@2023-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

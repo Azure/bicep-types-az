@@ -259,11 +259,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -677,11 +677,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers/agents@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/25"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1022,11 +1022,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers/endpoints@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/59"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1143,11 +1143,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers/projects@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/84"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1441,11 +1441,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/94"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1874,10 +1874,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorageMover/storageMovers/projects/jobDefinitions/jobRuns@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/117"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

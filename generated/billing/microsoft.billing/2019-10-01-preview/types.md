@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2019-10-01-preview
 
-## Resource Microsoft.Billing/billingAccounts@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [BillingAccountProperties](#billingaccountproperties) (ReadOnly): The properties of the billing account.
 * **type**: 'Microsoft.Billing/billingAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/agreements@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/agreements@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **address**: [AddressDetails](#addressdetails) (WriteOnly): Billing address.
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,8 +35,9 @@
 * **properties**: [BillingProfileProperties](#billingprofileproperties) (ReadOnly): The properties of the billing profile.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/availableBalance@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/availableBalance@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,8 +45,9 @@
 * **properties**: [AvailableBalanceProperties](#availablebalanceproperties) (ReadOnly): The properties of available balance.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/availableBalance' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,8 +55,9 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties) (ReadOnly): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,7 +66,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,8 +75,9 @@
 * **properties**: [InstructionProperties](#instructionproperties): A billing instruction used during invoice generation.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoices@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoices@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +86,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **displayName**: string (WriteOnly): The name of the invoice section.
@@ -87,8 +96,9 @@
 * **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -96,8 +106,9 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties) (ReadOnly): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -105,8 +116,9 @@
 * **properties**: [BillingRoleDefinitionProperties](#billingroledefinitionproperties) (ReadOnly): The properties of the a role definition.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -114,8 +126,9 @@
 * **properties**: [BillingSubscriptionProperties](#billingsubscriptionproperties) (ReadOnly): The billing properties of a subscription.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -124,7 +137,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -133,7 +147,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingRoleAssignments@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,8 +156,9 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingRoleDefinitions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingRoleDefinitions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -150,8 +166,9 @@
 * **properties**: [BillingRoleDefinitionProperties](#billingroledefinitionproperties) (ReadOnly): The properties of the a role definition.
 * **type**: 'Microsoft.Billing/billingAccounts/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingSubscriptions/invoices@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingSubscriptions/invoices@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -159,8 +176,9 @@
 * **properties**: [InvoiceProperties](#invoiceproperties) (ReadOnly): An invoice.
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptions/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/customers@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/customers@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -168,8 +186,9 @@
 * **properties**: [CustomerProperties](#customerproperties) (ReadOnly): The customer.
 * **type**: 'Microsoft.Billing/billingAccounts/customers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/customers/billingSubscriptions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/customers/billingSubscriptions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -178,7 +197,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/customers/billingSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -186,8 +206,9 @@
 * **properties**: [CustomerPolicyProperties](#customerpolicyproperties): The properties of a customer's policy.
 * **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/customers/products@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/customers/products@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -195,8 +216,9 @@
 * **properties**: [ProductProperties](#productproperties) (ReadOnly): The properties of a product.
 * **type**: 'Microsoft.Billing/billingAccounts/customers/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/departments@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/departments@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -205,7 +227,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/departments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/departments/billingRoleAssignments@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -213,8 +236,9 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -222,8 +246,9 @@
 * **properties**: [BillingRoleDefinitionProperties](#billingroledefinitionproperties) (ReadOnly): The properties of the a role definition.
 * **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -232,7 +257,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -240,8 +266,9 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -249,8 +276,9 @@
 * **properties**: [BillingRoleDefinitionProperties](#billingroledefinitionproperties) (ReadOnly): The properties of the a role definition.
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/invoices@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/invoices@2019-10-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -258,8 +286,9 @@
 * **properties**: [InvoiceProperties](#invoiceproperties) (ReadOnly): An invoice.
 * **type**: 'Microsoft.Billing/billingAccounts/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingProperty@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/billingProperty@2019-10-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

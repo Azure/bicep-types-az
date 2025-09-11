@@ -128,11 +128,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/azureADOnlyAuthentications@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -256,11 +256,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/firewallRules@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/15"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -334,11 +334,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/keys@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/26"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -459,11 +459,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/privateEndpointConnections@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/31"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -585,11 +585,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/privateLinkHubs@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/38"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -843,11 +843,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/46"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -925,11 +925,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/metadataSync@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/63"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1051,11 +1051,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/70"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1163,11 +1163,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/80"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1325,11 +1325,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/auditingSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/89"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1517,11 +1517,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/102"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1657,11 +1657,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/115"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1830,11 +1830,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/124"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1945,11 +1945,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/138"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2108,11 +2108,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/147"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2244,11 +2244,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/157"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2472,11 +2472,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/165"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2578,11 +2578,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/180"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2684,11 +2684,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/185"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2858,11 +2858,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/auditingSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/192"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3039,11 +3039,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/extendedAuditingSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/203"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3212,11 +3212,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/securityAlertPolicies@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/214"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3319,11 +3319,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/vulnerabilityAssessments@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/227"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3469,11 +3469,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/encryptionProtector@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/234"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3562,11 +3562,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/dedicatedSQLminimalTlsSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/244"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4233,11 +4233,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/249"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4329,11 +4329,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/administrators@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/282"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4391,11 +4391,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlAdministrators@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/288"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4545,11 +4545,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/293"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5075,11 +5075,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/bigDataPools@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/308"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6084,11 +6084,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/337"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6181,11 +6181,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/privateLinkResources@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/411"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6239,11 +6239,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/privateLinkHubs/privateLinkResources@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/418"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6326,11 +6326,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/operationResults@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/422"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6412,11 +6412,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/429"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6530,11 +6530,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/restorePoints@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/434"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6787,11 +6787,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/replicationLinks@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/442"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6838,11 +6838,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/schemas@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/464"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6889,11 +6889,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/schemas/tables@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/468"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7031,11 +7031,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/connectionPolicies@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/474"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7235,11 +7235,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/479"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7559,11 +7559,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/494"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7651,11 +7651,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/recoverableSqlPools@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/534"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7778,11 +7778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/restorableDroppedSqlPools@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/539"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -7843,11 +7843,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Synapse/workspaces/libraries@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/544"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

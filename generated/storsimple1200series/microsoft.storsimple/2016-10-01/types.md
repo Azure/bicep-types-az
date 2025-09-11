@@ -1,7 +1,8 @@
 # Microsoft.StorSimple @ 2016-10-01
 
 ## Resource Microsoft.StorSimple/managers@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: ETag of the Manager
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/certificates@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly): Gets ContractVersion
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.StorSimple/managers/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/backupScheduleGroups@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +55,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/backupScheduleGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/chapSettings@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,7 +65,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/chapSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/fileservers@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +75,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/fileservers/shares@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,7 +85,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/iscsiservers@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,7 +95,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -95,7 +105,8 @@
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers/disks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/extendedInformation@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: ETag of the Resource
@@ -105,7 +116,8 @@
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -114,7 +126,8 @@
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/storageDomains@2016-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

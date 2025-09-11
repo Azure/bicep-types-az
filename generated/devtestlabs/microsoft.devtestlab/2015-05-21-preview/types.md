@@ -1,7 +1,8 @@
 # Microsoft.DevTestLab @ 2015-05-21-preview
 
 ## Resource Microsoft.DevTestLab/labs@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [ArtifactSourceTags](#artifactsourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [ArtifactTags](#artifacttags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources/artifacts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,8 +48,9 @@
 * **tags**: [CostInsightTags](#costinsighttags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/costinsights' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/costs@2015-05-21-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevTestLab/labs/costs@2015-05-21-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,7 +61,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -67,7 +73,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +85,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -89,7 +97,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -100,7 +109,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +121,8 @@
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

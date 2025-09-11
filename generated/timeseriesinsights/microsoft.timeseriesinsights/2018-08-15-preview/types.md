@@ -1,7 +1,8 @@
 # Microsoft.TimeSeriesInsights @ 2018-08-15-preview
 
 ## Resource Microsoft.TimeSeriesInsights/environments@2018-08-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -25,7 +26,8 @@
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2018-08-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +36,8 @@
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2018-08-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -58,7 +61,8 @@
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2018-08-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

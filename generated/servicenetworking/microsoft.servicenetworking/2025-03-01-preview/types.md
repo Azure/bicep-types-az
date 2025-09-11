@@ -1,7 +1,8 @@
 # Microsoft.ServiceNetworking @ 2025-03-01-preview
 
 ## Resource Microsoft.ServiceNetworking/trafficControllers@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.ServiceNetworking/trafficControllers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceNetworking/trafficControllers/associations@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.ServiceNetworking/trafficControllers/associations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceNetworking/trafficControllers/frontends@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.ServiceNetworking/trafficControllers/frontends' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceNetworking/trafficControllers/securityPolicies@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

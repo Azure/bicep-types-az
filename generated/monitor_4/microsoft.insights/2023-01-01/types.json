@@ -714,10 +714,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Insights/actionGroups@2023-01-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

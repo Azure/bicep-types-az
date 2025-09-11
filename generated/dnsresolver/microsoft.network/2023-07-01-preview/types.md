@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2023-07-01-preview
 
 ## Resource Microsoft.Network/dnsForwardingRulesets@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS forwarding ruleset.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Network/dnsForwardingRulesets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsForwardingRulesets/forwardingRules@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the forwarding rule.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/forwardingRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the virtual network link.
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverDomainLists@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS resolver domain list.
@@ -49,7 +53,8 @@
 * **type**: 'Microsoft.Network/dnsResolverDomainLists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS resolver policy.
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.Network/dnsResolverPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies/dnsSecurityRules@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS security rule.
@@ -75,7 +81,8 @@
 * **type**: 'Microsoft.Network/dnsResolverPolicies/dnsSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies/virtualNetworkLinks@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS resolver policy virtual network link.
@@ -88,7 +95,8 @@
 * **type**: 'Microsoft.Network/dnsResolverPolicies/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the DNS resolver.
@@ -101,7 +109,8 @@
 * **type**: 'Microsoft.Network/dnsResolvers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers/inboundEndpoints@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the inbound endpoint.
@@ -114,7 +123,8 @@
 * **type**: 'Microsoft.Network/dnsResolvers/inboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers/outboundEndpoints@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the outbound endpoint.

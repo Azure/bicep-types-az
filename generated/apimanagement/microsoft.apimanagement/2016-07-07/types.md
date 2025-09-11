@@ -1,7 +1,8 @@
 # Microsoft.ApiManagement @ 2016-07-07
 
 ## Resource Microsoft.ApiManagement/service@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: ETag of the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): Collection of authentication settings included into this API.
@@ -31,7 +33,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **description**: string {maxLength: 1000}: Description of the operation. May include HTML formatting tags.
@@ -45,7 +48,8 @@
 * **urlTemplate**: string {minLength: 1, maxLength: 1000} (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **authorizationEndpoint**: string (Required): OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
@@ -68,7 +72,8 @@
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/backends@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **host**: string {minLength: 1, maxLength: 255} (Required): Host attribute of the backend. Host is a pure hostname without a port or suffix, for example backend.contoso.com. Must not be empty.
@@ -78,7 +83,8 @@
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/certificates@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
@@ -91,7 +97,8 @@
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
@@ -102,7 +109,8 @@
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,7 +118,8 @@
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **allowedTenants**: string[] {maxLength: 32}: List of Allowed Tenants when configuring Azure Active Directory login.
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
@@ -121,7 +130,8 @@
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **credentials**: [LoggerCreateParametersCredentials](#loggercreateparameterscredentials) (Required): The name and SendRule connection string of the event hub.
@@ -132,7 +142,8 @@
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **clientId**: string (Required): Client ID of developer console which is the client application.
@@ -144,7 +155,8 @@
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **approvalRequired**: bool: whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of true.
@@ -158,7 +170,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/apis@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -166,7 +179,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -174,7 +188,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -185,7 +200,8 @@
 * **value**: string {minLength: 1, maxLength: 4096} (Required): Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -204,7 +220,8 @@
 * **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
 
 ## Resource Microsoft.ApiManagement/service/users@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **email**: string {minLength: 1, maxLength: 254} (Required): Email address. Must not be empty and must be unique within the service instance.

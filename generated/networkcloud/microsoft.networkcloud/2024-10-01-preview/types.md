@@ -1,7 +1,8 @@
 # Microsoft.NetworkCloud @ 2024-10-01-preview
 
 ## Resource Microsoft.NetworkCloud/bareMetalMachines@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.NetworkCloud/bareMetalMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/cloudServicesNetworks@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.NetworkCloud/cloudServicesNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusterManagers@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusterManagers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster.
@@ -54,7 +58,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -67,7 +72,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/bmcKeySets@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -80,7 +86,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/bmcKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/metricsConfigurations@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -93,7 +100,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/metricsConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -106,7 +114,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters/agentPools@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the cluster associated with the resource.
@@ -119,7 +128,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters/features@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -131,7 +141,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters/features' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/l2Networks@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -144,7 +155,8 @@
 * **type**: 'Microsoft.NetworkCloud/l2Networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/l3Networks@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -157,7 +169,8 @@
 * **type**: 'Microsoft.NetworkCloud/l3Networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/racks@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -169,8 +182,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/racks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/rackSkus@2024-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.NetworkCloud/rackSkus@2024-10-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -180,7 +194,8 @@
 * **type**: 'Microsoft.NetworkCloud/rackSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/storageAppliances@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -193,7 +208,8 @@
 * **type**: 'Microsoft.NetworkCloud/storageAppliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/trunkedNetworks@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -206,7 +222,8 @@
 * **type**: 'Microsoft.NetworkCloud/trunkedNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/virtualMachines@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
@@ -219,7 +236,8 @@
 * **type**: 'Microsoft.NetworkCloud/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/virtualMachines/consoles@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster this virtual machine is created on.
@@ -232,7 +250,8 @@
 * **type**: 'Microsoft.NetworkCloud/virtualMachines/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/volumes@2024-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.

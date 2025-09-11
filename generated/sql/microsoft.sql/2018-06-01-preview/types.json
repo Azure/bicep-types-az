@@ -139,11 +139,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/vulnerabilityAssessments@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -246,11 +246,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/vulnerabilityAssessments@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/15"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -410,11 +410,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/23"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -590,11 +590,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/instancePools@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/34"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -697,11 +697,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/47"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -870,11 +870,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/securityAlertPolicies@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/54"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1252,11 +1252,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/65"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1565,11 +1565,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/88"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1690,11 +1690,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/privateEndpointConnections@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/111"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1812,11 +1812,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/administrators@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/120"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1896,11 +1896,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/privateLinkResources@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/127"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2002,11 +2002,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2018-06-01-preview",
-    "scopeType": 12,
     "body": {
       "$ref": "#/133"
     },
-    "flags": 1
+    "readableScopes": 12,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2378,11 +2378,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/operations@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/138"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2533,10 +2533,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/restoreDetails@2018-06-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/164"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

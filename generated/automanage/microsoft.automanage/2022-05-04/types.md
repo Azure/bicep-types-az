@@ -1,7 +1,8 @@
 # Microsoft.Automanage @ 2022-05-04
 
-## Resource Microsoft.Automanage/bestPractices@2022-05-04 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Automanage/bestPractices@2022-05-04
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automanage/bestPractices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/bestPractices/versions@2022-05-04 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Automanage/bestPractices/versions@2022-05-04
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Automanage/bestPractices/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2022-05-04
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,8 +34,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/configurationProfileAssignments/reports@2022-05-04 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Automanage/configurationProfileAssignments/reports@2022-05-04
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -42,7 +46,8 @@
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments/reports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles@2022-05-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.Automanage/configurationProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles/versions@2022-05-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -65,8 +71,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/servicePrincipals@2022-05-04 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Automanage/servicePrincipals@2022-05-04
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

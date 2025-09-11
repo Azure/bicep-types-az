@@ -1,7 +1,8 @@
 # Microsoft.Consumption @ 2024-08-01
 
 ## Resource Microsoft.Consumption/budgets@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -10,8 +11,9 @@
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Consumption/credits@2024-08-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Consumption/credits@2024-08-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -20,8 +22,9 @@
 * **properties**: [CreditSummaryProperties](#creditsummaryproperties) (ReadOnly): The properties of the credit summary.
 * **type**: 'Microsoft.Consumption/credits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Consumption/pricesheets@2024-08-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription, Extension
+## Resource Microsoft.Consumption/pricesheets@2024-08-01
+* **Readable Scope(s)**: Subscription, Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag for the resource.

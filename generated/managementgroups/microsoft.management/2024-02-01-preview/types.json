@@ -283,11 +283,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups@2024-02-01-preview",
-    "scopeType": 1,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -388,11 +388,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups/subscriptions@2024-02-01-preview",
-    "scopeType": 1,
     "body": {
       "$ref": "#/21"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -480,11 +480,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups/settings@2024-02-01-preview",
-    "scopeType": 1,
     "body": {
       "$ref": "#/28"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringType",
@@ -774,11 +774,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/serviceGroups@2024-02-01-preview",
-    "scopeType": 1,
     "body": {
       "$ref": "#/35"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "ObjectType",

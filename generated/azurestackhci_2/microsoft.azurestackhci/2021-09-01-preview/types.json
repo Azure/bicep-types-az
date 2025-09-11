@@ -496,11 +496,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1050,11 +1050,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/56"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1491,11 +1491,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/96"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2007,11 +2007,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/galleryimages@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/142"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2386,11 +2386,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/marketplacegalleryimages@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/180"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2775,11 +2775,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/networkinterfaces@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/209"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3025,11 +3025,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/storagecontainers@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/237"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3369,11 +3369,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualharddisks@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/250"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4322,11 +4322,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualmachines@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/275"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4421,11 +4421,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachines/hybridIdentityMetadata@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/338"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4681,11 +4681,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachines/extensions@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/343"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4849,11 +4849,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachines/guestAgents@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/355"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5480,10 +5480,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualnetworks@2021-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/366"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

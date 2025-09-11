@@ -1,7 +1,8 @@
 # Microsoft.KubernetesConfiguration @ 2024-04-01-preview
 
 ## Resource Microsoft.KubernetesConfiguration/fluxConfigurations@2024-04-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

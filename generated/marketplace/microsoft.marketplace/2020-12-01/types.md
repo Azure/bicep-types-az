@@ -1,7 +1,8 @@
 # Microsoft.Marketplace @ 2020-12-01
 
 ## Resource Microsoft.Marketplace/privateStores/adminRequestApprovals@2020-12-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores/adminRequestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/requestApprovals@2020-12-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

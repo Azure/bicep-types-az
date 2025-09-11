@@ -1,7 +1,8 @@
 # Microsoft.Portal @ 2018-10-01
 
 ## Resource Microsoft.Portal/consoles@2018-10-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Portal/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/locations/consoles@2018-10-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.Portal/locations/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/locations/userSettings@2018-10-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,7 +31,8 @@
 * **type**: 'Microsoft.Portal/locations/userSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/userSettings@2018-10-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

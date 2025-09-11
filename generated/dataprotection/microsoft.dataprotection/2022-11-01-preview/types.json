@@ -709,11 +709,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1709,11 +1709,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupPolicies@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/67"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2641,11 +2641,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/158"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2858,11 +2858,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/resourceGuards@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/225"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2977,11 +2977,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/240"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3078,11 +3078,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/operationResults@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/247"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3158,11 +3158,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/252"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3413,11 +3413,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/257"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3839,11 +3839,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupJobs@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/272"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4141,10 +4141,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/deletedBackupInstances@2022-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/285"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

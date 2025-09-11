@@ -1,7 +1,8 @@
 # Microsoft.ManagementPartner @ 2018-02-01
 
 ## Resource Microsoft.ManagementPartner/partners@2018-02-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly): Type of the partner

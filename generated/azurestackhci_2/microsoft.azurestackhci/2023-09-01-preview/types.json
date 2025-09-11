@@ -628,11 +628,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/galleryImages@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1223,11 +1223,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/logicalNetworks@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/55"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1594,11 +1594,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/marketplaceGalleryImages@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/97"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1952,11 +1952,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/networkInterfaces@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/127"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2212,11 +2212,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/storageContainers@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/152"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2557,11 +2557,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualHardDisks@2023-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/172"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3829,11 +3829,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances@2023-09-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/199"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -3981,11 +3981,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances/guestAgents@2023-09-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/297"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -4084,10 +4084,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata@2023-09-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/308"
     },
-    "flags": 1
+    "readableScopes": 15,
+    "writableScopes": 0
   }
 ]

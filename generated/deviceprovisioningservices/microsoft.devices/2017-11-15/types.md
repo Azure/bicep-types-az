@@ -1,7 +1,8 @@
 # Microsoft.Devices @ 2017-11-15
 
 ## Resource Microsoft.Devices/provisioningServices@2017-11-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2017-11-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **certificate**: string (WriteOnly): Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.

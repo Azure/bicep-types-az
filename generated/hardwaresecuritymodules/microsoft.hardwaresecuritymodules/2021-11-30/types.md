@@ -1,7 +1,8 @@
 # Microsoft.HardwareSecurityModules @ 2021-11-30
 
 ## Resource Microsoft.HardwareSecurityModules/dedicatedHSMs@2021-11-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

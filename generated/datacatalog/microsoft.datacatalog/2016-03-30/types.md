@@ -1,7 +1,8 @@
 # Microsoft.DataCatalog @ 2016-03-30
 
 ## Resource Microsoft.DataCatalog/catalogs@2016-03-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource etag

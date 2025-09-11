@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2021-05-01-preview
 
 ## Resource Microsoft.Insights/autoscalesettings@2021-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/diagnosticSettings@2021-05-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **type**: 'Microsoft.Insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/diagnosticSettingsCategories@2021-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Insights/diagnosticSettingsCategories@2021-05-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

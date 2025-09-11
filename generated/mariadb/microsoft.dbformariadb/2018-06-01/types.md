@@ -1,7 +1,8 @@
 # Microsoft.DBforMariaDB @ 2018-06-01
 
 ## Resource Microsoft.DBforMariaDB/servers@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/advisors@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/advisors@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,8 +23,9 @@
 * **properties**: any (ReadOnly): The properties of a recommendation action advisor.
 * **type**: 'Microsoft.DBforMariaDB/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/advisors/recommendedActions@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/advisors/recommendedActions@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +44,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/databases@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +54,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,7 +64,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,8 +73,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/privateLinkResources@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/privateLinkResources@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,8 +83,9 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource group id.
 * **type**: 'Microsoft.DBforMariaDB/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/queryTexts@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/queryTexts@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +94,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -93,8 +103,9 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/topQueryStatistics@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/topQueryStatistics@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -103,7 +114,8 @@
 * **type**: 'Microsoft.DBforMariaDB/servers/topQueryStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,8 +123,9 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/waitStatistics@2018-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforMariaDB/servers/waitStatistics@2018-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -180,11 +180,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/connectionGateways@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -712,11 +712,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/customApis@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/12"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1093,11 +1093,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/connections@2016-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/49"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1240,11 +1240,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/locations/connectionGatewayInstallations@2016-06-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/66"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1617,11 +1617,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/locations/managedApis@2016-06-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/73"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

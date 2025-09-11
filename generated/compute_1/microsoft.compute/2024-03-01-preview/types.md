@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2024-03-01-preview
 
-## Resource Microsoft.Compute/locations/diagnostics@2024-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/diagnostics@2024-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 * **Discriminator**: name
 
 ### Base Properties

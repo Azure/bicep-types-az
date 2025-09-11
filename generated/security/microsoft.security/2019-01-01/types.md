@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2019-01-01
 
 ## Resource Microsoft.Security/advancedThreatProtectionSettings@2019-01-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): The Advanced Threat Protection settings.
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/locations/alerts@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Security/locations/alerts@2019-01-01
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.Security/locations/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/settings@2019-01-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 * **Discriminator**: kind
 
 ### Base Properties

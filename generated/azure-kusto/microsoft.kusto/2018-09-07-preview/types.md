@@ -1,7 +1,8 @@
 # Microsoft.Kusto @ 2018-09-07-preview
 
 ## Resource Microsoft.Kusto/clusters@2018-09-07-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): An ETag of the resource created.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): An ETag of the resource created.
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

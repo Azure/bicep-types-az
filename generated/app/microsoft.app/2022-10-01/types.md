@@ -1,7 +1,8 @@
 # Microsoft.App @ 2022-10-01
 
 ## Resource Microsoft.App/connectedEnvironments@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.App/connectedEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/connectedEnvironments/certificates@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.App/connectedEnvironments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/connectedEnvironments/daprComponents@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.App/connectedEnvironments/daprComponents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/connectedEnvironments/storages@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +50,8 @@
 * **type**: 'Microsoft.App/connectedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/containerApps@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
@@ -60,7 +65,8 @@
 * **type**: 'Microsoft.App/containerApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/containerApps/authConfigs@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -69,8 +75,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/authConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectorProperties@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/containerApps/detectorProperties@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The complex type of the extended location.
@@ -83,8 +90,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.App/containerApps/detectorProperties' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectorProperties/revisions@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/containerApps/detectorProperties/revisions@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -93,8 +101,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/detectorProperties/revisions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectors@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/containerApps/detectors@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -103,8 +112,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/revisions@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/containerApps/revisions@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -113,8 +123,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/revisions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/revisions/replicas@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/containerApps/revisions/replicas@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -124,7 +135,8 @@
 * **type**: 'Microsoft.App/containerApps/revisions/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/containerApps/sourcecontrols@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -134,7 +146,8 @@
 * **type**: 'Microsoft.App/containerApps/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -148,7 +161,8 @@
 * **type**: 'Microsoft.App/managedEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments/certificates@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -160,7 +174,8 @@
 * **type**: 'Microsoft.App/managedEnvironments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments/daprComponents@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -169,8 +184,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/daprComponents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/detectorProperties@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/managedEnvironments/detectorProperties@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -183,8 +199,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments/detectorProperties' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/detectors@2022-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.App/managedEnvironments/detectors@2022-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -194,7 +211,8 @@
 * **type**: 'Microsoft.App/managedEnvironments/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments/storages@2022-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

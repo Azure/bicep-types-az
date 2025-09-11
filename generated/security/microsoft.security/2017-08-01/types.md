@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2017-08-01
 
-## Resource Microsoft.Security/complianceResults@2017-08-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Security/complianceResults@2017-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

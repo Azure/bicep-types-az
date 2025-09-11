@@ -981,11 +981,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/deploymentScripts@2023-08-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1056,10 +1056,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/deploymentScripts/logs@2023-08-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/73"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.Capacity @ 2019-07-19-preview
 
 ## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimits@2019-07-19-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the resource.
 * **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests@2019-07-19-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests@2019-07-19-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-07-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

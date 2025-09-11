@@ -1,7 +1,8 @@
 # Microsoft.Batch @ 2017-09-01
 
 ## Resource Microsoft.Batch/batchAccounts@2017-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2017-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **allowUpdates**: bool: A value indicating whether packages within the application may be overwritten using the same version string.
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications/versions@2017-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **format**: string (ReadOnly): The format of the application package, if the package is active.
@@ -38,7 +41,8 @@
 * **version**: string (ReadOnly): The version of the application package.
 
 ## Resource Microsoft.Batch/batchAccounts/certificates@2017-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.

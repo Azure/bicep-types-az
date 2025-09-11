@@ -1,7 +1,8 @@
 # Microsoft.Batch @ 2019-04-01
 
 ## Resource Microsoft.Batch/batchAccounts@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications/versions@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/certificates@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -42,7 +46,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.

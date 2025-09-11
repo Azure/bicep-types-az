@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2021-10-01
 
-## Resource Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations@2021-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations@2021-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations@2021-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

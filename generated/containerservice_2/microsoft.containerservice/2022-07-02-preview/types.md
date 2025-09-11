@@ -1,7 +1,8 @@
 # Microsoft.ContainerService @ 2022-07-02-preview
 
 ## Resource Microsoft.ContainerService/fleets@2022-07-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-07-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.ContainerService/fleets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/fleets/members@2022-07-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-07-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.

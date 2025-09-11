@@ -739,10 +739,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.BareMetalInfrastructure/bareMetalInstances@2020-08-06-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

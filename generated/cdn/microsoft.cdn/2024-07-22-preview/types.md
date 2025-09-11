@@ -1,7 +1,8 @@
 # Microsoft.Cdn @ 2024-07-22-preview
 
 ## Resource Microsoft.Cdn/edgeActions@2024-07-22-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-22-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Cdn/edgeActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/edgeActions/executionFilters@2024-07-22-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-22-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.Cdn/edgeActions/executionFilters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/edgeActions/versions@2024-07-22-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-22-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

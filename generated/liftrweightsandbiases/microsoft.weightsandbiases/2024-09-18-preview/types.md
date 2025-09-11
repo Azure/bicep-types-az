@@ -1,7 +1,8 @@
 # Microsoft.WeightsAndBiases @ 2024-09-18-preview
 
 ## Resource Microsoft.WeightsAndBiases/instances@2024-09-18-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-18-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

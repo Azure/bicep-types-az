@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2025-02-01-preview
 
-## Resource Microsoft.Compute/locations/diagnostics@2025-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/diagnostics@2025-02-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 * **Discriminator**: name
 
 ### Base Properties
@@ -25,8 +26,9 @@
 * **type**: 'Microsoft.Compute/locations/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 
-## Resource Microsoft.Compute/locations/placementScores@2025-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/placementScores@2025-02-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

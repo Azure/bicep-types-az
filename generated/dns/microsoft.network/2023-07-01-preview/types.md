@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2023-07-01-preview
 
 ## Resource Microsoft.Network/dnsZones@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the zone.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/A@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Network/dnsZones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/AAAA@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.Network/dnsZones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/CAA@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -47,7 +51,8 @@
 * **type**: 'Microsoft.Network/dnsZones/CAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/CNAME@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -58,7 +63,8 @@
 * **type**: 'Microsoft.Network/dnsZones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/dnssecConfigs@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag of the DNSSEC configuration.
@@ -69,7 +75,8 @@
 * **type**: 'Microsoft.Network/dnsZones/dnssecConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/DS@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -80,7 +87,8 @@
 * **type**: 'Microsoft.Network/dnsZones/DS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/MX@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -91,7 +99,8 @@
 * **type**: 'Microsoft.Network/dnsZones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/NAPTR@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -102,7 +111,8 @@
 * **type**: 'Microsoft.Network/dnsZones/NAPTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/NS@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -113,7 +123,8 @@
 * **type**: 'Microsoft.Network/dnsZones/NS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/PTR@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -124,7 +135,8 @@
 * **type**: 'Microsoft.Network/dnsZones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/SOA@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -135,7 +147,8 @@
 * **type**: 'Microsoft.Network/dnsZones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/SRV@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -146,7 +159,8 @@
 * **type**: 'Microsoft.Network/dnsZones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/TLSA@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.
@@ -157,7 +171,8 @@
 * **type**: 'Microsoft.Network/dnsZones/TLSA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/TXT@2023-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the record set.

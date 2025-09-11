@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2017-08-01-preview
 
 ## Resource Microsoft.Security/advancedThreatProtectionSettings@2017-08-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/autoProvisioningSettings@2017-08-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -18,8 +20,9 @@
 * **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties): Auto provisioning setting data
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/compliances@2017-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Security/compliances@2017-08-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,7 +31,8 @@
 * **type**: 'Microsoft.Security/compliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +41,8 @@
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/informationProtectionPolicies@2017-08-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +51,8 @@
 * **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2017-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,8 +62,9 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels@2017-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels@2017-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -65,8 +72,9 @@
 * **properties**: [IoTSecuritySolutionAnalyticsModelProperties](#iotsecuritysolutionanalyticsmodelproperties) (ReadOnly): Security Solution  Aggregated Alert data
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2017-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2017-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,8 +83,9 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2017-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2017-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,7 +95,8 @@
 * **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityContacts@2017-08-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -95,7 +105,8 @@
 * **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/settings@2017-08-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 * **Discriminator**: kind
 
 ### Base Properties
@@ -111,7 +122,8 @@
 
 
 ## Resource Microsoft.Security/workspaceSettings@2017-08-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

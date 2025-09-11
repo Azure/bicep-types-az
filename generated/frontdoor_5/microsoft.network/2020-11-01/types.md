@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2020-11-01
 
 ## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2020-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.

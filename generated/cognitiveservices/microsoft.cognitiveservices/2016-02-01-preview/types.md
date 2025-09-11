@@ -1,7 +1,8 @@
 # Microsoft.CognitiveServices @ 2016-02-01-preview
 
 ## Resource Microsoft.CognitiveServices/accounts@2016-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Entity Tag

@@ -1,7 +1,8 @@
 # Microsoft.Batch @ 2024-07-01
 
 ## Resource Microsoft.Batch/batchAccounts@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications/versions@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/certificates@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -45,8 +49,9 @@
 * **tags**: [AzureProxyResourceTags](#azureproxyresourcetags): The tags of the resource.
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/detectors@2024-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Batch/batchAccounts/detectors@2024-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -56,8 +61,9 @@
 * **tags**: [AzureProxyResourceTags](#azureproxyresourcetags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.Batch/batchAccounts/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations@2024-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations@2024-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -67,7 +73,8 @@
 * **type**: 'Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -78,8 +85,9 @@
 * **tags**: [AzureProxyResourceTags](#azureproxyresourcetags): The tags of the resource.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/privateEndpointConnections@2024-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Batch/batchAccounts/privateEndpointConnections@2024-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
@@ -89,8 +97,9 @@
 * **tags**: [AzureProxyResourceTags](#azureproxyresourcetags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.Batch/batchAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/privateLinkResources@2024-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Batch/batchAccounts/privateLinkResources@2024-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.

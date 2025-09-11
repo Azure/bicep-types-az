@@ -1,7 +1,8 @@
 # Microsoft.Authorization @ 2020-09-01
 
-## Resource Microsoft.Authorization/dataPolicyManifests@2020-09-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Authorization/dataPolicyManifests@2020-09-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Authorization/dataPolicyManifests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyAssignments@2020-09-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyDefinitions@2020-09-01
-* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup, Subscription
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription
+* **Writable Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +33,8 @@
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2020-09-01
-* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup, Subscription
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription
+* **Writable Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

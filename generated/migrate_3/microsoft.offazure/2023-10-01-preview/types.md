@@ -1,7 +1,8 @@
 # Microsoft.OffAzure @ 2023-10-01-preview
 
 ## Resource Microsoft.OffAzure/hypervSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.OffAzure/hypervSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/hypervSites/clusters@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.OffAzure/hypervSites/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/hypervSites/hosts@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,8 +35,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/hypervSites/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/hypervSites/jobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/hypervSites/jobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -42,8 +46,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/hypervSites/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/hypervSites/machines@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/hypervSites/machines@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -52,8 +57,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/hypervSites/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/hypervSites/machines/softwareInventories@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/hypervSites/machines/softwareInventories@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,8 +68,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/hypervSites/machines/softwareInventories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/hypervSites/runAsAccounts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/hypervSites/runAsAccounts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +80,8 @@
 * **type**: 'Microsoft.OffAzure/hypervSites/runAsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/importSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -84,8 +92,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OffAzure/importSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/importSites/deleteJobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/importSites/deleteJobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -94,8 +103,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/importSites/deleteJobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/importSites/jobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/importSites/jobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -104,8 +114,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/importSites/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/importSites/machines@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/importSites/machines@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -115,7 +126,8 @@
 * **type**: 'Microsoft.OffAzure/importSites/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,7 +139,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/privateEndpointConnections@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -136,8 +149,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/privateLinkResources@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/privateLinkResources@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -147,7 +161,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -157,7 +172,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/sqlSites/discoverySiteDataSources@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -166,8 +182,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/discoverySiteDataSources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/sqlSites/jobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/sqlSites/jobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -176,8 +193,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/sqlSites/runAsAccounts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/sqlSites/runAsAccounts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -186,8 +204,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/runAsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlAvailabilityGroups@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlAvailabilityGroups@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -196,8 +215,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/sqlAvailabilityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlDatabases@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlDatabases@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -206,8 +226,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlServers@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/sqlSites/sqlServers@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -217,7 +238,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/sqlServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -227,7 +249,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/webAppSites/discoverySiteDataSources@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -236,8 +259,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/discoverySiteDataSources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/extendedMachines@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/extendedMachines@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -246,8 +270,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/extendedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/iisWebApplications@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/iisWebApplications@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -256,8 +281,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/iisWebApplications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/iisWebServers@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/iisWebServers@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -266,8 +292,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/iisWebServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/runasaccounts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/runasaccounts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -276,8 +303,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/runasaccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/tomcatWebApplications@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/tomcatWebApplications@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -286,8 +314,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/tomcatWebApplications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/masterSites/webAppSites/tomcatWebServers@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/masterSites/webAppSites/tomcatWebServers@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -297,7 +326,8 @@
 * **type**: 'Microsoft.OffAzure/masterSites/webAppSites/tomcatWebServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/serverSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -308,8 +338,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OffAzure/serverSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/serverSites/jobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/serverSites/jobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -318,8 +349,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/serverSites/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/serverSites/machines@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/serverSites/machines@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -328,8 +360,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/serverSites/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/serverSites/machines/softwareInventories@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/serverSites/machines/softwareInventories@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -338,8 +371,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/serverSites/machines/softwareInventories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/serverSites/runAsAccounts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/serverSites/runAsAccounts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -349,7 +383,8 @@
 * **type**: 'Microsoft.OffAzure/serverSites/runAsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/vmwareSites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -361,8 +396,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OffAzure/vmwareSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/vmwareSites/hosts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/vmwareSites/hosts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -371,8 +407,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/vmwareSites/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/vmwareSites/jobs@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/vmwareSites/jobs@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -381,8 +418,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/vmwareSites/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/vmwareSites/machines@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/vmwareSites/machines@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -391,8 +429,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/vmwareSites/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/vmwareSites/machines/softwareInventories@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/vmwareSites/machines/softwareInventories@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -401,8 +440,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/vmwareSites/machines/softwareInventories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OffAzure/vmwareSites/runAsAccounts@2023-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OffAzure/vmwareSites/runAsAccounts@2023-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -412,7 +452,8 @@
 * **type**: 'Microsoft.OffAzure/vmwareSites/runAsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/vmwareSites/vcenters@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

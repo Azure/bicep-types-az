@@ -1,7 +1,8 @@
 # Microsoft.HybridCompute @ 2024-03-31-preview
 
 ## Resource Microsoft.HybridCompute/gateways@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.HybridCompute/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/licenses@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/licenses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2024-03-31-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2024-03-31-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.HybridCompute/locations/publishers/extensionTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +54,8 @@
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/licenseProfiles@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +80,8 @@
 * **type**: 'Microsoft.HybridCompute/machines/licenseProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/runCommands@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,7 +93,8 @@
 * **type**: 'Microsoft.HybridCompute/machines/runCommands' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,8 +105,9 @@
 * **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2024-03-31-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2024-03-31-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,7 +116,8 @@
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2024-03-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -116,8 +126,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2024-03-31-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2024-03-31-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -127,7 +138,8 @@
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/settings@2024-03-31-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2024-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

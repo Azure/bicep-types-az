@@ -1,7 +1,8 @@
 # Microsoft.Fabric.Admin @ 2018-10-01
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems@2018-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems@2018-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems/drives@2018-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems/drives@2018-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems/drives' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems/volumes@2018-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits/storageSubSystems/volumes@2018-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

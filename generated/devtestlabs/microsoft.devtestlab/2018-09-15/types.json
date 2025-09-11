@@ -437,11 +437,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -740,11 +740,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/schedules@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/31"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -954,11 +954,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/artifactsources@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/49"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1456,11 +1456,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/costs@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/62"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1875,11 +1875,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/customimages@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/93"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2774,11 +2774,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/formulas@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/122"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2957,11 +2957,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/notificationchannels@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/163"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3228,11 +3228,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/policysets/policies@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/174"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3308,11 +3308,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/schedules@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/197"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3458,11 +3458,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/servicerunners@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/202"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3640,11 +3640,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/213"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3832,11 +3832,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users/disks@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/221"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4006,11 +4006,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users/environments@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/231"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4113,11 +4113,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users/secrets@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/240"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4366,11 +4366,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/246"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4446,11 +4446,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/257"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4985,11 +4985,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/virtualmachines@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/262"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5065,11 +5065,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/282"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5468,11 +5468,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/287"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5655,11 +5655,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/artifactsources/armtemplates@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/317"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5805,11 +5805,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DevTestLab/labs/artifactsources/artifacts@2018-09-15",
-    "scopeType": 8,
     "body": {
       "$ref": "#/328"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

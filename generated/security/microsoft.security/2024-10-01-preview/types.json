@@ -196,10 +196,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/defenderForStorageSettings@2024-10-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/5"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

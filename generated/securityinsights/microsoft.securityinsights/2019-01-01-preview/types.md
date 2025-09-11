@@ -1,7 +1,8 @@
 # Microsoft.SecurityInsights @ 2019-01-01-preview
 
-## Resource Microsoft.SecurityInsights/aggregations@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/aggregations@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.SecurityInsights/aggregations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/alertRules@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -20,7 +22,8 @@
 * **type**: 'Microsoft.SecurityInsights/alertRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -30,8 +33,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/alertRuleTemplates@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/alertRuleTemplates@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +44,8 @@
 * **type**: 'Microsoft.SecurityInsights/alertRuleTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -50,7 +55,8 @@
 * **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -60,7 +66,8 @@
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks/relations@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -70,7 +77,8 @@
 * **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -80,7 +88,8 @@
 * **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases/comments@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -89,7 +98,8 @@
 * **type**: 'Microsoft.SecurityInsights/cases/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases/relations@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: ETag for relation
@@ -100,7 +110,8 @@
 * **type**: 'Microsoft.SecurityInsights/cases/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -109,8 +120,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/entities@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/entities@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -118,8 +130,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/entities' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/entities/relations@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/entities/relations@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag of the azure resource
@@ -128,8 +141,9 @@
 * **properties**: [RelationProperties](#relationproperties) (ReadOnly): Relation properties
 * **type**: 'Microsoft.SecurityInsights/entities/relations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/entityQueries@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/entityQueries@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag of the azure resource
@@ -139,7 +153,8 @@
 * **type**: 'Microsoft.SecurityInsights/entityQueries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -149,7 +164,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -159,7 +175,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -168,8 +185,9 @@
 * **properties**: [RelationProperties](#relationproperties): Relation properties
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/officeConsents@2019-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/officeConsents@2019-01-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -178,7 +196,8 @@
 * **type**: 'Microsoft.SecurityInsights/officeConsents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/settings@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -188,7 +207,8 @@
 * **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -199,7 +219,8 @@
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -209,7 +230,8 @@
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2019-01-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource

@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2016-12-01
 
 ## Resource Microsoft.Network/applicationGateways@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/connections@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits/authorizations@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits/peerings@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -58,7 +63,8 @@
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/loadBalancers@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -70,7 +76,8 @@
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/localNetworkGateways@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -82,7 +89,8 @@
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkInterfaces@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -94,7 +102,8 @@
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityGroups@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -106,7 +115,8 @@
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityGroups/securityRules@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -116,7 +126,8 @@
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -128,7 +139,8 @@
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers/packetCaptures@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly)
@@ -138,7 +150,8 @@
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/publicIPAddresses@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -150,7 +163,8 @@
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeFilters@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
@@ -162,7 +176,8 @@
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeFilters/routeFilterRules@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -174,7 +189,8 @@
 * **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeTables@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
@@ -186,7 +202,8 @@
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeTables/routes@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -196,7 +213,8 @@
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworkGateways@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
@@ -208,7 +226,8 @@
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
@@ -220,7 +239,8 @@
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks/subnets@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -230,7 +250,8 @@
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2016-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.

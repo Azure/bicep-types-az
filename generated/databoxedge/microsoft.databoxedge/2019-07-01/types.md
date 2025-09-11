@@ -1,7 +1,8 @@
 # Microsoft.DataBoxEdge @ 2019-07-01
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag for the devices.
@@ -13,8 +14,9 @@
 * **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2019-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2019-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,8 +34,9 @@
 * **properties**: [BandwidthScheduleProperties](#bandwidthscheduleproperties) (Required): The properties of the bandwidth schedule.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2019-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2019-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +55,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -66,7 +72,8 @@
 
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,7 +82,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -84,7 +92,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -104,8 +113,9 @@
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary@2019-07-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary@2019-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -114,7 +124,8 @@
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -653,11 +653,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Attestation/attestationProviders@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -711,10 +711,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Attestation/attestationProviders/privateEndpointConnections@2021-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

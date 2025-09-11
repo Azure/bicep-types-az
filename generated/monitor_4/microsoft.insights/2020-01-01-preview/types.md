@@ -1,7 +1,8 @@
 # microsoft.insights @ 2020-01-01-preview
 
 ## Resource microsoft.insights/diagnosticSettings@2020-01-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

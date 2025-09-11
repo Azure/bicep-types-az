@@ -1,7 +1,8 @@
 # Microsoft.Advisor @ 2017-04-19
 
-## Resource Microsoft.Advisor/recommendations@2017-04-19 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Advisor/recommendations@2017-04-19
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Advisor/recommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2017-04-19
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

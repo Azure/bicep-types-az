@@ -525,11 +525,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/accessAnalyzerAnalyzers@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1290,11 +1290,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/acmCertificateSummaries@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/43"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1753,11 +1753,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/apiGatewayRestApis@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/114"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2256,11 +2256,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/apiGatewayStages@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/140"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3227,11 +3227,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/appSyncGraphqlApis@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/164"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4429,11 +4429,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/autoScalingAutoScalingGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/231"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5101,11 +5101,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/cloudFormationStacks@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/287"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5778,11 +5778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/cloudFormationStackSets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/338"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7246,11 +7246,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/cloudFrontDistributions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/384"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7854,11 +7854,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/cloudTrailTrails@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/454"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8440,11 +8440,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/cloudWatchAlarms@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/493"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10517,11 +10517,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/codeBuildProjects@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/521"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10877,11 +10877,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/codeBuildSourceCredentialsInfos@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/676"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -19918,11 +19918,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/configServiceConfigurationRecorders@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/705"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -20243,11 +20243,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/configServiceConfigurationRecorderStatuses@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1963"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -20581,11 +20581,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/configServiceDeliveryChannels@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1984"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -21168,11 +21168,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2008"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -21784,11 +21784,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/daxClusters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2035"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -22122,11 +22122,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2071"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -22953,11 +22953,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/dynamoDBTables@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2096"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -23213,11 +23213,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2AccountAttributes@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2142"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -23599,11 +23599,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Addresses@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2160"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -26907,11 +26907,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2FlowLogs@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2182"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -28057,11 +28057,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Images@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/2620"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -35854,11 +35854,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Instances@2024-12-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/2706"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -36426,11 +36426,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2InstanceStatuses@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3638"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -36950,11 +36950,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Ipams@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3682"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -37296,11 +37296,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2KeyPairs@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3720"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -37570,11 +37570,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2NetworkAcls@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3744"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38099,11 +38099,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2NetworkInterfaces@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3762"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38373,11 +38373,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2RouteTables@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3791"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -38888,11 +38888,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2SecurityGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3809"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -39400,11 +39400,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Snapshots@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3838"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -39826,11 +39826,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Subnets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3872"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -40170,11 +40170,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Volumes@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3892"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -40519,11 +40519,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2Vpcs@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3910"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -40897,11 +40897,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2VPCEndpoints@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3930"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -41199,11 +41199,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ec2VPCPeeringConnections@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3956"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -41641,11 +41641,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ecrImageDetails@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3974"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -42069,11 +42069,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ecrRepositories@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4004"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -42537,11 +42537,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ecsClusters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4032"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -43820,11 +43820,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ecsServices@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4059"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -45499,11 +45499,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ecsTaskDefinitions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4139"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -46013,11 +46013,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/efsFileSystems@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4228"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -46281,11 +46281,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/efsMountTargets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4259"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -47370,11 +47370,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/eksClusters@2024-12-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/4277"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -47898,11 +47898,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/eksNodegroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4362"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -48240,11 +48240,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticBeanstalkApplications@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4389"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -48583,11 +48583,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticBeanstalkConfigurationTemplates@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4409"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -48994,11 +48994,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticBeanstalkEnvironments@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4428"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -49713,11 +49713,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticLoadBalancingV2Listeners@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4449"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -50149,11 +50149,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticLoadBalancingV2LoadBalancers@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4481"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -50648,11 +50648,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticLoadBalancingV2TargetGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4505"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -51222,11 +51222,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/elasticLoadBalancingV2TargetHealthDescriptions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4529"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -52451,11 +52451,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/emrClusters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4579"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -52919,11 +52919,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/guardDutyDetectors@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4661"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -53167,11 +53167,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamAccessKeyLastUseds@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4692"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -53471,11 +53471,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamAccessKeyMetadata@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4708"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -53773,11 +53773,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4730"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -54034,11 +54034,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamInstanceProfiles@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4750"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -54282,11 +54282,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamMFADevices@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4767"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -54579,11 +54579,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamPasswordPolicies@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4783"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -54834,11 +54834,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamPolicyVersions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4799"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -55212,11 +55212,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamRoles@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4815"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -55514,11 +55514,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamServerCertificates@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4838"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -55808,11 +55808,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/iamVirtualMFADevices@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4856"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -56049,11 +56049,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/kmsAliases@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4875"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -56579,11 +56579,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/kmsKeys@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4891"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -57587,11 +57587,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/lambdaFunctions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4934"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -57842,11 +57842,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/lambdaFunctionCodeLocations@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5008"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -58197,11 +58197,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/lightsailBuckets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5024"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -58954,11 +58954,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/lightsailInstances@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5045"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -59278,11 +59278,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/logsLogGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5086"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -59519,11 +59519,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/logsLogStreams@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5107"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -60051,11 +60051,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/logsMetricFilters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5123"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -60342,11 +60342,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/logsSubscriptionFilters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5171"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -61101,11 +61101,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/macie2JobSummaries@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5190"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -61507,11 +61507,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/macieAllowLists@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5252"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -61876,11 +61876,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/networkFirewallFirewalls@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5281"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -62527,11 +62527,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/networkFirewallFirewallPolicies@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5302"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -63715,11 +63715,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/networkFirewallRuleGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5349"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -66096,11 +66096,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/openSearchDomainStatuses@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5447"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -66511,11 +66511,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/organizationsAccounts@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5656"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -66809,11 +66809,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/organizationsOrganizations@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5687"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -67640,11 +67640,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsDBClusters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5706"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -68598,11 +68598,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsDBInstances@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5734"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -69129,11 +69129,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsDBSnapshots@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5765"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -69402,11 +69402,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsDBSnapshotAttributesResults@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5785"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -69716,11 +69716,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsEventSubscriptions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5804"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -70096,11 +70096,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/rdsExportTasks@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5824"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -70772,11 +70772,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/redshiftClusters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5845"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -71086,11 +71086,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/redshiftClusterParameterGroups@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5867"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -71341,11 +71341,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/route53DomainsDomainSummaries@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5887"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -71701,11 +71701,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/route53HostedZones@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5903"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -72565,11 +72565,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/route53ResourceRecordSets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5926"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -72984,11 +72984,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/s3AccessControlPolicies@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6001"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -73343,11 +73343,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/s3AccessPoints@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6032"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -76218,11 +76218,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/s3Buckets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6053"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -76452,11 +76452,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/s3BucketPolicies@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6273"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -76719,11 +76719,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/s3ControlMultiRegionAccessPointPolicyDocuments@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6289"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -77540,11 +77540,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/sageMakerApps@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6307"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -77913,11 +77913,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6396"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -78168,11 +78168,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/secretsManagerResourcePolicies@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6422"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -78579,11 +78579,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/secretsManagerSecrets@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6438"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -78841,11 +78841,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/snsSubscriptions@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6459"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -79294,11 +79294,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/snsTopics@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6475"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -79689,11 +79689,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/sqsQueues@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6503"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -83045,11 +83045,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ssmInstanceInformations@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6523"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -83408,11 +83408,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ssmParameters@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6960"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -83904,11 +83904,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/ssmResourceComplianceSummaryItems@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/6986"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -84446,11 +84446,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/wafv2LoggingConfigurations@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/7018"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -84687,10 +84687,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AwsConnector/wafWebACLSummaries@2024-12-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/7061"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

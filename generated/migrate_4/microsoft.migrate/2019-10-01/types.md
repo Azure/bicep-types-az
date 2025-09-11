@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2019-10-01
 
 ## Resource Microsoft.Migrate/assessmentProjects@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -12,8 +13,9 @@
 * **tags**: any: Tags provided by Azure Tagging service.
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/assessmentOptions@2019-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/assessmentOptions@2019-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/assessmentOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -41,8 +45,9 @@
 * **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of the assessment.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines@2019-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines@2019-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): For optimistic concurrency control.
@@ -52,7 +57,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments/assessedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string
@@ -62,7 +68,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/importcollectors@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string
@@ -71,8 +78,9 @@
 * **properties**: [ImportCollectorProperties](#importcollectorproperties)
 * **type**: 'Microsoft.Migrate/assessmentProjects/importcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentProjects/machines@2019-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentProjects/machines@2019-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): For optimistic concurrency control.
@@ -82,7 +90,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentprojects/privateEndpointConnections@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -91,8 +100,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Properties of the private endpoint endpoint connection.
 * **type**: 'Microsoft.Migrate/assessmentprojects/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/assessmentprojects/privateLinkResources@2019-10-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/assessmentprojects/privateLinkResources@2019-10-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,7 +111,8 @@
 * **type**: 'Microsoft.Migrate/assessmentprojects/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/servercollectors@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string
@@ -111,7 +122,8 @@
 * **type**: 'Microsoft.Migrate/assessmentProjects/servercollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/vmwarecollectors@2019-10-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string

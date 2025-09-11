@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2021-01-01
 
 ## Resource Microsoft.CostManagement/exports@2021-01-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.

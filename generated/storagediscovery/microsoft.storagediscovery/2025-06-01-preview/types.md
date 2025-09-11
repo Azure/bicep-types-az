@@ -1,7 +1,8 @@
 # Microsoft.StorageDiscovery @ 2025-06-01-preview
 
 ## Resource Microsoft.StorageDiscovery/storageDiscoveryWorkspaces@2025-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StorageDiscovery/storageDiscoveryWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports@2025-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports@2025-06-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

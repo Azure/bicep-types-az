@@ -1,7 +1,8 @@
 # Microsoft.BareMetalInfrastructure @ 2023-08-04-preview
 
-## Resource Microsoft.BareMetalInfrastructure/bareMetalInstances@2023-08-04-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.BareMetalInfrastructure/bareMetalInstances@2023-08-04-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-08-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.BareMetalInfrastructure/bareMetalInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BareMetalInfrastructure/bareMetalStorageInstances@2023-08-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-08-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

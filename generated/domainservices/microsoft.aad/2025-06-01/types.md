@@ -1,7 +1,8 @@
 # Microsoft.AAD @ 2025-06-01
 
 ## Resource Microsoft.AAD/domainServices@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource etag
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **accountName**: string (WriteOnly): The account name
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version

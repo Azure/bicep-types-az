@@ -1,7 +1,8 @@
 # Microsoft.CodeSigning @ 2024-02-05-preview
 
 ## Resource Microsoft.CodeSigning/codeSigningAccounts@2024-02-05-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.CodeSigning/codeSigningAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles@2024-02-05-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

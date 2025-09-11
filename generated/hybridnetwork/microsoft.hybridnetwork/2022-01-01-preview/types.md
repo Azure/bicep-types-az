@@ -1,7 +1,8 @@
 # Microsoft.HybridNetwork @ 2022-01-01-preview
 
 ## Resource Microsoft.HybridNetwork/devices@2022-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2022-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2022-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2022-01-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/networkFunctions@2022-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -46,7 +50,8 @@
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/vendors@2022-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,7 +61,8 @@
 * **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2022-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,7 +72,8 @@
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2022-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

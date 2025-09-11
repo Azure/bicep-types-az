@@ -618,10 +618,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/locations/alerts@2022-01-01",
-    "scopeType": 12,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 1
+    "readableScopes": 12,
+    "writableScopes": 0
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.ProgrammableConnectivity @ 2024-01-15-preview
 
 ## Resource Microsoft.ProgrammableConnectivity/gateways@2024-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.ProgrammableConnectivity/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ProgrammableConnectivity/operatorApiConnections@2024-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ProgrammableConnectivity/operatorApiConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ProgrammableConnectivity/operatorApiPlans@2024-01-15-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ProgrammableConnectivity/operatorApiPlans@2024-01-15-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -564,11 +564,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/privateLinks@2025-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -629,11 +629,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/privateLinks/privateEndpointConnections@2025-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -694,10 +694,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Security/privateLinks/privateLinkResources@2025-09-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/52"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2021-05-01-preview
 
-## Resource Microsoft.Security/softwareInventories@2021-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Security/softwareInventories@2021-05-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

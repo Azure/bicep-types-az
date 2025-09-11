@@ -1,7 +1,8 @@
 # Microsoft.ConnectedCache @ 2023-05-01-preview
 
 ## Resource Microsoft.ConnectedCache/cacheNodes@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.ConnectedCache/cacheNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedCache/enterpriseCustomers@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.ConnectedCache/enterpriseCustomers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedCache/enterpriseMccCustomers@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.ConnectedCache/enterpriseMccCustomers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +53,8 @@
 * **type**: 'Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedCache/ispCustomers@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,7 +66,8 @@
 * **type**: 'Microsoft.ConnectedCache/ispCustomers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedCache/ispCustomers/ispCacheNodes@2023-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

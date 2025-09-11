@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2022-01-01
 
-## Resource Microsoft.Security/locations/alerts@2022-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Security/locations/alerts@2022-01-01
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Sovereign @ 2025-02-27-preview
 
 ## Resource Microsoft.Sovereign/landingZoneAccounts@2025-02-27-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-27-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Sovereign/landingZoneAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations@2025-02-27-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-27-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sovereign/landingZoneAccounts/landingZoneRegistrations@2025-02-27-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-27-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

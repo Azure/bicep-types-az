@@ -1,7 +1,8 @@
 # Microsoft.OperationalInsights @ 2019-09-01
 
 ## Resource Microsoft.OperationalInsights/queryPacks@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.OperationalInsights/queryPacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/queryPacks/queries@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.MachineLearning @ 2017-01-01
 
 ## Resource Microsoft.MachineLearning/webServices@2017-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

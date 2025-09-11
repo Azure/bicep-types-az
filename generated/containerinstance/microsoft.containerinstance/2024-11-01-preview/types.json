@@ -2067,11 +2067,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerInstance/containerGroups@2024-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2986,11 +2986,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerInstance/ngroups@2024-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/137"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3370,11 +3370,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerInstance/containerGroupProfiles@2024-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/209"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3470,10 +3470,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerInstance/containerGroupProfiles/revisions@2024-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/237"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

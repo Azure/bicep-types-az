@@ -92,11 +92,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/5"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -275,11 +275,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/auditingSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/12"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -445,11 +445,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/auditingSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/25"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -615,11 +615,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/extendedAuditingSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/35"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -792,11 +792,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/extendedAuditingSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/45"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -932,11 +932,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataMaskingPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/56"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1160,11 +1160,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/64"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1406,11 +1406,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advancedThreatProtectionSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/81"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1618,11 +1618,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/extensions@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/101"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1791,11 +1791,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/securityAlertPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/116"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1911,11 +1911,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/128"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2008,11 +2008,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines/rules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/136"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2123,11 +2123,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/146"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2263,11 +2263,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/vulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/156"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3418,11 +3418,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/163"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3899,11 +3899,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/254"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4219,11 +4219,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/elasticPools@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/284"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4376,11 +4376,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/encryptionProtector@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/308"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4700,11 +4700,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/failoverGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/316"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4778,11 +4778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/firewallRules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/342"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4904,11 +4904,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/geoBackupPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/349"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4982,11 +4982,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/ipv6FirewallRules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/357"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5290,11 +5290,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/instanceFailoverGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/362"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5440,11 +5440,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/instancePools@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/388"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5688,11 +5688,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/397"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5766,11 +5766,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/credentials@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/417"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6112,11 +6112,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/executions@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/422"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6190,11 +6190,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/privateEndpoints@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/451"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6471,11 +6471,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/steps@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/456"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6665,11 +6665,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/targetGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/470"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6810,11 +6810,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/486"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6922,11 +6922,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/ledgerDigestUploads@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/497"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7029,11 +7029,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/507"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7115,11 +7115,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/514"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7195,11 +7195,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/advancedThreatProtectionSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/521"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7368,11 +7368,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/securityAlertPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/527"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7602,11 +7602,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/541"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7707,11 +7707,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/transparentDataEncryption@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/559"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7784,11 +7784,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/570"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7857,11 +7857,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/576"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8254,11 +8254,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/580"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8376,11 +8376,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/administrators@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/610"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8456,11 +8456,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/advancedThreatProtectionSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/619"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8542,11 +8542,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/625"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8773,11 +8773,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/dtc@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/632"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8916,11 +8916,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/encryptionProtector@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/648"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9044,11 +9044,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/keys@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/656"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9180,11 +9180,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/666"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9305,11 +9305,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/privateEndpointConnections@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/674"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9412,11 +9412,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/vulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/683"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10398,11 +10398,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/688"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10513,11 +10513,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/ledgerDigestUploads@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/762"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10586,11 +10586,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/772"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10671,11 +10671,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/dnsAliases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/776"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10751,11 +10751,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/securityAlertPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/783"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10822,11 +10822,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/outboundFirewallRules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/787"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11054,11 +11054,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/privateEndpointConnections@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/792"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11347,11 +11347,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/replicationLinks@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/813"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11431,11 +11431,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/842"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11511,11 +11511,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/advancedThreatProtectionSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/848"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11640,11 +11640,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/administrators@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/854"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11726,11 +11726,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/azureADOnlyAuthentications@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/863"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11862,11 +11862,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/serverConfigurationOptions@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/870"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11991,11 +11991,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/connectionPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/883"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12138,11 +12138,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/devOpsAuditingSettings@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/894"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12209,11 +12209,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/dnsAliases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/902"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12351,11 +12351,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/keys@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/907"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12431,11 +12431,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/securityAlertPolicies@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/917"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12516,11 +12516,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/serverTrustCertificates@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/921"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12641,11 +12641,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/serverTrustGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/926"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12748,11 +12748,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/vulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/939"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13238,11 +13238,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/944"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13335,11 +13335,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/sqlAgent@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/982"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13447,11 +13447,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/sqlVulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/992"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13722,11 +13722,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/startStopSchedules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1002"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13864,11 +13864,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/syncAgents@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1025"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14163,11 +14163,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1034"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14496,11 +14496,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups/syncMembers@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1053"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14601,11 +14601,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/transparentDataEncryption@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1086"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14736,11 +14736,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/virtualNetworkRules@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1094"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14842,11 +14842,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1106"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -14948,11 +14948,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1111"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -15034,11 +15034,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1118"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -15859,11 +15859,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1123"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16155,11 +16155,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/automaticTuning@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1188"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16522,11 +16522,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas/tables/columns@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1220"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16594,11 +16594,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors/recommendedActions@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1264"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16645,11 +16645,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1268"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17191,11 +17191,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1272"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17465,11 +17465,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1315"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17545,11 +17545,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1332"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17652,11 +17652,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas/tables@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1336"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17856,11 +17856,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1345"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17948,11 +17948,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/deletedServers@2023-08-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/1360"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18019,11 +18019,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/endpointCertificates@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1365"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18077,11 +18077,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1370"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18135,11 +18135,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1374"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18193,11 +18193,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1378"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18244,11 +18244,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/versions@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1382"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18472,11 +18472,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2023-08-01-preview",
-    "scopeType": 12,
     "body": {
       "$ref": "#/1386"
     },
-    "flags": 1
+    "readableScopes": 12,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18650,11 +18650,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2023-08-01-preview",
-    "scopeType": 12,
     "body": {
       "$ref": "#/1404"
     },
-    "flags": 1
+    "readableScopes": 12,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18708,11 +18708,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1417"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18956,11 +18956,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/managedDatabaseMoveOperationResults@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1421"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19027,11 +19027,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/queries@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1436"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19345,11 +19345,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/restoreDetails@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1443"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19396,11 +19396,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1454"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19454,11 +19454,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1458"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19512,11 +19512,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1462"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -19906,11 +19906,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/operations@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1466"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20003,11 +20003,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/privateLinkResources@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1490"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20343,11 +20343,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/networkSecurityPerimeterConfigurations@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1497"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20440,11 +20440,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/privateLinkResources@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1518"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20547,11 +20547,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/recoverableDatabases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1525"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20618,11 +20618,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/recoverableDatabases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1531"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20804,11 +20804,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/restorableDroppedDatabases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1536"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -20918,11 +20918,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/restorableDroppedDatabases@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1548"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21036,11 +21036,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/restorePoints@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1554"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21108,11 +21108,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/advisors@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1562"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21362,11 +21362,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/automaticTuning@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1567"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21454,11 +21454,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/usages@2023-08-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/1593"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21532,11 +21532,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/timeZones@2023-08-01-preview",
-    "scopeType": 4,
     "body": {
       "$ref": "#/1598"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -21645,10 +21645,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/virtualClusters@2023-08-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1603"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

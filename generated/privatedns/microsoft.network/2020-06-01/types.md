@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2020-06-01
 
 ## Resource Microsoft.Network/privateDnsZones@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the zone.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/A@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/AAAA@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/CNAME@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/MX@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -53,7 +58,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/PTR@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -63,7 +69,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/SOA@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -73,7 +80,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/SRV@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -83,7 +91,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/TXT@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the record set.
@@ -93,7 +102,8 @@
 * **type**: 'Microsoft.Network/privateDnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the virtual network link.

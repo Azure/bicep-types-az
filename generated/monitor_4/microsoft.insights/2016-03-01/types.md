@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2016-03-01
 
 ## Resource Microsoft.Insights/logprofiles@2016-03-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

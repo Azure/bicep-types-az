@@ -1,7 +1,8 @@
 # Microsoft.Sql @ 2024-11-01-preview
 
 ## Resource Microsoft.Sql/instancePools@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/instancePools/operations@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/instancePools/operations@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,8 +23,9 @@
 * **properties**: [InstancePoolOperationProperties](#instancepooloperationproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/instancePools/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/deletedServers@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Sql/locations/deletedServers@2024-11-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Sql/locations/deletedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/instanceFailoverGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -39,8 +43,9 @@
 * **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/locations/instanceFailoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2024-11-01-preview
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -48,8 +53,9 @@
 * **properties**: [ManagedInstanceLongTermRetentionBackupProperties](#managedinstancelongtermretentionbackupproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription, ResourceGroup
+## Resource Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2024-11-01-preview
+* **Readable Scope(s)**: Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,8 +63,9 @@
 * **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/managedDatabaseMoveOperationResults@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/locations/managedDatabaseMoveOperationResults@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -67,7 +74,8 @@
 * **type**: 'Microsoft.Sql/locations/managedDatabaseMoveOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/serverTrustGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,8 +83,9 @@
 * **properties**: [ServerTrustGroupProperties](#servertrustgroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/locations/serverTrustGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/timeZones@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Sql/locations/timeZones@2024-11-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -84,8 +93,9 @@
 * **properties**: [TimeZoneProperties](#timezoneproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/locations/timeZones' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/usages@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Sql/locations/usages@2024-11-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -94,7 +104,8 @@
 * **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,7 +118,8 @@
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/administrators@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -116,7 +128,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/advancedThreatProtectionSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -126,7 +139,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -135,7 +149,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -146,7 +161,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/advancedThreatProtectionSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -156,7 +172,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -165,7 +182,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -174,7 +192,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/ledgerDigestUploads@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -182,8 +201,9 @@
 * **properties**: [ManagedLedgerDigestUploadsProperties](#managedledgerdigestuploadsproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/queries@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/queries@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -191,8 +211,9 @@
 * **properties**: [QueryProperties](#queryproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/queries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -200,16 +221,18 @@
 * **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/schemas@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/schemas@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/schemas/tables@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -217,8 +240,9 @@
 * **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -227,7 +251,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -237,7 +262,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/securityAlertPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -246,7 +272,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/transparentDataEncryption@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -255,7 +282,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -264,7 +292,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -272,8 +301,9 @@
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -282,7 +312,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -291,7 +322,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/distributedAvailabilityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/dnsAliases@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **createDnsRecord**: bool (WriteOnly): Whether or not DNS record should be created for this alias.
@@ -301,7 +333,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/dtc@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -310,7 +343,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/dtc' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -319,8 +353,9 @@
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/endpointCertificates@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/endpointCertificates@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -329,7 +364,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/endpointCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/keys@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -338,8 +374,9 @@
 * **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/operations@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/operations@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -348,7 +385,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/privateEndpointConnections@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -356,8 +394,9 @@
 * **properties**: [ManagedInstancePrivateEndpointConnectionProperties](#managedinstanceprivateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/privateLinkResources@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/privateLinkResources@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -365,8 +404,9 @@
 * **properties**: [ManagedInstancePrivateLinkProperties](#managedinstanceprivatelinkproperties) (ReadOnly): The private link resource group id.
 * **type**: 'Microsoft.Sql/managedInstances/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/recoverableDatabases@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/recoverableDatabases@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -374,8 +414,9 @@
 * **properties**: [RecoverableManagedDatabaseProperties](#recoverablemanageddatabaseproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -386,7 +427,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -395,7 +437,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -405,7 +448,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/serverConfigurationOptions@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -414,7 +458,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/serverConfigurationOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/serverTrustCertificates@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -423,7 +468,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/serverTrustCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/sqlAgent@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -432,7 +478,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/sqlAgent' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/startStopSchedules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -442,7 +489,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/startStopSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/vulnerabilityAssessments@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -451,7 +499,8 @@
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -464,7 +513,8 @@
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/administrators@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -473,7 +523,8 @@
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/advancedThreatProtectionSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -482,8 +533,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
 * **type**: 'Microsoft.Sql/servers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/advisors@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/advisors@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -494,7 +546,8 @@
 * **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/auditingSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -502,8 +555,9 @@
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/automaticTuning@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/automaticTuning@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -512,7 +566,8 @@
 * **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -521,7 +576,8 @@
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/connectionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -532,7 +588,8 @@
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -557,7 +614,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/advancedThreatProtectionSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -566,8 +624,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
 * **type**: 'Microsoft.Sql/servers/databases/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/advisors@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/advisors@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -577,8 +636,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/advisors/recommendedActions@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/advisors/recommendedActions@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -589,7 +649,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -598,8 +659,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/automaticTuning@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/automaticTuning@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -608,7 +670,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -617,7 +680,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -626,7 +690,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -637,7 +702,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -647,8 +713,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -657,7 +724,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/extendedAuditingSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -666,7 +734,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -675,7 +744,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -686,7 +756,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -695,7 +766,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/replicationLinks@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -703,8 +775,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [ReplicationLinkProperties](#replicationlinkproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/restorePoints@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/restorePoints@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -713,16 +786,18 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/schemas@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/schemas@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Sql/servers/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/schemas/tables@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/schemas/tables@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -730,8 +805,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/schemas/tables/columns@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/schemas/tables/columns@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -740,7 +816,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -750,7 +827,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -759,8 +837,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SecurityAlertPolicyResource.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -770,7 +849,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -780,7 +860,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines/rules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -789,8 +870,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of DatabaseSqlVulnerabilityAssessmentRuleBaselineInputResource.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -799,8 +881,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentScanRecordResource.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -810,7 +893,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -820,7 +904,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -829,7 +914,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/transparentDataEncryption@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -838,7 +924,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -847,7 +934,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -855,8 +943,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -865,7 +954,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -874,7 +964,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -883,7 +974,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/devOpsAuditingSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -893,7 +985,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/dnsAliases@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -902,7 +995,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/elasticPools@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -921,7 +1015,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/encryptionProtector@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -932,7 +1027,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/extendedAuditingSettings@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -941,7 +1037,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/failoverGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -952,7 +1049,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/firewallRules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -961,7 +1059,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/ipv6FirewallRules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -970,7 +1069,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/ipv6FirewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -983,7 +1083,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/credentials@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -992,7 +1093,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1001,7 +1103,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1009,8 +1112,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1018,8 +1122,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1028,7 +1133,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1036,16 +1142,18 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [JobStepProperties](#jobstepproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/steps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/versions@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: int (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1054,7 +1162,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/privateEndpoints@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1063,7 +1172,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/privateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/targetGroups@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1072,7 +1182,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/jobAgents/targetGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/keys@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1082,8 +1193,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/networkSecurityPerimeterConfigurations@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/networkSecurityPerimeterConfigurations@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1092,7 +1204,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/outboundFirewallRules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1101,7 +1214,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/outboundFirewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/privateEndpointConnections@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1109,8 +1223,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/privateLinkResources@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/privateLinkResources@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1118,8 +1233,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource group id.
 * **type**: 'Microsoft.Sql/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/recoverableDatabases@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/recoverableDatabases@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1127,8 +1243,9 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [RecoverableDatabaseProperties](#recoverabledatabaseproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/restorableDroppedDatabases@2024-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Sql/servers/restorableDroppedDatabases@2024-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1140,7 +1257,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/securityAlertPolicies@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1150,7 +1268,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1160,7 +1279,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/syncAgents@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1169,7 +1289,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/syncAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/virtualNetworkRules@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1178,7 +1299,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/vulnerabilityAssessments@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1187,7 +1309,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/virtualClusters@2024-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

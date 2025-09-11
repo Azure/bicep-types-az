@@ -1,7 +1,8 @@
 # Microsoft.DBforPostgreSQL @ 2023-03-02-preview
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/configurations@2023-03-02-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/configurations@2023-03-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/coordinatorConfigurations@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/coordinatorConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/firewallRules@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/nodeConfigurations@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/privateEndpointConnections@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,8 +69,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/privateLinkResources@2023-03-02-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/privateLinkResources@2023-03-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +81,8 @@
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/roles@2023-03-02-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -83,8 +91,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/roles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/servers@2023-03-02-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DBforPostgreSQL/serverGroupsv2/servers@2023-03-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

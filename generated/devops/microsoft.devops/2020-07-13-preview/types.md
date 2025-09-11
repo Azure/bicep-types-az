@@ -1,7 +1,8 @@
 # Microsoft.DevOps @ 2020-07-13-preview
 
 ## Resource Microsoft.DevOps/pipelines@2020-07-13-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

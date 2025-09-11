@@ -1,7 +1,8 @@
 # Microsoft.Workloads @ 2023-10-01-preview
 
 ## Resource Microsoft.Workloads/sapDiscoverySites@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location definition.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Workloads/sapDiscoverySites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapDiscoverySites/sapInstances@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.Workloads/sapDiscoverySites/sapInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
