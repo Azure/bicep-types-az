@@ -5,7 +5,7 @@ import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, Http
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodash';
 import { success, failure, Result } from './utils';
-import { ScopeType, AllExceptExtension } from "bicep-types";
+import { ScopeType, All } from "bicep-types";
 
 export interface PutExample {
   description: string;
@@ -754,8 +754,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       return ScopeType.Extension;
     }
 
-    // ambiguous - fallback to all standard scopes except extension
-    return AllExceptExtension;
+  // ambiguous - fallback to all scopes
+  return All;
   }
 
   function collapseDefinitionScopes(resources: ResourceDefinition[]) {
