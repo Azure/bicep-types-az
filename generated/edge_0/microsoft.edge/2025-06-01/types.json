@@ -4419,7 +4419,7 @@
     "body": {
       "$ref": "#/318"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   },
   {
@@ -4561,7 +4561,7 @@
     "body": {
       "$ref": "#/354"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   },
   {

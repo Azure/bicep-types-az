@@ -466,7 +466,7 @@
     "body": {
       "$ref": "#/29"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   }
 ]

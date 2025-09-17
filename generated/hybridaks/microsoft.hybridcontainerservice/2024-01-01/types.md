@@ -1,8 +1,8 @@
 # Microsoft.HybridContainerService @ 2024-01-01
 
 ## Resource Microsoft.HybridContainerService/kubernetesVersions@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended location pointing to the underlying infrastructure
@@ -13,8 +13,8 @@
 * **type**: 'Microsoft.HybridContainerService/kubernetesVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended location pointing to the underlying infrastructure
@@ -25,8 +25,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances/agentPools@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended location pointing to the underlying infrastructure
@@ -38,8 +38,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +49,7 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances/upgradeProfiles@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -60,8 +60,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/upgradeProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/skus@2024-01-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended location pointing to the underlying infrastructure

@@ -237,8 +237,8 @@
     "body": {
       "$ref": "#/4"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringType",

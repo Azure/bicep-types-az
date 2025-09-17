@@ -1040,8 +1040,8 @@
     "body": {
       "$ref": "#/31"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -2333,8 +2333,8 @@
     "body": {
       "$ref": "#/98"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -3130,8 +3130,8 @@
     "body": {
       "$ref": "#/197"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -3725,8 +3725,8 @@
     "body": {
       "$ref": "#/262"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -3834,8 +3834,8 @@
     "body": {
       "$ref": "#/315"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -4579,7 +4579,7 @@
     "body": {
       "$ref": "#/322"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   }
 ]

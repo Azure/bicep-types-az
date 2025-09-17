@@ -1,8 +1,8 @@
 # Microsoft.SoftwarePlan @ 2019-12-01
 
 ## Resource Microsoft.SoftwarePlan/hybridUseBenefits@2019-12-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly): Indicates the revision of the hybrid use benefit

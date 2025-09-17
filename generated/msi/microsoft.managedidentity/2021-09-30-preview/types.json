@@ -230,7 +230,7 @@
     "body": {
       "$ref": "#/11"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   },
   {

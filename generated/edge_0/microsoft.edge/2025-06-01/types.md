@@ -105,7 +105,7 @@
 * **type**: 'Microsoft.Edge/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/jobs@2025-06-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -117,7 +117,7 @@
 * **type**: 'Microsoft.Edge/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/schemaReferences@2025-06-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
