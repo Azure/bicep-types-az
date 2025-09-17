@@ -88,8 +88,8 @@
     "body": {
       "$ref": "#/5"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -1355,8 +1355,8 @@
     "body": {
       "$ref": "#/19"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -1667,8 +1667,8 @@
     "body": {
       "$ref": "#/114"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -2537,7 +2537,7 @@
     "body": {
       "$ref": "#/200"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   },
   {

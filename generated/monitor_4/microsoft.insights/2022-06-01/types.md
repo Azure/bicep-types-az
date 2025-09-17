@@ -29,8 +29,8 @@
 * **type**: 'Microsoft.Insights/dataCollectionEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/dataCollectionRuleAssociations@2022-06-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2022-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).

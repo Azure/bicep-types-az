@@ -1,8 +1,8 @@
 # Microsoft.Authorization @ 2020-10-01
 
 ## Resource Microsoft.Authorization/roleAssignmentScheduleRequests@2020-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +11,8 @@
 * **type**: 'Microsoft.Authorization/roleAssignmentScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleEligibilityScheduleRequests@2020-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,8 +21,8 @@
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleManagementPolicyAssignments@2020-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

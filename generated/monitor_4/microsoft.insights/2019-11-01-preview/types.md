@@ -1,8 +1,8 @@
 # Microsoft.Insights @ 2019-11-01-preview
 
 ## Resource Microsoft.Insights/dataCollectionRuleAssociations@2019-11-01-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).

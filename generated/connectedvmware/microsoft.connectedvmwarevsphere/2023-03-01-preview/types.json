@@ -5474,8 +5474,8 @@
     "body": {
       "$ref": "#/340"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -5543,8 +5543,8 @@
     "body": {
       "$ref": "#/365"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -5703,7 +5703,7 @@
     "body": {
       "$ref": "#/370"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   }
 ]

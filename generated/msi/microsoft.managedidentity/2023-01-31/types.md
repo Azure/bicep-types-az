@@ -1,7 +1,7 @@
 # Microsoft.ManagedIdentity @ 2023-01-31
 
 ## Resource Microsoft.ManagedIdentity/identities@2023-01-31
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-31' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,7 +1,7 @@
 # microsoft.alertsManagement @ 2019-03-01
 
 ## Resource Microsoft.AlertsManagement/alerts@2019-03-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant): The resource api version

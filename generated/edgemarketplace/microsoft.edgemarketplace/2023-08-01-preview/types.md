@@ -1,7 +1,7 @@
 # Microsoft.EdgeMarketplace @ 2023-08-01-preview
 
 ## Resource Microsoft.EdgeMarketplace/offers@2023-08-01-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **type**: 'Microsoft.EdgeMarketplace/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EdgeMarketplace/publishers@2023-08-01-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

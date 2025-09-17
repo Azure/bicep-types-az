@@ -1,8 +1,8 @@
 # Microsoft.CostManagement @ 2019-04-01-preview
 
 ## Resource Microsoft.CostManagement/budgets@2019-04-01-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -12,8 +12,8 @@
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/views@2019-04-01-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.

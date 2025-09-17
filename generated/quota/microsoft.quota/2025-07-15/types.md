@@ -89,8 +89,8 @@
 * **type**: 'Microsoft.Quota/groupQuotas/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/quotas@2025-07-15
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2025-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,7 +99,7 @@
 * **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/usages@2025-07-15
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-07-15' (ReadOnly, DeployTimeConstant): The resource api version

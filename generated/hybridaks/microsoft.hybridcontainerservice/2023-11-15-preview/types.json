@@ -1001,8 +1001,8 @@
     "body": {
       "$ref": "#/4"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -1175,8 +1175,8 @@
     "body": {
       "$ref": "#/88"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringType",
@@ -1565,8 +1565,8 @@
     "body": {
       "$ref": "#/105"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -1925,8 +1925,8 @@
     "body": {
       "$ref": "#/136"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -2171,8 +2171,8 @@
     "body": {
       "$ref": "#/170"
     },
-    "readableScopes": 15,
-    "writableScopes": 15
+    "readableScopes": 31,
+    "writableScopes": 31
   },
   {
     "$type": "StringLiteralType",
@@ -2870,7 +2870,7 @@
     "body": {
       "$ref": "#/219"
     },
-    "readableScopes": 15,
+    "readableScopes": 31,
     "writableScopes": 0
   },
   {

@@ -88,8 +88,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineInstances@2023-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2023-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
@@ -100,8 +100,8 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachineInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/guestAgents@2023-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2023-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +111,7 @@
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/hybridIdentityMetadata@2023-10-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-10-01' (ReadOnly, DeployTimeConstant): The resource api version

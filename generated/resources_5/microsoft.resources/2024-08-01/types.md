@@ -1,7 +1,7 @@
 # Microsoft.Resources @ 2024-08-01
 
 ## Resource Microsoft.Resources/dataBoundaries@2024-08-01
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
