@@ -276,131 +276,131 @@ warning | PreCheck/SchemaMissingType | The schema 'IPRule' with an undefined typ
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3039:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFilesIdentityBasedAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3100:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3108:5
 warning | PreCheck/SchemaMissingType | The schema 'ActiveDirectoryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3154:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3162:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountPropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3199:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3207:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3359:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3367:5
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3409:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3417:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3440:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3448:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3504:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3512:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountMicrosoftEndpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3549:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3562:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountInternetEndpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3584:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3597:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoReplicationStats' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3609:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3668:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingPreference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3672:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3731:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobRestoreStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3776:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3845:5
 warning | PreCheck/SchemaMissingType | The schema 'DeletedAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3810:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3879:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3840:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:3909:5
 warning | PreCheck/SchemaMissingType | The schema 'DeletedAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4121:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4195:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4136:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4210:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4191:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4265:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4225:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4299:5
 warning | PreCheck/SchemaMissingType | The schema 'DeletedAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4243:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4317:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountListKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4335:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4274:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4348:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4286:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4360:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4431:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4510:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobRestoreParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4482:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4561:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobRestoreRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4503:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4582:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4520:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4599:5
 warning | PreCheck/SchemaMissingType | The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4535:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4614:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4574:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4653:5
 warning | PreCheck/SchemaMissingType | The schema 'AccountSasParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4586:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4665:5
 warning | PreCheck/SchemaMissingType | The schema 'ListAccountSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4679:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4758:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4689:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4768:5
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4820:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4899:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4830:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4909:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4845:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4924:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicySchema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4863:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4942:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4878:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4957:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4911:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4990:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4927:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5006:5
 warning | PreCheck/SchemaMissingType | The schema 'TagFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4956:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5035:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4982:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5061:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyBaseBlob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:4999:5
-warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicySnapShot' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5028:5
-warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5053:5
-warning | PreCheck/SchemaMissingType | The schema 'DateAfterModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5078:5
-warning | PreCheck/SchemaMissingType | The schema 'DateAfterCreation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicySnapShot' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5107:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagementPolicyVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5132:5
+warning | PreCheck/SchemaMissingType | The schema 'DateAfterModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5157:5
+warning | PreCheck/SchemaMissingType | The schema 'DateAfterCreation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5186:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionScope' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5127:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5206:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionScopeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5143:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5222:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionScopeKeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5192:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5271:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionScopeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5212:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5291:5
 warning | PreCheck/SchemaMissingType | The schema 'ObjectReplicationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5309:5
 warning | PreCheck/SchemaMissingType | The schema 'ObjectReplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5242:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5321:5
 warning | PreCheck/SchemaMissingType | The schema 'ObjectReplicationPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5257:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5336:5
 warning | PreCheck/SchemaMissingType | The schema 'ObjectReplicationPolicyRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5302:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5381:5
 warning | PreCheck/SchemaMissingType | The schema 'ObjectReplicationPolicyFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5327:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5406:5
 warning | PreCheck/SchemaMissingType | The schema 'ListBlobInventoryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5516:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5595:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5529:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5608:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5547:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5626:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicySchema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5565:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5644:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicyRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5602:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5681:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5629:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5708:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobInventoryPolicyFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5687:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5766:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5805:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5884:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5818:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/storage.json:5897:5
 warning | PreCheck/SchemaMissingType | The schema 'ListTableServices' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/table.json:400:5
 warning | PreCheck/SchemaMissingType | The schema 'TableServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -415,15 +415,15 @@ warning | PreCheck/SchemaMissingType | The schema 'ListTableResource' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2025-01-01/table.json:465:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (3 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:674" => "#/components/schemas/schemas:902"
+  - properties.error.$ref: "#/components/schemas/schemas:682" => "#/components/schemas/schemas:910"
   - properties.error.description: "Azure Storage Resource Provider error response body." => "The error object."
   - title: <none> => "Error response"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:811" => "#/components/schemas/schemas:945"
+  - properties.id.$ref: "#/components/schemas/schemas:819" => "#/components/schemas/schemas:953"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:972","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
+  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:980","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:810" => "#/components/schemas/schemas:944"
+  - allOf.0.$ref: "#/components/schemas/schemas:818" => "#/components/schemas/schemas:952"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
@@ -1163,15 +1163,15 @@ warning | PreCheck/SchemaMissingType | The schema 'ListTableResource' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2023-05-01/table.json:465:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (3 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:613" => "#/components/schemas/schemas:757"
+  - properties.error.$ref: "#/components/schemas/schemas:613" => "#/components/schemas/schemas:838"
   - properties.error.description: "Azure Storage Resource Provider error response body." => "The error object."
   - title: <none> => "Error response"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:799" => "#/components/schemas/schemas:844"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:800" => "#/components/schemas/schemas:845"
-  - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-  - properties.systemData: {"$ref":"#/components/schemas/schemas:827","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true} => <none>
+  - properties.id.$ref: "#/components/schemas/schemas:747" => "#/components/schemas/schemas:881"
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:908","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:746" => "#/components/schemas/schemas:880"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'

@@ -37,7 +37,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CapacityReservationProperties](#capacityreservationproperties): Properties of the Capacity reservation.
-* **sku**: [Sku](#sku) (Required): SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+* **sku**: [Sku](#sku) (Required): SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set.  For Block capacity reservations, sku.capacity can only accept values 1, 2, 4, 8, 16, 32, 64. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. When 'CapacityReservationSupported' is true, the SKU capability also specifies the 'SupportedCapacityReservationTypes', which lists the types of capacity reservations (such as Targeted or Block) that the SKU supports. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/capacityReservationGroups/capacityReservations' (ReadOnly, DeployTimeConstant): The resource type
@@ -380,7 +380,7 @@
 ### Properties
 * **capacityReservations**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of all capacity reservation resource ids that belong to capacity reservation group.
 * **instanceView**: [CapacityReservationGroupInstanceView](#capacityreservationgroupinstanceview) (ReadOnly): The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
-* **sharingProfile**: [ResourceSharingProfile](#resourcesharingprofile): Specifies the settings to enable sharing across subscriptions for the capacity reservation group resource. Pls. keep in mind the capacity reservation group resource generally can be shared across subscriptions belonging to a single azure AAD tenant or cross AAD tenant if there is a trust relationship established between the AAD tenants. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
+* **sharingProfile**: [ResourceSharingProfile](#resourcesharingprofile): Specifies the settings to enable sharing across subscriptions for the capacity reservation group resource. The capacity reservation group resource can generally be shared across subscriptions belonging to a single Azure AAD tenant or across AAD tenants if there is a trust relationship established between the tenants.  Block capacity reservation does not support sharing across subscriptions. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
 * **virtualMachinesAssociated**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of references to all virtual machines associated to the capacity reservation group.
 
 ## CapacityReservationInstanceView
@@ -727,9 +727,9 @@
 
 ## Placement
 ### Properties
-* **excludeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection.
-* **includeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection.
-* **zonePlacementPolicy**: 'Any' | string: Specifies the policy for virtual machine's placement in availability zone. Possible values are: **Any** - An availability zone will be automatically picked by system as part of virtual machine creation.
+* **excludeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection.
+* **includeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection.
+* **zonePlacementPolicy**: 'Any' | string: Specifies the policy for resource's placement in availability zone. Possible values are: **Any** (used for Virtual Machines), **Auto** (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation.
 
 ## Plan
 ### Properties
@@ -785,7 +785,7 @@
 
 ## ResourceSharingProfile
 ### Properties
-* **subscriptionIds**: [SubResource](#subresource)[]: Specifies an array of subscription resource IDs that capacity reservation group is shared with. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
+* **subscriptionIds**: [SubResource](#subresource)[]: Specifies an array of subscription resource IDs that capacity reservation group is shared with. Block Capacity Reservations does not support sharing across subscriptions. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
 
 ## RestorePoint
 ### Properties
@@ -1366,7 +1366,7 @@
 
 ## VirtualMachineRunCommandScriptSource
 ### Properties
-* **commandId**: string: Specifies a commandId of predefined built-in script.
+* **commandId**: string: Specifies a commandId of predefined built-in script. Command IDs available for Linux are listed at https://aka.ms/RunCommandManagedLinux#available-commands, Windows at https://aka.ms/RunCommandManagedWindows#available-commands.
 * **script**: string: Specifies the script content to be executed on the VM.
 * **scriptUri**: string: Specifies the script download location. It can be either SAS URI of an Azure storage blob with read access or public URI.
 * **scriptUriManagedIdentity**: [RunCommandManagedIdentity](#runcommandmanagedidentity): User-assigned managed identity that has access to scriptUri in case of Azure storage blob. Use an empty object in case of system-assigned identity. Make sure the Azure storage blob exists, and managed identity has been given access to blob's container with 'Storage Blob Data Reader' role assignment. In case of user-assigned identity, make sure you add it under VM's identity. For more info on managed identity and Run Command, refer https://aka.ms/ManagedIdentity and https://aka.ms/RunCommandManaged.

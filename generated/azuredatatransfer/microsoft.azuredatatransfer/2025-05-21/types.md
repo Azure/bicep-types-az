@@ -38,7 +38,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 64, pattern: "^[a-zA-Z0-9-]{3,64}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [PipelineProperties](#pipelineproperties): Properties of pipeline
+* **properties**: [PipelineProperties](#pipelineproperties): The set of configurable properties for the Pipeline resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureDataTransfer/pipelines' (ReadOnly, DeployTimeConstant): The resource type
@@ -68,12 +68,12 @@
 ## ApiFlowOptions
 ### Properties
 * **apiMode**: 'Endpoint' | 'SDK' | string: Remote Calling Mode in the Azure Data Transfer API Flow, which describes how the API Flow will be invoked
-* **audienceOverride**: string: Optional field to override the audience of the remote endpoint
+* **audienceOverride**: string: Optional field to override the audience of the remote endpoint. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
 * **cname**: string: Unique CNAME to represent the Azure Data Transfer API Flow instance
-* **identityTranslation**: 'ServiceIdentity' | 'UserIdentity' | string: Flag for if Azure Data Transfer API Flow should extract the user token
-* **remoteCallingModeClientId**: string: Remote stub app registration Client ID
-* **remoteEndpoint**: string: Remote host to which communication needs to be made
-* **senderClientId**: string: Sender's app user assigned Manage Identity client ID
+* **identityTranslation**: 'ServiceIdentity' | 'UserIdentity' | string: Determines which identity to use for extracting the user token for Azure Data Transfer API Flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
+* **remoteCallingModeClientId**: string: Remote stub app registration Client ID. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
+* **remoteEndpoint**: string: Remote host to which communication needs to be made. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the remoteEndpointSettings.endpoint property instead.
+* **senderClientId**: string: Sender's app user assigned Manage Identity client ID. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
 
 ## ConnectionIdList
 ### Properties
@@ -84,20 +84,20 @@
 * **approver**: string (ReadOnly): Approver of this connection request
 * **dateSubmitted**: string (ReadOnly): The timestamp that this connection request was submitted at
 * **direction**: 'Receive' | 'Send' | string: Direction of data movement
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection. This FlowType property has reached end of life support starting version 2025-05-30-preview. Please create a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current connection
 * **justification**: string: Justification for the connection request
 * **linkedConnectionId**: string (ReadOnly): Resource ID of the linked connection
 * **linkStatus**: 'Linked' | 'Unlinked' | string (ReadOnly): Link status of the current connection
 * **pin**: string: PIN to link requests together
 * **pipeline**: string (Required): Pipeline to use to transfer data
-* **policies**: string[]: The policies for this connection
+* **policies**: string[]: The policies for this connection. The policies property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **primaryContact**: string: The primary contact for this connection request
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the connection
 * **remoteSubscriptionId**: string: Subscription ID to link cloud subscriptions together
 * **requirementId**: string: Requirement ID of the connection
-* **schemas**: [Schema](#schema)[]: The schemas for this connection
-* **schemaUris**: string[]: The schema URIs for this connection
+* **schemas**: [Schema](#schema)[]: The schemas for this connection. The schemas property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
+* **schemaUris**: string[]: The schema URIs for this connection. The schemaUris property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **secondaryContacts**: string[]: The secondary contacts for this connection request
 * **status**: 'Accepted' | 'Approved' | 'InReview' | 'Rejected' | string (ReadOnly): Status of the connection
 * **statusReason**: string (ReadOnly): Reason for status
@@ -120,21 +120,21 @@
 * **connection**: [SelectedResource](#selectedresource): The connection associated with this flow
 * **consumerGroup**: string: Event Hub Consumer Group
 * **customerManagedKeyVaultUri**: string: The URI to the customer managed key for this flow
-* **dataType**: 'Blob' | 'Table' | string: Type of data to transfer via the flow.
+* **dataType**: 'Blob' | 'Table' | string: Type of data to transfer via the flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **destinationEndpointPorts**: int[]: The destination endpoint ports of the stream
 * **destinationEndpoints**: string[]: The destination endpoints of the stream
 * **eventHubId**: string: Event Hub ID
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
-* **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow
+* **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current flow
 * **keyVaultUri**: string: URI to a Key Vault Secret containing a SAS token.
 * **linkedFlowId**: string (ReadOnly): Resource ID of the linked flow
 * **linkStatus**: 'Linked' | 'Unlinked' | string (ReadOnly): Link status of the current flow
 * **messagingOptions**: [MessagingOptions](#messagingoptions): The messaging options for this flow
 * **passphrase**: string: The passphrase used for SRT streams
-* **policies**: string[]: The policies for this flow
+* **policies**: string[]: The policies for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the flow
-* **schema**: [Schema](#schema): The selected schema for this flow
+* **schema**: [Schema](#schema): The selected schema for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **serviceBusQueueId**: string: Service Bus Queue ID
 * **sourceAddresses**: [StreamSourceAddresses](#streamsourceaddresses): The source IP address and CIDR ranges of the stream
 * **status**: 'Disabled' | 'Enabled' | string: Status of the current flow
@@ -184,7 +184,7 @@
 * **approver**: string (ReadOnly): Approver of this connection request
 * **dateSubmitted**: string (ReadOnly): The timestamp that this connection request was submitted at
 * **direction**: 'Receive' | 'Send' | string: Direction of data movement
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection. This FlowType property has reached end of life support starting version 2025-05-30-preview. Please create a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current connection
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **justification**: string: Justification for the connection request
@@ -194,13 +194,13 @@
 * **name**: string (ReadOnly): The name of the resource
 * **pin**: string: PIN to link requests together
 * **pipeline**: string (Required): Pipeline to use to transfer data
-* **policies**: string[]: The policies for this connection
+* **policies**: string[]: The policies for this connection. The policies property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **primaryContact**: string: The primary contact for this connection request
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the connection
 * **remoteSubscriptionId**: string: Subscription ID to link cloud subscriptions together
 * **requirementId**: string: Requirement ID of the connection
-* **schemas**: [Schema](#schema)[]: The schemas for this connection
-* **schemaUris**: string[]: The schema URIs for this connection
+* **schemas**: [Schema](#schema)[]: The schemas for this connection. The schemas property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
+* **schemaUris**: string[]: The schema URIs for this connection. The schemaUris property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **secondaryContacts**: string[]: The secondary contacts for this connection request
 * **status**: 'Accepted' | 'Approved' | 'InReview' | 'Rejected' | string (ReadOnly): Status of the connection
 * **statusReason**: string (ReadOnly): Reason for status
@@ -226,12 +226,12 @@
 * **connectionId**: string (ReadOnly): Connection ID of the pending flow.
 * **consumerGroup**: string: Event Hub Consumer Group
 * **customerManagedKeyVaultUri**: string: The URI to the customer managed key for this flow
-* **dataType**: 'Blob' | 'Table' | string: Type of data to transfer via the flow.
+* **dataType**: 'Blob' | 'Table' | string: Type of data to transfer via the flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **destinationEndpointPorts**: int[]: The destination endpoint ports of the stream
 * **destinationEndpoints**: string[]: The destination endpoints of the stream
 * **eventHubId**: string: Event Hub ID
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
-* **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow
+* **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current flow
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **keyVaultUri**: string: URI to a Key Vault Secret containing a SAS token.
@@ -241,9 +241,9 @@
 * **messagingOptions**: [MessagingOptions](#messagingoptions): The messaging options for this flow
 * **name**: string (ReadOnly): The name of the resource
 * **passphrase**: string: The passphrase used for SRT streams
-* **policies**: string[]: The policies for this flow
+* **policies**: string[]: The policies for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the flow
-* **schema**: [Schema](#schema): The selected schema for this flow
+* **schema**: [Schema](#schema): The selected schema for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **serviceBusQueueId**: string: Service Bus Queue ID
 * **sourceAddresses**: [StreamSourceAddresses](#streamsourceaddresses): The source IP address and CIDR ranges of the stream
 * **status**: 'Disabled' | 'Enabled' | string: Status of the current flow
@@ -280,8 +280,8 @@
 * **connections**: [ReadPipelineConnection](#readpipelineconnection)[] (ReadOnly): Connections associated with pipeline
 * **disabledFlowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types that are disabled for this pipeline
 * **displayName**: string: Display name of this pipeline
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types allowed for this pipeline
-* **policies**: string[]: The policies for this pipeline
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow type for this flow. The flowTypes property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
+* **policies**: string[]: The policies for this pipeline. The policies property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the pipeline
 * **quarantineDownloadStorageAccount**: string: Quarantine Download Storage Account
 * **quarantineDownloadStorageContainer**: string: Quarantine Download Storage Container

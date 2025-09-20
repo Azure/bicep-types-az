@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[-0-9a-zA-Z_]{1,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AssessmentResultProperties](#assessmentresultproperties): The Advisor assessment result properties structure.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/configurations@2025-05-01-preview
@@ -32,6 +32,17 @@
 * **properties**: [ConfigDataProperties](#configdataproperties): The Advisor configuration data structure.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Advisor/metadata@2025-05-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MetadataEntityProperties](#metadataentityproperties) (ReadOnly): The metadata entity properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Advisor/metadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/recommendations@2025-05-01-preview
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
@@ -63,7 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResiliencyReviewProperties](#resiliencyreviewproperties) (ReadOnly): Advisor resiliency review properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/resiliencyReviews' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/triageRecommendations@2025-05-01-preview
@@ -74,7 +85,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TriageRecommendationProperties](#triagerecommendationproperties) (ReadOnly): Advisor resiliency review properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/triageRecommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/triageResources@2025-05-01-preview
@@ -91,7 +102,7 @@
 ## AdvisorScoreEntityProperties
 ### Properties
 * **lastRefreshedScore**: [ScoreEntity](#scoreentity): The details of latest available score.
-* **timeSeries**: [TimeSeriesEntityItem](#timeseriesentityitem)[]: The historic Advisor score data.
+* **timeSeries**: [TimeSeriesEntity](#timeseriesentity)[]: The historic Advisor score data.
 
 ## AssessmentResultProperties
 ### Properties
@@ -121,6 +132,18 @@
 * **language**: string: Language for digest content body. Value must be ISO 639-1 code for one of Azure portal supported languages. Otherwise, it will be converted into one. Default value is English (en).
 * **name**: string: Name of digest configuration. Value is case-insensitive and must be unique within a subscription.
 * **state**: 'Active' | 'Disabled' | string: State of digest configuration.
+
+## MetadataEntityProperties
+### Properties
+* **applicableScenarios**: ('Alerts' | string)[]: The list of scenarios applicable to this metadata entity.
+* **dependsOn**: string[]: The list of keys on which this entity depends on.
+* **displayName**: string: The display name.
+* **supportedValues**: [MetadataSupportedValueDetail](#metadatasupportedvaluedetail)[]: The list of supported values.
+
+## MetadataSupportedValueDetail
+### Properties
+* **displayName**: string: The display name.
+* **id**: string: The id.
 
 ## RecommendationProperties
 ### Properties
@@ -237,7 +260,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TimeSeriesEntityItem
+## TimeSeriesEntity
 ### Properties
 * **aggregationLevel**: 'day' | 'month' | 'week' | string: The aggregation level of the score.
 * **scoreHistory**: [ScoreEntity](#scoreentity)[]: The past score data

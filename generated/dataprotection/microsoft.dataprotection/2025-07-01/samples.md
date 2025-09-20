@@ -10,9 +10,6 @@ Create BackupVault
 ```bicep
 resource exampleResource 'Microsoft.DataProtection/backupVaults@2025-07-01' = {
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   location: 'WestUS'
   properties: {
     featureSettings: {
@@ -48,9 +45,6 @@ Create BackupVault With CMK
 ```bicep
 resource exampleResource 'Microsoft.DataProtection/backupVaults@2025-07-01' = {
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   location: 'WestUS'
   properties: {
     monitoringSettings: {
@@ -95,9 +89,6 @@ Create BackupVault With MSI
 ```bicep
 resource exampleResource 'Microsoft.DataProtection/backupVaults@2025-07-01' = {
   name: 'example'
-  identity: {
-    type: 'systemAssigned'
-  }
   location: 'WestUS'
   properties: {
     featureSettings: {
@@ -182,9 +173,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
     }
     validationType: 'ShallowValidation'
   }
-  tags: {
-    key1: 'val1'
-  }
 }
 ```
 
@@ -238,9 +226,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
     ]
     validationType: 'ShallowValidation'
   }
-  tags: {
-    key1: 'val1'
-  }
 }
 ```
 
@@ -283,9 +268,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
         ]
       }
     }
-  }
-  tags: {
-    key1: 'val1'
   }
 }
 ```
@@ -352,9 +334,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
         ]
       }
     }
-  }
-  tags: {
-    key1: 'val1'
   }
 }
 ```

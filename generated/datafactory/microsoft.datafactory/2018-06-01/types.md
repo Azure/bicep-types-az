@@ -2168,6 +2168,7 @@
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
 * **pageSize**: any: Page size for each http request, too large pageSize will caused timeout, default 300,000. Type: integer (or Expression with resultType integer).
+* **partitionOption**: any: Partition option for the SalesforceV2 connector in copy activity, AutoDetect or None. Type: string (or Expression with resultType string).
 * **query**: any: You can only use Salesforce Object Query Language (SOQL) query with limitations. For SOQL limitations, see this article: https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/queries.htm#SOQL%20Considerations. If query is not specified, all the data of the Salesforce object specified in ObjectApiName/reportId in dataset will be retrieved. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **SOQLQuery**: any: Deprecating, please use 'query' property instead. Type: string (or Expression with resultType string).
@@ -3929,7 +3930,9 @@
 
 ## HDInsightLinkedServiceTypeProperties
 ### Properties
+* **clusterAuthType**: 'BasicAuth' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: HDInsight cluster authentication type.
 * **clusterUri**: any (Required): HDInsight cluster URI. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing MI authentication information for the HDInsight cluster.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **fileSystem**: any: Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
 * **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): A reference to the Azure SQL linked service that points to the HCatalog database.
@@ -4292,6 +4295,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## LakeHouseLinkedServiceTypeProperties
 ### Properties
 * **artifactId**: any: The ID of Microsoft Fabric Lakehouse artifact. Type: string (or Expression with resultType string).
+* **authenticationType**: 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The authentication type to use.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
 * **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
@@ -4974,6 +4979,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **dataset**: [DatasetReference](#datasetreference) (Required): Lookup activity dataset reference.
 * **firstRowOnly**: any: Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **source**: [CopySource](#copysource) (Required): Dataset-specific source properties, same as copy activity source.
+* **treatDecimalAsString**: any: Indicates whether to treat decimal values as strings to avoid value overflow issue. This option is enabled for SnowflakeV2 connector only. Type: boolean (or Expression with resultType boolean).
 
 ## MagentoLinkedServiceTypeProperties
 ### Properties
@@ -5972,6 +5978,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **returnMultistatementResult**: any: Enable to retrieve result sets from multiple SQL statements and the number of rows affected by the DML statement. Supported connector: SnowflakeV2. Type: boolean (or Expression with resultType boolean).
 * **scriptBlockExecutionTimeout**: any: ScriptBlock execution timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **scripts**: [ScriptActivityScriptBlock](#scriptactivityscriptblock)[]: Array of script blocks. Type: array.
+* **treatDecimalAsString**: any: Indicates whether to treat decimal values as strings to avoid value overflow issue. This option is enabled for SnowflakeV2 connector only. Type: boolean (or Expression with resultType boolean).
 
 ## ScriptActivityTypePropertiesLogSettings
 ### Properties
@@ -6166,6 +6173,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **scope**: any: The scope of the application registered in Azure Active Directory for AADServicePrincipal authentication.
 * **tenantId**: any: The tenant ID of the application registered in Azure Active Directory for AADServicePrincipal authentication.
 * **user**: any: The name of the Snowflake user.
+* **useUtcTimestamps**: any: Indicates whether to use UTC timezone for timestamp data types. Type: boolean.
 * **warehouse**: any (Required): The name of the Snowflake warehouse.
 
 ## SparkConfigurationParametrizationReference
@@ -6852,6 +6860,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WarehouseLinkedServiceTypeProperties
 ### Properties
 * **artifactId**: any (Required): The ID of Microsoft Fabric Warehouse artifact. Type: string (or Expression with resultType string).
+* **authenticationType**: 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The authentication type to use.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of Microsoft Fabric Warehouse server. Type: string (or Expression with resultType string).
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [MySQLServerIdentity](#mysqlserveridentity): The cmk identity for the server.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {pattern: "^[a-z0-9][-a-z0-9]*(?<!-)$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-z0-9][-a-z0-9]*(?<!-)$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
 * **sku**: [MySQLServerSku](#mysqlserversku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -250,7 +250,7 @@
 ## MySQLServerIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: any
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## MySQLServerSku
 ### Properties
@@ -387,4 +387,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): Client Id of user assigned identity
+* **principalId**: string (ReadOnly): Principal Id of user assigned identity
 

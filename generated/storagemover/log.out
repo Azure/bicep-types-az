@@ -5,6 +5,14 @@ https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'JobRunProperties-sourceProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagemover/resource-manager/Microsoft.StorageMover/stable/2025-07-01/storagemover.json#/components/schemas/JobRunProperties-sourceProperties
+warning | Modeler/MissingType | The schema 'JobRunProperties-targetProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagemover/resource-manager/Microsoft.StorageMover/stable/2025-07-01/storagemover.json#/components/schemas/JobRunProperties-targetProperties
+warning | Modeler/MissingType | The schema 'JobRunProperties-jobDefinitionProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagemover/resource-manager/Microsoft.StorageMover/stable/2025-07-01/storagemover.json#/components/schemas/JobRunProperties-jobDefinitionProperties
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'JobRunProperties-sourceProperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagemover/resource-manager/Microsoft.StorageMover/stable/2024-07-01/storagemover.json#/components/schemas/JobRunProperties-sourceProperties
 warning | Modeler/MissingType | The schema 'JobRunProperties-targetProperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagemover/resource-manager/Microsoft.StorageMover/stable/2024-07-01/storagemover.json#/components/schemas/JobRunProperties-targetProperties

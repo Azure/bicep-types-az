@@ -1,5 +1,5 @@
-Generating types for 'specification/postgresqlhsc/resource-manager/readme.md'
-WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-10-05-privatepreview/postgresqlhsc.json"
+Generating types for 'specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc/readme.md'
+WARNING: Unable to parse swagger path "preview/2020-10-05-privatepreview/postgresqlhsc.json"
 AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest

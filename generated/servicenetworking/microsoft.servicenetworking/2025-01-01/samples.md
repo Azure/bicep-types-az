@@ -57,7 +57,7 @@ resource exampleResource 'Microsoft.ServiceNetworking/trafficControllers/securit
   location: 'NorthCentralUS'
   properties: {
     wafPolicy: {
-      id: '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Networking/applicationGatewayWebApplicationFirewallPolicies/wp-0'
+      id: '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/applicationGatewayWebApplicationFirewallPolicies/wp-0'
     }
   }
 }

@@ -6,21 +6,6 @@
 
 ## microsoft.storage/storageaccounts
 
-DeletedStorageAccountRestore
-```bicep
-resource exampleResource 'Microsoft.Storage/storageAccounts@2025-01-01' = {
-  name: 'example'
-  kind: 'Storage'
-  location: 'westus'
-  properties: {
-    deletedAccountCreationTime: '2025-03-04T00:08:10.185493Z'
-  }
-  sku: {
-    name: 'Standard_GRS'
-  }
-}
-```
-
 NfsV3AccountCreate
 ```bicep
 resource exampleResource 'Microsoft.Storage/storageAccounts@2025-01-01' = {

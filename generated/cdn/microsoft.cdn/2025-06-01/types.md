@@ -21,10 +21,10 @@
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities).
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **kind**: string (ReadOnly): Kind of the profile. Used by portal to differentiate traditional CDN profile and new AFD profile.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): The JSON object that contains the properties required to create a profile.
 * **sku**: [Sku](#sku) (Required): The pricing tier (defines Azure Front Door Standard or Premium or a CDN provider, feature list and rate) of the profile.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -389,7 +389,7 @@
 * **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
 * **origins**: [ResourceReference](#resourcereference)[] (Required): The source of the content being delivered via CDN within given origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## DeepCreatedOriginProperties
 ### Properties
@@ -934,7 +934,7 @@
 #### Properties
 * **certificateAuthority**: string (ReadOnly): Certificate issuing authority.
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
-* **secretSource**: [ResourceReference](#resourcereference) (ReadOnly): Resource reference to the Azure Key Vault certificate. Expected to be in format of /subscriptions/{​​​​​​​​​subscriptionId}​​​​​​​​​/resourceGroups/{​​​​​​​​​resourceGroupName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/providers/Microsoft.KeyVault/vaults/{vaultName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/secrets/{certificateName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+* **secretSource**: [ResourceReference](#resourcereference) (ReadOnly): Resource reference to the Azure Key Vault certificate. Expected to be in format of /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}/secrets/{certificateName}
 * **subject**: string (ReadOnly): Subject name in the certificate.
 * **subjectAlternativeNames**: string[]: The list of SANs.
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
@@ -947,7 +947,7 @@
 * **secretSource**: [ResourceReference](#resourcereference) (Required): Resource reference to the Azure Key Vault certificate. Expected to be in format of /subscriptions/{​​​​​​​​​subscriptionId}​​​​​​​​​/resourceGroups/{​​​​​​​​​resourceGroupName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/providers/Microsoft.KeyVault/vaults/{vaultName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/secrets/{certificateName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 * **secretVersion**: string: Version of the secret to be used
 * **subject**: string (ReadOnly): Subject name in the certificate.
-* **subjectAlternativeNames**: string[]: The list of SANs.
+* **subjectAlternativeNames**: string[] (ReadOnly): The list of SANs.
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
 * **type**: 'CustomerCertificate' (Required): The type of the secret resource.
 * **useLatestVersion**: bool: Whether to use the latest version for the certificate

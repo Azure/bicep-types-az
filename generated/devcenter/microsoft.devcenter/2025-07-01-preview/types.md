@@ -6,7 +6,7 @@
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 26, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{2,25}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DevCenterProperties](#devcenterproperties): DevCenter properties
@@ -99,7 +99,7 @@
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{2,25}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DevCenterEncryptionSetProperties](#devcenterencryptionsetproperties): Properties of a devcenter encryption set.
@@ -116,7 +116,7 @@
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-_.]{2,62}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentTypeProperties](#environmenttypeproperties): Properties of an environment type.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): Resource tags.
+* **tags**: [EnvironmentTypeTags](#environmenttypetags): Resource tags.
 * **type**: 'Microsoft.DevCenter/devcenters/environmentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/galleries@2025-07-01-preview
@@ -193,7 +193,7 @@
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-_.]{2,62}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProjectProperties](#projectproperties): Properties of a project.
@@ -286,12 +286,12 @@
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties
-* **location**: string: The geo-location for the environment type
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identity properties.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-_.]{2,62}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProjectEnvironmentTypeProperties](#projectenvironmenttypeproperties): Properties of an environment type.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevCenter/projects/environmentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects/images@2025-07-01-preview
@@ -350,7 +350,7 @@
 * **autoStartEnableStatus**: 'Disabled' | 'Enabled' | string: Enables or disables whether the Dev Box should be automatically started at commencement of active hours.
 * **daysOfWeekLimit**: int: The maximum amount of days per week that a user can enable active hours related features.
 * **defaultDaysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week that active hours features will be enabled. This serves as a default that can be updated by each individual user.
-* **defaultEndTimeHour**: int: The default end time of the active hours
+* **defaultEndTimeHour**: int: The default end time of the active hours.
 * **defaultStartTimeHour**: int: The default start time of the active hours.
 * **defaultTimeZone**: string: The default IANA timezone id of the active hours.
 * **keepAwakeEnableStatus**: 'Disabled' | 'Enabled' | string: Enables or disables whether the Dev Box should be kept awake during active hours.
@@ -363,8 +363,8 @@
 ## AttachedNetworkConnectionProperties
 ### Properties
 * **domainJoinType**: 'AzureADJoin' | 'HybridAzureADJoin' | 'None' | string (ReadOnly): AAD Join type of the network. This is populated based on the referenced Network Connection.
-* **healthCheckStatus**: 'Failed' | 'Informational' | 'Passed' | 'Pending' | 'Running' | 'Unknown' | 'Warning' | string (ReadOnly): Health check status values
-* **networkConnectionId**: string (Required): The resource ID of the NetworkConnection you want to attach.
+* **healthCheckStatus**: 'Failed' | 'Informational' | 'Passed' | 'Pending' | 'Running' | 'Unknown' | 'Warning' | string (ReadOnly): Health check status values.
+* **networkConnectionId**: string: The resource ID of the NetworkConnection you want to attach.
 * **networkConnectionLocation**: string (ReadOnly): The geo-location where the NetworkConnection resource specified in 'networkConnectionResourceId' property lives.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 
@@ -433,8 +433,8 @@
 
 ## DefinitionParametersItem
 ### Properties
-* **name**: string (Required)
-* **value**: string (Required)
+* **name**: string (Required): Name of the parameter.
+* **value**: string (Required): value of the parameter.
 
 ## DevBoxAutoDeleteSettings
 ### Properties
@@ -456,19 +456,14 @@
 
 ## DevBoxProvisioningSettings
 ### Properties
-* **installAzureMonitorAgentEnableStatus**: 'Disabled' | 'Enabled' | string: Whether project catalogs associated with projects in this dev center can be configured to sync catalog items.
+* **installAzureMonitorAgentEnableStatus**: 'Disabled' | 'Enabled' | string: Indicates whether to install the Azure Monitor Agent service on Dev Boxes that belong to this dev center
 
 ## DevCenterEncryptionSetProperties
 ### Properties
 * **devboxDisksEncryptionEnableStatus**: 'Disabled' | 'Enabled' | string: Devbox disk encryption enable or disable status. Indicates if Devbox disks encryption using DevCenter CMK is enabled or not.
-* **keyEncryptionKeyIdentity**: [DevCenterEncryptionSetUpdatePropertiesKeyEncryptionKeyIdentity](#devcenterencryptionsetupdatepropertieskeyencryptionkeyidentity): The managed identity configuration used for key vault access.
+* **keyEncryptionKeyIdentity**: [KeyEncryptionKeyIdentity](#keyencryptionkeyidentity): The managed identity configuration used for key vault access.
 * **keyEncryptionKeyUrl**: string: Key encryption key Url, versioned or non-versioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-
-## DevCenterEncryptionSetUpdatePropertiesKeyEncryptionKeyIdentity
-### Properties
-* **type**: 'SystemAssigned' | 'UserAssigned' | string: The type of managed identity to use for key vault access.
-* **userAssignedIdentityResourceId**: string: For system assigned identity, this will be null. For user assigned identity, this should be the resource ID of the identity.
 
 ## DevCenterNetworkSettings
 ### Properties
@@ -495,7 +490,7 @@
 * **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
 * **locations**: string[] (ReadOnly): SKU supported locations.
 * **name**: string (Required): The name of the SKU. E.g. P3. It is typically a letter+number code
-* **resourceType**: string (ReadOnly): The name of the resource type
+* **resourceType**: string (ReadOnly): The name of the resource type.
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 
@@ -505,12 +500,12 @@
 
 ## EnvironmentDefinitionParameter
 ### Properties
-* **description**: string (ReadOnly): Description of the parameter
-* **id**: string (ReadOnly): Unique ID of the parameter
-* **name**: string (ReadOnly): Display name of the parameter
+* **description**: string (ReadOnly): Description of the parameter.
+* **id**: string (ReadOnly): Unique ID of the parameter.
+* **name**: string (ReadOnly): Display name of the parameter.
 * **readOnly**: bool (ReadOnly): Whether or not this parameter is read-only.  If true, default should have a value.
-* **required**: bool (ReadOnly): Whether or not this parameter is required
-* **type**: 'array' | 'boolean' | 'integer' | 'number' | 'object' | 'string' | string (ReadOnly): A string of one of the basic JSON types (number, integer, array, object, boolean, string)
+* **required**: bool (ReadOnly): Whether or not this parameter is required.
+* **type**: 'array' | 'boolean' | 'integer' | 'number' | 'object' | 'string' | string (ReadOnly): A string of one of the basic JSON types (number, integer, array, object, boolean, string).
 
 ## EnvironmentDefinitionProperties
 ### Properties
@@ -528,6 +523,11 @@
 ### Properties
 * **displayName**: string: The display name of the environment type.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## EnvironmentTypeTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GalleryProperties
 ### Properties
@@ -622,6 +622,11 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **publishedDate**: string (ReadOnly): The datetime that the backing image version was published.
 
+## KeyEncryptionKeyIdentity
+### Properties
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: The type of managed identity to use for key vault access.
+* **userAssignedIdentityResourceId**: string: For system assigned identity, this will be null. For user assigned identity, this should be the resource ID of the identity.
+
 ## LatestImageBuild
 ### Properties
 * **endTime**: string (ReadOnly): End time of the task group.
@@ -639,14 +644,14 @@
 ## NetworkProperties
 ### Properties
 * **domainJoinType**: 'AzureADJoin' | 'HybridAzureADJoin' | 'None' | string (Required): AAD Join type.
-* **domainName**: string: Active Directory domain name
-* **domainPassword**: string {sensitive}: The password for the account used to join domain
+* **domainName**: string: Active Directory domain name.
+* **domainPassword**: string {sensitive}: The password for the account used to join domain.
 * **domainUsername**: string: The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
 * **healthCheckStatus**: 'Failed' | 'Informational' | 'Passed' | 'Pending' | 'Running' | 'Unknown' | 'Warning' | string (ReadOnly): Overall health status of the network connection. Health checks are run on creation, update, and periodically to validate the network connection.
 * **networkingResourceGroupName**: string: The name for resource group where NICs will be placed.
-* **organizationUnit**: string: Active Directory domain Organization Unit (OU)
+* **organizationUnit**: string: Active Directory domain Organization Unit (OU).
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **subnetId**: string: The subnet to attach Virtual Machines to
+* **subnetId**: string: The subnet to attach Virtual Machines to.
 
 ## PoolDevBoxDefinition
 ### Properties
@@ -668,7 +673,7 @@
 * **licenseType**: 'Windows_Client' | string: Specifies the license type indicating the caller has already acquired licenses for the Dev Boxes that will be created.
 * **localAdministrator**: 'Disabled' | 'Enabled' | string: Indicates whether owners of Dev Boxes in this pool are added as local administrators on the Dev Box.
 * **managedVirtualNetworkRegions**: string[]: The regions of the managed virtual network (required when managedNetworkType is Managed).
-* **networkConnectionName**: string: Name of a Network Connection in parent Project of this Pool
+* **networkConnectionName**: string: Name of a Network Connection in parent Project of this Pool.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **singleSignOnStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Dev Boxes in this pool are created with single sign on enabled. The also requires that single sign on be enabled on the tenant.
 * **stopOnDisconnect**: [StopOnDisconnectConfiguration](#stopondisconnectconfiguration): Stop on disconnect configuration settings for Dev Boxes created in this pool.
@@ -682,7 +687,7 @@
 ## ProjectCustomizationManagedIdentity
 ### Properties
 * **identityResourceId**: string: Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId. Mutually exclusive with identityType systemAssignedIdentity.
-* **identityType**: 'systemAssignedIdentity' | 'userAssignedIdentity' | string: Values can be systemAssignedIdentity or userAssignedIdentity
+* **identityType**: 'systemAssignedIdentity' | 'userAssignedIdentity' | string: Values can be systemAssignedIdentity or userAssignedIdentity.
 
 ## ProjectCustomizationSettings
 ### Properties
@@ -711,7 +716,7 @@
 ## ProjectEnvironmentTypeUpdatePropertiesUserRoleAssignments
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserRoleAssignmentValue](#userroleassignmentvalue)
+* **Additional Properties Type**: [UserRoleAssignment](#userroleassignment)
 
 ## ProjectPolicyProperties
 ### Properties
@@ -726,7 +731,7 @@
 * **customizationSettings**: [ProjectCustomizationSettings](#projectcustomizationsettings): Settings to be used for customizations.
 * **description**: string: Description of the project.
 * **devBoxAutoDeleteSettings**: [DevBoxAutoDeleteSettings](#devboxautodeletesettings): Dev Box Auto Delete settings.
-* **devCenterId**: string: Resource Id of an associated DevCenter
+* **devCenterId**: string: Resource Id of an associated DevCenter.
 * **devCenterUri**: string (ReadOnly): The URI of the Dev Center resource this project is associated with.
 * **displayName**: string: The display name of the project.
 * **maxDevBoxesPerUser**: int {minValue: 0}: When specified, limits the maximum number of Dev Boxes a single user can create across all pools in the project. This will have no effect on existing Dev Boxes when reduced.
@@ -754,13 +759,18 @@
 ## ScheduleProperties
 ### Properties
 * **frequency**: 'Daily' | string: The frequency of this scheduled task.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The geo-location where the resource lives.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **state**: 'Disabled' | 'Enabled' | string: Indicates whether or not this scheduled task is enabled.
-* **tags**: [Tags](#tags): Resource tags.
+* **tags**: [ScheduleUpdatePropertiesTags](#scheduleupdatepropertiestags): Resource tags.
 * **time**: string: The target time to trigger the action. The format is HH:MM.
 * **timeZone**: string: The IANA timezone id at which the schedule should execute.
 * **type**: 'StopDevBox' | string: Supported type this scheduled task represents.
+
+## ScheduleUpdatePropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServerlessGpuSessionsSettings
 ### Properties
@@ -777,8 +787,8 @@
 
 ## SkuListResult
 ### Properties
-* **nextLink**: string (ReadOnly): URL to get the next set of results if there are any.
-* **value**: [DevCenterSku](#devcentersku)[] (ReadOnly): Current page of results.
+* **nextLink**: string: The link to the next page of items
+* **value**: [DevCenterSku](#devcentersku)[] (Required, ReadOnly): The DevCenterSku items on this page
 
 ## StopOnDisconnectConfiguration
 ### Properties
@@ -809,17 +819,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## Tags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Tags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Tags
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -869,14 +869,14 @@
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
+## UserRoleAssignment
+### Properties
+* **roles**: [UserRoleAssignmentRoles](#userroleassignmentroles): A map of roles to assign to the parent user.
+
 ## UserRoleAssignmentRoles
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [EnvironmentRole](#environmentrole)
-
-## UserRoleAssignmentValue
-### Properties
-* **roles**: [UserRoleAssignmentRoles](#userroleassignmentroles): A map of roles to assign to the parent user.
 
 ## WorkspaceStorageSettings
 ### Properties

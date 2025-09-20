@@ -7,12 +7,12 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
-* **location**: string (Required): The Geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
 * **sku**: [SBSku](#sbsku): Properties of SKU
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2025-05-01-preview
@@ -24,7 +24,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2025-05-01-preview
@@ -36,7 +36,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2025-05-01-preview
@@ -48,7 +48,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2025-05-01-preview
@@ -60,7 +60,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: '$default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationConfigPropertiesProperties](#migrationconfigpropertiesproperties): Properties required to the Create Migration Configuration
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/migrationConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/networkRuleSets@2025-05-01-preview
@@ -72,8 +72,20 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations@2025-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter Configuration
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/privateEndpointConnections@2025-05-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -84,7 +96,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/queues@2025-05-01-preview
@@ -96,7 +108,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBQueueProperties](#sbqueueproperties): Queue Properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2025-05-01-preview
@@ -108,7 +120,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics@2025-05-01-preview
@@ -120,7 +132,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBTopicProperties](#sbtopicproperties): Properties of topic resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2025-05-01-preview
@@ -132,7 +144,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2025-05-01-preview
@@ -144,7 +156,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Properties of subscriptions resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2025-05-01-preview
@@ -156,7 +168,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2025-05-01-preview)
@@ -273,7 +285,7 @@
 * **migrationState**: string (ReadOnly): State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
 * **postMigrationName**: string (Required): Name to access Standard Namespace after migration
-* **provisioningState**: string (ReadOnly): Provisioning state of Migration Configuration
+* **provisioningState**: string (ReadOnly): Provisioning state of Migration ConfigurationProvisioning state of Migration Configuration
 * **targetNamespace**: string (Required): Existing premium Namespace ARM Id name which has no entities, will be used for migration
 
 ## NamespaceReplicaLocation
@@ -289,6 +301,54 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled.
 * **trustedServiceAccessEnabled**: bool: Value that indicates whether Trusted Service Access is Enabled or not.
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
+
+## NetworkSecurityPerimeter
+### Properties
+* **id**: string: Fully qualified identifier of the resource
+* **location**: string: Location of the resource
+* **perimeterGuid**: string: Guid of the resource
+
+## NetworkSecurityPerimeterConfigurationProperties
+### Properties
+* **applicableFeatures**: string[] (ReadOnly): Indicates that the NSP controls related to backing association are only applicable to a specific feature in backing resource's data plane.
+* **isBackingResource**: bool (ReadOnly): True if the ServiceBus namespace is backed by another Azure resource and not visible to end users.
+* **networkSecurityPerimeter**: [NetworkSecurityPerimeter](#networksecurityperimeter): NetworkSecurityPerimeter related information
+* **parentAssociationName**: string (ReadOnly): Source Resource Association name
+* **profile**: [NetworkSecurityPerimeterConfigurationPropertiesProfile](#networksecurityperimeterconfigurationpropertiesprofile) (ReadOnly): Information about current network profile
+* **provisioningIssues**: [ProvisioningIssue](#provisioningissue)[]: List of Provisioning Issues if any
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InvalidResponse' | 'Succeeded' | 'SucceededWithIssues' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of NetworkSecurityPerimeter configuration propagation
+* **resourceAssociation**: [NetworkSecurityPerimeterConfigurationPropertiesResourceAssociation](#networksecurityperimeterconfigurationpropertiesresourceassociation) (ReadOnly): Information about resource association
+* **sourceResourceId**: string (ReadOnly): ARM Id of source resource
+
+## NetworkSecurityPerimeterConfigurationPropertiesProfile
+### Properties
+* **accessRules**: [NspAccessRule](#nspaccessrule)[]: List of Access Rules
+* **accessRulesVersion**: string: Current access rules version
+* **name**: string: Name of the resource
+
+## NetworkSecurityPerimeterConfigurationPropertiesResourceAssociation
+### Properties
+* **accessMode**: 'AuditMode' | 'EnforcedMode' | 'LearningMode' | 'NoAssociationMode' | 'UnspecifiedMode' | string: Access Mode of the resource association
+* **name**: string: Name of the resource association
+
+## NspAccessRule
+### Properties
+* **id**: string: Fully qualified identifier of the resource
+* **name**: string: Name of the resource
+* **properties**: [NspAccessRuleProperties](#nspaccessruleproperties) (ReadOnly): Properties of Access Rule
+* **type**: string: Type of the resource
+
+## NspAccessRuleProperties
+### Properties
+* **addressPrefixes**: string[]: Address prefixes in the CIDR format for inbound rules
+* **direction**: 'Inbound' | 'Outbound' | string: Direction of Access Rule
+* **fullyQualifiedDomainNames**: string[] (ReadOnly): FQDN for outbound rules
+* **networkSecurityPerimeters**: [NetworkSecurityPerimeter](#networksecurityperimeter)[] (ReadOnly): NetworkSecurityPerimeters for inbound rules
+* **subscriptions**: [NspAccessRulePropertiesSubscriptionsItem](#nspaccessrulepropertiessubscriptionsitem)[]: Subscriptions for inbound rules
+
+## NspAccessRulePropertiesSubscriptionsItem
+### Properties
+* **id**: string: Fully qualified identifier of subscription
 
 ## NWRuleSetIpRules
 ### Properties
@@ -310,18 +370,28 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
+
+## ProvisioningIssue
+### Properties
+* **name**: string: Name of the issue
+* **properties**: [ProvisioningIssueProperties](#provisioningissueproperties) (ReadOnly): Properties of Provisioning Issue
+
+## ProvisioningIssueProperties
+### Properties
+* **description**: string: Description of the issue
+* **issueType**: string: Type of Issue
 
 ## Ruleproperties
 ### Properties
@@ -348,7 +418,7 @@
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **geoDataReplication**: [GeoDataReplicationProperties](#geodatareplicationproperties): Geo Data Replication settings for the namespace
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
-* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | '1.3' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
+* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **platformCapabilities**: [PlatformCapabilities](#platformcapabilities)
 * **premiumMessagingPartitions**: int: The number of partitions of a Service Bus namespace. This property is only applicable to Premium SKU namespaces. The default value is 1 and possible values are 1, 2 and 4
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
@@ -450,7 +520,7 @@
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

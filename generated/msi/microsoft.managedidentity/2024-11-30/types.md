@@ -6,11 +6,11 @@
 ### Properties
 * **apiVersion**: '2024-11-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
+* **location**: string (ReadOnly)
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SystemAssignedIdentityProperties](#systemassignedidentityproperties) (ReadOnly): The properties associated with the identity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [SystemAssignedIdentityTags](#systemassignedidentitytags) (ReadOnly): Resource tags
+* **tags**: [SystemAssignedIdentityTags](#systemassignedidentitytags) (ReadOnly): Dictionary of <string>
 * **type**: 'Microsoft.ManagedIdentity/identities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedIdentity/userAssignedIdentities@2024-11-30
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserAssignedIdentityProperties](#userassignedidentityproperties) (ReadOnly): The properties associated with the identity.
+* **properties**: [UserAssignedIdentityProperties](#userassignedidentityproperties): The properties associated with the identity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant): The resource type

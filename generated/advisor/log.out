@@ -1,14 +1,23 @@
-Generating types for 'specification/advisor/resource-manager/readme.md'
+Generating types for 'specification/advisor/resource-manager/Microsoft.Advisor/Advisor/readme.md'
 AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Modeler/MissingType | The schema 'components·dezfye·schemas·recommendationproperties·properties·metadata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/components·dezfye·schemas·recommendationproperties·properties·metadata·additionalproperties
+warning | Modeler/MissingType | The schema 'components·31a4y8·schemas·resourcemetadata·properties·action·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/components·31a4y8·schemas·resourcemetadata·properties·action·additionalproperties
+warning | Modeler/MissingType | The schema 'components·5huey3·schemas·recommendationproperties·properties·actions·items·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/components·5huey3·schemas·recommendationproperties·properties·actions·items·additionalproperties
+warning | Modeler/MissingType | The schema 'components·r96k5y·schemas·recommendationproperties·properties·remediation·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/components·r96k5y·schemas·recommendationproperties·properties·remediation·additionalproperties
+warning | Modeler/MissingType | The schema 'components·ptgpor·schemas·recommendationproperties·properties·exposedmetadataproperties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/components·ptgpor·schemas·recommendationproperties·properties·exposedmetadataproperties·additionalproperties
+warning | Modeler/MissingType | The schema 'PredictionRequestProperties-extendedProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/PredictionRequestProperties-extendedProperties
+warning | Modeler/MissingType | The schema 'PredictionResponseProperties-extendedProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2025-05-01-preview/openapi.json#/components/schemas/PredictionResponseProperties-extendedProperties
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -46,7 +55,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/stable/2022-09-01/advisor.json:1256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/stable/2022-09-01/advisor.json:1256:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -59,7 +68,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/stable/2020-01-01/advisor.json:1181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/stable/2020-01-01/advisor.json:1181:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -68,17 +77,17 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/stable/2017-04-19/advisor.json:936:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/stable/2017-04-19/advisor.json:936:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Advisor/configurations': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Advisor/configurations': Found mismatch between type segments (1) and name segments (0)
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/stable/2017-03-31/advisor.json:515:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/stable/2017-03-31/advisor.json:515:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/preview/2016-07-12-preview/advisor.json:526:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2016-07-12-preview/advisor.json:526:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

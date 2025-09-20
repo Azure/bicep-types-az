@@ -5,7 +5,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS forwarding ruleset.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -19,7 +19,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the forwarding rule.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ForwardingRuleProperties](#forwardingruleproperties) (Required): Properties of the forwarding rule.
@@ -31,7 +31,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the virtual network link.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties) (Required): Properties of the virtual network link.
@@ -43,7 +43,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS resolver domain list.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
@@ -57,7 +57,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS resolver policy.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
@@ -71,7 +71,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS security rule.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
@@ -85,7 +85,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS resolver policy virtual network link.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
@@ -99,7 +99,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the DNS resolver.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -113,7 +113,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the inbound endpoint.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -127,7 +127,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): ETag of the outbound endpoint.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -230,8 +230,8 @@
 
 ## SubResourceListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [SubResource](#subresource)[]: Enumeration of the sub-resources.
+* **nextLink**: string: The link to the next page of items
+* **value**: [SubResource](#subresource)[] (Required): The SubResource items on this page
 
 ## SystemData
 ### Properties
@@ -294,8 +294,8 @@
 
 ## VirtualNetworkDnsForwardingRulesetListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[]: Enumeration of the Virtual Network DNS Forwarding Ruleset.
+* **nextLink**: string: The link to the next page of items
+* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[] (Required): The VirtualNetworkDnsForwardingRuleset items on this page
 
 ## VirtualNetworkLinkProperties
 ### Properties

@@ -37,32 +37,33 @@
 
 ## FreeTrialProperties
 ### Properties
-* **state**: 'Active' | 'Expired' | 'NotApplicable' | string (Required, ReadOnly): The free-trial state.
-* **workspaceId**: string (Required, ReadOnly): Playwright workspace-id that has free-trial in the subscription.
+* **state**: 'Active' | 'Expired' | 'NotApplicable' | string (Required, ReadOnly): The free trial state.
+* **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (Required, ReadOnly): The workspace ID in GUID format that has free trial enabled in the subscription.
 
 ## PlaywrightQuotaProperties
 ### Properties
-* **freeTrial**: [FreeTrialProperties](#freetrialproperties) (ReadOnly): The subscription-level location-based Playwright quota resource free-trial properties.
+* **freeTrial**: [FreeTrialProperties](#freetrialproperties) (ReadOnly): The subscription-level location-based Playwright quota free trial properties.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
 
 ## PlaywrightWorkspaceFreeTrialProperties
 ### Properties
-* **allocatedValue**: int (Required, ReadOnly): The free-trial allocated limit value eg. allocated free execution minutes.
-* **createdAt**: string (Required, ReadOnly): The free-trial createdAt utcDateTime.
-* **expiryAt**: string (Required, ReadOnly): The free-trial expiryAt utcDateTime.
-* **percentageUsed**: int {minValue: 0, maxValue: 100} (Required, ReadOnly): The free-trial percentage used.
-* **usedValue**: int (Required, ReadOnly): The free-trial used value eg. used free execution minutes.
+* **allocatedValue**: int (Required, ReadOnly): The allocated limit value (e.g., allocated free execution minutes).
+* **createdAt**: string (Required, ReadOnly): The free trial creation timestamp in UTC.
+* **expiryAt**: string (Required, ReadOnly): The free trial expiration timestamp in UTC.
+* **percentageUsed**: int {minValue: 0, maxValue: 100} (Required, ReadOnly): The percentage of the free trial quota used.
+* **usedValue**: int (Required, ReadOnly): The used value (e.g., used free execution minutes).
 
 ## PlaywrightWorkspaceProperties
 ### Properties
-* **dataplaneUri**: string (ReadOnly): The workspace data plane URI.
-* **localAuth**: 'Disabled' | 'Enabled' | string: When enabled, this feature allows the workspace to use local auth (through service access token) for executing operations.
+* **dataplaneUri**: string (ReadOnly): The workspace data plane service API URI.
+* **localAuth**: 'Disabled' | 'Enabled' | string: Enables the workspace to use local authentication through service access tokens for operations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
-* **regionalAffinity**: 'Disabled' | 'Enabled' | string: This property sets the connection region for client workers to cloud-hosted browsers. If enabled, workers connect to browsers in the closest Azure region, ensuring lower latency. If disabled, workers connect to browsers in the Azure region in which the workspace was initially created.
+* **regionalAffinity**: 'Disabled' | 'Enabled' | string: Controls the connection region for client workers to cloud-hosted browsers. When enabled, workers connect to browsers in the closest Azure region for lower latency. When disabled, workers connect to browsers in the Azure region where the workspace was created.
+* **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (ReadOnly): The workspace ID in GUID format.
 
 ## PlaywrightWorkspaceQuotaProperties
 ### Properties
-* **freeTrial**: [PlaywrightWorkspaceFreeTrialProperties](#playwrightworkspacefreetrialproperties) (ReadOnly): The Playwright workspace quota resource free-trial properties.
+* **freeTrial**: [PlaywrightWorkspaceFreeTrialProperties](#playwrightworkspacefreetrialproperties) (ReadOnly): The Playwright workspace quota free trial properties.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
 
 ## SystemData

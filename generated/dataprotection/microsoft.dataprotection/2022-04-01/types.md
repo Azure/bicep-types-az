@@ -215,7 +215,7 @@ and should be part of AbsoluteMarker enum
 
 ## BackupSchedule
 ### Properties
-* **repeatingTimeIntervals**: string[] (Required): ISO 8601 repeating time interval format
+* **repeatingTimeIntervals**: string[] (Required): Repeating time interval which only support the following ISO 8601 format [R/startDateTime/Duration]. Example: R/2007-03-01T13:00:00Z/P1Y2M10DT2H30M
 * **timeZone**: string: Time zone for a schedule. Example: Pacific Standard Time
 
 ## BackupVault

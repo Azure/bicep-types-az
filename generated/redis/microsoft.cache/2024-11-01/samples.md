@@ -26,7 +26,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
   }
   zones: [
     '1'
@@ -53,7 +53,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
     zonalAllocationPolicy: 'Automatic'
   }
 }
@@ -78,7 +78,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
   }
   zones: [
     '1'
@@ -106,7 +106,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
   }
   zones: [
     '1'
@@ -133,7 +133,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
     zonalAllocationPolicy: 'NoZones'
   }
 }
@@ -159,7 +159,7 @@ resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
       family: 'P'
     }
     staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
     zonalAllocationPolicy: 'UserDefined'
   }
   zones: [
@@ -218,7 +218,7 @@ resource exampleResource 'Microsoft.Cache/redis/linkedServers@2024-11-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    linkedRedisCacheId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
+    linkedRedisCacheId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
     linkedRedisCacheLocation: 'West US'
     serverRole: 'Secondary'
   }

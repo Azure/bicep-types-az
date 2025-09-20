@@ -161,7 +161,7 @@
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[0-9]+\.[0-9]+\.[0-9]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^(v2-)?[0-9]+\.[0-9]+\.[0-9]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SchemaVersionProperties](#schemaversionproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/schemas/dynamicSchemas/versions' (ReadOnly, DeployTimeConstant): The resource type
