@@ -63,6 +63,35 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2024-11-01
 }
 ```
 
+ContainerGroupCreateOrUpdateWithStandbyPool
+```bicep
+resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2024-11-01-preview' = {
+  name: 'example'
+  location: 'west us'
+  properties: {
+    containerGroupProfile: {
+      id: '/subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroupProfiles/democgp'
+      revision: 1
+    }
+    containers: [
+      {
+        name: 'demo1'
+        properties: {
+          configMap: {
+            keyValuePairs: {
+              Newkey: 'value'
+            }
+          }
+        }
+      }
+    ]
+    standbyPoolProfile: {
+      id: '/subscriptions/subid/resourceGroups/demo/providers/Microsoft.StandbyPool/standbyContainerGroupPools/demopool'
+    }
+  }
+}
+```
+
 ContainerGroupCreateWithExtensions
 ```bicep
 resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2024-11-01-preview' = {

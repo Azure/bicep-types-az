@@ -22,6 +22,28 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/fileWorkspaces/files' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Support/services@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceProperties](#serviceproperties) (ReadOnly): Properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Support/services' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Support/services/problemClassifications@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProblemClassificationProperties](#problemclassificationproperties) (ReadOnly): Properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Support/services/problemClassifications' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Support/supportTickets@2024-04-01
 * **Readable Scope(s)**: Tenant, Subscription
 * **Writable Scope(s)**: Tenant, Subscription
@@ -30,6 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties) (Required): Properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Support/supportTickets/chatTranscripts@2024-04-01
@@ -51,6 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties) (Required): Properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ChatTranscriptDetailsProperties
@@ -99,6 +123,11 @@
 * **createdDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the communication was created.
 * **sender**: string: Name of the sender.
 
+## ProblemClassificationProperties
+### Properties
+* **displayName**: string: Localized name of problem classification.
+* **secondaryConsentEnabled**: [SecondaryConsentEnabled](#secondaryconsentenabled)[]: This property indicates whether secondary consent is present for problem classification
+
 ## QuotaChangeRequest
 ### Properties
 * **payload**: string: Payload of the quota increase request.
@@ -115,11 +144,21 @@
 * **type**: string: The service name for which the secondary consent is being provided. The value needs to be retrieved from the Problem Classification API response.
 * **userConsent**: 'No' | 'Yes' | string: User consent value provided
 
+## SecondaryConsentEnabled
+### Properties
+* **description**: string: User consent description.
+* **type**: string: The Azure service for which secondary consent is needed for case creation.
+
 ## ServiceLevelAgreement
 ### Properties
 * **expirationTime**: string (ReadOnly): Time in UTC (ISO 8601 format) when the service level agreement expires.
 * **slaMinutes**: int (ReadOnly): Service Level Agreement in minutes.
 * **startTime**: string (ReadOnly): Time in UTC (ISO 8601 format) when the service level agreement starts.
+
+## ServiceProperties
+### Properties
+* **displayName**: string: Localized name of the Azure service.
+* **resourceTypes**: string[]: ARM Resource types.
 
 ## SupportEngineer
 ### Properties

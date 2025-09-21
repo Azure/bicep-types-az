@@ -7,12 +7,12 @@
 * **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Msi identity of the resource
-* **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (Required): Properties of a job.
 * **sku**: [Sku](#sku) (Required): The sku type.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listCredentials (Microsoft.DataBox/jobs@2025-07-01)
@@ -29,8 +29,13 @@
 
 ## AdditionalErrorInfo
 ### Properties
-* **info**: any: Additional information of the type of error.
+* **info**: [AdditionalErrorInfo](#additionalerrorinfo): Additional information of the type of error.
 * **type**: string: Type of error (e.g. CustomerIntervention, PolicyViolation, SecurityViolation).
+
+## AdditionalErrorInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ApplianceNetworkConfiguration
 ### Properties
@@ -120,7 +125,7 @@
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
 * **invalidFileBytesUploaded**: int (ReadOnly): Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
 * **invalidFilesProcessed**: int (ReadOnly): Number of files not adhering to azure naming conventions which were processed by automatic renaming
-* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress. 
+* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress.
 Until this is true, the TotalBytesToProcess may not be valid.
 * **renamedContainerCount**: int (ReadOnly): Number of folders not adhering to azure naming conventions which were processed by automatic renaming
 * **storageAccountName**: string (ReadOnly): Name of the storage account. This will be empty for data account types other than storage account.
@@ -160,7 +165,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
 * **invalidFileBytesUploaded**: int (ReadOnly): Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
 * **invalidFilesProcessed**: int (ReadOnly): Number of files not adhering to azure naming conventions which were processed by automatic renaming
-* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress. 
+* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress.
 Until this is true, the TotalBytesToProcess may not be valid.
 * **renamedContainerCount**: int (ReadOnly): Number of folders not adhering to azure naming conventions which were processed by automatic renaming
 * **serialNumber**: string (ReadOnly): Disk Serial Number.
@@ -210,7 +215,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
 * **invalidFileBytesUploaded**: int (ReadOnly): Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
 * **invalidFilesProcessed**: int (ReadOnly): Number of files not adhering to azure naming conventions which were processed by automatic renaming
-* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress. 
+* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress.
 Until this is true, the TotalBytesToProcess may not be valid.
 * **renamedContainerCount**: int (ReadOnly): Number of folders not adhering to azure naming conventions which were processed by automatic renaming
 * **serialNumber**: string (ReadOnly): Disk Serial Number.
@@ -515,11 +520,6 @@ possibility is that mitigation might happen by customer or service or by ops
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ReverseShippingDetails
 ### Properties
 * **contactDetails**: [ContactInfo](#contactinfo): Contact Info.
@@ -559,12 +559,17 @@ Read only field
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC)
-* **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource
-* **createdByType**: string (ReadOnly): The type of identity that created the resource: user, application, managedIdentity
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource
-* **lastModifiedByType**: string (ReadOnly): The type of identity that last modified the resource: user, application, managedIdentity
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TransferAllDetails
 ### Properties
@@ -605,13 +610,13 @@ Read only field
 
 ## UnencryptedCredentialsList
 ### Properties
-* **nextLink**: string: Link for the next set of unencrypted credentials.
-* **value**: [UnencryptedCredentials](#unencryptedcredentials)[]: List of unencrypted credentials.
+* **nextLink**: string: The link to the next page of items
+* **value**: [UnencryptedCredentials](#unencryptedcredentials)[] (Required): The UnencryptedCredentials items on this page
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## UserAssignedProperties
 ### Properties

@@ -8,11 +8,11 @@
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [DppIdentityDetails](#dppidentitydetails): Input Managed Identity Details
-* **location**: string: Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupVault](#backupvault) (Required): BackupVaultResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppBaseTrackedResourceTags](#dppbasetrackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances@2025-07-01
@@ -23,8 +23,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupInstance](#backupinstance): BackupInstanceResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppProxyResourceTags](#dppproxyresourcetags): Proxy Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupInstanceResourceTags](#backupinstanceresourcetags): Proxy Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2025-07-01
@@ -35,8 +35,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupInstance](#backupinstance) (ReadOnly): BackupInstanceResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppProxyResourceTags](#dppproxyresourcetags) (ReadOnly): Proxy Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupInstanceResourceTags](#backupinstanceresourcetags) (ReadOnly): Proxy Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2025-07-01
@@ -47,7 +47,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureBackupRecoveryPoint](#azurebackuprecoverypoint) (ReadOnly): AzureBackupRecoveryPointResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupJobs@2025-07-01
@@ -58,7 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureBackupJob](#azurebackupjob) (ReadOnly): AzureBackupJobResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2025-07-01
@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BaseBackupPolicy](#basebackuppolicy): BaseBackupPolicyResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2025-07-01
@@ -80,7 +80,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[A-Za-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/deletedBackupInstances@2025-07-01
@@ -91,7 +91,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DeletedBackupInstance](#deletedbackupinstance) (ReadOnly): DeletedBackupInstanceResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataProtection/backupVaults/deletedBackupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/operationResults@2025-07-01
@@ -102,11 +102,11 @@
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [DppIdentityDetails](#dppidentitydetails) (ReadOnly): Input Managed Identity Details
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupVault](#backupvault) (ReadOnly): BackupVaultResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppBaseTrackedResourceTags](#dppbasetrackedresourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/resourceGuards@2025-07-01
@@ -116,12 +116,72 @@
 * **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGuard](#resourceguard): ResourceGuardResource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppBaseTrackedResourceTags](#dppbasetrackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/resourceGuards' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/deleteProtectedItemRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/deleteProtectedItemRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/deleteResourceGuardProxyRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/deleteResourceGuardProxyRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/disableSoftDeleteRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/disableSoftDeleteRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/getBackupSecurityPINRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/getBackupSecurityPINRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/updateProtectedItemRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/updateProtectedItemRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/resourceGuards/updateProtectionPolicyRequests@2025-07-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataProtection/resourceGuards/updateProtectionPolicyRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdhocBasedTaggingCriteria
 ### Properties
@@ -255,6 +315,16 @@ If it is null, default will be considered as System Assigned.
 * **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
 * **validationType**: 'DeepValidation' | 'ShallowValidation' | string: Specifies the type of validation. In case of DeepValidation, all validations from /validateForBackup API will run again.
 
+## BackupInstanceResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BackupInstanceResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## BackupParameters
 * **Discriminator**: objectType
 
@@ -268,7 +338,7 @@ If it is null, default will be considered as System Assigned.
 
 ## BackupSchedule
 ### Properties
-* **repeatingTimeIntervals**: string[] (Required): ISO 8601 repeating time interval format
+* **repeatingTimeIntervals**: string[] (Required): Repeating time interval which only support the following ISO 8601 format [R/startDateTime/Duration]. Example: R/2007-03-01T13:00:00Z/P1Y2M10DT2H30M
 * **timeZone**: string: Time zone for a schedule. Example: Pacific Standard Time
 
 ## BackupVault
@@ -444,21 +514,6 @@ If it is null, default will be considered as System Assigned.
 * **deletionTime**: string (ReadOnly): Specifies time of deletion
 * **scheduledPurgeTime**: string (ReadOnly): Specifies purge time
 
-## DppBaseTrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DppBaseTrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DppBaseTrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## DppIdentityDetails
 ### Properties
 * **principalId**: string (ReadOnly): The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
@@ -470,16 +525,6 @@ If it is null, default will be considered as System Assigned.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## DppProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DppProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## EncryptionSettings
 ### Properties
@@ -671,6 +716,21 @@ If it is null, default will be considered as System Assigned.
 ### Properties
 * **copyAfter**: [CopyOption](#copyoption) (Required): It can be CustomCopyOption or ImmediateCopyOption.
 * **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): Info of target datastore
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TriggerContext
 * **Discriminator**: objectType

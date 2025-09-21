@@ -135,7 +135,7 @@
 * **agentName**: string: Name of the Agent to assign for new Job Runs of this Job Definition.
 * **agentResourceId**: string (ReadOnly): Fully qualified resource id of the Agent to assign for new Job Runs of this Job Definition.
 * **copyMode**: 'Additive' | 'Mirror' | string (Required): Strategy to use for copy.
-* **description**: string: A description for the Job Definition.
+* **description**: string: A description for the Job Definition. OnPremToCloud is for migrating data from on-premises to cloud. CloudToCloud is for migrating data between cloud to cloud.
 * **latestJobRunName**: string (ReadOnly): The name of the Job Run in a non-terminal state, if exists.
 * **latestJobRunResourceId**: string (ReadOnly): The fully qualified resource ID of the Job Run in a non-terminal state, if exists.
 * **latestJobRunStatus**: 'CancelRequested' | 'Canceled' | 'Canceling' | 'Failed' | 'PausedByBandwidthManagement' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | string (ReadOnly): The current status of the Job Run in a non-terminal state, if exists.

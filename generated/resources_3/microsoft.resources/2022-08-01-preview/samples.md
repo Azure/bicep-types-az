@@ -6,7 +6,7 @@
 
 ## microsoft.resources/deploymentstacks
 
-DeploymentStacksCreateOrUpdate
+Create or update a management group Deployment stack
 ```bicep
 resource exampleResource 'Microsoft.Resources/deploymentStacks@2022-08-01-preview' = {
   name: 'example'

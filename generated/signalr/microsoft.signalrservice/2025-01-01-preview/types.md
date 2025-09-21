@@ -266,16 +266,16 @@ Case insensitive.
 1 for Free_F1/Standard_S1/Premium_P1, 100 for Premium_P2 by default.
 
 If present, following values are allowed:
-    Free_F1: 1;
-    Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-    Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-    Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
+Free_F1: 1;
+Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
+Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
+Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
 * **family**: string (ReadOnly): Not used. Retained for future use.
 * **name**: string (Required): The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'.
 
 `Basic` is deprecated, use `Standard` instead.
 
@@ -310,9 +310,9 @@ The service considers the client disconnected if it hasn't received a message (i
 * **keepAliveIntervalInSeconds**: int {minValue: 1, maxValue: 120}: Gets or sets the Keep-Alive Interval. Optional to set.
 Value is in seconds.
 The default value is 15 seconds.
-Customers should set this value to a shorter period if they want the service to send keep-alive messages more frequently, 
+Customers should set this value to a shorter period if they want the service to send keep-alive messages more frequently,
 ensuring timely checks of the connection status.
-Conversely, customers can set this value to a longer period if they want the service to send keep-alive messages less frequently, 
+Conversely, customers can set this value to a longer period if they want the service to send keep-alive messages less frequently,
 reducing network traffic, but note that it may take longer to detect a disconnection.
 This interval ensures that the connection is maintained by sending periodic keep-alive messages to the client.
 
@@ -384,7 +384,7 @@ When set as true, connection with AccessKey=xxx won't work.
 * **features**: [SignalRFeature](#signalrfeature)[]: List of the featureFlags.
 
 FeatureFlags that are not included in the parameters for the update operation will not be modified.
-And the response will only include featureFlags that are explicitly set. 
+And the response will only include featureFlags that are explicitly set.
 When a featureFlag is not explicitly set, its globally default value will be used
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
 * **hostName**: string (ReadOnly): FQDN of the service instance.
@@ -445,19 +445,19 @@ When it's false, the data plane of the resource is started.
 * **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings. If not set, no auth is used for upstream messages.
 * **categoryPattern**: string: Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
-    1. "*", it to matches any category name.
-    2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages".
-    3. The single category name, for example, "connections", it matches the category "connections".
+1. "*", it to matches any category name.
+2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages".
+3. The single category name, for example, "connections", it matches the category "connections".
 * **eventPattern**: string: Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
-    1. "*", it to matches any event name.
-    2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect".
-    3. The single event name, for example, "connect", it matches "connect".
+1. "*", it to matches any event name.
+2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect".
+3. The single event name, for example, "connect", it matches "connect".
 * **hubPattern**: string: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
-    1. "*", it to matches any hub name.
-    2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2".
-    3. The single hub name, for example, "hub1", it matches "hub1".
+1. "*", it to matches any hub name.
+2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2".
+3. The single hub name, for example, "hub1", it matches "hub1".
 * **urlTemplate**: string (Required): Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
 

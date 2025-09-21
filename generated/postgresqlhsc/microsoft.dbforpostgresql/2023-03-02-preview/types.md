@@ -64,7 +64,7 @@
 ### Properties
 * **apiVersion**: '2023-03-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -183,7 +183,12 @@
 ## IdentityProperties
 ### Properties
 * **type**: 'SystemAssigned' | 'UserAssigned' | string
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## IdentityPropertiesUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## MaintenanceWindow
 ### Properties
@@ -234,9 +239,9 @@
 
 ## RolePropertiesExternalIdentity
 ### Properties
-* **objectId**: string (Required)
+* **objectId**: string (Required): A type definition that refers the id to an Azure Resource Manager resource.
 * **principalType**: 'group' | 'servicePrincipal' | 'user' | string (Required)
-* **tenantId**: string
+* **tenantId**: string: A type definition that refers the id to an Azure Resource Manager resource.
 
 ## ServerConfigurationProperties
 ### Properties
@@ -282,11 +287,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties

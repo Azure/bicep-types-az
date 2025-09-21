@@ -400,6 +400,7 @@ resource exampleResource 'Microsoft.DevCenter/projects/environmentTypes@2025-07-
       }
     }
   }
+  location: 'centralus'
   properties: {
     creatorRoleAssignment: {
       roles: {

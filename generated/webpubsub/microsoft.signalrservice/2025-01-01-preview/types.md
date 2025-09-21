@@ -177,9 +177,9 @@ For example, if the template is `http://example.com/api/{event}`, when `connect`
 Note: Parameters are not allowed in the hostname of the URL, and curly brackets `{}` are reserved for parameter syntax only. If your URL path contains literal curly brackets, please URL-encode them to ensure proper handling.
 * **userEventPattern**: string: Gets or sets the matching pattern for event names.
 There are 3 kinds of patterns supported:
-    1. "*", it matches any event name
-    2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
-    3. A single event name, for example, "event1", it matches "event1"
+1. "*", it matches any event name
+2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
+3. A single event name, for example, "event1", it matches "event1"
 
 ## EventListener
 ### Properties
@@ -209,9 +209,9 @@ There are 3 kinds of patterns supported:
 * **type**: 'EventName' (Required)
 * **userEventPattern**: string: Gets or sets a matching pattern for event names.
 There are 3 kinds of patterns supported:
-    1. "*", it matches any event name
-    2. Combine multiple events with ",", for example "event1,event2", it matches events "event1" and "event2"
-    3. A single event name, for example, "event1", it matches "event1"
+1. "*", it matches any event name
+2. Combine multiple events with ",", for example "event1,event2", it matches events "event1" and "event2"
+3. A single event name, for example, "event1", it matches "event1"
 
 
 ## IPRule
@@ -324,16 +324,16 @@ Case insensitive.
 1 for Free_F1/Standard_S1/Premium_P1, 100 for Premium_P2 by default.
 
 If present, following values are allowed:
-    Free_F1: 1;
-    Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-    Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-    Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
+Free_F1: 1;
+Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
+Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
+Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
 * **family**: string (ReadOnly): Not used. Retained for future use.
 * **name**: string (Required): The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'.
 
 `Basic` is deprecated, use `Standard` instead.
 
@@ -442,7 +442,7 @@ When it's false, the data plane of the resource is started.
 
 ## WebPubSubSocketIOSettings
 ### Properties
-* **serviceMode**: string: The service mode of Web PubSub for Socket.IO. Values allowed: 
+* **serviceMode**: string: The service mode of Web PubSub for Socket.IO. Values allowed:
 "Default": have your own backend Socket.IO server
 "Serverless": your application doesn't have a backend server
 
