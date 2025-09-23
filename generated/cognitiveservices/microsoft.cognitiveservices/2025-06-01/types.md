@@ -282,7 +282,7 @@
 * **locations**: [MultiRegionSettings](#multiregionsettings): The multiregion settings of Cognitive Services account.
 * **migrationToken**: string: Resource migration token.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A collection of rules governing the accessibility from specific network locations.
-* **networkInjections**: [NetworkInjections](#networkinjections): Specifies in AI Foundry where virtual network injection occurs to secure scenarios like Agents entirely within the user's private network, eliminating public internet exposure while maintaining control over network configurations and resources.
+* **networkInjections**: [NetworkInjection](#networkinjection)[]
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The private endpoint connection associated with the Cognitive Services account.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' | string (ReadOnly): Gets the status of the cognitive services account at the time the operation was called.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this account.
@@ -645,7 +645,7 @@ depending on each OAuth2 provider's implementation.
 * **regions**: [RegionSetting](#regionsetting)[]
 * **routingMethod**: 'Performance' | 'Priority' | 'Weighted' | string: Multiregion routing methods.
 
-## NetworkInjections
+## NetworkInjection
 ### Properties
 * **scenario**: 'agent' | 'none' | string: Specifies what features in AI Foundry network injection applies to. Currently only supports 'agent' for agent scenarios. 'none' means no network injection.
 * **subnetArmId**: string: Specify the subnet for which your Agent Client is injected into.

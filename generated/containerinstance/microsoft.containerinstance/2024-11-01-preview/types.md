@@ -82,6 +82,15 @@
 ### Properties
 * **ccePolicy**: string: The base64 encoded confidential compute enforcement policy
 
+## ConfigMap
+### Properties
+* **keyValuePairs**: [ConfigMapKeyValuePairs](#configmapkeyvaluepairs): The key value pairs dictionary in the config map.
+
+## ConfigMapKeyValuePairs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Container
 ### Properties
 * **name**: string (Required): The user-provided name of the container instance.
@@ -110,27 +119,32 @@
 ## ContainerGroupProfileProperties
 ### Properties
 * **confidentialComputeProperties**: [ConfidentialComputeProperties](#confidentialcomputeproperties): The properties for confidential container group
-* **containers**: [Container](#container)[]: The containers within the container group.
+* **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): The diagnostic information for a container group.
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): The encryption properties for a container group.
 * **extensions**: [DeploymentExtensionSpec](#deploymentextensionspec)[]: extensions used by virtual kubelet
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
 * **ipAddress**: [IpAddress](#ipaddress): The IP address type of the container group.
-* **osType**: 'Linux' | 'Windows' | string: The operating system type required by the containers in the container group.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **priority**: 'Regular' | 'Spot' | string: The priority of the container group.
-* **registeredRevisions**: int[]: Registered revisions are calculated at request time based off the records in the table logs.
+* **registeredRevisions**: int[] (ReadOnly): Registered revisions are calculated at request time based off the records in the table logs.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-* **revision**: int: Container group profile current revision number
+* **revision**: int (ReadOnly): Container group profile current revision number
 * **securityContext**: [SecurityContextDefinition](#securitycontextdefinition): The container security properties.
 * **shutdownGracePeriod**: string: Shutdown grace period for containers in a container group.
 * **sku**: 'Confidential' | 'Dedicated' | 'NotSpecified' | 'Standard' | string: The SKU for a container group.
 * **timeToLive**: string: Post completion time to live for containers of a CG
 * **useKrypton**: bool: Gets or sets Krypton use property.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
+
+## ContainerGroupProfileReferenceDefinition
+### Properties
+* **id**: string: The container group profile reference id.This will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroupProfiles/{containerGroupProfileName}'.
+* **revision**: int: The container group profile reference revision.
 
 ## ContainerGroupProfileStub
 ### Properties
@@ -148,6 +162,7 @@
 ## ContainerGroupPropertiesProperties
 ### Properties
 * **confidentialComputeProperties**: [ConfidentialComputeProperties](#confidentialcomputeproperties): The properties for confidential container group
+* **containerGroupProfile**: [ContainerGroupProfileReferenceDefinition](#containergroupprofilereferencedefinition): The reference container group profile properties.
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): The diagnostic information for a container group.
 * **dnsConfig**: [DnsConfiguration](#dnsconfiguration): The DNS config information for a container group.
@@ -158,7 +173,8 @@
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
 * **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): The IP address type of the container group.
-* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
+* **isCreatedFromStandbyPool**: bool (ReadOnly): The flag to determine whether the container group is created from standby pool.
+* **osType**: 'Linux' | 'Windows' | string: The operating system type required by the containers in the container group.
 * **priority**: 'Regular' | 'Spot' | string: The priority of the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
@@ -167,6 +183,7 @@
 - `Never` Never restart
 * **secretReferences**: [SecretReference](#secretreference)[]: The secret references that will be referenced within the container group.
 * **sku**: 'Confidential' | 'Dedicated' | 'NotSpecified' | 'Standard' | string: The SKU for a container group.
+* **standbyPoolProfile**: [StandbyPoolProfileDefinition](#standbypoolprofiledefinition): The reference standby pool profile properties.
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
@@ -200,13 +217,14 @@
 ## ContainerProperties
 ### Properties
 * **command**: string[]: The commands to execute within the container instance in exec form.
+* **configMap**: [ConfigMap](#configmap): The config map.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
-* **image**: string (Required): The name of the image used to create the container instance.
+* **image**: string: The name of the image used to create the container instance.
 * **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
 * **livenessProbe**: [ContainerProbe](#containerprobe): The liveness probe.
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **readinessProbe**: [ContainerProbe](#containerprobe): The readiness probe.
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements of the container instance.
+* **resources**: [ResourceRequirements](#resourcerequirements): The resource requirements of the container instance.
 * **securityContext**: [SecurityContextDefinition](#securitycontextdefinition): The container security properties.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
 
@@ -498,6 +516,11 @@
 * **runAsGroup**: int: Sets the User GID for the container.
 * **runAsUser**: int: Sets the User UID for the container.
 * **seccompProfile**: string: a base64 encoded string containing the contents of the JSON in the seccomp profile
+
+## StandbyPoolProfileDefinition
+### Properties
+* **failContainerGroupCreateOnReuseFailure**: bool: The flag to determine whether ACI should fail the create request if the container group can not be obtained from standby pool.
+* **id**: string: The standby pool profile reference id.This will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools/{standbyPoolName}'.
 
 ## StorageProfile
 ### Properties

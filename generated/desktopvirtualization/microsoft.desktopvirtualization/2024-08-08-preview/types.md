@@ -517,53 +517,53 @@
 
 ## ScalingPlanPersonalScheduleProperties
 ### Properties
-* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): Set of days of the week on which this schedule is active.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: Set of days of the week on which this schedule is active.
 * **offPeakActionOnDisconnect**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a user disconnect during the off-peak period.
 * **offPeakActionOnLogoff**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a logoff during the off-peak period.
 * **offPeakMinutesToWaitOnDisconnect**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user disconnects during the off-peak period.
 * **offPeakMinutesToWaitOnLogoff**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user logs off during the off-peak period.
-* **offPeakStartTime**: [Time](#time) (Required): Starting time for off-peak period.
+* **offPeakStartTime**: [Time](#time): Starting time for off-peak period.
 * **offPeakStartVMOnConnect**: 'Disable' | 'Enable' | string: The desired configuration of Start VM On Connect for the hostpool during the off-peak phase.
 * **peakActionOnDisconnect**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a user disconnect during the peak period.
 * **peakActionOnLogoff**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a logoff during the peak period.
 * **peakMinutesToWaitOnDisconnect**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user disconnects during the peak period.
 * **peakMinutesToWaitOnLogoff**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user logs off during the peak period.
-* **peakStartTime**: [Time](#time) (Required): Starting time for peak period.
+* **peakStartTime**: [Time](#time): Starting time for peak period.
 * **peakStartVMOnConnect**: 'Disable' | 'Enable' | string: The desired configuration of Start VM On Connect for the hostpool during the peak phase.
 * **rampDownActionOnDisconnect**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a user disconnect during the ramp down period.
 * **rampDownActionOnLogoff**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a logoff during the ramp down period.
 * **rampDownMinutesToWaitOnDisconnect**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user disconnects during the ramp down period.
 * **rampDownMinutesToWaitOnLogoff**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user logs off during the ramp down period.
-* **rampDownStartTime**: [Time](#time) (Required): Starting time for ramp down period.
+* **rampDownStartTime**: [Time](#time): Starting time for ramp down period.
 * **rampDownStartVMOnConnect**: 'Disable' | 'Enable' | string: The desired configuration of Start VM On Connect for the hostpool during the ramp down phase.
 * **rampUpActionOnDisconnect**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a user disconnect during the ramp up period.
 * **rampUpActionOnLogoff**: 'Deallocate' | 'Hibernate' | 'None' | string: Action to be taken after a logoff during the ramp up period.
 * **rampUpAutoStartHosts**: 'All' | 'None' | 'WithAssignedUser' | string: The desired startup behavior during the ramp up period for personal vms in the hostpool.
 * **rampUpMinutesToWaitOnDisconnect**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user disconnects during the ramp up period.
 * **rampUpMinutesToWaitOnLogoff**: int {minValue: 0}: The time in minutes to wait before performing the desired session handling action when a user logs off during the ramp up period.
-* **rampUpStartTime**: [Time](#time) (Required): Starting time for ramp up period.
+* **rampUpStartTime**: [Time](#time): Starting time for ramp up period.
 * **rampUpStartVMOnConnect**: 'Disable' | 'Enable' | string: The desired configuration of Start VM On Connect for the hostpool during the ramp up phase. If this is disabled, session hosts must be turned on using rampUpAutoStartHosts or by turning them on manually.
 
 ## ScalingPlanPooledScheduleProperties
 ### Properties
-* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): Set of days of the week on which this schedule is active.
-* **name**: string: Name of the ScalingPlanPooledSchedule
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: Set of days of the week on which this schedule is active.
+* **name**: string (ReadOnly): Name of the ScalingPlanPooledSchedule
 * **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
-* **offPeakStartTime**: [Time](#time) (Required): Starting time for off-peak period.
+* **offPeakStartTime**: [Time](#time): Starting time for off-peak period.
 * **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for peak period.
-* **peakStartTime**: [Time](#time) (Required): Starting time for peak period.
-* **rampDownCapacityThresholdPct**: int {minValue: 1, maxValue: 100} (Required): Capacity threshold for ramp down period.
+* **peakStartTime**: [Time](#time): Starting time for peak period.
+* **rampDownCapacityThresholdPct**: int {minValue: 1, maxValue: 100}: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
 * **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp down period.
 * **rampDownMinimumHostsPct**: int {minValue: 0, maxValue: 100}: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
-* **rampDownStartTime**: [Time](#time) (Required): Starting time for ramp down period.
+* **rampDownStartTime**: [Time](#time): Starting time for ramp down period.
 * **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions' | string: Specifies when to stop hosts during ramp down period.
 * **rampDownWaitTimeMinutes**: int: Number of minutes to wait to stop hosts during ramp down period.
-* **rampUpCapacityThresholdPct**: int {minValue: 1, maxValue: 100} (Required): Capacity threshold for ramp up period.
+* **rampUpCapacityThresholdPct**: int {minValue: 1, maxValue: 100}: Capacity threshold for ramp up period.
 * **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int {minValue: 0, maxValue: 100}: Minimum host percentage for ramp up period.
-* **rampUpStartTime**: [Time](#time) (Required): Starting time for ramp up period.
+* **rampUpStartTime**: [Time](#time): Starting time for ramp up period.
 
 ## ScalingPlanProperties
 ### Properties

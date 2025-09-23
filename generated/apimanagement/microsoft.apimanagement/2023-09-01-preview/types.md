@@ -1468,13 +1468,13 @@ dictionary key references will be ARM resource ids in the form:
 * **description**: string {minLength: 1, maxLength: 2000}: Backend Description.
 * **pool**: [BackendBaseParametersPool](#backendbaseparameterspool)
 * **properties**: [BackendProperties](#backendproperties): Backend Properties contract
-* **protocol**: 'http' | 'soap' | string (Required): Backend communication protocol.
+* **protocol**: 'http' | 'soap' | string: Backend communication protocol. Required when backend type is 'Single'.
 * **proxy**: [BackendProxyContract](#backendproxycontract): Backend gateway Contract Properties
 * **resourceId**: string {minLength: 1, maxLength: 2000}: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps, Function Apps or API Apps.
 * **title**: string {minLength: 1, maxLength: 300}: Backend Title.
 * **tls**: [BackendTlsProperties](#backendtlsproperties): Backend TLS Properties
 * **type**: 'Pool' | 'Single' | string: Type of the backend. A backend can be either Single or Pool.
-* **url**: string {minLength: 1, maxLength: 2000} (Required): Runtime Url of the Backend.
+* **url**: string {minLength: 1, maxLength: 2000}: Runtime Url of the Backend. Required when backend type is 'Single'.
 
 ## BackendCredentialsContract
 ### Properties

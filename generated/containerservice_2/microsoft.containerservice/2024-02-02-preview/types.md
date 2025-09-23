@@ -225,7 +225,7 @@ UpdateRunStrategy changes can be made directly on the "strategy" field before la
 * **completedTime**: string (ReadOnly): The time the operation or group was completed.
 * **error**: [ErrorDetail](#errordetail) (ReadOnly): The error details when a failure is encountered.
 * **startTime**: string (ReadOnly): The time the operation or group was started.
-* **state**: 'Completed' | 'Failed' | 'NotStarted' | 'Running' | 'Skipped' | 'Stopped' | 'Stopping' | string (ReadOnly): The State of the operation or group.
+* **state**: 'Completed' | 'Failed' | 'NotStarted' | 'Pending' | 'Running' | 'Skipped' | 'Stopped' | 'Stopping' | string (ReadOnly): The State of the operation or group.
 
 ## UserAssignedIdentities
 ### Properties

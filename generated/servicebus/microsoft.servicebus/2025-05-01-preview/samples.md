@@ -78,7 +78,7 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/migrationConfiguration
   name: 'example'
   properties: {
     postMigrationName: 'sdk-PostMigration-5919'
-    targetNamespace: '/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
+    targetNamespace: '/subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
   }
 }
 ```

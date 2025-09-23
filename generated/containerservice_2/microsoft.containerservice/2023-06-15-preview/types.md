@@ -194,7 +194,7 @@ The strategy of the UpdateRun can be modified until the run is started.
 * **completedTime**: string (ReadOnly): The time the operation or group was completed.
 * **error**: [ErrorDetail](#errordetail) (ReadOnly): The error details when a failure is encountered.
 * **startTime**: string (ReadOnly): The time the operation or group was started.
-* **state**: 'Completed' | 'Failed' | 'NotStarted' | 'Running' | 'Skipped' | 'Stopped' | 'Stopping' | string (ReadOnly): The State of the operation or group.
+* **state**: 'Completed' | 'Failed' | 'NotStarted' | 'Pending' | 'Running' | 'Skipped' | 'Stopped' | 'Stopping' | string (ReadOnly): The State of the operation or group.
 
 ## UserAssignedIdentities
 ### Properties

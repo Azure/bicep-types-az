@@ -1367,6 +1367,81 @@ resource exampleResource 'Microsoft.ApiManagement/service/backends@2024-05-01' =
 }
 ```
 
+ApiManagementCreateBackendWithPriorityBasedLoadBalancer
+```bicep
+resource exampleResource 'Microsoft.ApiManagement/service/backends@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Pool'
+    pool: {
+      services: [
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-1'
+          priority: 1
+        }
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-2'
+          priority: 1
+        }
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-3'
+          priority: 2
+        }
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-4'
+          priority: 2
+        }
+      ]
+    }
+  }
+}
+```
+
+ApiManagementCreateBackendWithSimpleLoadBalancer
+```bicep
+resource exampleResource 'Microsoft.ApiManagement/service/backends@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Pool'
+    pool: {
+      services: [
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-1'
+        }
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-2'
+        }
+      ]
+    }
+  }
+}
+```
+
+ApiManagementCreateBackendWithWeightedLoadBalancer
+```bicep
+resource exampleResource 'Microsoft.ApiManagement/service/backends@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Pool'
+    pool: {
+      services: [
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-1'
+          weight: 75
+        }
+        {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/backend-2'
+          weight: 25
+        }
+      ]
+    }
+  }
+}
+```
+
 ## microsoft.apimanagement/service/caches
 
 ApiManagementCreateCache
