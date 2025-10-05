@@ -1,18 +1,40 @@
 # Microsoft.KeyVault @ 2025-05-01
 
+## Resource Microsoft.KeyVault/locations/deletedManagedHSMs@2025-05-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedManagedHsmProperties](#deletedmanagedhsmproperties) (ReadOnly): Properties of the deleted managed HSM
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.KeyVault/locations/deletedManagedHSMs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.KeyVault/locations/deletedVaults@2025-05-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedVaultProperties](#deletedvaultproperties) (ReadOnly): Properties of the vault
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.KeyVault/locations/deletedVaults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.KeyVault/managedHSMs@2025-05-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **location**: string: The supported Azure location where the managed HSM Pool should be created.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedHsmProperties](#managedhsmproperties): Properties of the managed HSM
 * **sku**: [ManagedHsmSku](#managedhsmsku): SKU details
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the key vault resource.
-* **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ManagedHsmTags](#managedhsmtags): Resource tags.
 * **type**: 'Microsoft.KeyVault/managedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/managedHSMs/keys@2025-05-01
@@ -23,6 +45,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedHsmKeyProperties](#managedhsmkeyproperties) (Required): The properties of the key to be created.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [ManagedHsmKeyCreateParametersTags](#managedhsmkeycreateparameterstags): The tags that will be assigned to the key.
 * **type**: 'Microsoft.KeyVault/managedHSMs/keys' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,7 +57,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-fA-F0-9]{32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedHsmKeyProperties](#managedhsmkeyproperties) (ReadOnly): The properties of the key.
-* **tags**: [ProxyResourceWithoutSystemDataTags](#proxyresourcewithoutsystemdatatags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ManagedHsmKeyTags](#managedhsmkeytags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.KeyVault/managedHSMs/keys/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/managedHSMs/privateEndpointConnections@2025-05-01
@@ -44,13 +68,13 @@
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **location**: string: The supported Azure location where the managed HSM Pool should be created.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Resource properties.
 * **sku**: [ManagedHsmSku](#managedhsmsku): SKU details
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the key vault resource.
-* **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [MhsmPrivateEndpointConnectionTags](#mhsmprivateendpointconnectiontags): Resource tags.
 * **type**: 'Microsoft.KeyVault/managedHSMs/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults@2025-05-01
@@ -60,9 +84,9 @@
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The supported Azure location where the key vault should be created.
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultProperties](#vaultproperties) (Required): Properties of the vault
-* **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for the key vault.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -83,9 +107,10 @@
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Azure location of the key vault resource.
+* **location**: string (ReadOnly): The supported Azure location where the managed HSM Pool should be created.
 * **name**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key to be created.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [KeyCreateParametersTags](#keycreateparameterstags): The tags that will be assigned to the key.
 * **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -95,10 +120,11 @@
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Azure location of the key vault resource.
+* **location**: string (ReadOnly): The supported Azure location where the managed HSM Pool should be created.
 * **name**: string {pattern: "^[a-fA-F0-9]{32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [KeyProperties](#keyproperties) (ReadOnly): The properties of the key.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Tags assigned to the key vault resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [KeyTags](#keytags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.KeyVault/vaults/keys/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2025-05-01
@@ -111,7 +137,8 @@
 * **location**: string (ReadOnly): Azure location of the key vault resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Tags assigned to the key vault resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags) (ReadOnly): Tags assigned to the key vault resource.
 * **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/secrets@2025-05-01
@@ -121,8 +148,9 @@
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Azure location of the key vault resource.
-* **name**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties) (Required): Properties of the secret
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -136,6 +164,34 @@
 ## Action
 ### Properties
 * **type**: 'notify' | 'rotate': The type of action.
+
+## DeletedManagedHsmProperties
+### Properties
+* **deletionDate**: string (ReadOnly): The deleted date.
+* **location**: string (ReadOnly): The location of the original managed HSM.
+* **mhsmId**: string (ReadOnly): The resource id of the original managed HSM.
+* **purgeProtectionEnabled**: bool (ReadOnly): Purge protection status of the original managed HSM.
+* **scheduledPurgeDate**: string (ReadOnly): The scheduled purged date.
+* **tags**: [DeletedManagedHsmPropertiesTags](#deletedmanagedhsmpropertiestags) (ReadOnly): Tags of the original managed HSM.
+
+## DeletedManagedHsmPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DeletedVaultProperties
+### Properties
+* **deletionDate**: string (ReadOnly): The deleted date.
+* **location**: string (ReadOnly): The location of the original vault.
+* **purgeProtectionEnabled**: bool (ReadOnly): Purge protection status of the original vault.
+* **scheduledPurgeDate**: string (ReadOnly): The scheduled purged date.
+* **tags**: [DeletedVaultPropertiesTags](#deletedvaultpropertiestags) (ReadOnly): Tags of the original vault.
+* **vaultId**: string (ReadOnly): The resource id of the original vault.
+
+## DeletedVaultPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## IPRule
 ### Properties
@@ -178,6 +234,11 @@
 * **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
 * **expiryTime**: string: The expiration time for the new key version. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
 * **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
+
+## KeyTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## LifetimeAction
 ### Properties
@@ -226,6 +287,11 @@
 * **expiryTime**: string: The expiration time for the new key version. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
 * **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
 
+## ManagedHsmKeyTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ManagedHsmLifetimeAction
 ### Properties
 * **action**: [ManagedHsmAction](#managedhsmaction): The action of key rotation policy lifetimeAction.
@@ -249,16 +315,6 @@
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
 
-## ManagedHsmResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ManagedHsmResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ManagedHsmRotationPolicy
 ### Properties
 * **attributes**: [ManagedHsmKeyRotationPolicyAttributes](#managedhsmkeyrotationpolicyattributes): The attributes of key rotation policy.
@@ -273,6 +329,11 @@
 ### Properties
 * **family**: 'B' | 'C' | string (Required): SKU Family of the managed HSM Pool
 * **name**: 'Custom_B32' | 'Custom_B6' | 'Custom_C10' | 'Custom_C42' | 'Standard_B1' (Required): SKU of the managed HSM Pool
+
+## ManagedHsmTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ManagedHsmTrigger
 ### Properties
@@ -318,7 +379,12 @@
 ### Properties
 * **privateEndpoint**: [MhsmPrivateEndpoint](#mhsmprivateendpoint): Properties of the private endpoint object.
 * **privateLinkServiceConnectionState**: [MhsmPrivateLinkServiceConnectionState](#mhsmprivatelinkserviceconnectionstate): Approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the private endpoint connection.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection.
+
+## MhsmPrivateEndpointConnectionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MhsmPrivateLinkServiceConnectionState
 ### Properties
@@ -362,28 +428,18 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Properties of the private endpoint object.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the private endpoint connection.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection.
+
+## PrivateEndpointConnectionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: 'None' | string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been approved, rejected or removed by the key vault owner.
-
-## ProxyResourceWithoutSystemDataTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RotationPolicy
 ### Properties
@@ -418,12 +474,12 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string: The timestamp of the key vault resource creation (UTC).
-* **createdBy**: string: The identity that created the key vault resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the key vault resource.
-* **lastModifiedAt**: string: The timestamp of the key vault resource last modification (UTC).
-* **lastModifiedBy**: string: The identity that last modified the key vault resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the key vault resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Trigger
 ### Properties
