@@ -12,8 +12,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -37,8 +37,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
         aadAuthFailureMode: 'http401WithBearerChallenge'
       }
     }
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -57,9 +57,9 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
+    computeType: 'Default'
     disableLocalAuth: true
-    hostingMode: 'default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -78,10 +78,10 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     partitionCount: 1
-    publicNetworkAccess: 'disabled'
+    publicNetworkAccess: 'Disabled'
     replicaCount: 3
   }
   sku: {
@@ -99,8 +99,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     networkRuleSet: {
       ipRules: [
         {
@@ -129,8 +129,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     networkRuleSet: {
       bypass: 'AzureServices'
       ipRules: [
@@ -160,11 +160,11 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
+    computeType: 'Default'
     encryptionWithCmk: {
       enforcement: 'Enabled'
     }
-    hostingMode: 'default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -183,11 +183,11 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
+    computeType: 'Default'
     dataExfiltrationProtections: [
       'BlockAll'
     ]
-    hostingMode: 'default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -213,8 +213,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   }
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
   }
@@ -233,8 +233,8 @@ resource exampleResource 'Microsoft.Search/searchServices@2025-05-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    computeType: 'default'
-    hostingMode: 'default'
+    computeType: 'Default'
+    hostingMode: 'Default'
     partitionCount: 1
     replicaCount: 3
     semanticSearch: 'free'

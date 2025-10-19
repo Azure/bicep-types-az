@@ -3963,6 +3963,7 @@
 * **clusterNamePrefix**: any: The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
 * **clusterPassword**: [SecretBase](#secretbase): The password to access the cluster.
 * **clusterResourceGroup**: any (Required): The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+* **clusterResourceGroupAuthType**: 'ServicePrincipalKey' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: HDInsight On-demand cluster resource group authentication type.
 * **clusterSize**: any (Required): Number of worker/data nodes in the cluster. Suggestion value: 4. Type: int (or Expression with resultType int).
 * **clusterSshPassword**: [SecretBase](#secretbase): The password to SSH remotely connect cluster’s node (for Linux).
 * **clusterSshUserName**: any: The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).

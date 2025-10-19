@@ -7,10 +7,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: 'vaultconfig' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig): BackupResourceVaultConfigResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupResourceVaultConfigResourceTags](#backupresourcevaultconfigresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupEncryptionConfigs@2025-02-01
@@ -20,10 +21,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended](#backupresourceencryptionconfigorbackupresourceencryptionconfigextended): BackupResourceEncryptionConfigResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupResourceEncryptionConfigResourceTags](#backupresourceencryptionconfigresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupEngines@2025-02-01
@@ -33,10 +35,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupEngineBase](#backupenginebase) (ReadOnly): BackupEngineBaseResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupEngineBaseResourceTags](#backupenginebaseresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEngines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent@2025-02-01
@@ -46,10 +49,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionIntent](#protectionintent): ProtectionIntentResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectionIntentResourceTags](#protectionintentresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2025-02-01
@@ -59,10 +63,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionContainer](#protectioncontainer): ProtectionContainerResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectionContainerResourceTags](#protectioncontainerresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2025-02-01
@@ -72,10 +77,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionContainer](#protectioncontainer) (ReadOnly): ProtectionContainerResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectionContainerResourceTags](#protectioncontainerresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2025-02-01
@@ -85,10 +91,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectedItem](#protecteditem): ProtectedItemResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectedItemResourceTags](#protecteditemresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults@2025-02-01
@@ -98,10 +105,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectedItem](#protecteditem) (ReadOnly): ProtectedItemResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectedItemResourceTags](#protecteditemresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2025-02-01
@@ -111,10 +119,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecoveryPoint](#recoverypoint) (ReadOnly): RecoveryPointResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [RecoveryPointResourceTags](#recoverypointresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupJobs@2025-02-01
@@ -124,10 +133,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Job](#job) (ReadOnly): JobResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [JobResourceTags](#jobresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2025-02-01
@@ -137,10 +147,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionPolicy](#protectionpolicy): ProtectionPolicyResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectionPolicyResourceTags](#protectionpolicyresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies/operationResults@2025-02-01
@@ -150,10 +161,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionPolicy](#protectionpolicy) (ReadOnly): ProtectionPolicyResource properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ProtectionPolicyResourceTags](#protectionpolicyresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupResourceGuardProxies@2025-02-01
@@ -163,10 +175,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ResourceGuardProxyBaseResourceTags](#resourceguardproxybaseresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2025-02-01
@@ -176,10 +189,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: 'vaultstorageconfig' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupResourceConfig](#backupresourceconfig): BackupResourceConfigResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BackupResourceConfigResourceTags](#backupresourceconfigresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2025-02-01
@@ -189,10 +203,11 @@
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnection](#privateendpointconnection): PrivateEndpointConnectionResource properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PrivateEndpointConnectionResourceTags](#privateendpointconnectionresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureFileshareProtectedItemExtendedInfo
@@ -421,6 +436,11 @@ eg: number of bytes transferred etc
 * **backupEngineType**: 'DpmBackupEngine' (Required): Type of the backup engine.
 
 
+## BackupEngineBaseResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## BackupEngineExtendedInfo
 ### Properties
 * **availableDiskSpace**: int: Disk space currently available in the backup engine.
@@ -441,6 +461,11 @@ eg: number of bytes transferred etc
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 * **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
 
+## BackupResourceConfigResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended
 ### Properties
 * **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged' | string: Encryption At Rest Type
@@ -450,6 +475,11 @@ eg: number of bytes transferred etc
 * **subscriptionId**: string: Key Vault Subscription Id
 * **userAssignedIdentity**: string (ReadOnly): User Assigned Identity Id
 * **useSystemAssignedIdentity**: bool (ReadOnly): bool to indicate whether to use system Assigned Identity or not
+
+## BackupResourceEncryptionConfigResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BackupResourceVaultConfig
 ### Properties
@@ -461,6 +491,11 @@ eg: number of bytes transferred etc
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
+
+## BackupResourceVaultConfigResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BEKDetails
 ### Properties
@@ -505,7 +540,7 @@ eg: number of bytes transferred etc
 
 ## DistributedNodesInfo
 ### Properties
-* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **errorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error Details if the Status is non-success.
 * **nodeName**: string: Name of the node under a distributed container.
 * **sourceResourceId**: string: ARM resource id of the node
 * **status**: string: Status of this Node.
@@ -561,7 +596,7 @@ Failed | Succeeded
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ErrorDetail
+## ErrorDetailAutoGenerated
 ### Properties
 * **code**: string (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error Message related to the Code.
@@ -596,7 +631,7 @@ Failed | Succeeded
 ## HourlySchedule
 ### Properties
 * **interval**: int: Interval at which backup needs to be triggered. For hourly the value
- can be 4/6/8/12
+can be 4/6/8/12
 * **scheduleWindowDuration**: int: To specify duration of the backup window
 * **scheduleWindowStartTime**: string: To specify start time of the backup window
 
@@ -607,7 +642,7 @@ Failed | Succeeded
 
 ## InquiryInfo
 ### Properties
-* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **errorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error Details if the Status is non-success.
 * **inquiryDetails**: [WorkloadInquiryDetails](#workloadinquirydetails)[]: Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.
 * **status**: string: Inquiry Status for this container such as
@@ -616,7 +651,7 @@ InProgress | Failed | Succeeded
 ## InquiryValidation
 ### Properties
 * **additionalDetail**: string (ReadOnly): Error Additional Detail in case the status is non-success.
-* **errorDetail**: [ErrorDetail](#errordetail): Error Detail in case the status is non-success.
+* **errorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error Detail in case the status is non-success.
 * **protectableItemCount**: any (ReadOnly): Dictionary to store the count of ProtectableItems with key POType.
 * **status**: string: Status for the Inquiry Validation.
 
@@ -710,6 +745,11 @@ InProgress | Failed | Succeeded
 * **jobType**: 'VaultJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 
+## JobResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## KEKDetails
 ### Properties
 * **keyBackupData**: string: KEK data.
@@ -796,6 +836,11 @@ InProgress | Failed | Succeeded
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets or sets private link service connection state
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
 
+## PrivateEndpointConnectionResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: Gets or sets actions required
@@ -841,7 +886,7 @@ InProgress | Failed | Succeeded
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
 * **friendlyName**: string (ReadOnly): Friendly name of the DB represented by this backup item.
 * **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupErrorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error details in last backup
 * **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
@@ -859,7 +904,7 @@ InProgress | Failed | Succeeded
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
 * **friendlyName**: string (ReadOnly): Friendly name of the DB represented by this backup item.
 * **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupErrorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error details in last backup
 * **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
@@ -877,7 +922,7 @@ InProgress | Failed | Succeeded
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
 * **friendlyName**: string (ReadOnly): Friendly name of the DB represented by this backup item.
 * **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupErrorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error details in last backup
 * **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
@@ -895,7 +940,7 @@ InProgress | Failed | Succeeded
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
 * **friendlyName**: string (ReadOnly): Friendly name of the DB represented by this backup item.
 * **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupErrorDetail**: [ErrorDetailAutoGenerated](#errordetailautogenerated): Error details in last backup
 * **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
@@ -978,6 +1023,16 @@ InProgress | Failed | Succeeded
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): backup item type.
 * **protectionState**: 'BackupsSuspended' | 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
 
+
+## ProtectedItemResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProtectedItemResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ProtectionContainer
 * **Discriminator**: containerType
@@ -1092,6 +1147,16 @@ Backup is VMAppContainer
 * **protectedItemCount**: int: Number of items backed up in this container.
 
 
+## ProtectionContainerResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProtectionContainerResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ProtectionIntent
 * **Discriminator**: protectionIntentItemType
 
@@ -1116,6 +1181,11 @@ Backup is VMAppContainer
 * **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
 * **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance' | string: Workload item type of the item for which intent is to be set
 
+
+## ProtectionIntentResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
@@ -1173,6 +1243,16 @@ Tiering policy specifies the criteria to move RP to the target tier.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy details.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule of backup policy.
 
+
+## ProtectionPolicyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProtectionPolicyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RecoveryPoint
 * **Discriminator**: objectType
@@ -1292,10 +1372,15 @@ should be null if VM is in public cloud
 * **isSoftDeleted**: bool: Bool to indicate whether RP is in soft delete state or not
 * **ruleName**: string: Rule name tagged on Recovery Point that governs life cycle
 
+## RecoveryPointResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## RecoveryPointTierInformation
 ### Properties
 * **extendedInfo**: [RecoveryPointTierInformationExtendedInfo](#recoverypointtierinformationextendedinfo): Recovery point tier status.
-* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid': Recovery point tier status.
+* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid' | string: Recovery point tier status.
 * **type**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid': Recovery point tier type.
 
 ## RecoveryPointTierInformationExtendedInfo
@@ -1311,7 +1396,7 @@ should be null if VM is in public cloud
 ## RecoveryPointTierInformationV2
 ### Properties
 * **extendedInfo**: [RecoveryPointTierInformationExtendedInfo](#recoverypointtierinformationextendedinfo): Recovery point tier status.
-* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid': Recovery point tier status.
+* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid' | string: Recovery point tier status.
 * **type**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid': Recovery point tier type.
 
 ## ResourceGuardOperationDetail
@@ -1326,87 +1411,17 @@ should be null if VM is in public cloud
 * **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[]
 * **resourceGuardResourceId**: string (Required)
 
+## ResourceGuardProxyBaseResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ResourceHealthDetails
 ### Properties
 * **code**: int (ReadOnly): Health Code
 * **message**: string (ReadOnly): Health Message
 * **recommendations**: string[] (ReadOnly): Health Recommended Actions
 * **title**: string (ReadOnly): Health Title
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RetentionDuration
 ### Properties
@@ -1498,6 +1513,15 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [TieringPolicy](#tieringpolicy)
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TieringPolicy
 ### Properties
