@@ -27,9 +27,9 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity used for the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,127}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): NetApp Account properties
@@ -42,7 +42,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -80,7 +80,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
@@ -94,7 +94,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
@@ -102,7 +102,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
+* **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets@2025-07-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -167,7 +167,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -185,6 +185,7 @@
 * **location**: string: Resource location
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Volume group properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listQuotaReport (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
@@ -276,7 +277,7 @@
 * **fileSystemUser**: [FileSystemUser](#filesystemuser): File System user having access to volume data. For Unix, this is the user's uid and gid. For Windows, this is the user's username. Note that the Unix and Windows user details are mutually exclusive, meaning one or other must be supplied, but not both.
 * **path**: string: The volume path mounted inside the bucket. The default is the root path '/' if no value is provided when the bucket is created.
 * **permissions**: 'ReadOnly' | 'ReadWrite' | string: Access permissions for the bucket. Either ReadOnly or ReadWrite. The default is ReadOnly if no value is provided during bucket creation.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
 * **server**: [BucketServerProperties](#bucketserverproperties): Properties of the server managing the lifecycle of volume buckets
 * **status**: 'Active' | 'CredentialsExpired' | 'NoCredentialsSet' | string (ReadOnly): The bucket credentials status. There states:
 
@@ -288,7 +289,7 @@
 ### Properties
 * **certificateCommonName**: string {minLength: 1, maxLength: 64} (ReadOnly): Certificate Common Name taken from the certificate installed on the bucket server
 * **certificateExpiryDate**: string (ReadOnly): The bucket server's certificate expiry date.
-* **certificateObject**: string {sensitive, minLength: 1, maxLength: 10240}: A base64-encoded PEM file, which includes both the bucket server's certificate and private key. It is used to authenticate the user and allows access to volume data in a read-only manner.
+* **certificateObject**: string {minLength: 1, maxLength: 10240} (WriteOnly): A base64-encoded PEM file, which includes both the bucket server's certificate and private key. It is used to authenticate the user and allows access to volume data in a read-only manner.
 * **fqdn**: string: The host part of the bucket URL, resolving to the bucket IP address and allowed by the server certificate.
 * **ipAddress**: string (ReadOnly): The bucket server's IPv4 address
 
@@ -312,7 +313,7 @@
 
 ## EncryptionIdentity
 ### Properties
-* **federatedClientId**: string: ClientId of the multi-tenant AAD Application. Used to access cross-tenant KeyVaults.
+* **federatedClientId**: string: ClientId of the multi-tenant AAD Application. Used to access cross-tenant keyvaults.
 * **principalId**: string (ReadOnly): The principal ID (object ID) of the identity used to authenticate with key vault. Read-only.
 * **userAssignedIdentity**: string: The ARM resource identifier of the user assigned identity used to authenticate with key vault. Applicable if identity.type has 'UserAssigned'. It should match key of identity.userAssignedIdentities.
 
@@ -355,10 +356,10 @@
 
 ## LdapConfiguration
 ### Properties
-* **certificateCNHost**: string {maxLength: 255}: The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry.
+* **certificateCNHost**: string: The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry.
 * **domain**: string {maxLength: 255, pattern: "^[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]$"}: Name of the LDAP configuration domain
 * **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
-* **ldapServers**: (string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"})[] {minLength: 1}: List of LDAP server IP addresses (IPv4 only) for the LDAP domain.
+* **ldapServers**: string[]: List of LDAP server IP addresses (IPv4 only) for the LDAP domain.
 * **serverCACertificate**: string {sensitive, minLength: 1, maxLength: 10240}: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded ldap servers CA certificate.
 
 ## LdapSearchScopeOpt
@@ -369,11 +370,12 @@
 
 ## ListQuotaReportResponse
 ### Properties
-* **value**: [QuotaReport](#quotareport)[]: List of volume quota report records
+* **value**: [QuotaReport](#quotareport)[]: List of quota reports
 
 ## ListReplications
 ### Properties
-* **value**: [Replication](#replication)[]: A list of replications
+* **nextLink**: string: The link to the next page of items
+* **value**: [Replication](#replication)[] (Required): The Replication items on this page
 
 ## ManagedServiceIdentity
 ### Properties
@@ -478,11 +480,6 @@
 * **replicationId**: string (ReadOnly): Id
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SnapshotPolicyProperties
 ### Properties
 * **dailySchedule**: [DailySchedule](#dailyschedule): Schedule for daily snapshots
@@ -586,9 +583,14 @@
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [VolumeGroupVolumePropertiesTags](#volumegroupvolumepropertiestags): Resource tags
 * **type**: string (ReadOnly): Resource type
-* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
+* **zones**: string[]: Availability Zone
+
+## VolumeGroupVolumePropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VolumeProperties
 ### Properties
@@ -600,10 +602,10 @@
 * **capacityPoolResourceId**: string: Pool Resource Id used in case of creating a volume through volume group
 * **cloneProgress**: int (ReadOnly): When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning.
 * **coolAccess**: bool: Specifies whether Cool Access(tiering) is enabled for the volume.
-* **coolAccessRetrievalPolicy**: 'Default' | 'Never' | 'OnRead' | string: coolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are: 
- Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
- OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
- Never - No client-driven data is pulled from cool tier to standard storage.
+* **coolAccessRetrievalPolicy**: 'Default' | 'Never' | 'OnRead' | string: coolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are:
+Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
+OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
+Never - No client-driven data is pulled from cool tier to standard storage.
 * **coolAccessTieringPolicy**: 'Auto' | 'SnapshotOnly' | string: coolAccessTieringPolicy determines which cold data blocks are moved to cool tier. The possible values for this field are: Auto - Moves cold user data blocks in both the Snapshot copies and the active file system to the cool tier tier. This policy is the default. SnapshotOnly - Moves user data blocks of the Volume Snapshot copies that are not associated with the active file system to the cool tier.
 * **coolnessPeriod**: int {minValue: 2, maxValue: 183}: Specifies the number of days after which data that is not accessed by clients will be tiered.
 * **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
@@ -650,7 +652,7 @@
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **t2Network**: string (ReadOnly): T2 network information
 * **throughputMibps**: int: Maximum throughput in MiB/s that can be achieved by this volume and this will be accepted as input only for manual qosType volume
-* **unixPermissions**: string {minLength: 4, maxLength: 4}: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.  Avoid passing null value for unixPermissions in volume update operation, As per the behavior, If Null value is passed then user-visible unixPermissions value will became null, and user will not be able to get unixPermissions value. On safer side, actual unixPermissions value on volume will remain as its last saved value only.
+* **unixPermissions**: string {minLength: 4, maxLength: 4}: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
 * **usageThreshold**: int {minValue: 53687091200, maxValue: 2638827906662400} (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB.
 * **volumeGroupName**: string (ReadOnly): Volume Group Name
 * **volumeSpecName**: string: Volume spec name is the application specific designation or identifier for the particular volume in a volume group for e.g. data, log
@@ -669,7 +671,7 @@
 
 ## VolumeQuotaRulesProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' | string (ReadOnly): Gets the status of the VolumeQuotaRule at the time the operation was called.
 * **quotaSizeInKiBs**: int: Size of quota
 * **quotaTarget**: string: UserID/GroupID/SID based on the quota target type. UserID and groupID can be found by running ‘id’ or ‘getent’ command for the user or group and SID can be found by running <wmic useraccount where name='user-name' get sid>
 * **quotaType**: 'DefaultGroupQuota' | 'DefaultUserQuota' | 'IndividualGroupQuota' | 'IndividualUserQuota' | string: Type of quota

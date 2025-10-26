@@ -494,6 +494,7 @@ resource exampleResource 'Microsoft.Compute/restorePointCollections@2025-04-01' 
   name: 'example'
   location: 'norwayeast'
   properties: {
+    instantAccess: true
     source: {
       id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
     }
@@ -530,6 +531,7 @@ resource exampleResource 'Microsoft.Compute/restorePointCollections/restorePoint
         id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123'
       }
     ]
+    instantAccessDurationMinutes: 120
   }
 }
 ```
@@ -1943,6 +1945,59 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2025-04-01' = {
         diffDiskSettings: {
           option: 'Local'
         }
+        managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
+  }
+}
+```
+
+Create a VM with FIPS 140-3 Enabled
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachines@2025-04-01' = {
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    additionalCapabilities: {
+      enableFips1403Encryption: true
+    }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: 'http://{existing-storage-account-name}.blob.core.windows.net'
+      }
+    }
+    hardwareProfile: {
+      vmSize: 'Standard_D2s_v3'
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
+          properties: {
+            primary: true
+          }
+        }
+      ]
+    }
+    osProfile: {
+      adminPassword: '{your-password}'
+      adminUsername: '{your-username}'
+      computerName: '{vm-name}'
+    }
+    storageProfile: {
+      imageReference: {
+        offer: 'WindowsServer'
+        publisher: 'MicrosoftWindowsServer'
+        sku: '2019-Datacenter'
+        version: 'latest'
+      }
+      osDisk: {
+        name: 'vmOSdisk'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'Standard_LRS'
         }

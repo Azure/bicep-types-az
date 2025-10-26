@@ -175,6 +175,18 @@ resource exampleResource 'Microsoft.Edge/diagnostics@2025-08-01' = {
 }
 ```
 
+## microsoft.edge/schemareferences
+
+SchemaReferences_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Microsoft.Edge/schemaReferences@2025-08-01' = {
+  name: 'example'
+  properties: {
+    schemaId: 'vxgxfkfws'
+  }
+}
+```
+
 ## microsoft.edge/schemas
 
 Schemas_CreateOrUpdate_MaximumSet

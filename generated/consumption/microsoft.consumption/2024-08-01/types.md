@@ -9,6 +9,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Consumption/credits@2024-08-01
@@ -20,6 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'balanceSummary' (Required, DeployTimeConstant): The resource name
 * **properties**: [CreditSummaryProperties](#creditsummaryproperties) (ReadOnly): The properties of the credit summary.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [CreditSummaryTags](#creditsummarytags) (ReadOnly): A list of Tag.
 * **type**: 'Microsoft.Consumption/credits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Consumption/pricesheets@2024-08-01
@@ -27,11 +30,12 @@
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag for the resource.
+* **etag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [PriceSheetModel](#pricesheetmodel) (ReadOnly): price sheet result. It contains the pricesheet associated with billing period
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PriceSheetResultTags](#pricesheetresulttags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Consumption/pricesheets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Amount
@@ -102,6 +106,11 @@
 * **pendingEligibleCharges**: [Amount](#amount) (ReadOnly): Pending eligible charges.
 * **reseller**: [Reseller](#reseller) (ReadOnly): Credit's reseller.
 
+## CreditSummaryTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## CurrentSpend
 ### Properties
 * **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
@@ -154,19 +163,28 @@
 * **unitOfMeasure**: string (ReadOnly): Unit of measure
 * **unitPrice**: int (ReadOnly): Unit Price
 
+## PriceSheetResultTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Reseller
 ### Properties
 * **resellerDescription**: string (ReadOnly): The reseller property description.
 * **resellerId**: string (ReadOnly): The reseller property ID.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SavingsPlan
 ### Properties
 * **effectivePrice**: int (ReadOnly): SavingsPlan Effective Price
 * **marketPrice**: int (ReadOnly): SavingsPlan Market Price
 * **term**: string (ReadOnly): SavingsPlan term
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

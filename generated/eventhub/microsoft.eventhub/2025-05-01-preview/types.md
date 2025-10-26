@@ -6,12 +6,12 @@
 ### Properties
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
 * **sku**: [ClusterSku](#clustersku): Properties of the cluster SKU.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ClusterTags](#clustertags): Resource tags.
 * **type**: 'Microsoft.EventHub/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces@2025-05-01-preview
@@ -21,12 +21,12 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
-* **location**: string: Resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 6, maxLength: 50, pattern: "^[a-zA-Z][a-zA-Z0-9-]{6,50}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): Properties of sku resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [EHNamespaceTags](#ehnamespacetags): Resource tags.
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/applicationGroups@2025-05-01-preview
@@ -38,7 +38,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/authorizationRules@2025-05-01-preview
@@ -50,7 +50,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2025-05-01-preview
@@ -62,7 +62,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2025-05-01-preview
@@ -74,7 +74,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (ReadOnly): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2025-05-01-preview
@@ -86,7 +86,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [EventhubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2025-05-01-preview
@@ -98,7 +98,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2025-05-01-preview
@@ -110,7 +110,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Single item in List or Get Consumer group operation
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2025-05-01-preview
@@ -122,7 +122,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2025-05-01-preview
@@ -134,6 +134,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter Configuration
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/privateEndpointConnections@2025-05-01-preview
@@ -145,7 +146,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/schemagroups@2025-05-01-preview
@@ -157,7 +158,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [SchemaGroupProperties](#schemagroupproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/schemagroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2025-05-01-preview)
@@ -245,6 +246,11 @@
 * **capacity**: int {minValue: 1}: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
 * **name**: 'Dedicated' | string (Required): Name of this SKU.
 
+## ClusterTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConfidentialCompute
 ### Properties
 * **mode**: 'Disabled' | 'Enabled' | string: Setting to Enable or Disable Confidential Compute
@@ -296,6 +302,11 @@
 * **status**: string (ReadOnly): Status of the Namespace.
 * **updatedAt**: string (ReadOnly): The time the Namespace was updated.
 * **zoneRedundant**: bool: Enabling this property creates a Standard Event Hubs Namespace in regions supported availability zones.
+
+## EHNamespaceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Encryption
 ### Properties
@@ -373,7 +384,7 @@
 * **networkSecurityPerimeter**: [NetworkSecurityPerimeter](#networksecurityperimeter) (ReadOnly): NetworkSecurityPerimeter related information
 * **parentAssociationName**: string (ReadOnly): Source Resource Association name
 * **profile**: [NetworkSecurityPerimeterConfigurationPropertiesProfile](#networksecurityperimeterconfigurationpropertiesprofile) (ReadOnly): Information about current network profile
-* **provisioningIssues**: [ProvisioningIssue](#provisioningissue)[]: List of Provisioning Issues if any
+* **provisioningIssues**: [ProvisioningIssue](#provisioningissue)[] (ReadOnly): List of Provisioning Issues if any
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InvalidResponse' | 'Succeeded' | 'SucceededWithIssues' | 'Unknown' | 'Updating' | string: Provisioning state of NetworkSecurityPerimeter configuration propagation
 * **resourceAssociation**: [NetworkSecurityPerimeterConfigurationPropertiesResourceAssociation](#networksecurityperimeterconfigurationpropertiesresourceassociation) (ReadOnly): Information about resource association
 * **sourceResourceId**: string (ReadOnly): ARM Id of source resource
@@ -432,8 +443,8 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -487,19 +498,9 @@
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## UserAssignedIdentity
 ### Properties
