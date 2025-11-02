@@ -7,7 +7,7 @@
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,62}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SubscriptionQuotaItemProperties](#subscriptionquotaitemproperties) (ReadOnly): SubscriptionQuotaItem properties
+* **properties**: [SubscriptionQuotaItemProperties](#subscriptionquotaitemproperties) (ReadOnly): QuotaItem properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/locations/quotaLimits' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,9 +27,9 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity used for the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,127}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): NetApp Account properties
@@ -42,7 +42,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -80,7 +80,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
@@ -94,7 +94,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
@@ -102,7 +102,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
+* **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2025-06-01
 * **Readable Scope(s)**: ResourceGroup
@@ -145,7 +145,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -163,6 +163,7 @@
 * **location**: string: Resource location
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Volume group properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
@@ -303,7 +304,8 @@
 
 ## ListReplications
 ### Properties
-* **value**: [Replication](#replication)[]: A list of replications
+* **nextLink**: string: The link to the next page of items
+* **value**: [Replication](#replication)[] (Required): The Replication items on this page
 
 ## ManagedServiceIdentity
 ### Properties
@@ -383,11 +385,6 @@
 * **remoteVolumeResourceId**: string: The resource ID of the remote volume. Required for cross region and cross zone replication
 * **replicationId**: string (ReadOnly): Id
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SnapshotPolicyProperties
 ### Properties
@@ -497,9 +494,14 @@
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [VolumeGroupVolumePropertiesTags](#volumegroupvolumepropertiestags): Resource tags
 * **type**: string (ReadOnly): Resource type
-* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
+* **zones**: string[]: Availability Zone
+
+## VolumeGroupVolumePropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VolumeProperties
 ### Properties
@@ -511,10 +513,10 @@
 * **capacityPoolResourceId**: string: Pool Resource Id used in case of creating a volume through volume group
 * **cloneProgress**: int (ReadOnly): When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning.
 * **coolAccess**: bool: Specifies whether Cool Access(tiering) is enabled for the volume.
-* **coolAccessRetrievalPolicy**: 'Default' | 'Never' | 'OnRead' | string: coolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are: 
- Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
- OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
- Never - No client-driven data is pulled from cool tier to standard storage.
+* **coolAccessRetrievalPolicy**: 'Default' | 'Never' | 'OnRead' | string: coolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are:
+Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
+OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
+Never - No client-driven data is pulled from cool tier to standard storage.
 * **coolAccessTieringPolicy**: 'Auto' | 'SnapshotOnly' | string: coolAccessTieringPolicy determines which cold data blocks are moved to cool tier. The possible values for this field are: Auto - Moves cold user data blocks in both the Snapshot copies and the active file system to the cool tier tier. This policy is the default. SnapshotOnly - Moves user data blocks of the Volume Snapshot copies that are not associated with the active file system to the cool tier.
 * **coolnessPeriod**: int {minValue: 2, maxValue: 183}: Specifies the number of days after which data that is not accessed by clients will be tiered.
 * **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
@@ -578,7 +580,7 @@
 
 ## VolumeQuotaRulesProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' (ReadOnly): Gets the status of the VolumeQuotaRule at the time the operation was called.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' | string (ReadOnly): Gets the status of the VolumeQuotaRule at the time the operation was called.
 * **quotaSizeInKiBs**: int: Size of quota
 * **quotaTarget**: string: UserID/GroupID/SID based on the quota target type. UserID and groupID can be found by running ‘id’ or ‘getent’ command for the user or group and SID can be found by running <wmic useraccount where name='user-name' get sid>
 * **quotaType**: 'DefaultGroupQuota' | 'DefaultUserQuota' | 'IndividualGroupQuota' | 'IndividualUserQuota' | string: Type of quota

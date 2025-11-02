@@ -6,11 +6,11 @@
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 20, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AgentPoolProperties](#agentpoolproperties): The properties associated with the agent pool
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RunProperties](#runproperties) (ReadOnly): The properties of a run.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/taskRuns@2025-03-01-preview
@@ -34,7 +34,7 @@
 * **location**: string: The location of the resource
 * **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/tasks@2025-03-01-preview
@@ -44,11 +44,11 @@
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
-* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2025-03-01-preview)
@@ -139,9 +139,9 @@ the value of the item will be the registry credentials for accessing the registr
 * **identity**: string: Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
-identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
+identity may be used to authenticate to key vault to retrieve credentials or it may be the only
 source of authentication used for accessing the registry.
-* **password**: [SecretObject](#secretobject): The password for logging into the custom registry. The password is a secret 
+* **password**: [SecretObject](#secretobject): The password for logging into the custom registry. The password is a secret
 object that allows multiple ways of providing the value for it.
 * **userName**: [SecretObject](#secretobject): The username for logging into the custom registry.
 
@@ -150,10 +150,10 @@ object that allows multiple ways of providing the value for it.
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
-dictionary key references will be ARM resource ids in the form: 
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity
+dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## IdentityPropertiesUserAssignedIdentities
 ### Properties
@@ -189,28 +189,13 @@ executing a build step.
 * **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
 * **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Run
 ### Properties
-* **id**: string (ReadOnly): The resource ID.
-* **name**: string (ReadOnly): The name of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [RunProperties](#runproperties): The properties of a run.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RunGetLogResult
 ### Properties
@@ -357,20 +342,20 @@ the source registry during the run.
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource modification (UTC).
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Task
 ### Properties
-* **id**: string (ReadOnly): The resource ID.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
-* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (ReadOnly): The name of the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## TaskProperties
 ### Properties
@@ -389,13 +374,13 @@ the source registry during the run.
 
 ## TaskRun
 ### Properties
-* **id**: string (ReadOnly): The resource ID.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string: The location of the resource
-* **name**: string (ReadOnly): The name of the resource.
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## TaskRunProperties
 ### Properties
@@ -447,6 +432,21 @@ the source registry during the run.
 ### Properties
 * **scheduleOccurrence**: string: The occurrence that triggered the run.
 * **timerTriggerName**: string: The timer trigger name that caused the run.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TriggerProperties
 ### Properties

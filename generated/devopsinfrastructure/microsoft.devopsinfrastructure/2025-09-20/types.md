@@ -85,7 +85,7 @@
 ### Properties
 * **ipAddresses**: string[] (ReadOnly): Read only. The list of static public IP addresses for outgoing connections assigned to the pool.
 * **staticIpAddressCount**: int: The number of static public IP addresses for outgoing connections assigned to the pool.
-* **subnetId**: string (Required): The subnet id on which to put all machines created in the pool.
+* **subnetId**: string: The subnet id on which to put all machines created in the pool.
 
 ## Organization
 ### Properties

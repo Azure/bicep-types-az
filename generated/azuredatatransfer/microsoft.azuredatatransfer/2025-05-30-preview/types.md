@@ -196,9 +196,9 @@
 * **destinationEndpointPorts**: int[]: The destination endpoint ports of the stream
 * **destinationEndpoints**: string[]: The destination endpoints of the stream
 * **eventHubId**: string: Event Hub ID
-* **flowDataType**: 'ApiEndpoint' | 'ApiSDK' | 'Blob' | 'EventHub' | 'ServiceBus' | 'Table' | 'Video' | string (ReadOnly): The Flow's data class.
+* **flowDataType**: 'ApiEndpoint' | 'ApiSDK' | 'Blob' | 'EventHub' | 'ServiceBus' | 'Table' | 'Video' | string: The Flow's data class.
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
-* **flowProfile**: [FlowProfileMetadata](#flowprofilemetadata) (ReadOnly): Type of FlowProfile to use for transfer via the flow.
+* **flowProfile**: [FlowProfileMetadata](#flowprofilemetadata): Type of FlowProfile to use for transfer via the flow.
 * **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | 'PipelineForceDisabled' | string)[] (ReadOnly): Force disablement status of the current flow
 * **keyVaultUri**: string: URI to a Key Vault Secret containing a SAS token.
@@ -317,9 +317,9 @@
 * **destinationEndpointPorts**: int[]: The destination endpoint ports of the stream
 * **destinationEndpoints**: string[]: The destination endpoints of the stream
 * **eventHubId**: string: Event Hub ID
-* **flowDataType**: 'ApiEndpoint' | 'ApiSDK' | 'Blob' | 'EventHub' | 'ServiceBus' | 'Table' | 'Video' | string (ReadOnly): The Flow's data class.
+* **flowDataType**: 'ApiEndpoint' | 'ApiSDK' | 'Blob' | 'EventHub' | 'ServiceBus' | 'Table' | 'Video' | string: The Flow's data class.
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
-* **flowProfile**: [FlowProfileMetadata](#flowprofilemetadata) (ReadOnly): Type of FlowProfile to use for transfer via the flow.
+* **flowProfile**: [FlowProfileMetadata](#flowprofilemetadata): Type of FlowProfile to use for transfer via the flow.
 * **flowType**: 'API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string: The flow type for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | 'PipelineForceDisabled' | string)[] (ReadOnly): Force disablement status of the current flow
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}

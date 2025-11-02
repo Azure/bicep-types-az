@@ -285,6 +285,7 @@
 
 ## AdditionalCapabilities
 ### Properties
+* **enableFips1403Encryption**: bool: The flag enables the usage of FIPS 140-3 compliant cryptography on the protectedSettings of an extension. Learn more at: https://aka.ms/linuxagentfipssupport.
 * **hibernationEnabled**: bool: The flag that enables or disables hibernation capability on the VM.
 * **ultraSSDEnabled**: bool: The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
 
@@ -427,8 +428,8 @@ its default value is true
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Restore' | string (Required): Specifies how the virtual machine disk should be created. Possible values are **Attach:** This value is used when you are using a specialized disk to create the virtual machine. **FromImage:** This value is used when you are using an image to create the virtual machine data disk. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described. **Empty:** This value is used when creating an empty data disk. **Copy:** This value is used to create a data disk from a snapshot or another disk. **Restore:** This value is used to create a data disk from a disk restore point.
 * **deleteOption**: 'Delete' | 'Detach' | string: Specifies whether data disk should be deleted or detached upon VM deletion. Possible values are: **Delete.** If this value is used, the data disk is deleted when VM is deleted. **Detach.** If this value is used, the data disk is retained after VM is deleted. The default value is set to **Detach**.
 * **detachOption**: 'ForceDetach' | string: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach.** detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. **This feature is still in preview**. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
-* **diskIOPSReadWrite**: int (ReadOnly): Specifies the Read-Write IOPS for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
-* **diskMBpsReadWrite**: int (ReadOnly): Specifies the bandwidth in MB per second for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.
+* **diskIOPSReadWrite**: int: Specifies the Read-Write IOPS for the managed disk when StorageAccountType is UltraSSD_LRS.
+* **diskMBpsReadWrite**: int: Specifies the bandwidth in MB per second for the managed disk when StorageAccountType is UltraSSD_LRS.
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. The property 'diskSizeGB' is the number of bytes x 1024^3 for the disk and the value cannot be larger than 1023.
 * **image**: [VirtualHardDisk](#virtualharddisk): The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
@@ -529,6 +530,7 @@ its default value is true
 ### Properties
 * **id**: string: Disk restore point Id.
 * **replicationStatus**: [DiskRestorePointReplicationStatus](#diskrestorepointreplicationstatus): The disk restore point replication status information.
+* **snapshotAccessState**: 'Available' | 'AvailableWithInstantAccess' | 'InstantAccess' | 'Pending' | 'Unknown' | string: The state of snapshot which determines the access availability of the snapshot.
 
 ## DiskRestorePointReplicationStatus
 ### Properties
@@ -813,6 +815,7 @@ its default value is true
 
 ## RestorePointCollectionProperties
 ### Properties
+* **instantAccess**: bool: This property determines whether instant access snapshot is enabled for restore points created under this restore point collection for Premium SSD v2 or Ultra disk. Instant access snapshot for Premium SSD v2 or Ultra disk is instantaneously available for restoring disk with fast restore performance.
 * **provisioningState**: string (ReadOnly): The provisioning state of the restore point collection.
 * **restorePointCollectionId**: string (ReadOnly): The unique id of the restore point collection.
 * **restorePoints**: [RestorePoint](#restorepoint)[] (ReadOnly): A list containing all restore points created under this restore point collection.
@@ -838,6 +841,7 @@ its default value is true
 * **consistencyMode**: 'ApplicationConsistent' | 'CrashConsistent' | 'FileSystemConsistent' | string: ConsistencyMode of the RestorePoint. Can be specified in the input while creating a restore point. For now, only CrashConsistent is accepted as a valid input. Please refer to https://aka.ms/RestorePoints for more details.
 * **excludeDisks**: [ApiEntityReference](#apientityreference)[]: List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
 * **instanceView**: [RestorePointInstanceView](#restorepointinstanceview) (ReadOnly): The restore point instance view.
+* **instantAccessDurationMinutes**: int: This property determines the time in minutes the snapshot is retained as instant access for restoring Premium SSD v2 or Ultra disk with fast restore performance in this restore point.
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the restore point.
 * **sourceMetadata**: [RestorePointSourceMetadata](#restorepointsourcemetadata): Gets the details of the VM captured at the time of the restore point creation.
 * **sourceRestorePoint**: [ApiEntityReference](#apientityreference): Resource Id of the source restore point from which a copy needs to be created.

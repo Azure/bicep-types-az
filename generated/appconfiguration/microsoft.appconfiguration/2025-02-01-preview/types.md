@@ -11,7 +11,7 @@
 * **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9_-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **sku**: [Sku](#sku) (Required): The sku of the configuration store.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -23,6 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [KeyValueProperties](#keyvalueproperties): All key-value properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/keyValues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2025-02-01-preview
@@ -33,7 +34,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AppConfiguration/configurationStores/privateLinkResources@2025-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Private link resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.AppConfiguration/configurationStores/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/replicas@2025-02-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -42,9 +55,9 @@
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the replica.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ReplicaProperties](#replicaproperties) (ReadOnly): All replica properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
+* **name**: string {pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicaProperties](#replicaproperties): All replica properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/snapshots@2025-02-01-preview
@@ -55,7 +68,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[^\x00-\x1F\x7F]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotProperties](#snapshotproperties): All snapshot properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/snapshots' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AppConfiguration/locations/deletedConfigurationStores@2025-02-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9_-]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedConfigurationStoreProperties](#deletedconfigurationstoreproperties) (ReadOnly): Properties of the deleted configuration store
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.AppConfiguration/locations/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2025-02-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
@@ -73,8 +98,8 @@
 
 ## ApiKeyListResult
 ### Properties
-* **nextLink**: string: The URI that can be used to request the next set of paged results.
-* **value**: [ApiKey](#apikey)[]: The collection value.
+* **nextLink**: string: The link to the next page of items
+* **value**: [ApiKey](#apikey)[] (Required): The ApiKey items on this page
 
 ## ConfigurationStoreProperties
 ### Properties
@@ -97,6 +122,20 @@
 ### Properties
 * **authenticationMode**: 'Local' | 'Pass-through' | string: The data plane proxy authentication mode. This property manages the authentication mode of request to the data plane resources.
 * **privateLinkDelegation**: 'Disabled' | 'Enabled' | string: The data plane proxy private link delegation. This property manages if a request from delegated ARM private link is allowed when the data plane resource requires private link.
+
+## DeletedConfigurationStoreProperties
+### Properties
+* **configurationStoreId**: string (ReadOnly): The resource id of the original configuration store.
+* **deletionDate**: string (ReadOnly): The deleted date.
+* **location**: string (ReadOnly): The location of the original configuration store.
+* **purgeProtectionEnabled**: bool (ReadOnly): Purge protection status of the original configuration store.
+* **scheduledPurgeDate**: string (ReadOnly): The scheduled purged date.
+* **tags**: [DeletedConfigurationStorePropertiesTags](#deletedconfigurationstorepropertiestags) (ReadOnly): Tags of the original configuration store.
+
+## DeletedConfigurationStorePropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## EncryptionProperties
 ### Properties
@@ -156,6 +195,12 @@ A locked key-value may not be modified until it is unlocked.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
 * **type**: string (ReadOnly): The type of the resource.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The list of required DNS zone names of the private link resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties

@@ -1,24 +1,24 @@
-Generating types for 'specification/networkfunction/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
+Generating types for 'specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/readme.md'
+AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CollectorPolicy-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/preview/2021-09-01-preview/AzureTrafficCollector.json:770:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/preview/2021-09-01-preview/AzureTrafficCollector.json:770:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/preview/2021-09-01-preview/AzureTrafficCollector.json:816:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/preview/2021-09-01-preview/AzureTrafficCollector.json:816:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CollectorPolicy-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-05-01/AzureTrafficCollector.json:770:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/stable/2022-05-01/AzureTrafficCollector.json:770:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-05-01/AzureTrafficCollector.json:816:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/stable/2022-05-01/AzureTrafficCollector.json:816:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-08-01/AzureTrafficCollector.json:807:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/stable/2022-08-01/AzureTrafficCollector.json:807:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-11-01/AzureTrafficCollector.json:860:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/stable/2022-11-01/AzureTrafficCollector.json:860:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

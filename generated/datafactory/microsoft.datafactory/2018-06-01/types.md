@@ -3963,6 +3963,7 @@
 * **clusterNamePrefix**: any: The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
 * **clusterPassword**: [SecretBase](#secretbase): The password to access the cluster.
 * **clusterResourceGroup**: any (Required): The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+* **clusterResourceGroupAuthType**: 'ServicePrincipalKey' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: HDInsight On-demand cluster resource group authentication type.
 * **clusterSize**: any (Required): Number of worker/data nodes in the cluster. Suggestion value: 4. Type: int (or Expression with resultType int).
 * **clusterSshPassword**: [SecretBase](#secretbase): The password to SSH remotely connect cluster’s node (for Linux).
 * **clusterSshUserName**: any: The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
@@ -4260,6 +4261,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## InteractiveQueryProperties
+### Properties
+* **autoTerminationMinutes**: int (ReadOnly): The allowed idle time for interactive authoring.
+* **status**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): The interactive authoring capability status. Must be one of InteractiveCapabilityStatus. The default value is 'Enabling'.
 
 ## JiraLinkedServiceTypeProperties
 ### Properties
@@ -4998,6 +5004,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource for managed integration runtime.
 * **customerVirtualNetwork**: [IntegrationRuntimeCustomerVirtualNetwork](#integrationruntimecustomervirtualnetwork): The name of virtual network to which Azure-SSIS integration runtime will join
+* **interactiveQuery**: [InteractiveQueryProperties](#interactivequeryproperties): Interactive authoring capability reference.
 * **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties): SSIS properties for managed integration runtime.
 
 ## ManagedPrivateEndpoint
