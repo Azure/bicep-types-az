@@ -23,16 +23,17 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
   name: 'example'
   properties: {
     description: 'Sample demo change data capture to transfer data from delimited (csv) to Azure SQL Database with automapped and non-automapped mappings.'
-    Policy: {
+    allowVNetOverride: false
+    policy: {
       mode: 'Microbatch'
       recurrence: {
         frequency: 'Minute'
         interval: 15
       }
     }
-    SourceConnectionsInfo: [
+    sourceConnectionsInfo: [
       {
-        Connection: {
+        connection: {
           type: 'linkedservicetype'
           commonDslConnectorProperties: [
             {
@@ -144,7 +145,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
           }
           linkedServiceType: 'AzureBlobFS'
         }
-        SourceEntities: [
+        sourceEntities: [
           {
             name: 'source/customer'
             properties: {
@@ -324,9 +325,9 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
         ]
       }
     ]
-    TargetConnectionsInfo: [
+    targetConnectionsInfo: [
       {
-        Connection: {
+        connection: {
           type: 'linkedservicetype'
           commonDslConnectorProperties: [
             {
@@ -385,7 +386,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
           }
           linkedServiceType: 'AzureSqlDatabase'
         }
-        DataMapperMappings: [
+        dataMapperMappings: [
           {
             attributeMappingInfo: {
               attributeMappings: [
@@ -541,9 +542,9 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
             targetEntityName: 'dbo.justSchema'
           }
         ]
-        Relationships: [
+        relationships: [
         ]
-        TargetEntities: [
+        targetEntities: [
           {
             name: 'dbo.employee'
             properties: {
@@ -675,7 +676,6 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
         ]
       }
     ]
-    allowVNetOverride: false
   }
 }
 ```
@@ -687,16 +687,17 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
   name: 'example'
   properties: {
     description: 'Sample demo change data capture to transfer data from delimited (csv) to Azure SQL Database. Updating table mappings.'
-    Policy: {
+    allowVNetOverride: false
+    policy: {
       mode: 'Microbatch'
       recurrence: {
         frequency: 'Minute'
         interval: 15
       }
     }
-    SourceConnectionsInfo: [
+    sourceConnectionsInfo: [
       {
-        Connection: {
+        connection: {
           type: 'linkedservicetype'
           commonDslConnectorProperties: [
             {
@@ -808,7 +809,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
           }
           linkedServiceType: 'AzureBlobFS'
         }
-        SourceEntities: [
+        sourceEntities: [
           {
             name: 'source/customer'
             properties: {
@@ -988,9 +989,10 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
         ]
       }
     ]
-    TargetConnectionsInfo: [
+    status: 'Stopped'
+    targetConnectionsInfo: [
       {
-        Connection: {
+        connection: {
           type: 'linkedservicetype'
           commonDslConnectorProperties: [
             {
@@ -1049,7 +1051,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
           }
           linkedServiceType: 'AzureSqlDatabase'
         }
-        DataMapperMappings: [
+        dataMapperMappings: [
           {
             attributeMappingInfo: {
               attributeMappings: [
@@ -1273,9 +1275,9 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
             targetEntityName: 'dbo.justSchema'
           }
         ]
-        Relationships: [
+        relationships: [
         ]
-        TargetEntities: [
+        targetEntities: [
           {
             name: 'dbo.employee'
             properties: {
@@ -1407,8 +1409,6 @@ resource exampleResource 'Microsoft.DataFactory/factories/adfcdcs@2018-06-01' = 
         ]
       }
     ]
-    allowVNetOverride: false
-    status: 'Stopped'
   }
 }
 ```

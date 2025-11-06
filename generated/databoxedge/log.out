@@ -1,5 +1,5 @@
-Generating types for 'specification/databoxedge/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
+Generating types for 'specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/readme.md'
+AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -229,9 +229,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2021-02-01-preview/databoxedge.json:4388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2021-02-01-preview/databoxedge.json:4388:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2021-02-01-preview/databoxedge.json:4398:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2021-02-01-preview/databoxedge.json:4398:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -259,9 +259,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-12-01/databoxedge.json:4388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2020-12-01/databoxedge.json:4388:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-12-01/databoxedge.json:4398:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2020-12-01/databoxedge.json:4398:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -289,9 +289,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-09-01-preview/databoxedge.json:4388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2020-09-01-preview/databoxedge.json:4388:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-09-01-preview/databoxedge.json:4398:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2020-09-01-preview/databoxedge.json:4398:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -319,9 +319,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-09-01/databoxedge.json:4388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2020-09-01/databoxedge.json:4388:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-09-01/databoxedge.json:4398:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2020-09-01/databoxedge.json:4398:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -349,9 +349,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-05-01-preview/databoxedge.json:3561:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2020-05-01-preview/databoxedge.json:3561:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-05-01-preview/databoxedge.json:3571:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/preview/2020-05-01-preview/databoxedge.json:3571:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
@@ -364,9 +364,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-08-01/databoxedge.json:3522:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-08-01/databoxedge.json:3522:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-08-01/databoxedge.json:3532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-08-01/databoxedge.json:3532:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
@@ -379,9 +379,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-07-01/databoxedge.json:2944:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-07-01/databoxedge.json:2944:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-07-01/databoxedge.json:2954:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-07-01/databoxedge.json:2954:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
@@ -394,9 +394,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrig
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-03-01/databoxedge.json:2895:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-03-01/databoxedge.json:2895:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-03-01/databoxedge.json:2905:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/stable/2019-03-01/databoxedge.json:2905:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger

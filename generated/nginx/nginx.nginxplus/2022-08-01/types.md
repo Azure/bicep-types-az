@@ -58,7 +58,7 @@
 * **certificateVirtualPath**: string
 * **keyVaultSecretId**: string
 * **keyVirtualPath**: string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string
 
 ## NginxCertificateTags
 ### Properties
@@ -79,7 +79,7 @@
 * **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]
 * **package**: [NginxConfigurationPackage](#nginxconfigurationpackage)
 * **protectedFiles**: [NginxConfigurationFile](#nginxconfigurationfile)[]
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string
 * **rootFile**: string
 
 ## NginxConfigurationTags
@@ -95,7 +95,7 @@
 * **managedResourceGroup**: string: The managed resource group to deploy VNet injection related network resources.
 * **networkProfile**: [NginxNetworkProfile](#nginxnetworkprofile)
 * **nginxVersion**: string (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string
 
 ## NginxDeploymentTags
 ### Properties

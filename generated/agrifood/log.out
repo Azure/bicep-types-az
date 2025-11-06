@@ -1,5 +1,5 @@
-Generating types for 'specification/agrifood/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.19.0]
+Generating types for 'specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/AgFoodPlatform/readme.md'
+AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -30,9 +30,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataManagerForAgricult
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Extension' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Extension
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Solution' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Solution
 warning | Modeler/MissingType | The schema 'components·4dmwa2·schemas·solutionproperties·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/preview/2023-06-01-preview/agfood.json#/components/schemas/components·4dmwa2·schemas·solutionproperties·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/AgFoodPlatform/preview/2023-06-01-preview/agfood.json#/components/schemas/components·4dmwa2·schemas·solutionproperties·additionalproperties
 warning | Modeler/MissingType | The schema 'components·o19k21·schemas·datamanagerforagriculturesolutionproperties·properties·openapispecsdictionary·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/preview/2023-06-01-preview/agfood.json#/components/schemas/components·o19k21·schemas·datamanagerforagriculturesolutionproperties·properties·openapispecsdictionary·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/AgFoodPlatform/preview/2023-06-01-preview/agfood.json#/components/schemas/components·o19k21·schemas·datamanagerforagriculturesolutionproperties·properties·openapispecsdictionary·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -50,9 +50,9 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'Extension' has a prope
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Solution' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Solution
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FarmBeatsSolution' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FarmBeatsSolution
 warning | Modeler/MissingType | The schema 'components·4dmwa2·schemas·solutionproperties·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/preview/2021-09-01-preview/agfood.json#/components/schemas/components·4dmwa2·schemas·solutionproperties·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/AgFoodPlatform/preview/2021-09-01-preview/agfood.json#/components/schemas/components·4dmwa2·schemas·solutionproperties·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1x6qkbo·schemas·insight·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/preview/2021-09-01-preview/agfood.json#/components/schemas/components·1x6qkbo·schemas·insight·properties·properties·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/agrifood/resource-manager/Microsoft.AgFoodPlatform/AgFoodPlatform/preview/2021-09-01-preview/agfood.json#/components/schemas/components·1x6qkbo·schemas·insight·properties·properties·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
