@@ -73,7 +73,7 @@
 
 ## ComplianceSecurityProfileDefinition
 ### Properties
-* **complianceStandards**: ('CANADA_PROTECTED_B' | 'CYBER_ESSENTIAL_PLUS' | 'FEDRAMP_HIGH' | 'GERMANY_C5' | 'GERMANY_TISAX' | 'HIPAA' | 'HITRUST' | 'IRAP_PROTECTED' | 'ISMAP' | 'K_FSI' | 'NONE' | 'PCI_DSS' | string)[]: Compliance standards associated with the workspace.
+* **complianceStandards**: string[]: Compliance standards associated with the workspace.
 * **value**: 'Disabled' | 'Enabled' | string
 
 ## CreatedBy

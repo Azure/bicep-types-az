@@ -88,6 +88,7 @@
 * **encryption**: [ClusterPropertiesEncryption](#clusterpropertiesencryption): Encryption-at-rest configuration for the cluster.
 * **highAvailability**: 'Disabled' | 'Enabled' | string: Enabled by default. If highAvailability is disabled, the data set is not replicated. This affects the availability SLA, and increases the risk of data loss.
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
+* **maintenanceConfiguration**: [MaintenanceConfiguration](#maintenanceconfiguration): Cluster-level maintenance configuration.
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'. Newer versions can be added in the future. Note that TLS 1.0 and TLS 1.1 are now completely obsolete -- you cannot use them. They are mentioned only for the sake of consistency with old API versions.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified Redis Enterprise cluster
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status of the cluster
@@ -134,6 +135,21 @@
 ### Properties
 * **id**: string: Resource ID of a database resource to link with this database.
 * **state**: 'LinkFailed' | 'Linked' | 'Linking' | 'UnlinkFailed' | 'Unlinking' | string (ReadOnly): State of the link between the database resources.
+
+## MaintenanceConfiguration
+### Properties
+* **maintenanceWindows**: [MaintenanceWindow](#maintenancewindow)[]: Custom maintenance windows that apply to the cluster.
+
+## MaintenanceWindow
+### Properties
+* **duration**: string (Required): Duration in ISO-8601 format, for example 'PT5H'.
+* **schedule**: [MaintenanceWindowSchedule](#maintenancewindowschedule) (Required): Recurring schedule for the maintenance window.
+* **startHourUtc**: int {minValue: 0, maxValue: 23} (Required): Start hour (0-23) in UTC when the maintenance window begins.
+* **type**: 'Weekly' | string (Required): Maintenance window type.
+
+## MaintenanceWindowSchedule
+### Properties
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of week. Required when the maintenance window type is 'Weekly'.
 
 ## ManagedServiceIdentity
 ### Properties
