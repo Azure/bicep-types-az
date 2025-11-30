@@ -341,7 +341,7 @@
 * **sourceServerResourceId**: string: The source MySQL server id.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
 * **storage**: [Storage](#storage): Storage related properties of a server.
-* **version**: '5.7' | '8.0.21' | string: Major version of MySQL. 8.0.21 stands for MySQL 8.0, 5.7.44 stands for MySQL 5.7
+* **version**: '5.7' | '8.0.21' | '8.4' | string: Major version of MySQL. 8.0.21 stands for MySQL 8.0, 5.7.44 stands for MySQL 5.7
 
 ## ServerVersionCapabilityV2
 ### Properties

@@ -22,6 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionList](#subscriptionlist): The request to update subscriptions needed to be monitored by the Dynatrace monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Dynatrace.Observability/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Dynatrace.Observability/monitors/singleSignOnConfigurations@2024-04-24
@@ -89,7 +90,7 @@
 ## AppServiceListResponse
 ### Properties
 * **nextLink**: string: The link to the next page of items
-* **value**: [AppServiceInfo](#appserviceinfo)[]: The items on this page
+* **value**: [AppServiceInfo](#appserviceinfo)[] (Required): The AppServiceInfo items on this page
 
 ## DynatraceEnvironmentProperties
 ### Properties
@@ -133,8 +134,8 @@
 
 ## LinkableEnvironmentListResponse
 ### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [LinkableEnvironmentResponse](#linkableenvironmentresponse)[]: List of environments for which user is an admin
+* **nextLink**: string: The link to the next page of items
+* **value**: [LinkableEnvironmentResponse](#linkableenvironmentresponse)[] (Required): The LinkableEnvironmentResponse items on this page
 
 ## LinkableEnvironmentRequest
 ### Properties
@@ -176,7 +177,7 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## MonitoredResourceListResponse
 ### Properties
 * **nextLink**: string: The link to the next page of items
-* **value**: [MonitoredResource](#monitoredresource)[]: The items on this page
+* **value**: [MonitoredResource](#monitoredresource)[] (Required): The MonitoredResource items on this page
 
 ## MonitoredSubscription
 ### Properties
@@ -246,7 +247,7 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## VMHostsListResponse
 ### Properties
 * **nextLink**: string: The link to the next page of items
-* **value**: [VMInfo](#vminfo)[]: The items on this page
+* **value**: [VMInfo](#vminfo)[] (Required): The VMInfo items on this page
 
 ## VMInfo
 ### Properties

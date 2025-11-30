@@ -8,12 +8,12 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity properties of the monitor resource.
 * **kind**: string: The kind of the Elastic resource - observability, security, search etc.
-* **location**: string (Required): The location of the monitor resource
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties of the monitor resource.
 * **sku**: [ResourceSku](#resourcesku): SKU of the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
-* **tags**: [ElasticMonitorResourceTags](#elasticmonitorresourcetags): The tags of the monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Elastic/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/monitoredSubscriptions@2025-06-01
@@ -24,6 +24,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionList](#subscriptionlist): The request to update subscriptions needed to be monitored by the Elastic monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Elastic/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/openAIIntegrations@2025-06-01
@@ -34,6 +35,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OpenAIIntegrationProperties](#openaiintegrationproperties): Open AI Integration details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Elastic/monitors/openAIIntegrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/tagRules@2025-06-01
@@ -44,7 +46,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Properties of the monitoring tag rules.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2025-06-01)
@@ -104,8 +106,8 @@
 
 ## ConnectedPartnerResourcesListResponse
 ### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [ConnectedPartnerResourcesListFormat](#connectedpartnerresourceslistformat)[]: Results of a list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [ConnectedPartnerResourcesListFormat](#connectedpartnerresourceslistformat)[] (Required): The ConnectedPartnerResourcesListFormat items on this page
 
 ## DeploymentInfoResponse
 ### Properties
@@ -134,11 +136,6 @@
 * **elasticCloudSsoDefaultUrl**: string (ReadOnly): Elastic cloud default dashboard sso URL of the Elastic user account.
 * **emailAddress**: string (ReadOnly): Email of the Elastic User Account.
 * **id**: string (ReadOnly): User Id of the elastic account of the User.
-
-## ElasticMonitorResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ElasticProperties
 ### Properties
@@ -209,14 +206,14 @@
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [MonitoredResource](#monitoredresource)[] (Required): The MonitoredResource items on this page
 
 ## MonitoredSubscription
 ### Properties
 * **error**: string: The reason of not monitoring the subscription.
 * **status**: 'Active' | 'Deleting' | 'Failed' | 'InProgress' | string: The state of monitoring.
-* **subscriptionId**: string: The subscriptionId to be monitored.
+* **subscriptionId**: string (Required): The subscriptionId to be monitored.
 * **tagRules**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
 
 ## MonitoringTagRulesProperties
@@ -265,7 +262,7 @@
 
 ## ResourceSku
 ### Properties
-* **name**: string (Required): Name of the SKU.
+* **name**: string (Required): The name of the SKU.
 
 ## SubscriptionList
 ### Properties
@@ -282,6 +279,11 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UpgradableVersionsList
 ### Properties
 * **currentVersion**: string: Current version of the elastic monitor
@@ -297,8 +299,8 @@
 
 ## VMHostListResponse
 ### Properties
-* **nextLink**: string: Link to the next Vm resource Id, if any.
-* **value**: [VMResources](#vmresources)[]: Results of a list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [VMResources](#vmresources)[] (Required): The VMResources items on this page
 
 ## VMResources
 ### Properties

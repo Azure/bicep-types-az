@@ -62,14 +62,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/44"
         },
         "flags": 0,
         "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -83,7 +83,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -135,13 +135,6 @@
         },
         "flags": 2,
         "description": "MultiAD Status for the account"
-      },
-      "ldapConfiguration": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 0,
-        "description": "LDAP Configuration for the account."
       }
     }
   },
@@ -642,79 +635,32 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LdapConfiguration",
-    "properties": {
-      "domain": {
-        "type": {
-          "$ref": "#/40"
-        },
-        "flags": 0,
-        "description": "Name of the LDAP configuration domain"
-      },
-      "ldapServers": {
-        "type": {
-          "$ref": "#/45"
-        },
-        "flags": 0,
-        "description": "List of LDAP server IP addresses (IPv4 only) for the LDAP domain."
-      },
-      "ldapOverTLS": {
-        "type": {
-          "$ref": "#/21"
-        },
-        "flags": 0,
-        "description": "Specifies whether or not the LDAP traffic needs to be secured via TLS."
-      },
-      "serverCACertificate": {
-        "type": {
-          "$ref": "#/20"
-        },
-        "flags": 0,
-        "description": "When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded ldap servers CA certificate."
-      },
-      "certificateCNHost": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "ManagedServiceIdentity",
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/50"
         },
         "flags": 1,
         "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
@@ -747,16 +693,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
         "$ref": "#/48"
       },
       {
         "$ref": "#/49"
-      },
-      {
-        "$ref": "#/50"
-      },
-      {
-        "$ref": "#/51"
       },
       {
         "$ref": "#/2"
@@ -769,14 +715,14 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "The principal ID of the assigned identity."
       },
       "clientId": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "The client ID of the assigned identity."
@@ -788,7 +734,7 @@
     "name": "ManagedServiceIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/53"
+      "$ref": "#/51"
     }
   },
   {
@@ -812,7 +758,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -833,7 +779,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -867,16 +813,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
         "$ref": "#/57"
       },
       {
         "$ref": "#/58"
-      },
-      {
-        "$ref": "#/59"
-      },
-      {
-        "$ref": "#/60"
       },
       {
         "$ref": "#/2"
@@ -903,16 +849,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
         "$ref": "#/62"
       },
       {
         "$ref": "#/63"
-      },
-      {
-        "$ref": "#/64"
-      },
-      {
-        "$ref": "#/65"
       },
       {
         "$ref": "#/2"
@@ -956,21 +902,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/66"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/67"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/69"
         },
         "flags": 1,
         "description": "Backup policy Properties"
@@ -984,7 +930,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/73"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -998,7 +944,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1025,28 +971,28 @@
       },
       "dailyBackupsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Daily backups count to keep"
       },
       "weeklyBackupsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Weekly backups count to keep"
       },
       "monthlyBackupsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Monthly backups count to keep"
       },
       "volumesAssigned": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Volumes using current backup policy"
@@ -1060,7 +1006,7 @@
       },
       "volumeBackups": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/72"
         },
         "flags": 2,
         "description": "A list of volumes assigned to this policy"
@@ -1090,7 +1036,7 @@
       },
       "backupsCount": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Total count of backups for volume"
@@ -1107,7 +1053,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/73"
+      "$ref": "#/71"
     }
   },
   {
@@ -1122,7 +1068,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/backupPolicies@2025-08-01",
     "body": {
-      "$ref": "#/70"
+      "$ref": "#/68"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1152,35 +1098,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/75"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/76"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/77"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "Backup Vault Properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1194,7 +1140,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1226,7 +1172,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/backupVaults@2025-08-01",
     "body": {
-      "$ref": "#/80"
+      "$ref": "#/78"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1256,35 +1202,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/82"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/83"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/84"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/86"
         },
         "flags": 1,
         "description": "Backup Properties"
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1332,7 +1278,7 @@
       },
       "size": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Size of backup in bytes"
@@ -1346,7 +1292,7 @@
       },
       "backupType": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/89"
         },
         "flags": 2,
         "description": "Type of backup Manual or Scheduled"
@@ -1407,10 +1353,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/89"
+        "$ref": "#/87"
       },
       {
-        "$ref": "#/90"
+        "$ref": "#/88"
       },
       {
         "$ref": "#/2"
@@ -1421,7 +1367,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/backupVaults/backups@2025-08-01",
     "body": {
-      "$ref": "#/87"
+      "$ref": "#/85"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1453,28 +1399,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/91"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/92"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/93"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/95"
         },
         "flags": 1,
         "description": "Capacity pool properties"
@@ -1488,7 +1434,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/108"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1502,7 +1448,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1522,14 +1468,14 @@
       },
       "size": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 1,
         "description": "Provisioned size of the pool (in bytes). Allowed values are in 1TiB chunks (value must be multiple of 1099511627776)."
       },
       "serviceLevel": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/101"
         },
         "flags": 1,
         "description": "The service level of the file system"
@@ -1543,28 +1489,28 @@
       },
       "totalThroughputMibps": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Total throughput of pool in MiB/s"
       },
       "utilizedThroughputMibps": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Utilized throughput of pool in MiB/s"
       },
       "customThroughputMibps": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Maximum throughput in MiB/s that can be achieved by this pool and this will be accepted as input only for manual qosType pool with Flexible service level"
       },
       "qosType": {
         "type": {
-          "$ref": "#/106"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "The qos type of the pool"
@@ -1578,7 +1524,7 @@
       },
       "encryptionType": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "Encryption type of the capacity pool, set encryption type for data at rest for this pool and all volumes in it. This value can only be set when creating new pool."
@@ -1609,6 +1555,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
         "$ref": "#/98"
       },
       {
@@ -1616,12 +1568,6 @@
       },
       {
         "$ref": "#/100"
-      },
-      {
-        "$ref": "#/101"
-      },
-      {
-        "$ref": "#/102"
       },
       {
         "$ref": "#/2"
@@ -1640,10 +1586,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/104"
+        "$ref": "#/102"
       },
       {
-        "$ref": "#/105"
+        "$ref": "#/103"
       },
       {
         "$ref": "#/2"
@@ -1662,10 +1608,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/107"
+        "$ref": "#/105"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/106"
       },
       {
         "$ref": "#/2"
@@ -1684,7 +1630,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools@2025-08-01",
     "body": {
-      "$ref": "#/96"
+      "$ref": "#/94"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1716,28 +1662,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/110"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/111"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/112"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/114"
         },
         "flags": 1,
         "description": "Volume properties"
@@ -1751,14 +1697,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/201"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/202"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1772,7 +1718,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1792,35 +1738,35 @@
       },
       "creationToken": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/115"
         },
         "flags": 1,
         "description": "A unique file path for the volume. Used when creating mount targets"
       },
       "serviceLevel": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "The service level of the file system"
       },
       "usageThreshold": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/122"
         },
         "flags": 1,
         "description": "Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB."
       },
       "exportPolicy": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "Set of export policy rules"
       },
       "protocolTypes": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "Set of protocol types, default NFSv3, CIFS for SMB protocol"
@@ -1869,14 +1815,14 @@
       },
       "networkFeatures": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "The original value of the network features type available to the volume at the time it was created."
       },
       "effectiveNetworkFeatures": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/139"
         },
         "flags": 2,
         "description": "The effective value of the network features type available to the volume, or current effective state of update."
@@ -1890,14 +1836,14 @@
       },
       "storageToNetworkProximity": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/144"
         },
         "flags": 2,
         "description": "Provides storage to network proximity information for the volume."
       },
       "mountTargets": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/146"
         },
         "flags": 2,
         "description": "List of mount targets"
@@ -1911,14 +1857,14 @@
       },
       "dataProtection": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/147"
         },
         "flags": 0,
         "description": "DataProtection type volumes include an object containing details of the replication"
       },
       "acceptGrowCapacityPoolForShortTermCloneSplit": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "While auto splitting the short term clone volume, if the parent pool does not have enough space to accommodate the volume after split, it will be automatically resized, which will lead to increased billing. To accept capacity pool size auto grow and create a short term clone volume, set the property as accepted."
@@ -1946,7 +1892,7 @@
       },
       "securityStyle": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol"
@@ -1960,14 +1906,14 @@
       },
       "smbAccessBasedEnumeration": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/173"
         },
         "flags": 0,
         "description": "Enables access-based enumeration share property for SMB Shares. Only applicable for SMB/DualProtocol volume"
       },
       "smbNonBrowsable": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "Enables non-browsable property for SMB Shares. Only applicable for SMB/DualProtocol volume"
@@ -1981,21 +1927,21 @@
       },
       "throughputMibps": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Maximum throughput in MiB/s that can be achieved by this volume and this will be accepted as input only for manual qosType volume"
       },
       "actualThroughputMibps": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Actual throughput in MiB/s for auto qosType volumes calculated based on size and serviceLevel"
       },
       "encryptionKeySource": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "Source of key used to encrypt data in volume. Applicable if NetApp account has encryption.keySource = 'Microsoft.KeyVault'. Possible values (case-insensitive) are: 'Microsoft.NetApp, Microsoft.KeyVault'"
@@ -2014,13 +1960,6 @@
         "flags": 0,
         "description": "Specifies whether LDAP is enabled or not for a given NFS volume."
       },
-      "ldapServerType": {
-        "type": {
-          "$ref": "#/197"
-        },
-        "flags": 0,
-        "description": "Specifies the type of LDAP server for a given NFS volume."
-      },
       "coolAccess": {
         "type": {
           "$ref": "#/21"
@@ -2030,56 +1969,56 @@
       },
       "coolnessPeriod": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/180"
         },
         "flags": 0,
         "description": "Specifies the number of days after which data that is not accessed by clients will be tiered."
       },
       "coolAccessRetrievalPolicy": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "coolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are:\nDefault - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.\nOnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.\nNever - No client-driven data is pulled from cool tier to standard storage."
       },
       "coolAccessTieringPolicy": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "coolAccessTieringPolicy determines which cold data blocks are moved to cool tier. The possible values for this field are: Auto - Moves cold user data blocks in both the Snapshot copies and the active file system to the cool tier tier. This policy is the default. SnapshotOnly - Moves user data blocks of the Volume Snapshot copies that are not associated with the active file system to the cool tier."
       },
       "unixPermissions": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users."
       },
       "cloneProgress": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning."
       },
       "fileAccessLogs": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/191"
         },
         "flags": 2,
         "description": "Flag indicating whether file access logs are enabled for the volume, based on active diagnostic settings present on the volume."
       },
       "avsDataStore": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/194"
         },
         "flags": 0,
         "description": "Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose"
       },
       "dataStoreResourceId": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/195"
         },
         "flags": 2,
         "description": "Data store resource unique identifier"
@@ -2093,21 +2032,21 @@
       },
       "defaultUserQuotaInKiBs": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Default user quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies ."
       },
       "defaultGroupQuotaInKiBs": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Default group quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies."
       },
       "maximumNumberOfFiles": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Maximum number of files allowed. Needs a service request in order to be changed. Only allowed to be changed if volume quota is more than 4TiB."
@@ -2156,14 +2095,14 @@
       },
       "placementRules": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/197"
         },
         "flags": 0,
         "description": "Application specific placement rules for the particular volume"
       },
       "enableSubvolumes": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/200"
         },
         "flags": 0,
         "description": "Flag indicating whether subvolume operations are enabled on the volume"
@@ -2191,17 +2130,10 @@
       },
       "inheritedSizeInBytes": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Space shared by short term clone volume with parent volume in bytes."
-      },
-      "language": {
-        "type": {
-          "$ref": "#/288"
-        },
-        "flags": 0,
-        "description": "Language supported for volume."
       }
     }
   },
@@ -2235,6 +2167,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
         "$ref": "#/118"
       },
       {
@@ -2242,12 +2180,6 @@
       },
       {
         "$ref": "#/120"
-      },
-      {
-        "$ref": "#/121"
-      },
-      {
-        "$ref": "#/122"
       },
       {
         "$ref": "#/2"
@@ -2265,7 +2197,7 @@
     "properties": {
       "rules": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "Export policy rule"
@@ -2278,7 +2210,7 @@
     "properties": {
       "ruleIndex": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Order index"
@@ -2376,7 +2308,7 @@
       },
       "chownMode": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/127"
         },
         "flags": 0,
         "description": "This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own."
@@ -2395,10 +2327,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/127"
+        "$ref": "#/125"
       },
       {
-        "$ref": "#/128"
+        "$ref": "#/126"
       },
       {
         "$ref": "#/2"
@@ -2408,7 +2340,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/126"
+      "$ref": "#/124"
     }
   },
   {
@@ -2437,16 +2369,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
         "$ref": "#/132"
       },
       {
         "$ref": "#/133"
-      },
-      {
-        "$ref": "#/134"
-      },
-      {
-        "$ref": "#/135"
       },
       {
         "$ref": "#/2"
@@ -2473,16 +2405,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
         "$ref": "#/137"
       },
       {
         "$ref": "#/138"
-      },
-      {
-        "$ref": "#/139"
-      },
-      {
-        "$ref": "#/140"
       },
       {
         "$ref": "#/2"
@@ -2509,16 +2441,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
         "$ref": "#/142"
       },
       {
         "$ref": "#/143"
-      },
-      {
-        "$ref": "#/144"
-      },
-      {
-        "$ref": "#/145"
       },
       {
         "$ref": "#/2"
@@ -2562,7 +2494,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/147"
+      "$ref": "#/145"
     }
   },
   {
@@ -2571,28 +2503,28 @@
     "properties": {
       "backup": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "Backup Properties"
       },
       "replication": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "Replication properties"
       },
       "snapshot": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/163"
         },
         "flags": 0,
         "description": "Snapshot properties."
       },
       "volumeRelocation": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "VolumeRelocation properties"
@@ -2639,14 +2571,14 @@
       },
       "endpointType": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/152"
         },
         "flags": 2,
         "description": "Indicates whether the local volume is the source or destination for the Volume Replication"
       },
       "replicationSchedule": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "Schedule"
@@ -2660,7 +2592,7 @@
       },
       "remotePath": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "The full path to a volume that is to be migrated into ANF. Required for Migration volumes"
@@ -2674,38 +2606,10 @@
       },
       "destinationReplications": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/162"
         },
         "flags": 2,
         "description": "A list of destination replications"
-      },
-      "externalReplicationSetupStatus": {
-        "type": {
-          "$ref": "#/170"
-        },
-        "flags": 2,
-        "description": "Property that only applies to external replications. Provides a machine-readable value for the status of the external replication setup."
-      },
-      "externalReplicationSetupInfo": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Contains human-readable instructions on what the next step is to finish the external replication setup."
-      },
-      "mirrorState": {
-        "type": {
-          "$ref": "#/174"
-        },
-        "flags": 2,
-        "description": "The mirror state property describes the current status of data replication for a replication. It provides insight into whether the data is actively being mirrored, if the replication process has been paused, or if it has yet to be initialized."
-      },
-      "relationshipStatus": {
-        "type": {
-          "$ref": "#/177"
-        },
-        "flags": 2,
-        "description": "The status of the Volume Replication"
       }
     }
   },
@@ -2721,10 +2625,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/152"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/153"
+        "$ref": "#/151"
       },
       {
         "$ref": "#/2"
@@ -2747,13 +2651,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
         "$ref": "#/155"
-      },
-      {
-        "$ref": "#/156"
-      },
-      {
-        "$ref": "#/157"
       },
       {
         "$ref": "#/2"
@@ -2800,7 +2704,7 @@
       },
       "replicationType": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "Indicates whether the replication is cross zone or cross region."
@@ -2833,10 +2737,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/161"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/162"
+        "$ref": "#/160"
       },
       {
         "$ref": "#/2"
@@ -2846,102 +2750,8 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/160"
+      "$ref": "#/158"
     }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ClusterPeerRequired"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ClusterPeerPending"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "VServerPeerRequired"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReplicationCreateRequired"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NoActionRequired"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/165"
-      },
-      {
-        "$ref": "#/166"
-      },
-      {
-        "$ref": "#/167"
-      },
-      {
-        "$ref": "#/168"
-      },
-      {
-        "$ref": "#/169"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Uninitialized"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Mirrored"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Broken"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/171"
-      },
-      {
-        "$ref": "#/172"
-      },
-      {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Idle"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Transferring"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/175"
-      },
-      {
-        "$ref": "#/176"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
   },
   {
     "$type": "ObjectType",
@@ -2988,10 +2798,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/180"
+        "$ref": "#/165"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/166"
       },
       {
         "$ref": "#/2"
@@ -3010,32 +2820,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/183"
+        "$ref": "#/168"
       },
       {
-        "$ref": "#/184"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/186"
-      },
-      {
-        "$ref": "#/187"
+        "$ref": "#/169"
       },
       {
         "$ref": "#/2"
@@ -3054,10 +2842,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/189"
+        "$ref": "#/171"
       },
       {
-        "$ref": "#/190"
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
       },
       {
         "$ref": "#/2"
@@ -3076,32 +2886,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/192"
+        "$ref": "#/177"
       },
       {
-        "$ref": "#/193"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ActiveDirectory"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "OpenLDAP"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/195"
-      },
-      {
-        "$ref": "#/196"
+        "$ref": "#/178"
       },
       {
         "$ref": "#/2"
@@ -3129,13 +2917,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/199"
+        "$ref": "#/181"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/182"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/183"
       },
       {
         "$ref": "#/2"
@@ -3154,10 +2942,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/203"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/204"
+        "$ref": "#/186"
       },
       {
         "$ref": "#/2"
@@ -3181,10 +2969,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/207"
+        "$ref": "#/189"
       },
       {
-        "$ref": "#/208"
+        "$ref": "#/190"
       },
       {
         "$ref": "#/2"
@@ -3203,10 +2991,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/210"
+        "$ref": "#/192"
       },
       {
-        "$ref": "#/211"
+        "$ref": "#/193"
       },
       {
         "$ref": "#/2"
@@ -3242,7 +3030,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/214"
+      "$ref": "#/196"
     }
   },
   {
@@ -3257,501 +3045,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/216"
+        "$ref": "#/198"
       },
       {
-        "$ref": "#/217"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "c.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "utf8mb4"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ar"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ar.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "hr"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "hr.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "cs"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "cs.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "da"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "da.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "nl"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "nl.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "en"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "en.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "fi"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "fi.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "fr"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "fr.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "de"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "de.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "he"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "he.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "hu"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "hu.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "it"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "it.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-v1"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-v1.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.pck"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.pck.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.932"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.932.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.pck-v2"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ja-jp.pck-v2.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ko"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ko.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "no"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "no.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "pl"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "pl.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "pt"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "pt.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "c"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ro"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ro.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ru"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ru.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh.gbk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh.gbk.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh-tw.big5"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh-tw.big5.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh-tw"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "zh-tw.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sk.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sl"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sl.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "es"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "es.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sv"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sv.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "tr"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "tr.utf-8"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "en-us"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "en-us.utf-8"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/219"
-      },
-      {
-        "$ref": "#/220"
-      },
-      {
-        "$ref": "#/221"
-      },
-      {
-        "$ref": "#/222"
-      },
-      {
-        "$ref": "#/223"
-      },
-      {
-        "$ref": "#/224"
-      },
-      {
-        "$ref": "#/225"
-      },
-      {
-        "$ref": "#/226"
-      },
-      {
-        "$ref": "#/227"
-      },
-      {
-        "$ref": "#/228"
-      },
-      {
-        "$ref": "#/229"
-      },
-      {
-        "$ref": "#/230"
-      },
-      {
-        "$ref": "#/231"
-      },
-      {
-        "$ref": "#/232"
-      },
-      {
-        "$ref": "#/233"
-      },
-      {
-        "$ref": "#/234"
-      },
-      {
-        "$ref": "#/235"
-      },
-      {
-        "$ref": "#/236"
-      },
-      {
-        "$ref": "#/237"
-      },
-      {
-        "$ref": "#/238"
-      },
-      {
-        "$ref": "#/239"
-      },
-      {
-        "$ref": "#/240"
-      },
-      {
-        "$ref": "#/241"
-      },
-      {
-        "$ref": "#/242"
-      },
-      {
-        "$ref": "#/243"
-      },
-      {
-        "$ref": "#/244"
-      },
-      {
-        "$ref": "#/245"
-      },
-      {
-        "$ref": "#/246"
-      },
-      {
-        "$ref": "#/247"
-      },
-      {
-        "$ref": "#/248"
-      },
-      {
-        "$ref": "#/249"
-      },
-      {
-        "$ref": "#/250"
-      },
-      {
-        "$ref": "#/251"
-      },
-      {
-        "$ref": "#/252"
-      },
-      {
-        "$ref": "#/253"
-      },
-      {
-        "$ref": "#/254"
-      },
-      {
-        "$ref": "#/255"
-      },
-      {
-        "$ref": "#/256"
-      },
-      {
-        "$ref": "#/257"
-      },
-      {
-        "$ref": "#/258"
-      },
-      {
-        "$ref": "#/259"
-      },
-      {
-        "$ref": "#/260"
-      },
-      {
-        "$ref": "#/261"
-      },
-      {
-        "$ref": "#/262"
-      },
-      {
-        "$ref": "#/263"
-      },
-      {
-        "$ref": "#/264"
-      },
-      {
-        "$ref": "#/265"
-      },
-      {
-        "$ref": "#/266"
-      },
-      {
-        "$ref": "#/267"
-      },
-      {
-        "$ref": "#/268"
-      },
-      {
-        "$ref": "#/269"
-      },
-      {
-        "$ref": "#/270"
-      },
-      {
-        "$ref": "#/271"
-      },
-      {
-        "$ref": "#/272"
-      },
-      {
-        "$ref": "#/273"
-      },
-      {
-        "$ref": "#/274"
-      },
-      {
-        "$ref": "#/275"
-      },
-      {
-        "$ref": "#/276"
-      },
-      {
-        "$ref": "#/277"
-      },
-      {
-        "$ref": "#/278"
-      },
-      {
-        "$ref": "#/279"
-      },
-      {
-        "$ref": "#/280"
-      },
-      {
-        "$ref": "#/281"
-      },
-      {
-        "$ref": "#/282"
-      },
-      {
-        "$ref": "#/283"
-      },
-      {
-        "$ref": "#/284"
-      },
-      {
-        "$ref": "#/285"
-      },
-      {
-        "$ref": "#/286"
-      },
-      {
-        "$ref": "#/287"
+        "$ref": "#/199"
       },
       {
         "$ref": "#/2"
@@ -3776,7 +3073,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-08-01",
     "body": {
-      "$ref": "#/115"
+      "$ref": "#/113"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3809,21 +3106,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/204"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/205"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "Snapshot Properties"
@@ -3837,7 +3134,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3875,7 +3172,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2025-08-01",
     "body": {
-      "$ref": "#/294"
+      "$ref": "#/206"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3901,35 +3198,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/110"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/209"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/210"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/212"
         },
         "flags": 0,
         "description": "Subvolume Properties"
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3949,7 +3246,7 @@
       },
       "size": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Truncate subvolume to the provided size in bytes"
@@ -3974,7 +3271,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2025-08-01",
     "body": {
-      "$ref": "#/299"
+      "$ref": "#/211"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4007,28 +3304,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/214"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/215"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/217"
         },
         "flags": 0,
         "description": "Volume Quota Rule Properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/319"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -4042,7 +3339,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4055,21 +3352,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/313"
+          "$ref": "#/225"
         },
         "flags": 2,
         "description": "Gets the status of the VolumeQuotaRule at the time the operation was called."
       },
       "quotaSizeInKiBs": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Size of quota"
       },
       "quotaType": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/230"
         },
         "flags": 0,
         "description": "Type of quota"
@@ -4115,25 +3412,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/306"
+        "$ref": "#/218"
       },
       {
-        "$ref": "#/307"
+        "$ref": "#/219"
       },
       {
-        "$ref": "#/308"
+        "$ref": "#/220"
       },
       {
-        "$ref": "#/309"
+        "$ref": "#/221"
       },
       {
-        "$ref": "#/310"
+        "$ref": "#/222"
       },
       {
-        "$ref": "#/311"
+        "$ref": "#/223"
       },
       {
-        "$ref": "#/312"
+        "$ref": "#/224"
       },
       {
         "$ref": "#/2"
@@ -4160,16 +3457,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/314"
+        "$ref": "#/226"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/227"
       },
       {
-        "$ref": "#/316"
+        "$ref": "#/228"
       },
       {
-        "$ref": "#/317"
+        "$ref": "#/229"
       },
       {
         "$ref": "#/2"
@@ -4188,7 +3485,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2025-08-01",
     "body": {
-      "$ref": "#/304"
+      "$ref": "#/216"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4221,21 +3518,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/321"
+          "$ref": "#/233"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/234"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/324"
+          "$ref": "#/236"
         },
         "flags": 1,
         "description": "Snapshot policy Properties"
@@ -4249,7 +3546,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/329"
+          "$ref": "#/241"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -4263,7 +3560,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4276,28 +3573,28 @@
     "properties": {
       "hourlySchedule": {
         "type": {
-          "$ref": "#/325"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "Schedule for hourly snapshots"
       },
       "dailySchedule": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "Schedule for daily snapshots"
       },
       "weeklySchedule": {
         "type": {
-          "$ref": "#/327"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "Schedule for weekly snapshots"
       },
       "monthlySchedule": {
         "type": {
-          "$ref": "#/328"
+          "$ref": "#/240"
         },
         "flags": 0,
         "description": "Schedule for monthly snapshots"
@@ -4324,21 +3621,21 @@
     "properties": {
       "snapshotsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Hourly snapshot count to keep"
       },
       "minute": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which minute snapshot should be taken"
       },
       "usedBytes": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Resource size in bytes, current storage usage for the volume in bytes"
@@ -4351,28 +3648,28 @@
     "properties": {
       "snapshotsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Daily snapshot count to keep"
       },
       "hour": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which hour in UTC timezone a snapshot should be taken"
       },
       "minute": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which minute snapshot should be taken"
       },
       "usedBytes": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Resource size in bytes, current storage usage for the volume in bytes"
@@ -4385,7 +3682,7 @@
     "properties": {
       "snapshotsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Weekly snapshot count to keep"
@@ -4399,21 +3696,21 @@
       },
       "hour": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which hour in UTC timezone a snapshot should be taken"
       },
       "minute": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which minute snapshot should be taken"
       },
       "usedBytes": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Resource size in bytes, current storage usage for the volume in bytes"
@@ -4426,7 +3723,7 @@
     "properties": {
       "snapshotsToKeep": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Monthly snapshot count to keep"
@@ -4440,21 +3737,21 @@
       },
       "hour": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which hour in UTC timezone a snapshot should be taken"
       },
       "minute": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Indicates which minute snapshot should be taken"
       },
       "usedBytes": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Resource size in bytes, current storage usage for the volume in bytes"
@@ -4473,7 +3770,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/snapshotPolicies@2025-08-01",
     "body": {
-      "$ref": "#/323"
+      "$ref": "#/235"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4499,28 +3796,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/91"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/331"
+          "$ref": "#/243"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/332"
+          "$ref": "#/244"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/246"
         },
         "flags": 0,
         "description": "Volume group properties"
@@ -4534,7 +3831,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4554,14 +3851,14 @@
       },
       "groupMetaData": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/247"
         },
         "flags": 0,
         "description": "Volume group details"
       },
       "volumes": {
         "type": {
-          "$ref": "#/343"
+          "$ref": "#/255"
         },
         "flags": 0,
         "description": "List of volumes from group"
@@ -4581,7 +3878,7 @@
       },
       "applicationType": {
         "type": {
-          "$ref": "#/338"
+          "$ref": "#/250"
         },
         "flags": 0,
         "description": "Application Type"
@@ -4595,14 +3892,14 @@
       },
       "globalPlacementRules": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/251"
         },
         "flags": 0,
         "description": "Application specific placement rules for the volume group"
       },
       "volumesCount": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Number of volumes in volume group"
@@ -4621,10 +3918,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/336"
+        "$ref": "#/248"
       },
       {
-        "$ref": "#/337"
+        "$ref": "#/249"
       },
       {
         "$ref": "#/2"
@@ -4634,7 +3931,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/214"
+      "$ref": "#/196"
     }
   },
   {
@@ -4664,21 +3961,21 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/341"
+          "$ref": "#/253"
         },
         "flags": 0,
         "description": "Resource tags"
       },
       "zones": {
         "type": {
-          "$ref": "#/342"
+          "$ref": "#/254"
         },
         "flags": 0,
         "description": "Availability Zone"
       },
       "properties": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/114"
         },
         "flags": 1,
         "description": "Volume properties"
@@ -4702,14 +3999,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/340"
+      "$ref": "#/252"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/volumeGroups@2025-08-01",
     "body": {
-      "$ref": "#/333"
+      "$ref": "#/245"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4739,35 +4036,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/345"
+          "$ref": "#/257"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/258"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/259"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/261"
         },
         "flags": 2,
         "description": "QuotaItem properties"
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4780,21 +4077,21 @@
     "properties": {
       "current": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "The current quota value."
       },
       "default": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "The default quota value."
       },
       "usage": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "The usage quota value."
@@ -4805,7 +4102,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/locations/quotaLimits@2025-08-01",
     "body": {
-      "$ref": "#/348"
+      "$ref": "#/260"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -4835,35 +4132,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/263"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/264"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/353"
+          "$ref": "#/265"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/355"
+          "$ref": "#/267"
         },
         "flags": 2,
         "description": "regionInfo properties"
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4876,14 +4173,14 @@
     "properties": {
       "storageToNetworkProximity": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/276"
         },
         "flags": 0,
         "description": "Provides storage to network proximity information in the region."
       },
       "availabilityZoneMappings": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/278"
         },
         "flags": 0,
         "description": "Provides logical availability zone mappings for the subscription for a region."
@@ -4926,28 +4223,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/356"
+        "$ref": "#/268"
       },
       {
-        "$ref": "#/357"
+        "$ref": "#/269"
       },
       {
-        "$ref": "#/358"
+        "$ref": "#/270"
       },
       {
-        "$ref": "#/359"
+        "$ref": "#/271"
       },
       {
-        "$ref": "#/360"
+        "$ref": "#/272"
       },
       {
-        "$ref": "#/361"
+        "$ref": "#/273"
       },
       {
-        "$ref": "#/362"
+        "$ref": "#/274"
       },
       {
-        "$ref": "#/363"
+        "$ref": "#/275"
       },
       {
         "$ref": "#/2"
@@ -4977,14 +4274,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/365"
+      "$ref": "#/277"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/locations/regionInfos@2025-08-01",
     "body": {
-      "$ref": "#/354"
+      "$ref": "#/266"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -5010,35 +4307,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/345"
+          "$ref": "#/257"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/368"
+          "$ref": "#/280"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/281"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/261"
         },
         "flags": 2,
         "description": "QuotaItem properties"
       },
       "systemData": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -5049,122 +4346,10 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/quotaLimits@2025-08-01",
     "body": {
-      "$ref": "#/370"
+      "$ref": "#/282"
     },
     "readableScopes": 8,
     "writableScopes": 0
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ListQuotaReportResponse",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/379"
-        },
-        "flags": 0,
-        "description": "List of quota reports"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "QuotaReport",
-    "properties": {
-      "quotaType": {
-        "type": {
-          "$ref": "#/378"
-        },
-        "flags": 0,
-        "description": "Type of quota"
-      },
-      "quotaTarget": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "UserID/GroupID/SID based on the quota target type. UserID and groupID can be found by running ‘id’ or ‘getent’ command for the user or group and SID can be found by running <wmic useraccount where name='user-name' get sid>"
-      },
-      "quotaLimitUsedInKiBs": {
-        "type": {
-          "$ref": "#/72"
-        },
-        "flags": 0,
-        "description": "Specifies the current usage in kibibytes for the user/group quota."
-      },
-      "quotaLimitTotalInKiBs": {
-        "type": {
-          "$ref": "#/72"
-        },
-        "flags": 0,
-        "description": "Specifies the total size limit in kibibytes for the user/group quota."
-      },
-      "percentageUsed": {
-        "type": {
-          "$ref": "#/72"
-        },
-        "flags": 0,
-        "description": "Percentage of used size compared to total size."
-      },
-      "isDerivedQuota": {
-        "type": {
-          "$ref": "#/21"
-        },
-        "flags": 0,
-        "description": "Flag to indicate whether the quota is derived from default quota."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DefaultUserQuota"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DefaultGroupQuota"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "IndividualUserQuota"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "IndividualGroupQuota"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/374"
-      },
-      {
-        "$ref": "#/375"
-      },
-      {
-        "$ref": "#/376"
-      },
-      {
-        "$ref": "#/377"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/373"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listQuotaReport",
-    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
-    "apiVersion": "2025-08-01",
-    "output": {
-      "$ref": "#/372"
-    }
   },
   {
     "$type": "ObjectType",
@@ -5172,7 +4357,7 @@
     "properties": {
       "exclude": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/287"
         },
         "flags": 0,
         "description": "Exclude Replications filter. 'None' returns all replications, 'Deleted' excludes deleted replications. Default is 'None'"
@@ -5191,10 +4376,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/382"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/383"
+        "$ref": "#/286"
       },
       {
         "$ref": "#/2"
@@ -5207,7 +4392,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/398"
+          "$ref": "#/301"
         },
         "flags": 1,
         "description": "The Replication items on this page"
@@ -5234,14 +4419,14 @@
       },
       "endpointType": {
         "type": {
-          "$ref": "#/389"
+          "$ref": "#/292"
         },
         "flags": 0,
         "description": "Indicates whether the local volume is the source or destination for the Volume Replication"
       },
       "replicationSchedule": {
         "type": {
-          "$ref": "#/393"
+          "$ref": "#/296"
         },
         "flags": 0,
         "description": "Schedule"
@@ -5262,7 +4447,7 @@
       },
       "mirrorState": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/300"
         },
         "flags": 2,
         "description": "The status of the replication"
@@ -5295,10 +4480,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/387"
+        "$ref": "#/290"
       },
       {
-        "$ref": "#/388"
+        "$ref": "#/291"
       },
       {
         "$ref": "#/2"
@@ -5321,13 +4506,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/390"
+        "$ref": "#/293"
       },
       {
-        "$ref": "#/391"
+        "$ref": "#/294"
       },
       {
-        "$ref": "#/392"
+        "$ref": "#/295"
       },
       {
         "$ref": "#/2"
@@ -5350,13 +4535,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/394"
+        "$ref": "#/297"
       },
       {
-        "$ref": "#/395"
+        "$ref": "#/298"
       },
       {
-        "$ref": "#/396"
+        "$ref": "#/299"
       },
       {
         "$ref": "#/2"
@@ -5366,7 +4551,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/386"
+      "$ref": "#/289"
     }
   },
   {
@@ -5375,10 +4560,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2025-08-01",
     "output": {
-      "$ref": "#/385"
+      "$ref": "#/288"
     },
     "input": {
-      "$ref": "#/381"
+      "$ref": "#/284"
     }
   }
 ]

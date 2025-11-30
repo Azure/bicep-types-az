@@ -21,6 +21,7 @@ warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -40,6 +41,59 @@ warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ContributorConditionalCreditProperties' has a property 'startAt' that is already declared the parent schema 'ConditionalCreditProperties' but isn't significantly different. The property has been removed from ContributorConditionalCreditProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ContributorConditionalCreditProperties' has a property 'productCode' that is already declared the parent schema 'ConditionalCreditProperties' but isn't significantly different. The property has been removed from ContributorConditionalCreditProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ConditionalCreditMilestone' has a property 'award' that is already declared the parent schema 'ConditionalCreditMilestoneBase' but isn't significantly different. The property has been removed from ConditionalCreditMilestone
+warning | Skipping resource POST action path '/providers/Microsoft.BillingBenefits/listSellerResources': Unable to find type segments
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ContributorConditionalCreditProperties' has a property 'startAt' that is already declared the parent schema 'ConditionalCreditProperties' but isn't significantly different. The property has been removed from ContributorConditionalCreditProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ContributorConditionalCreditProperties' has a property 'productCode' that is already declared the parent schema 'ConditionalCreditProperties' but isn't significantly different. The property has been removed from ContributorConditionalCreditProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ConditionalCreditMilestone' has a property 'award' that is already declared the parent schema 'ConditionalCreditMilestoneBase' but isn't significantly different. The property has been removed from ConditionalCreditMilestone
+warning | Skipping resource POST action path '/providers/Microsoft.BillingBenefits/listSellerResources': Unable to find type segments
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -61,5 +115,6 @@ warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
