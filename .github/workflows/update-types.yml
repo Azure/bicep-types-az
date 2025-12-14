@@ -86,7 +86,7 @@ jobs:
         working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: |
             Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ env.SINGLE_PATH && format('(single path: {0})', env.SINGLE_PATH) || '' }}
