@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeerAsnProperties](#peerasnproperties): The properties that define a peer's ASN.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peerAsns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peerings@2025-05-01
@@ -17,11 +18,12 @@
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Direct' | 'Exchange' | string (Required): The kind of the peering.
-* **location**: string (Required): The location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringProperties](#peeringproperties): The properties that define a peering.
 * **sku**: [PeeringSku](#peeringsku) (Required): The SKU that defines the tier and kind of the peering.
-* **tags**: [PeeringTags](#peeringtags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peerings/registeredAsns@2025-05-01
@@ -30,8 +32,9 @@
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringRegisteredAsnProperties](#peeringregisteredasnproperties): The properties that define a registered ASN.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peerings/registeredAsns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peerings/registeredPrefixes@2025-05-01
@@ -42,6 +45,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringRegisteredPrefixProperties](#peeringregisteredprefixproperties): The properties that define a registered prefix.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peerings/registeredPrefixes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peeringServices@2025-05-01
@@ -50,11 +54,12 @@
 ### Properties
 * **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringServiceProperties](#peeringserviceproperties): The properties that define a peering service.
 * **sku**: [PeeringServiceSku](#peeringservicesku): The SKU that defines the type of the peering service.
-* **tags**: [PeeringServiceTags](#peeringservicetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peeringServices/connectionMonitorTests@2025-05-01
@@ -65,6 +70,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionMonitorTestProperties](#connectionmonitortestproperties): The properties that define a Connection Monitor Test.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peeringServices/connectionMonitorTests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peeringServices/prefixes@2025-05-01
@@ -75,6 +81,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[A-Za-z0-9_.-]{1,63}"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties): Gets or sets the peering prefix properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BgpSession
@@ -215,11 +222,6 @@ network the connectivity probe traffic can reach their endpoint for the connecti
 ### Properties
 * **name**: string: The name of the peering service SKU.
 
-## PeeringServiceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## PeeringSku
 ### Properties
 * **family**: 'Direct' | 'Exchange' | string (ReadOnly): The family of the peering SKU.
@@ -227,12 +229,26 @@ network the connectivity probe traffic can reach their endpoint for the connecti
 * **size**: 'Free' | 'Metered' | 'Unlimited' | string (ReadOnly): The size of the peering SKU.
 * **tier**: 'Basic' | 'Premium' | string (ReadOnly): The tier of the peering SKU.
 
-## PeeringTags
+## SubResource
+### Properties
+* **id**: string: The identifier of the referenced resource.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## SubResource
+## TrackedResourceTags
 ### Properties
-* **id**: string: The identifier of the referenced resource.
+### Additional Properties
+* **Additional Properties Type**: string
 

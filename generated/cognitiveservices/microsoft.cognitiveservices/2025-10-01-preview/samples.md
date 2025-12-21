@@ -62,6 +62,7 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/capabilityHosts@2
   name: 'example'
   properties: {
     customerSubnet: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroups/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+    enablePublicHostingEnvironment: true
   }
 }
 ```
@@ -261,11 +262,11 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/applicat
 }
 ```
 
-## microsoft.cognitiveservices/accounts/projects/applications/deployments
+## microsoft.cognitiveservices/accounts/projects/applications/agentdeployments
 
 Create or Update Agent Deployment.
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/applications/deployments@2025-10-01-preview' = {
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2025-10-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -297,7 +298,18 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/capabili
   parent: parentResource 
   name: 'example'
   properties: {
-    customerSubnet: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroups/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+    aiServicesConnections: [
+      'aoai_connection'
+    ]
+    storageConnections: [
+      'blob_connection'
+    ]
+    threadStorageConnections: [
+      'aca_connection'
+    ]
+    vectorStoreConnections: [
+      'acs_connection'
+    ]
   }
 }
 ```

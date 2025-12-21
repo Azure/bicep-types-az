@@ -2908,7 +2908,7 @@
 ### JiraObjectDataset
 #### Properties
 * **type**: 'JiraObject' (Required): Type of dataset.
-* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
+* **typeProperties**: [JiraTableDatasetTypeProperties](#jiratabledatasettypeproperties): Properties specific to this dataset type.
 
 ### JsonDataset
 #### Properties
@@ -4278,6 +4278,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 * **username**: any (Required): The user name that you use to access Jira Service.
 
+## JiraTableDatasetTypeProperties
+### Properties
+* **schema**: any: The schema name of the Jira, applies only for Jira V2 dataset. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Jira, applies only for Jira V2 dataset. Type: string (or Expression with resultType string).
+* **tableName**: any: This property is only supported in Jira V1 Dataset, please consider upgrading to V2 dataset.
+
 ## JsonDatasetTypeProperties
 ### Properties
 * **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the json dataset.
@@ -5225,8 +5231,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## NetezzaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. Type: string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **port**: any: The port for the connection. Type: integer.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **securityLevel**: 'OnlyUnSecured' | 'PreferredUnSecured' | string: Specifies the security level for the driver connection to the data store. PreferredUnSecured : prefer unsecured, allow fallback to secured connection if required. OnlyUnSecured : strictly unsecured, no fallback.
+* **server**: any: Server name for connection. Type: string.
+* **uid**: any: Username for authentication. Type: string.
 
 ## NetezzaPartitionSettings
 ### Properties

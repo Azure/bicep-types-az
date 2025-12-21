@@ -48,6 +48,13 @@
         },
         "flags": 0,
         "description": "The generic properties of a management group used during creation."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -281,10 +288,229 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups@2023-04-01",
     "body": {
       "$ref": "#/3"
+    },
+    "readableScopes": 1,
+    "writableScopes": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Management/managementGroups/settings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Management/managementGroups/settings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The properties of the request to create or update Management Group settings"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateOrUpdateSettingsPropertiesOrHierarchySettingsProperties",
+    "properties": {
+      "requireAuthorizationForGroupCreation": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access."
+      },
+      "defaultManagementGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Management/managementGroups/settings@2023-04-01",
+    "body": {
+      "$ref": "#/33"
     },
     "readableScopes": 1,
     "writableScopes": 1
@@ -317,24 +543,31 @@
       },
       "type": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/37"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/20"
+          "$ref": "#/38"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/40"
         },
         "flags": 2,
         "description": "The generic properties of subscription under a management group."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -358,7 +591,7 @@
       },
       "parent": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "The ID of the parent management group."
@@ -389,99 +622,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups/subscriptions@2023-04-01",
     "body": {
-      "$ref": "#/21"
-    },
-    "readableScopes": 1,
-    "writableScopes": 1
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "default"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Management/managementGroups/settings"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2023-04-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Management/managementGroups/settings",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/26"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/27"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/29"
-        },
-        "flags": 0,
-        "description": "The properties of the request to create or update Management Group settings"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CreateOrUpdateSettingsPropertiesOrHierarchySettingsProperties",
-    "properties": {
-      "requireAuthorizationForGroupCreation": {
-        "type": {
-          "$ref": "#/30"
-        },
-        "flags": 0,
-        "description": "Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access."
-      },
-      "defaultManagementGroup": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup"
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000"
-      }
-    }
-  },
-  {
-    "$type": "BooleanType"
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Management/managementGroups/settings@2023-04-01",
-    "body": {
-      "$ref": "#/28"
+      "$ref": "#/39"
     },
     "readableScopes": 1,
     "writableScopes": 1
