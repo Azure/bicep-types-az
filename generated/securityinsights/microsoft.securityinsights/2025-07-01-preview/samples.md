@@ -1357,6 +1357,23 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-p
 }
 ```
 
+Creates or updates a PremiumMicrosoftDefenderForThreatIntelligence data connector.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-preview' = {
+  name: 'example'
+  kind: 'PremiumMicrosoftDefenderForThreatIntelligence'
+  properties: {
+    dataTypes: {
+      connector: {
+        state: 'Enabled'
+      }
+    }
+    lookbackPeriod: '1970-01-01T00:00:00.000Z'
+    tenantId: 'e4afb3c4-813b-4e68-b6de-e5360866e798'
+  }
+}
+```
+
 Creates or updates a PurviewAudit data connector
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-preview' = {
@@ -1664,7 +1681,7 @@ resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2025-07-
 
 ## microsoft.securityinsights/incidents/relations
 
-Creates or updates an incident relation.
+Creates or updates a relation for a given incident.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2025-07-01-preview' = {
   parent: parentResource 
@@ -1941,7 +1958,7 @@ resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2025-07-01-p
 
 ## microsoft.securityinsights/watchlists
 
-Creates or updates a watchlist and bulk creates watchlist items.
+Create or update a watchlist and bulk creates watchlist items.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-preview' = {
   name: 'example'
@@ -1960,7 +1977,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-previ
 }
 ```
 
-Creates or updates a watchlist.
+Create or update a watchlist.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-preview' = {
   name: 'example'
@@ -1978,7 +1995,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-previ
 
 ## microsoft.securityinsights/watchlists/watchlistitems
 
-Creates or updates a watchlist item.
+Create or update a watchlist item.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2025-07-01-preview' = {
   parent: parentResource 

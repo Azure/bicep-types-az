@@ -358,6 +358,11 @@
 * **kind**: 'OfficePowerBI' (Required): The data connector kind
 * **properties**: [OfficePowerBIDataConnectorProperties](#officepowerbidataconnectorproperties): Office Microsoft PowerBI data connector properties.
 
+### PremiumMicrosoftDefenderForThreatIntelligence
+#### Properties
+* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): The data connector kind
+* **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Microsoft Defender for Threat Intelligence Premium data connector properties.
+
 ### PurviewAuditDataConnector
 #### Properties
 * **kind**: 'PurviewAudit' (Required): The data connector kind
@@ -611,7 +616,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties)
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -647,7 +652,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentTaskProperties](#incidenttaskproperties) (Required)
+* **properties**: [IncidentTaskProperties](#incidenttaskproperties) (Required): Describes the properties of an incident task
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1881,7 +1886,7 @@ The logo value should be in SVG format.
 
 ## FusionAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2142,7 +2147,7 @@ The base query is wrapped by Sentinel UI infra with a KQL query, that measures t
 * **description**: string: The description of the task
 * **lastModifiedBy**: [ClientInfo](#clientinfo): Information on the client (user or application) that made some action
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the task was updated
-* **status**: 'Completed' | 'New' | string (Required)
+* **status**: 'Completed' | 'New' | string (Required): The status of the task
 * **title**: string (Required): The title of the task
 
 ## InstructionStep
@@ -2423,7 +2428,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2449,7 +2454,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MLBehaviorAnalyticsAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2535,7 +2540,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## NrtAlertRuleTemplateProperties
 ### Properties
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **customDetails**: [QueryBasedAlertRuleTemplatePropertiesCustomDetails](#querybasedalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
@@ -2684,6 +2689,21 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 * **logicAppResourceId**: string (Required): The resource id of the playbook resource.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
+
+## PremiumMdtiDataConnectorDataTypes
+### Properties
+* **connector**: [PremiumMdtiDataConnectorDataTypesConnector](#premiummdtidataconnectordatatypesconnector) (Required): Data type for Microsoft Defender for Threat Intelligence Premium data connector.
+
+## PremiumMdtiDataConnectorDataTypesConnector
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
+
+## PremiumMdtiDataConnectorProperties
+### Properties
+* **dataTypes**: [PremiumMdtiDataConnectorDataTypes](#premiummdtidataconnectordatatypes) (Required): The available data types for the connector.
+* **lookbackPeriod**: string (Required): The lookback period for the feed to be imported. The date-time to begin importing the feed from, for example: 2024-01-01T00:00:00.000Z.
+* **requiredSKUsPresent**: bool: The flag to indicate whether the tenant has the premium SKU required to access this connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## ProcessEntityProperties
 ### Properties
@@ -2963,7 +2983,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## ScheduledAlertRuleTemplateProperties
 ### Properties
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **customDetails**: [ScheduledAlertRuleTemplatePropertiesCustomDetails](#scheduledalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
@@ -3231,7 +3251,7 @@ default: "GMT+0"
 
 ## ThreatIntelligenceAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -3416,7 +3436,7 @@ default: "GMT+0"
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
-* **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
+* **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist

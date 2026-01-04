@@ -357,7 +357,7 @@
 
 ## LdapConfiguration
 ### Properties
-* **certificateCNHost**: string: The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry.
+* **certificateCNHost**: string {maxLength: 255}: The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry.
 * **domain**: string {maxLength: 255, pattern: "^[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]$"}: Name of the LDAP configuration domain
 * **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
 * **ldapServers**: string[]: List of LDAP server IP addresses (IPv4 only) for the LDAP domain.

@@ -445,7 +445,7 @@ See https://raw.githubusercontent.com/kubernetes/kubernetes/refs/heads/master/ap
 ## BatchingConfiguration
 ### Properties
 * **latencySeconds**: int {minValue: 0, maxValue: 65535}: Batching latency in seconds.
-* **maxMessages**: int {minValue: 0, maxValue: 4294967295}: Maximum number of messages in a batch.
+* **maxMessages**: int {minValue: 0}: Maximum number of messages in a batch.
 
 ## BrokerAuthenticationProperties
 ### Properties
@@ -658,10 +658,10 @@ If unset, a default PVC with default properties will be used. Among other things
 ## ClientConfig
 ### Properties
 * **maxKeepAliveSeconds**: int {minValue: 0, maxValue: 65535}: Upper bound of a client's Keep Alive, in seconds.
-* **maxMessageExpirySeconds**: int {minValue: 1, maxValue: 4294967295}: Upper bound of Message Expiry Interval, in seconds.
+* **maxMessageExpirySeconds**: int {minValue: 1}: Upper bound of Message Expiry Interval, in seconds.
 * **maxPacketSizeBytes**: int {minValue: 1, maxValue: 268435456}: Max message size for a packet in Bytes.
 * **maxReceiveMaximum**: int {minValue: 1, maxValue: 65535}: Upper bound of Receive Maximum that a client can request in the CONNECT packet.
-* **maxSessionExpirySeconds**: int {minValue: 1, maxValue: 4294967295}: Upper bound of Session Expiry Interval, in seconds.
+* **maxSessionExpirySeconds**: int {minValue: 1}: Upper bound of Session Expiry Interval, in seconds.
 * **subscriberQueueLimit**: [SubscriberQueueLimit](#subscriberqueuelimit): The limit on the number of queued messages for a subscriber.
 
 ## DataflowBuiltInTransformationDataset
@@ -796,8 +796,8 @@ If unset, a default PVC with default properties will be used. Among other things
 ## DataflowEndpointKafkaBatching
 ### Properties
 * **latencyMs**: int {minValue: 0, maxValue: 65535}: Batching latency in milliseconds.
-* **maxBytes**: int {minValue: 0, maxValue: 4294967295}: Maximum number of bytes in a batch.
-* **maxMessages**: int {minValue: 0, maxValue: 4294967295}: Maximum number of messages in a batch.
+* **maxBytes**: int {minValue: 0}: Maximum number of bytes in a batch.
+* **maxMessages**: int {minValue: 0}: Maximum number of messages in a batch.
 * **mode**: 'Disabled' | 'Enabled' | string: Mode for batching.
 
 ## DataflowEndpointLocalStorage
