@@ -13,10 +13,10 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2024-07-01' = {
   location: 'japaneast'
   properties: {
     autoStorage: {
-      storageAccountId: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
+      storageAccountId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
     }
     keyVaultReference: {
-      id: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample'
+      id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample'
       url: 'http://sample.vault.azure.net/'
     }
     poolAllocationMode: 'UserSubscription'
@@ -31,7 +31,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2024-07-01' = {
   location: 'japaneast'
   properties: {
     autoStorage: {
-      storageAccountId: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
+      storageAccountId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
     }
   }
 }
@@ -47,7 +47,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2024-07-01' = {
   location: 'japaneast'
   properties: {
     autoStorage: {
-      storageAccountId: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
+      storageAccountId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
     }
   }
 }
@@ -60,14 +60,14 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2024-07-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
+      '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
   location: 'japaneast'
   properties: {
     autoStorage: {
-      storageAccountId: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
+      storageAccountId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
     }
   }
 }
@@ -80,10 +80,10 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2024-07-01' = {
   location: 'japaneast'
   properties: {
     autoStorage: {
-      storageAccountId: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
+      storageAccountId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage'
     }
     keyVaultReference: {
-      id: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample'
+      id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample'
       url: 'http://sample.vault.azure.net/'
     }
     publicNetworkAccess: 'Disabled'
@@ -114,8 +114,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/certificates@2024-07-01'
   name: 'example'
   properties: {
     format: 'Pfx'
-    data: 'MIIJsgIBAzCCCW4GCSqGSIb3DQE...'
-    password: '<ExamplePassword>'
+    data: 'MIIJmQIBAzCCCVUGCSqGSIb3DQEHAaCCCUYEgglCMIIJPjCCBE0GCSqGSI...'
     thumbprint: '0a0e4f50d51beadeac1d35afc5116098e7902e6e'
     thumbprintAlgorithm: 'sha1'
   }
@@ -129,7 +128,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/certificates@2024-07-01'
   name: 'example'
   properties: {
     format: 'Cer'
-    data: 'MIICrjCCAZagAwI...'
+    data: 'MIIJmQIBAzCCCVUGCSqGSIb3DQEHAaCCCUYEgglCMIIJPjCCBE0GCSqGSI...'
   }
 }
 ```
@@ -140,8 +139,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/certificates@2024-07-01'
   parent: parentResource 
   name: 'example'
   properties: {
-    data: 'MIIJsgIBAzCCCW4GCSqGSIb3DQE...'
-    password: '<ExamplePassword>'
+    data: 'MIIJmQIBAzCCCVUGCSqGSIb3DQEHAaCCCUYEgglCMIIJPjCCBE0GCSqGSI...'
   }
 }
 ```
@@ -167,7 +165,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     }
     networkConfiguration: {
       enableAcceleratedNetworking: true
-      subnetId: '/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
+      subnetId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
     }
     scaleSettings: {
       fixedScale: {
@@ -189,7 +187,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     deploymentConfiguration: {
       virtualMachineConfiguration: {
         imageReference: {
-          id: '/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
+          id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
         }
         nodeAgentSkuId: 'batch.node.ubuntu 18.04'
       }
@@ -328,7 +326,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     deploymentConfiguration: {
       virtualMachineConfiguration: {
         imageReference: {
-          id: '/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
+          id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
         }
         nodeAgentSkuId: 'batch.node.ubuntu 18.04'
       }
@@ -337,7 +335,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
       publicIPAddressConfiguration: {
         provision: 'NoPublicIPAddresses'
       }
-      subnetId: '/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
+      subnetId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
     }
     vmSize: 'STANDARD_D4'
   }
@@ -353,7 +351,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     deploymentConfiguration: {
       virtualMachineConfiguration: {
         imageReference: {
-          id: '/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
+          id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1'
         }
         nodeAgentSkuId: 'batch.node.ubuntu 18.04'
       }
@@ -361,11 +359,11 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     networkConfiguration: {
       publicIPAddressConfiguration: {
         ipAddressIds: [
-          '/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135'
+          '/subscriptions/12345678-1234-1234-1234-1234567890121/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135'
         ]
         provision: 'UserManaged'
       }
-      subnetId: '/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
+      subnetId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123'
     }
     vmSize: 'STANDARD_D4'
   }
@@ -466,10 +464,6 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
     }
     vmSize: 'Standard_d4s_v3'
   }
-  tags: {
-    TagName1: 'TagValue1'
-    TagName2: 'TagValue2'
-  }
 }
 ```
 
@@ -533,9 +527,9 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
+      '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
-      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
+      '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
       }
     }
   }
@@ -655,7 +649,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2024-07-01' = {
         }
         nodeAgentSkuId: 'batch.node.windows amd64'
         serviceArtifactReference: {
-          id: '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Compute/galleries/myGallery/serviceArtifacts/myServiceArtifact/vmArtifactsProfiles/vmArtifactsProfile'
+          id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Compute/galleries/myGallery/serviceArtifacts/myServiceArtifact/vmArtifactsProfiles/vmArtifactsProfile'
         }
         windowsConfiguration: {
           enableAutomaticUpdates: false

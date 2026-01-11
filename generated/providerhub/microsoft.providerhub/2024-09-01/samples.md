@@ -276,7 +276,9 @@ resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/newRegionF
       enabled: true
       endpointType: 'Production'
       endpointUri: 'https://resource-endpoint.com/'
-      featuresRule: 'Any'
+      featuresRule: {
+        requiredFeaturesPolicy: 'Any'
+      }
       locations: [
         'East US'
       ]

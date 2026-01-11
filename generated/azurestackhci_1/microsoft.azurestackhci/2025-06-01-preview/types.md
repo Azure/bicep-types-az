@@ -206,7 +206,6 @@
 * **sourceVirtualMachineId**: string: Resource ID of the source virtual machine from whose OS disk the gallery image is created.
 * **status**: [GalleryImageStatus](#galleryimagestatus) (ReadOnly): The observed state of gallery images
 * **version**: [GalleryImageVersion](#galleryimageversion): Specifies information about the gallery image version that you want to create or update.
-* **vmImageRepositoryCredentials**: [VmImageRepositoryCredentials](#vmimagerepositorycredentials): The credentials used to login to the image repository that has access to the specified image
 
 ## GalleryImageStatus
 ### Properties
@@ -284,7 +283,7 @@
 
 ## ImageArmReference
 ### Properties
-* **id**: string: The ARM ID for an image resource used by the virtual machine instance.
+* **id**: string: The Azure Resource ID for an image resource used by the virtual machine instance.
 
 ## InstanceViewStatus
 ### Properties
@@ -325,7 +324,7 @@
 
 ## LogicalNetworkArmReference
 ### Properties
-* **id**: string: The ARM ID for a Logical Network.
+* **id**: string: The Azure Resource ID for a Logical Network.
 
 ## LogicalNetworkProperties
 ### Properties
@@ -388,7 +387,7 @@
 
 ## NetworkInterfaceArmReference
 ### Properties
-* **id**: string: The ARM ID for a Network Interface.
+* **id**: string: The Azure Resource ID for a Network Interface.
 
 ## NetworkInterfaceProperties
 ### Properties
@@ -413,7 +412,7 @@
 
 ## NetworkSecurityGroupArmReference
 ### Properties
-* **id**: string: The ARM ID for a Network Security Group.
+* **id**: string: The Azure Resource ID for a Network Security Group.
 
 ## NetworkSecurityGroupProperties
 ### Properties
@@ -502,7 +501,7 @@
 
 ## SubnetIpConfigurationReference
 ### Properties
-* **ID**: string: The ARM ID for a Network Interface.
+* **ID**: string: The Azure Resource ID for a Network Interface.
 
 ## SubnetProperties
 ### Properties
@@ -571,12 +570,12 @@
 
 ## VirtualHardDiskArmReference
 ### Properties
-* **id**: string: The ARM ID for a Virtual Hard Disk.
+* **id**: string: The Azure Resource ID for a Virtual Hard Disk.
 
 ## VirtualHardDiskDownloadStatus
 ### Properties
 * **downloadedSizeInMB**: int: The downloaded sized of the virtual hard disk in MB
-* **progressPercentage**: int {minValue: 0, maxValue: 100}: The progress of the operation in percentage
+* **progressPercentage**: int: The progress of the operation in percentage
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The status of Uploading virtual hard disk [Succeeded, Failed, InProgress]
 
 ## VirtualHardDiskProperties
@@ -600,7 +599,7 @@
 * **downloadStatus**: [VirtualHardDiskDownloadStatus](#virtualharddiskdownloadstatus): The download status of the virtual hard disk
 * **errorCode**: string: VirtualHardDisk provisioning error code
 * **errorMessage**: string: Descriptive error message
-* **managedBy**: string[]: ARM IDs of the VMs that are consuming the VHD.
+* **managedBy**: string[]: Azure Resource IDs of the VMs that are consuming the VHD.
 * **provisioningStatus**: [VirtualHardDiskStatusProvisioningStatus](#virtualharddiskstatusprovisioningstatus): Provisioning status of the vhd
 * **uniqueId**: string: Unique Guid identifying the resource.
 * **uploadStatus**: [VirtualHardDiskUploadStatus](#virtualharddiskuploadstatus): The upload status of the virtual hard disk
@@ -614,7 +613,7 @@
 ### Properties
 * **errorCode**: string: VirtualHardDisk upload error code
 * **errorMessage**: string: Descriptive upload error message
-* **progressPercentage**: int {minValue: 0, maxValue: 100}: The progress of the operation in percentage
+* **progressPercentage**: int: The progress of the operation in percentage
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The status of Uploading virtual hard disk [Succeeded, Failed, InProgress]
 * **uploadedSizeInMB**: int: The uploaded sized of the virtual hard disk in MB
 
@@ -718,7 +717,7 @@
 
 ## VirtualMachineInstancePropertiesStorageProfileOsDisk
 ### Properties
-* **id**: string: The ARM ID for a Virtual Hard Disk.
+* **id**: string: The Azure Resource ID for a Virtual Hard Disk.
 * **managedDisk**: [VirtualMachineInstanceManagedDiskParameters](#virtualmachineinstancemanageddiskparameters): The managed disk parameters.
 * **osType**: 'Linux' | 'Windows' | string: This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. Possible values are: Windows, Linux.
 
@@ -741,9 +740,4 @@
 ## VMDiskSecurityProfile
 ### Properties
 * **securityEncryptionType**: 'NonPersistedTPM' | string: Specifies the EncryptionType of the managed disk. It is set to NonPersistedTPM for not persisting firmware state in the VMGuestState blob. NOTE: It can be set for only Confidential VMs.
-
-## VmImageRepositoryCredentials
-### Properties
-* **password**: string {sensitive} (Required): Password for accessing image repository
-* **username**: string (Required): Username for accessing image repository
 

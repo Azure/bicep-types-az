@@ -382,7 +382,7 @@
 * **binDelay**: int: The minimum delay in seconds before bin processing.
 * **binSize**: int: Scheduled window in minutes. Allowed values: 20, 30, 60, 120, 180, 360, 720, 1440.
 * **binStartTime**: string: The start time (UTC) when Summary rule execution starts.
-* **destinationTable**: string (ReadOnly): The destination table used for the Summary rule results.
+* **destinationTable**: string: The destination table used for the Summary rule results.
 * **query**: string: Summary rule query.
 * **timeSelector**: 'TimeGenerated' | string: The time cursor used in Summary rules bins processing, e.g. TimeGenerated.
 

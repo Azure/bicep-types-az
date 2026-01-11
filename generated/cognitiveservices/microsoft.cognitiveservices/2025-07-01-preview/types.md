@@ -141,7 +141,7 @@
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [CapabilityHostProperties](#capabilityhostproperties) (Required): [Required] Additional attributes of the entity.
+* **properties**: [ProjectCapabilityHostProperties](#projectcapabilityhostproperties) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CognitiveServices/accounts/projects/capabilityHosts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -765,6 +765,14 @@ depending on each OAuth2 provider's implementation.
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## ProjectCapabilityHostProperties
+### Properties
+* **aiServicesConnections**: string[]: List of AI services connections.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the CapabilityHost.
+* **storageConnections**: string[]: List of connection names from those available in the account or project to be used as a storage resource.
+* **threadStorageConnections**: string[]: List of connection names from those available in the account or project to be used for Thread storage.
+* **vectorStoreConnections**: string[]: List of connection names from those available in the account or project to be used for vector database (e.g. CosmosDB).
 
 ## ProjectProperties
 ### Properties
