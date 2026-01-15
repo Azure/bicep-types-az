@@ -54,12 +54,7 @@ jobs:
           if-no-files-found: error
 
       - name: Test
-        run: dotnet test --configuration release --collect:"XPlat Code Coverage" --settings ./.github/workflows/codecov.runsettings
-
-      - name: Upload Code Coverage
-        uses: codecov/codecov-action@v5
-        with:
-          flags: dotnet
+        run: dotnet test --configuration release
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4

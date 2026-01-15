@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" PrivateAssets="All" />
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Azure.Bicep.Types" Version="0.5.194" />
+    <PackageVersion Include="FluentAssertions" Version="7.2.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="3.11.0" />
+    <PackageVersion Include="MSTest.TestFramework" Version="3.10.0" />
+  </ItemGroup>
+</Project>
