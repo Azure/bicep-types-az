@@ -8,7 +8,7 @@
     <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Azure.Bicep.Types" Version="0.5.194" />
+    <PackageVersion Include="Azure.Bicep.Types" Version="0.6.27" />
     <PackageVersion Include="FluentAssertions" Version="7.2.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.11.0" />
