@@ -210,7 +210,18 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/capabili
   parent: parentResource 
   name: 'example'
   properties: {
-    customerSubnet: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroups/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+    aiServicesConnections: [
+      'aoai_connection'
+    ]
+    storageConnections: [
+      'blob_connection'
+    ]
+    threadStorageConnections: [
+      'aca_connection'
+    ]
+    vectorStoreConnections: [
+      'acs_connection'
+    ]
   }
 }
 ```

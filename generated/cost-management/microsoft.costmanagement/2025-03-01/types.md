@@ -9,6 +9,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Alert properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/budgets@2025-03-01
@@ -20,6 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9_-]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/costAllocationRules@2025-03-01
@@ -30,6 +32,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[A-Za-z0-9\-_]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CostAllocationRuleProperties](#costallocationruleproperties): Cost allocation rule properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/costAllocationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/exports@2025-03-01
@@ -43,19 +46,46 @@
 * **location**: string: The location of the Export's managed identity. Only required when utilizing managed identity.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.CostManagement/operationResults@2025-03-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DownloadURL](#downloadurl) (ReadOnly): The properties of the resource generated.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.CostManagement/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.CostManagement/operationStatus@2025-03-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **endTime**: string (ReadOnly): The endTime of the operation.
+* **error**: [ErrorDetails](#errordetails) (ReadOnly): The details of the error.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DownloadURL](#downloadurl) (ReadOnly): The properties of the usage file generated.
+* **startTime**: string (ReadOnly): The startTime of the operation.
+* **status**: [Status](#status) (ReadOnly): The status of the long running operation.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.CostManagement/operationStatus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/scheduledActions@2025-03-01
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is optional and can be specified to achieve optimistic concurrency. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
+* **eTag**: string: Resource Etag. For update calls, eTag is optional and can be specified to achieve optimistic concurrency. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Email' | 'InsightAlert' | string: Kind of the scheduled action.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledActionProperties](#scheduledactionproperties): The properties of the scheduled action.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Kind of the scheduled action.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/settings@2025-03-01
@@ -67,11 +97,12 @@
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'taginheritance' | string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ### TagInheritanceSetting
 #### Properties
-* **kind**: 'taginheritance' (Required): Specifies the kind of settings.
+* **kind**: 'taginheritance' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [TagInheritanceProperties](#taginheritanceproperties): The properties of the tag inheritance setting.
 
 
@@ -84,6 +115,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertProperties
@@ -141,53 +173,53 @@
 ### Properties
 * **and**: [BudgetFilterProperties](#budgetfilterproperties)[]: The logical "AND" expression. Must have at least 2 items.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 * **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
-Supported dimension names for **CategoryType: ReservationUtilization** 
+Supported dimension names for **CategoryType: ReservationUtilization**
 - ReservationId
 - ReservedResourceType
 * **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 
 ## BudgetFilterProperties
 ### Properties
 * **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
-Supported dimension names for **CategoryType: ReservationUtilization** 
+Supported dimension names for **CategoryType: ReservationUtilization**
 - ReservationId
 - ReservedResourceType
 * **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 
 ## BudgetProperties
 ### Properties
 * **amount**: int: The total amount of cost to track with the budget.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 
- Required for CategoryType(s): Cost.
+Required for CategoryType(s): Cost.
 * **category**: 'Cost' | 'ReservationUtilization' | string (Required): The category of the budget.
 - 'Cost' defines a Budget.
 - 'ReservationUtilization' defines a Reservation Utilization Alert Rule.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 * **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by user-specified dimensions and/or tags.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 * **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly): The forecasted cost which is being tracked for a budget.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 * **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
 - Constraints for **CategoryType: Cost** - Budget can have up to 5 notifications with thresholdType: Actual and 5 notifications with thresholdType: Forecasted.
 - Constraints for **CategoryType: ReservationUtilization** - Only one notification allowed. thresholdType is not applicable.
@@ -195,7 +227,7 @@ Supported dimension names for **CategoryType: ReservationUtilization**
 
 Supported for CategoryType(s): Cost, ReservationUtilization.
 
- Supported timeGrainTypes for **CategoryType: Cost**
+Supported timeGrainTypes for **CategoryType: Cost**
 
 - Monthly
 - Quarterly
@@ -204,18 +236,18 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 - BillingQuarter*
 - BillingAnnual*
 
-  *only supported for Web Direct customers.
+*only supported for Web Direct customers.
 
- Supported timeGrainTypes for **CategoryType: ReservationUtilization**
+Supported timeGrainTypes for **CategoryType: ReservationUtilization**
 - Last7Days
 - Last30Days
 
- Required for CategoryType(s): Cost, ReservationUtilization.
+Required for CategoryType(s): Cost, ReservationUtilization.
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The time period that defines the active period of the budget. The budget will evaluate data on or after the startDate and will expire on the endDate.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
- Required for CategoryType(s): Cost, ReservationUtilization.
+Required for CategoryType(s): Cost, ReservationUtilization.
 
 ## BudgetPropertiesNotifications
 ### Properties
@@ -270,6 +302,12 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 ### Properties
 * **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
 * **unit**: string (ReadOnly): The unit of measure for the budget amount.
+
+## DownloadURL
+### Properties
+* **downloadUrl**: string: The URL to download the generated report.
+* **expiryTime**: string (ReadOnly): The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z.
+* **validTill**: string: The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z.
 
 ## ErrorDetails
 ### Properties
@@ -394,42 +432,42 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 ### Properties
 * **contactEmails**: string[] {maxLength: 50} (Required): Email addresses to send the notification to when the threshold is breached. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 * **contactGroups**: string[] {maxLength: 50}: Subscription or Resource Group scopes only. Action groups to send the notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 * **contactRoles**: string[]: Subscription or Resource Group scopes only. Contact roles to send the notification to when the threshold is breached.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 * **enabled**: bool (Required): The notification is enabled or not.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 * **frequency**: 'Daily' | 'Monthly' | 'Weekly' | string: Frequency of a notification. Represents how long the notification will be silent after triggering an alert for a threshold breach. If not specified, the frequency will be set by default based on the timeGrain (Weekly when timeGrain: Last7Days, Monthly when timeGrain: Last30Days).
 
- Supported for CategoryType(s): ReservationUtilization.
-* **locale**: 'cs-cz' | 'da-dk' | 'de-de' | 'en-gb' | 'en-us' | 'es-es' | 'fr-fr' | 'hu-hu' | 'it-it' | 'ja-jp' | 'ko-kr' | 'nb-no' | 'nl-nl' | 'pl-pl' | 'pt-br' | 'pt-pt' | 'ru-ru' | 'sv-se' | 'tr-tr' | 'zh-cn' | 'zh-tw' | string: Language in which the recipient will receive the notification, 
+Supported for CategoryType(s): ReservationUtilization.
+* **locale**: 'cs-cz' | 'da-dk' | 'de-de' | 'en-gb' | 'en-us' | 'es-es' | 'fr-fr' | 'hu-hu' | 'it-it' | 'ja-jp' | 'ko-kr' | 'nb-no' | 'nl-nl' | 'pl-pl' | 'pt-br' | 'pt-pt' | 'ru-ru' | 'sv-se' | 'tr-tr' | 'zh-cn' | 'zh-tw' | string: Language in which the recipient will receive the notification,
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LessThan' | string (Required): The comparison operator.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
- Supported operators for **CategoryType: Cost**
+Supported operators for **CategoryType: Cost**
 - GreaterThan
 - GreaterThanOrEqualTo
 
- Supported operators for **CategoryType: ReservationUtilization**
+Supported operators for **CategoryType: ReservationUtilization**
 - LessThan
 * **threshold**: int (Required): Threshold value associated with a notification. It is always percent with a maximum of 2 decimal places.
 
- Supported for CategoryType(s): Cost, ReservationUtilization.
+Supported for CategoryType(s): Cost, ReservationUtilization.
 
- **CategoryType: Cost** - Must be between 0 and 1000. Notification is sent when the cost exceeded the threshold.
+**CategoryType: Cost** - Must be between 0 and 1000. Notification is sent when the cost exceeded the threshold.
 
- **CategoryType: ReservationUtilization** - Must be between 0 and 100. Notification is sent when a reservation has a utilization percentage below the threshold.
+**CategoryType: ReservationUtilization** - Must be between 0 and 100. Notification is sent when a reservation has a utilization percentage below the threshold.
 * **thresholdType**: 'Actual' | 'Forecasted' | string: The type of threshold.
 
- Supported for CategoryType(s): Cost.
+Supported for CategoryType(s): Cost.
 
 ## NotificationProperties
 ### Properties
@@ -437,7 +475,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **message**: string: Optional message to be added in the email. Length is limited to 250 characters.
 * **regionalFormat**: string: Regional format used for formatting date/time and currency values in the email.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
-* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
+* **to**: string[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
 
 ## PivotProperties
 ### Properties
@@ -529,6 +567,10 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
 * **resourceType**: 'Dimension' | 'Tag' | string (Required): Type of resources contained in this cost allocation rule
 * **values**: string[] (Required): Source Resources for cost allocation. This list cannot contain more than 25 values.
+
+## Status
+### Properties
+* **status**: 'Completed' | 'Failed' | 'InProgress' | 'NoDataFound' | 'Queued' | 'ReadyToDownload' | 'TimedOut' | string: The status of the long running operation.
 
 ## SystemAssignedServiceIdentity
 ### Properties

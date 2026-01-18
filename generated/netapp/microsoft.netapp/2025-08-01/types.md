@@ -177,11 +177,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listQuotaReport (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-08-01)
-* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
-* **ApiVersion**: 2025-08-01
-* **Output**: [ListQuotaReportResponse](#listquotareportresponse)
-
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-08-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-08-01
@@ -199,7 +194,6 @@
 * **activeDirectories**: [ActiveDirectory](#activedirectory)[]: Active Directories
 * **disableShowmount**: bool (ReadOnly): Shows the status of disableShowmount for all volumes under the subscription, null equals false
 * **encryption**: [AccountEncryption](#accountencryption): Encryption settings
-* **ldapConfiguration**: [LdapConfiguration](#ldapconfiguration): LDAP Configuration for the account.
 * **multiAdStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): MultiAD Status for the account
 * **nfsV4IDDomain**: string {maxLength: 255, pattern: "^[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]$"}: Domain for NFSv4 user ID mapping. This property will be set for all NetApp accounts in the subscription and region and only affect non ldap NFSv4 volumes.
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
@@ -314,23 +308,11 @@
 * **keyVaultUri**: string (Required): The Uri of KeyVault.
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the KeyVault connection.
 
-## LdapConfiguration
-### Properties
-* **certificateCNHost**: string: The CN host name used while generating the certificate, LDAP Over TLS requires the CN host name to create DNS host entry.
-* **domain**: string {maxLength: 255, pattern: "^[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]$"}: Name of the LDAP configuration domain
-* **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
-* **ldapServers**: string[]: List of LDAP server IP addresses (IPv4 only) for the LDAP domain.
-* **serverCACertificate**: string {sensitive, minLength: 1, maxLength: 10240}: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded ldap servers CA certificate.
-
 ## LdapSearchScopeOpt
 ### Properties
 * **groupDN**: string {maxLength: 255}: This specifies the group DN, which overrides the base DN for group lookups.
 * **groupMembershipFilter**: string {maxLength: 255}: This specifies the custom LDAP search filter to be used when looking up group membership from LDAP server.
 * **userDN**: string {maxLength: 255}: This specifies the user DN, which overrides the base DN for user lookups.
-
-## ListQuotaReportResponse
-### Properties
-* **value**: [QuotaReport](#quotareport)[]: List of quota reports
 
 ## ListReplications
 ### Properties
@@ -392,15 +374,6 @@
 * **default**: int (ReadOnly): The default quota value.
 * **usage**: int (ReadOnly): The usage quota value.
 
-## QuotaReport
-### Properties
-* **isDerivedQuota**: bool: Flag to indicate whether the quota is derived from default quota.
-* **percentageUsed**: int: Percentage of used size compared to total size.
-* **quotaLimitTotalInKiBs**: int: Specifies the total size limit in kibibytes for the user/group quota.
-* **quotaLimitUsedInKiBs**: int: Specifies the current usage in kibibytes for the user/group quota.
-* **quotaTarget**: string: UserID/GroupID/SID based on the quota target type. UserID and groupID can be found by running ‘id’ or ‘getent’ command for the user or group and SID can be found by running <wmic useraccount where name='user-name' get sid>
-* **quotaType**: 'DefaultGroupQuota' | 'DefaultUserQuota' | 'IndividualGroupQuota' | 'IndividualUserQuota' | string: Type of quota
-
 ## RegionInfo
 ### Properties
 * **availabilityZoneMappings**: [RegionInfoAvailabilityZoneMappingsItem](#regioninfoavailabilityzonemappingsitem)[]: Provides logical availability zone mappings for the subscription for a region.
@@ -432,10 +405,6 @@
 ### Properties
 * **destinationReplications**: [DestinationReplication](#destinationreplication)[] (ReadOnly): A list of destination replications
 * **endpointType**: 'dst' | 'src' | string (ReadOnly): Indicates whether the local volume is the source or destination for the Volume Replication
-* **externalReplicationSetupInfo**: string (ReadOnly): Contains human-readable instructions on what the next step is to finish the external replication setup.
-* **externalReplicationSetupStatus**: 'ClusterPeerPending' | 'ClusterPeerRequired' | 'NoActionRequired' | 'ReplicationCreateRequired' | 'VServerPeerRequired' | string (ReadOnly): Property that only applies to external replications. Provides a machine-readable value for the status of the external replication setup.
-* **mirrorState**: 'Broken' | 'Mirrored' | 'Uninitialized' | string (ReadOnly): The mirror state property describes the current status of data replication for a replication. It provides insight into whether the data is actively being mirrored, if the replication process has been paused, or if it has yet to be initialized.
-* **relationshipStatus**: 'Idle' | 'Transferring' | string (ReadOnly): The status of the Volume Replication
 * **remotePath**: [RemotePath](#remotepath): The full path to a volume that is to be migrated into ANF. Required for Migration volumes
 * **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
 * **remoteVolumeResourceId**: string: The resource ID of the remote volume. Required for cross region and cross zone replication
@@ -589,9 +558,7 @@ Never - No client-driven data is pulled from cool tier to standard storage.
 * **isRestoring**: bool (ReadOnly): Restoring
 * **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
 * **keyVaultPrivateEndpointResourceId**: string: The resource ID of private endpoint for KeyVault. It must reside in the same VNET as the volume. Only applicable if encryptionKeySource = 'Microsoft.KeyVault'.
-* **language**: 'ar' | 'ar.utf-8' | 'c' | 'c.utf-8' | 'cs' | 'cs.utf-8' | 'da' | 'da.utf-8' | 'de' | 'de.utf-8' | 'en' | 'en-us' | 'en-us.utf-8' | 'en.utf-8' | 'es' | 'es.utf-8' | 'fi' | 'fi.utf-8' | 'fr' | 'fr.utf-8' | 'he' | 'he.utf-8' | 'hr' | 'hr.utf-8' | 'hu' | 'hu.utf-8' | 'it' | 'it.utf-8' | 'ja' | 'ja-jp.932' | 'ja-jp.932.utf-8' | 'ja-jp.pck' | 'ja-jp.pck-v2' | 'ja-jp.pck-v2.utf-8' | 'ja-jp.pck.utf-8' | 'ja-v1' | 'ja-v1.utf-8' | 'ja.utf-8' | 'ko' | 'ko.utf-8' | 'nl' | 'nl.utf-8' | 'no' | 'no.utf-8' | 'pl' | 'pl.utf-8' | 'pt' | 'pt.utf-8' | 'ro' | 'ro.utf-8' | 'ru' | 'ru.utf-8' | 'sk' | 'sk.utf-8' | 'sl' | 'sl.utf-8' | 'sv' | 'sv.utf-8' | 'tr' | 'tr.utf-8' | 'utf8mb4' | 'zh' | 'zh-tw' | 'zh-tw.big5' | 'zh-tw.big5.utf-8' | 'zh-tw.utf-8' | 'zh.gbk' | 'zh.gbk.utf-8' | 'zh.utf-8' | string: Language supported for volume.
 * **ldapEnabled**: bool: Specifies whether LDAP is enabled or not for a given NFS volume.
-* **ldapServerType**: 'ActiveDirectory' | 'OpenLDAP' | string: Specifies the type of LDAP server for a given NFS volume.
 * **maximumNumberOfFiles**: int (ReadOnly): Maximum number of files allowed. Needs a service request in order to be changed. Only allowed to be changed if volume quota is more than 4TiB.
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
 * **networkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string: The original value of the network features type available to the volume at the time it was created.

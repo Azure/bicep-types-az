@@ -937,6 +937,13 @@
         },
         "flags": 0,
         "description": "The request to update subscriptions needed to be monitored by the Dynatrace monitor resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1473,7 +1480,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Dynatrace.Observability/monitors/tagRules"
+    "value": "Dynatrace.Observability/monitors/singleSignOnConfigurations"
   },
   {
     "$type": "StringLiteralType",
@@ -1481,7 +1488,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Dynatrace.Observability/monitors/tagRules",
+    "name": "Dynatrace.Observability/monitors/singleSignOnConfigurations",
     "properties": {
       "id": {
         "type": {
@@ -1513,7 +1520,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "The resource-specific properties for this resource."
@@ -1529,7 +1536,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Dynatrace.Observability/monitors/tagRules@2024-04-24",
+    "name": "Dynatrace.Observability/monitors/singleSignOnConfigurations@2024-04-24",
     "body": {
       "$ref": "#/138"
     },
@@ -1538,7 +1545,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Dynatrace.Observability/monitors/singleSignOnConfigurations"
+    "value": "Dynatrace.Observability/monitors/tagRules"
   },
   {
     "$type": "StringLiteralType",
@@ -1546,7 +1553,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Dynatrace.Observability/monitors/singleSignOnConfigurations",
+    "name": "Dynatrace.Observability/monitors/tagRules",
     "properties": {
       "id": {
         "type": {
@@ -1578,7 +1585,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/92"
         },
         "flags": 1,
         "description": "The resource-specific properties for this resource."
@@ -1594,7 +1601,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Dynatrace.Observability/monitors/singleSignOnConfigurations@2024-04-24",
+    "name": "Dynatrace.Observability/monitors/tagRules@2024-04-24",
     "body": {
       "$ref": "#/142"
     },
@@ -1603,468 +1610,14 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LogStatusRequest",
-    "properties": {
-      "monitoredResourceIds": {
-        "type": {
-          "$ref": "#/145"
-        },
-        "flags": 0,
-        "description": "List of azure resource Id of monitored resources for which we get the log status"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MonitoredResourceListResponse",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/154"
-        },
-        "flags": 0,
-        "description": "The items on this page"
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The link to the next page of items"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MonitoredResource",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The ARM id of the resource."
-      },
-      "sendingMetrics": {
-        "type": {
-          "$ref": "#/150"
-        },
-        "flags": 0,
-        "description": "Flag indicating if resource is sending metrics to Dynatrace."
-      },
-      "reasonForMetricsStatus": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Reason for why the resource is sending metrics (or why it is not sending)."
-      },
-      "sendingLogs": {
-        "type": {
-          "$ref": "#/153"
-        },
-        "flags": 0,
-        "description": "Flag indicating if resource is sending logs to Dynatrace."
-      },
-      "reasonForLogsStatus": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Reason for why the resource is sending logs (or why it is not sending)."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/148"
-      },
-      {
-        "$ref": "#/149"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/151"
-      },
-      {
-        "$ref": "#/152"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/147"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listMonitoredResources",
-    "resourceType": "Dynatrace.Observability/monitors",
-    "apiVersion": "2024-04-24",
-    "output": {
-      "$ref": "#/146"
-    },
-    "input": {
-      "$ref": "#/144"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VMHostsListResponse",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/187"
-        },
-        "flags": 0,
-        "description": "The items on this page"
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The link to the next page of items"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VMInfo",
-    "properties": {
-      "resourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Azure VM resource ID"
-      },
-      "version": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Version of the Dynatrace agent installed on the VM."
-      },
-      "monitoringType": {
-        "type": {
-          "$ref": "#/161"
-        },
-        "flags": 0,
-        "description": "The monitoring mode of OneAgent"
-      },
-      "autoUpdateSetting": {
-        "type": {
-          "$ref": "#/164"
-        },
-        "flags": 0,
-        "description": "Update settings of OneAgent."
-      },
-      "updateStatus": {
-        "type": {
-          "$ref": "#/174"
-        },
-        "flags": 0,
-        "description": "The current update status of OneAgent."
-      },
-      "availabilityState": {
-        "type": {
-          "$ref": "#/183"
-        },
-        "flags": 0,
-        "description": "The availability state of OneAgent."
-      },
-      "logModule": {
-        "type": {
-          "$ref": "#/186"
-        },
-        "flags": 0,
-        "description": "Tells whether log modules are enabled or not"
-      },
-      "hostGroup": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of the host group"
-      },
-      "hostName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of the host"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CLOUD_INFRASTRUCTURE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FULL_STACK"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DISCOVERY"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/158"
-      },
-      {
-        "$ref": "#/159"
-      },
-      {
-        "$ref": "#/160"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ENABLED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DISABLED"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/162"
-      },
-      {
-        "$ref": "#/163"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "INCOMPATIBLE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "OUTDATED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SCHEDULED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SUPPRESSED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UNKNOWN"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UP2DATE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UPDATE_IN_PROGRESS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UPDATE_PENDING"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UPDATE_PROBLEM"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/165"
-      },
-      {
-        "$ref": "#/166"
-      },
-      {
-        "$ref": "#/167"
-      },
-      {
-        "$ref": "#/168"
-      },
-      {
-        "$ref": "#/169"
-      },
-      {
-        "$ref": "#/170"
-      },
-      {
-        "$ref": "#/171"
-      },
-      {
-        "$ref": "#/172"
-      },
-      {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CRASHED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "LOST"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "MONITORED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PRE_MONITORED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SHUTDOWN"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UNEXPECTED_SHUTDOWN"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UNKNOWN"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UNMONITORED"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/175"
-      },
-      {
-        "$ref": "#/176"
-      },
-      {
-        "$ref": "#/177"
-      },
-      {
-        "$ref": "#/178"
-      },
-      {
-        "$ref": "#/179"
-      },
-      {
-        "$ref": "#/180"
-      },
-      {
-        "$ref": "#/181"
-      },
-      {
-        "$ref": "#/182"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ENABLED"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DISABLED"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/184"
-      },
-      {
-        "$ref": "#/185"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/157"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listHosts",
-    "resourceType": "Dynatrace.Observability/monitors",
-    "apiVersion": "2024-04-24",
-    "output": {
-      "$ref": "#/156"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "AppServiceListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/175"
         },
-        "flags": 0,
-        "description": "The items on this page"
+        "flags": 1,
+        "description": "The AppServiceInfo items on this page"
       },
       "nextLink": {
         "type": {
@@ -2095,35 +1648,35 @@
       },
       "monitoringType": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "The monitoring mode of OneAgent"
       },
       "autoUpdateSetting": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "Update settings of OneAgent."
       },
       "updateStatus": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/162"
         },
         "flags": 0,
         "description": "The current update status of OneAgent."
       },
       "availabilityState": {
         "type": {
-          "$ref": "#/216"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "The availability state of OneAgent."
       },
       "logModule": {
         "type": {
-          "$ref": "#/219"
+          "$ref": "#/174"
         },
         "flags": 0,
         "description": "Tells whether log modules are enabled or not"
@@ -2160,13 +1713,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/191"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/192"
+        "$ref": "#/147"
       },
       {
-        "$ref": "#/193"
+        "$ref": "#/148"
       },
       {
         "$ref": "#/2"
@@ -2185,10 +1738,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/195"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/196"
+        "$ref": "#/151"
       },
       {
         "$ref": "#/2"
@@ -2235,31 +1788,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/198"
+        "$ref": "#/153"
       },
       {
-        "$ref": "#/199"
+        "$ref": "#/154"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/156"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/157"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/158"
       },
       {
-        "$ref": "#/204"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/205"
+        "$ref": "#/160"
       },
       {
-        "$ref": "#/206"
+        "$ref": "#/161"
       },
       {
         "$ref": "#/2"
@@ -2302,28 +1855,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/208"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/209"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/210"
+        "$ref": "#/165"
       },
       {
-        "$ref": "#/211"
+        "$ref": "#/166"
       },
       {
-        "$ref": "#/212"
+        "$ref": "#/167"
       },
       {
-        "$ref": "#/213"
+        "$ref": "#/168"
       },
       {
-        "$ref": "#/214"
+        "$ref": "#/169"
       },
       {
-        "$ref": "#/215"
+        "$ref": "#/170"
       },
       {
         "$ref": "#/2"
@@ -2342,10 +1895,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/217"
+        "$ref": "#/172"
       },
       {
-        "$ref": "#/218"
+        "$ref": "#/173"
       },
       {
         "$ref": "#/2"
@@ -2355,7 +1908,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/190"
+      "$ref": "#/145"
     }
   },
   {
@@ -2364,7 +1917,319 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2024-04-24",
     "output": {
-      "$ref": "#/189"
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMHostsListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 1,
+        "description": "The VMInfo items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMInfo",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure VM resource ID"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Version of the Dynatrace agent installed on the VM."
+      },
+      "monitoringType": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "The monitoring mode of OneAgent"
+      },
+      "autoUpdateSetting": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 0,
+        "description": "Update settings of OneAgent."
+      },
+      "updateStatus": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 0,
+        "description": "The current update status of OneAgent."
+      },
+      "availabilityState": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "The availability state of OneAgent."
+      },
+      "logModule": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "Tells whether log modules are enabled or not"
+      },
+      "hostGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the host group"
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the host"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CLOUD_INFRASTRUCTURE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FULL_STACK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISCOVERY"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "INCOMPATIBLE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OUTDATED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SCHEDULED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SUPPRESSED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UNKNOWN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UP2DATE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UPDATE_IN_PROGRESS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UPDATE_PENDING"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UPDATE_PROBLEM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CRASHED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LOST"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MONITORED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PRE_MONITORED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHUTDOWN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UNEXPECTED_SHUTDOWN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UNKNOWN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UNMONITORED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/178"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listHosts",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2024-04-24",
+    "output": {
+      "$ref": "#/177"
     }
   },
   {
@@ -2400,17 +2265,17 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/213"
         },
-        "flags": 0,
-        "description": "List of environments for which user is an admin"
+        "flags": 1,
+        "description": "The LinkableEnvironmentResponse items on this page"
       },
       "nextLink": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Link to the next set of results, if any."
+        "description": "The link to the next page of items"
       }
     }
   },
@@ -2444,7 +2309,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/224"
+      "$ref": "#/212"
     }
   },
   {
@@ -2453,10 +2318,152 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2024-04-24",
     "output": {
-      "$ref": "#/223"
+      "$ref": "#/211"
     },
     "input": {
-      "$ref": "#/222"
+      "$ref": "#/210"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogStatusRequest",
+    "properties": {
+      "monitoredResourceIds": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "List of azure resource Id of monitored resources for which we get the log status"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResourceListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 1,
+        "description": "The MonitoredResource items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ARM id of the resource."
+      },
+      "sendingMetrics": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "Flag indicating if resource is sending metrics to Dynatrace."
+      },
+      "reasonForMetricsStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for why the resource is sending metrics (or why it is not sending)."
+      },
+      "sendingLogs": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0,
+        "description": "Flag indicating if resource is sending logs to Dynatrace."
+      },
+      "reasonForLogsStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for why the resource is sending logs (or why it is not sending)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listMonitoredResources",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2024-04-24",
+    "output": {
+      "$ref": "#/217"
+    },
+    "input": {
+      "$ref": "#/215"
     }
   }
 ]

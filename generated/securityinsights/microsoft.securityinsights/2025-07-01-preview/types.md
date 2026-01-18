@@ -154,30 +154,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/businessApplicationAgents@2025-07-01-preview
-* **Readable Scope(s)**: Extension
-* **Writable Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9,-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [AgentProperties](#agentproperties) (Required)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SecurityInsights/businessApplicationAgents' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.SecurityInsights/businessApplicationAgents/systems@2025-07-01-preview
-* **Readable Scope(s)**: Extension
-* **Writable Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9,-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SystemProperties](#systemproperties) (Required): The properties of the system.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SecurityInsights/businessApplicationAgents/systems' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.SecurityInsights/contentPackages@2025-07-01-preview
 * **Readable Scope(s)**: Extension
 * **Writable Scope(s)**: Extension
@@ -357,6 +333,11 @@
 #### Properties
 * **kind**: 'OfficePowerBI' (Required): The data connector kind
 * **properties**: [OfficePowerBIDataConnectorProperties](#officepowerbidataconnectorproperties): Office Microsoft PowerBI data connector properties.
+
+### PremiumMicrosoftDefenderForThreatIntelligence
+#### Properties
+* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): The data connector kind
+* **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Microsoft Defender for Threat Intelligence Premium data connector properties.
 
 ### PurviewAuditDataConnector
 #### Properties
@@ -611,7 +592,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties)
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -647,7 +628,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentTaskProperties](#incidenttaskproperties) (Required)
+* **properties**: [IncidentTaskProperties](#incidenttaskproperties) (Required): Describes the properties of an incident task
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -871,11 +852,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/workspaceManagerMembers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listActions (Microsoft.SecurityInsights/businessApplicationAgents/systems@2025-07-01-preview)
-* **Resource**: Microsoft.SecurityInsights/businessApplicationAgents/systems
-* **ApiVersion**: 2025-07-01-preview
-* **Output**: [ListActionsResponse](#listactionsresponse)
-
 ## Function listGeodataByIp (Microsoft.SecurityInsights/enrichment@2025-07-01-preview)
 * **Resource**: Microsoft.SecurityInsights/enrichment
 * **ApiVersion**: 2025-07-01-preview
@@ -914,24 +890,6 @@
 * **puid**: string (ReadOnly): The Azure Active Directory Passport User ID.
 * **sid**: string (ReadOnly): The account security identifier, e.g. S-1-5-18.
 * **upnSuffix**: string (ReadOnly): The user principal name suffix for the account, in some cases it is also the domain name. Examples: contoso.com.
-
-## Action
-* **Discriminator**: kind
-
-### Base Properties
-
-### LockUserAction
-#### Properties
-* **failureReason**: string: The reason of the failure of the action. Empty if the action is successful.
-* **kind**: 'LockUser' (Required): The actions kind
-* **user**: string: The user to lock
-
-### UnlockUserAction
-#### Properties
-* **failureReason**: string: The reason of the failure of the action. Empty if the action is successful.
-* **kind**: 'UnlockUser' (Required): The actions kind
-* **user**: string: The user to unlock
-
 
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
@@ -987,41 +945,6 @@
 ### Properties
 * **description**: string: The description of the task.
 * **title**: string (Required): The title of the task.
-
-## AgentConfiguration
-* **Discriminator**: type
-
-### Base Properties
-
-### SapAgentConfiguration
-#### Properties
-* **agentContainerName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_-]*$"}: The name of the docker agent.
-only letters with numbers, underscores and hyphens are allowed
-example: "my-agent"
-* **keyVaultAuthenticationMode**: 'ManagedIdentity' | 'ServicePrincipal' | string: The key mode of the agent.
-ManagedIdentity|ApplicationIdentity are the options
-* **keyVaultResourceId**: string {pattern: "^\/?subscriptions\/([^\/]+)\/resourceGroups\/([^\/]+)\/providers\/Microsoft\.KeyVault\/vaults\/([^\/]+)$"}: The key vault resource id to access the key vault.
-example: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.KeyVault/vaults/myVault"
-* **sdkPath**: string {pattern: "^/(([^/]+/)*nwrfc75.*\.zip$)|^((?:[a-zA-Z]:)?(?:\\|\\\\)(?:[^\\/:*?\"<>|\r\n]+\\)*nwrfc75.*\.zip)$"}: The SDK path (a file not a folder) on the agent machine.
-example: "/path/to/nwrfc750P_8-70002755.zip"
-* **secretSource**: 'AzureKeyVault' | string: The secret source of the agent.
-AzureKeyVault is the option
-* **sncPath**: string {pattern: "^\/(?:[^/]+\/)*[^/]+$|^(?:[a-zA-Z]:)?(?:\\|\\\\)(?:[^\\/:*?\"<>|\r\n]+\\)*[^\\/:*?"<>|\r\n]*$"}: The SNC path (a folder not a file) on the agent machine.
-example: "/path/to/snc"
-* **type**: 'SAP' (Required): Type of the agent
-
-
-## AgentProperties
-### Properties
-* **agentSystems**: [AgentSystem](#agentsystem)[] (ReadOnly)
-* **configuration**: [AgentConfiguration](#agentconfiguration) (Required): Describes the configuration of a Business Application Agent.
-* **displayName**: string {minLength: 1} (Required)
-* **lastModifiedTimeUtc**: string (ReadOnly)
-
-## AgentSystem
-### Properties
-* **systemDisplayName**: string
-* **systemResourceName**: string
 
 ## AlertDetailsOverride
 ### Properties
@@ -1881,7 +1804,7 @@ The logo value should be in SVG format.
 
 ## FusionAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2142,7 +2065,7 @@ The base query is wrapped by Sentinel UI infra with a KQL query, that measures t
 * **description**: string: The description of the task
 * **lastModifiedBy**: [ClientInfo](#clientinfo): Information on the client (user or application) that made some action
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the task was updated
-* **status**: 'Completed' | 'New' | string (Required)
+* **status**: 'Completed' | 'New' | string (Required): The status of the task
 * **title**: string (Required): The title of the task
 
 ## InstructionStep
@@ -2243,20 +2166,6 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ListActionsResponse
-### Properties
-* **nextLink**: string: The link to fetch the next page of actions.
-* **value**: [Action](#action)[] (Required): Array of actions.
-
-## Log
-### Properties
-* **bulkSize**: int: The bulk size for the log.
-* **filters**: string[]: The filters for the log.
-* **ingestionType**: 'Full' | 'Incremental' | string: Types of ingestion.
-* **scheduleInterval**: int: The schedule interval in seconds.
-* **status**: 'Disabled' | 'Enabled' | string: Types of log status.
-* **type**: 'ADCP' | 'ADR6' | 'AGR1251' | 'AGRAGRS' | 'AGRDEFINE' | 'AGRFLAGS' | 'AGRPROF' | 'AGRTCODES' | 'AGRUSERS' | 'AbapAppLog' | 'AbapAuditLog' | 'AbapChangeDocsLog' | 'AbapCrLog' | 'AbapFilesLogs' | 'AbapJobLog' | 'AbapSpoolLog' | 'AbapSpoolOutputLog' | 'AbapTableDataLog' | 'AbapWorkflowLog' | 'DEVACCESS' | 'JavaFilesLogs' | 'PAHI' | 'SNCSYSACL' | 'USERADDR' | 'USGRPUSER' | 'USR01' | 'USR02' | 'USR05' | 'USR21' | 'USRACL' | 'USRSTAMP' | 'UST04' | string (Required): Types of logs and tables.
 
 ## MailboxEntityProperties
 ### Properties
@@ -2423,7 +2332,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2449,7 +2358,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MLBehaviorAnalyticsAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -2535,7 +2444,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## NrtAlertRuleTemplateProperties
 ### Properties
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **customDetails**: [QueryBasedAlertRuleTemplatePropertiesCustomDetails](#querybasedalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
@@ -2684,6 +2593,21 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 * **logicAppResourceId**: string (Required): The resource id of the playbook resource.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
+
+## PremiumMdtiDataConnectorDataTypes
+### Properties
+* **connector**: [PremiumMdtiDataConnectorDataTypesConnector](#premiummdtidataconnectordatatypesconnector) (Required): Data type for Microsoft Defender for Threat Intelligence Premium data connector.
+
+## PremiumMdtiDataConnectorDataTypesConnector
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
+
+## PremiumMdtiDataConnectorProperties
+### Properties
+* **dataTypes**: [PremiumMdtiDataConnectorDataTypes](#premiummdtidataconnectordatatypes) (Required): The available data types for the connector.
+* **lookbackPeriod**: string (Required): The lookback period for the feed to be imported. The date-time to begin importing the feed from, for example: 2024-01-01T00:00:00.000Z.
+* **requiredSKUsPresent**: bool: The flag to indicate whether the tenant has the premium SKU required to access this connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## ProcessEntityProperties
 ### Properties
@@ -2963,7 +2887,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## ScheduledAlertRuleTemplateProperties
 ### Properties
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **customDetails**: [ScheduledAlertRuleTemplatePropertiesCustomDetails](#scheduledalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
@@ -3113,63 +3037,6 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## SystemProperties
-### Properties
-* **configuration**: [SystemsConfiguration](#systemsconfiguration) (Required): The configuration of the system.
-* **displayName**: string {minLength: 1} (Required)
-* **lastModifiedTimeUtc**: string (ReadOnly)
-* **status**: 'Running' | 'Stopped' | string: The status of the system.
-
-## SystemsConfiguration
-* **Discriminator**: type
-
-### Base Properties
-
-### SapSystemsConfiguration
-#### Properties
-* **azureResourceId**: string {pattern: "^\/?subscriptions\/([^\/]+)\/resourceGroups\/([^\/]+)\/providers\/([^\/]+)\/([^\/]+)\/([^\/]+)$"}: azure resource id
-example: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM"
-* **connector**: [SystemsConfigurationConnector](#systemsconfigurationconnector) (Required): Base Model for SAP System Connector.
-* **logs**: [Log](#log)[]: The logs configuration.
-* **type**: 'SAP' (Required): Represents the types of configuration for a system.
-
-
-## SystemsConfigurationConnector
-* **Discriminator**: type
-
-### Base Properties
-
-### RfcConnector
-#### Properties
-* **abapServerHost**: string: FQDN, hostname, or IP address of the ABAP server.
-* **authenticationType**: 'Snc' | 'SncWithUsernamePassword' | 'UsernamePassword' | string: The authentication type to SAP.
-* **client**: string {minLength: 1, pattern: "^[0-9]{3}$"} (Required): Client number of the ABAP server.
-Example - 001
-* **codePage**: string {pattern: "^(?:[a-zA-Z0-9]{4}|UTF-8)$"}: The SAP code page used for character encoding.
-Example - 1100
-* **group**: string: Logon group of the message server.
-* **messageServerHost**: string: FQDN, hostname, or IP address of the Message server.
-* **messageServerService**: string: Port number, or service name (from /etc/services) of the message server.
-* **sncQop**: string {pattern: "^[1,2,3,8,9]$"}: SNC QOP.
-Options are 1, 2, 3, 8, 9.
-* **systemId**: string {minLength: 1, pattern: "^[a-zA-Z0-9]{3}$"} (Required): System ID of the ABAP server.
-Example - A4H
-* **systemNumber**: string {minLength: 1, pattern: "^\d{1,3}$"} (Required): System number of the ABAP server.
-* **type**: 'Rfc' (Required): Represents the types of SAP systems.
-
-### SapControlConnector
-#### Properties
-* **httpsConfiguration**: 'HttpOnly' | 'HttpsWithSslVerification' | 'HttpsWithoutSslVerification' | string: Represents the types of HTTPS configuration to connect to the SapControl service.
-* **instance**: string {minLength: 1, pattern: "^\d{2}$"} (Required): The instance number. Only 2 digits are allowed.
-* **port**: string {pattern: "^\d{1,5}$"}: The port of the SOAP connection to SAP Control.
-* **server**: string {minLength: 1, pattern: "^([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}$|^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$"} (Required): The server name.
-FQDN or IP address.
-* **timezone**: string {pattern: "^GMT[+-]\d+$"}: The timezone.
-example: "GMT+0" or "GMT-8"
-default: "GMT+0"
-* **type**: 'SapControl' (Required): Represents the types of SAP systems.
-
-
 ## TeamInformation
 ### Properties
 * **description**: string (ReadOnly): The description of the team
@@ -3231,7 +3098,7 @@ default: "GMT+0"
 
 ## ThreatIntelligenceAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -3416,7 +3283,7 @@ default: "GMT+0"
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
-* **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
+* **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist

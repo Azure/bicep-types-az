@@ -47,7 +47,7 @@
 * **aadBasedSecurityPrincipals**: [AADBasedSecurityPrincipal](#aadbasedsecurityprincipal)[]: Array of all AAD based Security Principals.
 * **applicationType**: 'CodeTransparency' | 'ConfidentialLedger' | string: Application type of the Confidential Ledger.
 * **certBasedSecurityPrincipals**: [CertBasedSecurityPrincipal](#certbasedsecurityprincipal)[]: Array of all cert based Security Principals.
-* **enclavePlatform**: 'AmdSevSnp' | 'IntelSgx' | string: Enclave platform of the Confidential Ledger.
+* **enclavePlatform**: 'AmdSevSnp' | 'IntelSgx' | string (ReadOnly): Enclave platform of the Confidential Ledger.
 * **hostLevel**: string: CCF Property for the logging level for the untrusted host: Trace, Debug, Info, Fail, Fatal.
 * **identityServiceUri**: string (ReadOnly): Endpoint for accessing network identity.
 * **ledgerInternalNamespace**: string (ReadOnly): Internal namespace for the Ledger
@@ -69,7 +69,7 @@
 * **appName**: string (ReadOnly): Unique name for the Managed CCF.
 * **appUri**: string (ReadOnly): Endpoint for calling Managed CCF Service.
 * **deploymentType**: [DeploymentType](#deploymenttype): Deployment Type of Managed CCF
-* **enclavePlatform**: 'AmdSevSnp' | 'IntelSgx' | string: Enclave platform of Managed CCF.
+* **enclavePlatform**: 'AmdSevSnp' | 'IntelSgx' | string (ReadOnly): Enclave platform of Managed CCF.
 * **identityServiceUri**: string (ReadOnly): Endpoint for accessing network identity.
 * **memberIdentityCertificates**: [MemberIdentityCertificate](#memberidentitycertificate)[]: List of member identity certificates for  Managed CCF
 * **nodeCount**: int: Number of CCF nodes in the Managed CCF.

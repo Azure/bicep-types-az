@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties) (Required): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -22,6 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionList](#subscriptionlist): The request to update subscriptions needed to be monitored by the NewRelic monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'NewRelic.Observability/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource NewRelic.Observability/monitors/tagRules@2025-05-01-preview
@@ -61,7 +62,7 @@
 ## AccountInfo
 ### Properties
 * **accountId**: string: Account id
-* **ingestionKey**: string {sensitive}: ingestion key of account
+* **ingestionKey**: string {sensitive}: Credential string.
 * **region**: string: Region where New Relic account is present
 
 ## AppServiceInfo
@@ -73,7 +74,7 @@
 ## AppServicesGetRequest
 ### Properties
 * **azureResourceIds**: string[]: Azure resource IDs
-* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): User Email
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
 
 ## AppServicesListResponse
 ### Properties
@@ -93,8 +94,8 @@
 
 ## ConnectedPartnerResourcesListResponse
 ### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [ConnectedPartnerResourcesListFormat](#connectedpartnerresourceslistformat)[]: Results of a list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [ConnectedPartnerResourcesListFormat](#connectedpartnerresourceslistformat)[] (Required): The ConnectedPartnerResourcesListFormat items on this page
 
 ## FilteringTag
 ### Properties
@@ -104,7 +105,7 @@
 
 ## HostsGetRequest
 ### Properties
-* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): User Email
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
 * **vmIds**: string[]: VM resource IDs
 
 ## LinkedResource
@@ -113,8 +114,8 @@
 
 ## LinkedResourceListResponse
 ### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [LinkedResource](#linkedresource)[]: Results of a list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [LinkedResource](#linkedresource)[] (Required): The LinkedResource items on this page
 
 ## LogRules
 ### Properties
@@ -128,14 +129,14 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## MetricRules
 ### Properties
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics.
 * **sendMetrics**: 'Disabled' | 'Enabled' | string: Flag specifying if metrics should be sent for the Monitor resource.
-* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: User Email
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Reusable representation of an email address
 
 ## MonitoredSubscription
 ### Properties
@@ -229,7 +230,7 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## UserInfo
 ### Properties
 * **country**: string: country if user
-* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: User Email
+* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Reusable representation of an email address
 * **firstName**: string {maxLength: 50}: First name
 * **lastName**: string {maxLength: 50}: Last name
 * **phoneNumber**: string {maxLength: 40}: Contact phone number

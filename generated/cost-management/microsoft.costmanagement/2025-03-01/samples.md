@@ -1038,13 +1038,43 @@ resource exampleResource 'Microsoft.CostManagement/exports@2025-03-01' = {
 
 ## microsoft.costmanagement/scheduledactions
 
-CreateOrUpdatePrivateScheduledAction
+CreateOrUpdateInsightAlertScheduledActionByScope
+```bicep
+resource exampleResource 'Microsoft.CostManagement/scheduledActions@2025-03-01' = {
+  name: 'example'
+  kind: 'InsightAlert'
+  properties: {
+    displayName: 'Daily anomaly by resource'
+    notification: {
+      subject: 'Cost anomaly detected in the resource'
+      to: [
+        'user@gmail.com'
+        'team@gmail.com'
+      ]
+    }
+    schedule: {
+      endDate: '2021-06-19T22:21:51.1287144Z'
+      frequency: 'Daily'
+      startDate: '2020-06-19T22:21:51.1287144Z'
+    }
+    status: 'Enabled'
+    viewId: '/providers/Microsoft.CostManagement/views/swaggerExample'
+  }
+}
+```
+
+CreateOrUpdateScheduledActionByScope
 ```bicep
 resource exampleResource 'Microsoft.CostManagement/scheduledActions@2025-03-01' = {
   name: 'example'
   kind: 'Email'
   properties: {
     displayName: 'Monthly Cost By Resource'
+    fileDestination: {
+      fileFormats: [
+        'Csv'
+      ]
+    }
     notification: {
       subject: 'Cost by resource this month'
       to: [
@@ -1086,7 +1116,7 @@ resource exampleResource 'Microsoft.CostManagement/settings@2025-03-01' = {
 
 ## microsoft.costmanagement/views
 
-CreateOrUpdatePrivateView
+ResourceGroupCreateOrUpdateView
 ```bicep
 resource exampleResource 'Microsoft.CostManagement/views@2025-03-01' = {
   name: 'example'

@@ -568,19 +568,6 @@ resource exampleResource 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicie
 }
 ```
 
-## microsoft.synapse/workspaces/sqlpools/metadatasync
-
-Set metadata sync config for a SQL Analytics pool
-```bicep
-resource exampleResource 'Microsoft.Synapse/workspaces/sqlPools/metadataSync@2021-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    enabled: true
-  }
-}
-```
-
 ## microsoft.synapse/workspaces/sqlpools/schemas/tables/columns/sensitivitylabels
 
 Updates the sensitivity label of a given column with all parameters

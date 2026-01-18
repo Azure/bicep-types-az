@@ -9,12 +9,12 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Msi identity of the resource
 * **kind**: 'AzureDataBoxGateway' | 'AzureModularDataCentre' | 'AzureStackEdge' | 'AzureStackHub' | string (ReadOnly): The kind of the device.
-* **location**: string (Required): The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataBoxEdgeDeviceProperties](#databoxedgedeviceproperties): The properties of the Data Box Edge/Gateway device.
 * **sku**: [Sku](#sku): The SKU type.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): DataBoxEdge Resource
-* **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2023-12-01
@@ -25,7 +25,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Properties of alert.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Alert
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2023-12-01
@@ -36,7 +36,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BandwidthScheduleProperties](#bandwidthscheduleproperties) (Required): The properties of the bandwidth schedule.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of BandwidthSchedule
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/deviceCapacityInfo@2023-12-01
@@ -47,7 +47,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DeviceCapacityInfoProperties](#devicecapacityinfoproperties) (ReadOnly): The device capacity properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to device capacity info.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/deviceCapacityInfo' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings@2023-12-01
@@ -58,7 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ProactiveLogCollectionSettingsProperties](#proactivelogcollectionsettingsproperties) (Required): Properties of the diagnostic proactive log collection settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of DiagnosticProactiveLogCollectionSettings
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticRemoteSupportSettings@2023-12-01
@@ -69,8 +69,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticRemoteSupportSettingsProperties](#diagnosticremotesupportsettingsproperties) (Required): Properties of the remote support  settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Represents resource creation and updation time
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticRemoteSupportSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/jobs@2023-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2023-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **endTime**: string (ReadOnly): The UTC date and time at which the job completed.
+* **error**: [JobErrorDetails](#joberrordetails) (ReadOnly): The error details.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **percentComplete**: int (ReadOnly): The percentage of the job that is complete.
+* **properties**: [JobProperties](#jobproperties) (ReadOnly): The properties of the job.
+* **startTime**: string (ReadOnly): The UTC date and time at which the job started.
+* **status**: 'Canceled' | 'Failed' | 'Invalid' | 'Paused' | 'Running' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The current status of the job.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2023-12-01
 * **Readable Scope(s)**: ResourceGroup
@@ -80,8 +96,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSettingsProperties](#networksettingsproperties) (ReadOnly): The properties of network settings of a device.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of NetworkSettings
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/operationsStatus@2023-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2023-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **endTime**: string (ReadOnly): The UTC date and time at which the job completed.
+* **error**: [JobErrorDetails](#joberrordetails) (ReadOnly): The error details.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **percentComplete**: int (ReadOnly): The percentage of the job that is complete.
+* **properties**: [JobProperties](#jobproperties) (ReadOnly): The properties of the job.
+* **startTime**: string (ReadOnly): The UTC date and time at which the job started.
+* **status**: 'Canceled' | 'Failed' | 'Invalid' | 'Paused' | 'Running' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The current status of the job.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/operationsStatus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2023-12-01
 * **Readable Scope(s)**: ResourceGroup
@@ -92,7 +124,7 @@
 * **kind**: string (ReadOnly): It specify the order api version.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [OrderProperties](#orderproperties): The order properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Order
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2023-12-01
@@ -104,7 +136,7 @@
 * **apiVersion**: '2023-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Role
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
 
 ### CloudEdgeManagementRole
@@ -137,7 +169,7 @@
 * **apiVersion**: '2023-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Addon
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons' (ReadOnly, DeployTimeConstant): The resource type
 
 ### ArcAddon
@@ -159,7 +191,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringMetricConfigurationProperties](#monitoringmetricconfigurationproperties) (Required): The metric setting properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of MonitoringConfiguration
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2023-12-01
@@ -170,7 +202,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ShareProperties](#shareproperties) (Required): The share properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Share
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2023-12-01
@@ -181,7 +213,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): The storage account credential properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of StorageAccountCredential
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2023-12-01
@@ -192,7 +224,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountProperties](#storageaccountproperties) (Required): The Storage Account properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of StorageAccount
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2023-12-01
@@ -203,7 +235,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerProperties](#containerproperties) (Required): The container properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Container
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2023-12-01
@@ -215,7 +247,7 @@
 * **apiVersion**: '2023-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Trigger
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ### FileEventTrigger
@@ -237,7 +269,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [UpdateSummaryProperties](#updatesummaryproperties) (ReadOnly): The device update information summary.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of UpdateSummary
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2023-12-01
@@ -248,7 +280,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties) (Required): The storage account credential properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of User
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listDCAccessCode (Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2023-12-01)
@@ -413,11 +445,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): DataBoxEdge Device Properties
 * **timeZone**: string (ReadOnly): The Data Box Edge/Gateway device timezone.
 
-## DataBoxEdgeDeviceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## DataResidency
 ### Properties
 * **type**: 'GeoZoneReplication' | 'ZoneReplication' | string: DataResidencyType enum
@@ -538,6 +565,29 @@
 * **gateway**: string (ReadOnly): The IPv6 gateway of the network adapter.
 * **ipAddress**: string (ReadOnly): The IPv6 address of the network adapter.
 * **prefixLength**: int (ReadOnly): The IPv6 prefix of the network adapter.
+
+## JobErrorDetails
+### Properties
+* **code**: string (ReadOnly): The code intended for programmatic access.
+* **errorDetails**: [JobErrorItem](#joberroritem)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The message that describes the error in detail.
+
+## JobErrorItem
+### Properties
+* **code**: string (ReadOnly): The code intended for programmatic access.
+* **message**: string (ReadOnly): The message that describes the error in detail.
+* **recommendations**: string[] (ReadOnly): The recommended actions.
+
+## JobProperties
+### Properties
+* **currentStage**: 'DownloadComplete' | 'DownloadFailed' | 'DownloadStarted' | 'Failure' | 'Initial' | 'InstallComplete' | 'InstallFailed' | 'InstallStarted' | 'RebootInitiated' | 'RescanComplete' | 'RescanFailed' | 'RescanStarted' | 'ScanComplete' | 'ScanFailed' | 'ScanStarted' | 'Success' | 'Unknown' | string (ReadOnly): Current stage of the update operation.
+* **downloadProgress**: [UpdateDownloadProgress](#updatedownloadprogress) (ReadOnly): The download progress.
+* **errorManifestFile**: string (ReadOnly): Local share/remote container relative path to the error manifest file of the refresh.
+* **folder**: string: If only subfolders need to be refreshed, then the subfolder path inside the share or container. (The path is empty if there are no subfolders.)
+* **installProgress**: [UpdateInstallProgress](#updateinstallprogress) (ReadOnly): The install progress.
+* **jobType**: 'Backup' | 'DownloadUpdates' | 'InstallUpdates' | 'Invalid' | 'RefreshContainer' | 'RefreshShare' | 'Restore' | 'ScanForUpdates' | 'TriggerSupportPackage' | string (ReadOnly): The type of the job.
+* **refreshedEntityId**: string (ReadOnly): ARM ID of the entity that was refreshed.
+* **totalRefreshErrors**: int (ReadOnly): Total number of errors encountered during the refresh process.
 
 ## KubernetesClusterInfo
 ### Properties
@@ -817,6 +867,11 @@ by the already existing properties
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TrackingInfo
 ### Properties
 * **carrierName**: string: Name of the carrier used in the delivery.
@@ -835,6 +890,21 @@ by the already existing properties
 * **updateSize**: int: Size of the update(In Bytes)
 * **updateTitle**: string: Title of the Update
 * **updateType**: 'Firmware' | 'Kubernetes' | 'Software' | string: Type of the Update
+
+## UpdateDownloadProgress
+### Properties
+* **downloadPhase**: 'Downloading' | 'Initializing' | 'Unknown' | 'Verifying' | string (ReadOnly): The download phase.
+* **numberOfUpdatesDownloaded**: int (ReadOnly): Number of updates downloaded.
+* **numberOfUpdatesToDownload**: int (ReadOnly): Number of updates to download.
+* **percentComplete**: int (ReadOnly): Percentage of completion.
+* **totalBytesDownloaded**: int (ReadOnly): Total bytes downloaded.
+* **totalBytesToDownload**: int (ReadOnly): Total bytes to download.
+
+## UpdateInstallProgress
+### Properties
+* **numberOfUpdatesInstalled**: int (ReadOnly): Number of updates installed.
+* **numberOfUpdatesToInstall**: int (ReadOnly): Number of updates to install.
+* **percentComplete**: int (ReadOnly): Percentage completed.
 
 ## UpdateSummaryProperties
 ### Properties

@@ -1,4 +1,4 @@
-Generating types for 'specification/purview/resource-manager/readme.md'
+Generating types for 'specification/purview/resource-manager/Microsoft.Purview/Purview/readme.md'
 AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
@@ -12,23 +12,23 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Account-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:1586:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:1586:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-accountStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:1695:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:1695:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-endpoints' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:1728:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:1728:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-managedResources' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:1767:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:1767:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountStatus-errorDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:1900:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:1900:9
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseModel-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:2201:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:2201:9
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:2801:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:2801:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:2911:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:2911:9
 warning | PreCheck/SchemaMissingType | The schema 'Usage-name' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2024-04-01-preview/purview.json:2956:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2024-04-01-preview/purview.json:2956:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AccountSku' -> 'AccountSkuAutoGenerated'
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTenantId"
@@ -39,23 +39,23 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Account-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:1586:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:1586:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-accountStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:1638:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:1638:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-endpoints' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:1666:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:1666:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-managedResources' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:1705:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:1705:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountStatus-errorDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:1821:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:1821:9
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseModel-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:2121:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:2121:9
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:2720:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:2720:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:2830:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:2830:9
 warning | PreCheck/SchemaMissingType | The schema 'Usage-name' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2023-05-01-preview/purview.json:2875:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2023-05-01-preview/purview.json:2875:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AccountSku' -> 'AccountSkuAutoGenerated'
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTenantId"
@@ -66,15 +66,15 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Account-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json:972:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2020-12-01-preview/purview.json:972:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-endpoints' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json:1029:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2020-12-01-preview/purview.json:1029:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-managedResources' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json:1051:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2020-12-01-preview/purview.json:1051:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json:1103:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2020-12-01-preview/purview.json:1103:9
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseModel-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json:1329:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/preview/2020-12-01-preview/purview.json:1329:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AccountSku' -> 'AccountSkuAutoGenerated'
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTenantId"
@@ -85,15 +85,15 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Account-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-07-01/purview.json:1021:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-07-01/purview.json:1021:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-endpoints' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-07-01/purview.json:1078:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-07-01/purview.json:1078:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-managedResources' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-07-01/purview.json:1100:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-07-01/purview.json:1100:9
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseModel-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-07-01/purview.json:1395:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-07-01/purview.json:1395:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-07-01/purview.json:1914:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-07-01/purview.json:1914:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AccountSku' -> 'AccountSkuAutoGenerated'
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTenantId"
@@ -104,23 +104,23 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Account-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1399:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1399:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-accountStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1436:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1436:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-endpoints' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1465:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1465:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountProperties-managedResources' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1501:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1501:9
 warning | PreCheck/SchemaMissingType | The schema 'AccountStatus-errorDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1720:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1720:9
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseModel-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:1879:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:1879:9
 warning | PreCheck/SchemaMissingType | The schema 'Usage-name' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:2523:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:2523:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:2575:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:2575:9
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/stable/2021-12-01/purview.json:2613:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/purview/resource-manager/Microsoft.Purview/Purview/stable/2021-12-01/purview.json:2613:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AccountSku' -> 'AccountSkuAutoGenerated'
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTenantId"

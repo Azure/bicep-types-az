@@ -760,57 +760,6 @@ resource exampleResource 'Microsoft.SecurityInsights/bookmarks/relations@2024-04
 }
 ```
 
-## microsoft.securityinsights/businessapplicationagents/systems
-
-Systems_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/businessApplicationAgents/systems@2024-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    configuration: {
-      type: 'SAP'
-      azureResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace'
-      connector: {
-        type: 'Rfc'
-        abapServerHost: '1.1.1.1'
-        authenticationType: 'UsernamePassword'
-        client: '001'
-        systemId: 'A4H'
-        systemNumber: '001'
-      }
-      logs: [
-        {
-          type: 'AbapAuditLog'
-          bulkSize: 100
-          filters: [
-            'filter1'
-            'filter2'
-          ]
-          ingestionType: 'Incremental'
-          scheduleInterval: 60
-          status: 'Enabled'
-        }
-        {
-          type: 'USR01'
-          bulkSize: 100
-          filters: [
-            'filter1'
-            'filter2'
-          ]
-          ingestionType: 'Incremental'
-          scheduleInterval: 60
-          status: 'Enabled'
-        }
-      ]
-    }
-    displayName: 'A4H_System'
-    status: 'Running'
-  }
-}
-```
-
 ## microsoft.securityinsights/contentpackages
 
 Install a package to the workspace.
