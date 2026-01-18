@@ -12,6 +12,6 @@
     <PackageVersion Include="FluentAssertions" Version="7.2.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.11.0" />
-    <PackageVersion Include="MSTest.TestFramework" Version="3.10.0" />
+    <PackageVersion Include="MSTest.TestFramework" Version="4.0.2" />
   </ItemGroup>
 </Project>

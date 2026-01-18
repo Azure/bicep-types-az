@@ -43,11 +43,11 @@
       },
       "MSTest.TestFramework": {
         "type": "Direct",
-        "requested": "[3.10.0, )",
-        "resolved": "3.10.0",
-        "contentHash": "G0LStK5LWTzMaM052tBKeWt8S2psHz/UXmsN5XTsLDqCzEl/Q7ysMvlOP/iVd+WDUMse76T66LV160mvqg+87A==",
+        "requested": "[4.0.2, )",
+        "resolved": "4.0.2",
+        "contentHash": "ANLNvVh13tfi4ou0Xu0bZ5J83brlLufxMVVp1feUm99cWtfEn8i8PH4kskD0HSp1bFl8goZiHoCwd+fu/0L2hA==",
         "dependencies": {
-          "MSTest.Analyzers": "3.10.0"
+          "MSTest.Analyzers": "4.0.2"
         }
       },
       "Nerdbank.GitVersioning": {
@@ -150,8 +150,8 @@
       },
       "MSTest.Analyzers": {
         "type": "Transitive",
-        "resolved": "3.10.0",
-        "contentHash": "NpP5VVBipv4dVyf9K6QVJGHkkzj6bUmTG8fFdyo1uavSoUzpSNpJ8VVxbEojMd33JxAcnp9WRfdIEUBLrcMh2A=="
+        "resolved": "4.0.2",
+        "contentHash": "83PHm/97WR6XuciUicakLXSPDFubMsphUHxQHgkUfHcF8rOjpnlKSjRazhuvcGeqy2co8ZudUNbTM+u5e5Ujow=="
       },
       "Newtonsoft.Json": {
         "type": "Transitive",
@@ -242,14 +242,14 @@
       "Azure.Bicep.Types.Az": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types": "[0.5.194, )"
+          "Azure.Bicep.Types": "[0.6.27, )"
         }
       },
       "Azure.Bicep.Types": {
         "type": "CentralTransitive",
-        "requested": "[0.5.194, )",
-        "resolved": "0.5.194",
-        "contentHash": "FsaIfQGuQQvUrzyAvUBxrS/6G6fHRnzmq7dKu1h6hBNKaQG9+N3u7RUSIAdonNBbnuxAxyxyE6OmDkCw/9x4YA==",
+        "requested": "[0.6.27, )",
+        "resolved": "0.6.27",
+        "contentHash": "wf027BKeJl33hwJgLsHrt3heCLwJX70oOVm6Y4zHiOZrRzzoVwvi0UUNkBxLq0aUlOFhlQ+o0FPU3hw3fIOr9g==",
         "dependencies": {
           "System.Text.Json": "9.0.4"
         }
