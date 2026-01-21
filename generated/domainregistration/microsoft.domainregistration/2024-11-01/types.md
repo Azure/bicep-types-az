@@ -6,11 +6,12 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things_You_Should_Know/kind_property.md#app-service-resource-kind-reference for details supported values for kind.
-* **location**: string (Required): Resource Location.
+* **kind**: string: Kind of resource
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "[a-zA-Z0-9][a-zA-Z0-9\.-]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2024-11-01
@@ -19,9 +20,10 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
+* **kind**: string: Kind of resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DomainRegistration/topLevelDomains@2024-11-01
@@ -30,9 +32,10 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string (ReadOnly): Kind of resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopLevelDomainProperties](#topleveldomainproperties) (ReadOnly): TopLevelDomain resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DomainRegistration/topLevelDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2024-11-01)
@@ -68,7 +71,7 @@
 
 ## DomainProperties
 ### Properties
-* **authCode**: string
+* **authCode**: string: Authorization code for the domain.
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
 * **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required, WriteOnly): Legal agreement consent.
 * **contactAdmin**: [Contact](#contact) (Required, WriteOnly): Administrative contact.
@@ -85,8 +88,7 @@
 * **nameServers**: string[] (ReadOnly): Name servers.
 * **privacy**: bool: <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Domain provisioning state.
-* **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
- it is hosted on name servers Azure has programmatic access to.
+* **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and \n it is hosted on name servers Azure has programmatic access to.
 * **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status.
 * **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration)
 
@@ -105,10 +107,14 @@
 * **name**: string: Name of the hostname.
 * **siteNames**: string[]: List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
 
-## ResourceTags
+## SystemData
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TldLegalAgreement
 ### Properties
@@ -119,8 +125,8 @@
 
 ## TldLegalAgreementCollection
 ### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [TldLegalAgreement](#tldlegalagreement)[] (Required): Collection of resources.
+* **nextLink**: string: The link to the next page of items
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (Required): The TldLegalAgreement items on this page
 
 ## TopLevelDomainAgreementOption
 ### Properties
@@ -130,4 +136,9 @@
 ## TopLevelDomainProperties
 ### Properties
 * **privacy**: bool: If <code>true</code>, then the top level domain supports domain privacy; otherwise, <code>false</code>.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

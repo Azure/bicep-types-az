@@ -93,7 +93,7 @@
 * **managedStorageAccount**: string (ReadOnly): ARM Resource Id of the managed storage account associated with this workspace.
 * **providers**: [Provider](#provider)[]: List of Providers selected for this Workspace
 * **provisioningState**: 'Canceled' | 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' | string (ReadOnly): Provisioning status field
-* **quotas**: [QuotaAllocations](#quotaallocations): Quota allocations associated with this workspace. Available only for special providers.
+* **quotas**: [QuotaAllocations](#quotaallocations): DEPRECATED: This field is deprecated and will be removed in future versions. Please use the quotas under providers instead.
 * **storageAccount**: string: ARM Resource Id of the storage account associated with this workspace.
 * **usable**: 'No' | 'Partial' | 'Yes' | string (ReadOnly): Whether the current workspace is ready to accept Jobs.
 

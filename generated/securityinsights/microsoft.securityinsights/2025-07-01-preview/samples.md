@@ -760,57 +760,6 @@ resource exampleResource 'Microsoft.SecurityInsights/bookmarks/relations@2025-07
 }
 ```
 
-## microsoft.securityinsights/businessapplicationagents/systems
-
-Systems_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/businessApplicationAgents/systems@2025-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    configuration: {
-      type: 'SAP'
-      azureResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace'
-      connector: {
-        type: 'Rfc'
-        abapServerHost: '1.1.1.1'
-        authenticationType: 'UsernamePassword'
-        client: '001'
-        systemId: 'A4H'
-        systemNumber: '001'
-      }
-      logs: [
-        {
-          type: 'AbapAuditLog'
-          bulkSize: 100
-          filters: [
-            'filter1'
-            'filter2'
-          ]
-          ingestionType: 'Incremental'
-          scheduleInterval: 60
-          status: 'Enabled'
-        }
-        {
-          type: 'USR01'
-          bulkSize: 100
-          filters: [
-            'filter1'
-            'filter2'
-          ]
-          ingestionType: 'Incremental'
-          scheduleInterval: 60
-          status: 'Enabled'
-        }
-      ]
-    }
-    displayName: 'A4H_System'
-    status: 'Running'
-  }
-}
-```
-
 ## microsoft.securityinsights/contentpackages
 
 Install a package to the workspace.
@@ -1357,6 +1306,23 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-p
 }
 ```
 
+Creates or updates a PremiumMicrosoftDefenderForThreatIntelligence data connector.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-preview' = {
+  name: 'example'
+  kind: 'PremiumMicrosoftDefenderForThreatIntelligence'
+  properties: {
+    dataTypes: {
+      connector: {
+        state: 'Enabled'
+      }
+    }
+    lookbackPeriod: '1970-01-01T00:00:00.000Z'
+    tenantId: 'e4afb3c4-813b-4e68-b6de-e5360866e798'
+  }
+}
+```
+
 Creates or updates a PurviewAudit data connector
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2025-07-01-preview' = {
@@ -1664,7 +1630,7 @@ resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2025-07-
 
 ## microsoft.securityinsights/incidents/relations
 
-Creates or updates an incident relation.
+Creates or updates a relation for a given incident.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2025-07-01-preview' = {
   parent: parentResource 
@@ -1941,7 +1907,7 @@ resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2025-07-01-p
 
 ## microsoft.securityinsights/watchlists
 
-Creates or updates a watchlist and bulk creates watchlist items.
+Create or update a watchlist and bulk creates watchlist items.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-preview' = {
   name: 'example'
@@ -1960,7 +1926,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-previ
 }
 ```
 
-Creates or updates a watchlist.
+Create or update a watchlist.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-preview' = {
   name: 'example'
@@ -1978,7 +1944,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2025-07-01-previ
 
 ## microsoft.securityinsights/watchlists/watchlistitems
 
-Creates or updates a watchlist item.
+Create or update a watchlist item.
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2025-07-01-preview' = {
   parent: parentResource 

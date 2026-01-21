@@ -73,7 +73,7 @@
 
 ## ComplianceSecurityProfileDefinition
 ### Properties
-* **complianceStandards**: ('CANADA_PROTECTED_B' | 'CYBER_ESSENTIAL_PLUS' | 'FEDRAMP_HIGH' | 'GERMANY_C5' | 'GERMANY_TISAX' | 'HIPAA' | 'HITRUST' | 'IRAP_PROTECTED' | 'ISMAP' | 'K_FSI' | 'NONE' | 'PCI_DSS' | string)[]: Compliance standards associated with the workspace.
+* **complianceStandards**: string[]: Compliance standards associated with the workspace.
 * **value**: 'Disabled' | 'Enabled' | string
 
 ## CreatedBy
@@ -243,9 +243,9 @@
 ## WorkspaceCustomParameters
 ### Properties
 * **amlWorkspaceId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The ID of a Azure Machine Learning workspace to link with Databricks workspace. Not allowed in Serverless ComputeMode workspace.
-* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of the Private Subnet within the Virtual Network. Required in Hybrid ComputeMode. Not allowed in Serverless ComputeMode workspace.
-* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of a Public Subnet within the Virtual Network. Required in Hybrid ComputeMode. Not allowed in Serverless ComputeMode workspace.
-* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The ID of a Virtual Network where this Databricks Cluster should be created. Required in Hybrid ComputeMode. Not allowed in Serverless ComputeMode workspace.
+* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of the Private Subnet within the Virtual Network. Not allowed in Serverless ComputeMode workspace.
+* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of a Public Subnet within the Virtual Network. Not allowed in Serverless ComputeMode workspace.
+* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The ID of a Virtual Network where this Databricks Cluster should be created. Not allowed in Serverless ComputeMode workspace.
 * **enableNoPublicIp**: [WorkspaceNoPublicIPBooleanParameter](#workspacenopublicipbooleanparameter): Boolean indicating whether the public IP should be disabled. Default value is true. Not allowed in Serverless ComputeMode workspace.
 * **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter): Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.Not allowed in Serverless ComputeMode workspace.
 * **loadBalancerBackendPoolName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP). Not allowed in Serverless ComputeMode workspace.
@@ -292,7 +292,7 @@
 * **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): The workspace's custom parameters.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections created on the workspace. Supported in both Serverless and Hybrid ComputeMode workspace.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The workspace provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access type for accessing workspace. Set value to disabled to access workspace only via private link. Used to config frontend Only private link for Serverless ComputeMode workspace.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access type for accessing workspace. Set value to disabled to access workspace only via private link. Used to configure front-end only private link for Serverless ComputeMode workspace.
 * **requiredNsgRules**: 'AllRules' | 'NoAzureDatabricksRules' | 'NoAzureServiceRules' | string: Gets or sets a value indicating whether data plane (clusters) to control plane communication happen over private endpoint. Supported values are 'AllRules' and 'NoAzureDatabricksRules'. 'NoAzureServiceRules' value is for internal use only. Not allowed in Serverless ComputeMode workspace.
 * **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The details of Managed Identity of Storage Account. Only returned in Hybrid ComputeMode workspace.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.

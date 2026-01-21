@@ -87,7 +87,7 @@
 ### Properties
 * **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 128, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LtrBackupOperationResponseProperties](#ltrbackupoperationresponseproperties) (ReadOnly): Long Term Retention Backup Operation Resource Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/ltrBackupOperations' (ReadOnly, DeployTimeConstant): The resource type
@@ -111,7 +111,7 @@
 ### Properties
 * **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9-]*\.[a-fA-F0-9\-]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -257,7 +257,7 @@
 
 ## HighAvailability
 ### Properties
-* **mode**: 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
+* **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
 * **standbyAvailabilityZone**: string: Availability zone associated to the standby server created when high availability is set to SameZone or ZoneRedundant.
 * **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant.
 
@@ -445,9 +445,9 @@
 * **principalId**: string: Identifier of the object of the service principal associated to the user assigned managed identity.
 * **tenantId**: string (ReadOnly): Identifier of the tenant of a server.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Types of identities associated with a server.
-* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): Map of user assigned managed identities.
+* **userAssignedIdentities**: [UserAssignedIdentityUserAssignedIdentities](#userassignedidentityuserassignedidentities): Map of user assigned managed identities.
 
-## UserAssignedIdentityMap
+## UserAssignedIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)

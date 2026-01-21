@@ -181,7 +181,7 @@
 ### AADDataConnector
 #### Properties
 * **kind**: 'AzureActiveDirectory' (Required): The data connector kind
-* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AAD (Azure Active Directory) data connector properties.
+* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): Microsoft Entra ID data connector properties.
 
 ### AatpDataConnector
 #### Properties
@@ -216,7 +216,7 @@
 ### PremiumMicrosoftDefenderForThreatIntelligence
 #### Properties
 * **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): The data connector kind
-* **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Premium Microsoft Defender for Threat Intelligence data connector properties.
+* **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Microsoft Defender for Threat Intelligence Premium data connector properties.
 
 ### RestApiPollerDataConnector
 #### Properties
@@ -371,17 +371,17 @@
 ## AADDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## AatpDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
+* **triggerUri**: string {sensitive} (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## AddIncidentTaskActionProperties
@@ -409,7 +409,7 @@
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Alerts data type connection.
 
 ## AnomalySecurityMLAnalyticsSettingsProperties
 ### Properties
@@ -536,16 +536,16 @@
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs): Logs data type.
+* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs) (Required): Logs data type.
 
 ## AwsCloudTrailDataConnectorDataTypesLogs
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for the connector.
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes) (Required): The available data types for the connector.
 
 ## AzureDevOpsResourceInfo
 ### Properties
@@ -754,7 +754,7 @@ The logo value should be in SVG format.
 
 ## DataConnectorDataTypeCommon
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## DCRConfiguration
 ### Properties
@@ -808,7 +808,7 @@ The logo value should be in SVG format.
 
 ## FusionAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
@@ -968,18 +968,18 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## McasDataConnectorDataTypes
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Alerts data type connection.
 * **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Discovery log data type connection.
 
 ## McasDataConnectorProperties
 ### Properties
-* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MdatpDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MetadataAuthor
 ### Properties
@@ -1050,15 +1050,15 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties
 ### Properties
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
 * **displayNamesExcludeFilter**: string[]: the alerts' displayNames on which the cases will not be generated
 * **displayNamesFilter**: string[]: the alerts' displayNames on which the cases will be generated
-* **lastUpdatedDateUTC**: string (ReadOnly): The time that this alert rule template was last updated.
+* **lastUpdatedDateUTC**: string (ReadOnly): The last time that this alert rule template has been updated.
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | string: The alerts' productName on which the cases will be generated
-* **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data connectors for this template
+* **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data sources for this template
 * **severitiesFilter**: ('High' | 'Informational' | 'Low' | 'Medium' | string)[]: the alerts' severities on which the cases will be generated
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 
@@ -1069,12 +1069,12 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## MstiDataConnectorDataTypesMicrosoftEmergingThreatFeed
 ### Properties
 * **lookbackPeriod**: string (Required): The lookback period for the feed to be imported. The date-time to begin importing the feed from, for example: 2024-01-01T00:00:00.000Z.
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## MstiDataConnectorProperties
 ### Properties
 * **dataTypes**: [MstiDataConnectorDataTypes](#mstidataconnectordatatypes) (Required): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## OAuthModelAuthorizationEndpointHeaders
 ### Properties
@@ -1098,26 +1098,26 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange): Exchange data type connection.
-* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint): SharePoint data type connection.
-* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams): Teams data type connection.
+* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange) (Required): Exchange data type connection.
+* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint) (Required): SharePoint data type connection.
+* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams) (Required): Teams data type connection.
 
 ## OfficeDataConnectorDataTypesExchange
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorDataTypesSharePoint
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorDataTypesTeams
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorProperties
 ### Properties
-* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## PackageProperties
 ### Properties
@@ -1152,18 +1152,18 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## PremiumMdtiDataConnectorDataTypes
 ### Properties
-* **connector**: [PremiumMdtiDataConnectorDataTypesConnector](#premiummdtidataconnectordatatypesconnector) (Required): Data type for Premium Microsoft Defender for Threat Intelligence data connector.
+* **connector**: [PremiumMdtiDataConnectorDataTypesConnector](#premiummdtidataconnectordatatypesconnector) (Required): Data type for Microsoft Defender for Threat Intelligence Premium data connector.
 
 ## PremiumMdtiDataConnectorDataTypesConnector
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## PremiumMdtiDataConnectorProperties
 ### Properties
 * **dataTypes**: [PremiumMdtiDataConnectorDataTypes](#premiummdtidataconnectordatatypes) (Required): The available data types for the connector.
 * **lookbackPeriod**: string (Required): The lookback period for the feed to be imported. The date-time to begin importing the feed from, for example: 2024-01-01T00:00:00.000Z.
 * **requiredSKUsPresent**: bool: The flag to indicate whether the tenant has the premium SKU required to access this connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## ProductPackageProperties
 ### Properties
@@ -1348,7 +1348,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## ScheduledAlertRuleTemplateProperties
 ### Properties
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
-* **alertRulesCreatedByTemplateCount**: int: the number of alert rules that were created by this template
+* **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
 * **customDetails**: [ScheduledAlertRuleTemplatePropertiesCustomDetails](#scheduledalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
@@ -1537,16 +1537,16 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators): Data type for indicators connection.
+* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators) (Required): Data type for indicators connection.
 
 ## TIDataConnectorDataTypesIndicators
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## TIDataConnectorProperties
 ### Properties
-* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for the connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 * **tipLookbackPeriod**: string: The lookback period for the feed to be imported.
 
 ## UserInfo

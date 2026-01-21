@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [GalleryIdentity](#galleryidentity): The identity of the gallery, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^_\W][\w-._]{0,79}(?<![-.])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryProperties](#galleryproperties): Describes the properties of a Shared Image Gallery.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -159,7 +159,7 @@
 ## ExecutedValidation
 ### Properties
 * **executionTime**: string: This property specifies the starting timestamp.
-* **status**: 'Failed' | 'Succeeded' | 'Unknown' | string: This property specifies the status of the validationProfile of the image version.
+* **status**: 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): This property specifies the status of the validationProfile of the image version.
 * **type**: string: This property specifies the type of image version validation.
 * **version**: string: This property specifies the valid version of the validation.
 
@@ -208,7 +208,7 @@
 * **replicationMode**: 'Full' | 'Shallow' | string: Optional parameter which specifies the mode to be used for replication. This property is not updatable.
 * **settings**: [UserArtifactSettings](#userartifactsettings): Additional settings for the VM app that contains the target package and config file name when it is deployed to target VM or VM scale set.
 * **source**: [UserArtifactSource](#userartifactsource) (Required): The source image from which the Image Version is going to be created.
-* **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. Cannot be specified along with storageAccountStrategy. This property is not updatable.
 * **targetExtendedLocations**: [GalleryTargetExtendedLocation](#gallerytargetextendedlocation)[]: The target extended locations where the Image Version is going to be replicated to. This property is updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
@@ -310,7 +310,7 @@
 * **publishedDate**: string (ReadOnly): The timestamp for when the gallery image version is published.
 * **replicaCount**: int: The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
 * **replicationMode**: 'Full' | 'Shallow' | string: Optional parameter which specifies the mode to be used for replication. This property is not updatable.
-* **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. Cannot be specified along with storageAccountStrategy. This property is not updatable.
 * **targetExtendedLocations**: [GalleryTargetExtendedLocation](#gallerytargetextendedlocation)[]: The target extended locations where the Image Version is going to be replicated to. This property is updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
