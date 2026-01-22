@@ -187,8 +187,8 @@
       },
       "System.IO.Pipelines": {
         "type": "Transitive",
-        "resolved": "9.0.4",
-        "contentHash": "luF2Xba+lTe2GOoNQdZLe8q7K6s7nSpWZl9jIwWNMszN4/Yv0lmxk9HISgMmwdyZ83i3UhAGXaSY9o6IJBUuuA=="
+        "resolved": "9.0.9",
+        "contentHash": "VySjpsCLprojvat550Flrm3NQB982CPuDzILajqjQihFmrQXZPdQyktIbcpVPJyaExFYtAfY1DpwMdWQuS0kbw=="
       },
       "System.Reflection.Metadata": {
         "type": "Transitive",
@@ -219,16 +219,16 @@
       },
       "System.Text.Encodings.Web": {
         "type": "Transitive",
-        "resolved": "9.0.4",
-        "contentHash": "V+5cCPpk1S2ngekUs9nDrQLHGiWFZMg8BthADQr+Fwi59a8DdHFu26S2oi9Bfgv+d67bqmkPqctJXMEXiimXUg=="
+        "resolved": "9.0.9",
+        "contentHash": "bzYTmAcmfelUOCBxvbgsfSr2tq94ydA2gJZAxZRcuNa0LlmlVz8JNHst6RG1qsDujyVYT4vjv06y8sCLbvCXdg=="
       },
       "System.Text.Json": {
         "type": "Transitive",
-        "resolved": "9.0.4",
-        "contentHash": "pYtmpcO6R3Ef1XilZEHgXP2xBPVORbYEzRP7dl0IAAbN8Dm+kfwio8aCKle97rAWXOExr292MuxWYurIuwN62g==",
+        "resolved": "9.0.9",
+        "contentHash": "NEnpppwq67fRz/OvQRxsEMgetDJsxlxpEsAFO/4PZYbAyAMd4Ol6KS7phc8uDoKPsnbdzRLKobpX303uQwCqdg==",
         "dependencies": {
-          "System.IO.Pipelines": "9.0.4",
-          "System.Text.Encodings.Web": "9.0.4"
+          "System.IO.Pipelines": "9.0.9",
+          "System.Text.Encodings.Web": "9.0.9"
         }
       },
       "System.Windows.Extensions": {
@@ -242,16 +242,16 @@
       "Azure.Bicep.Types.Az": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types": "[0.6.27, )"
+          "Azure.Bicep.Types": "[0.6.50, )"
         }
       },
       "Azure.Bicep.Types": {
         "type": "CentralTransitive",
-        "requested": "[0.6.27, )",
-        "resolved": "0.6.27",
-        "contentHash": "wf027BKeJl33hwJgLsHrt3heCLwJX70oOVm6Y4zHiOZrRzzoVwvi0UUNkBxLq0aUlOFhlQ+o0FPU3hw3fIOr9g==",
+        "requested": "[0.6.50, )",
+        "resolved": "0.6.50",
+        "contentHash": "qTSdfT8CcQ3MjBcrUp8Q/t7Dlfn0fdSY19M7hYrlixr5hIsdJNHiqCeco6ZES2t/TZZPQ4SUiRkR4w/e97qEdA==",
         "dependencies": {
-          "System.Text.Json": "9.0.4"
+          "System.Text.Json": "9.0.9"
         }
       }
     }
