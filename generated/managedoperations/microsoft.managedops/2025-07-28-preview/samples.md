@@ -22,7 +22,7 @@ resource exampleResource 'Microsoft.ManagedOps/managedOps@2025-07-28-preview' = 
     }
     sku: {
       name: 'ManagedOps'
-      tier: 'Basic'
+      tier: 'Essential'
     }
   }
 }
