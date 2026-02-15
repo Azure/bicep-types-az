@@ -85,21 +85,21 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The URI of the trusted signing account which is used during signing files."
+        "description": "The URI of the artifact signing account which is used during signing files."
       },
       "sku": {
         "type": {
           "$ref": "#/6"
         },
         "flags": 0,
-        "description": "SKU of the trusted signing account."
+        "description": "SKU of the artifact signing account."
       },
       "provisioningState": {
         "type": {
           "$ref": "#/16"
         },
         "flags": 2,
-        "description": "Status of the current operation on trusted signing account."
+        "description": "Status of the current operation on artifact signing account."
       }
     }
   },

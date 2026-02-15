@@ -6,7 +6,7 @@
 
 ## microsoft.codesigning/codesigningaccounts
 
-Create a trusted Signing Account.
+Create an artifact signing account.
 ```bicep
 resource exampleResource 'Microsoft.CodeSigning/codeSigningAccounts@2024-09-30-preview' = {
   name: 'example'

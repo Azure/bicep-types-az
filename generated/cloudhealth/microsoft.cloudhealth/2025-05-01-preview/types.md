@@ -159,9 +159,9 @@
 
 ## EvaluationRule
 ### Properties
-* **degradedRule**: [ThresholdRule](#thresholdrule): Degraded rule with static threshold. When used, dynamicDetectionRule must not be set.
+* **degradedRule**: [ThresholdRule](#thresholdrule): Degraded rule with static threshold.
 * **dynamicDetectionRule**: [DynamicDetectionRule](#dynamicdetectionrule): Configure to use ML-based dynamic thresholds. When used, degradedRule and unhealthyRule must not be set.
-* **unhealthyRule**: [ThresholdRule](#thresholdrule): Unhealthy rule with static threshold. When used, dynamicDetectionRule must not be set.
+* **unhealthyRule**: [ThresholdRule](#thresholdrule): Unhealthy rule with static threshold.
 
 ## HealthModelProperties
 ### Properties

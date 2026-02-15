@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity of the Extension resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): The plan information.
+* **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [ExtensionProperties](#extensionproperties): Properties of an Extension resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ErrorAdditionalInfo

@@ -6,10 +6,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabProperties](#labproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [LabTags](#labtags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2018-09-15
@@ -18,10 +19,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArtifactSourceProperties](#artifactsourceproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ArtifactSourceTags](#artifactsourcetags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources/armtemplates@2018-09-15
@@ -30,10 +32,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The location of the resource.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmTemplateProperties](#armtemplateproperties) (ReadOnly): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ArmTemplateTags](#armtemplatetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources/armtemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2018-09-15
@@ -42,10 +45,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The location of the resource.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArtifactProperties](#artifactproperties) (ReadOnly): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ArtifactTags](#artifacttags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources/artifacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/costs@2018-09-15
@@ -54,10 +58,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabCostProperties](#labcostproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [LabCostTags](#labcosttags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2018-09-15
@@ -66,10 +71,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CustomImageProperties](#customimageproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [CustomImageTags](#customimagetags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2018-09-15
@@ -78,10 +84,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FormulaProperties](#formulaproperties) (Required): The properties of the formula.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [FormulaTags](#formulatags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/notificationchannels@2018-09-15
@@ -90,10 +97,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationChannelProperties](#notificationchannelproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [NotificationChannelTags](#notificationchanneltags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/notificationchannels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2018-09-15
@@ -105,7 +113,8 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyProperties](#policyproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PolicyTags](#policytags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2018-09-15
@@ -114,10 +123,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ScheduleTags](#scheduletags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/servicerunners@2018-09-15
@@ -127,9 +137,10 @@
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the resource.
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ServiceRunnerTags](#servicerunnertags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/servicerunners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users@2018-09-15
@@ -138,10 +149,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [UserTags](#usertags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/disks@2018-09-15
@@ -150,10 +162,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskProperties](#diskproperties) (Required): The properties of the disk.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DiskTags](#disktags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/environments@2018-09-15
@@ -162,10 +175,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentProperties](#environmentproperties) (Required): The properties of the environment.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DtlEnvironmentTags](#dtlenvironmenttags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/secrets@2018-09-15
@@ -174,10 +188,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [SecretTags](#secrettags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
@@ -186,10 +201,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceFabricProperties](#servicefabricproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ServiceFabricTags](#servicefabrictags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15
@@ -198,10 +214,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ScheduleTags](#scheduletags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
@@ -210,10 +227,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15
@@ -222,10 +240,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ScheduleTags](#scheduletags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15
@@ -234,10 +253,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [VirtualNetworkTags](#virtualnetworktags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/schedules@2018-09-15
@@ -246,10 +266,11 @@
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ScheduleTags](#scheduletags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2018-09-15)
@@ -274,17 +295,23 @@
 
 ## ApplicableSchedule
 ### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ApplicableScheduleTags](#applicablescheduletags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ApplicableScheduleProperties
 ### Properties
 * **labVmsShutdown**: [Schedule](#schedule): The auto-shutdown schedule, if one has been set at the lab or lab resource level.
 * **labVmsStartup**: [Schedule](#schedule): The auto-startup schedule, if one has been set at the lab or lab resource level.
+
+## ApplicableScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ArmTemplateParameterProperties
 ### Properties
@@ -306,6 +333,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## ArmTemplateTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ArtifactDeploymentStatusProperties
 ### Properties
@@ -357,6 +389,16 @@
 * **status**: 'Disabled' | 'Enabled' | string: Indicates if the artifact source is enabled (values: Enabled, Disabled).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **uri**: string: The artifact source's URI.
+
+## ArtifactSourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ArtifactTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## AttachNewDataDiskOptions
 ### Properties
@@ -432,6 +474,11 @@
 * **sourceVmId**: string: The source vm identifier.
 * **windowsOsInfo**: [WindowsOsInfo](#windowsosinfo): The Windows OS information of the VM.
 
+## CustomImageTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DataDiskProperties
 ### Properties
 * **attachNewDataDiskOptions**: [AttachNewDataDiskOptions](#attachnewdatadiskoptions): Specifies options to attach a new disk to the virtual machine.
@@ -460,6 +507,16 @@
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **storageAccountId**: string: When backed by a blob, the storage account where the blob is.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
+
+## DiskTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DtlEnvironmentTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## EnvironmentDeploymentProperties
 ### Properties
@@ -498,6 +555,11 @@
 ## FormulaPropertiesFromVm
 ### Properties
 * **labVmId**: string: The identifier of the VM from which a formula is to be created.
+
+## FormulaTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GalleryImageReference
 ### Properties
@@ -557,6 +619,11 @@
 ### Properties
 * **estimatedLabCost**: int: The cost component of the cost item.
 
+## LabCostTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## LabProperties
 ### Properties
 * **announcement**: [LabAnnouncementProperties](#labannouncementproperties): The properties of any lab announcement associated with this lab
@@ -603,6 +670,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 * **enabled**: 'Disabled' | 'Enabled' | string: Is the lab support banner active/enabled at this time?
 * **markdown**: string: The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+
+## LabTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## LabVhd
 ### Properties
@@ -690,6 +762,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **userName**: string: The user name of the virtual machine.
 * **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage' | string (ReadOnly): Tells source of creation of lab virtual machine. Output property only.
 
+## LabVirtualMachineTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## LinuxOsInfo
 ### Properties
 * **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned' | string: The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
@@ -716,6 +793,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **webHookUrl**: string: The webhook URL to send notifications to.
+
+## NotificationChannelTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## NotificationSettings
 ### Properties
@@ -751,134 +833,25 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
+## PolicyTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Port
 ### Properties
 * **backendPort**: int: Backend port of the target virtual machine.
 * **transportProtocol**: 'Tcp' | 'Udp' | string: Protocol type of the port.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Schedule
 ### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string: The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ScheduleTags](#scheduletags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ScheduleCreationParameter
 ### Properties
@@ -922,11 +895,41 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): If the schedule will occur only some days of the week, specify the weekly recurrence.
 
+## ScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScheduleTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SecretProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **value**: string: The value of the secret for secret creation.
+
+## SecretTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServiceFabricProperties
 ### Properties
@@ -935,6 +938,16 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **externalServiceFabricId**: string: The backing service fabric resource's id
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
+
+## ServiceFabricTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ServiceRunnerTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SharedPublicIpAddressConfiguration
 ### Properties
@@ -958,6 +971,15 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ## SubnetSharedPublicIpAddressConfiguration
 ### Properties
 * **allowedPorts**: [Port](#port)[]: Backend ports that virtual machines on this subnet are allowed to expose
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TargetCostProperties
 ### Properties
@@ -989,6 +1011,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **keyVaultId**: string: The ID of the user's Key vault.
 * **keyVaultUri**: string: The URI of the user's Key vault.
 
+## UserTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## VirtualNetworkProperties
 ### Properties
 * **allowedSubnets**: [Subnet](#subnet)[]: The allowed subnets of the virtual network.
@@ -999,6 +1026,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **subnetOverrides**: [SubnetOverride](#subnetoverride)[]: The subnet overrides of the virtual network.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
+
+## VirtualNetworkTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WeekDetails
 ### Properties

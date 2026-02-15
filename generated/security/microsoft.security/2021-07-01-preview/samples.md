@@ -21,18 +21,6 @@ resource exampleResource 'Microsoft.Security/customAssessmentAutomations@2021-07
 }
 ```
 
-## microsoft.security/customentitystoreassignments
-
-Create a custom entity store assignment
-```bicep
-resource exampleResource 'Microsoft.Security/customEntityStoreAssignments@2021-07-01-preview' = {
-  name: 'example'
-  properties: {
-    principal: 'aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47'
-  }
-}
-```
-
 ## microsoft.security/securityconnectors
 
 Create or update a security connector

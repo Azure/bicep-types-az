@@ -1,6 +1,6 @@
 Generating types for 'specification/intune/resource-manager/Microsoft.Intune/Intune/readme.md'
 WARNING: Unable to parse swagger path "preview/2015-01-14-privatepreview/intune.json"
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.

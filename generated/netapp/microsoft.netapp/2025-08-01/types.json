@@ -602,7 +602,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "ClientId of the multi-tenant AAD Application. Used to access cross-tenant keyvaults."
+        "description": "ClientId of the multi-tenant Entra ID Application. Used to access cross-tenant keyvaults."
       }
     }
   },
@@ -4435,7 +4435,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1,
+        "flags": 0,
         "description": "The resource ID of the remote volume."
       },
       "remoteVolumeRegion": {

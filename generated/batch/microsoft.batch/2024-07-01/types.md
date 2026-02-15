@@ -290,7 +290,7 @@
 * **password**: string {sensitive} (WriteOnly): This must not be specified if the certificate format is Cer.
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource
 * **previousProvisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its previous state.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioned state of the resource
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its current state.
 * **publicData**: string (ReadOnly): The public key of the certificate.
 * **thumbprint**: string: This must match the thumbprint from the name.
@@ -516,7 +516,7 @@ The KeyVault has soft-delete and purge protection enabled
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': The type of caching to enable for the disk.
 * **diskSizeGB**: int: The initial disk size in GB when creating new OS disk.
 * **ephemeralOSDiskSettings**: [DiffDiskSettings](#diffdisksettings): Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
-* **managedDisk**: [ManagedDisk](#manageddisk)
+* **managedDisk**: [ManagedDisk](#manageddisk): The managed disk parameters.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 
 ## PoolEndpointConfiguration

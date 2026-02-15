@@ -1439,7 +1439,8 @@
         "type": {
           "$ref": "#/116"
         },
-        "flags": 2
+        "flags": 2,
+        "description": "The provisioned state of the resource"
       },
       "provisioningStateTransitionTime": {
         "type": {
@@ -2475,7 +2476,8 @@
         "type": {
           "$ref": "#/177"
         },
-        "flags": 0
+        "flags": 0,
+        "description": "The managed disk parameters."
       },
       "diskSizeGB": {
         "type": {

@@ -82,54 +82,54 @@
     "$type": "ObjectType",
     "name": "DeploymentStackProperties",
     "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The error detail."
+      },
       "template": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/11"
         },
         "flags": 4,
         "description": "The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
       },
       "templateLink": {
         "type": {
-          "$ref": "#/8"
+          "$ref": "#/12"
         },
         "flags": 4,
         "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
       },
       "parameters": {
         "type": {
-          "$ref": "#/12"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Name and value pairs that define the deployment parameters for the template. Use this element when providing the parameter values directly in the request, rather than linking to an existing parameter file. Use either the parametersLink property or the parameters property, but not both."
       },
       "parametersLink": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The URI of parameters file. Use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both."
       },
       "actionOnUnmanage": {
         "type": {
-          "$ref": "#/14"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "Defines the behavior of resources that are no longer managed after the Deployment stack is updated or deleted."
       },
       "debugSetting": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/28"
         },
         "flags": 0,
         "description": "The debug setting of the deployment."
-      },
-      "bypassStackOutOfSyncError": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 4,
-        "description": "Flag to bypass service errors that indicate the stack resource list is not correctly synchronized."
       },
       "deploymentScope": {
         "type": {
@@ -140,21 +140,21 @@
       },
       "description": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/29"
         },
         "flags": 0,
         "description": "Deployment stack description. Max length of 4096 characters."
       },
       "denySettings": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/30"
         },
         "flags": 1,
         "description": "Defines how resources deployed by the stack are locked."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/49"
         },
         "flags": 2,
         "description": "State of the deployment stack."
@@ -166,16 +166,23 @@
         "flags": 2,
         "description": "The correlation id of the last Deployment stack upsert or delete operation. It is in GUID format and is used for tracing."
       },
+      "bypassStackOutOfSyncError": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 4,
+        "description": "Flag to bypass service errors that indicate the stack resource list is not correctly synchronized."
+      },
       "detachedResources": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/51"
         },
         "flags": 2,
         "description": "An array of resources that were detached during the most recent Deployment stack update. Detached means that the resource was removed from the template, but no relevant deletion operations were specified. So, the resource still exists while no longer being associated with the stack."
       },
       "deletedResources": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/52"
         },
         "flags": 2,
         "description": "An array of resources that were deleted during the most recent Deployment stack update. Deleted means that the resource was removed from the template and relevant deletion operations were specified."
@@ -214,13 +221,73 @@
         },
         "flags": 2,
         "description": "The duration of the last successful Deployment stack update."
-      },
-      "error": {
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/2"
         },
-        "flags": 0,
-        "description": "The error detail."
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The additional info."
       }
     }
   },
@@ -228,11 +295,17 @@
     "$type": "AnyType"
   },
   {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DeploymentStackPropertiesTemplate",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/6"
+      "$ref": "#/9"
     }
   },
   {
@@ -282,7 +355,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/6"
+          "$ref": "#/9"
         },
         "flags": 0,
         "description": "Input value to the parameter."
@@ -296,7 +369,7 @@
       },
       "reference": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/14"
         },
         "flags": 0,
         "description": "Azure Key Vault parameter reference."
@@ -309,7 +382,7 @@
     "properties": {
       "keyVault": {
         "type": {
-          "$ref": "#/11"
+          "$ref": "#/15"
         },
         "flags": 1,
         "description": "Azure Key Vault reference."
@@ -348,7 +421,7 @@
     "name": "DeploymentStackPropertiesParameters",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/9"
+      "$ref": "#/13"
     }
   },
   {
@@ -377,24 +450,24 @@
     "properties": {
       "resources": {
         "type": {
-          "$ref": "#/17"
+          "$ref": "#/21"
         },
         "flags": 1,
-        "description": "Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+        "description": "Specifies an action for a newly unmanaged resource."
       },
       "resourceGroups": {
         "type": {
-          "$ref": "#/20"
+          "$ref": "#/24"
         },
         "flags": 0,
-        "description": "Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+        "description": "Specifies an action for a newly unmanaged resource group."
       },
       "managementGroups": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/27"
         },
         "flags": 0,
-        "description": "Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+        "description": "Specifies an action for a newly unmanaged resource management group."
       }
     }
   },
@@ -410,34 +483,12 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/15"
-      },
-      {
-        "$ref": "#/16"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "delete"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "detach"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/18"
-      },
-      {
         "$ref": "#/19"
       },
       {
+        "$ref": "#/20"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -454,10 +505,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/21"
+        "$ref": "#/22"
       },
       {
-        "$ref": "#/22"
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "detach"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
       },
       {
         "$ref": "#/2"
@@ -478,9 +551,6 @@
     }
   },
   {
-    "$type": "BooleanType"
-  },
-  {
     "$type": "StringType",
     "maxLength": 4096
   },
@@ -490,28 +560,28 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/34"
         },
         "flags": 1,
         "description": "denySettings Mode that defines denied actions."
       },
       "excludedPrincipals": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/35"
         },
         "flags": 0,
         "description": "List of AAD principal IDs excluded from the lock. Up to 5 principals are permitted."
       },
       "excludedActions": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/36"
         },
         "flags": 0,
         "description": "List of role-based management operations that are excluded from the denySettings. Up to 200 actions are permitted. If the denySetting mode is set to 'denyWriteAndDelete', then the following actions are automatically appended to 'excludedActions': '*\\/read' and 'Microsoft.Authorization/locks/delete'. If the denySetting mode is set to 'denyDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will be removed."
       },
       "applyToChildScopes": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "DenySettings will be applied to child resource scopes of every managed resource with a deny assignment."
@@ -534,13 +604,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/28"
+        "$ref": "#/31"
       },
       {
-        "$ref": "#/29"
+        "$ref": "#/32"
       },
       {
-        "$ref": "#/30"
+        "$ref": "#/33"
       },
       {
         "$ref": "#/2"
@@ -558,6 +628,9 @@
     "itemType": {
       "$ref": "#/2"
     }
+  },
+  {
+    "$type": "BooleanType"
   },
   {
     "$type": "StringLiteralType",
@@ -607,18 +680,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/34"
-      },
-      {
-        "$ref": "#/35"
-      },
-      {
-        "$ref": "#/36"
-      },
-      {
-        "$ref": "#/37"
-      },
-      {
         "$ref": "#/38"
       },
       {
@@ -638,6 +699,18 @@
       },
       {
         "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
       },
       {
         "$ref": "#/2"
@@ -660,13 +733,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/46"
+      "$ref": "#/50"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/46"
+      "$ref": "#/50"
     }
   },
   {
@@ -682,90 +755,17 @@
       },
       "error": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/6"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The error detail."
       }
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "ErrorDetail",
-    "properties": {
-      "code": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The error code."
-      },
-      "message": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The error message."
-      },
-      "target": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The error target."
-      },
-      "details": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 2,
-        "description": "The error details."
-      },
-      "additionalInfo": {
-        "type": {
-          "$ref": "#/53"
-        },
-        "flags": 2,
-        "description": "The error additional info."
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/50"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ErrorAdditionalInfo",
-    "properties": {
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The additional info type."
-      },
-      "info": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 2,
-        "description": "The additional info."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/52"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/49"
+      "$ref": "#/53"
     }
   },
   {
@@ -885,7 +885,7 @@
     "name": "DeploymentStackPropertiesOutputs",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/6"
+      "$ref": "#/9"
     }
   },
   {
