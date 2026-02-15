@@ -11,7 +11,7 @@
     <PackageVersion Include="Azure.Bicep.Types" Version="0.6.50" />
     <PackageVersion Include="FluentAssertions" Version="7.2.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
-    <PackageVersion Include="MSTest.TestAdapter" Version="3.11.0" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="4.1.0" />
     <PackageVersion Include="MSTest.TestFramework" Version="4.1.0" />
   </ItemGroup>
 </Project>
