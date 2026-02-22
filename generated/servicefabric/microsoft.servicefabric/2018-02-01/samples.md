@@ -10,9 +10,6 @@ Put a cluster with maximum parameters
 ```bicep
 resource exampleResource 'Microsoft.ServiceFabric/clusters@2018-02-01' = {
   name: 'example'
-  name: 'myCluster'
-  type: 'Microsoft.ServiceFabric/clusters'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster'
   location: 'eastus'
   properties: {
     addOnFeatures: [
@@ -150,9 +147,6 @@ Put a cluster with minimum parameters
 ```bicep
 resource exampleResource 'Microsoft.ServiceFabric/clusters@2018-02-01' = {
   name: 'example'
-  name: 'myCluster'
-  type: 'Microsoft.ServiceFabric/clusters'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster'
   location: 'eastus'
   properties: {
     diagnosticsStorageAccountConfig: {

@@ -1,5 +1,5 @@
 Generating types for 'specification/webpubsub/resource-manager/Microsoft.SignalRService/SignalRService/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -8,6 +8,14 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

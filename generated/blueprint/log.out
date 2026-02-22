@@ -1,5 +1,5 @@
 Generating types for 'specification/blueprint/resource-manager/Microsoft.Blueprint/Blueprint/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.

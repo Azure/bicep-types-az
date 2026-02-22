@@ -70,7 +70,6 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2016-09-01' = {
         vmInstanceCount: 5
       }
     ]
-    provisioningState: 'Succeeded'
     reliabilityLevel: 'Silver'
     upgradeDescription: {
       deltaHealthPolicy: {
@@ -134,7 +133,6 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2016-09-01' = {
         vmInstanceCount: 5
       }
     ]
-    provisioningState: 'Succeeded'
     reliabilityLevel: 'Silver'
     upgradeMode: 'Automatic'
     vmImage: 'Windows'

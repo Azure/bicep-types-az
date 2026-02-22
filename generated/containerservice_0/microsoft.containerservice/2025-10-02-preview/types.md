@@ -38,7 +38,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Virtual Machine.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedClusterIdentity](#managedclusteridentity): The identity of the managed cluster, if configured.
@@ -59,6 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 12, pattern: "^[a-z][a-z0-9]{0,11}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools/machines@2025-10-02-preview
@@ -69,15 +70,27 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-z][a-z0-9]{0,11}$|^[a-zA-Z0-9][-_a-zA-Z0-9]{0,39}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties): The properties of the machine
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools/machines' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: The Availability zone in which machine is located.
+* **zones**: string[] (ReadOnly): The Availability zone in which machine is located.
+
+## Resource Microsoft.ContainerService/managedClusters/agentPools/upgradeProfiles@2025-10-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [AgentPoolUpgradeProfileProperties](#agentpoolupgradeprofileproperties) (ReadOnly): The properties of the agent pool upgrade profile.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ContainerService/managedClusters/agentPools/upgradeProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/identityBindings@2025-10-02-preview
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-z][a-z0-9]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityBindingProperties](#identitybindingproperties): The resource-specific properties for this resource.
@@ -114,7 +127,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties of a default maintenance configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/managedNamespaces@2025-10-02-preview
@@ -122,13 +135,13 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the namespace.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 63, pattern: "[a-z0-9]([-a-z0-9]*[a-z0-9])?"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Properties of a namespace.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
-* **tags**: [ManagedNamespaceTags](#managednamespacetags): The tags to be persisted on the managed cluster namespace.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ManagedNamespaceTags](#managednamespacetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/managedClusters/managedNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/meshMemberships@2025-10-02-preview
@@ -136,7 +149,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9]{0,62}$"} (Required, DeployTimeConstant): The resource name
@@ -163,6 +176,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2025-10-02-preview
@@ -175,6 +189,17 @@
 * **properties**: [TrustedAccessRoleBindingProperties](#trustedaccessrolebindingproperties) (Required): Properties for trusted access role binding
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ContainerService/managedClusters/upgradeProfiles@2025-10-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedClusterUpgradeProfileProperties](#managedclusterupgradeprofileproperties) (ReadOnly): The properties of the upgrade profile.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ContainerService/managedClusters/upgradeProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedclustersnapshots@2025-10-02-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -241,7 +266,7 @@
 * **enabled**: bool: Indicates the enablement of Advanced Networking functionalities of observability and security on AKS clusters. When this is set to true, all observability and security features will be set to enabled unless explicitly disabled. If not specified, the default is false.
 * **observability**: [AdvancedNetworkingObservability](#advancednetworkingobservability): Observability profile to enable advanced network metrics and flow logs with historical contexts.
 * **performance**: [AdvancedNetworkingPerformance](#advancednetworkingperformance): Profile to enable performance-enhancing features on clusters that use Azure CNI powered by Cilium.
-* **security**: [AdvancedNetworkingSecurity](#advancednetworkingsecurity): Security profile to enable security features on cilium-based cluster.
+* **security**: [AdvancedNetworkingSecurity](#advancednetworkingsecurity): Security profile to enable security features on cilium based cluster.
 
 ## AdvancedNetworkingObservability
 ### Properties
@@ -254,7 +279,7 @@
 ## AdvancedNetworkingSecurity
 ### Properties
 * **advancedNetworkPolicies**: 'FQDN' | 'L7' | 'None' | string: Enable advanced network policies. This allows users to configure Layer 7 network policies (FQDN, HTTP, Kafka). Policies themselves must be configured via the Cilium Network Policy resources, see https://docs.cilium.io/en/latest/security/policy/index.html. This can be enabled only on cilium-based clusters. If not specified, the default value is FQDN if security.enabled is set to true.
-* **enabled**: bool: Configure Advanced Networking Security features on Cilium clusters. See individual fields for their default values.
+* **enabled**: bool: This feature allows user to configure network policy based on DNS (FQDN) names. It can be enabled only on cilium based clusters. If not specified, the default is false.
 * **transitEncryption**: [AdvancedNetworkingSecurityTransitEncryption](#advancednetworkingsecuritytransitencryption): Encryption configuration for Cilium-based clusters. Once enabled all traffic between Cilium managed pods will be encrypted when it leaves the node boundary.
 
 ## AdvancedNetworkingSecurityTransitEncryption
@@ -282,6 +307,12 @@
 * **applicationSecurityGroups**: string[]: The IDs of the application security groups which agent pool will associate when created.
 * **nodePublicIPTags**: [IPTag](#iptag)[]: IPTags of instance-level public IPs.
 
+## AgentPoolRecentlyUsedVersion
+### Properties
+* **nodeImageVersion**: string: The node image version available for rollback.
+* **orchestratorVersion**: string: The Kubernetes version (major.minor.patch) available for rollback.
+* **timestamp**: string: The timestamp when this version was last used.
+
 ## AgentPoolSecurityProfile
 ### Properties
 * **enableSecureBoot**: bool: Secure Boot is a feature of Trusted Launch which ensures that only signed operating systems and drivers can boot. For more details, see aka.ms/aks/trustedlaunch.  If not specified, the default is false.
@@ -291,6 +322,21 @@
 ## AgentPoolStatus
 ### Properties
 * **provisioningError**: [ErrorDetail](#errordetail) (ReadOnly): The error detail information of the agent pool. Preserves the detailed info of failure. If there was no error, this field is omitted.
+
+## AgentPoolUpgradeProfileProperties
+### Properties
+* **componentsByReleases**: [ComponentsByRelease](#componentsbyrelease)[]: List of components grouped by kubernetes major.minor version.
+* **kubernetesVersion**: string (Required): The Kubernetes version (major.minor.patch).
+* **latestNodeImageVersion**: string: The latest AKS supported node image version.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type. The default is Linux.
+* **recentlyUsedVersions**: [AgentPoolRecentlyUsedVersion](#agentpoolrecentlyusedversion)[] (ReadOnly): List of historical good versions for rollback operations.
+* **upgrades**: [AgentPoolUpgradeProfilePropertiesUpgradesItem](#agentpoolupgradeprofilepropertiesupgradesitem)[]: List of orchestrator types and versions available for upgrade.
+
+## AgentPoolUpgradeProfilePropertiesUpgradesItem
+### Properties
+* **isOutOfSupport**: bool: Whether the Kubernetes version is out of support.
+* **isPreview**: bool: Whether the Kubernetes version is currently in preview.
+* **kubernetesVersion**: string: The Kubernetes version (major.minor.patch).
 
 ## AgentPoolUpgradeSettings
 ### Properties
@@ -327,6 +373,17 @@
 * **name**: string: The product/service name.
 * **versions**: string[]: Product/service versions compatible with a service mesh add-on revision.
 
+## Component
+### Properties
+* **hasBreakingChanges**: bool: If upgraded component version contains breaking changes from the current version. To see a detailed description of what the breaking changes are, visit https://learn.microsoft.com/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-components-breaking-changes-by-version.
+* **name**: string: Component name.
+* **version**: string: Component version.
+
+## ComponentsByRelease
+### Properties
+* **components**: [Component](#component)[]: components of current or upgraded Kubernetes version in the cluster.
+* **kubernetesVersion**: string: The Kubernetes version (major.minor).
+
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string {pattern: "^[A-Za-z][-A-Za-z0-9_]*$"} (Required): The administrator username to use for Linux VMs.
@@ -344,7 +401,7 @@
 * **networkDataplane**: 'azure' | 'cilium' | string: Network dataplane used in the Kubernetes cluster.
 * **networkMode**: 'bridge' | 'transparent' | string: The network mode Azure CNI is configured with. This cannot be specified if networkPlugin is anything other than 'azure'.
 * **networkPlugin**: 'azure' | 'kubenet' | 'none' | string: Network plugin used for building the Kubernetes network.
-* **networkPluginMode**: 'overlay' | string: Network plugin mode used for building the Kubernetes network.
+* **networkPluginMode**: 'overlay' | string: The mode the network plugin should use.
 * **networkPolicy**: 'azure' | 'calico' | 'cilium' | 'none' | string: Network policy used for building the Kubernetes network.
 * **outboundType**: 'loadBalancer' | 'managedNATGateway' | 'none' | 'userAssignedNATGateway' | 'userDefinedRouting' | string: The outbound (egress) routing method. This can only be set at cluster creation time and cannot be changed later. For more information see [egress outbound type](https://docs.microsoft.com/azure/aks/egress-outboundtype).
 * **podCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
@@ -404,11 +461,6 @@
 * **resourceId**: string: The ARM resource id of the delegated resource - internal use only.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the delegated resource - internal use only.
 
-## DelegatedResources
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DelegatedResource](#delegatedresource)
-
 ## ErrorAdditionalInfo
 ### Properties
 * **info**: any (ReadOnly): The additional info.
@@ -434,7 +486,7 @@
 
 ## GuardrailsAvailableVersionsProperties
 ### Properties
-* **isDefaultVersion**: bool (ReadOnly)
+* **isDefaultVersion**: bool (ReadOnly): Whether this is the default version.
 * **support**: 'Preview' | 'Stable' | string (ReadOnly): Whether the version is preview or stable.
 
 ## IdentityBindingManagedIdentityProfile
@@ -586,22 +638,22 @@
 * **serveStale**: 'Disable' | 'Immediate' | 'Verify' | string: Policy for serving stale data. See [cache plugin](https://coredns.io/plugins/cache) for more information.
 * **serveStaleDurationInSeconds**: int: Serve stale duration in seconds. See [cache plugin](https://coredns.io/plugins/cache) for more information.
 
-## LocalDNSOverrides
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [LocalDNSOverride](#localdnsoverride)
-
-## LocalDNSOverrides
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [LocalDNSOverride](#localdnsoverride)
-
 ## LocalDNSProfile
 ### Properties
-* **kubeDNSOverrides**: [LocalDNSOverrides](#localdnsoverrides): KubeDNS overrides apply to DNS traffic from pods with dnsPolicy:ClusterFirst (referred to as KubeDNS traffic).
+* **kubeDNSOverrides**: [LocalDNSProfileKubeDNSOverrides](#localdnsprofilekubednsoverrides): KubeDNS overrides apply to DNS traffic from pods with dnsPolicy:ClusterFirst (referred to as KubeDNS traffic).
 * **mode**: 'Disabled' | 'Preferred' | 'Required' | string: Mode of enablement for localDNS.
 * **state**: 'Disabled' | 'Enabled' | string (ReadOnly): System-generated state of localDNS.
-* **vnetDNSOverrides**: [LocalDNSOverrides](#localdnsoverrides): VnetDNS overrides apply to DNS traffic from pods with dnsPolicy:default or kubelet (referred to as VnetDNS traffic).
+* **vnetDNSOverrides**: [LocalDNSProfileVnetDNSOverrides](#localdnsprofilevnetdnsoverrides): VnetDNS overrides apply to DNS traffic from pods with dnsPolicy:default or kubelet (referred to as VnetDNS traffic).
+
+## LocalDNSProfileKubeDNSOverrides
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [LocalDNSOverride](#localdnsoverride)
+
+## LocalDNSProfileVnetDNSOverrides
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [LocalDNSOverride](#localdnsoverride)
 
 ## MachineHardwareProfile
 ### Properties
@@ -663,12 +715,12 @@
 * **hardware**: [MachineHardwareProfile](#machinehardwareprofile): The hardware and GPU settings of the machine.
 * **kubernetes**: [MachineKubernetesProfile](#machinekubernetesprofile): The Kubernetes configurations used by the machine.
 * **mode**: 'Gateway' | 'Machines' | 'ManagedSystem' | 'System' | 'User' | string: Machine only allows 'System' and 'User' mode.
-* **network**: [MachineNetworkProperties](#machinenetworkproperties): The network properties of the machine
-* **nodeImageVersion**: string: The version of node image.
+* **network**: [MachineNetworkProperties](#machinenetworkproperties) (ReadOnly): network properties of the machine
+* **nodeImageVersion**: string (ReadOnly): The version of node image.
 * **operatingSystem**: [MachineOSProfile](#machineosprofile): The operating system and disk used by the machine.
 * **priority**: 'Regular' | 'Spot' | string: The priority for the machine. If not specified, the default is 'Regular'.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state.
-* **resourceId**: string (ReadOnly): Arm resource id of the machine. It can be used to GET underlying VM Instance
+* **resourceId**: string (ReadOnly): Azure resource id of the machine. It can be used to GET underlying VM Instance
 * **security**: [MachineSecurityProfile](#machinesecurityprofile): The security settings of the machine.
 * **status**: [MachineStatus](#machinestatus) (ReadOnly): Contains read-only information about the machine.
 * **tags**: [MachinePropertiesTags](#machinepropertiestags): The tags to be persisted on the machine.
@@ -715,7 +767,7 @@
 * **enableAzureRBAC**: bool: Whether to enable Azure RBAC for Kubernetes authorization.
 * **managed**: bool: Whether to enable managed AAD.
 * **serverAppID**: string: (DEPRECATED) The server AAD application ID. Learn more at https://aka.ms/aks/aad-legacy.
-* **serverAppSecret**: string: (DEPRECATED) The server AAD application secret. Learn more at https://aka.ms/aks/aad-legacy.
+* **serverAppSecret**: string {sensitive}: (DEPRECATED) The server AAD application secret. Learn more at https://aka.ms/aks/aad-legacy.
 * **tenantID**: string: The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
 
 ## ManagedClusterAccessProfile
@@ -749,10 +801,10 @@
 ### Properties
 * **artifactStreamingProfile**: [AgentPoolArtifactStreamingProfile](#agentpoolartifactstreamingprofile): Configuration for using artifact streaming on AKS.
 * **availabilityZones**: string[]: The list of Availability zones to use for nodes. This can only be specified if the AgentPoolType property is 'VirtualMachineScaleSets'.
-* **capacityReservationGroupID**: string: AKS will associate the specified agent pool with the Capacity Reservation Group.
+* **capacityReservationGroupID**: string: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Compute/capacityreservationgroups/{capacityReservationGroupName}' Customers use it to create an agentpool with a specified CRG. For more information see [Capacity Reservation](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)
 * **count**: int: Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 1000 (inclusive) for user pools and in the range of 1 to 1000 (inclusive) for system pools. The default value is 1.
 * **creationData**: [CreationData](#creationdata): CreationData to be used to specify the source Snapshot ID if the node pool will be created/upgraded using a snapshot.
-* **currentOrchestratorVersion**: string (ReadOnly): The version of Kubernetes running on the Agent Pool. If orchestratorVersion was a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion was <major.minor>, this field will contain the full <major.minor.patch> version being used.
+* **currentOrchestratorVersion**: string (ReadOnly): The version of Kubernetes the Agent Pool is running. If orchestratorVersion is a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion is <major.minor>, this field will contain the full <major.minor.patch> version being used.
 * **enableAutoScaling**: bool: Whether to enable auto-scaler
 * **enableEncryptionAtHost**: bool: Whether to enable host based OS and data drive encryption. This is only supported on certain VM sizes and in certain Azure regions. For more information, see: https://docs.microsoft.com/azure/aks/enable-host-encryption
 * **enableFIPS**: bool: Whether to use a FIPS-enabled OS. See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details.
@@ -761,7 +813,7 @@
 * **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
 * **gatewayProfile**: [AgentPoolGatewayProfile](#agentpoolgatewayprofile): Profile specific to a managed agent pool in Gateway mode. This field cannot be set if agent pool mode is not Gateway.
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
-* **gpuProfile**: [GPUProfile](#gpuprofile): The GPU settings of an agent pool.
+* **gpuProfile**: [GPUProfile](#gpuprofile): GPU settings for the Agent Pool.
 * **hostGroupID**: string: The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from, used only in creation scenario and not allowed to changed once set. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): The Kubelet configuration on the agent pool nodes.
 * **kubeletDiskType**: 'OS' | 'Temporary' | string: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
@@ -775,15 +827,15 @@
 * **name**: string {pattern: "^[a-z][a-z0-9]{0,11}$"} (Required): Unique name of the agent pool profile in the context of the subscription and resource group. Windows agent pool names must be 6 characters or less.
 * **networkProfile**: [AgentPoolNetworkProfile](#agentpoolnetworkprofile): Network-related settings of an agent pool.
 * **nodeCustomizationProfile**: [NodeCustomizationProfile](#nodecustomizationprofile): Settings to determine the node customization used to provision nodes in a pool.
-* **nodeImageVersion**: string: The version of node image
+* **nodeImageVersion**: string (ReadOnly): The version of node image
 * **nodeInitializationTaints**: string[]: Taints added on the nodes during creation that will not be reconciled by AKS. These taints will not be reconciled by AKS and can be removed with a kubectl call. This field can be modified after node pool is created, but nodes will not be recreated with new taints until another operation that requires recreation (e.g. node image upgrade) happens. These taints allow for required configuration to run before the node is ready to accept workloads, for example 'key1=value1:NoSchedule' that then can be removed with `kubectl taint nodes node1 key1=value1:NoSchedule-`
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: The public IP prefix ID which VM nodes should use IPs from. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}
 * **nodeTaints**: string[]: The taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
-* **orchestratorVersion**: string: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> and <major.minor> are supported. When <major.minor> is specified, the latest supported patch version is chosen automatically. Updating the agent pool with the same <major.minor> once it has been created will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
+* **orchestratorVersion**: string: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> (e.g. 1.20.13) and <major.minor> (e.g. 1.20) are supported. When <major.minor> is specified, the latest supported GA patch version is chosen automatically. Updating the cluster with the same <major.minor> once it has been created (e.g. 1.14.x -> 1.14) will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
 * **osDiskSizeGB**: int {minValue: 0, maxValue: 2048}: OS Disk Size in GB to be used to specify the disk size for every machine in the master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osDiskType**: 'Ephemeral' | 'Managed' | string: The OS disk type to be used for machines in the agent pool. The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
-* **osSKU**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string: Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated.
+* **osSKU**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string: Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows.
 * **osType**: 'Linux' | 'Windows' | string: The operating system type. The default is Linux.
 * **podIPAllocationMode**: 'DynamicIndividual' | 'StaticBlock' | string: Pod IP Allocation Mode. The IP allocation mode for pods in the agent pool. Must be used with podSubnetId. The default is 'DynamicIndividual'.
 * **podSubnetID**: string: The ID of the subnet which pods will join when launched. If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
@@ -791,14 +843,14 @@
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
 * **scaleDownMode**: 'Deallocate' | 'Delete' | string: The scale down mode to use when scaling the Agent Pool. This also effects the cluster autoscaler behavior. If not specified, it defaults to Delete.
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'.
-* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'.
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority.
 * **securityProfile**: [AgentPoolSecurityProfile](#agentpoolsecurityprofile): The security settings of an agent pool.
 * **spotMaxPrice**: int: The max price (in US Dollars) you are willing to pay for spot instances. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand. Possible values are any decimal value greater than zero or -1 which indicates the willingness to pay any on-demand price. For more details on spot pricing, see [spot VMs pricing](https://docs.microsoft.com/azure/virtual-machines/spot-vms#pricing)
 * **status**: [AgentPoolStatus](#agentpoolstatus): Contains read-only information about the Agent Pool.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): The tags to be persisted on the agent pool virtual machine scale set.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | 'VirtualMachines' | string: The type of Agent Pool.
-* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool. Applies when upgrade strategy is set to Rolling.
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool
 * **upgradeSettingsBlueGreen**: [AgentPoolBlueGreenUpgradeSettings](#agentpoolbluegreenupgradesettings): Settings for Blue-Green upgrade on the agentpool. Applies when upgrade strategy is set to BlueGreen.
 * **upgradeStrategy**: 'BlueGreen' | 'Rolling' | string: Defines the upgrade strategy for the agent pool. The default is Rolling.
 * **virtualMachineNodesStatus**: [VirtualMachineNodes](#virtualmachinenodes)[]: The status of nodes in a VirtualMachines agent pool.
@@ -812,10 +864,10 @@
 ### Properties
 * **artifactStreamingProfile**: [AgentPoolArtifactStreamingProfile](#agentpoolartifactstreamingprofile): Configuration for using artifact streaming on AKS.
 * **availabilityZones**: string[]: The list of Availability zones to use for nodes. This can only be specified if the AgentPoolType property is 'VirtualMachineScaleSets'.
-* **capacityReservationGroupID**: string: AKS will associate the specified agent pool with the Capacity Reservation Group.
+* **capacityReservationGroupID**: string: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Compute/capacityreservationgroups/{capacityReservationGroupName}' Customers use it to create an agentpool with a specified CRG. For more information see [Capacity Reservation](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)
 * **count**: int: Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 1000 (inclusive) for user pools and in the range of 1 to 1000 (inclusive) for system pools. The default value is 1.
 * **creationData**: [CreationData](#creationdata): CreationData to be used to specify the source Snapshot ID if the node pool will be created/upgraded using a snapshot.
-* **currentOrchestratorVersion**: string (ReadOnly): The version of Kubernetes running on the Agent Pool. If orchestratorVersion was a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion was <major.minor>, this field will contain the full <major.minor.patch> version being used.
+* **currentOrchestratorVersion**: string (ReadOnly): The version of Kubernetes the Agent Pool is running. If orchestratorVersion is a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion is <major.minor>, this field will contain the full <major.minor.patch> version being used.
 * **enableAutoScaling**: bool: Whether to enable auto-scaler
 * **enableEncryptionAtHost**: bool: Whether to enable host based OS and data drive encryption. This is only supported on certain VM sizes and in certain Azure regions. For more information, see: https://docs.microsoft.com/azure/aks/enable-host-encryption
 * **enableFIPS**: bool: Whether to use a FIPS-enabled OS. See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details.
@@ -824,7 +876,7 @@
 * **eTag**: string (ReadOnly): Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention.
 * **gatewayProfile**: [AgentPoolGatewayProfile](#agentpoolgatewayprofile): Profile specific to a managed agent pool in Gateway mode. This field cannot be set if agent pool mode is not Gateway.
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
-* **gpuProfile**: [GPUProfile](#gpuprofile): The GPU settings of an agent pool.
+* **gpuProfile**: [GPUProfile](#gpuprofile): GPU settings for the Agent Pool.
 * **hostGroupID**: string: The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from, used only in creation scenario and not allowed to changed once set. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): The Kubelet configuration on the agent pool nodes.
 * **kubeletDiskType**: 'OS' | 'Temporary' | string: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
@@ -837,15 +889,15 @@
 * **mode**: 'Gateway' | 'Machines' | 'ManagedSystem' | 'System' | 'User' | string: The mode of an agent pool. A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
 * **networkProfile**: [AgentPoolNetworkProfile](#agentpoolnetworkprofile): Network-related settings of an agent pool.
 * **nodeCustomizationProfile**: [NodeCustomizationProfile](#nodecustomizationprofile): Settings to determine the node customization used to provision nodes in a pool.
-* **nodeImageVersion**: string: The version of node image
+* **nodeImageVersion**: string (ReadOnly): The version of node image
 * **nodeInitializationTaints**: string[]: Taints added on the nodes during creation that will not be reconciled by AKS. These taints will not be reconciled by AKS and can be removed with a kubectl call. This field can be modified after node pool is created, but nodes will not be recreated with new taints until another operation that requires recreation (e.g. node image upgrade) happens. These taints allow for required configuration to run before the node is ready to accept workloads, for example 'key1=value1:NoSchedule' that then can be removed with `kubectl taint nodes node1 key1=value1:NoSchedule-`
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: The public IP prefix ID which VM nodes should use IPs from. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}
 * **nodeTaints**: string[]: The taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
-* **orchestratorVersion**: string: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> and <major.minor> are supported. When <major.minor> is specified, the latest supported patch version is chosen automatically. Updating the agent pool with the same <major.minor> once it has been created will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
+* **orchestratorVersion**: string: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> (e.g. 1.20.13) and <major.minor> (e.g. 1.20) are supported. When <major.minor> is specified, the latest supported GA patch version is chosen automatically. Updating the cluster with the same <major.minor> once it has been created (e.g. 1.14.x -> 1.14) will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
 * **osDiskSizeGB**: int {minValue: 0, maxValue: 2048}: OS Disk Size in GB to be used to specify the disk size for every machine in the master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osDiskType**: 'Ephemeral' | 'Managed' | string: The OS disk type to be used for machines in the agent pool. The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
-* **osSKU**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string: Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated.
+* **osSKU**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string: Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows.
 * **osType**: 'Linux' | 'Windows' | string: The operating system type. The default is Linux.
 * **podIPAllocationMode**: 'DynamicIndividual' | 'StaticBlock' | string: Pod IP Allocation Mode. The IP allocation mode for pods in the agent pool. Must be used with podSubnetId. The default is 'DynamicIndividual'.
 * **podSubnetID**: string: The ID of the subnet which pods will join when launched. If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
@@ -853,14 +905,14 @@
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
 * **scaleDownMode**: 'Deallocate' | 'Delete' | string: The scale down mode to use when scaling the Agent Pool. This also effects the cluster autoscaler behavior. If not specified, it defaults to Delete.
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'.
-* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'.
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority.
 * **securityProfile**: [AgentPoolSecurityProfile](#agentpoolsecurityprofile): The security settings of an agent pool.
 * **spotMaxPrice**: int: The max price (in US Dollars) you are willing to pay for spot instances. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand. Possible values are any decimal value greater than zero or -1 which indicates the willingness to pay any on-demand price. For more details on spot pricing, see [spot VMs pricing](https://docs.microsoft.com/azure/virtual-machines/spot-vms#pricing)
 * **status**: [AgentPoolStatus](#agentpoolstatus): Contains read-only information about the Agent Pool.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): The tags to be persisted on the agent pool virtual machine scale set.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | 'VirtualMachines' | string: The type of Agent Pool.
-* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool. Applies when upgrade strategy is set to Rolling.
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool
 * **upgradeSettingsBlueGreen**: [AgentPoolBlueGreenUpgradeSettings](#agentpoolbluegreenupgradesettings): Settings for Blue-Green upgrade on the agentpool. Applies when upgrade strategy is set to BlueGreen.
 * **upgradeStrategy**: 'BlueGreen' | 'Rolling' | string: Defines the upgrade strategy for the agent pool. The default is Rolling.
 * **virtualMachineNodesStatus**: [VirtualMachineNodes](#virtualmachinenodes)[]: The status of nodes in a VirtualMachines agent pool.
@@ -900,20 +952,20 @@
 * **disableRunCommand**: bool: Whether to disable run command for the cluster or not.
 * **enablePrivateCluster**: bool: Whether to create the cluster as a private cluster or not. For more details, see [Creating a private AKS cluster](https://docs.microsoft.com/azure/aks/private-clusters).
 * **enablePrivateClusterPublicFQDN**: bool: Whether to create additional public FQDN for private cluster or not.
-* **enableVnetIntegration**: bool: Whether to enable apiserver vnet integration for the cluster or not.
+* **enableVnetIntegration**: bool: Whether to enable apiserver vnet integration for the cluster or not. See aka.ms/AksVnetIntegration for more details.
 * **privateDNSZone**: string: The private DNS zone mode for the cluster. The default is System. For more details see [configure private DNS zone](https://docs.microsoft.com/azure/aks/private-clusters#configure-private-dns-zone). Allowed values are 'system' and 'none'.
-* **subnetId**: string: The subnet to be used when apiserver vnet integration is enabled. It is required when: 1. creating a new cluster with BYO Vnet; 2. updating an existing cluster to enable apiserver vnet integration.
+* **subnetId**: string: The subnet to be used when apiserver vnet integration is enabled. It is required when creating a new cluster with BYO Vnet, or when updating an existing cluster to enable apiserver vnet integration.
 
 ## ManagedClusterAutoUpgradeProfile
 ### Properties
-* **nodeOSUpgradeChannel**: 'NodeImage' | 'None' | 'SecurityPatch' | 'Unmanaged' | string: Manner in which the OS on your nodes is updated. The default is Unmanaged, but may change to either NodeImage or SecurityPatch at GA.
+* **nodeOSUpgradeChannel**: 'NodeImage' | 'None' | 'SecurityPatch' | 'Unmanaged' | string: Node OS Upgrade Channel. Manner in which the OS on your nodes is updated. The default is NodeImage.
 * **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable' | string: The upgrade channel for auto upgrade. The default is 'none'. For more information see [setting the AKS cluster auto-upgrade channel](https://docs.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel).
 
 ## ManagedClusterAzureMonitorProfile
 ### Properties
 * **appMonitoring**: [ManagedClusterAzureMonitorProfileAppMonitoring](#managedclusterazuremonitorprofileappmonitoring): Application Monitoring Profile for Kubernetes Application Container. Collects application logs, metrics and traces through auto-instrumentation of the application using Azure Monitor OpenTelemetry based SDKs. See aka.ms/AzureMonitorApplicationMonitoring for an overview.
 * **containerInsights**: [ManagedClusterAzureMonitorProfileContainerInsights](#managedclusterazuremonitorprofilecontainerinsights): Azure Monitor Container Insights Profile for Kubernetes Events, Inventory and Container stdout & stderr logs etc. See aka.ms/AzureMonitorContainerInsights for an overview.
-* **metrics**: [ManagedClusterAzureMonitorProfileMetrics](#managedclusterazuremonitorprofilemetrics): Metrics profile for the prometheus service addon
+* **metrics**: [ManagedClusterAzureMonitorProfileMetrics](#managedclusterazuremonitorprofilemetrics): Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.
 
 ## ManagedClusterAzureMonitorProfileAppMonitoring
 ### Properties
@@ -945,13 +997,13 @@
 
 ## ManagedClusterAzureMonitorProfileKubeStateMetrics
 ### Properties
-* **metricAnnotationsAllowList**: string: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric.
-* **metricLabelsAllowlist**: string: Comma-separated list of Kubernetes annotations keys that will be used in the resource's labels metric.
+* **metricAnnotationsAllowList**: string: Comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric (Example: 'namespaces=[kubernetes.io/team,...],pods=[kubernetes.io/team],...'). By default the metric contains only resource name and namespace labels.
+* **metricLabelsAllowlist**: string: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric (Example: 'namespaces=[k8s-label-1,k8s-label-n,...],pods=[app],...'). By default the metric contains only resource name and namespace labels.
 
 ## ManagedClusterAzureMonitorProfileMetrics
 ### Properties
-* **enabled**: bool (Required): Whether to enable the Prometheus collector
-* **kubeStateMetrics**: [ManagedClusterAzureMonitorProfileKubeStateMetrics](#managedclusterazuremonitorprofilekubestatemetrics): Kube State Metrics for prometheus addon profile for the container service cluster
+* **enabled**: bool (Required): Whether to enable or disable the Azure Managed Prometheus addon for Prometheus monitoring. See aka.ms/AzureManagedPrometheus-aks-enable for details on enabling and disabling.
+* **kubeStateMetrics**: [ManagedClusterAzureMonitorProfileKubeStateMetrics](#managedclusterazuremonitorprofilekubestatemetrics): Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.
 
 ## ManagedClusterBootstrapProfile
 ### Properties
@@ -977,11 +1029,16 @@
 
 ## ManagedClusterIdentity
 ### Properties
-* **delegatedResources**: [DelegatedResources](#delegatedresources): The delegated identity resources assigned to this managed cluster. This can only be set by another Azure Resource Provider, and managed cluster only accept one delegated identity resource. Internal use only.
+* **delegatedResources**: [ManagedClusterIdentityDelegatedResources](#managedclusteridentitydelegatedresources): The delegated identity resources assigned to this managed cluster. This can only be set by another Azure Resource Provider, and managed cluster only accept one delegated identity resource. Internal use only.
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity which is used by master components.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity which is used by master components.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the managed cluster. For more information see [use managed identities in AKS](https://docs.microsoft.com/azure/aks/use-managed-identity).
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: The type of identity used for the managed cluster. For more information see [use managed identities in AKS](https://docs.microsoft.com/azure/aks/use-managed-identity).
 * **userAssignedIdentities**: [ManagedClusterIdentityUserAssignedIdentities](#managedclusteridentityuserassignedidentities): The user identity associated with the managed cluster. This identity will be used in control plane. Only one user assigned identity is allowed. The keys must be ARM resource IDs in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## ManagedClusterIdentityDelegatedResources
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DelegatedResource](#delegatedresource)
 
 ## ManagedClusterIdentityUserAssignedIdentities
 ### Properties
@@ -997,7 +1054,7 @@
 ### Properties
 * **applicationLoadBalancer**: [ManagedClusterIngressProfileApplicationLoadBalancer](#managedclusteringressprofileapplicationloadbalancer): Settings for the managed Application Load Balancer installation
 * **gatewayAPI**: [ManagedClusterIngressProfileGatewayConfiguration](#managedclusteringressprofilegatewayconfiguration): Settings for the managed Gateway API installation
-* **webAppRouting**: [ManagedClusterIngressProfileWebAppRouting](#managedclusteringressprofilewebapprouting): Web App Routing settings for the ingress profile.
+* **webAppRouting**: [ManagedClusterIngressProfileWebAppRouting](#managedclusteringressprofilewebapprouting): App Routing settings for the ingress profile. You can find an overview and onboarding guide for this feature at https://learn.microsoft.com/en-us/azure/aks/app-routing?tabs=default%2Cdeploy-app-default.
 
 ## ManagedClusterIngressProfileApplicationLoadBalancer
 ### Properties
@@ -1015,9 +1072,9 @@
 ## ManagedClusterIngressProfileWebAppRouting
 ### Properties
 * **defaultDomain**: [ManagedClusterIngressDefaultDomainProfile](#managedclusteringressdefaultdomainprofile): Configuration for the Default Domain. This is a unique, autogenerated domain that comes with a signed TLS Certificate allowing for secure HTTPS. See [the Default Domain documentation](https://aka.ms/aks/defaultdomain) for more instructions.
-* **dnsZoneResourceIds**: string[] {maxLength: 5}: Resource IDs of the DNS zones to be associated with the Web App Routing add-on. Used only when Web App Routing is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group.
-* **enabled**: bool: Whether to enable Web App Routing.
-* **identity**: [UserAssignedIdentity](#userassignedidentity) (ReadOnly): Managed identity of the Web Application Routing add-on. This is the identity that should be granted permissions, for example, to manage the associated Azure DNS resource and get certificates from Azure Key Vault. See [this overview of the add-on](https://learn.microsoft.com/en-us/azure/aks/web-app-routing?tabs=with-osm) for more instructions.
+* **dnsZoneResourceIds**: string[] {maxLength: 5}: Resource IDs of the DNS zones to be associated with the Application Routing add-on. Used only when Application Routing add-on is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group.
+* **enabled**: bool: Whether to enable the Application Routing add-on.
+* **identity**: [UserAssignedIdentity](#userassignedidentity) (ReadOnly): Managed identity of the Application Routing add-on. This is the identity that should be granted permissions, for example, to manage the associated Azure DNS resource and get certificates from Azure Key Vault. See [this overview of the add-on](https://learn.microsoft.com/en-us/azure/aks/web-app-routing?tabs=with-osm) for more instructions.
 * **nginx**: [ManagedClusterIngressProfileNginx](#managedclusteringressprofilenginx): Configuration for the default NginxIngressController. See more at https://learn.microsoft.com/en-us/azure/aks/app-routing-nginx-configuration#the-default-nginx-ingress-controller.
 
 ## ManagedClusterLoadBalancerProfile
@@ -1066,7 +1123,7 @@
 
 ## ManagedClusterNodeResourceGroupProfile
 ### Properties
-* **restrictionLevel**: 'ReadOnly' | 'Unrestricted' | string: The restriction level applied to the cluster's node resource group
+* **restrictionLevel**: 'ReadOnly' | 'Unrestricted' | string: The restriction level applied to the cluster's node resource group. If not specified, the default is 'Unrestricted'
 
 ## ManagedClusterOidcIssuerProfile
 ### Properties
@@ -1079,7 +1136,7 @@
 * **identity**: [UserAssignedIdentity](#userassignedidentity) (Required): The user assigned identity details.
 * **name**: string (Required): The name of the pod identity.
 * **namespace**: string (Required): The namespace of the pod identity.
-* **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly)
+* **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly): The provisioning information for the pod identity.
 * **provisioningState**: 'Assigned' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the pod identity.
 
 ## ManagedClusterPodIdentityException
@@ -1115,6 +1172,20 @@
 ### Properties
 * **error**: [ManagedClusterPodIdentityProvisioningError](#managedclusterpodidentityprovisioningerror): Pod identity assignment error (if any).
 
+## ManagedClusterPoolUpgradeProfile
+### Properties
+* **componentsByReleases**: [ComponentsByRelease](#componentsbyrelease)[]: List of components grouped by kubernetes major.minor version.
+* **kubernetesVersion**: string (Required): The Kubernetes version (major.minor.patch).
+* **name**: string: The Agent Pool name.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type. The default is Linux.
+* **upgrades**: [ManagedClusterPoolUpgradeProfileUpgradesItem](#managedclusterpoolupgradeprofileupgradesitem)[]: List of orchestrator types and versions available for upgrade.
+
+## ManagedClusterPoolUpgradeProfileUpgradesItem
+### Properties
+* **isOutOfSupport**: bool: Whether the Kubernetes version is out of support.
+* **isPreview**: bool: Whether the Kubernetes version is currently in preview.
+* **kubernetesVersion**: string: The Kubernetes version (major.minor.patch).
+
 ## ManagedClusterProperties
 ### Properties
 * **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): The Azure Active Directory configuration.
@@ -1124,11 +1195,11 @@
 * **apiServerAccessProfile**: [ManagedClusterAPIServerAccessProfile](#managedclusterapiserveraccessprofile): The access profile for managed cluster API server.
 * **autoScalerProfile**: [ManagedClusterPropertiesAutoScalerProfile](#managedclusterpropertiesautoscalerprofile): Parameters to be applied to the cluster-autoscaler when enabled
 * **autoUpgradeProfile**: [ManagedClusterAutoUpgradeProfile](#managedclusterautoupgradeprofile): The auto upgrade configuration.
-* **azureMonitorProfile**: [ManagedClusterAzureMonitorProfile](#managedclusterazuremonitorprofile): Prometheus addon profile for the container service cluster
+* **azureMonitorProfile**: [ManagedClusterAzureMonitorProfile](#managedclusterazuremonitorprofile): Azure Monitor addon profiles for monitoring the managed cluster.
 * **azurePortalFQDN**: string (ReadOnly): The special FQDN used by the Azure Portal to access the Managed Cluster. This FQDN is for use only by the Azure Portal and should not be used by other clients. The Azure Portal requires certain Cross-Origin Resource Sharing (CORS) headers to be sent in some responses, which Kubernetes APIServer doesn't handle by default. This special FQDN supports CORS, allowing the Azure Portal to function properly.
 * **bootstrapProfile**: [ManagedClusterBootstrapProfile](#managedclusterbootstrapprofile): Profile of the cluster bootstrap configuration.
 * **creationData**: [CreationData](#creationdata): CreationData to be used to specify the source Snapshot ID if the cluster will be created/upgraded using a snapshot.
-* **currentKubernetesVersion**: string (ReadOnly): The version of Kubernetes the Managed Cluster is running.
+* **currentKubernetesVersion**: string (ReadOnly): The version of Kubernetes the Managed Cluster is running. If kubernetesVersion was a fully specified version <major.minor.patch>, this field will be exactly equal to it. If kubernetesVersion was <major.minor>, this field will contain the full <major.minor.patch> version being used.
 * **disableLocalAccounts**: bool: If local accounts should be disabled on the Managed Cluster. If set to true, getting static credentials will be disabled for this cluster. This must only be used on Managed Clusters that are AAD enabled. For more details see [disable local accounts](https://docs.microsoft.com/azure/aks/managed-aad#disable-local-accounts-preview).
 * **diskEncryptionSetID**: string: The Resource ID of the disk encryption set to use for enabling encryption at rest. This is of the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{encryptionSetName}'
 * **dnsPrefix**: string: The DNS prefix of the Managed Cluster. This cannot be updated once the Managed Cluster has been created.
@@ -1140,14 +1211,14 @@
 * **httpProxyConfig**: [ManagedClusterHttpProxyConfig](#managedclusterhttpproxyconfig): Configurations for provisioning the cluster with HTTP proxy servers.
 * **identityProfile**: [ManagedClusterPropertiesIdentityProfile](#managedclusterpropertiesidentityprofile): The user identity associated with the managed cluster. This identity will be used by the kubelet. Only one user assigned identity is allowed. The only accepted key is "kubeletidentity", with value of "resourceId": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}".
 * **ingressProfile**: [ManagedClusterIngressProfile](#managedclusteringressprofile): Ingress profile for the managed cluster.
-* **kubernetesVersion**: string: The version of Kubernetes the Managed Cluster is requested to run. When you upgrade a supported AKS cluster, Kubernetes minor versions cannot be skipped. All upgrades must be performed sequentially by major version number. For example, upgrades between 1.14.x -> 1.15.x or 1.15.x -> 1.16.x are allowed, however 1.14.x -> 1.16.x is not allowed. See [upgrading an AKS cluster](https://docs.microsoft.com/azure/aks/upgrade-cluster) for more details.
+* **kubernetesVersion**: string: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> (e.g. 1.20.13) and <major.minor> (e.g. 1.20) are supported. When <major.minor> is specified, the latest supported GA patch version is chosen automatically. Updating the cluster with the same <major.minor> once it has been created (e.g. 1.14.x -> 1.14) will not trigger an upgrade, even if a newer patch version is available. When you upgrade a supported AKS cluster, Kubernetes minor versions cannot be skipped. All upgrades must be performed sequentially by major version number. For example, upgrades between 1.14.x -> 1.15.x or 1.15.x -> 1.16.x are allowed, however 1.14.x -> 1.16.x is not allowed. See [upgrading an AKS cluster](https://docs.microsoft.com/azure/aks/upgrade-cluster) for more details.
 * **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile): The profile for Linux VMs in the Managed Cluster.
 * **maxAgentPools**: int (ReadOnly): The max number of agent pools for the managed cluster.
 * **metricsProfile**: [ManagedClusterMetricsProfile](#managedclustermetricsprofile): Optional cluster metrics configuration.
 * **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile): The network configuration profile.
 * **nodeProvisioningProfile**: [ManagedClusterNodeProvisioningProfile](#managedclusternodeprovisioningprofile): Node provisioning settings that apply to the whole cluster.
 * **nodeResourceGroup**: string: The name of the resource group containing agent pool nodes.
-* **nodeResourceGroupProfile**: [ManagedClusterNodeResourceGroupProfile](#managedclusternoderesourcegroupprofile): The node resource group configuration profile.
+* **nodeResourceGroupProfile**: [ManagedClusterNodeResourceGroupProfile](#managedclusternoderesourcegroupprofile): Profile of the node resource group configuration.
 * **oidcIssuerProfile**: [ManagedClusterOidcIssuerProfile](#managedclusteroidcissuerprofile): The OIDC issuer profile of the Managed Cluster.
 * **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile): The pod identity profile of the Managed Cluster. See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on AAD pod identity integration.
 * **powerState**: [PowerState](#powerstate) (ReadOnly): The Power State of the cluster.
@@ -1177,7 +1248,7 @@
 * **balance-similar-node-groups**: string: Detects similar node pools and balances the number of nodes between them. Valid values are 'true' and 'false'
 * **daemonset-eviction-for-empty-nodes**: bool: DaemonSet pods will be gracefully terminated from empty nodes. If set to true, all daemonset pods on empty nodes will be evicted before deletion of the node. If the daemonset pod cannot be evicted another node will be chosen for scaling. If set to false, the node will be deleted without ensuring that daemonset pods are deleted or evicted.
 * **daemonset-eviction-for-occupied-nodes**: bool: DaemonSet pods will be gracefully terminated from non-empty nodes. If set to true, all daemonset pods on occupied nodes will be evicted before deletion of the node. If the daemonset pod cannot be evicted another node will be chosen for scaling. If set to false, the node will be deleted without ensuring that daemonset pods are deleted or evicted.
-* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random' | string: Type of node group expander to be used in scale up. Set to be deprecated, please use 'expanders' flag in the future. Available values are: 'least-waste', 'most-pods', 'priority', 'random'.
+* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random' | string: The expander to use when scaling up. If not specified, the default is 'random'. See [expanders](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-expanders) for more information.
 * **ignore-daemonsets-utilization**: bool: Should CA ignore DaemonSet pods when calculating resource utilization for scaling down. If set to true, the resources used by daemonset will be taken into account when making scaling down decisions.
 * **max-empty-bulk-delete**: string: The maximum number of empty nodes that can be deleted at the same time. This must be a positive integer. The default is 10.
 * **max-graceful-termination-sec**: string: The maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. The default is 600.
@@ -1259,7 +1330,7 @@
 ## ManagedClusterServicePrincipalProfile
 ### Properties
 * **clientId**: string (Required): The ID for the service principal.
-* **secret**: string: The secret password associated with the service principal in plain text.
+* **secret**: string {sensitive}: The secret password associated with the service principal in plain text.
 
 ## ManagedClusterSKU
 ### Properties
@@ -1304,9 +1375,14 @@
 ### Properties
 * **enabled**: bool: Whether to enable Snapshot Controller. The default value is true.
 
+## ManagedClusterUpgradeProfileProperties
+### Properties
+* **agentPoolProfiles**: [ManagedClusterPoolUpgradeProfile](#managedclusterpoolupgradeprofile)[] (Required): The list of available upgrade versions for agent pools.
+* **controlPlaneProfile**: [ManagedClusterPoolUpgradeProfile](#managedclusterpoolupgradeprofile) (Required): The list of available upgrade versions for the control plane.
+
 ## ManagedClusterWindowsProfile
 ### Properties
-* **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
+* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
 * **adminUsername**: string (Required): Specifies the name of the administrator account. <br><br> **Restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
 * **enableCSIProxy**: bool: Whether to enable CSI proxy. For more details on CSI proxy, see the [CSI proxy GitHub repo](https://github.com/kubernetes-csi/csi-proxy).
 * **gmsaProfile**: [WindowsGmsaProfile](#windowsgmsaprofile): The Windows gMSA Profile in the Managed Cluster.
@@ -1315,7 +1391,7 @@
 ## ManagedClusterWorkloadAutoScalerProfile
 ### Properties
 * **keda**: [ManagedClusterWorkloadAutoScalerProfileKeda](#managedclusterworkloadautoscalerprofilekeda): KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.
-* **verticalPodAutoscaler**: [ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler](#managedclusterworkloadautoscalerprofileverticalpodautoscaler)
+* **verticalPodAutoscaler**: [ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler](#managedclusterworkloadautoscalerprofileverticalpodautoscaler): VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.
 
 ## ManagedClusterWorkloadAutoScalerProfileKeda
 ### Properties
@@ -1324,7 +1400,7 @@
 ## ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler
 ### Properties
 * **addonAutoscaling**: 'Disabled' | 'Enabled' | string: Whether VPA add-on is enabled and configured to scale AKS-managed add-ons.
-* **enabled**: bool (Required): Whether to enable VPA add-on in cluster. Default value is false.
+* **enabled**: bool (Required): Whether to enable VPA. Default value is false.
 
 ## ManagedNamespaceTags
 ### Properties
@@ -1354,7 +1430,7 @@
 
 ## MeshRevisionProfileProperties
 ### Properties
-* **meshRevisions**: [MeshRevision](#meshrevision)[]
+* **meshRevisions**: [MeshRevision](#meshrevision)[]: Available mesh revisions.
 
 ## MeshUpgradeProfileProperties
 ### Properties
@@ -1385,8 +1461,8 @@
 
 ## NetworkPolicies
 ### Properties
-* **egress**: 'AllowAll' | 'AllowSameNamespace' | 'DenyAll' | string: Egress policy for the network.
-* **ingress**: 'AllowAll' | 'AllowSameNamespace' | 'DenyAll' | string: Ingress policy for the network.
+* **egress**: 'AllowAll' | 'AllowSameNamespace' | 'DenyAll' | string: Enum representing different network policy rules.
+* **ingress**: 'AllowAll' | 'AllowSameNamespace' | 'DenyAll' | string: Enum representing different network policy rules.
 
 ## NetworkProfileForSnapshot
 ### Properties
@@ -1424,7 +1500,7 @@
 ### Properties
 * **groupId**: string: The group ID of the resource.
 * **id**: string: The ID of the private link resource.
-* **name**: string: The name of the private link resource.
+* **name**: string: The name of the private link resource. See [naming rules](https://aka.ms/search-naming-rules) for more details.
 * **privateLinkServiceID**: string (ReadOnly): The private link service ID of the resource, this field is exposed only to NRP internally.
 * **requiredMembers**: string[]: The RequiredMembers of the resource
 * **type**: string: The resource type.
@@ -1438,7 +1514,7 @@
 ### Properties
 * **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string (Required): Specifies on which day of the week the maintenance occurs.
 * **intervalMonths**: int {minValue: 1, maxValue: 6} (Required): Specifies the number of months between each set of occurrences.
-* **weekIndex**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string (Required): The week index. Specifies on which instance of the allowed days specified in daysOfWeek the maintenance occurs.
+* **weekIndex**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string (Required): The week index. Specifies on which week of the month the dayOfWeek applies.
 
 ## ResourceQuota
 ### Properties
@@ -1453,7 +1529,7 @@
 
 ## SafeguardsAvailableVersionsProperties
 ### Properties
-* **isDefaultVersion**: bool (ReadOnly)
+* **isDefaultVersion**: bool (ReadOnly): Whether this is the default version.
 * **support**: 'Preview' | 'Stable' | string (ReadOnly): Whether the version is preview or stable.
 
 ## ScaleProfile
@@ -1491,7 +1567,7 @@
 * **enableFIPS**: bool (ReadOnly): Whether to use a FIPS-enabled OS.
 * **kubernetesVersion**: string (ReadOnly): The version of Kubernetes.
 * **nodeImageVersion**: string (ReadOnly): The version of node image.
-* **osSku**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string (ReadOnly): Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated.
+* **osSku**: 'AzureLinux' | 'AzureLinux3' | 'CBLMariner' | 'Flatcar' | 'Mariner' | 'Ubuntu' | 'Ubuntu2204' | 'Ubuntu2404' | 'Windows2019' | 'Windows2022' | 'Windows2025' | 'WindowsAnnual' | string (ReadOnly): Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows.
 * **osType**: 'Linux' | 'Windows' | string (ReadOnly): The operating system type. The default is Linux.
 * **snapshotType**: 'ManagedCluster' | 'NodePool' | string: The type of a snapshot. The default is NodePool.
 * **vmSize**: string (ReadOnly): The size of the VM.

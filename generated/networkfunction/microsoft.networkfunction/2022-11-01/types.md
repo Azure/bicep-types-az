@@ -10,8 +10,8 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureTrafficCollectorPropertiesFormat](#azuretrafficcollectorpropertiesformat): Properties of the Azure Traffic Collector.
-* **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [AzureTrafficCollectorTags](#azuretrafficcollectortags): Resource tags.
 * **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies@2022-11-01
@@ -24,8 +24,8 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Properties of the Collector Policy.
-* **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [CollectorPolicyTags](#collectorpolicytags): Resource tags.
 * **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureTrafficCollectorPropertiesFormat
@@ -34,11 +34,21 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application rule collection resource.
 * **virtualHub**: [ResourceReference](#resourcereference): The virtualHub to which the Azure Traffic Collector belongs.
 
+## AzureTrafficCollectorTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## CollectorPolicyPropertiesFormat
 ### Properties
 * **emissionPolicies**: [EmissionPoliciesPropertiesFormat](#emissionpoliciespropertiesformat)[]: Emission policies.
 * **ingestionPolicy**: [IngestionPolicyPropertiesFormat](#ingestionpolicypropertiesformat): Ingestion policies.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state.
+
+## CollectorPolicyTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## EmissionPoliciesPropertiesFormat
 ### Properties
@@ -63,21 +73,12 @@
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
 
-## TrackedResourceSystemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

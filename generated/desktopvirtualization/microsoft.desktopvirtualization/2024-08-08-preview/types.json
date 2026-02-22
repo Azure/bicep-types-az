@@ -5565,21 +5565,21 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Last heart beat from SessionHost."
       },
       "sessions": {
         "type": {
           "$ref": "#/64"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Number of sessions on SessionHost."
       },
       "agentVersion": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Version of agent on SessionHost."
       },
       "allowNewSession": {
@@ -5621,7 +5621,7 @@
         "type": {
           "$ref": "#/407"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Status for a SessionHost."
       },
       "statusTimestamp": {
@@ -5635,14 +5635,14 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The version of the OS on the session host."
       },
       "sxSStackVersion": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The version of the side by side stack on the session host."
       },
       "updateState": {
@@ -5663,7 +5663,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The error message."
       },
       "lastSessionHostUpdateTime": {

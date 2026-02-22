@@ -1,5 +1,5 @@
 Generating types for 'specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -358,9 +358,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:219" => "#/components/schemas/schemas:340"
+  - properties.details.$ref: "#/components/schemas/schemas:248" => "#/components/schemas/schemas:317"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:215" => "#/components/schemas/schemas:336"
+  - properties.error.$ref: "#/components/schemas/schemas:244" => "#/components/schemas/schemas:313"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:

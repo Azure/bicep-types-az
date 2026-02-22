@@ -1,5 +1,5 @@
 Generating types for 'specification/resources/resource-manager/Microsoft.Authorization/policy/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -179,6 +179,137 @@ warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ParameterValuesValue-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ParameterValuesValue-value
+warning | Modeler/MissingType | The schema 'PolicyAssignmentProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyAssignmentProperties-metadata
+warning | Modeler/MissingType | The schema 'DataEffect-detailsSchema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/DataEffect-detailsSchema
+warning | Modeler/MissingType | The schema 'PolicyDefinitionVersionProperties-policyRule' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyDefinitionVersionProperties-policyRule
+warning | Modeler/MissingType | The schema 'PolicyDefinitionVersionProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyDefinitionVersionProperties-metadata
+warning | Modeler/MissingType | The schema 'ParameterDefinitionsValue-allowedValuesItem' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ParameterDefinitionsValue-allowedValuesItem
+warning | Modeler/MissingType | The schema 'ParameterDefinitionsValue-defaultValue' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ParameterDefinitionsValue-defaultValue
+warning | Modeler/MissingType | The schema 'ParameterDefinitionsValue-schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ParameterDefinitionsValue-schema
+warning | Modeler/MissingType | The schema 'components·1gq9rp7·schemas·parameterdefinitionsvaluemetadata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/components·1gq9rp7·schemas·parameterdefinitionsvaluemetadata·additionalproperties
+warning | Modeler/MissingType | The schema 'ExternalEvaluationEndpointSettings-details' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ExternalEvaluationEndpointSettings-details
+warning | Modeler/MissingType | The schema 'PolicySetDefinitionVersionProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicySetDefinitionVersionProperties-metadata
+warning | Modeler/MissingType | The schema 'PolicyDefinitionProperties-policyRule' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyDefinitionProperties-policyRule
+warning | Modeler/MissingType | The schema 'PolicyDefinitionProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyDefinitionProperties-metadata
+warning | Modeler/MissingType | The schema 'PolicySetDefinitionProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicySetDefinitionProperties-metadata
+warning | Modeler/MissingType | The schema 'PolicyTokenOperation-content' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/PolicyTokenOperation-content
+warning | Modeler/MissingType | The schema 'ExternalEvaluationEndpointInvocationResult-claims' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ExternalEvaluationEndpointInvocationResult-claims
+warning | Modeler/MissingType | The schema 'ExternalEvaluationEndpointInvocationResult-policyEvaluationDetails' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ExternalEvaluationEndpointInvocationResult-policyEvaluationDetails
+warning | Modeler/MissingType | The schema 'ExternalEvaluationEndpointInvocationResult-additionalInfo' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-11-01/openapi.json#/components/schemas/ExternalEvaluationEndpointInvocationResult-additionalInfo
+warning | Skipping resource POST action path '/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'ParameterValuesValue-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-03-01/openapi.json#/components/schemas/ParameterValuesValue-value
 warning | Modeler/MissingType | The schema 'PolicyAssignmentProperties-metadata' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2025-03-01/openapi.json#/components/schemas/PolicyAssignmentProperties-metadata
@@ -214,6 +345,161 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | Skipping resource POST action path '/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:123:5
+warning | PreCheck/SchemaMissingType | The schema 'DataManifestCustomResourceFunctionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:132:5
+warning | PreCheck/SchemaMissingType | The schema 'DataManifestResourceFunctionsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:156:5
+warning | PreCheck/SchemaMissingType | The schema 'DataEffect' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:179:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeAliases' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:192:5
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:211:5
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:263:5
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:289:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:583:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:592:5
+warning | PreCheck/SchemaMissingType | The schema 'NonComplianceMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:659:5
+warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:682:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:691:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:725:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:741:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:492:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:501:5
+warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:545:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:610:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:636:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:507:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:516:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:568:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:595:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:623:5
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:649:5
+warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -621,161 +907,6 @@ warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:123:5
-warning | PreCheck/SchemaMissingType | The schema 'DataManifestCustomResourceFunctionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:132:5
-warning | PreCheck/SchemaMissingType | The schema 'DataManifestResourceFunctionsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:156:5
-warning | PreCheck/SchemaMissingType | The schema 'DataEffect' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:179:5
-warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeAliases' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:192:5
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:211:5
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:263:5
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/dataPolicyManifests.json:289:5
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:583:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:592:5
-warning | PreCheck/SchemaMissingType | The schema 'NonComplianceMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:659:5
-warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:682:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:691:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:725:5
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyAssignments.json:741:5
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:492:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:501:5
-warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:545:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:610:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policyDefinitions.json:636:5
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:507:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:516:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:568:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:595:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:623:5
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/policy/stable/2020-09-01/policySetDefinitions.json:649:5
-warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.

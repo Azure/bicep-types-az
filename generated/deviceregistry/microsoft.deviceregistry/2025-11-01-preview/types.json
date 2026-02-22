@@ -3348,7 +3348,7 @@
           "$ref": "#/216"
         },
         "flags": 0,
-        "description": "The resource-specific properties for this resource."
+        "description": "The RP-specific properties for this resource."
       },
       "tags": {
         "type": {
@@ -3361,7 +3361,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1,
+        "flags": 0,
         "description": "The geo-location where the resource lives"
       },
       "systemData": {
@@ -3525,7 +3525,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "TrackedResourceTags",
+    "name": "PolicyTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"

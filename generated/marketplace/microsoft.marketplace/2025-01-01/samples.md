@@ -74,3 +74,30 @@ resource exampleResource 'Microsoft.Marketplace/privateStores/collections/offers
   }
 }
 ```
+
+## microsoft.marketplace/privatestores/requestapprovals
+
+CreateApprovalRequest
+```bicep
+resource exampleResource 'Microsoft.Marketplace/privateStores/requestApprovals@2025-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    plansDetails: [
+      {
+        justification: 'Because I want to....'
+        planId: 'testPlanA'
+        subscriptionId: '4ca4753c-5a1e-4913-b849-2c68880e03c2'
+        subscriptionName: 'Test subscription 2'
+      }
+      {
+        justification: 'try me :)'
+        planId: '*'
+        subscriptionId: '4ca4753c-5a1e-4913-b849-2c68880e03c2'
+        subscriptionName: 'Test subscription 2'
+      }
+    ]
+    publisherId: 'marketplacetestthirdparty'
+  }
+}
+```

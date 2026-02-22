@@ -87,11 +87,11 @@
 ### Properties
 * **apiVersion**: '2025-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The geo-location where the resource lives
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[0-9a-zA-Z][a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyProperties](#policyproperties): The resource-specific properties for this resource.
+* **properties**: [PolicyProperties](#policyproperties): The RP-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [PolicyTags](#policytags): Resource tags.
 * **type**: 'Microsoft.DeviceRegistry/namespaces/credentials/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/devices@2025-11-01-preview
@@ -783,6 +783,11 @@
 * **certificate**: [CertificateConfiguration](#certificateconfiguration): The certificate configuration.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
 
+## PolicyTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SchemaProperties
 ### Properties
 * **description**: string: Human-readable description of the schema.
@@ -866,11 +871,6 @@
 ### Properties
 * **path**: string (Required): The topic path for messages published to an MQTT broker.
 * **retain**: 'Keep' | 'Never' | string: When set to 'Keep', messages published to an MQTT broker will have the retain flag set. Default: 'Never'.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

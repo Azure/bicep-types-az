@@ -273,7 +273,7 @@ resource exampleResource 'Microsoft.Search/searchServices/sharedPrivateLinkResou
   name: 'example'
   properties: {
     groupId: 'blob'
-    privateLinkResourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName'
+    privateLinkResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName'
     requestMessage: 'please approve'
     resourceRegion: {
     }

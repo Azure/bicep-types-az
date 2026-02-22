@@ -314,7 +314,7 @@
 
 ## EncryptionIdentity
 ### Properties
-* **federatedClientId**: string: ClientId of the multi-tenant AAD Application. Used to access cross-tenant keyvaults.
+* **federatedClientId**: string: ClientId of the multi-tenant Entra ID Application. Used to access cross-tenant keyvaults.
 * **principalId**: string (ReadOnly): The principal ID (object ID) of the identity used to authenticate with key vault. Read-only.
 * **userAssignedIdentity**: string: The ARM resource identifier of the user assigned identity used to authenticate with key vault. Applicable if identity.type has 'UserAssigned'. It should match key of identity.userAssignedIdentities.
 
@@ -468,7 +468,7 @@
 * **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
 * **mirrorState**: 'Broken' | 'Mirrored' | 'Uninitialized' | string (ReadOnly): The status of the replication
 * **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
-* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **remoteVolumeResourceId**: string: The resource ID of the remote volume.
 * **replicationCreationTime**: string (ReadOnly): Replication creation time
 * **replicationDeletionTime**: string (ReadOnly): Replication deletion time
 * **replicationId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the replication.

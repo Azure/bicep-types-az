@@ -2972,9 +2972,6 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools/
       name1: 'val1'
     }
   }
-  zones: [
-    '1'
-  ]
 }
 ```
 

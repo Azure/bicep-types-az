@@ -15,9 +15,9 @@
 
 ## ActionOnUnmanage
 ### Properties
-* **managementGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state.
-* **resourceGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state.
-* **resources**: 'delete' | 'detach' | string (Required): Specifies an action for a newly unmanaged resource. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state.
+* **managementGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource management group.
+* **resourceGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource group.
+* **resources**: 'delete' | 'detach' | string (Required): Specifies an action for a newly unmanaged resource.
 
 ## DenySettings
 ### Properties
@@ -43,7 +43,7 @@
 * **description**: string {maxLength: 4096}: Deployment stack description. Max length of 4096 characters.
 * **detachedResources**: [ResourceReference](#resourcereference)[] (ReadOnly): An array of resources that were detached during the most recent Deployment stack update. Detached means that the resource was removed from the template, but no relevant deletion operations were specified. So, the resource still exists while no longer being associated with the stack.
 * **duration**: string (ReadOnly): The duration of the last successful Deployment stack update.
-* **error**: [ErrorDetail](#errordetail): The error detail.
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **failedResources**: [ResourceReferenceExtended](#resourcereferenceextended)[] (ReadOnly): An array of resources that failed to reach goal state during the most recent update. Each resourceId is accompanied by an error message.
 * **outputs**: [DeploymentStackPropertiesOutputs](#deploymentstackpropertiesoutputs) (ReadOnly): The outputs of the deployment resource created by the deployment stack.
 * **parameters**: [DeploymentStackPropertiesParameters](#deploymentstackpropertiesparameters): Name and value pairs that define the deployment parameters for the template. Use this element when providing the parameter values directly in the request, rather than linking to an existing parameter file. Use either the parametersLink property or the parameters property, but not both.
@@ -125,7 +125,7 @@
 
 ## ResourceReferenceExtended
 ### Properties
-* **error**: [ErrorDetail](#errordetail): The error detail.
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **id**: string (ReadOnly): The ARM Resource ID of a resource managed by the deployment stack.
 
 ## SystemData

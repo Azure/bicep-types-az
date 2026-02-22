@@ -171,8 +171,8 @@
 ### Properties
 * **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings. If not set, no auth is used for upstream messages.
 * **systemEvents**: string[]: Gets or sets the list of system events.
-* **urlTemplate**: string (Required): Gets or sets the URL template for the event handler. The actual URL is calculated when the corresponding event is triggered. 
-The template supports predefined parameters syntax: `{event}`, `{hub}`, and KeyVault reference syntax `{@Microsoft.KeyVault(SecretUri=_your_secret_identifier_)}` 
+* **urlTemplate**: string (Required): Gets or sets the URL template for the event handler. The actual URL is calculated when the corresponding event is triggered.
+The template supports predefined parameters syntax: `{event}`, `{hub}`, and KeyVault reference syntax `{@Microsoft.KeyVault(SecretUri=_your_secret_identifier_)}`
 For example, if the template is `http://example.com/api/{event}`, when `connect` event is triggered, a POST request will be sent to the URL `http://example.com/chat/api/connect`.
 Note: Parameters are not allowed in the hostname of the URL, and curly brackets `{}` are reserved for parameter syntax only. If your URL path contains literal curly brackets, please URL-encode them to ensure proper handling.
 * **userEventPattern**: string: Gets or sets the matching pattern for event names.

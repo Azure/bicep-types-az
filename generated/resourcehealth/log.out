@@ -1,5 +1,5 @@
 Generating types for 'specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -47,16 +47,16 @@ warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | GuidUsage/R3017/ARMViolation | Guid used in model definition 'Identity' for property 'principalId'. Usage of Guid is not recommanded. If GUIDs are absolutely required in your service, please get sign off from the Azure API review board.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
@@ -71,11 +71,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 fatal   | Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json', error encountered: TypeError: Cannot read properties of undefined (reading 'properties')
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListBySubscriptionIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:506:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListByTenantIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:551:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsBySubscriptionIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:683:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsByTenantIdAndTrackingId'. Consider updating the operationId
@@ -98,32 +98,32 @@ warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:1723:9
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:2211:9
-error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
-warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:2272:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2025-04-01/ResourceHealth.json:2272:3
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
+warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | GuidUsage/R3017/ARMViolation | Guid used in model definition 'Identity' for property 'principalId'. Usage of Guid is not recommanded. If GUIDs are absolutely required in your service, please get sign off from the Azure API review board.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -132,9 +132,9 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 fatal   | Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2024-02-01/ResourceHealth.json', error encountered: TypeError: Cannot read properties of undefined (reading 'properties')
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListBySubscriptionIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2024-02-01/ResourceHealth.json:506:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListByTenantIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2024-02-01/ResourceHealth.json:551:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsBySubscriptionIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2024-02-01/ResourceHealth.json:683:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsByTenantIdAndTrackingId'. Consider updating the operationId
@@ -163,25 +163,25 @@ warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2024-02-01/ResourceHealth.json:2268:3
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | GuidUsage/R3017/ARMViolation | Guid used in model definition 'Identity' for property 'principalId'. Usage of Guid is not recommanded. If GUIDs are absolutely required in your service, please get sign off from the Azure API review board.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -218,15 +218,15 @@ warning | PreviewVersionOverOneYear/R4024/SDKViolation | The API version:2023-10
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-10-01-preview/ResourceHealth.json:4:5
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-10-01-preview/ResourceHealth.json:2243:9
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
+warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-10-01-preview/ResourceHealth.json:2304:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-10-01-preview/ResourceHealth.json:2304:3
-error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
-warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
@@ -254,11 +254,11 @@ warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-07-01-preview/ResourceHealth.json:506:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListByTenantIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-07-01-preview/ResourceHealth.json:551:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsBySubscriptionIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-07-01-preview/ResourceHealth.json:683:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsByTenantIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-07-01-preview/ResourceHealth.json:806:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventsModel'. Consider using the plural form of 'Events' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2023-07-01-preview/ResourceHealth.json:593:9
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventModel'. Consider using the plural form of 'Event' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
@@ -288,16 +288,15 @@ error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must b
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | GuidUsage/R3017/ARMViolation | Guid used in model definition 'Identity' for property 'principalId'. Usage of Guid is not recommanded. If GUIDs are absolutely required in your service, please get sign off from the Azure API review board.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
@@ -305,15 +304,16 @@ error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 fatal   | Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json', error encountered: TypeError: Cannot read properties of undefined (reading 'properties')
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListBySubscriptionIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:506:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'listsecurityadvisoryimpactedresources' in:'SecurityAdvisoryImpactedResources_ListByTenantIdAndEventId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:551:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsBySubscriptionIdAndTrackingId'. Consider updating the operationId
@@ -338,14 +338,14 @@ warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:1707:9
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:2195:9
-error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
-warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:2256:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-10-01/ResourceHealth.json:2256:3
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
+warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
@@ -359,11 +359,11 @@ warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 error   | ValidFormats/R2003/SDKViolation | 'arm-id' is not a known format.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -376,9 +376,9 @@ warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:551:9
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsBySubscriptionIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:683:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'fetcheventdetails' in:'Event_fetchDetailsByTenantIdAndTrackingId'. Consider updating the operationId
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:806:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventsModel'. Consider using the plural form of 'Events' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:593:9
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventModel'. Consider using the plural form of 'Event' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
@@ -393,25 +393,25 @@ warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:806:9
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventsModel'. Consider using the plural form of 'Events' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:842:9
-warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:1548:9
 warning | PreviewVersionOverOneYear/R4024/SDKViolation | The API version:2022-10-01-preview having been in a preview state over one year , please move it to GA or retire.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:4:5
+warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:1548:9
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:2028:9
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
+warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:2089:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-10-01-preview/ResourceHealth.json:2089:3
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
-error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
-warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -428,21 +428,21 @@ warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:481:9
 warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId has a noun that conflicts with one of the model names in definitions section. The model name will be disambiguated to 'EventsModel'. Consider using the plural form of 'Events' to avoid this. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:523:9
+warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:1077:9
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:1476:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:1476:3
-warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2022-05-01/ResourceHealth.json:1077:9
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -462,21 +462,21 @@ warning | OperationIdNounConflictingModelNames/R2063/SDKViolation | OperationId 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:523:9
 warning | PreviewVersionOverOneYear/R4024/SDKViolation | The API version:2022-05-01-preview having been in a preview state over one year , please move it to GA or retire.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:4:5
-warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:1065:9
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "subscriptionid" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:1448:3
 warning | ParameterNotDefinedInGlobalParameters/R2015/SDKViolation | Parameter "api-version" is referenced but not defined in the global parameters section of Service Definition
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:1448:3
+warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2022-05-01-preview/ResourceHealth.json:1065:9
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: nameAvailable
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
+error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -504,8 +504,8 @@ warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2017-07-01/resourcehealth.json:837:9
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
-warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
@@ -579,18 +579,18 @@ warning | PreviewVersionOverOneYear/R4024/SDKViolation | The API version:2018-07
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2018-08-01/ResourceHealth.json:4:5
 warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2018-08-01/ResourceHealth.json:997:9
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2018-08-01/ResourceHealth.json:1287:9
 error   | XmsParameterLocation/R4001/SDKViolation | The parameter 'eventId' is defined in global parameters section without 'x-ms-parameter-location' extension. This would add the parameter as the client property. Please ensure that this is exactly you want. If so, apply the extension "x-ms-parameter-location": "client". Else, apply the extension "x-ms-parameter-location": "method".
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2018-08-01/ResourceHealth.json:1566:5
-error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: published
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/preview/2018-08-01/ResourceHealth.json:1287:9
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -659,11 +659,11 @@ warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2018-07-01/ResourceHealth.json:1214:9
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -672,11 +672,11 @@ fatal   | Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-type
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | AvoidNestedProperties/R2001/SDKViolation | Consider using x-ms-client-flatten to provide a better end user experience
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/stable/2020-05-01/ResourceHealth.json:357:9
-error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers//operations'.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'KeyVaultProperties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'identity' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'sku' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
 warning | DescriptionAndTitleMissing/R4021/SDKViolation | 'plan' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
+error   | APIVersionPattern/R3012/ARMViolation | API Version must be in the format: yyyy-MM-dd, optionally followed by -preview, -alpha, -beta, -rc, -privatepreview.
 warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: isDataAction
 error   | SecurityDefinitionsStructure/R2054/SDKViolation | Every swagger/configuration must have a security definitions section and it must adhere to the structure described in: https://github.com/Azure/azure-openapi-validator/blob/master/docs/security-definitions-structure-validation.md

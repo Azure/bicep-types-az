@@ -54,7 +54,7 @@
           "$ref": "#/14"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -235,14 +235,14 @@
           "$ref": "#/19"
         },
         "flags": 0,
-        "description": "The type of identity that created the resource"
+        "description": "The type of identity that created the resource."
       },
       "createdAt": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The timestamp of resource creation (UTC)"
+        "description": "The timestamp of resource creation (UTC)."
       },
       "lastModifiedBy": {
         "type": {
@@ -256,7 +256,7 @@
           "$ref": "#/24"
         },
         "flags": 0,
-        "description": "The type of identity that last modified the resource"
+        "description": "The type of identity that last modified the resource."
       },
       "lastModifiedAt": {
         "type": {
@@ -350,7 +350,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Marketplace/privateStores/requestApprovals"
+    "value": "Microsoft.Marketplace/privateStores/adminRequestApprovals"
   },
   {
     "$type": "StringLiteralType",
@@ -358,7 +358,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "name": "Microsoft.Marketplace/privateStores/adminRequestApprovals",
     "properties": {
       "id": {
         "type": {
@@ -393,215 +393,6 @@
           "$ref": "#/29"
         },
         "flags": 0,
-        "description": "The privateStore approval request data structure."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/14"
-        },
-        "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RequestApprovalProperties",
-    "properties": {
-      "offerId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets unique offer id."
-      },
-      "offerDisplayName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Gets offer display name"
-      },
-      "publisherId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The offer's publisher id"
-      },
-      "plansDetails": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 0,
-        "description": "Gets or sets the plans details"
-      },
-      "isClosed": {
-        "type": {
-          "$ref": "#/8"
-        },
-        "flags": 2,
-        "description": "Gets a value indicating whether the request is closed"
-      },
-      "messageCode": {
-        "type": {
-          "$ref": "#/38"
-        },
-        "flags": 0,
-        "description": "Gets or sets the request approval message code"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PlanDetails",
-    "properties": {
-      "planId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets Plan Id"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/35"
-        },
-        "flags": 2,
-        "description": "Gets the plan status"
-      },
-      "requestDate": {
-        "type": {
-          "$ref": "#/36"
-        },
-        "flags": 2,
-        "description": "Gets request date"
-      },
-      "justification": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets user's justification for the plan's request"
-      },
-      "subscriptionId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets the subscription id that the user is requesting to add the plan to"
-      },
-      "subscriptionName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets the subscription name that the user is requesting to add the plan to"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Pending"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Rejected"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Approved"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "None"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/31"
-      },
-      {
-        "$ref": "#/32"
-      },
-      {
-        "$ref": "#/33"
-      },
-      {
-        "$ref": "#/34"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "AnyType"
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/30"
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Marketplace/privateStores/requestApprovals@2025-01-01",
-    "body": {
-      "$ref": "#/28"
-    },
-    "readableScopes": 1,
-    "writableScopes": 1
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Marketplace/privateStores/adminRequestApprovals"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-01-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Marketplace/privateStores/adminRequestApprovals",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/40"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/41"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/43"
-        },
-        "flags": 0,
         "description": "The privateStore admin Approval request data structure."
       },
       "systemData": {
@@ -609,7 +400,7 @@
           "$ref": "#/14"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -640,14 +431,14 @@
       },
       "adminAction": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/32"
         },
         "flags": 0,
         "description": "Gets or sets admin action"
       },
       "approvedPlans": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "Gets or sets Approved plans ids, empty in case of rejected"
@@ -668,14 +459,14 @@
       },
       "plans": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/37"
         },
         "flags": 2,
         "description": "Gets list of plans with requesters details"
       },
       "collectionIds": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/38"
         },
         "flags": 0,
         "description": "Gets or sets list of associated collection ids"
@@ -701,10 +492,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/44"
+        "$ref": "#/30"
       },
       {
-        "$ref": "#/45"
+        "$ref": "#/31"
       },
       {
         "$ref": "#/0"
@@ -737,7 +528,7 @@
       },
       "requesters": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/36"
         },
         "flags": 2,
         "description": "Gets requesters details list"
@@ -788,13 +579,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/49"
+      "$ref": "#/35"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/48"
+      "$ref": "#/34"
     }
   },
   {
@@ -807,9 +598,218 @@
     "$type": "ResourceType",
     "name": "Microsoft.Marketplace/privateStores/adminRequestApprovals@2025-01-01",
     "body": {
-      "$ref": "#/42"
+      "$ref": "#/28"
     },
     "readableScopes": 0,
+    "writableScopes": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Marketplace/privateStores/requestApprovals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The privateStore approval request data structure."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestApprovalProperties",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets unique offer id."
+      },
+      "offerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets offer display name"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer's publisher id"
+      },
+      "plansDetails": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Gets or sets the plans details"
+      },
+      "isClosed": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Gets a value indicating whether the request is closed"
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Gets or sets the request approval message code"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Plan Id"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Gets the plan status"
+      },
+      "requestDate": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Gets request date"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets user's justification for the plan's request"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the subscription id that the user is requesting to add the plan to"
+      },
+      "subscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the subscription name that the user is requesting to add the plan to"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Marketplace/privateStores/requestApprovals@2025-01-01",
+    "body": {
+      "$ref": "#/42"
+    },
+    "readableScopes": 1,
     "writableScopes": 1
   },
   {
@@ -864,7 +864,7 @@
           "$ref": "#/14"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -930,7 +930,7 @@
       },
       "numberOfOffers": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/52"
         },
         "flags": 2,
         "description": "Gets the number of offers associated with the collection."
@@ -1064,7 +1064,7 @@
           "$ref": "#/14"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1317,7 +1317,7 @@
       },
       "messageCode": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "Gets or sets the notification message id"
@@ -1436,7 +1436,7 @@
       },
       "messageCode": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/52"
         },
         "flags": 2,
         "description": "The notification message code"

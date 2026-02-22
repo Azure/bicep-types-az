@@ -6,7 +6,7 @@
 ### Properties
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **kind**: 'Gen2' | string: Get or Set Kind property.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, pattern: "^[^%&:\\/#?]+$"} (Required, DeployTimeConstant): The resource name
@@ -35,7 +35,7 @@
 ### Properties
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 98, pattern: "^[^%&:\\/#?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Maps/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -65,7 +65,7 @@
 ## AccountSasParameters
 ### Properties
 * **expiry**: string (Required): The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z". Maximum duration allowed is 24 hours between `start` and `expiry`.
-* **maxRatePerSecond**: int {minValue: 1, maxValue: 500} (Required): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
+* **maxRatePerSecond**: int {minValue: 0, maxValue: 500} (Required): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
 * **principalId**: string (Required): The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Maps Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
 * **regions**: string[]: Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
 * **signingKey**: 'managedIdentity' | 'primaryKey' | 'secondaryKey' | string (Required): The Maps account key to use for signing. Picking `primaryKey` or `secondaryKey` will use the Maps account Shared Keys, and using `managedIdentity` will use the auto-renewed private key to sign the SAS.

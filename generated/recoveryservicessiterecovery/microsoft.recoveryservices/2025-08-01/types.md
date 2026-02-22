@@ -1,5 +1,16 @@
 # Microsoft.RecoveryServices @ 2025-08-01
 
+## Resource Microsoft.RecoveryServices/replicationEligibilityResults@2025-08-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicationEligibilityResultsProperties](#replicationeligibilityresultsproperties) (ReadOnly): Gets properties model for replication eligibility results API.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.RecoveryServices/replicationEligibilityResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/replicationAlertSettings@2025-08-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
@@ -9,6 +20,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigureAlertRequestPropertiesOrAlertProperties](#configurealertrequestpropertiesoralertproperties): The properties of a configure alert request.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationAlertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationEvents@2025-08-01
@@ -20,6 +32,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EventProperties](#eventproperties) (ReadOnly): Event related data.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationEvents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2025-08-01
@@ -31,6 +44,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FabricCreationInputPropertiesOrFabricProperties](#fabriccreationinputpropertiesorfabricproperties): Fabric creation input.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationLogicalNetworks@2025-08-01
@@ -42,6 +56,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogicalNetworkProperties](#logicalnetworkproperties) (ReadOnly): The Logical Network Properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationLogicalNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks@2025-08-01
@@ -53,6 +68,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkProperties](#networkproperties) (ReadOnly): The Network Properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2025-08-01
@@ -64,6 +80,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateNetworkMappingInputPropertiesOrNetworkMappingProperties](#createnetworkmappinginputpropertiesornetworkmappingproperties) (Required): Input properties for creating network mapping.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2025-08-01
@@ -75,6 +92,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateProtectionContainerInputPropertiesOrProtectionContainerProperties](#createprotectioncontainerinputpropertiesorprotectioncontainerproperties): Create protection container input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems@2025-08-01
@@ -86,6 +104,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnableMigrationInputPropertiesOrMigrationItemProperties](#enablemigrationinputpropertiesormigrationitemproperties) (Required): Enable migration input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems/migrationRecoveryPoints@2025-08-01
@@ -97,6 +116,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationRecoveryPointProperties](#migrationrecoverypointproperties) (ReadOnly): Recovery point properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems/migrationRecoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectableItems@2025-08-01
@@ -108,6 +128,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectableItemProperties](#protectableitemproperties) (ReadOnly): The custom data.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectableItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2025-08-01
@@ -119,6 +140,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnableProtectionInputPropertiesOrReplicationProtectedItemProperties](#enableprotectioninputpropertiesorreplicationprotecteditemproperties): Enable protection input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems/recoveryPoints@2025-08-01
@@ -130,6 +152,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecoveryPointProperties](#recoverypointproperties) (ReadOnly): The recovery point properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters@2025-08-01
@@ -140,6 +163,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationProtectionClusterProperties](#replicationprotectionclusterproperties): The custom data.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters/operationResults@2025-08-01
@@ -150,6 +174,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationProtectionClusterProperties](#replicationprotectionclusterproperties) (ReadOnly): The custom data.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2025-08-01
@@ -161,6 +186,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateProtectionContainerMappingInputPropertiesOrProtectionContainerMappingProperties](#createprotectioncontainermappinginputpropertiesorprotectioncontainermappingproperties): Configure protection input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2025-08-01
@@ -172,6 +198,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddRecoveryServicesProviderInputPropertiesOrRecoveryServicesProviderProperties](#addrecoveryservicesproviderinputpropertiesorrecoveryservicesproviderproperties) (Required): The properties of an add provider request.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications@2025-08-01
@@ -183,6 +210,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageClassificationProperties](#storageclassificationproperties) (ReadOnly): Properties of the storage object.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2025-08-01
@@ -194,6 +222,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageMappingInputPropertiesOrStorageClassificationMappingProperties](#storagemappinginputpropertiesorstorageclassificationmappingproperties): Storage mapping input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters@2025-08-01
@@ -205,6 +234,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddVCenterRequestPropertiesOrVCenterProperties](#addvcenterrequestpropertiesorvcenterproperties): The properties of an add vCenter request.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationJobs@2025-08-01
@@ -216,6 +246,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (ReadOnly): The custom data.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2025-08-01
@@ -227,6 +258,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreatePolicyInputPropertiesOrPolicyProperties](#createpolicyinputpropertiesorpolicyproperties): Policy creation properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationProtectionIntents@2025-08-01
@@ -238,6 +270,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateProtectionIntentPropertiesOrReplicationProtectionIntentProperties](#createprotectionintentpropertiesorreplicationprotectionintentproperties): Create protection intent input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationProtectionIntents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationRecoveryPlans@2025-08-01
@@ -249,6 +282,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateRecoveryPlanInputPropertiesOrRecoveryPlanProperties](#createrecoveryplaninputpropertiesorrecoveryplanproperties) (Required): Recovery plan creation properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationRecoveryPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationVaultSettings@2025-08-01
@@ -260,6 +294,7 @@
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultSettingCreationInputPropertiesOrVaultSettingProperties](#vaultsettingcreationinputpropertiesorvaultsettingproperties) (Required): Vault setting creation input properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationVaultSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## A2AAgentReinstallBlockingErrorDetails
@@ -2883,6 +2918,19 @@
 * **rpoInSeconds**: int: The last RPO value in seconds.
 
 
+## ReplicationEligibilityResultsErrorInfo
+### Properties
+* **code**: string: The error code.
+* **message**: string: The error message.
+* **possibleCauses**: string: The possible causes.
+* **recommendedAction**: string: The recommended action.
+* **status**: string (ReadOnly): The error status.
+
+## ReplicationEligibilityResultsProperties
+### Properties
+* **clientRequestId**: string (ReadOnly): The client request Id.
+* **errors**: [ReplicationEligibilityResultsErrorInfo](#replicationeligibilityresultserrorinfo)[]: The error details.
+
 ## ReplicationProtectionClusterProperties
 ### Properties
 * **activeLocation**: string: The Current active location of the Protection cluster.
@@ -3057,6 +3105,15 @@
 * **addressList**: string[]: The list of addresses for the subnet.
 * **friendlyName**: string: The subnet friendly name.
 * **name**: string: The subnet name.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TaskTypeDetails
 * **Discriminator**: instanceType

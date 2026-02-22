@@ -1,5 +1,5 @@
 Generating types for 'specification/containerservice/resource-manager/Microsoft.ContainerService/aks/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -23,8 +23,6 @@ warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ManagedClusterAddonProfile-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2025-10-01/managedClusters.json:6182:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
@@ -41,8 +39,6 @@ warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ManagedClusterAddonProfile-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/containerservice/resource-manager/Microsoft.ContainerService/aks/preview/2025-10-02-preview/managedClusters.json:8464:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.

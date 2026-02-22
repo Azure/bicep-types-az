@@ -6,6 +6,26 @@
 
 ## microsoft.security/pricings
 
+Update pricing on resource (Container Registry ACR)
+```bicep
+resource exampleResource 'Microsoft.Security/pricings@2024-01-01' = {
+  name: 'example'
+  properties: {
+    pricingTier: 'Standard'
+    extensions: [
+      {
+        name: 'ContainerRegistriesVulnerabilityAssessments'
+        isEnabled: 'True'
+      }
+      {
+        name: 'ContainerIntegrityContribution'
+        isEnabled: 'True'
+      }
+    ]
+  }
+}
+```
+
 Update pricing on resource (example for Containers plan)
 ```bicep
 resource exampleResource 'Microsoft.Security/pricings@2024-01-01' = {

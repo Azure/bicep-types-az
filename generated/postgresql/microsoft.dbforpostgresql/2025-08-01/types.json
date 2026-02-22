@@ -4541,12 +4541,32 @@
         "flags": 10,
         "description": "The resource api version"
       },
+      "properties": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
       "systemData": {
         "type": {
           "$ref": "#/135"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TuningOptionsProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "State of the tuning option."
       }
     }
   },

@@ -1,0 +1,56 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Authorization/attributeNamespaces"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-12-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Authorization/attributeNamespaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Authorization/attributeNamespaces@2025-12-01-preview",
+    "body": {
+      "$ref": "#/3"
+    },
+    "readableScopes": 1,
+    "writableScopes": 0
+  }
+]
