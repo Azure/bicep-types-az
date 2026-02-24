@@ -56,7 +56,7 @@
 * **location**: string: Resource location.
 * **name**: string {pattern: "^[a-zA-Z0-9_\-\(\)\.]*[^\.]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): The properties of a Profile
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **tags**: [ResourcewithSettableNameTags](#resourcewithsettablenametags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2025-10-01
@@ -331,7 +331,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## ResourcewithSettableNameTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

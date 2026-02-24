@@ -1,7 +1,16 @@
 Generating types for 'specification/paloaltonetworks/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
+warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"

@@ -1,0 +1,14 @@
+Generating types for 'specification/computebulkactions/resource-manager/readme.md'
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·uz9f3h·schemas·virtualmachineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/computebulkactions/resource-manager/Microsoft.ComputeBulkActions/preview/2026-02-01-preview/computebulkactions.json#/components/schemas/components·uz9f3h·schemas·virtualmachineextensionproperties·properties·settings·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1bzxdfv·schemas·virtualmachineextensionproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/computebulkactions/resource-manager/Microsoft.ComputeBulkActions/preview/2026-02-01-preview/computebulkactions.json#/components/schemas/components·1bzxdfv·schemas·virtualmachineextensionproperties·properties·protectedsettings·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1825ift·schemas·resourceprovisionpayload·properties·baseprofile·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/computebulkactions/resource-manager/Microsoft.ComputeBulkActions/preview/2026-02-01-preview/computebulkactions.json#/components/schemas/components·1825ift·schemas·resourceprovisionpayload·properties·baseprofile·additionalproperties
+warning | Modeler/MissingType | The schema 'components·dsdydq·schemas·resourceprovisionpayload·properties·resourceoverrides·items·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/computebulkactions/resource-manager/Microsoft.ComputeBulkActions/preview/2026-02-01-preview/computebulkactions.json#/components/schemas/components·dsdydq·schemas·resourceprovisionpayload·properties·resourceoverrides·items·additionalproperties

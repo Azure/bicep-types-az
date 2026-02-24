@@ -1910,14 +1910,14 @@
           "$ref": "#/162"
         },
         "flags": 0,
-        "description": "Degraded rule with static threshold. When used, dynamicDetectionRule must not be set."
+        "description": "Degraded rule with static threshold."
       },
       "unhealthyRule": {
         "type": {
           "$ref": "#/162"
         },
         "flags": 0,
-        "description": "Unhealthy rule with static threshold. When used, dynamicDetectionRule must not be set."
+        "description": "Unhealthy rule with static threshold."
       }
     }
   },

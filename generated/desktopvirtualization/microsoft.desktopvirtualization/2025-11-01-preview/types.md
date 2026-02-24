@@ -676,26 +676,26 @@
 
 ## SessionHostProperties
 ### Properties
-* **activeSessions**: int: Number of active sessions on SessionHost.
-* **agentVersion**: string: Version of agent on SessionHost.
+* **activeSessions**: int (ReadOnly): Number of active sessions on SessionHost.
+* **agentVersion**: string (ReadOnly): Version of agent on SessionHost.
 * **allowNewSession**: bool: Allow a new session.
 * **assignedUser**: string: User assigned to SessionHost.
-* **disconnectedSessions**: int: Number of disconnected sessions on SessionHost.
+* **disconnectedSessions**: int (ReadOnly): Number of disconnected sessions on SessionHost.
 * **friendlyName**: string: Friendly name of SessionHost
-* **lastHeartBeat**: string: Last heart beat from SessionHost.
+* **lastHeartBeat**: string (ReadOnly): Last heart beat from SessionHost.
 * **lastSessionHostUpdateTime**: string (ReadOnly): The last time update was completed.
 * **lastUpdateTime**: string (ReadOnly): The timestamp of the last update.
 * **objectId**: string (ReadOnly): ObjectId of SessionHost. (internal use)
-* **osVersion**: string: The version of the OS on the session host.
-* **pendingSessions**: int: Number of pending sessions on SessionHost.
+* **osVersion**: string (ReadOnly): The version of the OS on the session host.
+* **pendingSessions**: int (ReadOnly): Number of pending sessions on SessionHost.
 * **resourceId**: string (ReadOnly): Resource Id of SessionHost's underlying virtual machine.
 * **sessionHostConfiguration**: string (ReadOnly): SessionHostConfiguration version reference at the time the update is initiated, in the format of date time. Example: 2024-04-26T04:56:45Z
 * **sessionHostHealthCheckResults**: [SessionHostHealthCheckReport](#sessionhosthealthcheckreport)[] (ReadOnly): List of SessionHostHealthCheckReports
-* **sessions**: int: Number of sessions on SessionHost.
-* **status**: 'Available' | 'Disconnected' | 'DomainTrustRelationshipLost' | 'FSLogixNotHealthy' | 'NeedsAssistance' | 'NoHeartbeat' | 'NotJoinedToDomain' | 'Shutdown' | 'SxSStackListenerNotReady' | 'Unavailable' | 'UpgradeFailed' | 'Upgrading' | string: Status for a SessionHost.
+* **sessions**: int (ReadOnly): Number of sessions on SessionHost.
+* **status**: 'Available' | 'Disconnected' | 'DomainTrustRelationshipLost' | 'FSLogixNotHealthy' | 'NeedsAssistance' | 'NoHeartbeat' | 'NotJoinedToDomain' | 'Shutdown' | 'SxSStackListenerNotReady' | 'Unavailable' | 'UpgradeFailed' | 'Upgrading' | string (ReadOnly): Status for a SessionHost.
 * **statusTimestamp**: string (ReadOnly): The timestamp of the status.
-* **sxSStackVersion**: string: The version of the side by side stack on the session host.
-* **updateErrorMessage**: string: The error message.
+* **sxSStackVersion**: string (ReadOnly): The version of the side by side stack on the session host.
+* **updateErrorMessage**: string (ReadOnly): The error message.
 * **updateState**: 'Failed' | 'Initial' | 'Pending' | 'Started' | 'Succeeded' | string (ReadOnly): Update state of a SessionHost.
 * **virtualMachineId**: string (ReadOnly): Virtual Machine Id of SessionHost's underlying virtual machine.
 

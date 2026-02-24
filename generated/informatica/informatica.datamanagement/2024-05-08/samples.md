@@ -24,7 +24,7 @@ resource exampleResource 'Informatica.DataManagement/organizations@2024-05-08' =
       informaticaRegion: 'zfqodqpbeflhedypiijdkc'
       organizationId: 'wtdmhlwhkvgqdumaehgfgiqcxgnqpx'
       organizationName: 'nomzbvwe'
-      singleSignOnUrl: 'https://contoso.com/singlesignon'
+      singleSignOnUrl: 'https://microsoft.com/a'
     }
     linkOrganization: {
       token: 'jjfouhoqpumjvrdsfbimgcy'
@@ -40,7 +40,6 @@ resource exampleResource 'Informatica.DataManagement/organizations@2024-05-08' =
         termUnit: 'gjwmgevrblbosuogsvfspsgspetbnxaygkbelvadpgwiywl'
       }
     }
-    provisioningState: 'Accepted'
     userDetails: {
       emailAddress: '7_-46@13D--3.m-4x-.11.c-9-.DHLYFc'
       firstName: 'appvdclawzfjntdfdftjevlhvzropnxqtnypid'
@@ -70,6 +69,13 @@ ServerlessRuntimes_CreateOrUpdate
 resource exampleResource 'Informatica.DataManagement/organizations/serverlessRuntimes@2024-05-08' = {
   parent: parentResource 
   name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      key6235: {
+      }
+    }
+  }
   properties: {
     description: 'mqkaenjmxakvzrwmirelmhgiedto'
     advancedCustomProperties: [
@@ -82,7 +88,6 @@ resource exampleResource 'Informatica.DataManagement/organizations/serverlessRun
     computeUnits: 'bsctukmndvowse'
     executionTimeout: 'ruiougpypny'
     platform: 'AZURE'
-    provisioningState: 'Accepted'
     serverlessAccountLocation: 'bkxdfopapbqucyhduewrubjpaei'
     serverlessRuntimeConfig: {
       cdiConfigProps: [
@@ -120,8 +125,8 @@ resource exampleResource 'Informatica.DataManagement/organizations/serverlessRun
     }
     serverlessRuntimeNetworkProfile: {
       networkInterfaceConfiguration: {
-        subnetId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/subnet1'
-        vnetId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1'
+        subnetId: '/subscriptions/A0A3E464-6AA7-42BC-9EF1-65840CB55277/resourceGroups/rgopenapi/providers/Microsoft.DataManagement/organizations/C'
+        vnetId: '/subscriptions/A0A3E464-6AA7-42BC-9EF1-65840CB55277/resourceGroups/rgopenapi/providers/Microsoft.DataManagement/organizations/C'
         vnetResourceGuid: '5328d299-1462-4be0-bef1-303a28e556a0'
       }
     }

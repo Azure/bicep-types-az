@@ -6,11 +6,11 @@
 ### Properties
 * **apiVersion**: '2021-08-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProcessingRuleProperties](#alertprocessingruleproperties): Alert processing rule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Alert processing rule system data.
-* **tags**: [ManagedResourceTags](#managedresourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AlertsManagement/actionRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Action
@@ -32,7 +32,7 @@
 ### Properties
 * **actions**: [Action](#action)[] (Required): Actions to be applied.
 * **conditions**: [Condition](#condition)[]: Conditions on which alerts will be filtered.
-* **description**: string: Description of alert processing rule.
+* **description**: string: Actions to be applied.Description of alert processing rule.
 * **enabled**: bool: Indicates if the given alert processing rule is enabled or disabled.
 * **schedule**: [Schedule](#schedule): Scheduling for alert processing rule.
 * **scopes**: string[] (Required): Scopes on which alert processing rule will apply.
@@ -42,11 +42,6 @@
 * **field**: 'AlertContext' | 'AlertRuleId' | 'AlertRuleName' | 'Description' | 'MonitorCondition' | 'MonitorService' | 'Severity' | 'SignalType' | 'TargetResource' | 'TargetResourceGroup' | 'TargetResourceType' | string: Field for a given condition.
 * **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals' | string: Operator for a given condition.
 * **values**: string[]: List of values to match for a given condition.
-
-## ManagedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Recurrence
 * **Discriminator**: recurrenceType
@@ -85,4 +80,9 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

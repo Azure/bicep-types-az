@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Alert property bag
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AlertsManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionStatus
@@ -17,11 +18,11 @@
 ## AlertProperties
 ### Properties
 * **context**: any (ReadOnly): Information specific to the monitor service that gives more contextual details about the alert.
-* **customProperties**: [CustomProperties](#customproperties): Custom properties that can hold any user defined key-value pairs
+* **customProperties**: [AlertPropertiesCustomProperties](#alertpropertiescustomproperties): Custom properties that can hold any user defined key-value pairs
 * **egressConfig**: any (ReadOnly): Config which would be used for displaying the data in portal.
 * **essentials**: [Essentials](#essentials): This object contains consistent fields across different monitor services.
 
-## CustomProperties
+## AlertPropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -47,4 +48,13 @@
 * **targetResourceGroup**: string: Resource group of target ARM resource, on which alert got created.
 * **targetResourceName**: string: Name of the target ARM resource name, on which alert got created.
 * **targetResourceType**: string: Resource type of target ARM resource, on which alert got created.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

@@ -1570,7 +1570,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "ClientId of the multi-tenant AAD Application. Used to access cross-tenant keyvaults."
+        "description": "ClientId of the multi-tenant Entra ID Application. Used to access cross-tenant keyvaults."
       }
     }
   },
@@ -5354,7 +5354,7 @@
         "flags": 0,
         "description": "Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol cache."
       },
-      "smbAccessBasedEnumerations": {
+      "smbAccessBasedEnumeration": {
         "type": {
           "$ref": "#/412"
         },
@@ -10443,7 +10443,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1,
+        "flags": 0,
         "description": "The resource ID of the remote volume."
       },
       "remoteVolumeRegion": {

@@ -54,9 +54,9 @@
 
 ## CodeSigningAccountProperties
 ### Properties
-* **accountUri**: string (ReadOnly): The URI of the trusted signing account which is used during signing files.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Status of the current operation on trusted signing account.
-* **sku**: [AccountSku](#accountsku): SKU of the trusted signing account.
+* **accountUri**: string (ReadOnly): The URI of the artifact signing account which is used during signing files.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Status of the current operation on artifact signing account.
+* **sku**: [AccountSku](#accountsku): SKU of the artifact signing account.
 
 ## Revocation
 ### Properties

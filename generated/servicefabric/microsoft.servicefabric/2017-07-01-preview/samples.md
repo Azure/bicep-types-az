@@ -10,9 +10,6 @@ Put a cluster with max parameter
 ```bicep
 resource exampleResource 'Microsoft.ServiceFabric/clusters@2017-07-01-preview' = {
   name: 'example'
-  name: 'myCluster'
-  type: 'Microsoft.ServiceFabric/clusters'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster'
   location: 'eastus'
   properties: {
     addOnFeatures: [
@@ -114,9 +111,6 @@ Put a cluster with min parameter
 ```bicep
 resource exampleResource 'Microsoft.ServiceFabric/clusters@2017-07-01-preview' = {
   name: 'example'
-  name: 'myCluster'
-  type: 'Microsoft.ServiceFabric/clusters'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster'
   location: 'eastus'
   properties: {
     diagnosticsStorageAccountConfig: {
@@ -169,9 +163,6 @@ Put an application with maximum parameters
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'applications'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
   location: 'eastus'
   properties: {
     maximumNodes: 3
@@ -220,9 +211,6 @@ Put an application with minimum parameters
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'applications'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
   location: 'eastus'
   properties: {
     removeApplicationCapacity: false
@@ -239,9 +227,6 @@ Put a service with maximum parameters
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'services'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
   location: 'eastus'
   properties: {
     correlationScheme: [
@@ -275,9 +260,6 @@ Put a service with minimum parameters
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'services'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
   location: 'eastus'
   properties: {
     instanceCount: 1
@@ -297,9 +279,6 @@ Put an application type
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'applicationTypes'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType'
   location: 'eastus'
 }
 ```
@@ -311,9 +290,6 @@ Put an application type version
 resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2017-07-01-preview' = {
   parent: parentResource 
   name: 'example'
-  name: 'myCluster'
-  type: 'versions'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType/versions/1.0'
   location: 'eastus'
   properties: {
     appPackageUrl: 'http://fakelink.test.com/MyAppType'

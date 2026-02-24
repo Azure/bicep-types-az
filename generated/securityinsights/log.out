@@ -1,5 +1,5 @@
 Generating types for 'specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.21.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -326,14 +326,14 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Query' (5 differenc
   - properties.maxPageSize: <none> => {"$ref":"#/components/schemas/schemas:1148","description":"Represents the maximum size of the page that will be returned from the query API."}
   - properties.minPageSize: <none> => {"$ref":"#/components/schemas/schemas:1149","description":"Represents the minimum size of the page that will be returned from the query API."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'UserInfo' (10 differences):
-  - properties.objectId.$ref: "#/components/schemas/schemas:1157" => "#/components/schemas/schemas:1960"
+  - properties.objectId.$ref: "#/components/schemas/schemas:1157" => "#/components/schemas/schemas:2011"
   - properties.objectId.description: "The user's object ID." => "The object id of the user."
   - properties.objectId.readOnly: true => <none>
   - properties.objectId.nullable: <none> => true
-  - properties.email.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1958"
+  - properties.email.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:2009"
   - properties.email.description: "The user's email address." => "The email of the user."
   - properties.email.readOnly: <none> => true
-  - properties.name.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1959"
+  - properties.name.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:2010"
   - properties.name.description: "The user's name." => "The name of the user."
   - properties.name.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
@@ -887,7 +887,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:768"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:1553"
+  - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:1543"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:339" => "#/components/schemas/schemas:346"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -1206,7 +1206,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2022-10-01-preview/dataConnectors.json:2681:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1250" => "#/components/schemas/schemas:1638"
+  - properties.id.$ref: "#/components/schemas/schemas:1250" => "#/components/schemas/schemas:1655"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -1776,7 +1776,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2021-10-01-preview/dataConnectors.json:2584:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1103" => "#/components/schemas/schemas:1475"
+  - properties.id.$ref: "#/components/schemas/schemas:1103" => "#/components/schemas/schemas:1492"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:

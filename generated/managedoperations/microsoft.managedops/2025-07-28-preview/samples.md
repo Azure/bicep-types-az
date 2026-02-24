@@ -20,10 +20,6 @@ resource exampleResource 'Microsoft.ManagedOps/managedOps@2025-07-28-preview' = 
       }
       userAssignedManagedIdentityId: '/subscriptions/11809CA1-E126-4017-945E-AA795CD5C5A9/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myManagedIdentity'
     }
-    sku: {
-      name: 'ManagedOps'
-      tier: 'Basic'
-    }
   }
 }
 ```

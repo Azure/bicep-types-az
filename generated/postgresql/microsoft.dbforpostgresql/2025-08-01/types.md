@@ -134,6 +134,7 @@
 * **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'index' | 'table' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [TuningOptionsProperties](#tuningoptionsproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -439,6 +440,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TuningOptionsProperties
+### Properties
+* **state**: string (ReadOnly): State of the tuning option.
 
 ## UserAssignedIdentity
 ### Properties

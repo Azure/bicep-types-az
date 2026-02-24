@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionTypeProperties](#extensiontypeproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.KubernetesConfiguration/extensionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KubernetesConfiguration/extensionTypes/versions@2024-11-01-preview
@@ -18,6 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionTypeVersionForReleaseTrainProperties](#extensiontypeversionforreleasetrainproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.KubernetesConfiguration/extensionTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes@2024-11-01-preview
@@ -28,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionTypeProperties](#extensiontypeproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.KubernetesConfiguration/locations/extensionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes/versions@2024-11-01-preview
@@ -38,6 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionTypeVersionForReleaseTrainProperties](#extensiontypeversionforreleasetrainproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.KubernetesConfiguration/locations/extensionTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ClusterScopeSettings
@@ -45,6 +49,7 @@
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [ClusterScopeSettingsProperties](#clusterscopesettingsproperties): Extension scope settings
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ClusterScopeSettingsProperties
@@ -90,4 +95,13 @@
 ### Properties
 * **distributions**: string[]: The list of Kubernetes Cluster Distribution Names not supported
 * **unsupportedVersions**: string[]: The list of Kubernetes Versions not supported by the list of Kubernetes Cluster Distribution names in this object
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

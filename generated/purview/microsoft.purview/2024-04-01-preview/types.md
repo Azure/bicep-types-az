@@ -7,12 +7,12 @@
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The Managed Identity of the resource
-* **location**: string: Gets or sets the location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): The account properties
 * **sku**: [AccountSku](#accountsku): Gets or sets the Sku.
-* **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags on the azure resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [AccountTags](#accounttags): Resource tags.
 * **type**: 'Microsoft.Purview/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Purview/accounts/kafkaConfigurations@2024-04-01-preview
@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [KafkaConfigurationProperties](#kafkaconfigurationproperties): The kafka configuration properties of the event streaming service attached to the Purview account for kafka notifications.
-* **systemData**: [ProxyResourceSystemData](#proxyresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Purview/accounts/kafkaConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Purview/accounts/privateEndpointConnections@2024-04-01-preview
@@ -34,8 +34,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The connection identifier.
-* **systemData**: [ProxyResourceSystemData](#proxyresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Purview/accounts/privateLinkResources@2024-04-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Purview/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listFeatures (Microsoft.Purview/accounts@2024-04-01-preview)
 * **Resource**: Microsoft.Purview/accounts
@@ -119,6 +130,11 @@ Only applicable for the secondary account.
 * **message**: string (ReadOnly): Gets or sets the messages.
 * **target**: string (ReadOnly): Gets or sets the target.
 
+## AccountTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## BatchFeatureRequest
 ### Properties
 * **features**: string[]: Set of features
@@ -172,7 +188,7 @@ Configured in AWS to allow use of the role arn used for scanning
 * **consumerGroup**: string: Consumer group for hook event hub.
 * **credentials**: [Credentials](#credentials): Credentials to access the event streaming service attached to the purview account.
 * **eventHubPartitionId**: string: Optional partition Id for notification event hub. If not set, all partitions will be leveraged.
-* **eventHubResourceId**: string
+* **eventHubResourceId**: string: A type definition that refers the id to an Azure Resource Manager resource.
 * **eventHubType**: 'Hook' | 'Notification' | string: The event hub type.
 * **eventStreamingState**: 'Disabled' | 'Enabled' | string: The state of the event streaming service
 * **eventStreamingType**: 'Azure' | 'Managed' | 'None' | string: The event streaming service type
@@ -183,11 +199,11 @@ Configured in AWS to allow use of the role arn used for scanning
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Gets or sets the identifier.
-* **name**: string (ReadOnly): Gets or sets the name.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The connection identifier.
-* **systemData**: [ProxyResourceSystemData](#proxyresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): Gets or sets the type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -195,34 +211,26 @@ Configured in AWS to allow use of the role arn used for scanning
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
 * **provisioningState**: string (ReadOnly): The provisioning state.
 
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group identifier.
+* **requiredMembers**: string[] (ReadOnly): This translates to how many Private IPs should be created for each privately linkable resource.
+* **requiredZoneNames**: string[] (ReadOnly): The required zone names for private link resource.
+
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: The required actions.
 * **description**: string: The description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown' | string: The status.
 
-## ProxyResourceSystemData
+## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of the last modification the resource (UTC).
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
-
-## TrackedResourceSystemData
-### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of the last modification the resource (UTC).
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserAssignedIdentity
 ### Properties
