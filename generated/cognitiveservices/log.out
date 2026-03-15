@@ -1,39 +1,31 @@
 Generating types for 'specification/cognitiveservices/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:877" => "#/components/schemas/schemas:998"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:873" => "#/components/schemas/schemas:994"
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'Account' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Account
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'CommitmentPlanAccountAssociation' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CommitmentPlanAccountAssociation
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'EncryptionScope' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from EncryptionScope
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'Deployment' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Deployment
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'CommitmentPlan' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CommitmentPlan
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiPolicy' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiPolicy
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiBlocklist' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiBlocklist
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiBlocklistItem' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiBlocklistItem
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiExternalSafetyProvider' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiExternalSafetyProvider
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiExternalSafetyProviderSchema' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiExternalSafetyProviderSchema
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiTopic' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiTopic
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'RaiToolLabel' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RaiToolLabel
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'DefenderForAISetting' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DefenderForAISetting
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'Project' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Project
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
+warning | Modeler/MissingType | The schema 'components·bz3fvo·schemas·apiproperties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/stable/2025-12-01/cognitiveservices.json#/components/schemas/components·bz3fvo·schemas·apiproperties·additionalproperties
 warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelFormat"
 warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelName"
 warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelVersion"
 warning | Skipping ModelCapacities_List due to required query parameter "modelFormat"
 warning | Skipping ModelCapacities_List due to required query parameter "modelName"
 warning | Skipping ModelCapacities_List due to required query parameter "modelVersion"
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·bz3fvo·schemas·apiproperties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/preview/2025-10-01-preview/cognitiveservices.json#/components/schemas/components·bz3fvo·schemas·apiproperties·additionalproperties
+warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelFormat"
+warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelName"
+warning | Skipping LocationBasedModelCapacities_List due to required query parameter "modelVersion"
+warning | Skipping ModelCapacities_List due to required query parameter "modelFormat"
+warning | Skipping ModelCapacities_List due to required query parameter "modelName"
+warning | Skipping ModelCapacities_List due to required query parameter "modelVersion"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

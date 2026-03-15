@@ -228,7 +228,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts@2025-11-01-previ
         }
       ]
       restoreMode: 'PointInTime'
-      restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/1a97b4bb-f6a0-430e-ade1-638d781830cc'
+      restoreSource: '/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/1a97b4bb-f6a0-430e-ade1-638d781830cc'
       restoreTimestampInUtc: '2021-03-11T22:05:09Z'
       restoreWithTtlDisabled: false
       sourceBackupLocation: 'westus'
@@ -707,7 +707,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
       createMode: 'Restore'
       id: 'databaseName'
       restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreSource: '/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
         restoreTimestampInUtc: '2022-07-20T18:28:00Z'
         restoreWithTtlDisabled: false
       }
@@ -775,7 +775,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
       createMode: 'Restore'
       id: 'collectionName'
       restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreSource: '/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
         restoreTimestampInUtc: '2022-07-20T18:28:00Z'
         restoreWithTtlDisabled: false
       }
@@ -1034,7 +1034,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@202
       createMode: 'Restore'
       id: 'databaseName'
       restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreSource: '/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
         restoreTimestampInUtc: '2022-07-20T18:28:00Z'
         restoreWithTtlDisabled: true
       }
@@ -1244,7 +1244,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
       createMode: 'Restore'
       id: 'containerName'
       restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreSource: '/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
         restoreTimestampInUtc: '2022-07-20T18:28:00Z'
         restoreWithTtlDisabled: true
       }
@@ -1408,8 +1408,8 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignmen
   name: 'example'
   properties: {
     principalId: 'myPrincipalId'
-    roleDefinitionId: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
-    scope: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
+    roleDefinitionId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
+    scope: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
   }
 }
 ```
@@ -1424,8 +1424,8 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitio
   properties: {
     type: 'CustomRole'
     assignableScopes: [
-      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales'
-      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases'
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales'
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases'
     ]
     permissions: [
       {

@@ -2000,7 +2000,7 @@ as they were at the creation time
 
 ## SessionPoolProperties
 ### Properties
-* **containerType**: 'CustomContainer' | 'PythonLTS' | string: The container type of the sessions.
+* **containerType**: 'CustomContainer' | 'NodeLTS' | 'PythonLTS' | 'Shell' | string: The container type of the sessions. You can use your own container to build the session pool, or you can use a predefined container to run workload with specific language.
 * **customContainerTemplate**: [CustomContainerTemplate](#customcontainertemplate): The custom container configuration if the containerType is CustomContainer.
 * **dynamicPoolConfiguration**: [DynamicPoolConfiguration](#dynamicpoolconfiguration): The pool configuration if the poolManagementType is dynamic.
 * **environmentId**: string: Resource ID of the session pool's environment.

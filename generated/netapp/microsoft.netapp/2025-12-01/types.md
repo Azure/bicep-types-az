@@ -192,7 +192,7 @@
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-12-01
 * **Input**: [QuotaReportFilterRequest](#quotareportfilterrequest)
-* **Output**: [ListQuotaReportResponse](#listquotareportresponse)
+* **Output**: [ListQuotaReportResult](#listquotareportresult)
 
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-12-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
@@ -333,7 +333,11 @@
 
 ## ListQuotaReportResponse
 ### Properties
-* **value**: [QuotaReport](#quotareport)[]: List of quota reports
+* **quotaReportRecords**: [QuotaReport](#quotareport)[]: List of quota reports
+
+## ListQuotaReportResult
+### Properties
+* **properties**: [ListQuotaReportResponse](#listquotareportresponse): Represents the properties of the ListQuotaReport.
 
 ## ListReplications
 ### Properties

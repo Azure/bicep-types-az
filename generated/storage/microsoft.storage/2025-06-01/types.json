@@ -1275,7 +1275,7 @@
         "type": {
           "$ref": "#/89"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Gets the state of virtual network rule."
       }
     }

@@ -1423,7 +1423,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/credentials@2018-06-01
   properties: {
     type: 'ManagedIdentity'
     typeProperties: {
-      resourceId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourcegroups/exampleResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleUami'
+      resourceId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourcegroups/exampleResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleUami'
     }
   }
 }
@@ -1750,7 +1750,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/managedVirtualNetworks
     fqdns: [
     ]
     groupId: 'blob'
-    privateLinkResourceId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage'
+    privateLinkResourceId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage'
   }
 }
 ```
@@ -1923,7 +1923,7 @@ resource exampleResource 'Microsoft.DataFactory/factories/privateEndpointConnect
   name: 'example'
   properties: {
     privateEndpoint: {
-      id: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/privateEndpoints/myPrivateEndpoint'
+      id: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/privateEndpoints/myPrivateEndpoint'
     }
     privateLinkServiceConnectionState: {
       description: 'Approved by admin.'

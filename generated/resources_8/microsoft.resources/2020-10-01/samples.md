@@ -23,7 +23,7 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
     arguments: '-Location \'westus\' -Name "*rg2"'
     azPowerShellVersion: '1.7.0'
     cleanupPreference: 'Always'
-    retentionInterval: 'PT7D'
+    retentionInterval: 'P7D'
     scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
     supportingScriptUris: [
       'https://uri1.to.supporting.script'
@@ -76,7 +76,7 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
     containerSettings: {
       containerGroupName: 'contoso-aci'
     }
-    retentionInterval: 'PT7D'
+    retentionInterval: 'P7D'
     scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
     supportingScriptUris: [
       'https://uri1.to.supporting.script'
@@ -104,7 +104,7 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
     arguments: '-Location \'westus\' -Name "*rg2"'
     azPowerShellVersion: '1.7.0'
     cleanupPreference: 'Always'
-    retentionInterval: 'PT7D'
+    retentionInterval: 'P7D'
     scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
     storageAccountSettings: {
       storageAccountKey: 'contosostoragekey'
@@ -129,7 +129,7 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
     arguments: '-Location \'westus\' -Name "*rg2"'
     azPowerShellVersion: '1.7.0'
     cleanupPreference: 'Always'
-    retentionInterval: 'PT7D'
+    retentionInterval: 'P7D'
     scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
     supportingScriptUris: [
       'https://uri1.to.supporting.script'

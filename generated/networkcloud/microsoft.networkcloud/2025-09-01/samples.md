@@ -16,7 +16,7 @@ resource exampleResource 'Microsoft.NetworkCloud/bareMetalMachines@2025-09-01' =
   }
   location: 'location'
   properties: {
-    bmcConnectionString: 'bmcconnectionstring'
+    bmcConnectionString: 'redfish+https://10.10.10.16/redfish/v1/Systems/System.Embedded.1'
     bmcCredentials: {
       password: '{password}'
       username: 'bmcuser'

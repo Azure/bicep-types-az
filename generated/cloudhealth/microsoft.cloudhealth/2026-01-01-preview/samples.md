@@ -183,9 +183,10 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/entities@2026-01-01
         ]
       }
       dependencies: {
-        aggregationType: 'Thresholds'
-        degradedThreshold: '3'
-        unhealthyThreshold: '50%'
+        aggregationType: 'MinHealthy'
+        degradedThreshold: 80
+        unhealthyThreshold: 50
+        unit: 'Percentage'
       }
     }
     tags: {

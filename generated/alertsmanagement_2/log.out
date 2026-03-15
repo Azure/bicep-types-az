@@ -1,7 +1,8 @@
 Generating types for 'specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -21,10 +22,10 @@ warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (12 differences):
-  - properties.name.$ref: "#/components/schemas/schemas:91" => "#/components/schemas/schemas:229"
+  - properties.name.$ref: "#/components/schemas/schemas:91" => "#/components/schemas/schemas:216"
   - properties.name.description: "Name of the operation" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
   - properties.name.readOnly: <none> => true
-  - properties.display.$ref: "#/components/schemas/schemas:93" => "#/components/schemas/schemas:230"
+  - properties.display.$ref: "#/components/schemas/schemas:93" => "#/components/schemas/schemas:217"
   - properties.display.description: "Properties of the operation" => "Localized display information for this particular operation."
   - properties.origin.$ref: "#/components/schemas/schemas:92" => "#/components/schemas/Origin"
   - properties.origin.description: "Origin of the operation" => "The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\""
@@ -34,9 +35,9 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (12 diff
   - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
   - title: <none> => "REST API Operation"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (3 differences):
-  - properties: {"id":{"$ref":"#/components/schemas/schemas:128","description":"Azure resource Id","readOnly":true},"type":{"$ref":"#/components/schemas/schemas:129","description":"Azure resource type","readOnly":true},"name":{"$ref":"#/components/schemas/schemas:130","description":"Azure resource name","readOnly":true}} => <none>
+  - properties: {"id":{"$ref":"#/components/schemas/schemas:115","description":"Azure resource Id","readOnly":true},"type":{"$ref":"#/components/schemas/schemas:116","description":"Azure resource type","readOnly":true},"name":{"$ref":"#/components/schemas/schemas:117","description":"Azure resource name","readOnly":true}} => <none>
   - title: <none> => "Proxy Resource"
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:256"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:243"}]
 warning | Modeler/MissingType | The schema 'AlertProperties-context' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement/preview/2025-05-25-preview/AlertsManagement.json#/components/schemas/AlertProperties-context
 warning | Modeler/MissingType | The schema 'AlertProperties-egressConfig' has no type or format information whatsoever. Location:
