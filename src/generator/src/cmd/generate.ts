@@ -3,7 +3,7 @@
 import os from 'os';
 import path from 'path';
 import { existsSync } from 'fs';
-import { mkdir, rm, writeFile, readFile } from 'fs/promises';
+import { mkdir, rm, writeFile, readFile, readdir, stat } from 'fs/promises';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers'
 import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from "bicep-types";
@@ -15,7 +15,9 @@ import { copyRecursive, executeSynchronous, getLogger, lowerCaseCompare, logErr,
 const rootDir = `${__dirname}/../../../../`;
 
 const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
+const typespecBicepDir = path.resolve(`${rootDir}/src/typespec-bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
+const tspBinary = os.platform() === 'win32' ? 'tsp.cmd' : 'tsp';
 const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const argsConfig = yargs(hideBin(process.argv))
@@ -86,9 +88,20 @@ executeSynchronous(async () => {
     try {
       logger.out(`Generating types for '${relativeReadmePath}'\n`);
 
-      // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
-      await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
-      await runAutorest(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
+      if (config.useTypeSpec) {
+        // Use TypeSpec emitter instead of AutoRest for specs with TypeSpec definitions
+        const readmeDir = path.dirname(readmePath);
+        const typeSpecProjects = await findTypeSpecProjects(readmeDir);
+        for (const projectDir of typeSpecProjects) {
+          const relativeProject = path.relative(inputBaseDir, projectDir);
+          logger.out(`Running TypeSpec emitter for '${relativeProject}'\n`);
+          await runTypeSpec(logger, projectDir, tmpOutputDir, isVerboseLoggingLevel(logLevel));
+        }
+      } else {
+        // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
+        await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
+        await runAutorest(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
+      }
 
       if (!subdirsCreated.has(outputDir)) {
         subdirsCreated.add(outputDir);
@@ -147,7 +160,7 @@ async function generateAutorestConfig(logger: ILogger, readmePath: string, bicep
   const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
   const readmeMarkdown = markdown.parse(readmeContents);
 
-  const inputFiles = new Set<string>(config.additionalFiles);
+  const inputFiles = new Set<string>(config.additionalFiles ?? []);
   // we need to look for all autorest configuration elements containing input files, and collect that list of files. These will look like (e.g.):
   // ```yaml $(tag) == 'someTag'
   // input-file:
@@ -315,4 +328,76 @@ function isVerboseLoggingLevel(logLevel: string) {
     default:
       return false;
   }
+}
+
+/**
+ * Discovers TypeSpec project directories relative to a readme.md's directory.
+ *
+ * The azure-rest-api-specs repo places TypeSpec definitions in subdirectories
+ * alongside the readme.md, e.g.:
+ *   specification/dns/resource-manager/readme.md
+ *   specification/dns/resource-manager/Microsoft.Network/Dns/tspconfig.yaml
+ *   specification/dns/resource-manager/Microsoft.Network/Dns/main.tsp
+ *
+ * This function recursively searches for directories containing both
+ * tspconfig.yaml and main.tsp starting from the same directory as the readme.
+ */
+async function findTypeSpecProjects(readmeDir: string): Promise<string[]> {
+  const projects: string[] = [];
+
+  async function searchDir(dir: string): Promise<void> {
+    let entries;
+    try {
+      entries = await readdir(dir);
+    } catch {
+      return;
+    }
+
+    const hasConfig = entries.includes('tspconfig.yaml');
+    const hasMain = entries.includes('main.tsp');
+
+    if (hasConfig && hasMain) {
+      projects.push(dir);
+      // Don't search subdirectories of a TypeSpec project
+      return;
+    }
+
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry);
+      try {
+        const s = await stat(fullPath);
+        if (s.isDirectory()) {
+          await searchDir(fullPath);
+        }
+      } catch {
+        // skip inaccessible entries
+      }
+    }
+  }
+
+  await searchDir(readmeDir);
+  return projects;
+}
+
+/**
+ * Invokes the TypeSpec compiler with the typespec-bicep emitter for a
+ * given TypeSpec project directory.
+ */
+async function runTypeSpec(logger: ILogger, projectDir: string, outputDir: string, verbose: boolean): Promise<void> {
+  if (!existsSync(`${typespecBicepDir}/dist`)) {
+    throw `Unable to find ${typespecBicepDir}/dist. Did you forget to build typespec-bicep?`;
+  }
+
+  // Install TypeSpec project dependencies before compiling
+  await executeCmd(logger, verbose, projectDir, tspBinary, ['install']);
+
+  const tspArgs = [
+    'compile',
+    projectDir,
+    `--emit=${typespecBicepDir}`,
+    `--output-dir=${outputDir}`,
+    '--option', `@azure-tools/typespec-bicep.emitter-output-dir=${outputDir}`,
+  ];
+
+  return await executeCmd(logger, verbose, projectDir, tspBinary, tspArgs);
 }

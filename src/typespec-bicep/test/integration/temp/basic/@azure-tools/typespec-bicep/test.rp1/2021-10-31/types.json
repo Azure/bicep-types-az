@@ -1,0 +1,1124 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/testType1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/testType1",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestType1Properties",
+    "properties": {
+      "basicString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description for a basic string property."
+      },
+      "stringEnum": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Description for a basic enum property."
+      },
+      "emptyEnum": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description for a empty enum property."
+      },
+      "encryptionProperties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "TestType1 encryption properties"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "uuidProperty": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A UUID property"
+      },
+      "intWithDefaultValue": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "An integer with a default value"
+      },
+      "special.char-property": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A property with special characters in its name"
+      },
+      "locationData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to the geographic location of the resource."
+      },
+      "base64EncodedBytes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Base64 encoded bytes"
+      },
+      "binaryBuffer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A binary buffer property"
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A fully-qualified resource ID"
+      },
+      "percentageProperty": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "A percentage property"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Foo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bar"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Indicates whether or not the encryption is enabled for container registry."
+      },
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Key vault properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Key vault uri to access the encryption key."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The client ID of the identity which will be used to access key vault."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationData",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "A canonical name for the geographic or physical location."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city or locality where the resource is located."
+      },
+      "district": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The district, state, or province where the resource is located."
+      },
+      "countryOrRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The country or region where the resource is located."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/testType1@2021-10-31",
+    "body": {
+      "$ref": "#/3"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/readOnlyTestType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/readOnlyTestType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReadOnlyTestTypeProperties",
+    "properties": {
+      "plan": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "A plan property"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Plan",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The plan name"
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The plan publisher"
+      },
+      "product": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The plan product"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/readOnlyTestType@2021-10-31",
+    "body": {
+      "$ref": "#/30"
+    },
+    "readableScopes": 8,
+    "writableScopes": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/writeOnlyTestType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/writeOnlyTestType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WriteOnlyTestTypeProperties",
+    "properties": {
+      "basicString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A basic string property."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/writeOnlyTestType@2021-10-31",
+    "body": {
+      "$ref": "#/36"
+    },
+    "readableScopes": 0,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/tenantScopeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/tenantScopeType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TenantScopeTypeProperties",
+    "properties": {
+      "basicString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A basic string property."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/tenantScopeType@2021-10-31",
+    "body": {
+      "$ref": "#/41"
+    },
+    "readableScopes": 1,
+    "writableScopes": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/subscriptionScopeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/subscriptionScopeType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionScopeTypeProperties",
+    "properties": {
+      "basicString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A basic string property."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/subscriptionScopeType@2021-10-31",
+    "body": {
+      "$ref": "#/46"
+    },
+    "readableScopes": 4,
+    "writableScopes": 4
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/discriminatedUnionTestType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/discriminatedUnionTestType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DiscriminatedUnionTestTypeProperties",
+    "discriminator": "type",
+    "baseProperties": {
+      "foo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The foo property"
+      },
+      "bar": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bar property"
+      }
+    },
+    "elements": {
+      "BranchWithInheritedProps": {
+        "$ref": "#/53"
+      },
+      "BranchWithAllInlineProps": {
+        "$ref": "#/56"
+      },
+      "BranchWithOverride": {
+        "$ref": "#/59"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BranchWithInheritedProps",
+    "properties": {
+      "foo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The foo property"
+      },
+      "bar": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bar property"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 1
+      },
+      "baz": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The baz property"
+      },
+      "quux": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A property defined inline"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inherited"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BranchWithInheritedProps"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BranchWithAllInlineProps",
+    "properties": {
+      "foo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The foo property"
+      },
+      "bar": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bar property"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 1
+      },
+      "fizz": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fizz property"
+      },
+      "buzz": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The buzz property"
+      },
+      "pop": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The pop property"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BranchWithAllInlineProps"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BranchWithOverride",
+    "properties": {
+      "foo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The foo property"
+      },
+      "bar": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bar property"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1
+      },
+      "fooOverride": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The overridden foo integer property"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "override"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BranchWithOverride"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/discriminatedUnionTestType@2021-10-31",
+    "body": {
+      "$ref": "#/51"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FoosRequest",
+    "properties": {
+      "someString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The foo request string"
+      },
+      "locationData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Location data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FoosResponse",
+    "properties": {
+      "someString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The foo response string"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listFoos",
+    "resourceType": "Test.Rp1/testType1",
+    "apiVersion": "2021-10-31",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  }
+]
