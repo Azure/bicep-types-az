@@ -1,0 +1,586 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/constrainedResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/constrainedResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConstrainedProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "A name with pattern, minLength, and maxLength constraints"
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "A property with only a pattern constraint."
+      },
+      "requiredName": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "A property with only minLength."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "A property with only maxLength."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9-]*$"
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/constrainedResources@2024-01-01",
+    "body": {
+      "$ref": "#/3"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/Namespaces"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/Namespaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The namespace status"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/Namespaces@2024-01-01",
+    "body": {
+      "$ref": "#/24"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/Namespaces/AuthorizationRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/Namespaces/AuthorizationRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationRuleProperties",
+    "properties": {
+      "rights": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The rights associated with the rule."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/Namespaces/AuthorizationRules@2024-01-01",
+    "body": {
+      "$ref": "#/29"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/Namespaces/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/Namespaces/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResourceProperties",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Group ID"
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Required members"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/Namespaces/privateLinkResources@2024-01-01",
+    "body": {
+      "$ref": "#/35"
+    },
+    "readableScopes": 8,
+    "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyListResult",
+    "properties": {
+      "keys": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The list of keys."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The next link."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyInfo",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The key name."
+      },
+      "keyValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The key value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Test.EdgeCases/Namespaces",
+    "apiVersion": "2024-01-01",
+    "output": {
+      "$ref": "#/39"
+    }
+  }
+]

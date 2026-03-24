@@ -1,0 +1,59 @@
+{
+  "name": "@azure-tools/typespec-bicep",
+  "version": "0.1.0",
+  "description": "TypeSpec emitter that generates Bicep type definitions from TypeSpec specifications",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "test": "vitest run",
+    "test:fix": "cross-env BASELINE_RECORD=true vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "typespec",
+    "bicep",
+    "azure",
+    "codegen"
+  ],
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "bicep-types": "file:../../bicep-types/src/bicep-types"
+  },
+  "peerDependencies": {
+    "@azure-tools/typespec-azure-core": ">=0.46.0",
+    "@azure-tools/typespec-azure-resource-manager": ">=0.46.0",
+    "@typespec/compiler": ">=0.60.0",
+    "@typespec/http": ">=0.60.0",
+    "@typespec/openapi": ">=0.60.0",
+    "@typespec/rest": ">=0.60.0"
+  },
+  "devDependencies": {
+    "@azure-tools/typespec-azure-core": ">=0.46.0",
+    "@azure-tools/typespec-azure-resource-manager": ">=0.46.0",
+    "@types/node": "^25.5.0",
+    "@typespec/compiler": ">=0.60.0",
+    "@typespec/http": ">=0.60.0",
+    "@typespec/openapi": ">=0.60.0",
+    "@typespec/rest": ">=0.60.0",
+    "cross-env": "^7.0.3",
+    "typescript": "~5.6.0",
+    "vitest": "^2.0.0"
+  }
+}

@@ -1,0 +1,2641 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/azureFirewalls"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-08-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/azureFirewalls",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "A list of availability zones denoting where the resource needs to come from."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallPropertiesFormat",
+    "properties": {
+      "applicationRuleCollections": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Collection of application rule collections used by Azure Firewall."
+      },
+      "natRuleCollections": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Collection of NAT rule collections used by Azure Firewall."
+      },
+      "networkRuleCollections": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Collection of network rule collections used by Azure Firewall."
+      },
+      "ipConfigurations": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "IP configuration of the Azure Firewall resource."
+      },
+      "managementIpConfiguration": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "IP configuration of the Azure Firewall used for management traffic."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the Azure Firewall resource."
+      },
+      "threatIntelMode": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The operation mode for Threat Intelligence."
+      },
+      "virtualHub": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The virtualHub to which the firewall belongs."
+      },
+      "firewallPolicy": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The firewallPolicy associated with this azure firewall."
+      },
+      "hubIPAddresses": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "IP addresses associated with AzureFirewall."
+      },
+      "ipGroups": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "IpGroups associated with AzureFirewall."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The Azure Firewall Resource SKU."
+      },
+      "additionalProperties": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "A key-value pair of additional properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallApplicationRuleCollection",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Properties of the azure firewall application rule collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallApplicationRuleCollectionPropertiesFormat",
+    "properties": {
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the application rule collection resource."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The action type of a rule collection."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Collection of rules used by a application rule collection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the application rule collection resource."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallRCAction",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The type of action."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallApplicationRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the application rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "protocols": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Array of ApplicationRuleProtocols."
+      },
+      "targetFqdns": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "List of FQDNs for this rule."
+      },
+      "fqdnTags": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "List of FQDN Tags for this rule."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallApplicationRuleProtocol",
+    "properties": {
+      "protocolType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Protocol type."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Port number for the protocol, cannot be greater than 64000."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNatRuleCollection",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Properties of the azure firewall NAT rule collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNatRuleCollectionProperties",
+    "properties": {
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the NAT rule collection resource."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The action type of a NAT rule collection."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Collection of rules used by a NAT rule collection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the NAT rule collection resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNatRCAction",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The type of action."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNatRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the NAT rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "List of destination IP addresses for this rule."
+      },
+      "destinationPorts": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "List of destination ports."
+      },
+      "protocols": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule."
+      },
+      "translatedAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated address for this NAT rule."
+      },
+      "translatedPort": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated port for this NAT rule."
+      },
+      "translatedFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated FQDN for this NAT rule."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNetworkRuleCollection",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Properties of the azure firewall network rule collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNetworkRuleCollectionPropertiesFormat",
+    "properties": {
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the network rule collection resource."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The action type of a rule collection."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Collection of rules used by a network rule collection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the network rule collection resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallNetworkRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the network rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "protocols": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Array of AzureFirewallNetworkRuleProtocols."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "List of destination IP addresses."
+      },
+      "destinationPorts": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "List of destination ports."
+      },
+      "destinationFqdns": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "List of destination FQDNs."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      },
+      "destinationIpGroups": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "List of destination IpGroups for this rule."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallIPConfiguration",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Properties of the azure firewall IP configuration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallIPConfigurationPropertiesFormat",
+    "properties": {
+      "privateIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Reference of the subnet resource."
+      },
+      "publicIPAddress": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Reference of the PublicIP resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the Azure Firewall IP configuration resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID"
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/50"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HubIPAddresses",
+    "properties": {
+      "publicIPs": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Public IP addresses associated with azure firewall."
+      },
+      "privateIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Private IP Address associated with azure firewall."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HubPublicIPAddresses",
+    "properties": {
+      "addresses": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The list of Public IP addresses associated with azure firewall."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The number of Public IP addresses associated with azure firewall."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallPublicIPAddress",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Public IP Address value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallIpGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "changeNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Provisioning state of the IpGroup resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFirewallSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Name of an Azure Firewall SKU"
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Tier of an Azure Firewall"
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/azureFirewalls@2021-08-01",
+    "body": {
+      "$ref": "#/3"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/firewallPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-08-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/firewallPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyPropertiesFormat",
+    "properties": {
+      "ruleCollectionGroups": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "List of references to FirewallPolicyRuleCollectionGroups."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the firewall policy resource."
+      },
+      "basePolicy": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The parent firewall policy from which rules are inherited."
+      },
+      "firewalls": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "List of references to Azure Firewalls that this Firewall Policy is associated with."
+      },
+      "childPolicies": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "List of references to Child Firewall Policies."
+      },
+      "threatIntelMode": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The operation mode for Threat Intelligence."
+      },
+      "threatIntelWhitelist": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "ThreatIntel Whitelist for Firewall Policy."
+      },
+      "insights": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Insights on Firewall Policy."
+      },
+      "snat": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "The private IP addresses/IP ranges to which traffic will not be SNAT."
+      },
+      "sql": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "SQL Settings definition."
+      },
+      "dnsSettings": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "DNS Proxy Settings definition."
+      },
+      "explicitProxySettings": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Explicit Proxy Settings definition."
+      },
+      "intrusionDetection": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "The configuration for Intrusion detection."
+      },
+      "transportSecurity": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "TLS Configuration definition."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "The Firewall Policy SKU."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyThreatIntelWhitelist",
+    "properties": {
+      "ipAddresses": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "List of IP addresses for the ThreatIntel Whitelist."
+      },
+      "fqdns": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "List of FQDNs for the ThreatIntel Whitelist."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyInsights",
+    "properties": {
+      "isEnabled": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "A flag to indicate if the insights are enabled on the policy."
+      },
+      "retentionDays": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Number of days the insights should be enabled on the policy."
+      },
+      "logAnalyticsResources": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Workspaces needed to configure the Firewall Policy Insights."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyLogAnalyticsResources",
+    "properties": {
+      "workspaces": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "List of workspaces for Firewall Policy Insights."
+      },
+      "defaultWorkspaceId": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The default workspace Id for Firewall Policy Insights."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyLogAnalyticsWorkspace",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Region to configure the Workspace."
+      },
+      "workspaceId": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The workspace Id for Firewall Policy Insights."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicySNAT",
+    "properties": {
+      "privateRanges": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "List of private IP addresses/IP address ranges to not be SNAT."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicySQL",
+    "properties": {
+      "allowSqlRedirect": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "A flag to indicate if SQL Redirect traffic filtering is enabled."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DnsSettings",
+    "properties": {
+      "servers": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "List of Custom DNS Servers."
+      },
+      "enableProxy": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Enable DNS Proxy on Firewalls attached to the Firewall Policy."
+      },
+      "requireProxyForNetworkRules": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "FQDNs in Network Rules are supported when set to true."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExplicitProxySettings",
+    "properties": {
+      "enableExplicitProxy": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "When set to true, explicit proxy mode is enabled."
+      },
+      "httpPort": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Port number for explicit proxy http protocol, cannot be greater than 64000."
+      },
+      "httpsPort": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Port number for explicit proxy https protocol, cannot be greater than 64000."
+      },
+      "pacFilePort": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Port number for explicit proxy pac file."
+      },
+      "pacFile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SAS URL for PAC file."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyIntrusionDetection",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Intrusion detection general state."
+      },
+      "configuration": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Intrusion detection configuration properties."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyIntrusionDetectionConfiguration",
+    "properties": {
+      "signatureOverrides": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "List of specific signatures states."
+      },
+      "bypassTrafficSettings": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "List of rules for traffic to bypass."
+      },
+      "privateRanges": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "IDPS Private IP address ranges are used to identify traffic direction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyIntrusionDetectionSignatureSpecification",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Signature id."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The signature state."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyIntrusionDetectionBypassTrafficSpecifications",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the bypass traffic rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the bypass traffic rule."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The rule bypass protocol."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "List of source addresses or ranges for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "List of destination addresses or ranges for this rule."
+      },
+      "destinationPorts": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "List of destination ports or ranges."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      },
+      "destinationIpGroups": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "List of destination IpGroups for this rule."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyTransportSecurity",
+    "properties": {
+      "certificateAuthority": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The CA used for intermediate CA generation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyCertificateAuthority",
+    "properties": {
+      "keyVaultSecretId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Secret Id of (base-64 encoded unencrypted pfx) Secret or Certificate object stored in KeyVault."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the CA certificate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicySku",
+    "properties": {
+      "tier": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Tier of Firewall Policy."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/firewallPolicies@2021-08-01",
+    "body": {
+      "$ref": "#/71"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/ruleCollectionGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-08-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/ruleCollectionGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyRuleCollectionGroupProperties",
+    "properties": {
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the Firewall Policy Rule Collection Group resource."
+      },
+      "ruleCollections": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Group of Firewall Policy rule collections."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the firewall policy rule collection group resource."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FirewallPolicyRuleCollection",
+    "discriminator": "ruleCollectionType",
+    "baseProperties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the rule collection."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the Firewall Policy Rule Collection resource."
+      }
+    },
+    "elements": {
+      "FirewallPolicyNatRuleCollection": {
+        "$ref": "#/116"
+      },
+      "FirewallPolicyFilterRuleCollection": {
+        "$ref": "#/152"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyNatRuleCollection",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the rule collection."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the Firewall Policy Rule Collection resource."
+      },
+      "ruleCollectionType": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 1
+      },
+      "action": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The action type of a Nat rule collection."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "List of rules included in a rule collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyNatRuleCollectionAction",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The type of action."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FirewallPolicyRule",
+    "discriminator": "ruleType",
+    "baseProperties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      }
+    },
+    "elements": {
+      "ApplicationRule": {
+        "$ref": "#/120"
+      },
+      "NatRule": {
+        "$ref": "#/132"
+      },
+      "NetworkRule": {
+        "$ref": "#/140"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "ruleType": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "List of destination addresses for this rule."
+      },
+      "protocols": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Array of Application Protocols."
+      },
+      "targetFqdns": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "List of FQDNs for this rule."
+      },
+      "targetUrls": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "List of Urls for this rule condition."
+      },
+      "fqdnTags": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "List of FQDN Tags for this rule."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      },
+      "terminateTLS": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Terminate TLS connections for this rule."
+      },
+      "webCategories": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "List of destination azure web categories."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyRuleApplicationProtocol",
+    "properties": {
+      "protocolType": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Protocol type."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Port number for the protocol, cannot be greater than 64000."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/123"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplicationRule"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NatRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "ruleType": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 1
+      },
+      "ipProtocols": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "Array of FirewallPolicyRuleNetworkProtocols."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "List of destination IP addresses or Service Tags."
+      },
+      "destinationPorts": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "List of destination ports."
+      },
+      "translatedAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated address for this NAT rule."
+      },
+      "translatedPort": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated port for this NAT rule."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      },
+      "translatedFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The translated FQDN for this NAT rule."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/133"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NatRule"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the rule."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the rule."
+      },
+      "ruleType": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 1
+      },
+      "ipProtocols": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Array of FirewallPolicyRuleNetworkProtocols."
+      },
+      "sourceAddresses": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0,
+        "description": "List of source IP addresses for this rule."
+      },
+      "destinationAddresses": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "List of destination IP addresses or Service Tags."
+      },
+      "destinationPorts": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "List of destination ports."
+      },
+      "sourceIpGroups": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "List of source IpGroups for this rule."
+      },
+      "destinationIpGroups": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "List of destination IpGroups for this rule."
+      },
+      "destinationFqdns": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 0,
+        "description": "List of destination FQDNs."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NetworkRule"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirewallPolicyNatRuleCollection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyFilterRuleCollection",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the rule collection."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Priority of the Firewall Policy Rule Collection resource."
+      },
+      "ruleCollectionType": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1
+      },
+      "action": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "The action type of a Filter rule collection."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0,
+        "description": "List of rules included in a rule collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallPolicyFilterRuleCollectionAction",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "The type of action."
+      }
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirewallPolicyFilterRuleCollection"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/ruleCollectionGroups@2021-08-01",
+    "body": {
+      "$ref": "#/113"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  }
+]
