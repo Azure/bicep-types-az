@@ -5,8 +5,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -20,8 +20,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -35,9 +35,9 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the cluster manager.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterManagerProperties](#clustermanagerproperties) (Required): The list of the resource properties.
@@ -50,10 +50,10 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity for the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties) (Required): The list of the resource properties.
@@ -66,8 +66,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -81,8 +81,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -96,8 +96,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^default$"} (Required, DeployTimeConstant): The resource name
@@ -111,8 +111,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -126,8 +126,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -141,7 +141,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -155,8 +155,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -170,8 +170,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -185,8 +185,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -211,8 +211,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -226,8 +226,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -241,10 +241,10 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity for the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties) (Required): The list of the resource properties.
@@ -257,8 +257,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster this virtual machine is created on.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^default$"} (Required, DeployTimeConstant): The resource name
@@ -272,8 +272,8 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource ETag.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (Required): The extended location of the resource. This property is required when creating the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -349,6 +349,11 @@
 ### Properties
 * **availabilityLifecycle**: 'GenerallyAvailable' | 'Preview' | string (ReadOnly): The version lifecycle indicator.
 * **version**: string (ReadOnly): The version available for upgrading.
+
+## AzureResourceManagerCommonTypesExtendedLocation
+### Properties
+* **name**: string (Required): The name of the extended location.
+* **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
 
 ## BareMetalMachineConfigurationData
 ### Properties
@@ -508,7 +513,7 @@
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **fabricControllerId**: string (Required): The resource ID of the fabric controller that has one to one mapping with the cluster manager.
 * **managedResourceGroupConfiguration**: [ManagedResourceGroupConfiguration](#managedresourcegroupconfiguration): The configuration of the managed resource group associated with the resource.
-* **managerExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster manager's control plane location. This extended location is used when creating cluster and rack manifest resources.
+* **managerExtendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster manager's control plane location. This extended location is used when creating cluster and rack manifest resources.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster manager.
 * **vmSize**: string: The size of the Azure virtual machines to use for hosting the cluster manager resource.
 
@@ -530,7 +535,7 @@
 * **availableUpgradeVersions**: [ClusterAvailableUpgradeVersion](#clusteravailableupgradeversion)[] (ReadOnly): The list of cluster runtime version upgrades available for this cluster.
 * **clusterCapacity**: [ClusterCapacity](#clustercapacity) (ReadOnly): The capacity supported by this cluster.
 * **clusterConnectionStatus**: 'Connected' | 'Disconnected' | 'Timeout' | 'Undefined' | string (ReadOnly): The latest heartbeat status between the cluster manager and the cluster.
-* **clusterExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location. This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
+* **clusterExtendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location. This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
 * **clusterLocation**: string {maxLength: 256}: The customer-provided location information to identify where the cluster resides.
 * **clusterManagerConnectionStatus**: 'Connected' | 'Unreachable' | string (ReadOnly): The latest connectivity status between cluster manager and the cluster.
 * **clusterManagerId**: string (ReadOnly): The resource ID of the cluster manager that manages this cluster. This is set by the Cluster Manager when the cluster is created.
@@ -542,7 +547,7 @@
 * **computeRackDefinitions**: [RackDefinition](#rackdefinition)[]: The list of rack definitions for the compute racks in a multi-rack cluster, or an empty list in a single-rack cluster.
 * **detailedStatus**: 'Degraded' | 'Deleting' | 'Deploying' | 'Disconnected' | 'Failed' | 'PendingDeployment' | 'Running' | 'UpdatePaused' | 'Updating' | string (ReadOnly): The current detailed status of the cluster.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the detailed status.
-* **hybridAksExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): Field Deprecated. This field will not be populated in an upcoming version. The extended location (custom location) that represents the Hybrid AKS control plane location. This extended location is used when creating provisioned clusters (Hybrid AKS clusters).
+* **hybridAksExtendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation) (ReadOnly): Field Deprecated. This field will not be populated in an upcoming version. The extended location (custom location) that represents the Hybrid AKS control plane location. This extended location is used when creating provisioned clusters (Hybrid AKS clusters).
 * **managedResourceGroupConfiguration**: [ManagedResourceGroupConfiguration](#managedresourcegroupconfiguration): The configuration of the managed resource group associated with the resource.
 * **manualActionCount**: int (ReadOnly): The count of Manual Action Taken (MAT) events that have not been validated.
 * **networkFabricId**: string (Required): The resource ID of the Network Fabric associated with the cluster.
@@ -607,11 +612,6 @@
 ### Properties
 * **domainName**: string (Required): The domain name of the dependency.
 * **port**: int {minValue: 1, maxValue: 65535}: The port of this endpoint.
-
-## ExtendedLocation
-### Properties
-* **name**: string (Required): The resource ID of the extended location on which the resource will be created.
-* **type**: string (Required): The extended location type, for example, CustomLocation.
 
 ## FeatureStatus
 ### Properties
@@ -894,7 +894,7 @@
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the rack.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the rack resource.
-* **rackLocation**: string {maxLength: 256} (Required): The free-form description of the rack location. (e.g. “DTN Datacenter, Floor 3, Isle 9, Rack 2B”)
+* **rackLocation**: string {maxLength: 256} (Required): The free-form description of the rack location. (e.g. "DTN Datacenter, Floor 3, Isle 9, Rack 2B")
 * **rackSerialNumber**: string {minLength: 1, maxLength: 64} (Required): The unique identifier for the rack within Network Cloud cluster. An alternate unique alphanumeric value other than a serial number may be provided if desired.
 * **rackSkuId**: string (Required): The SKU for the rack.
 
@@ -1166,7 +1166,7 @@
 * **bootMethod**: 'BIOS' | 'UEFI' | string: Selects the boot method for the virtual machine.
 * **cloudServicesNetworkAttachment**: [NetworkAttachment](#networkattachment) (Required): The cloud service network that provides platform-level services for the virtual machine.
 * **clusterId**: string (ReadOnly): The resource ID of the cluster the virtual machine is created for.
-* **consoleExtendedLocation**: [ExtendedLocation](#extendedlocation): The extended location to use for creation of a VM console resource.
+* **consoleExtendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location to use for creation of a VM console resource.
 * **cpuCores**: int {minValue: 2} (Required): The number of CPU cores in the virtual machine.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | 'Running' | 'Scheduling' | 'Stopped' | 'Terminating' | 'Unknown' | string (ReadOnly): The more detailed status of the virtual machine.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.

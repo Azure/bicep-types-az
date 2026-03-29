@@ -4924,7 +4924,7 @@
     "$type": "ObjectType",
     "name": "CacheProperties",
     "properties": {
-      "filepath": {
+      "filePath": {
         "type": {
           "$ref": "#/226"
         },
@@ -9543,7 +9543,7 @@
       },
       "volumes": {
         "type": {
-          "$ref": "#/792"
+          "$ref": "#/791"
         },
         "flags": 0,
         "description": "List of volumes from group"
@@ -9563,7 +9563,7 @@
       },
       "applicationType": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/786"
         },
         "flags": 0,
         "description": "Application Type"
@@ -9577,7 +9577,7 @@
       },
       "globalPlacementRules": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/787"
         },
         "flags": 0,
         "description": "Application specific placement rules for the volume group"
@@ -9600,10 +9600,6 @@
     "value": "ORACLE"
   },
   {
-    "$type": "StringLiteralType",
-    "value": "CUSTOM"
-  },
-  {
     "$type": "UnionType",
     "elements": [
       {
@@ -9611,9 +9607,6 @@
       },
       {
         "$ref": "#/785"
-      },
-      {
-        "$ref": "#/786"
       },
       {
         "$ref": "#/2"
@@ -9653,14 +9646,14 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/789"
         },
         "flags": 0,
         "description": "Resource tags"
       },
       "zones": {
         "type": {
-          "$ref": "#/791"
+          "$ref": "#/790"
         },
         "flags": 0,
         "description": "Availability Zone"
@@ -9691,7 +9684,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/789"
+      "$ref": "#/788"
     }
   },
   {
@@ -9728,28 +9721,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/793"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/795"
+          "$ref": "#/794"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/795"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/798"
+          "$ref": "#/797"
         },
         "flags": 2,
         "description": "QuotaItem properties"
@@ -9794,7 +9787,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/locations/quotaLimits@2025-12-15-preview",
     "body": {
-      "$ref": "#/797"
+      "$ref": "#/796"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -9824,28 +9817,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/800"
+          "$ref": "#/799"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/801"
+          "$ref": "#/800"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/802"
+          "$ref": "#/801"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/804"
+          "$ref": "#/803"
         },
         "flags": 2,
         "description": "regionInfo properties"
@@ -9865,14 +9858,14 @@
     "properties": {
       "storageToNetworkProximity": {
         "type": {
-          "$ref": "#/813"
+          "$ref": "#/812"
         },
         "flags": 0,
         "description": "Provides storage to network proximity information in the region."
       },
       "availabilityZoneMappings": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/814"
         },
         "flags": 0,
         "description": "Provides logical availability zone mappings for the subscription for a region."
@@ -9915,6 +9908,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/804"
+      },
+      {
         "$ref": "#/805"
       },
       {
@@ -9934,9 +9930,6 @@
       },
       {
         "$ref": "#/811"
-      },
-      {
-        "$ref": "#/812"
       },
       {
         "$ref": "#/2"
@@ -9966,14 +9959,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/814"
+      "$ref": "#/813"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/locations/regionInfos@2025-12-15-preview",
     "body": {
-      "$ref": "#/803"
+      "$ref": "#/802"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -10006,21 +9999,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/816"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/818"
+          "$ref": "#/817"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/820"
+          "$ref": "#/819"
         },
         "flags": 2,
         "description": "Advanced Ransomware Protection reports Properties"
@@ -10047,14 +10040,14 @@
       },
       "state": {
         "type": {
-          "$ref": "#/823"
+          "$ref": "#/822"
         },
         "flags": 2,
         "description": "State of the Advanced Ransomware Protection (ARP) report"
       },
       "severity": {
         "type": {
-          "$ref": "#/828"
+          "$ref": "#/827"
         },
         "flags": 2,
         "description": "Severity of the Advanced Ransomware Protection (ARP) report"
@@ -10075,7 +10068,7 @@
       },
       "suspects": {
         "type": {
-          "$ref": "#/835"
+          "$ref": "#/834"
         },
         "flags": 2,
         "description": "Suspects identified in an ARP report"
@@ -10101,10 +10094,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/821"
+        "$ref": "#/820"
       },
       {
-        "$ref": "#/822"
+        "$ref": "#/821"
       },
       {
         "$ref": "#/2"
@@ -10131,6 +10124,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/823"
+      },
+      {
         "$ref": "#/824"
       },
       {
@@ -10138,9 +10134,6 @@
       },
       {
         "$ref": "#/826"
-      },
-      {
-        "$ref": "#/827"
       },
       {
         "$ref": "#/2"
@@ -10160,7 +10153,7 @@
       },
       "resolution": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/831"
         },
         "flags": 2,
         "description": "ARP report suspect resolution"
@@ -10174,7 +10167,7 @@
       },
       "suspectFiles": {
         "type": {
-          "$ref": "#/834"
+          "$ref": "#/833"
         },
         "flags": 2,
         "description": "Suspect files"
@@ -10193,10 +10186,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/830"
+        "$ref": "#/829"
       },
       {
-        "$ref": "#/831"
+        "$ref": "#/830"
       },
       {
         "$ref": "#/2"
@@ -10226,20 +10219,20 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/833"
+      "$ref": "#/832"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/829"
+      "$ref": "#/828"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/ransomwareReports@2025-12-15-preview",
     "body": {
-      "$ref": "#/819"
+      "$ref": "#/818"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -10265,28 +10258,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/793"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/836"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/838"
+          "$ref": "#/837"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/798"
+          "$ref": "#/797"
         },
         "flags": 2,
         "description": "QuotaItem properties"
@@ -10304,7 +10297,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.NetApp/netAppAccounts/quotaLimits@2025-12-15-preview",
     "body": {
-      "$ref": "#/839"
+      "$ref": "#/838"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -10349,7 +10342,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
     "apiVersion": "2025-12-15-preview",
     "output": {
-      "$ref": "#/841"
+      "$ref": "#/840"
     }
   },
   {
@@ -10358,7 +10351,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/848"
+          "$ref": "#/847"
         },
         "flags": 0,
         "description": "Type of quota. If provided, quotaTarget must also be specified. The quotaType and quotaTarget properties are optional, but when filtering by quota type, quotaType and quotaTarget must be supplied together. Service/API will return an error if only one is provided."
@@ -10372,7 +10365,7 @@
       },
       "usageThresholdPercentage": {
         "type": {
-          "$ref": "#/849"
+          "$ref": "#/848"
         },
         "flags": 0,
         "description": "The usageThresholdPercentage filter takes the usage threshold percentage and returns records where the usage is greater than or equal to the input value. This is an optional property."
@@ -10399,6 +10392,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/843"
+      },
+      {
         "$ref": "#/844"
       },
       {
@@ -10406,9 +10402,6 @@
       },
       {
         "$ref": "#/846"
-      },
-      {
-        "$ref": "#/847"
       },
       {
         "$ref": "#/2"
@@ -10422,9 +10415,22 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ListQuotaReportResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/850"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the ListQuotaReport."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListQuotaReportResponse",
     "properties": {
-      "value": {
+      "quotaReportRecords": {
         "type": {
           "$ref": "#/857"
         },
@@ -10529,10 +10535,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2025-12-15-preview",
     "output": {
-      "$ref": "#/850"
+      "$ref": "#/849"
     },
     "input": {
-      "$ref": "#/843"
+      "$ref": "#/842"
     }
   },
   {

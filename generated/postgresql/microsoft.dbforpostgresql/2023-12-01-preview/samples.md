@@ -153,7 +153,6 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2023-12-01-p
       primaryKeyURI: 'https://test-kv.vault.azure.net/keys/test-key1/77f57315bab34b0189daa113fbc78787'
       primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity'
     }
-    pointInTimeUTC: '2021-06-27T00:04:59.4078005+00:00'
     sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/sourcepgservername'
   }
 }

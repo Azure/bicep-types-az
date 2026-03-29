@@ -1,6 +1,6 @@
-# Microsoft.Compute @ 2025-05-01
+# microsoft.Compute @ 2025-05-01
 
-## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces@2025-05-01
+## Resource microsoft.Compute/cloudServices/roleInstances/networkInterfaces@2025-05-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
@@ -12,9 +12,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat) (ReadOnly): Properties of the network interface.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'Microsoft.Compute/cloudServices/roleInstances/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'microsoft.Compute/cloudServices/roleInstances/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses@2025-05-01
+## Resource microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses@2025-05-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
@@ -27,48 +27,7 @@
 * **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat) (ReadOnly): Public IP address properties.
 * **sku**: [PublicIPAddressSku](#publicipaddresssku) (ReadOnly): The public IP address SKU.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'Microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[] (ReadOnly): A list of availability zones denoting the IP allocated for the resource needs to come from.
-
-## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2025-05-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the network interface.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat) (ReadOnly): Properties of the network interface.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipConfigurations@2025-05-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat) (ReadOnly): Network interface IP configuration properties.
-* **type**: 'microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses@2025-05-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2025-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the public ip address.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat) (ReadOnly): Public IP address properties.
-* **sku**: [PublicIPAddressSku](#publicipaddresssku) (ReadOnly): The public IP address SKU.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'microsoft.Compute/cloudServices/roleInstances/networkInterfaces/ipconfigurations/publicipaddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): A list of availability zones denoting the IP allocated for the resource needs to come from.
 
 ## ApplicationGatewayBackendAddress
@@ -122,9 +81,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [BackendAddressPoolPropertiesFormat](#backendaddresspoolpropertiesformat): Properties of load balancer backend address pool.
-* **type**: string (ReadOnly): Type of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## BackendAddressPoolPropertiesFormat
 ### Properties
@@ -140,11 +99,6 @@
 * **syncMode**: 'Automatic' | 'Manual' | string: Backend address synchronous mode for the backend pool
 * **tunnelInterfaces**: [GatewayLoadBalancerTunnelInterface](#gatewayloadbalancertunnelinterface)[]: An array of gateway load balancer tunnel interfaces.
 * **virtualNetwork**: [SubResource](#subresource): A reference to a virtual network.
-
-## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## CustomDnsConfigPropertiesFormat
 ### Properties
@@ -202,9 +156,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat): Properties of the load balancer probe.
-* **type**: string (ReadOnly): Type of the resource.
+* **type**: string (ReadOnly): Resource type.
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
 ## FrontendIPConfigurationPropertiesFormat
@@ -233,9 +187,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat): Properties of load balancer inbound NAT rule.
-* **type**: string (ReadOnly): Type of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## InboundNatRulePropertiesFormat
 ### Properties
@@ -320,7 +274,12 @@
 ## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
+
+## ManagedServiceIdentityUserAssignedIdentities
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## NatGateway
 ### Properties
@@ -380,9 +339,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat): Network interface IP configuration properties.
-* **type**: string: Resource type.
+* **type**: string (ReadOnly): Resource type.
 
 ## NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties
 ### Properties
@@ -438,9 +397,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [NetworkInterfaceTapConfigurationPropertiesFormat](#networkinterfacetapconfigurationpropertiesformat): Properties of the Virtual Network Tap configuration.
-* **type**: string (ReadOnly): Sub Resource type.
+* **type**: string (ReadOnly): Resource type.
 
 ## NetworkInterfaceTapConfigurationPropertiesFormat
 ### Properties
@@ -483,9 +442,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private end point connection.
-* **type**: string (ReadOnly): The resource type.
+* **type**: string (ReadOnly): Resource type.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -717,16 +676,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## RetentionPolicyParameters
 ### Properties
 * **days**: int: Number of days to retain flow log records.
@@ -736,9 +685,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [RoutePropertiesFormat](#routepropertiesformat): Properties of the route.
-* **type**: string: The type of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## RoutePropertiesFormat
 ### Properties
@@ -770,9 +719,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat): Properties of the security rule.
-* **type**: string: The type of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## SecurityRulePropertiesFormat
 ### Properties
@@ -830,9 +779,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [ServiceEndpointPolicyDefinitionPropertiesFormat](#serviceendpointpolicydefinitionpropertiesformat): Properties of the service endpoint policy definition.
-* **type**: string: The type of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## ServiceEndpointPolicyDefinitionPropertiesFormat
 ### Properties
@@ -861,9 +810,9 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string: Name of the resource.
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
-* **type**: string: Resource type.
+* **type**: string (ReadOnly): Resource type.
 
 ## SubnetPropertiesFormat
 ### Properties

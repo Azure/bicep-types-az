@@ -1,0 +1,272 @@
+# Microsoft.ContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.containerservice/fleets
+
+Creates a Fleet resource with a long running operation.
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets@2026-02-01-preview' = {
+  name: 'example'
+  identity: {
+    type: 'None'
+    userAssignedIdentities: {
+      key126: {
+      }
+    }
+  }
+  location: 'East US'
+  properties: {
+    hubProfile: {
+      agentProfile: {
+        subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgfleets/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1'
+        vmSize: 'Standard_DS1'
+      }
+      apiServerAccessProfile: {
+        enablePrivateCluster: true
+        enableVnetIntegration: true
+        subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgfleets/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1'
+      }
+      dnsPrefix: 'dnsprefix1'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.containerservice/fleets/autoupgradeprofiles
+
+Create an AutoUpgradeProfile.
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets/autoUpgradeProfiles@2026-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    channel: 'Stable'
+    disabled: true
+    nodeImageSelection: {
+      type: 'Latest'
+    }
+    updateStrategyId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgfleets/providers/Microsoft.ContainerService/fleets/fleet1/updateStrategies/strategy1'
+  }
+}
+```
+
+## microsoft.containerservice/fleets/managednamespaces
+
+FleetManagedNamespaces_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets/managedNamespaces@2026-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    adoptionPolicy: 'Never'
+    deletePolicy: 'Keep'
+    managedNamespaceProperties: {
+      annotations: {
+        key2: 'value2'
+      }
+      defaultNetworkPolicy: {
+        egress: 'AllowAll'
+        ingress: 'AllowSameNamespace'
+      }
+      defaultResourceQuota: {
+        cpuLimit: '1'
+        cpuRequest: '1'
+        memoryLimit: '32Gi'
+        memoryRequest: '10Gi'
+      }
+      labels: {
+        key1: 'value1'
+      }
+    }
+    propagationPolicy: {
+      type: 'Placement'
+      placementProfile: {
+        defaultClusterResourcePlacement: {
+          policy: {
+            affinity: {
+              clusterAffinity: {
+                requiredDuringSchedulingIgnoredDuringExecution: {
+                  clusterSelectorTerms: [
+                    {
+                      labelSelector: {
+                        matchExpressions: [
+                          {
+                            key: 'region'
+                            operator: 'In'
+                            values: [
+                              'production1'
+                              'production2'
+                            ]
+                          }
+                        ]
+                        matchLabels: {
+                          gpu: 'true'
+                        }
+                      }
+                      propertySelector: {
+                        matchExpressions: [
+                          {
+                            name: 'zones'
+                            operator: 'Gt'
+                            values: [
+                              '1'
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+            placementType: 'PickAll'
+            tolerations: [
+              {
+                effect: 'NoSchedule'
+                key: 'AIWorkloadOnly'
+                operator: 'Exists'
+                value: 'true'
+              }
+            ]
+          }
+        }
+      }
+    }
+    status: {
+      lastOperationError: {
+      }
+    }
+  }
+}
+```
+
+## microsoft.containerservice/fleets/members
+
+Creates a FleetMember resource with a long running operation.
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets/members@2026-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    clusterResourceId: '/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster-1'
+  }
+}
+```
+
+## microsoft.containerservice/fleets/updateruns
+
+Create an UpdateRun.
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets/updateRuns@2026-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    managedClusterUpdate: {
+      nodeImageSelection: {
+        type: 'Latest'
+      }
+      upgrade: {
+        type: 'Full'
+        kubernetesVersion: '1.26.1'
+      }
+    }
+    strategy: {
+      stages: [
+        {
+          name: 'stage1'
+          afterGates: [
+            {
+              type: 'Approval'
+              displayName: 'gate after stage1'
+            }
+          ]
+          afterStageWaitInSeconds: 3600
+          beforeGates: [
+            {
+              type: 'Approval'
+              displayName: 'gate before stage1'
+            }
+          ]
+          groups: [
+            {
+              name: 'group-a'
+              afterGates: [
+                {
+                  type: 'Approval'
+                  displayName: 'gate after group-a'
+                }
+              ]
+              beforeGates: [
+                {
+                  type: 'Approval'
+                  displayName: 'gate before group-a'
+                }
+              ]
+              maxConcurrency: '2'
+            }
+          ]
+          maxConcurrency: '10'
+        }
+      ]
+    }
+    updateStrategyId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/fleets/myFleet/updateStrategies/strategy1'
+  }
+}
+```
+
+## microsoft.containerservice/fleets/updatestrategies
+
+Create a FleetUpdateStrategy.
+```bicep
+resource exampleResource 'Microsoft.ContainerService/fleets/updateStrategies@2026-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    strategy: {
+      stages: [
+        {
+          name: 'stage1'
+          afterGates: [
+            {
+              type: 'Approval'
+              displayName: 'gate after stage1'
+            }
+          ]
+          afterStageWaitInSeconds: 3600
+          beforeGates: [
+            {
+              type: 'Approval'
+              displayName: 'gate before stage1'
+            }
+          ]
+          groups: [
+            {
+              name: 'group-a'
+              afterGates: [
+                {
+                  type: 'Approval'
+                  displayName: 'gate after group-a'
+                }
+              ]
+              beforeGates: [
+                {
+                  type: 'Approval'
+                  displayName: 'gate before group-a'
+                }
+              ]
+              maxConcurrency: '5'
+            }
+          ]
+          maxConcurrency: '20%'
+        }
+      ]
+    }
+  }
+}
+```

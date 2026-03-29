@@ -8,7 +8,7 @@
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
-* **kind**: string: The Kind of the resource.
+* **kind**: string: The kind (type) of cognitive service account.
 * **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): Properties of Cognitive Services account.
@@ -35,7 +35,7 @@
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: The Kind of the resource.
+* **kind**: string: The kind (type) of cognitive service account.
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CommitmentPlanProperties](#commitmentplanproperties): Properties of Cognitive Services account commitment plan.
@@ -162,7 +162,7 @@
 ### Properties
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AgenticApplicationProperties](#agenticapplicationproperties) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CognitiveServices/accounts/projects/applications' (ReadOnly, DeployTimeConstant): The resource type
@@ -285,7 +285,7 @@
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: The Kind of the resource.
+* **kind**: string: The kind (type) of cognitive service account.
 * **location**: string: The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CommitmentPlanProperties](#commitmentplanproperties): Properties of Cognitive Services account commitment plan.
@@ -326,7 +326,7 @@
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **kind**: string (ReadOnly): The Kind of the resource.
+* **kind**: string (ReadOnly): The kind (type) of cognitive service account.
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties) (ReadOnly): Properties of Cognitive Services account.
@@ -663,7 +663,7 @@ which requires UsernamePassword
 
 ### Base Properties
 * **category**: 'ADLSGen2' | 'AIServices' | 'AmazonMws' | 'AmazonRdsForOracle' | 'AmazonRdsForSqlServer' | 'AmazonRedshift' | 'AmazonS3Compatible' | 'ApiKey' | 'ApiManagement' | 'AppConfig' | 'AppInsights' | 'AzureBlob' | 'AzureContainerAppEnvironment' | 'AzureDataExplorer' | 'AzureDatabricksDeltaLake' | 'AzureKeyVault' | 'AzureMariaDb' | 'AzureMySqlDb' | 'AzureOneLake' | 'AzureOpenAI' | 'AzurePostgresDb' | 'AzureSqlDb' | 'AzureSqlMi' | 'AzureStorageAccount' | 'AzureSynapseAnalytics' | 'AzureTableStorage' | 'BingLLMSearch' | 'Cassandra' | 'CognitiveSearch' | 'CognitiveService' | 'Concur' | 'ContainerRegistry' | 'CosmosDb' | 'CosmosDbMongoDbApi' | 'Couchbase' | 'CustomKeys' | 'Databricks' | 'Db2' | 'Drill' | 'Dynamics' | 'DynamicsAx' | 'DynamicsCrm' | 'Elasticsearch' | 'Eloqua' | 'FileServer' | 'FtpServer' | 'GenericContainerRegistry' | 'GenericHttp' | 'GenericRest' | 'Git' | 'GoogleAdWords' | 'GoogleBigQuery' | 'GoogleCloudStorage' | 'Greenplum' | 'GroundingWithBingSearch' | 'GroundingWithCustomSearch' | 'Hbase' | 'Hdfs' | 'Hive' | 'Hubspot' | 'Impala' | 'Informix' | 'Jira' | 'Magento' | 'ManagedOnlineEndpoint' | 'MariaDb' | 'Marketo' | 'MicrosoftAccess' | 'MicrosoftFabric' | 'ModelGateway' | 'MongoDbAtlas' | 'MongoDbV2' | 'MySql' | 'Netezza' | 'ODataRest' | 'Odbc' | 'Office365' | 'OpenAI' | 'Oracle' | 'OracleCloudStorage' | 'OracleServiceCloud' | 'PayPal' | 'Phoenix' | 'Pinecone' | 'PostgreSql' | 'PowerPlatformEnvironment' | 'Presto' | 'PythonFeed' | 'QuickBooks' | 'Redis' | 'RemoteA2A' | 'RemoteTool' | 'Responsys' | 'S3' | 'Salesforce' | 'SalesforceMarketingCloud' | 'SalesforceServiceCloud' | 'SapBw' | 'SapCloudForCustomer' | 'SapEcc' | 'SapHana' | 'SapOpenHub' | 'SapTable' | 'Serp' | 'Serverless' | 'ServiceNow' | 'Sftp' | 'SharePointOnlineList' | 'Sharepoint' | 'Shopify' | 'Snowflake' | 'Spark' | 'SqlServer' | 'Square' | 'Sybase' | 'Teradata' | 'Vertica' | 'WebTable' | 'Xero' | 'Zoho' | string: Category of the connection
-* **createdByWorkspaceArmId**: string (ReadOnly)
+* **createdByWorkspaceArmId**: string (ReadOnly): A type definition that refers the id to an Azure Resource Manager resource.
 * **error**: string: Provides the error message if the connection fails
 * **expiryTime**: string
 * **group**: 'Azure' | 'AzureAI' | 'Database' | 'File' | 'GenericProtocol' | 'NoSQL' | 'ServicesAndApps' | string (ReadOnly): Group based on connection category
@@ -814,6 +814,7 @@ depending on each OAuth2 provider's implementation.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Gets the status of the resource at the time the operation was called.
 * **raiPolicyName**: string: The name of RAI policy.
 * **rateLimits**: [ThrottlingRule](#throttlingrule)[] (ReadOnly)
+* **routing**: [DeploymentRouting](#deploymentrouting): Routing configuration for the deployment. This property is only applicable when the deployed model is 'model-router' version 2025-11-18 or later. Allows you to select the models subset for routing and the routing mode (balanced, accuracy, cost) for routing across all supported models or the model subset.
 * **scaleSettings**: [DeploymentScaleSettings](#deploymentscalesettings): Properties of Cognitive Services account deployment model. (Deprecated, please use Deployment.sku instead.)
 * **serviceTier**: 'Default' | 'Priority' | string: The service tier for the deployment. Determines the pricing and performance level for request processing. Use 'Default' for standard pricing or 'Priority' for higher-priority processing with premium pricing. Note: Pause operations are only supported on Standard, DataZoneStandard, and GlobalStandard SKUs.
 * **spilloverDeploymentName**: string: Specifies the deployment name that should serve requests when the request would have otherwise been throttled due to reaching current deployment throughput limit.
@@ -823,6 +824,11 @@ depending on each OAuth2 provider's implementation.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DeploymentRouting
+### Properties
+* **mode**: 'accuracy' | 'balanced' | 'cost' | string: The routing mode that determines how requests are distributed across models.
+* **models**: [DeploymentModel](#deploymentmodel)[]: Optional. The list of models that the model router can use to route requests across. If not specified, the model router will route to all available models specified in the model-router version.
 
 ## DeploymentScaleSettings
 ### Properties
@@ -882,12 +888,13 @@ depending on each OAuth2 provider's implementation.
 ## ManagedNetworkSettingsEx
 ### Properties
 * **changeableIsolationModes**: ('AllowInternetOutbound' | 'AllowOnlyApprovedOutbound' | 'Disabled' | string)[] (ReadOnly)
-* **egressIpAddress**: string (ReadOnly): Public IP address assigned to the Azure Firewall.
+* **firewallPublicIpAddress**: string (ReadOnly): Public IP address assigned to the Azure Firewall.
 * **firewallSku**: 'Basic' | 'Standard' | string: Firewall Sku used for FQDN Rules
 * **isolationMode**: 'AllowInternetOutbound' | 'AllowOnlyApprovedOutbound' | 'Disabled' | string: Isolation mode for the managed network of a cognitive services account.
 * **managedNetworkKind**: 'V1' | 'V2' | string: The Kind of the managed network. Users can switch from V1 to V2 for granular access controls, but cannot switch back to V1 once V2 is enabled.
 * **networkId**: string (ReadOnly)
 * **outboundRules**: [ManagedNetworkSettingsOutboundRules](#managednetworksettingsoutboundrules): Dictionary of <OutboundRule>
+* **provisioningState**: 'Deferred' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed network settings.
 * **status**: [ManagedNetworkProvisionStatus](#managednetworkprovisionstatus): Status of the Provisioning for the managed network of a cognitive services account.
 
 ## ManagedNetworkSettingsOutboundRules
@@ -976,6 +983,17 @@ depending on each OAuth2 provider's implementation.
 * **destination**: string
 * **type**: 'FQDN' (Required): Type of a managed network Outbound Rule of a cognitive services account.
 
+### PrivateEndpointOutboundRule
+#### Properties
+* **destination**: [PrivateEndpointOutboundRuleDestination](#privateendpointoutboundruledestination): Private Endpoint destination.
+* **fqdns**: string[]: List of FQDNs associated with the private endpoint outbound rule.
+* **type**: 'PrivateEndpoint' (Required): Type of a managed network Outbound Rule of a cognitive services account.
+
+### ServiceTagOutboundRule
+#### Properties
+* **destination**: [ServiceTagOutboundRuleDestination](#servicetagoutboundruledestination): Service Tag destination.
+* **type**: 'ServiceTag' (Required): Type of a managed network Outbound Rule of a cognitive services account.
+
 
 ## PrivateEndpoint
 ### Properties
@@ -997,6 +1015,11 @@ depending on each OAuth2 provider's implementation.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
+
+## PrivateEndpointOutboundRuleDestination
+### Properties
+* **serviceResourceId**: string: The Azure resource ID of the target private endpoint service.
+* **subresourceTarget**: string: The subresource of the target service to connect to.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -1221,6 +1244,14 @@ depending on each OAuth2 provider's implementation.
 * **blocking**: bool: If blocking would occur.
 * **safetyProviderName**: string: Name of RAI Safety Provider.
 * **source**: 'Completion' | 'PostRun' | 'PostToolCall' | 'PreRun' | 'PreToolCall' | 'Prompt' | string: Content source to apply the Content Filters.
+
+## ServiceTagOutboundRuleDestination
+### Properties
+* **action**: 'Allow' | 'Deny' | string: The action for the service tag outbound rule.
+* **addressPrefixes**: string[]: Optional address prefixes. If provided, the serviceTag property will be ignored.
+* **portRanges**: string: Destination port ranges.
+* **protocol**: string: Network protocol used by the service tag rule.
+* **serviceTag**: string: Name of the Azure service tag to target.
 
 ## Sku
 ### Properties

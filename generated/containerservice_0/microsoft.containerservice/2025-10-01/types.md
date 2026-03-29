@@ -81,11 +81,11 @@
 * **apiVersion**: '2025-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 63, pattern: "[a-z0-9]([-a-z0-9]*[a-z0-9])?"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Properties of a namespace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ManagedNamespaceTags](#managednamespacetags): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/managedClusters/managedNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2025-10-01
@@ -990,11 +990,6 @@
 ### Properties
 * **enabled**: bool (Required): Whether to enable VPA. Default value is false.
 
-## ManagedNamespaceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ManagedServiceIdentityUserAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
@@ -1174,6 +1169,11 @@
 ### Properties
 * **end**: string: The end of a time span
 * **start**: string: The start of a time span
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

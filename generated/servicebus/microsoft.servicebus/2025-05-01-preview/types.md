@@ -418,7 +418,7 @@
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **geoDataReplication**: [GeoDataReplicationProperties](#geodatareplicationproperties): Geo Data Replication settings for the namespace
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
-* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
+* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | '1.3' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **platformCapabilities**: [PlatformCapabilities](#platformcapabilities)
 * **premiumMessagingPartitions**: int: The number of partitions of a Service Bus namespace. This property is only applicable to Premium SKU namespaces. The default value is 1 and possible values are 1, 2 and 4
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.

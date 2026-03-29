@@ -212,7 +212,6 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       primaryKeyURI: 'https://exampleprimarykeyvault.vault.azure.net/keys/examplekey/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
       primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity'
     }
-    pointInTimeUTC: '2024-08-01T18:35:22.123456Z'
     sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/examplesourceserver'
   }
 }

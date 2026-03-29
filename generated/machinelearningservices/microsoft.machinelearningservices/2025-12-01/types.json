@@ -14331,14 +14331,17 @@
       "Command": {
         "$ref": "#/1522"
       },
-      "Pipeline": {
+      "FineTuning": {
         "$ref": "#/1595"
       },
+      "Pipeline": {
+        "$ref": "#/1619"
+      },
       "Spark": {
-        "$ref": "#/1600"
+        "$ref": "#/1624"
       },
       "Sweep": {
-        "$ref": "#/1616"
+        "$ref": "#/1640"
       }
     }
   },
@@ -20872,25 +20875,308 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FineTuningJob",
+    "properties": {
+      "fineTuningDetails": {
+        "type": {
+          "$ref": "#/1596"
+        },
+        "flags": 1,
+        "description": "[Required]"
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/1615"
+        },
+        "flags": 1,
+        "description": "[Required]"
+      },
+      "queueSettings": {
+        "type": {
+          "$ref": "#/1165"
+        },
+        "flags": 0,
+        "description": "Queue settings for the job"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/1616"
+        },
+        "flags": 0,
+        "description": "Instance types and other resources for the job"
+      },
+      "jobType": {
+        "type": {
+          "$ref": "#/1618"
+        },
+        "flags": 1,
+        "description": "[Required] Specifies the type of job."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FineTuningVertical",
+    "discriminator": "modelProvider",
+    "baseProperties": {
+      "model": {
+        "type": {
+          "$ref": "#/1531"
+        },
+        "flags": 1,
+        "description": "[Required] Input model for fine tuning."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/1608"
+        },
+        "flags": 1,
+        "description": "[Required] Fine tuning task type."
+      },
+      "trainingData": {
+        "type": {
+          "$ref": "#/1531"
+        },
+        "flags": 1,
+        "description": "[Required] Training data for fine tuning."
+      },
+      "validationData": {
+        "type": {
+          "$ref": "#/1531"
+        },
+        "flags": 0,
+        "description": "Validation data for fine tuning."
+      }
+    },
+    "elements": {
+      "AzureOpenAI": {
+        "$ref": "#/1609"
+      },
+      "Custom": {
+        "$ref": "#/1612"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChatCompletion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextCompletion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextClassification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "QuestionAnswering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextSummarization"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TokenClassification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextTranslation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageClassification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageInstanceSegmentation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageObjectDetection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VideoMultiObjectTracking"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1597"
+      },
+      {
+        "$ref": "#/1598"
+      },
+      {
+        "$ref": "#/1599"
+      },
+      {
+        "$ref": "#/1600"
+      },
+      {
+        "$ref": "#/1601"
+      },
+      {
+        "$ref": "#/1602"
+      },
+      {
+        "$ref": "#/1603"
+      },
+      {
+        "$ref": "#/1604"
+      },
+      {
+        "$ref": "#/1605"
+      },
+      {
+        "$ref": "#/1606"
+      },
+      {
+        "$ref": "#/1607"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureOpenAiFineTuning",
+    "properties": {
+      "hyperParameters": {
+        "type": {
+          "$ref": "#/1610"
+        },
+        "flags": 0,
+        "description": "HyperParameters for fine tuning Azure Open AI model."
+      },
+      "modelProvider": {
+        "type": {
+          "$ref": "#/1611"
+        },
+        "flags": 1,
+        "description": "[Required] Enum to determine the type of fine tuning."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureOpenAiHyperParameters",
+    "properties": {
+      "batchSize": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance."
+      },
+      "learningRateMultiplier": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Scaling factor for the learning rate. A smaller learning rate may be useful to avoid over fitting."
+      },
+      "nEpochs": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureOpenAI"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomModelFineTuning",
+    "properties": {
+      "hyperParameters": {
+        "type": {
+          "$ref": "#/1613"
+        },
+        "flags": 0,
+        "description": "HyperParameters for fine tuning custom model."
+      },
+      "modelProvider": {
+        "type": {
+          "$ref": "#/1614"
+        },
+        "flags": 1,
+        "description": "[Required] Enum to determine the type of fine tuning."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomModelFineTuningHyperParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FineTuningJobOutputs",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobResources",
+    "properties": {
+      "instanceTypes": {
+        "type": {
+          "$ref": "#/1617"
+        },
+        "flags": 0,
+        "description": "List of instance types to choose from."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FineTuning"
+  },
+  {
+    "$type": "ObjectType",
     "name": "PipelineJob",
     "properties": {
       "inputs": {
         "type": {
-          "$ref": "#/1596"
+          "$ref": "#/1620"
         },
         "flags": 0,
         "description": "Inputs for the pipeline job."
       },
       "jobs": {
         "type": {
-          "$ref": "#/1597"
+          "$ref": "#/1621"
         },
         "flags": 0,
         "description": "Jobs construct the Pipeline Job."
       },
       "outputs": {
         "type": {
-          "$ref": "#/1598"
+          "$ref": "#/1622"
         },
         "flags": 0,
         "description": "Outputs for the pipeline job"
@@ -20911,7 +21197,7 @@
       },
       "jobType": {
         "type": {
-          "$ref": "#/1599"
+          "$ref": "#/1623"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of job."
@@ -20952,7 +21238,7 @@
     "properties": {
       "archives": {
         "type": {
-          "$ref": "#/1601"
+          "$ref": "#/1625"
         },
         "flags": 0,
         "description": "Archive files used in the job."
@@ -20973,14 +21259,14 @@
       },
       "conf": {
         "type": {
-          "$ref": "#/1602"
+          "$ref": "#/1626"
         },
         "flags": 0,
         "description": "Spark configured properties."
       },
       "entry": {
         "type": {
-          "$ref": "#/1603"
+          "$ref": "#/1627"
         },
         "flags": 1,
         "description": "[Required] The entry to execute on startup of the job."
@@ -20994,42 +21280,42 @@
       },
       "environmentVariables": {
         "type": {
-          "$ref": "#/1608"
+          "$ref": "#/1632"
         },
         "flags": 0,
         "description": "Environment variables included in the job."
       },
       "files": {
         "type": {
-          "$ref": "#/1609"
+          "$ref": "#/1633"
         },
         "flags": 0,
         "description": "Files used in the job."
       },
       "inputs": {
         "type": {
-          "$ref": "#/1610"
+          "$ref": "#/1634"
         },
         "flags": 0,
         "description": "Mapping of input data bindings used in the job."
       },
       "jars": {
         "type": {
-          "$ref": "#/1611"
+          "$ref": "#/1635"
         },
         "flags": 0,
         "description": "Jar files used in the job."
       },
       "outputs": {
         "type": {
-          "$ref": "#/1612"
+          "$ref": "#/1636"
         },
         "flags": 0,
         "description": "Mapping of output data bindings used in the job."
       },
       "pyFiles": {
         "type": {
-          "$ref": "#/1613"
+          "$ref": "#/1637"
         },
         "flags": 0,
         "description": "Python files used in the job."
@@ -21043,14 +21329,14 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/1614"
+          "$ref": "#/1638"
         },
         "flags": 0,
         "description": "Compute Resource configuration for the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/1615"
+          "$ref": "#/1639"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of job."
@@ -21078,10 +21364,10 @@
     "baseProperties": {},
     "elements": {
       "SparkJobPythonEntry": {
-        "$ref": "#/1604"
+        "$ref": "#/1628"
       },
       "SparkJobScalaEntry": {
-        "$ref": "#/1606"
+        "$ref": "#/1630"
       }
     }
   },
@@ -21098,7 +21384,7 @@
       },
       "sparkJobEntryType": {
         "type": {
-          "$ref": "#/1605"
+          "$ref": "#/1629"
         },
         "flags": 1,
         "description": "[Required] Type of the job's entry point."
@@ -21122,7 +21408,7 @@
       },
       "sparkJobEntryType": {
         "type": {
-          "$ref": "#/1607"
+          "$ref": "#/1631"
         },
         "flags": 1,
         "description": "[Required] Type of the job's entry point."
@@ -21212,28 +21498,28 @@
       },
       "inputs": {
         "type": {
-          "$ref": "#/1617"
+          "$ref": "#/1641"
         },
         "flags": 0,
         "description": "Mapping of input data bindings used in the job."
       },
       "limits": {
         "type": {
-          "$ref": "#/1618"
+          "$ref": "#/1642"
         },
         "flags": 0,
         "description": "Sweep Job limit."
       },
       "objective": {
         "type": {
-          "$ref": "#/1622"
+          "$ref": "#/1646"
         },
         "flags": 1,
         "description": "[Required] Optimization objective."
       },
       "outputs": {
         "type": {
-          "$ref": "#/1626"
+          "$ref": "#/1650"
         },
         "flags": 0,
         "description": "Mapping of output data bindings used in the job."
@@ -21247,7 +21533,7 @@
       },
       "samplingAlgorithm": {
         "type": {
-          "$ref": "#/1627"
+          "$ref": "#/1651"
         },
         "flags": 1,
         "description": "[Required] The hyperparameter sampling algorithm"
@@ -21261,14 +21547,14 @@
       },
       "trial": {
         "type": {
-          "$ref": "#/1637"
+          "$ref": "#/1661"
         },
         "flags": 1,
         "description": "[Required] Trial component definition."
       },
       "jobType": {
         "type": {
-          "$ref": "#/1639"
+          "$ref": "#/1663"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of job."
@@ -21310,7 +21596,7 @@
       },
       "jobLimitsType": {
         "type": {
-          "$ref": "#/1621"
+          "$ref": "#/1645"
         },
         "flags": 1,
         "description": "[Required] JobLimit type."
@@ -21336,10 +21622,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1619"
+        "$ref": "#/1643"
       },
       {
-        "$ref": "#/1620"
+        "$ref": "#/1644"
       },
       {
         "$ref": "#/2"
@@ -21352,7 +21638,7 @@
     "properties": {
       "goal": {
         "type": {
-          "$ref": "#/1625"
+          "$ref": "#/1649"
         },
         "flags": 1,
         "description": "[Required] Defines supported metric goals for hyperparameter tuning"
@@ -21378,10 +21664,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1623"
+        "$ref": "#/1647"
       },
       {
-        "$ref": "#/1624"
+        "$ref": "#/1648"
       },
       {
         "$ref": "#/2"
@@ -21403,13 +21689,13 @@
     "baseProperties": {},
     "elements": {
       "Bayesian": {
-        "$ref": "#/1628"
+        "$ref": "#/1652"
       },
       "Grid": {
-        "$ref": "#/1630"
+        "$ref": "#/1654"
       },
       "Random": {
-        "$ref": "#/1632"
+        "$ref": "#/1656"
       }
     }
   },
@@ -21419,7 +21705,7 @@
     "properties": {
       "samplingAlgorithmType": {
         "type": {
-          "$ref": "#/1629"
+          "$ref": "#/1653"
         },
         "flags": 1,
         "description": "[Required] The algorithm used for generating hyperparameter values, along with configuration properties"
@@ -21436,7 +21722,7 @@
     "properties": {
       "samplingAlgorithmType": {
         "type": {
-          "$ref": "#/1631"
+          "$ref": "#/1655"
         },
         "flags": 1,
         "description": "[Required] The algorithm used for generating hyperparameter values, along with configuration properties"
@@ -21453,7 +21739,7 @@
     "properties": {
       "rule": {
         "type": {
-          "$ref": "#/1635"
+          "$ref": "#/1659"
         },
         "flags": 0,
         "description": "The specific type of random algorithm"
@@ -21467,7 +21753,7 @@
       },
       "samplingAlgorithmType": {
         "type": {
-          "$ref": "#/1636"
+          "$ref": "#/1660"
         },
         "flags": 1,
         "description": "[Required] The algorithm used for generating hyperparameter values, along with configuration properties"
@@ -21486,10 +21772,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1633"
+        "$ref": "#/1657"
       },
       {
-        "$ref": "#/1634"
+        "$ref": "#/1658"
       },
       {
         "$ref": "#/2"
@@ -21534,7 +21820,7 @@
       },
       "environmentVariables": {
         "type": {
-          "$ref": "#/1638"
+          "$ref": "#/1662"
         },
         "flags": 0,
         "description": "Environment variables included in the job."
@@ -21597,21 +21883,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1641"
+          "$ref": "#/1665"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1642"
+          "$ref": "#/1666"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1644"
+          "$ref": "#/1668"
         },
         "flags": 1,
         "description": "[Required] Additional attributes of the entity."
@@ -21631,14 +21917,14 @@
     "properties": {
       "marketplacePlan": {
         "type": {
-          "$ref": "#/1645"
+          "$ref": "#/1669"
         },
         "flags": 2,
         "description": "Marketplace Plan associated with the Marketplace Subscription."
       },
       "marketplaceSubscriptionStatus": {
         "type": {
-          "$ref": "#/1649"
+          "$ref": "#/1673"
         },
         "flags": 2,
         "description": "Current status of the Marketplace Subscription."
@@ -21652,7 +21938,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1656"
+          "$ref": "#/1680"
         },
         "flags": 2,
         "description": "Provisioning State of the Marketplace Subscription."
@@ -21702,13 +21988,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1646"
+        "$ref": "#/1670"
       },
       {
-        "$ref": "#/1647"
+        "$ref": "#/1671"
       },
       {
-        "$ref": "#/1648"
+        "$ref": "#/1672"
       },
       {
         "$ref": "#/2"
@@ -21743,22 +22029,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1650"
+        "$ref": "#/1674"
       },
       {
-        "$ref": "#/1651"
+        "$ref": "#/1675"
       },
       {
-        "$ref": "#/1652"
+        "$ref": "#/1676"
       },
       {
-        "$ref": "#/1653"
+        "$ref": "#/1677"
       },
       {
-        "$ref": "#/1654"
+        "$ref": "#/1678"
       },
       {
-        "$ref": "#/1655"
+        "$ref": "#/1679"
       },
       {
         "$ref": "#/2"
@@ -21769,7 +22055,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2025-12-01",
     "body": {
-      "$ref": "#/1643"
+      "$ref": "#/1667"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -21802,14 +22088,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1658"
+          "$ref": "#/1682"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1659"
+          "$ref": "#/1683"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -21834,7 +22120,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/models@2025-12-01",
     "body": {
-      "$ref": "#/1660"
+      "$ref": "#/1684"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -21867,14 +22153,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1662"
+          "$ref": "#/1686"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1663"
+          "$ref": "#/1687"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -21899,7 +22185,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/models/versions@2025-12-01",
     "body": {
-      "$ref": "#/1664"
+      "$ref": "#/1688"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -21932,21 +22218,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1666"
+          "$ref": "#/1690"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1667"
+          "$ref": "#/1691"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1669"
+          "$ref": "#/1693"
         },
         "flags": 1,
         "description": "[Required] Additional attributes of the entity."
@@ -21974,7 +22260,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1687"
+          "$ref": "#/1711"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -22008,35 +22294,35 @@
       },
       "mirrorTraffic": {
         "type": {
-          "$ref": "#/1670"
+          "$ref": "#/1694"
         },
         "flags": 0,
         "description": "Percentage of traffic to be mirrored to each deployment without using returned scoring. Traffic values need to sum to utmost 50."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1677"
+          "$ref": "#/1701"
         },
         "flags": 2,
         "description": "Provisioning state for the endpoint."
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/1680"
+          "$ref": "#/1704"
         },
         "flags": 0,
         "description": "Enum to determine whether PublicNetworkAccess is Enabled or Disabled."
       },
       "traffic": {
         "type": {
-          "$ref": "#/1681"
+          "$ref": "#/1705"
         },
         "flags": 0,
         "description": "Percentage of traffic from endpoint to divert to each deployment. Traffic values need to sum to 100."
       },
       "authMode": {
         "type": {
-          "$ref": "#/1685"
+          "$ref": "#/1709"
         },
         "flags": 1,
         "description": "[Required] The authentication method for invoking the endpoint (data plane operation). Use 'Key' for key-based authentication. Use 'AMLToken' for Azure Machine Learning token-based authentication. Use 'AADToken' for Microsoft Entra token-based authentication."
@@ -22057,7 +22343,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1686"
+          "$ref": "#/1710"
         },
         "flags": 0,
         "description": "Property dictionary. Properties can be added, but not removed or altered."
@@ -22114,22 +22400,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1671"
+        "$ref": "#/1695"
       },
       {
-        "$ref": "#/1672"
+        "$ref": "#/1696"
       },
       {
-        "$ref": "#/1673"
+        "$ref": "#/1697"
       },
       {
-        "$ref": "#/1674"
+        "$ref": "#/1698"
       },
       {
-        "$ref": "#/1675"
+        "$ref": "#/1699"
       },
       {
-        "$ref": "#/1676"
+        "$ref": "#/1700"
       },
       {
         "$ref": "#/2"
@@ -22148,10 +22434,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1678"
+        "$ref": "#/1702"
       },
       {
-        "$ref": "#/1679"
+        "$ref": "#/1703"
       },
       {
         "$ref": "#/2"
@@ -22182,13 +22468,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1682"
+        "$ref": "#/1706"
       },
       {
-        "$ref": "#/1683"
+        "$ref": "#/1707"
       },
       {
-        "$ref": "#/1684"
+        "$ref": "#/1708"
       },
       {
         "$ref": "#/2"
@@ -22215,7 +22501,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2025-12-01",
     "body": {
-      "$ref": "#/1668"
+      "$ref": "#/1692"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -22248,21 +22534,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1689"
+          "$ref": "#/1713"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1690"
+          "$ref": "#/1714"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1692"
+          "$ref": "#/1716"
         },
         "flags": 1,
         "description": "[Required] Additional attributes of the entity."
@@ -22290,7 +22576,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1733"
+          "$ref": "#/1757"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -22325,14 +22611,14 @@
       },
       "dataCollector": {
         "type": {
-          "$ref": "#/1693"
+          "$ref": "#/1717"
         },
         "flags": 0,
         "description": "The mdc configuration, we disable mdc when it's null."
       },
       "egressPublicNetworkAccess": {
         "type": {
-          "$ref": "#/1709"
+          "$ref": "#/1733"
         },
         "flags": 0,
         "description": "Enum to determine whether PublicNetworkAccess is Enabled or Disabled for egress of a deployment."
@@ -22346,7 +22632,7 @@
       },
       "livenessProbe": {
         "type": {
-          "$ref": "#/1710"
+          "$ref": "#/1734"
         },
         "flags": 0,
         "description": "Liveness probe monitors the health of the container regularly."
@@ -22367,35 +22653,35 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1718"
+          "$ref": "#/1742"
         },
         "flags": 2,
         "description": "Provisioning state for the endpoint deployment."
       },
       "readinessProbe": {
         "type": {
-          "$ref": "#/1710"
+          "$ref": "#/1734"
         },
         "flags": 0,
         "description": "Readiness probe validates if the container is ready to serve traffic. The properties and defaults are the same as liveness probe."
       },
       "requestSettings": {
         "type": {
-          "$ref": "#/1719"
+          "$ref": "#/1743"
         },
         "flags": 0,
         "description": "Request settings for the deployment."
       },
       "scaleSettings": {
         "type": {
-          "$ref": "#/1720"
+          "$ref": "#/1744"
         },
         "flags": 0,
         "description": "Scale settings for the deployment.\nIf it is null or not provided,\nit defaults to TargetUtilizationScaleSettings for KubernetesOnlineDeployment\nand to DefaultScaleSettings for ManagedOnlineDeployment."
       },
       "startupProbe": {
         "type": {
-          "$ref": "#/1710"
+          "$ref": "#/1734"
         },
         "flags": 0,
         "description": "Startup probe verify whether an application within a container has started successfully."
@@ -22423,14 +22709,14 @@
       },
       "environmentVariables": {
         "type": {
-          "$ref": "#/1725"
+          "$ref": "#/1749"
         },
         "flags": 0,
         "description": "Environment variables configuration for the deployment."
       },
       "properties": {
         "type": {
-          "$ref": "#/1726"
+          "$ref": "#/1750"
         },
         "flags": 0,
         "description": "Property dictionary. Properties can be added, but not removed or altered."
@@ -22438,10 +22724,10 @@
     },
     "elements": {
       "Kubernetes": {
-        "$ref": "#/1727"
+        "$ref": "#/1751"
       },
       "Managed": {
-        "$ref": "#/1731"
+        "$ref": "#/1755"
       }
     }
   },
@@ -22451,21 +22737,21 @@
     "properties": {
       "collections": {
         "type": {
-          "$ref": "#/1698"
+          "$ref": "#/1722"
         },
         "flags": 1,
         "description": "[Required] The collection configuration. Each collection has it own configuration to collect model data and the name of collection can be arbitrary string.\nModel data collector can be used for either payload logging or custom logging or both of them. Collection request and response are reserved for payload logging, others are for custom logging."
       },
       "requestLogging": {
         "type": {
-          "$ref": "#/1699"
+          "$ref": "#/1723"
         },
         "flags": 0,
         "description": "The request logging configuration for mdc, it includes advanced logging settings for all collections. It's optional."
       },
       "rollingRate": {
         "type": {
-          "$ref": "#/1706"
+          "$ref": "#/1730"
         },
         "flags": 0,
         "description": "When model data is collected to blob storage, we need to roll the data to different path to avoid logging all of them in a single blob file.\nIf the rolling rate is hour, all data will be collected in the blob path /yyyy/MM/dd/HH/.\nIf it's day, all data will be collected in blob path /yyyy/MM/dd/.\nThe other benefit of rolling path is that model monitoring ui is able to select a time range of data very quickly."
@@ -22485,7 +22771,7 @@
       },
       "dataCollectionMode": {
         "type": {
-          "$ref": "#/1697"
+          "$ref": "#/1721"
         },
         "flags": 0,
         "description": "Enable or disable data collection."
@@ -22518,10 +22804,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1695"
+        "$ref": "#/1719"
       },
       {
-        "$ref": "#/1696"
+        "$ref": "#/1720"
       },
       {
         "$ref": "#/2"
@@ -22533,7 +22819,7 @@
     "name": "DataCollectorCollections",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1694"
+      "$ref": "#/1718"
     }
   },
   {
@@ -22542,7 +22828,7 @@
     "properties": {
       "captureHeaders": {
         "type": {
-          "$ref": "#/1700"
+          "$ref": "#/1724"
         },
         "flags": 0,
         "description": "For payload logging, we only collect payload by default. If customers also want to collect the specified headers, they can set them in captureHeaders so that backend will collect those headers along with payload."
@@ -22579,19 +22865,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1701"
+        "$ref": "#/1725"
       },
       {
-        "$ref": "#/1702"
+        "$ref": "#/1726"
       },
       {
-        "$ref": "#/1703"
+        "$ref": "#/1727"
       },
       {
-        "$ref": "#/1704"
+        "$ref": "#/1728"
       },
       {
-        "$ref": "#/1705"
+        "$ref": "#/1729"
       },
       {
         "$ref": "#/2"
@@ -22610,10 +22896,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1707"
+        "$ref": "#/1731"
       },
       {
-        "$ref": "#/1708"
+        "$ref": "#/1732"
       },
       {
         "$ref": "#/2"
@@ -22693,25 +22979,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1711"
+        "$ref": "#/1735"
       },
       {
-        "$ref": "#/1712"
+        "$ref": "#/1736"
       },
       {
-        "$ref": "#/1713"
+        "$ref": "#/1737"
       },
       {
-        "$ref": "#/1714"
+        "$ref": "#/1738"
       },
       {
-        "$ref": "#/1715"
+        "$ref": "#/1739"
       },
       {
-        "$ref": "#/1716"
+        "$ref": "#/1740"
       },
       {
-        "$ref": "#/1717"
+        "$ref": "#/1741"
       },
       {
         "$ref": "#/2"
@@ -22752,10 +23038,10 @@
     "baseProperties": {},
     "elements": {
       "Default": {
-        "$ref": "#/1721"
+        "$ref": "#/1745"
       },
       "TargetUtilization": {
-        "$ref": "#/1723"
+        "$ref": "#/1747"
       }
     }
   },
@@ -22765,7 +23051,7 @@
     "properties": {
       "scaleType": {
         "type": {
-          "$ref": "#/1722"
+          "$ref": "#/1746"
         },
         "flags": 1,
         "description": "[Required] Type of deployment scaling algorithm"
@@ -22810,7 +23096,7 @@
       },
       "scaleType": {
         "type": {
-          "$ref": "#/1724"
+          "$ref": "#/1748"
         },
         "flags": 1,
         "description": "[Required] Type of deployment scaling algorithm"
@@ -22843,14 +23129,14 @@
     "properties": {
       "containerResourceRequirements": {
         "type": {
-          "$ref": "#/1728"
+          "$ref": "#/1752"
         },
         "flags": 0,
         "description": "The resource requirements for the container (cpu and memory)."
       },
       "endpointComputeType": {
         "type": {
-          "$ref": "#/1730"
+          "$ref": "#/1754"
         },
         "flags": 1,
         "description": "[Required] The compute type of the endpoint."
@@ -22863,14 +23149,14 @@
     "properties": {
       "containerResourceLimits": {
         "type": {
-          "$ref": "#/1729"
+          "$ref": "#/1753"
         },
         "flags": 0,
         "description": "Container resource limit info:"
       },
       "containerResourceRequests": {
         "type": {
-          "$ref": "#/1729"
+          "$ref": "#/1753"
         },
         "flags": 0,
         "description": "Container resource request info:"
@@ -22914,7 +23200,7 @@
     "properties": {
       "endpointComputeType": {
         "type": {
-          "$ref": "#/1732"
+          "$ref": "#/1756"
         },
         "flags": 1,
         "description": "[Required] The compute type of the endpoint."
@@ -22937,7 +23223,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2025-12-01",
     "body": {
-      "$ref": "#/1691"
+      "$ref": "#/1715"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -22970,14 +23256,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1735"
+          "$ref": "#/1759"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1736"
+          "$ref": "#/1760"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -23002,7 +23288,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/outboundRules@2025-12-01",
     "body": {
-      "$ref": "#/1737"
+      "$ref": "#/1761"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -23035,14 +23321,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1739"
+          "$ref": "#/1763"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1740"
+          "$ref": "#/1764"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -23077,7 +23363,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1742"
+          "$ref": "#/1766"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -23103,7 +23389,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2025-12-01",
     "body": {
-      "$ref": "#/1741"
+      "$ref": "#/1765"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -23136,21 +23422,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1744"
+          "$ref": "#/1768"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1745"
+          "$ref": "#/1769"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1747"
+          "$ref": "#/1771"
         },
         "flags": 1,
         "description": "[Required] Additional attributes of the entity."
@@ -23170,7 +23456,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/1748"
+          "$ref": "#/1772"
         },
         "flags": 1,
         "description": "[Required] Specifies the action of the schedule"
@@ -23191,14 +23477,14 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1892"
+          "$ref": "#/1916"
         },
         "flags": 2,
         "description": "Provisioning state for the schedule."
       },
       "trigger": {
         "type": {
-          "$ref": "#/1893"
+          "$ref": "#/1917"
         },
         "flags": 1,
         "description": "[Required] Specifies the trigger details"
@@ -23212,14 +23498,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1904"
+          "$ref": "#/1928"
         },
         "flags": 0,
         "description": "The asset property dictionary."
       },
       "tags": {
         "type": {
-          "$ref": "#/1905"
+          "$ref": "#/1929"
         },
         "flags": 0,
         "description": "Tag dictionary. Tags can be added, removed, and updated."
@@ -23233,13 +23519,13 @@
     "baseProperties": {},
     "elements": {
       "CreateJob": {
-        "$ref": "#/1749"
+        "$ref": "#/1773"
       },
       "CreateMonitor": {
-        "$ref": "#/1751"
+        "$ref": "#/1775"
       },
       "InvokeBatchEndpoint": {
-        "$ref": "#/1883"
+        "$ref": "#/1907"
       }
     }
   },
@@ -23256,7 +23542,7 @@
       },
       "actionType": {
         "type": {
-          "$ref": "#/1750"
+          "$ref": "#/1774"
         },
         "flags": 1,
         "description": "[Required] Specifies the action type of the schedule"
@@ -23273,14 +23559,14 @@
     "properties": {
       "monitorDefinition": {
         "type": {
-          "$ref": "#/1752"
+          "$ref": "#/1776"
         },
         "flags": 1,
         "description": "[Required] Defines the monitor."
       },
       "actionType": {
         "type": {
-          "$ref": "#/1882"
+          "$ref": "#/1906"
         },
         "flags": 1,
         "description": "[Required] Specifies the action type of the schedule"
@@ -23293,28 +23579,28 @@
     "properties": {
       "alertNotificationSettings": {
         "type": {
-          "$ref": "#/1753"
+          "$ref": "#/1777"
         },
         "flags": 0,
         "description": "The monitor's notification settings."
       },
       "computeConfiguration": {
         "type": {
-          "$ref": "#/1756"
+          "$ref": "#/1780"
         },
         "flags": 1,
         "description": "[Required] The ARM resource ID of the compute resource to run the monitoring job on."
       },
       "monitoringTarget": {
         "type": {
-          "$ref": "#/1765"
+          "$ref": "#/1789"
         },
         "flags": 0,
         "description": "The entities targeted by the monitor."
       },
       "signals": {
         "type": {
-          "$ref": "#/1881"
+          "$ref": "#/1905"
         },
         "flags": 1,
         "description": "[Required] The signals to monitor."
@@ -23327,7 +23613,7 @@
     "properties": {
       "emailNotificationSettings": {
         "type": {
-          "$ref": "#/1754"
+          "$ref": "#/1778"
         },
         "flags": 0,
         "description": "The AML notification email settings."
@@ -23340,7 +23626,7 @@
     "properties": {
       "emails": {
         "type": {
-          "$ref": "#/1755"
+          "$ref": "#/1779"
         },
         "flags": 0,
         "description": "The email recipient list which has a limitation of 499 characters in total."
@@ -23360,7 +23646,7 @@
     "baseProperties": {},
     "elements": {
       "ServerlessSpark": {
-        "$ref": "#/1757"
+        "$ref": "#/1781"
       }
     }
   },
@@ -23370,7 +23656,7 @@
     "properties": {
       "computeIdentity": {
         "type": {
-          "$ref": "#/1758"
+          "$ref": "#/1782"
         },
         "flags": 1,
         "description": "[Required] The identity scheme leveraged to by the spark jobs running on serverless Spark."
@@ -23384,14 +23670,14 @@
       },
       "runtimeVersion": {
         "type": {
-          "$ref": "#/1763"
+          "$ref": "#/1787"
         },
         "flags": 1,
         "description": "[Required] The Spark runtime version."
       },
       "computeType": {
         "type": {
-          "$ref": "#/1764"
+          "$ref": "#/1788"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23405,10 +23691,10 @@
     "baseProperties": {},
     "elements": {
       "AmlToken": {
-        "$ref": "#/1759"
+        "$ref": "#/1783"
       },
       "ManagedIdentity": {
-        "$ref": "#/1761"
+        "$ref": "#/1785"
       }
     }
   },
@@ -23418,7 +23704,7 @@
     "properties": {
       "computeIdentityType": {
         "type": {
-          "$ref": "#/1760"
+          "$ref": "#/1784"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of identity to use within the monitoring jobs."
@@ -23442,7 +23728,7 @@
       },
       "computeIdentityType": {
         "type": {
-          "$ref": "#/1762"
+          "$ref": "#/1786"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of identity to use within the monitoring jobs."
@@ -23482,7 +23768,7 @@
       },
       "taskType": {
         "type": {
-          "$ref": "#/1768"
+          "$ref": "#/1792"
         },
         "flags": 1,
         "description": "[Required] The machine learning task type of the monitored model."
@@ -23501,10 +23787,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1766"
+        "$ref": "#/1790"
       },
       {
-        "$ref": "#/1767"
+        "$ref": "#/1791"
       },
       {
         "$ref": "#/2"
@@ -23518,14 +23804,14 @@
     "baseProperties": {
       "notificationTypes": {
         "type": {
-          "$ref": "#/1772"
+          "$ref": "#/1796"
         },
         "flags": 0,
         "description": "The current notification mode for this signal."
       },
       "properties": {
         "type": {
-          "$ref": "#/1773"
+          "$ref": "#/1797"
         },
         "flags": 0,
         "description": "Property dictionary. Properties can be added, but not removed or altered."
@@ -23533,19 +23819,19 @@
     },
     "elements": {
       "Custom": {
-        "$ref": "#/1774"
+        "$ref": "#/1798"
       },
       "DataDrift": {
-        "$ref": "#/1797"
+        "$ref": "#/1821"
       },
       "DataQuality": {
-        "$ref": "#/1830"
+        "$ref": "#/1854"
       },
       "FeatureAttributionDrift": {
-        "$ref": "#/1850"
+        "$ref": "#/1874"
       },
       "PredictionDrift": {
-        "$ref": "#/1860"
+        "$ref": "#/1884"
       }
     }
   },
@@ -23557,7 +23843,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1770"
+        "$ref": "#/1794"
       },
       {
         "$ref": "#/2"
@@ -23567,7 +23853,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1771"
+      "$ref": "#/1795"
     }
   },
   {
@@ -23591,28 +23877,28 @@
       },
       "inputAssets": {
         "type": {
-          "$ref": "#/1791"
+          "$ref": "#/1815"
         },
         "flags": 0,
         "description": "Monitoring assets to take as input. Key is the component input port name, value is the data asset."
       },
       "inputs": {
         "type": {
-          "$ref": "#/1792"
+          "$ref": "#/1816"
         },
         "flags": 0,
         "description": "Extra component parameters to take as input. Key is the component literal input port name, value is the parameter value."
       },
       "metricThresholds": {
         "type": {
-          "$ref": "#/1795"
+          "$ref": "#/1819"
         },
         "flags": 1,
         "description": "[Required] A list of metrics to calculate and their associated thresholds."
       },
       "signalType": {
         "type": {
-          "$ref": "#/1796"
+          "$ref": "#/1820"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23626,7 +23912,7 @@
     "baseProperties": {
       "columns": {
         "type": {
-          "$ref": "#/1776"
+          "$ref": "#/1800"
         },
         "flags": 0,
         "description": "Mapping of column names to special uses."
@@ -23640,7 +23926,7 @@
       },
       "jobInputType": {
         "type": {
-          "$ref": "#/1784"
+          "$ref": "#/1808"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of job."
@@ -23655,13 +23941,13 @@
     },
     "elements": {
       "Fixed": {
-        "$ref": "#/1785"
+        "$ref": "#/1809"
       },
       "Rolling": {
-        "$ref": "#/1787"
+        "$ref": "#/1811"
       },
       "Static": {
-        "$ref": "#/1789"
+        "$ref": "#/1813"
       }
     }
   },
@@ -23705,25 +23991,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1777"
+        "$ref": "#/1801"
       },
       {
-        "$ref": "#/1778"
+        "$ref": "#/1802"
       },
       {
-        "$ref": "#/1779"
+        "$ref": "#/1803"
       },
       {
-        "$ref": "#/1780"
+        "$ref": "#/1804"
       },
       {
-        "$ref": "#/1781"
+        "$ref": "#/1805"
       },
       {
-        "$ref": "#/1782"
+        "$ref": "#/1806"
       },
       {
-        "$ref": "#/1783"
+        "$ref": "#/1807"
       },
       {
         "$ref": "#/2"
@@ -23736,7 +24022,7 @@
     "properties": {
       "inputDataType": {
         "type": {
-          "$ref": "#/1786"
+          "$ref": "#/1810"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23774,7 +24060,7 @@
       },
       "inputDataType": {
         "type": {
-          "$ref": "#/1788"
+          "$ref": "#/1812"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23812,7 +24098,7 @@
       },
       "inputDataType": {
         "type": {
-          "$ref": "#/1790"
+          "$ref": "#/1814"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23828,7 +24114,7 @@
     "name": "CustomMonitoringSignalInputAssets",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1775"
+      "$ref": "#/1799"
     }
   },
   {
@@ -23852,7 +24138,7 @@
       },
       "threshold": {
         "type": {
-          "$ref": "#/1794"
+          "$ref": "#/1818"
         },
         "flags": 0,
         "description": "The threshold value. If null, a default value will be set depending on the selected metric."
@@ -23875,7 +24161,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1793"
+      "$ref": "#/1817"
     }
   },
   {
@@ -23888,49 +24174,49 @@
     "properties": {
       "featureDataTypeOverride": {
         "type": {
-          "$ref": "#/1801"
+          "$ref": "#/1825"
         },
         "flags": 0,
         "description": "A dictionary that maps feature names to their respective data types."
       },
       "featureImportanceSettings": {
         "type": {
-          "$ref": "#/1802"
+          "$ref": "#/1826"
         },
         "flags": 0,
         "description": "The settings for computing feature importance."
       },
       "features": {
         "type": {
-          "$ref": "#/1806"
+          "$ref": "#/1830"
         },
         "flags": 0,
         "description": "The feature filter which identifies which feature to calculate drift over."
       },
       "metricThresholds": {
         "type": {
-          "$ref": "#/1828"
+          "$ref": "#/1852"
         },
         "flags": 1,
         "description": "[Required] A list of metrics to calculate and their associated thresholds."
       },
       "productionData": {
         "type": {
-          "$ref": "#/1775"
+          "$ref": "#/1799"
         },
         "flags": 1,
         "description": "[Required] The data which drift will be calculated for."
       },
       "referenceData": {
         "type": {
-          "$ref": "#/1775"
+          "$ref": "#/1799"
         },
         "flags": 1,
         "description": "[Required] The data to calculate drift against."
       },
       "signalType": {
         "type": {
-          "$ref": "#/1829"
+          "$ref": "#/1853"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -23949,10 +24235,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1798"
+        "$ref": "#/1822"
       },
       {
-        "$ref": "#/1799"
+        "$ref": "#/1823"
       },
       {
         "$ref": "#/2"
@@ -23964,7 +24250,7 @@
     "name": "DataDriftMonitoringSignalFeatureDataTypeOverride",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1800"
+      "$ref": "#/1824"
     }
   },
   {
@@ -23973,7 +24259,7 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/1805"
+          "$ref": "#/1829"
         },
         "flags": 0,
         "description": "The mode of operation for computing feature importance."
@@ -23999,10 +24285,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1803"
+        "$ref": "#/1827"
       },
       {
-        "$ref": "#/1804"
+        "$ref": "#/1828"
       },
       {
         "$ref": "#/2"
@@ -24016,13 +24302,13 @@
     "baseProperties": {},
     "elements": {
       "AllFeatures": {
-        "$ref": "#/1807"
+        "$ref": "#/1831"
       },
       "FeatureSubset": {
-        "$ref": "#/1809"
+        "$ref": "#/1833"
       },
       "TopNByAttribution": {
-        "$ref": "#/1812"
+        "$ref": "#/1836"
       }
     }
   },
@@ -24032,7 +24318,7 @@
     "properties": {
       "filterType": {
         "type": {
-          "$ref": "#/1808"
+          "$ref": "#/1832"
         },
         "flags": 1,
         "description": "[Required] Specifies the feature filter to leverage when selecting features to calculate metrics over."
@@ -24049,14 +24335,14 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/1810"
+          "$ref": "#/1834"
         },
         "flags": 1,
         "description": "[Required] The list of features to include."
       },
       "filterType": {
         "type": {
-          "$ref": "#/1811"
+          "$ref": "#/1835"
         },
         "flags": 1,
         "description": "[Required] Specifies the feature filter to leverage when selecting features to calculate metrics over."
@@ -24086,7 +24372,7 @@
       },
       "filterType": {
         "type": {
-          "$ref": "#/1813"
+          "$ref": "#/1837"
         },
         "flags": 1,
         "description": "[Required] Specifies the feature filter to leverage when selecting features to calculate metrics over."
@@ -24104,7 +24390,7 @@
     "baseProperties": {
       "threshold": {
         "type": {
-          "$ref": "#/1794"
+          "$ref": "#/1818"
         },
         "flags": 0,
         "description": "The threshold value. If null, a default value will be set depending on the selected metric."
@@ -24112,10 +24398,10 @@
     },
     "elements": {
       "Categorical": {
-        "$ref": "#/1815"
+        "$ref": "#/1839"
       },
       "Numerical": {
-        "$ref": "#/1821"
+        "$ref": "#/1845"
       }
     }
   },
@@ -24125,14 +24411,14 @@
     "properties": {
       "metric": {
         "type": {
-          "$ref": "#/1819"
+          "$ref": "#/1843"
         },
         "flags": 1,
         "description": "[Required] The categorical data drift metric to calculate."
       },
       "dataType": {
         "type": {
-          "$ref": "#/1820"
+          "$ref": "#/1844"
         },
         "flags": 1,
         "description": "[Required] Specifies the data type of the metric threshold."
@@ -24155,13 +24441,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1816"
+        "$ref": "#/1840"
       },
       {
-        "$ref": "#/1817"
+        "$ref": "#/1841"
       },
       {
-        "$ref": "#/1818"
+        "$ref": "#/1842"
       },
       {
         "$ref": "#/2"
@@ -24178,14 +24464,14 @@
     "properties": {
       "metric": {
         "type": {
-          "$ref": "#/1826"
+          "$ref": "#/1850"
         },
         "flags": 1,
         "description": "[Required] The numerical data drift metric to calculate."
       },
       "dataType": {
         "type": {
-          "$ref": "#/1827"
+          "$ref": "#/1851"
         },
         "flags": 1,
         "description": "[Required] Specifies the data type of the metric threshold."
@@ -24212,16 +24498,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1822"
+        "$ref": "#/1846"
       },
       {
-        "$ref": "#/1823"
+        "$ref": "#/1847"
       },
       {
-        "$ref": "#/1824"
+        "$ref": "#/1848"
       },
       {
-        "$ref": "#/1825"
+        "$ref": "#/1849"
       },
       {
         "$ref": "#/2"
@@ -24235,7 +24521,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1814"
+      "$ref": "#/1838"
     }
   },
   {
@@ -24248,49 +24534,49 @@
     "properties": {
       "featureDataTypeOverride": {
         "type": {
-          "$ref": "#/1834"
+          "$ref": "#/1858"
         },
         "flags": 0,
         "description": "A dictionary that maps feature names to their respective data types."
       },
       "featureImportanceSettings": {
         "type": {
-          "$ref": "#/1802"
+          "$ref": "#/1826"
         },
         "flags": 0,
         "description": "The settings for computing feature importance."
       },
       "features": {
         "type": {
-          "$ref": "#/1806"
+          "$ref": "#/1830"
         },
         "flags": 0,
         "description": "The features to calculate drift over."
       },
       "metricThresholds": {
         "type": {
-          "$ref": "#/1848"
+          "$ref": "#/1872"
         },
         "flags": 1,
         "description": "[Required] A list of metrics to calculate and their associated thresholds."
       },
       "productionData": {
         "type": {
-          "$ref": "#/1775"
+          "$ref": "#/1799"
         },
         "flags": 1,
         "description": "[Required] The data produced by the production service which drift will be calculated for."
       },
       "referenceData": {
         "type": {
-          "$ref": "#/1775"
+          "$ref": "#/1799"
         },
         "flags": 1,
         "description": "[Required] The data to calculate drift against."
       },
       "signalType": {
         "type": {
-          "$ref": "#/1849"
+          "$ref": "#/1873"
         },
         "flags": 1,
         "description": "[Required] Specifies the type of signal to monitor."
@@ -24309,10 +24595,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1831"
+        "$ref": "#/1855"
       },
       {
-        "$ref": "#/1832"
+        "$ref": "#/1856"
       },
       {
         "$ref": "#/2"
@@ -24324,7 +24610,7 @@
     "name": "DataQualityMonitoringSignalFeatureDataTypeOverride",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1833"
+      "$ref": "#/1857"
     }
   },
   {
@@ -24334,7 +24620,7 @@
     "baseProperties": {
       "threshold": {
         "type": {
-          "$ref": "#/1794"
+          "$ref": "#/1818"
         },
         "flags": 0,
         "description": "The threshold value. If null, a default value will be set depending on the selected metric."
@@ -24342,10 +24628,10 @@
     },
     "elements": {
       "Categorical": {
-        "$ref": "#/1836"
+        "$ref": "#/1860"
       },
       "Numerical": {
-        "$ref": "#/1842"
+        "$ref": "#/1866"
       }
     }
   },
@@ -24355,14 +24641,14 @@
     "properties": {
       "metric": {
         "type": {
-          "$ref": "#/1840"
+          "$ref": "#/1864"
         },
         "flags": 1,
         "description": "[Required] The categorical data quality metric to calculate."
       },
       "dataType": {
         "type": {
-          "$ref": "#/1841"
+          "$ref": "#/1865"
         },
         "flags": 1,
         "description": "[Required] Specifies the data type of the metric threshold."
@@ -24385,13 +24671,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1837"
+        "$ref": "#/1861"
       },
       {
-        "$ref": "#/1838"
+        "$ref": "#/1862"
       },
       {
-        "$ref": "#/1839"
+        "$ref": "#/1863"
       },
       {
         "$ref": "#/2"
@@ -24408,14 +24694,14 @@
     "properties": {
       "metric": {
         "type": {
-          "$ref": "#/1846"
+          "$ref": "#/1870"
         },
         "flags": 1,
         "description": "[Required] The numerical data quality metric to calculate."
       },
       "dataType": {
         "type": {
-          "$ref": "#/1847"
+          "$ref": "#/1871"
         },
         "flags": 1,
         "description": "[Required] Specifies the data type of the metric threshold."
@@ -24433,285 +24719,6 @@
   {
     "$type": "StringLiteralType",
     "value": "OutOfBoundsRate"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1843"
-      },
-      {
-        "$ref": "#/1844"
-      },
-      {
-        "$ref": "#/1845"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Numerical"
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/1835"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DataQuality"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FeatureAttributionDriftMonitoringSignal",
-    "properties": {
-      "featureDataTypeOverride": {
-        "type": {
-          "$ref": "#/1854"
-        },
-        "flags": 0,
-        "description": "A dictionary that maps feature names to their respective data types."
-      },
-      "featureImportanceSettings": {
-        "type": {
-          "$ref": "#/1802"
-        },
-        "flags": 1,
-        "description": "[Required] The settings for computing feature importance."
-      },
-      "metricThreshold": {
-        "type": {
-          "$ref": "#/1855"
-        },
-        "flags": 1,
-        "description": "[Required] A list of metrics to calculate and their associated thresholds."
-      },
-      "productionData": {
-        "type": {
-          "$ref": "#/1858"
-        },
-        "flags": 1,
-        "description": "[Required] The data which drift will be calculated for."
-      },
-      "referenceData": {
-        "type": {
-          "$ref": "#/1775"
-        },
-        "flags": 1,
-        "description": "[Required] The data to calculate drift against."
-      },
-      "signalType": {
-        "type": {
-          "$ref": "#/1859"
-        },
-        "flags": 1,
-        "description": "[Required] Specifies the type of signal to monitor."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Numerical"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Categorical"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1851"
-      },
-      {
-        "$ref": "#/1852"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FeatureAttributionDriftMonitoringSignalFeatureDataTypeOverride",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/1853"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FeatureAttributionMetricThreshold",
-    "properties": {
-      "metric": {
-        "type": {
-          "$ref": "#/1857"
-        },
-        "flags": 1,
-        "description": "[Required] The feature attribution metric to calculate."
-      },
-      "threshold": {
-        "type": {
-          "$ref": "#/1794"
-        },
-        "flags": 0,
-        "description": "The threshold value. If null, a default value will be set depending on the selected metric."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NormalizedDiscountedCumulativeGain"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1856"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/1775"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FeatureAttributionDrift"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PredictionDriftMonitoringSignal",
-    "properties": {
-      "featureDataTypeOverride": {
-        "type": {
-          "$ref": "#/1864"
-        },
-        "flags": 0,
-        "description": "A dictionary that maps feature names to their respective data types."
-      },
-      "metricThresholds": {
-        "type": {
-          "$ref": "#/1879"
-        },
-        "flags": 1,
-        "description": "[Required] A list of metrics to calculate and their associated thresholds."
-      },
-      "productionData": {
-        "type": {
-          "$ref": "#/1775"
-        },
-        "flags": 1,
-        "description": "[Required] The data which drift will be calculated for."
-      },
-      "referenceData": {
-        "type": {
-          "$ref": "#/1775"
-        },
-        "flags": 1,
-        "description": "[Required] The data to calculate drift against."
-      },
-      "signalType": {
-        "type": {
-          "$ref": "#/1880"
-        },
-        "flags": 1,
-        "description": "[Required] Specifies the type of signal to monitor."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Numerical"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Categorical"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1861"
-      },
-      {
-        "$ref": "#/1862"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PredictionDriftMonitoringSignalFeatureDataTypeOverride",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/1863"
-    }
-  },
-  {
-    "$type": "DiscriminatedObjectType",
-    "name": "PredictionDriftMetricThresholdBase",
-    "discriminator": "dataType",
-    "baseProperties": {
-      "threshold": {
-        "type": {
-          "$ref": "#/1794"
-        },
-        "flags": 0,
-        "description": "The threshold value. If null, a default value will be set depending on the selected metric."
-      }
-    },
-    "elements": {
-      "Categorical": {
-        "$ref": "#/1866"
-      },
-      "Numerical": {
-        "$ref": "#/1872"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CategoricalPredictionDriftMetricThreshold",
-    "properties": {
-      "metric": {
-        "type": {
-          "$ref": "#/1870"
-        },
-        "flags": 1,
-        "description": "[Required] The categorical prediction drift metric to calculate."
-      },
-      "dataType": {
-        "type": {
-          "$ref": "#/1871"
-        },
-        "flags": 1,
-        "description": "[Required] Specifies the data type of the metric threshold."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "JensenShannonDistance"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PopulationStabilityIndex"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PearsonsChiSquaredTest"
   },
   {
     "$type": "UnionType",
@@ -24732,6 +24739,285 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "Numerical"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1859"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataQuality"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureAttributionDriftMonitoringSignal",
+    "properties": {
+      "featureDataTypeOverride": {
+        "type": {
+          "$ref": "#/1878"
+        },
+        "flags": 0,
+        "description": "A dictionary that maps feature names to their respective data types."
+      },
+      "featureImportanceSettings": {
+        "type": {
+          "$ref": "#/1826"
+        },
+        "flags": 1,
+        "description": "[Required] The settings for computing feature importance."
+      },
+      "metricThreshold": {
+        "type": {
+          "$ref": "#/1879"
+        },
+        "flags": 1,
+        "description": "[Required] A list of metrics to calculate and their associated thresholds."
+      },
+      "productionData": {
+        "type": {
+          "$ref": "#/1882"
+        },
+        "flags": 1,
+        "description": "[Required] The data which drift will be calculated for."
+      },
+      "referenceData": {
+        "type": {
+          "$ref": "#/1799"
+        },
+        "flags": 1,
+        "description": "[Required] The data to calculate drift against."
+      },
+      "signalType": {
+        "type": {
+          "$ref": "#/1883"
+        },
+        "flags": 1,
+        "description": "[Required] Specifies the type of signal to monitor."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Numerical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Categorical"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1875"
+      },
+      {
+        "$ref": "#/1876"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureAttributionDriftMonitoringSignalFeatureDataTypeOverride",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1877"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureAttributionMetricThreshold",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/1881"
+        },
+        "flags": 1,
+        "description": "[Required] The feature attribution metric to calculate."
+      },
+      "threshold": {
+        "type": {
+          "$ref": "#/1818"
+        },
+        "flags": 0,
+        "description": "The threshold value. If null, a default value will be set depending on the selected metric."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NormalizedDiscountedCumulativeGain"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1880"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1799"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureAttributionDrift"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDriftMonitoringSignal",
+    "properties": {
+      "featureDataTypeOverride": {
+        "type": {
+          "$ref": "#/1888"
+        },
+        "flags": 0,
+        "description": "A dictionary that maps feature names to their respective data types."
+      },
+      "metricThresholds": {
+        "type": {
+          "$ref": "#/1903"
+        },
+        "flags": 1,
+        "description": "[Required] A list of metrics to calculate and their associated thresholds."
+      },
+      "productionData": {
+        "type": {
+          "$ref": "#/1799"
+        },
+        "flags": 1,
+        "description": "[Required] The data which drift will be calculated for."
+      },
+      "referenceData": {
+        "type": {
+          "$ref": "#/1799"
+        },
+        "flags": 1,
+        "description": "[Required] The data to calculate drift against."
+      },
+      "signalType": {
+        "type": {
+          "$ref": "#/1904"
+        },
+        "flags": 1,
+        "description": "[Required] Specifies the type of signal to monitor."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Numerical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Categorical"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1885"
+      },
+      {
+        "$ref": "#/1886"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDriftMonitoringSignalFeatureDataTypeOverride",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1887"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "PredictionDriftMetricThresholdBase",
+    "discriminator": "dataType",
+    "baseProperties": {
+      "threshold": {
+        "type": {
+          "$ref": "#/1818"
+        },
+        "flags": 0,
+        "description": "The threshold value. If null, a default value will be set depending on the selected metric."
+      }
+    },
+    "elements": {
+      "Categorical": {
+        "$ref": "#/1890"
+      },
+      "Numerical": {
+        "$ref": "#/1896"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CategoricalPredictionDriftMetricThreshold",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/1894"
+        },
+        "flags": 1,
+        "description": "[Required] The categorical prediction drift metric to calculate."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/1895"
+        },
+        "flags": 1,
+        "description": "[Required] Specifies the data type of the metric threshold."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JensenShannonDistance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PopulationStabilityIndex"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PearsonsChiSquaredTest"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1891"
+      },
+      {
+        "$ref": "#/1892"
+      },
+      {
+        "$ref": "#/1893"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "Categorical"
   },
   {
@@ -24740,14 +25026,14 @@
     "properties": {
       "metric": {
         "type": {
-          "$ref": "#/1877"
+          "$ref": "#/1901"
         },
         "flags": 1,
         "description": "[Required] The numerical prediction drift metric to calculate."
       },
       "dataType": {
         "type": {
-          "$ref": "#/1878"
+          "$ref": "#/1902"
         },
         "flags": 1,
         "description": "[Required] Specifies the data type of the metric threshold."
@@ -24774,16 +25060,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1873"
+        "$ref": "#/1897"
       },
       {
-        "$ref": "#/1874"
+        "$ref": "#/1898"
       },
       {
-        "$ref": "#/1875"
+        "$ref": "#/1899"
       },
       {
-        "$ref": "#/1876"
+        "$ref": "#/1900"
       },
       {
         "$ref": "#/2"
@@ -24797,7 +25083,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1865"
+      "$ref": "#/1889"
     }
   },
   {
@@ -24809,7 +25095,7 @@
     "name": "MonitorDefinitionSignals",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1769"
+      "$ref": "#/1793"
     }
   },
   {
@@ -24822,14 +25108,14 @@
     "properties": {
       "endpointInvocationDefinition": {
         "type": {
-          "$ref": "#/1884"
+          "$ref": "#/1908"
         },
         "flags": 1,
         "description": "[Required] Defines Schedule action definition details.\n<see href=\"TBD\" />"
       },
       "actionType": {
         "type": {
-          "$ref": "#/1885"
+          "$ref": "#/1909"
         },
         "flags": 1,
         "description": "[Required] Specifies the action type of the schedule"
@@ -24876,22 +25162,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1886"
+        "$ref": "#/1910"
       },
       {
-        "$ref": "#/1887"
+        "$ref": "#/1911"
       },
       {
-        "$ref": "#/1888"
+        "$ref": "#/1912"
       },
       {
-        "$ref": "#/1889"
+        "$ref": "#/1913"
       },
       {
-        "$ref": "#/1890"
+        "$ref": "#/1914"
       },
       {
-        "$ref": "#/1891"
+        "$ref": "#/1915"
       },
       {
         "$ref": "#/2"
@@ -24927,10 +25213,10 @@
     },
     "elements": {
       "Cron": {
-        "$ref": "#/1894"
+        "$ref": "#/1918"
       },
       "Recurrence": {
-        "$ref": "#/1896"
+        "$ref": "#/1920"
       }
     }
   },
@@ -24947,7 +25233,7 @@
       },
       "triggerType": {
         "type": {
-          "$ref": "#/1895"
+          "$ref": "#/1919"
         },
         "flags": 1,
         "description": "[Required]"
@@ -24964,7 +25250,7 @@
     "properties": {
       "frequency": {
         "type": {
-          "$ref": "#/1902"
+          "$ref": "#/1926"
         },
         "flags": 1,
         "description": "[Required] The frequency to trigger schedule."
@@ -24985,7 +25271,7 @@
       },
       "triggerType": {
         "type": {
-          "$ref": "#/1903"
+          "$ref": "#/1927"
         },
         "flags": 1,
         "description": "[Required]"
@@ -25016,19 +25302,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1897"
+        "$ref": "#/1921"
       },
       {
-        "$ref": "#/1898"
+        "$ref": "#/1922"
       },
       {
-        "$ref": "#/1899"
+        "$ref": "#/1923"
       },
       {
-        "$ref": "#/1900"
+        "$ref": "#/1924"
       },
       {
-        "$ref": "#/1901"
+        "$ref": "#/1925"
       },
       {
         "$ref": "#/2"
@@ -25059,7 +25345,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/schedules@2025-12-01",
     "body": {
-      "$ref": "#/1746"
+      "$ref": "#/1770"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -25092,21 +25378,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1907"
+          "$ref": "#/1931"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1908"
+          "$ref": "#/1932"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1910"
+          "$ref": "#/1934"
         },
         "flags": 1,
         "description": "[Required] Additional attributes of the entity."
@@ -25134,7 +25420,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1939"
+          "$ref": "#/1963"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -25161,28 +25447,28 @@
     "properties": {
       "authMode": {
         "type": {
-          "$ref": "#/1914"
+          "$ref": "#/1938"
         },
         "flags": 1,
         "description": "[Required] Specifies the authentication mode for the Serverless endpoint."
       },
       "contentSafety": {
         "type": {
-          "$ref": "#/1915"
+          "$ref": "#/1939"
         },
         "flags": 0,
         "description": "Specifies the content safety options. If omitted, the default content safety settings will be configured"
       },
       "endpointState": {
         "type": {
-          "$ref": "#/1928"
+          "$ref": "#/1952"
         },
         "flags": 2,
         "description": "The current state of the ServerlessEndpoint."
       },
       "inferenceEndpoint": {
         "type": {
-          "$ref": "#/1929"
+          "$ref": "#/1953"
         },
         "flags": 2,
         "description": "The inference uri to target when making requests against the serverless endpoint"
@@ -25196,14 +25482,14 @@
       },
       "modelSettings": {
         "type": {
-          "$ref": "#/1931"
+          "$ref": "#/1955"
         },
         "flags": 0,
         "description": "The model settings (model id) for the model being serviced on the ServerlessEndpoint."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1938"
+          "$ref": "#/1962"
         },
         "flags": 2,
         "description": "State of endpoint provisioning."
@@ -25226,13 +25512,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1911"
+        "$ref": "#/1935"
       },
       {
-        "$ref": "#/1912"
+        "$ref": "#/1936"
       },
       {
-        "$ref": "#/1913"
+        "$ref": "#/1937"
       },
       {
         "$ref": "#/2"
@@ -25245,7 +25531,7 @@
     "properties": {
       "contentSafetyStatus": {
         "type": {
-          "$ref": "#/1918"
+          "$ref": "#/1942"
         },
         "flags": 1,
         "description": "[Required] Specifies the status of content safety."
@@ -25264,10 +25550,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1916"
+        "$ref": "#/1940"
       },
       {
-        "$ref": "#/1917"
+        "$ref": "#/1941"
       },
       {
         "$ref": "#/2"
@@ -25314,31 +25600,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1919"
+        "$ref": "#/1943"
       },
       {
-        "$ref": "#/1920"
+        "$ref": "#/1944"
       },
       {
-        "$ref": "#/1921"
+        "$ref": "#/1945"
       },
       {
-        "$ref": "#/1922"
+        "$ref": "#/1946"
       },
       {
-        "$ref": "#/1923"
+        "$ref": "#/1947"
       },
       {
-        "$ref": "#/1924"
+        "$ref": "#/1948"
       },
       {
-        "$ref": "#/1925"
+        "$ref": "#/1949"
       },
       {
-        "$ref": "#/1926"
+        "$ref": "#/1950"
       },
       {
-        "$ref": "#/1927"
+        "$ref": "#/1951"
       },
       {
         "$ref": "#/2"
@@ -25351,7 +25637,7 @@
     "properties": {
       "headers": {
         "type": {
-          "$ref": "#/1930"
+          "$ref": "#/1954"
         },
         "flags": 2,
         "description": "Specifies any required headers to target this serverless endpoint."
@@ -25414,22 +25700,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1932"
+        "$ref": "#/1956"
       },
       {
-        "$ref": "#/1933"
+        "$ref": "#/1957"
       },
       {
-        "$ref": "#/1934"
+        "$ref": "#/1958"
       },
       {
-        "$ref": "#/1935"
+        "$ref": "#/1959"
       },
       {
-        "$ref": "#/1936"
+        "$ref": "#/1960"
       },
       {
-        "$ref": "#/1937"
+        "$ref": "#/1961"
       },
       {
         "$ref": "#/2"
@@ -25448,7 +25734,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2025-12-01",
     "body": {
-      "$ref": "#/1909"
+      "$ref": "#/1933"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -25481,21 +25767,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1941"
+          "$ref": "#/1965"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1942"
+          "$ref": "#/1966"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1944"
+          "$ref": "#/1968"
         },
         "flags": 2,
         "description": "[Required] Additional attributes of the entity."
@@ -25515,7 +25801,7 @@
     "properties": {
       "dataType": {
         "type": {
-          "$ref": "#/1953"
+          "$ref": "#/1977"
         },
         "flags": 0,
         "description": "Specifies type"
@@ -25536,14 +25822,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1954"
+          "$ref": "#/1978"
         },
         "flags": 0,
         "description": "The asset property dictionary."
       },
       "tags": {
         "type": {
-          "$ref": "#/1955"
+          "$ref": "#/1979"
         },
         "flags": 0,
         "description": "Tag dictionary. Tags can be added, removed, and updated."
@@ -25586,28 +25872,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1945"
+        "$ref": "#/1969"
       },
       {
-        "$ref": "#/1946"
+        "$ref": "#/1970"
       },
       {
-        "$ref": "#/1947"
+        "$ref": "#/1971"
       },
       {
-        "$ref": "#/1948"
+        "$ref": "#/1972"
       },
       {
-        "$ref": "#/1949"
+        "$ref": "#/1973"
       },
       {
-        "$ref": "#/1950"
+        "$ref": "#/1974"
       },
       {
-        "$ref": "#/1951"
+        "$ref": "#/1975"
       },
       {
-        "$ref": "#/1952"
+        "$ref": "#/1976"
       },
       {
         "$ref": "#/2"
@@ -25634,7 +25920,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2025-12-01",
     "body": {
-      "$ref": "#/1943"
+      "$ref": "#/1967"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -25652,13 +25938,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/1958"
+          "$ref": "#/1982"
         },
         "flags": 0
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/1961"
+          "$ref": "#/1985"
         },
         "flags": 0
       },
@@ -25691,7 +25977,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/1960"
+          "$ref": "#/1984"
         },
         "flags": 0
       },
@@ -25725,7 +26011,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1959"
+      "$ref": "#/1983"
     }
   },
   {
@@ -25754,7 +26040,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1957"
+      "$ref": "#/1981"
     }
   },
   {
@@ -25817,7 +26103,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1963"
+      "$ref": "#/1987"
     }
   },
   {
@@ -25826,7 +26112,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1961"
+      "$ref": "#/1985"
     }
   },
   {
@@ -25848,7 +26134,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1966"
+      "$ref": "#/1990"
     }
   },
   {
@@ -25867,13 +26153,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/1970"
+        "$ref": "#/1994"
       },
       "Databricks": {
-        "$ref": "#/1972"
+        "$ref": "#/1996"
       },
       "VirtualMachine": {
-        "$ref": "#/1974"
+        "$ref": "#/1998"
       }
     }
   },
@@ -25904,7 +26190,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1971"
+          "$ref": "#/1995"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -25928,7 +26214,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1973"
+          "$ref": "#/1997"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -25952,7 +26238,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1975"
+          "$ref": "#/1999"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -25969,7 +26255,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1969"
+      "$ref": "#/1993"
     }
   },
   {
@@ -25978,7 +26264,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/1986"
+          "$ref": "#/2010"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
@@ -26026,7 +26312,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/1985"
+          "$ref": "#/2009"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -26068,22 +26354,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1979"
+        "$ref": "#/2003"
       },
       {
-        "$ref": "#/1980"
+        "$ref": "#/2004"
       },
       {
-        "$ref": "#/1981"
+        "$ref": "#/2005"
       },
       {
-        "$ref": "#/1982"
+        "$ref": "#/2006"
       },
       {
-        "$ref": "#/1983"
+        "$ref": "#/2007"
       },
       {
-        "$ref": "#/1984"
+        "$ref": "#/2008"
       },
       {
         "$ref": "#/2"
@@ -26093,7 +26379,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1978"
+      "$ref": "#/2002"
     }
   },
   {
@@ -26102,7 +26388,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1977"
+      "$ref": "#/2001"
     }
   },
   {
@@ -26151,7 +26437,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/connections",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1988"
+      "$ref": "#/2012"
     }
   },
   {
@@ -26181,16 +26467,16 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/1992"
+        "$ref": "#/2016"
       },
       "Certificate": {
-        "$ref": "#/1994"
+        "$ref": "#/2018"
       },
       "Sas": {
-        "$ref": "#/1996"
+        "$ref": "#/2020"
       },
       "ServicePrincipal": {
-        "$ref": "#/1998"
+        "$ref": "#/2022"
       }
     }
   },
@@ -26207,7 +26493,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1993"
+          "$ref": "#/2017"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -26231,7 +26517,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1995"
+          "$ref": "#/2019"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -26255,7 +26541,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1997"
+          "$ref": "#/2021"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -26279,7 +26565,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1999"
+          "$ref": "#/2023"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -26296,10 +26582,10 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/1991"
+      "$ref": "#/2015"
     },
     "input": {
-      "$ref": "#/1990"
+      "$ref": "#/2014"
     }
   },
   {

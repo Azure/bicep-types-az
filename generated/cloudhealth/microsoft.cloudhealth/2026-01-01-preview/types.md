@@ -118,11 +118,13 @@
 * **azureResourceKind**: string {maxLength: 256}: Azure resource kind (e.g., 'functionapp'). Populated by the UI for icon rendering. Can be null if not populated.
 * **signals**: [AzureResourceSignal](#azureresourcesignal)[] {maxLength: 50}: Signals assigned to this group.
 
-## DependenciesSignalGroup
+## DependenciesSignalGroupV2
 ### Properties
-* **aggregationType**: 'Thresholds' | 'WorstOf' | string (Required): Aggregation type for child dependencies.
-* **degradedThreshold**: string: Degraded threshold for aggregating the propagated health state of child dependencies. Can be either an absolute number that is greater than 0, or a percentage between 1-100%. The entity will be considered degraded when the number of not healthy child dependents (unhealthy, degraded, unknown) is equal to or above the threshold value. Must only be set when AggregationType is 'Thresholds'.
-* **unhealthyThreshold**: string: Unhealthy threshold for aggregating the propagated health state of child dependencies. Can be either an absolute number that is greater than 0, or a percentage between 1-100%. The entity will be considered unhealthy when the number of not healthy child dependents (unhealthy, degraded, unknown) is equal to or above the threshold value. Must only be set when AggregationType is 'Thresholds'.
+* **aggregationType**: 'MaxNotHealthy' | 'MinHealthy' | 'WorstOf' | string (Required): Aggregation type for child dependencies.
+* **degradedThreshold**: int {minValue: 0}: Degraded threshold for aggregation. For MinHealthy: parent is degraded when healthy count/percentage falls to or below this value. For MaxNotHealthy: parent is degraded when not-healthy count/percentage reaches or exceeds this value. Optional — if not set, there is no degraded state (transitions directly from Healthy to Unhealthy).
+* **ignoreUnknown**: bool: If true, children with Unknown health state are excluded from aggregation calculations. Defaults to true.
+* **unhealthyThreshold**: int {minValue: 0}: Unhealthy threshold for aggregation. For MinHealthy: parent is unhealthy when healthy count/percentage falls to or below this value. For MaxNotHealthy: parent is unhealthy when not-healthy count/percentage reaches or exceeds this value. Required when aggregationType is MinHealthy or MaxNotHealthy.
+* **unit**: 'Absolute' | 'Percentage' | string: Unit type for the aggregation thresholds. Required when aggregationType is MinHealthy or MaxNotHealthy.
 
 ## DiscoveryError
 ### Properties
@@ -133,7 +135,6 @@
 ### Properties
 * **addRecommendedSignals**: 'Disabled' | 'Enabled' | string (Required): Whether to add all recommended signals to the discovered entities.
 * **authenticationSetting**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Reference to the name of the authentication setting which is used for querying Azure Resource Graph. The same authentication setting will also be assigned to any discovered entities.
-* **deletionDate**: string (ReadOnly): Date when the discovery rule was (soft-)deleted.
 * **discoverRelationships**: 'Disabled' | 'Enabled' | string (Required): Whether to create relationships between the discovered entities based on a set of built-in rules. These relationships cannot be manually deleted.
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **entityName**: string (Required, ReadOnly): Name of the entity which represents the discovery rule. Note: It might take a few minutes after creating the discovery rule until the entity is created.
@@ -171,7 +172,6 @@
 ### Properties
 * **alerts**: [EntityAlerts](#entityalerts): Alert configuration for this entity
 * **canvasPosition**: [EntityCoordinates](#entitycoordinates): Positioning of the entity on the model canvas
-* **deletionDate**: string (ReadOnly): Date when the entity was (soft-)deleted
 * **discoveredBy**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (ReadOnly): Discovered by which discovery rule. If set, the entity cannot be deleted manually.
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **healthObjective**: int {minValue: 0, maxValue: 100}: Health objective as a percentage of time the entity should be healthy.
@@ -261,7 +261,6 @@
 ## RelationshipProperties
 ### Properties
 * **childEntityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Resource name of the child entity
-* **deletionDate**: string (ReadOnly): Date when the relationship was (soft-)deleted
 * **discoveredBy**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (ReadOnly): Discovered by which discovery rule. If set, the relationship cannot be deleted manually.
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **parentEntityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Resource name of the parent entity
@@ -278,7 +277,6 @@
 
 ### Base Properties
 * **dataUnit**: string {minLength: 1, maxLength: 100}: Unit of the signal result (e.g. Bytes, MilliSeconds, Percent, Count))
-* **deletionDate**: string (ReadOnly): Date when the signal definition was (soft-)deleted
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **evaluationRules**: [EvaluationRule](#evaluationrule) (Required): Evaluation rules for the signal definition
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
@@ -319,7 +317,7 @@
 * **azureLogAnalytics**: [LogAnalyticsSignals](#loganalyticssignals): Log Analytics Signal Group
 * **azureMonitorWorkspace**: [AzureMonitorWorkspaceSignals](#azuremonitorworkspacesignals): Azure Monitor Workspace Signal Group
 * **azureResource**: [AzureResourceSignals](#azureresourcesignals): Azure Resource Signal Group
-* **dependencies**: [DependenciesSignalGroup](#dependenciessignalgroup): Settings for dependency signals to control how the health state of child entities influences the health state of the parent entity.
+* **dependencies**: [DependenciesSignalGroupV2](#dependenciessignalgroupv2): Settings for dependency signals to control how the health state of child entities influences the health state of the parent entity.
 * **external**: [ExternalSignalGroup](#externalsignalgroup) (ReadOnly): List of signals which have been externally submitted for this entity.
 
 ## SignalStatus

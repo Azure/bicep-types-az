@@ -60,7 +60,7 @@
           "$ref": "#/22"
         },
         "flags": 0,
-        "description": "Managed service identity (system assigned and/or user assigned identities)"
+        "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
@@ -361,7 +361,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
+    "name": "ManagedServiceIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/29"
@@ -507,11 +507,12 @@
   {
     "$type": "StringType",
     "minLength": 1,
-    "maxLength": 253
+    "maxLength": 63,
+    "pattern": "^[a-zA-Z0-9-]+$"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Communication/emailServices/domains"
+    "value": "Microsoft.Communication/emailServices"
   },
   {
     "$type": "StringLiteralType",
@@ -519,7 +520,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Communication/emailServices/domains",
+    "name": "Microsoft.Communication/emailServices",
     "properties": {
       "id": {
         "type": {
@@ -554,11 +555,11 @@
           "$ref": "#/48"
         },
         "flags": 0,
-        "description": "The properties of a Domains resource."
+        "description": "The properties of the service."
       },
       "tags": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -581,7 +582,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DomainProperties",
+    "name": "EmailServiceProperties",
     "properties": {
       "provisioningState": {
         "type": {
@@ -594,50 +595,8 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 2,
-        "description": "The location where the Domains resource data is stored at rest."
-      },
-      "fromSenderDomain": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "P2 sender domain that is displayed to the email recipients [RFC 5322]."
-      },
-      "mailFromSenderDomain": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "P1 sender domain that is present on the email envelope [RFC 5321]."
-      },
-      "domainManagement": {
-        "type": {
-          "$ref": "#/62"
-        },
         "flags": 1,
-        "description": "Describes how a Domains resource is being managed."
-      },
-      "verificationStates": {
-        "type": {
-          "$ref": "#/63"
-        },
-        "flags": 2,
-        "description": "List of VerificationStatusRecord"
-      },
-      "verificationRecords": {
-        "type": {
-          "$ref": "#/72"
-        },
-        "flags": 2,
-        "description": "List of DnsRecord"
-      },
-      "userEngagementTracking": {
-        "type": {
-          "$ref": "#/77"
-        },
-        "flags": 0,
-        "description": "Describes whether user engagement tracking is enabled or disabled."
+        "description": "The location where the email service stores its data at rest."
       }
     }
   },
@@ -713,246 +672,6 @@
     ]
   },
   {
-    "$type": "StringLiteralType",
-    "value": "AzureManaged"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CustomerManaged"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CustomerManagedInExchangeOnline"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/59"
-      },
-      {
-        "$ref": "#/60"
-      },
-      {
-        "$ref": "#/61"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DomainPropertiesVerificationStates",
-    "properties": {
-      "Domain": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "SPF": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DKIM": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DKIM2": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DMARC": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VerificationStatusRecord",
-    "properties": {
-      "status": {
-        "type": {
-          "$ref": "#/71"
-        },
-        "flags": 2,
-        "description": "Status of the verification operation."
-      },
-      "errorCode": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Error code. This property will only be present if the status is UnableToVerify."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotStarted"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "VerificationRequested"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "VerificationInProgress"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "VerificationFailed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Verified"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CancellationRequested"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/65"
-      },
-      {
-        "$ref": "#/66"
-      },
-      {
-        "$ref": "#/67"
-      },
-      {
-        "$ref": "#/68"
-      },
-      {
-        "$ref": "#/69"
-      },
-      {
-        "$ref": "#/70"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DomainPropertiesVerificationRecords",
-    "properties": {
-      "Domain": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "SPF": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DKIM": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DKIM2": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      },
-      "DMARC": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 0,
-        "description": "A class that represents a VerificationStatus record."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DnsRecord",
-    "properties": {
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Type of the DNS record. Example: TXT"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Name of the DNS record."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Value of the DNS record."
-      },
-      "ttl": {
-        "type": {
-          "$ref": "#/74"
-        },
-        "flags": 2,
-        "description": "Represents an expiry time in seconds to represent how long this entry can be cached by the resolver, default = 3600sec."
-      }
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/75"
-      },
-      {
-        "$ref": "#/76"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
     "$type": "ObjectType",
     "name": "TrackedResourceTags",
     "properties": {},
@@ -962,7 +681,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.Communication/emailServices/domains@2025-09-01",
+    "name": "Microsoft.Communication/emailServices@2025-09-01",
     "body": {
       "$ref": "#/47"
     },
@@ -972,12 +691,12 @@
   {
     "$type": "StringType",
     "minLength": 1,
-    "maxLength": 63,
+    "maxLength": 253,
     "pattern": "^[a-zA-Z0-9-]+$"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Communication/emailServices"
+    "value": "Microsoft.Communication/communicationServices/smtpUsernames"
   },
   {
     "$type": "StringLiteralType",
@@ -985,7 +704,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Communication/emailServices",
+    "name": "Microsoft.Communication/communicationServices/smtpUsernames",
     "properties": {
       "id": {
         "type": {
@@ -996,35 +715,132 @@
       },
       "name": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/61"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/62"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/63"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/65"
         },
         "flags": 0,
-        "description": "The properties of the service."
+        "description": "The properties of a SmtpUsername resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SmtpUsernameProperties",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The SMTP username. Could be free form or in the email address format."
+      },
+      "entraApplicationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The application Id for the linked Entra Application."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The tenant of the linked Entra Application."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Communication/communicationServices/smtpUsernames@2025-09-01",
+    "body": {
+      "$ref": "#/64"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 253
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Communication/emailServices/domains"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Communication/emailServices/domains",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The properties of a Domains resource."
       },
       "tags": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/101"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1047,11 +863,11 @@
   },
   {
     "$type": "ObjectType",
-    "name": "EmailServiceProperties",
+    "name": "DomainProperties",
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/81"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
@@ -1060,8 +876,50 @@
         "type": {
           "$ref": "#/2"
         },
+        "flags": 2,
+        "description": "The location where the Domains resource data is stored at rest."
+      },
+      "fromSenderDomain": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "P2 sender domain that is displayed to the email recipients [RFC 5322]."
+      },
+      "mailFromSenderDomain": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "P1 sender domain that is present on the email envelope [RFC 5321]."
+      },
+      "domainManagement": {
+        "type": {
+          "$ref": "#/85"
+        },
         "flags": 1,
-        "description": "The location where the email service stores its data at rest."
+        "description": "Describes how a Domains resource is being managed."
+      },
+      "verificationStates": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "List of VerificationStatusRecord"
+      },
+      "verificationRecords": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 2,
+        "description": "List of DnsRecord"
+      },
+      "userEngagementTracking": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Describes whether user engagement tracking is enabled or disabled."
       }
     }
   },
@@ -1105,14 +963,154 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/85"
+        "$ref": "#/72"
       },
       {
-        "$ref": "#/86"
+        "$ref": "#/73"
       },
       {
-        "$ref": "#/87"
+        "$ref": "#/74"
       },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureManaged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomerManaged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomerManagedInExchangeOnline"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainPropertiesVerificationStates",
+    "properties": {
+      "Domain": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "SPF": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DKIM": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DKIM2": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DMARC": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationStatusRecord",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 2,
+        "description": "Status of the verification operation."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error code. This property will only be present if the status is UnableToVerify."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VerificationRequested"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VerificationInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VerificationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Verified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CancellationRequested"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
       {
         "$ref": "#/88"
       },
@@ -1138,6 +1136,106 @@
   },
   {
     "$type": "ObjectType",
+    "name": "DomainPropertiesVerificationRecords",
+    "properties": {
+      "Domain": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "SPF": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DKIM": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DKIM2": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      },
+      "DMARC": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "A class that represents a VerificationStatus record."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DnsRecord",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the DNS record. Example: TXT"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the DNS record."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Value of the DNS record."
+      },
+      "ttl": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 2,
+        "description": "Represents an expiry time in seconds to represent how long this entry can be cached by the resolver, default = 3600sec."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
@@ -1146,9 +1244,9 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.Communication/emailServices@2025-09-01",
+    "name": "Microsoft.Communication/emailServices/domains@2025-09-01",
     "body": {
-      "$ref": "#/83"
+      "$ref": "#/70"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1174,28 +1272,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/67"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/103"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/104"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/106"
         },
         "flags": 0,
         "description": "The properties of a SenderUsername resource."
@@ -1236,7 +1334,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/116"
         },
         "flags": 2,
         "description": "Provisioning state of the resource. Unknown is the default state for Communication Services."
@@ -1283,24 +1381,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/101"
-      },
-      {
-        "$ref": "#/102"
-      },
-      {
-        "$ref": "#/103"
-      },
-      {
-        "$ref": "#/104"
-      },
-      {
-        "$ref": "#/105"
-      },
-      {
-        "$ref": "#/106"
-      },
-      {
         "$ref": "#/107"
       },
       {
@@ -1308,6 +1388,24 @@
       },
       {
         "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
       },
       {
         "$ref": "#/2"
@@ -1318,105 +1416,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Communication/emailServices/domains/senderUsernames@2025-09-01",
     "body": {
-      "$ref": "#/99"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
-  },
-  {
-    "$type": "StringType",
-    "minLength": 1,
-    "maxLength": 253,
-    "pattern": "^[a-zA-Z0-9-]+$"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Communication/communicationServices/smtpUsernames"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-09-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Communication/communicationServices/smtpUsernames",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/112"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/113"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/114"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/116"
-        },
-        "flags": 0,
-        "description": "The properties of a SmtpUsername resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/32"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SmtpUsernameProperties",
-    "properties": {
-      "username": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The SMTP username. Could be free form or in the email address format."
-      },
-      "entraApplicationId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The application Id for the linked Entra Application."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The tenant of the linked Entra Application."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Communication/communicationServices/smtpUsernames@2025-09-01",
-    "body": {
-      "$ref": "#/115"
+      "$ref": "#/105"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1442,7 +1442,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/61"
         },
         "flags": 9,
         "description": "The resource name"
@@ -1541,7 +1541,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/61"
         },
         "flags": 9,
         "description": "The resource name"

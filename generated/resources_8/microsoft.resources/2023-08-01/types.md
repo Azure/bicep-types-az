@@ -9,10 +9,10 @@
 * **apiVersion**: '2023-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-* **location**: string (Required): The location of the ACI and the storage account for the deployment script.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
-* **tags**: [DeploymentScriptTags](#deploymentscripttags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant): The resource type
 
 ### AzureCliScript
@@ -34,6 +34,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [LogProperties](#logproperties) (ReadOnly): Script log properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Resources/deploymentScripts/logs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureCliScriptProperties
@@ -92,11 +93,6 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## DeploymentScriptTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
@@ -108,11 +104,11 @@
 * **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
-## ErrorResponse
+## ErrorDetail
 ### Properties
 * **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
 * **code**: string (ReadOnly): The error code.
-* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
 
@@ -122,7 +118,7 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
+* **tenantId**: string (ReadOnly): The tenant id of the managed identity.
 * **type**: 'UserAssigned' | string: Type of the managed identity.
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
 
@@ -135,7 +131,7 @@
 ### Properties
 * **containerInstanceId**: string (ReadOnly): ACI resource Id.
 * **endTime**: string (ReadOnly): End time of the script execution.
-* **error**: [ErrorResponse](#errorresponse): Error that is relayed from the script execution.
+* **error**: [ErrorDetail](#errordetail): Error that is relayed from the script execution.
 * **expirationTime**: string (ReadOnly): Time the deployment script resource will expire.
 * **startTime**: string (ReadOnly): Start time of the script execution.
 * **storageAccountId**: string (ReadOnly): Storage account resource Id.
@@ -153,6 +149,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UserAssignedIdentity
 ### Properties

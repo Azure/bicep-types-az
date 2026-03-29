@@ -5,13 +5,14 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Etag identifies change in the resource.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
-* **location**: string: The resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [FactoryTags](#factorytags): Resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/adfcdcs@2018-06-01
@@ -19,10 +20,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ChangeDataCapture](#changedatacapture) (Required): Properties of the change data capture.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/credentials@2018-06-01
@@ -30,10 +32,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Credential](#credential) (Required): Properties of credentials.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
@@ -41,10 +44,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataFlow](#dataflow) (Required): Data flow properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/datasets@2018-06-01
@@ -52,10 +56,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Dataset](#dataset) (Required): Dataset properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/globalParameters@2018-06-01
@@ -63,10 +68,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [GlobalParameter](#globalparameter) (Required): Properties of the global parameter.
+* **properties**: [GlobalParameterResourceProperties](#globalparameterresourceproperties) (Required): Properties of the global parameter.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/globalParameters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
@@ -74,10 +80,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationRuntime](#integrationruntime) (Required): Integration runtime properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/linkedservices@2018-06-01
@@ -85,10 +92,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedService](#linkedservice) (Required): Properties of linked service.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01
@@ -96,10 +104,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedVirtualNetwork](#managedvirtualnetwork) (Required): Managed Virtual Network properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01
@@ -107,10 +116,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedPrivateEndpoint](#managedprivateendpoint) (Required): Managed private endpoint properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/pipelines@2018-06-01
@@ -118,10 +128,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Pipeline](#pipeline) (Required): Properties of the pipeline.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01
@@ -133,6 +144,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection](#privatelinkconnectionapprovalrequestorremoteprivateendpointconnection): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
@@ -140,10 +152,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Trigger](#trigger) (Required): Properties of the trigger.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAuthKeys (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
@@ -2600,9 +2613,14 @@
 ## DataFlowReference
 ### Properties
 * **datasetParameters**: any: Reference data flow parameters from dataset.
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Data flow parameters
+* **parameters**: [DataFlowReferenceParameters](#dataflowreferenceparameters): Data flow parameters
 * **referenceName**: string (Required): Reference data flow name.
 * **type**: 'DataFlowReference' | string (Required): Data flow reference type.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DataFlowReferenceParameters
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -2661,7 +2679,7 @@
 * **description**: string: Dataset description.
 * **folder**: [DatasetFolder](#datasetfolder): The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
 * **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for dataset.
+* **parameters**: [DatasetParameters](#datasetparameters): Parameters for dataset.
 * **schema**: any: Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
 * **structure**: any: Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
 
@@ -3276,11 +3294,21 @@
 * **type**: 'SftpLocation' (Required): Type of dataset storage location.
 
 
+## DatasetParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
 ## DatasetReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for dataset.
+* **parameters**: [DatasetReferenceParameters](#datasetreferenceparameters): Arguments for dataset.
 * **referenceName**: string (Required): Reference dataset name.
 * **type**: 'DatasetReference' | string (Required): Dataset reference type.
+
+## DatasetReferenceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DatasetStorageFormat
 * **Discriminator**: type
@@ -3405,6 +3433,16 @@
 * **size**: string {minLength: 8, maxLength: 15, pattern: "((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))"}: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
 * **type**: 'TumblingWindowTriggerDependencyReference' (Required): The type of dependency reference.
 
+
+## DictionaryOfSsisExecutionParameter
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
+
+## DictionaryOfSsisExecutionParameter
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
 
 ## DistcpSettings
 ### Properties
@@ -3560,9 +3598,14 @@
 
 ## ExecutePipelineActivityTypeProperties
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Pipeline parameters.
+* **parameters**: [ExecutePipelineActivityTypePropertiesParameters](#executepipelineactivitytypepropertiesparameters): Pipeline parameters.
 * **pipeline**: [PipelineReference](#pipelinereference) (Required): Pipeline reference.
 * **waitOnCompletion**: bool: Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+
+## ExecutePipelineActivityTypePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ExecutePowerQueryActivityTypeProperties
 ### Properties
@@ -3601,7 +3644,7 @@
 ## ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
+* **Additional Properties Type**: [DictionaryOfSsisExecutionParameter](#dictionaryofssisexecutionparameter)
 
 ## ExecuteSsisPackageActivityTypePropertiesPackageParameters
 ### Properties
@@ -3611,7 +3654,7 @@
 ## ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
+* **Additional Properties Type**: [DictionaryOfSsisExecutionParameter](#dictionaryofssisexecutionparameter)
 
 ## ExecuteSsisPackageActivityTypePropertiesProjectParameters
 ### Properties
@@ -3640,18 +3683,28 @@
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client tenant id of the identity.
 * **type**: 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentitiesDefinitionSpecification](#userassignedidentitiesdefinitionspecification): List of user assigned identities for the factory.
+* **userAssignedIdentities**: [FactoryIdentityUserAssignedIdentities](#factoryidentityuserassignedidentities): List of user assigned identities for the factory.
+
+## FactoryIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## FactoryProperties
 ### Properties
 * **createTime**: string (ReadOnly): Time the factory was created in ISO8601 format.
 * **encryption**: [EncryptionConfiguration](#encryptionconfiguration): Properties to enable Customer Managed Key for the factory.
-* **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): List of parameters for factory.
+* **globalParameters**: [FactoryPropertiesGlobalParameters](#factorypropertiesglobalparameters): List of parameters for factory.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the data factory.
 * **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview information of the factory.
 * **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Git repo information of the factory.
 * **version**: string (ReadOnly): Version of the factory.
+
+## FactoryPropertiesGlobalParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [GlobalParameterSpecification](#globalparameterspecification)
 
 ## FactoryRepoConfiguration
 * **Discriminator**: type
@@ -3677,6 +3730,11 @@
 * **tenantId**: string: VSTS tenant id.
 * **type**: 'FactoryVSTSConfiguration' (Required): Type of repo configuration.
 
+
+## FactoryTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## FailActivityTypeProperties
 ### Properties
@@ -3783,12 +3841,7 @@
 * **byoaSecretAkvUrl**: string: Bring your own app client secret AKV URL.
 * **byoaSecretName**: string: Bring your own app client secret name in AKV.
 
-## GlobalParameter
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [GlobalParameterSpecification](#globalparameterspecification)
-
-## GlobalParameterDefinitionSpecification
+## GlobalParameterResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [GlobalParameterSpecification](#globalparameterspecification)
@@ -4226,9 +4279,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## IntegrationRuntimeReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for integration runtime.
+* **parameters**: [IntegrationRuntimeReferenceParameters](#integrationruntimereferenceparameters): Arguments for integration runtime.
 * **referenceName**: string (Required): Reference integration runtime name.
 * **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
+
+## IntegrationRuntimeReferenceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -4351,7 +4409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **annotations**: any[]: List of tags that can be used for describing the linked service.
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **description**: string: Linked service description.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for linked service.
+* **parameters**: [LinkedServiceParameters](#linkedserviceparameters): Parameters for linked service.
 * **version**: string: Version of the linked service.
 
 ### AmazonMWSLinkedService
@@ -4960,11 +5018,21 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **typeProperties**: [ZohoLinkedServiceTypeProperties](#zoholinkedservicetypeproperties) (Required): Zoho server linked service properties.
 
 
+## LinkedServiceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
 ## LinkedServiceReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for LinkedService.
+* **parameters**: [LinkedServiceReferenceParameters](#linkedservicereferenceparameters): Arguments for LinkedService.
 * **referenceName**: string (Required): Reference LinkedService name.
 * **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
+
+## LinkedServiceReferenceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## LogLocationSettings
 ### Properties
@@ -5374,55 +5442,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **name**: string (Required): The name of the package store
 * **packageStoreLinkedService**: [EntityReference](#entityreference) (Required): The package store linked service reference.
 
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
 ## ParameterSpecification
 ### Properties
 * **defaultValue**: any: Default value of parameter.
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## ParquetDatasetTypeProperties
 ### Properties
@@ -5482,10 +5505,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **concurrency**: int {minValue: 1}: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
 * **folder**: [PipelineFolder](#pipelinefolder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): List of parameters for pipeline.
+* **parameters**: [PipelineParameters](#pipelineparameters): List of parameters for pipeline.
 * **policy**: [PipelinePolicy](#pipelinepolicy): Pipeline Policy.
 * **runDimensions**: [PipelineRunDimensions](#pipelinerundimensions): Dimensions emitted by Pipeline.
-* **variables**: [VariableDefinitionSpecification](#variabledefinitionspecification): List of variables for pipeline.
+* **variables**: [PipelineVariables](#pipelinevariables): List of variables for pipeline.
 
 ## PipelineElapsedTimeMetricPolicy
 ### Properties
@@ -5503,6 +5526,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **name**: string: The name of the folder that this Pipeline is in.
 
+## PipelineParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
 ## PipelinePolicy
 ### Properties
 * **elapsedTimeMetric**: [PipelineElapsedTimeMetricPolicy](#pipelineelapsedtimemetricpolicy): Pipeline ElapsedTime Metric Policy.
@@ -5517,6 +5545,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## PipelineVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [VariableSpecification](#variablespecification)
 
 ## PolybaseSettings
 ### Properties
@@ -5701,11 +5734,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **requestedEndTime**: string (Required): The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
 * **requestedStartTime**: string (Required): The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
 * **rerunConcurrency**: int {minValue: 1, maxValue: 50} (Required): The max number of parallel time windows (ready for execution) for which a rerun is triggered.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ResponsysLinkedServiceTypeProperties
 ### Properties
@@ -6312,16 +6340,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **packageName**: string: Name for embedded child package.
 * **packagePath**: any (Required): Path for embedded child package. Type: string (or Expression with resultType string).
 
-## SsisConnectionManager
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
-## SsisConnectionManager
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
 ## SsisExecutionCredential
 ### Properties
 * **domain**: any (Required): Domain for windows authentication. Type: string (or Expression with resultType string).
@@ -6695,6 +6713,15 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: any (Required): Reference spark job name. Expression with resultType string.
 * **type**: 'SparkJobDefinitionReference' | string (Required): Synapse spark job reference type.
 
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
 ## TeamDeskLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase): The api token for the TeamDesk source.
@@ -6797,8 +6824,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## TriggerPipelineReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Pipeline parameters.
+* **parameters**: [TriggerPipelineReferenceParameters](#triggerpipelinereferenceparameters): Pipeline parameters.
 * **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference.
+
+## TriggerPipelineReferenceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## TriggerReference
 ### Properties
@@ -6827,11 +6859,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **expression**: [Expression](#expression) (Required): An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
 * **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
-## UserAssignedIdentitiesDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## UserProperty
 ### Properties
 * **name**: string (Required): User property name.
@@ -6844,11 +6871,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **minimumSize**: any: Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
 * **sleep**: any: A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
 * **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-
-## VariableDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [VariableSpecification](#variablespecification)
 
 ## VariableSpecification
 ### Properties

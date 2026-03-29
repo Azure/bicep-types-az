@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -35,7 +35,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
       }
       {
         name: 'appgwpool1'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool1'
         properties: {
           backendAddresses: [
             {
@@ -74,7 +74,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
         name: 'appgwfip'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip'
           }
         }
       }
@@ -98,7 +98,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
         name: 'appgwipc'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet'
           }
         }
       }
@@ -112,17 +112,17 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
         name: 'appgwhl'
         properties: {
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip'
           }
           frontendPort: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp'
           }
           requireServerNameIndication: false
           sslCertificate: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert'
           }
           sslProfile: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1'
           }
           protocol: 'Https'
         }
@@ -131,10 +131,10 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
         name: 'appgwhttplistener'
         properties: {
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip'
           }
           frontendPort: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80'
           }
           protocol: 'Http'
         }
@@ -145,20 +145,20 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
         name: 'appgwrule'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool'
           }
           backendHttpSettings: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs'
           }
           entraJWTValidationConfig: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/entraJWTValidationConfigs/entraJWTValidationConfig1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/entraJWTValidationConfigs/entraJWTValidationConfig1'
           }
           httpListener: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl'
           }
           priority: 10
           rewriteRuleSet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1'
           }
           ruleType: 'Basic'
         }
@@ -238,7 +238,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2025-05-01' = {
           }
           trustedClientCertificates: [
             {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert'
             }
           ]
         }
@@ -280,7 +280,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways/privateEndpointC
   name: 'connection1'
   properties: {
     privateEndpoint: {
-      id: '/subscriptions/subId2/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
+      id: '/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
     }
     privateLinkServiceConnectionState: {
       description: 'approved it for some reason.'
@@ -421,42 +421,6 @@ resource exampleResource 'Microsoft.Network/ApplicationGatewayWebApplicationFire
         priority: 4
         ruleType: 'MatchRule'
       }
-      {
-        name: 'Rule5'
-        action: 'CAPTCHA'
-        matchConditions: [
-          {
-            matchValues: [
-              '192.168.2.0/24'
-            ]
-            matchVariables: [
-              {
-                selector: {
-                }
-                variableName: 'RemoteAddr'
-              }
-            ]
-            negationConditon: false
-            operator: 'IPMatch'
-          }
-          {
-            matchValues: [
-              'Bot'
-            ]
-            matchVariables: [
-              {
-                selector: 'UserAgent'
-                variableName: 'RequestHeaders'
-              }
-            ]
-            negationConditon: false
-            operator: 'Contains'
-          }
-        ]
-        priority: 5
-        ruleType: 'MatchRule'
-        state: 'Enabled'
-      }
     ]
     managedRules: {
       exclusions: [
@@ -538,11 +502,6 @@ resource exampleResource 'Microsoft.Network/ApplicationGatewayWebApplicationFire
                 {
                   action: 'JSChallenge'
                   ruleId: '300700'
-                  state: 'Enabled'
-                }
-                {
-                  action: 'CAPTCHA'
-                  ruleId: '300600'
                   state: 'Enabled'
                 }
               ]
@@ -633,7 +592,6 @@ resource exampleResource 'Microsoft.Network/ApplicationGatewayWebApplicationFire
       ]
     }
     policySettings: {
-      captchaCookieExpirationInMins: 100
       jsChallengeCookieExpirationInMins: 100
       logScrubbing: {
         scrubbingRules: [
@@ -679,7 +637,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     applicationRuleCollections: [
       {
         name: 'apprulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -712,10 +670,10 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
         name: 'azureFirewallIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
           }
         }
       }
@@ -723,7 +681,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     natRuleCollections: [
       {
         name: 'natrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
         properties: {
           action: {
             type: 'Dnat'
@@ -773,7 +731,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     networkRuleCollections: [
       {
         name: 'netrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -840,7 +798,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
   location: 'West US'
   properties: {
     firewallPolicy: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1'
     }
     hubIPAddresses: {
       publicIPs: {
@@ -855,7 +813,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     }
     threatIntelMode: 'Alert'
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
     }
   }
   tags: {
@@ -879,7 +837,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     applicationRuleCollections: [
       {
         name: 'apprulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -912,20 +870,18 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
         name: 'azureFirewallIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
           }
         }
       }
     ]
-    ipGroups: [
-    ]
     natRuleCollections: [
       {
         name: 'natrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
         properties: {
           action: {
             type: 'Dnat'
@@ -975,7 +931,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     networkRuleCollections: [
       {
         name: 'netrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1044,7 +1000,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     applicationRuleCollections: [
       {
         name: 'apprulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1077,10 +1033,10 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
         name: 'azureFirewallIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
           }
         }
       }
@@ -1088,7 +1044,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     natRuleCollections: [
       {
         name: 'natrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
         properties: {
           action: {
             type: 'Dnat'
@@ -1138,7 +1094,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     networkRuleCollections: [
       {
         name: 'netrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1207,7 +1163,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     applicationRuleCollections: [
       {
         name: 'apprulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1240,10 +1196,10 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
         name: 'azureFirewallIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
           }
         }
       }
@@ -1252,17 +1208,17 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
       name: 'azureFirewallMgmtIpConfiguration'
       properties: {
         publicIPAddress: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName'
         }
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet'
         }
       }
     }
     natRuleCollections: [
       {
         name: 'natrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
         properties: {
           action: {
             type: 'Dnat'
@@ -1312,7 +1268,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     networkRuleCollections: [
       {
         name: 'netrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1381,7 +1337,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     applicationRuleCollections: [
       {
         name: 'apprulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/applicationRuleCollections/apprulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1414,10 +1370,10 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
         name: 'azureFirewallIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet'
           }
         }
       }
@@ -1425,7 +1381,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     natRuleCollections: [
       {
         name: 'natrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/natRuleCollections/natrulecoll'
         properties: {
           action: {
             type: 'Dnat'
@@ -1475,7 +1431,7 @@ resource exampleResource 'Microsoft.Network/azureFirewalls@2025-05-01' = {
     networkRuleCollections: [
       {
         name: 'netrulecoll'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall/networkRuleCollections/netrulecoll'
         properties: {
           action: {
             type: 'Deny'
@@ -1550,10 +1506,10 @@ resource exampleResource 'Microsoft.Network/bastionHosts@2025-05-01' = {
         name: 'bastionHostIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
           }
         }
       }
@@ -1573,7 +1529,7 @@ resource exampleResource 'Microsoft.Network/bastionHosts@2025-05-01' = {
         name: 'bastionHostIpConfiguration'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
           }
         }
       }
@@ -1592,10 +1548,10 @@ resource exampleResource 'Microsoft.Network/bastionHosts@2025-05-01' = {
         name: 'bastionHostIpConfiguration'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet'
           }
         }
       }
@@ -1619,7 +1575,7 @@ resource exampleResource 'Microsoft.Network/bastionHosts@2025-05-01' = {
       ]
     }
     virtualNetwork: {
-      id: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/vnet2'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/vnet2'
     }
   }
 }
@@ -1660,29 +1616,29 @@ resource exampleResource 'Microsoft.Network/connections@2025-05-01' = {
     dpdTimeoutSeconds: 30
     egressNatRules: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule2'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule2'
       }
     ]
     enableBgp: false
     gatewayCustomBgpIpAddresses: [
       {
         customBgpIpAddress: '169.254.21.1'
-        ipConfigurationId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/default'
+        ipConfigurationId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/default'
       }
       {
         customBgpIpAddress: '169.254.21.3'
-        ipConfigurationId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/ActiveActive'
+        ipConfigurationId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/ActiveActive'
       }
     ]
     ingressNatRules: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule1'
       }
     ]
     ipsecPolicies: [
     ]
     localNetworkGateway2: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw'
       location: 'centralus'
       properties: {
         gatewayIpAddress: 'x.x.x.x'
@@ -1711,7 +1667,7 @@ resource exampleResource 'Microsoft.Network/connections@2025-05-01' = {
     ]
     usePolicyBasedTrafficSelectors: false
     virtualNetworkGateway1: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw'
       location: 'centralus'
       properties: {
         activeActive: false
@@ -1725,14 +1681,14 @@ resource exampleResource 'Microsoft.Network/connections@2025-05-01' = {
         ipConfigurations: [
           {
             name: 'gwipconfig1'
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1'
             properties: {
               privateIPAllocationMethod: 'Dynamic'
               publicIPAddress: {
-                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
+                id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
               }
               subnet: {
-                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
+                id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
               }
             }
           }
@@ -1914,7 +1870,7 @@ resource exampleResource 'Microsoft.Network/expressRouteCircuits@2025-05-01' = {
     bandwidthInGbps: 10
     enableDirectPortRateLimit: false
     expressRoutePort: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName'
     }
   }
   sku: {
@@ -1964,13 +1920,13 @@ resource exampleResource 'Microsoft.Network/expressRouteCircuits/peerings/connec
     addressPrefix: '10.0.0.0/29'
     authorizationKey: '946a1918-b7a2-4917-b43c-8c4cdaee006a'
     expressRouteCircuitPeering: {
-      id: '/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering'
     }
     ipv6CircuitConnectionConfig: {
       addressPrefix: 'aa:bb::/125'
     }
     peerExpressRouteCircuitPeering: {
-      id: '/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering'
+      id: '/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering'
     }
   }
 }
@@ -2023,7 +1979,7 @@ resource exampleResource 'Microsoft.Network/expressRouteGateways@2025-05-01' = {
       }
     }
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName'
     }
   }
 }
@@ -2037,32 +1993,32 @@ resource exampleResource 'Microsoft.Network/expressRouteGateways/expressRouteCon
   parent: parentResource 
   name: 'example'
   name: 'connectionName'
-  id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName'
   properties: {
     authorizationKey: 'authorizationKey'
     expressRouteCircuitPeering: {
-      id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering'
     }
     routingConfiguration: {
       associatedRouteTable: {
-        id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable1'
       }
       inboundRouteMap: {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap1'
       }
       outboundRouteMap: {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap2'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap2'
       }
       propagatedRouteTables: {
         ids: [
           {
-            id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable1'
           }
           {
-            id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable2'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable2'
           }
           {
-            id: '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable3'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualHubs/hub1/hubRouteTables/hubRouteTable3'
           }
         ]
         labels: [
@@ -2153,19 +2109,19 @@ resource exampleResource 'Microsoft.Network/firewallPolicies@2025-05-01' = {
       isEnabled: true
       logAnalyticsResources: {
         defaultWorkspaceId: {
-          id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace'
         }
         workspaces: [
           {
             region: 'westus'
             workspaceId: {
-              id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1'
             }
           }
           {
             region: 'eastus'
             workspaceId: {
-              id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2'
             }
           }
         ]
@@ -2198,7 +2154,7 @@ resource exampleResource 'Microsoft.Network/firewallPolicies@2025-05-01' = {
         ]
       }
       mode: 'Alert'
-      profile: 'Core'
+      profile: 'Balanced'
     }
     sku: {
       tier: 'Premium'
@@ -2260,19 +2216,19 @@ resource exampleResource 'Microsoft.Network/firewallPolicies/firewallPolicyDraft
       isEnabled: true
       logAnalyticsResources: {
         defaultWorkspaceId: {
-          id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace'
         }
         workspaces: [
           {
             region: 'westus'
             workspaceId: {
-              id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1'
             }
           }
           {
             region: 'eastus'
             workspaceId: {
-              id: '/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2'
             }
           }
         ]
@@ -2477,7 +2433,7 @@ resource exampleResource 'Microsoft.Network/firewallPolicies/ruleCollectionGroup
           {
             name: 'network-1'
             destinationIpGroups: [
-              '/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2'
+              '/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/resourceGroups/rg1/ipGroups/ipGroups2'
             ]
             destinationPorts: [
               '*'
@@ -2487,7 +2443,7 @@ resource exampleResource 'Microsoft.Network/firewallPolicies/ruleCollectionGroup
             ]
             ruleType: 'NetworkRule'
             sourceIpGroups: [
-              '/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1'
+              '/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/resourceGroups/rg1/ipGroups/ipGroups1'
             ]
           }
         ]
@@ -2607,7 +2563,7 @@ resource exampleResource 'Microsoft.Network/IpAllocations@2025-05-01' = {
   properties: {
     type: 'Hypernet'
     allocationTags: {
-      VNetID: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1'
+      VNetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1'
     }
     prefix: '3.2.5.0/24'
   }
@@ -2654,7 +2610,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -2669,7 +2625,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           enableFloatingIP: true
           enableTcpReset: false
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -2682,19 +2638,19 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: true
           enableTcpReset: false
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -2736,7 +2692,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
         zones: [
@@ -2753,7 +2709,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           backendPort: 3389
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -2766,18 +2722,18 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -2823,10 +2779,10 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           gatewayLoadBalancer: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb-provider'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb-provider'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -2840,7 +2796,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           backendPort: 3389
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -2853,18 +2809,18 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -2924,7 +2880,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -2937,19 +2893,19 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         properties: {
           backendAddressPools: [
             {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
             }
           ]
           backendPort: 0
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 0
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'All'
         }
@@ -3000,7 +2956,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -3015,22 +2971,22 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           }
           backendAddressPools: [
             {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb1'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb1'
             }
             {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb2'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb2'
             }
           ]
           backendPort: 0
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 0
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'All'
         }
@@ -3073,7 +3029,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
               name: 'regional-lb1-address'
               properties: {
                 loadBalancerFrontendIPConfiguration: {
-                  id: '/subscriptions/subid/resourceGroups/regional-lb-rg1/providers/Microsoft.Network/loadBalancers/regional-lb/frontendIPConfigurations/fe-rlb'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/regional-lb-rg1/providers/Microsoft.Network/loadBalancers/regional-lb/frontendIPConfigurations/fe-rlb'
                 }
               }
             }
@@ -3086,7 +3042,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -3096,18 +3052,18 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: false
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -3145,11 +3101,11 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
     frontendIPConfigurations: [
       {
         name: 'test'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
         properties: {
           privateIPAllocationMethod: 'Dynamic'
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet'
           }
         }
         zones: [
@@ -3159,13 +3115,13 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
     inboundNatPools: [
       {
         name: 'test'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/inboundNatPools/test'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/inboundNatPools/test'
         properties: {
           backendPort: 8888
           enableFloatingIP: true
           enableTcpReset: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
           }
           frontendPortRangeEnd: 8085
           frontendPortRangeStart: 8080
@@ -3207,7 +3163,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip'
           }
         }
       }
@@ -3221,7 +3177,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           backendPort: 3389
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -3234,19 +3190,19 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           disableOutboundSnat: true
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -3257,11 +3213,11 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rule1'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           frontendIPConfigurations: [
             {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
             }
           ]
           protocol: 'All'
@@ -3306,7 +3262,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -3320,7 +3276,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           backendPort: 3389
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -3333,18 +3289,18 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -3384,7 +3340,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         properties: {
           syncMode: 'Automatic'
           virtualNetwork: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
           }
         }
       }
@@ -3394,7 +3350,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'fe-lb'
         properties: {
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
@@ -3408,7 +3364,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
           backendPort: 3389
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 3389
           idleTimeoutInMinutes: 15
@@ -3421,18 +3377,18 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2025-05-01' = {
         name: 'rulelb'
         properties: {
           backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
           }
           backendPort: 80
           enableFloatingIP: true
           frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
           }
           frontendPort: 80
           idleTimeoutInMinutes: 15
           loadDistribution: 'Default'
           probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
           }
           protocol: 'Tcp'
         }
@@ -3474,7 +3430,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers/backendAddressPools@20
         properties: {
           ipAddress: '10.0.0.4'
           virtualNetwork: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
           }
         }
       }
@@ -3483,7 +3439,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers/backendAddressPools@20
         properties: {
           ipAddress: '10.0.0.5'
           virtualNetwork: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb'
           }
         }
       }
@@ -3504,7 +3460,7 @@ resource exampleResource 'Microsoft.Network/loadBalancers/inboundNatRules@2025-0
     enableFloatingIP: false
     enableTcpReset: false
     frontendIPConfiguration: {
-      id: '/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1'
     }
     frontendPort: 3390
     idleTimeoutInMinutes: 4
@@ -3542,12 +3498,12 @@ resource exampleResource 'Microsoft.Network/natGateways@2025-05-01' = {
   properties: {
     publicIpAddresses: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
       }
     ]
     publicIpPrefixes: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
       }
     ]
   }
@@ -3565,16 +3521,16 @@ resource exampleResource 'Microsoft.Network/natGateways@2025-05-01' = {
   properties: {
     publicIpAddresses: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
       }
     ]
     publicIpPrefixes: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
       }
     ]
     serviceGateway: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/serviceGateways/SG1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/serviceGateways/SG1'
     }
   }
   sku: {
@@ -3591,12 +3547,12 @@ resource exampleResource 'Microsoft.Network/natGateways@2025-05-01' = {
   properties: {
     publicIpAddresses: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1'
       }
     ]
     publicIpPrefixes: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1'
       }
     ]
   }
@@ -3621,10 +3577,10 @@ resource exampleResource 'Microsoft.Network/networkInterfaces@2025-05-01' = {
         name: 'ipconfig1'
         properties: {
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
           }
         }
       }
@@ -3651,13 +3607,13 @@ resource exampleResource 'Microsoft.Network/networkInterfaces@2025-05-01' = {
         name: 'ipconfig1'
         properties: {
           gatewayLoadBalancer: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb-provider'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb-provider'
           }
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
           }
         }
       }
@@ -3675,7 +3631,7 @@ resource exampleResource 'Microsoft.Network/networkInterfaces/tapConfigurations@
   name: 'example'
   properties: {
     virtualNetworkTap: {
-      id: '/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap'
     }
   }
 }
@@ -3683,12 +3639,12 @@ resource exampleResource 'Microsoft.Network/networkInterfaces/tapConfigurations@
 
 ## microsoft.network/networkmanagerconnections
 
-Create or Update Subscription Network Manager Connection
+Create or Update Management Group Network Manager Connection
 ```bicep
 resource exampleResource 'Microsoft.Network/networkManagerConnections@2025-05-01' = {
   name: 'example'
   properties: {
-    networkManagerId: '/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager'
+    networkManagerId: '/subscriptions/22222222-2222-2222-2222-222222222222/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager'
   }
 }
 ```
@@ -3791,7 +3747,7 @@ resource exampleResource 'Microsoft.Network/networkManagers/networkGroups/static
   parent: parentResource 
   name: 'example'
   properties: {
-    resourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1'
+    resourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualnetworks/vnet1'
   }
 }
 ```
@@ -3829,24 +3785,6 @@ resource exampleResource 'Microsoft.Network/networkManagers/routingConfiguration
 ```
 
 ## microsoft.network/networkmanagers/routingconfigurations/rulecollections/rules
-
-Create a default routing rule
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/routingConfigurations/ruleCollections/rules@2025-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'This is Sample Routing Rule'
-    destination: {
-      type: 'AddressPrefix'
-      destinationAddress: '10.0.0.0/16'
-    }
-    nextHop: {
-      nextHopType: 'VirtualNetworkGateway'
-    }
-  }
-}
-```
 
 Create an routing rule
 ```bicep
@@ -4021,7 +3959,7 @@ resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigur
     description: 'A sample policy'
     appliesToGroups: [
       {
-        networkGroupId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
+        networkGroupId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
       }
     ]
   }
@@ -4138,7 +4076,7 @@ resource exampleResource 'Microsoft.Network/networkProfiles@2025-05-01' = {
               name: 'ipconfig1'
               properties: {
                 subnet: {
-                  id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1'
                 }
               }
             }
@@ -4225,7 +4163,7 @@ resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/links@2025
   parent: parentResource 
   name: 'example'
   properties: {
-    autoApprovedRemotePerimeterResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
+    autoApprovedRemotePerimeterResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
     localInboundProfiles: [
       '*'
     ]
@@ -4294,7 +4232,7 @@ resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/resourceAs
       id: '/subscriptions/{paasSubscriptionId}/resourceGroups/{paasResourceGroupName}/providers/{providerName}/{resourceType}/{resourceName}'
     }
     profile: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp1/profiles/{profileName}'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp1/profiles/{profileName}'
     }
   }
 }
@@ -4309,7 +4247,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4381,7 +4319,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
     }
     virtualApplianceAsn: 10000
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
     }
   }
   tags: {
@@ -4397,7 +4335,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4416,7 +4354,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
         }
       }
       {
@@ -4425,7 +4363,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
         }
       }
     ]
@@ -4449,7 +4387,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4463,7 +4401,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
     ]
     internetIngressPublicIps: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/slbip'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/slbip'
       }
     ]
     nvaInterfaceConfigurations: [
@@ -4473,7 +4411,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
         }
       }
       {
@@ -4482,7 +4420,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
         }
       }
     ]
@@ -4506,7 +4444,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4567,7 +4505,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
         }
       }
       {
@@ -4576,7 +4514,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
         }
       }
     ]
@@ -4600,7 +4538,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4619,7 +4557,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
         }
       }
       {
@@ -4628,7 +4566,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
         }
       }
       {
@@ -4637,7 +4575,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'AdditionalPrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet3'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet3'
         }
       }
     ]
@@ -4661,7 +4599,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -4680,7 +4618,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PrivateNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
         }
       }
       {
@@ -4689,7 +4627,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'PublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2'
         }
       }
       {
@@ -4698,7 +4636,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
           'AdditionalPublicNic'
         ]
         subnet: {
-          id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet3'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet3'
         }
       }
     ]
@@ -4725,7 +4663,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2025-05-01'
       serviceName: 'PaloAltoNetworks.Cloudngfw/firewalls'
     }
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
     }
   }
   tags: {
@@ -4805,7 +4743,7 @@ resource exampleResource 'Microsoft.Network/networkWatchers/connectionMonitors@2
     endpoints: [
       {
         name: 'source'
-        resourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1'
+        resourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1'
       }
       {
         name: 'destination'
@@ -4989,7 +4927,7 @@ resource exampleResource 'Microsoft.Network/networkWatchers/flowLogs@2025-05-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
@@ -5002,8 +4940,8 @@ resource exampleResource 'Microsoft.Network/networkWatchers/flowLogs@2025-05-01'
     enabled: true
     enabledFilteringCriteria: 'srcIP=158.255.7.8 || dstPort=56891'
     recordTypes: 'B,E'
-    storageId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe'
-    targetResourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg'
+    storageId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe'
+    targetResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg'
   }
 }
 ```
@@ -5026,10 +4964,10 @@ resource exampleResource 'Microsoft.Network/networkWatchers/packetCaptures@2025-
     ]
     storageLocation: {
       filePath: 'D:\\capture\\pc1.cap'
-      storageId: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore'
+      storageId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore'
       storagePath: 'https://mytestaccountname.blob.core.windows.net/capture/pc1.cap'
     }
-    target: '/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1'
+    target: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1'
     timeLimitInSeconds: 100
     totalBytesPerSession: 100000
   }
@@ -5052,22 +4990,22 @@ resource exampleResource 'Microsoft.Network/p2svpnGateways@2025-05-01' = {
     p2SConnectionConfigurations: [
       {
         name: 'P2SConnectionConfig1'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1'
         properties: {
           routingConfiguration: {
             associatedRouteTable: {
-              id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
             }
             propagatedRouteTables: {
               ids: [
                 {
-                  id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
                 }
                 {
-                  id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2'
                 }
                 {
-                  id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3'
                 }
               ]
               labels: [
@@ -5089,11 +5027,11 @@ resource exampleResource 'Microsoft.Network/p2svpnGateways@2025-05-01' = {
       }
     ]
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
     }
     vpnGatewayScaleUnit: 1
     vpnServerConfiguration: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1'
     }
   }
   tags: {
@@ -5128,13 +5066,13 @@ resource exampleResource 'Microsoft.Network/privateEndpoints@2025-05-01' = {
           groupIds: [
             'groupIdFromResource'
           ]
-          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
+          privateLinkServiceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
           requestMessage: 'Please approve my connection.'
         }
       }
     ]
     subnet: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
     }
   }
 }
@@ -5148,7 +5086,7 @@ resource exampleResource 'Microsoft.Network/privateEndpoints@2025-05-01' = {
   properties: {
     applicationSecurityGroups: [
       {
-        id: '/subscriptions/subId/resourceGroups/rg1/provders/Microsoft.Network/applicationSecurityGroup/asg1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provders/Microsoft.Network/applicationSecurityGroup/asg1'
       }
     ]
     privateLinkServiceConnections: [
@@ -5157,13 +5095,13 @@ resource exampleResource 'Microsoft.Network/privateEndpoints@2025-05-01' = {
           groupIds: [
             'groupIdFromResource'
           ]
-          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
+          privateLinkServiceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
           requestMessage: 'Please approve my connection.'
         }
       }
     ]
     subnet: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
     }
   }
 }
@@ -5192,13 +5130,13 @@ resource exampleResource 'Microsoft.Network/privateEndpoints@2025-05-01' = {
           groupIds: [
             'groupIdFromResource'
           ]
-          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
+          privateLinkServiceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
           requestMessage: 'Please manually approve my connection.'
         }
       }
     ]
     subnet: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
     }
   }
 }
@@ -5215,7 +5153,7 @@ resource exampleResource 'Microsoft.Network/privateEndpoints/privateDnsZoneGroup
     privateDnsZoneConfigs: [
       {
         properties: {
-          privateDnsZoneId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com'
+          privateDnsZoneId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com'
         }
       }
     ]
@@ -5250,14 +5188,14 @@ resource exampleResource 'Microsoft.Network/privateLinkServices@2025-05-01' = {
           privateIPAddressVersion: 'IPv4'
           privateIPAllocationMethod: 'Static'
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
           }
         }
       }
     ]
     loadBalancerFrontendIpConfigurations: [
       {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
       }
     ]
     visibility: {
@@ -5281,7 +5219,7 @@ resource exampleResource 'Microsoft.Network/privateLinkServices/privateEndpointC
   name: 'testPlePeConnection'
   properties: {
     privateEndpoint: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
     }
     privateLinkServiceConnectionState: {
       description: 'approved it for some reason.'
@@ -5499,7 +5437,7 @@ resource exampleResource 'Microsoft.Network/securityPartnerProviders@2025-05-01'
   properties: {
     securityProviderName: 'ZScaler'
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1'
     }
   }
   tags: {
@@ -5531,9 +5469,9 @@ resource exampleResource 'Microsoft.Network/serviceEndpointPolicies@2025-05-01' 
           description: 'Storage Service EndpointPolicy Definition'
           service: 'Microsoft.Storage'
           serviceResources: [
-            '/subscriptions/subid1'
-            '/subscriptions/subid1/resourceGroups/storageRg'
-            '/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount'
+            '/subscriptions/00000000-0000-0000-0000-000000000000'
+            '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/storageRg'
+            '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount'
           ]
         }
       }
@@ -5575,7 +5513,7 @@ resource exampleResource 'Microsoft.Network/virtualHubs@2025-05-01' = {
     addressPrefix: '10.168.0.0/24'
     sku: 'Basic'
     virtualWan: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1'
     }
   }
   tags: {
@@ -5593,7 +5531,7 @@ resource exampleResource 'Microsoft.Network/virtualHubs/bgpConnections@2025-05-0
   name: 'example'
   properties: {
     hubVirtualNetworkConnection: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1/hubVirtualNetworkConnections/hubVnetConn1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1/hubVirtualNetworkConnections/hubVnetConn1'
     }
     peerAsn: 20000
     peerIp: '192.168.1.5'
@@ -5622,7 +5560,7 @@ resource exampleResource 'Microsoft.Network/virtualHubs/hubRouteTables@2025-05-0
           '20.0.0.0/8'
           '30.0.0.0/8'
         ]
-        nextHop: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1'
+        nextHop: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1'
         nextHopType: 'ResourceId'
       }
     ]
@@ -5640,22 +5578,22 @@ resource exampleResource 'Microsoft.Network/virtualHubs/hubVirtualNetworkConnect
   properties: {
     enableInternetSecurity: false
     remoteVirtualNetwork: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1'
     }
     routingConfiguration: {
       associatedRouteTable: {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
       }
       inboundRouteMap: {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap1'
       }
       outboundRouteMap: {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap2'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeMaps/routeMap2'
       }
       propagatedRouteTables: {
         ids: [
           {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1'
           }
         ]
         labels: [
@@ -5700,7 +5638,7 @@ resource exampleResource 'Microsoft.Network/virtualHubs/ipConfigurations@2025-05
   name: 'example'
   properties: {
     subnet: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
     }
   }
 }
@@ -5715,7 +5653,7 @@ resource exampleResource 'Microsoft.Network/virtualHubs/routeMaps@2025-05-01' = 
   name: 'example'
   properties: {
     associatedInboundConnections: [
-      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteGateways/exrGateway1/expressRouteConnections/exrConn1'
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/expressRouteGateways/exrGateway1/expressRouteConnections/exrConn1'
     ]
     associatedOutboundConnections: [
     ]
@@ -5809,14 +5747,14 @@ resource exampleResource 'Microsoft.Network/virtualHubs/routingIntent@2025-05-01
         destinations: [
           'Internet'
         ]
-        nextHop: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1'
+        nextHop: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1'
       }
       {
         name: 'PrivateTrafficPolicy'
         destinations: [
           'PrivateTraffic'
         ]
-        nextHop: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1'
+        nextHop: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1'
       }
     ]
   }
@@ -5833,7 +5771,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworkAppliances@2025-05-01'
   properties: {
     bandwidthInGbps: '100'
     subnet: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default'
     }
   }
 }
@@ -5848,7 +5786,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2025-05-01' =
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -5879,10 +5817,10 @@ resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2025-05-01' =
         properties: {
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
           }
         }
       }
@@ -5890,7 +5828,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2025-05-01' =
     natRules: [
       {
         name: 'natRule1'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule1'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule1'
         properties: {
           type: 'Static'
           externalMappings: [
@@ -5909,7 +5847,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2025-05-01' =
       }
       {
         name: 'natRule2'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule2'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/natRules/natRule2'
         properties: {
           type: 'Static'
           externalMappings: [
@@ -5980,10 +5918,10 @@ resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2025-05-01' =
         properties: {
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
           }
           subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
           }
         }
       }
@@ -6116,7 +6054,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworks@2025-05-01' = {
         {
           numberOfIpAddresses: '65536'
           pool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/nm1/ipamPools/testIpamPool'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/nm1/ipamPools/testIpamPool'
           }
         }
       ]
@@ -6129,7 +6067,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworks@2025-05-01' = {
             {
               numberOfIpAddresses: '80'
               pool: {
-                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/nm1/ipamPools/testIpamPool'
+                id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/nm1/ipamPools/testIpamPool'
               }
             }
           ]
@@ -6186,7 +6124,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworks@2025-05-01' = {
           addressPrefix: '10.0.0.0/16'
           serviceEndpointPolicies: [
             {
-              id: '/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1'
+              id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1'
             }
           ]
           serviceEndpoints: [
@@ -6300,7 +6238,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworks/subnets@2025-05-01' 
     serviceEndpoints: [
       {
         networkIdentifier: {
-          id: '/subscriptions/subid/resourceGroups/subnet-test/providers/Microsoft.Network/publicIPAddresses/test-ip'
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/subnet-test/providers/Microsoft.Network/publicIPAddresses/test-ip'
         }
         service: 'Microsoft.Storage'
       }
@@ -6317,7 +6255,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworks/subnets@2025-05-01' 
   properties: {
     addressPrefix: '10.0.0.0/16'
     serviceGateway: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/serviceGateways/SG1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/serviceGateways/SG1'
     }
   }
 }
@@ -6343,7 +6281,7 @@ resource exampleResource 'Microsoft.Network/virtualNetworkTaps@2025-05-01' = {
   location: 'centraluseuap'
   properties: {
     destinationNetworkInterfaceIPConfiguration: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1'
     }
   }
 }
@@ -6358,7 +6296,7 @@ resource exampleResource 'Microsoft.Network/virtualRouters@2025-05-01' = {
   location: 'West US'
   properties: {
     hostedGateway: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway'
     }
   }
   tags: {
@@ -6429,7 +6367,7 @@ resource exampleResource 'Microsoft.Network/vpnGateways@2025-05-01' = {
         name: 'vpnConnection1'
         properties: {
           remoteVpnSite: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1'
+            id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1'
           }
           vpnLinkConnections: [
             {
@@ -6438,13 +6376,13 @@ resource exampleResource 'Microsoft.Network/vpnGateways@2025-05-01' = {
                 connectionBandwidth: 200
                 egressNatRules: [
                   {
-                    id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03'
+                    id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03'
                   }
                 ]
                 sharedKey: 'key'
                 vpnConnectionProtocolType: 'IKEv2'
                 vpnSiteLink: {
-                  id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1'
+                  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1'
                 }
               }
             }
@@ -6475,7 +6413,7 @@ resource exampleResource 'Microsoft.Network/vpnGateways@2025-05-01' = {
       }
     ]
     virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
     }
   }
   tags: {

@@ -1235,5 +1235,5 @@
 ### Properties
 * **action**: 'Allow': The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-* **state**: 'Deprovisioning' | 'Failed' | 'NetworkSourceDeleted' | 'Provisioning' | 'Succeeded' | string: Gets the state of virtual network rule.
+* **state**: 'Deprovisioning' | 'Failed' | 'NetworkSourceDeleted' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the state of virtual network rule.
 

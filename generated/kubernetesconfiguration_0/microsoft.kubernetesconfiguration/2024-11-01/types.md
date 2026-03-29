@@ -48,7 +48,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | 'UserAssigned': The identity type.
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: The identity type.
 
 ## ExtensionPropertiesConfigurationProtectedSettings
 ### Properties

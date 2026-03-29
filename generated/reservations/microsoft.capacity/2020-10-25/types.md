@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests@2020-10-25
@@ -18,6 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [QuotaRequestProperties](#quotarequestproperties) (ReadOnly): Quota request details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## QuotaProperties
@@ -51,4 +53,13 @@
 * **resourceType**: string (ReadOnly): Resource type for which the quota check was made.
 * **subRequestId**: string (ReadOnly): Sub request ID for individual request.
 * **unit**: string: The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

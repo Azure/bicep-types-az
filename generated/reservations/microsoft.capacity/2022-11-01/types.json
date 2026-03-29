@@ -74,7 +74,7 @@
           "$ref": "#/198"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -948,6 +948,13 @@
     "$type": "ObjectType",
     "name": "ReservationResponse",
     "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "The properties associated to this reservation"
+      },
       "location": {
         "type": {
           "$ref": "#/0"
@@ -967,13 +974,6 @@
         },
         "flags": 0,
         "description": "The sku information associated to this reservation"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/88"
-        },
-        "flags": 0,
-        "description": "The properties associated to this reservation"
       },
       "kind": {
         "type": {
@@ -1070,7 +1070,7 @@
           "$ref": "#/40"
         },
         "flags": 0,
-        "description": "Quantity of the skus that are part of the reservation."
+        "description": "Quantity of the skus that are part of the reservation. Must be greater than zero."
       },
       "provisioningState": {
         "type": {
@@ -2429,6 +2429,13 @@
         "flags": 10,
         "description": "The resource api version"
       },
+      "properties": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 2,
+        "description": "The properties associated to this reservation"
+      },
       "location": {
         "type": {
           "$ref": "#/0"
@@ -2448,13 +2455,6 @@
         },
         "flags": 2,
         "description": "The sku information associated to this reservation"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/88"
-        },
-        "flags": 2,
-        "description": "The properties associated to this reservation"
       },
       "kind": {
         "type": {

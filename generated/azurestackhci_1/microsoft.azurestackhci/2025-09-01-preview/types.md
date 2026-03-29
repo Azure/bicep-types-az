@@ -583,7 +583,7 @@
 
 ## NatGatewayProperties
 ### Properties
-* **inboundNATRules**: [InboundNATRule](#inboundnatrule)[]: List of inbound NAT rules. InboundNATRules can only be set after the NAT Gateway has been associated with a vnet
+* **inboundNATRules**: [InboundNATRule](#inboundnatrule)[]: List of inbound NAT rules. InboundNATRules can only be set after the NAT Gateway has been associated with a vnet. Removed in 2026-04-01-preview; use InboundRule Child resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the public IP
 * **publicIPAddresses**: [PublicIPAddressArmReference](#publicipaddressarmreference)[]: List of public ip addresses that the gateway can use for NAT.
 * **status**: [NatGatewayStatus](#natgatewaystatus) (ReadOnly): The observed state of Nat Gateway
