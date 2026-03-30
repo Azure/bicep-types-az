@@ -1,40 +1,32 @@
 # Microsoft.Attestation
-  
+
 > [!NOTE]
-> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+> The code samples in this document are generated from TypeSpec definitions.
 
 
 ## microsoft.attestation/attestationproviders
 
-AttestationProviders_Create
+### Basic Microsoft.Attestation/attestationProviders resource
 ```bicep
 resource exampleResource 'Microsoft.Attestation/attestationProviders@2021-06-01' = {
   name: 'example'
-  location: 'East US'
+  location: 'eastus'
   properties: {
-    publicNetworkAccess: 'Enabled'
-    tpmAttestationAuthentication: 'Enabled'
-  }
-  tags: {
-    Property1: 'Value1'
-    Property2: 'Value2'
-    Property3: 'Value3'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.attestation/attestationproviders/privateendpointconnections
 
-AttestationProviderPutPrivateEndpointConnection
+### Basic Microsoft.Attestation/attestationProviders/privateEndpointConnections resource
 ```bicep
 resource exampleResource 'Microsoft.Attestation/attestationProviders/privateEndpointConnections@2021-06-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
+    // Add resource-specific properties here
   }
 }
 ```

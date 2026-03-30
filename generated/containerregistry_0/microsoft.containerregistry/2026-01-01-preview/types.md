@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the container registry.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistryProperties](#registryproperties): The properties of the container registry.
 * **sku**: [Sku](#sku) (Required): The SKU of the container registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/cacheRules@2026-01-01-preview
@@ -22,7 +22,7 @@
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the cache rule.
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheRuleProperties](#cacheruleproperties): The properties of the cache rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/cacheRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -33,7 +33,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectedRegistryProperties](#connectedregistryproperties): The properties of the connected registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/connectedRegistries' (ReadOnly, DeployTimeConstant): The resource type
@@ -45,7 +45,7 @@
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identities associated with the resource. This is used to access the KeyVault secrets.
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CredentialSetProperties](#credentialsetproperties): The properties of the credential set.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/credentialSets' (ReadOnly, DeployTimeConstant): The resource type
@@ -58,7 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the export pipeline.
 * **location**: string: The location of the export pipeline.
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExportPipelineProperties](#exportpipelineproperties): The properties of the export pipeline.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant): The resource type
@@ -71,7 +71,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the import pipeline.
 * **location**: string: The location of the import pipeline.
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ImportPipelineProperties](#importpipelineproperties): The properties of the import pipeline.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant): The resource type
@@ -82,7 +82,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 200, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArchiveProperties](#archiveproperties): The properties of the archive.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/packages/archives' (ReadOnly, DeployTimeConstant): The resource type
@@ -93,8 +93,8 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 200, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ArchiveVersionProperties](#archiveversionproperties) (ReadOnly): The properties of the archive.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArchiveVersionProperties](#archiveversionproperties): The properties of the archive.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/packages/archives/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -104,7 +104,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PipelineRunProperties](#pipelinerunproperties): The properties of a pipeline run.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/pipelineRuns' (ReadOnly, DeployTimeConstant): The resource type
@@ -120,17 +120,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/privateLinkResources@2026-01-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.ContainerRegistry/registries/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ContainerRegistry/registries/replications@2026-01-01-preview
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
@@ -138,10 +127,10 @@
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationProperties](#replicationproperties): The properties of the replication.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2026-01-01-preview
@@ -150,7 +139,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScopeMapProperties](#scopemapproperties): The properties of the scope map.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant): The resource type
@@ -161,7 +150,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TokenProperties](#tokenproperties): The properties of the token.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant): The resource type
@@ -172,12 +161,17 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [WebhookPropertiesCreateParametersOrWebhookProperties](#webhookpropertiescreateparametersorwebhookproperties): The properties that the webhook will be created with.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebhookProperties](#webhookproperties): The properties of the webhook.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
+
+## Function getCallbackConfig (Microsoft.ContainerRegistry/registries/webhooks@2026-01-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2026-01-01-preview
+* **Output**: [CallbackConfig](#callbackconfig)
 
 ## Function listCredentials (Microsoft.ContainerRegistry/registries@2026-01-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries
@@ -188,6 +182,22 @@
 * **Resource**: Microsoft.ContainerRegistry/registries/webhooks
 * **ApiVersion**: 2026-01-01-preview
 * **Output**: [EventListResult](#eventlistresult)
+
+## Function ping (Microsoft.ContainerRegistry/registries/webhooks@2026-01-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2026-01-01-preview
+* **Output**: [EventInfo](#eventinfo)
+
+## Function regenerateCredential (Microsoft.ContainerRegistry/registries@2026-01-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2026-01-01-preview
+* **Input**: [RegenerateCredentialParameters](#regeneratecredentialparameters)
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
+## Function resync (Microsoft.ContainerRegistry/registries/connectedRegistries@2026-01-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/connectedRegistries
+* **ApiVersion**: 2026-01-01-preview
+* **Output**: [ConnectedRegistry](#connectedregistry)
 
 ## ActivationProperties
 ### Properties
@@ -234,6 +244,19 @@
 * **sourceRepository**: string: Source repository pulled from upstream.
 * **targetRepository**: string: Target repository specified in docker pull command.
 Eg: docker pull myregistry.azurecr.io/{targetRepository}:{tag}
+
+## CallbackConfig
+### Properties
+* **customHeaders**: [Record](#record): Custom headers that will be added to the webhook notifications.
+* **serviceUri**: string (Required): The service URI for the webhook to post notifications.
+
+## ConnectedRegistry
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, ReadOnly): The name of the connected registry.
+* **properties**: [ConnectedRegistryProperties](#connectedregistryproperties): The properties of the connected registry.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ConnectedRegistryProperties
 ### Properties
@@ -287,6 +310,10 @@ Usually consists of a primary and an optional secondary credential.
 * **target**: [Target](#target): The target of the event.
 * **timestamp**: string: The time at which the event occurred.
 
+## EventInfo
+### Properties
+* **id**: string: The event ID.
+
 ## EventListResult
 ### Properties
 * **nextLink**: string: The URI that can be used to request the next list of events.
@@ -295,28 +322,18 @@ Usually consists of a primary and an optional secondary credential.
 ## EventRequestMessage
 ### Properties
 * **content**: [EventContent](#eventcontent): The content of the event request message.
-* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders): The headers of the event request message.
+* **headers**: [Record](#record): The headers of the event request message.
 * **method**: string: The HTTP method used to send the event request message.
 * **requestUri**: string: The URI used to send the event request message.
 * **version**: string: The HTTP message version.
 
-## EventRequestMessageHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## EventResponseMessage
 ### Properties
 * **content**: string: The content of the event response message.
-* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders): The headers of the event response message.
+* **headers**: [Record](#record): The headers of the event response message.
 * **reasonPhrase**: string: The reason phrase of the event response message.
 * **statusCode**: string: The status code of the event response message.
 * **version**: string: The HTTP message version.
-
-## EventResponseMessageHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ExportPipelineProperties
 ### Properties
@@ -347,15 +364,10 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity
+* **userAssignedIdentities**: [Record](#record): The list of user identities associated with the resource. The user identity
 dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## IdentityPropertiesUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## ImportPipelineProperties
 ### Properties
@@ -478,8 +490,8 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: ""} (Required, ReadOnly): The name of the private endpoint connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -489,12 +501,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
-
-## PrivateLinkResourceProperties
-### Properties
-* **groupId**: string (ReadOnly): The private link resource group id.
-* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
-* **requiredZoneNames**: string[]: The private link resource private link DNS zone name.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -509,6 +515,15 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 ## QuarantinePolicy
 ### Properties
 * **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RegenerateCredentialParameters
+### Properties
+* **name**: 'password' | 'password2' (Required): Specifies name of the password which should be regenerated -- password or password2.
 
 ## RegistryListCredentialsResult
 ### Properties
@@ -681,42 +696,15 @@ repositories/repository-name/metadata/write
 * **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
 * **status**: 'disabled' | 'enabled' | string: The status of the token example enabled or disabled.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## TrustPolicy
 ### Properties
 * **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
 * **type**: 'Notary' | string: The type of trust policy.
 
-## UserIdentityProperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
-## WebhookCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WebhookPropertiesCreateParametersCustomHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WebhookPropertiesCreateParametersOrWebhookProperties
+## WebhookProperties
 ### Properties
 * **actions**: ('chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string)[] (Required): The list of actions that trigger the webhook to post notifications.
-* **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-* **serviceUri**: string {sensitive} (Required, WriteOnly): The service URI for the webhook to post notifications.
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
 

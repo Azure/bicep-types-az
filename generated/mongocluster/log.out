@@ -1,20 +1,29 @@
 Generating types for 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
-(C) 2018 Microsoft Corporation.
-https://aka.ms/autorest
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+Running TypeSpec emitter for 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster'
+
+up to date, audited 887 packages in 980ms
+
+198 packages are looking for funding
+  run `npm fund` for details
+
+18 vulnerabilities (17 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+TypeSpec compiler v1.10.0
+
+- Compiling...
+✔ Compiling
+- Running @azure-tools/typespec-bicep...
+✔ @azure-tools/typespec-bicep 8ms ../../../../../../../../../var/folders/h7/1p3dybxn1t53kn8tw3t9pnb40000gn/T/_bcp_1774563853342/mongocluster/
+
+Compilation completed successfully.
+

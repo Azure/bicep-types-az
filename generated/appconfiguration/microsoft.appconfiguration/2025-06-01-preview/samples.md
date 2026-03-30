@@ -1,178 +1,101 @@
 # Microsoft.AppConfiguration
-  
+
 > [!NOTE]
-> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+> The code samples in this document are generated from TypeSpec definitions.
 
 
 ## microsoft.appconfiguration/configurationstores
 
-ConfigurationStores_Create
+### Basic Microsoft.AppConfiguration/configurationStores resource
 ```bicep
 resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
   name: 'example'
-  location: 'westus'
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    myTag: 'myTagValue'
-  }
-}
-```
-
-ConfigurationStores_Create_With_AzureFrontDoor
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
-  name: 'example'
-  location: 'westus'
+  location: 'eastus'
   properties: {
-    azureFrontDoor: {
-      resourceId: '/subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/microsoft.cdn/profiles/myAzureFrontDoorProfile'
-    }
-  }
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    myTag: 'myTagValue'
-  }
-}
-```
-
-ConfigurationStores_Create_With_Data_Plane_Proxy
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dataPlaneProxy: {
-      authenticationMode: 'Pass-through'
-      privateLinkDelegation: 'Enabled'
-    }
-  }
-  sku: {
-    name: 'Standard'
-  }
-}
-```
-
-ConfigurationStores_Create_With_Identity
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned, UserAssigned'
-    userAssignedIdentities: {
-      '/subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2': {
-      }
-    }
-  }
-  location: 'westus'
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    myTag: 'myTagValue'
-  }
-}
-```
-
-ConfigurationStores_Create_With_Local_Auth_Disabled
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dataPlaneProxy: {
-      authenticationMode: 'Pass-through'
-      privateLinkDelegation: 'Disabled'
-    }
-    disableLocalAuth: true
-  }
-  sku: {
-    name: 'Standard'
-  }
-}
-```
-
-ConfigurationStores_Create_With_Telemetry
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-06-01-preview' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    telemetry: {
-      resourceId: '/subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/microsoft.insights/components/appInsightsName'
-    }
-  }
-  sku: {
-    name: 'Standard'
-  }
-  tags: {
-    myTag: 'myTagValue'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.appconfiguration/configurationstores/keyvalues
 
-KeyValues_CreateOrUpdate
+### Basic Microsoft.AppConfiguration/configurationStores/keyValues resource
 ```bicep
 resource exampleResource 'Microsoft.AppConfiguration/configurationStores/keyValues@2025-06-01-preview' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    tags: {
-      tag1: 'tagValue1'
-      tag2: 'tagValue2'
-    }
-    value: 'myValue'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.appconfiguration/configurationstores/privateendpointconnections
 
-PrivateEndpointConnection_Update
+### Basic Microsoft.AppConfiguration/configurationStores/privateEndpointConnections resource
 ```bicep
 resource exampleResource 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2025-06-01-preview' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
+    // Add resource-specific properties here
+  }
+}
+```
+
+## microsoft.appconfiguration/configurationstores/privatelinkresources
+
+### Basic Microsoft.AppConfiguration/configurationStores/privateLinkResources resource
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores/privateLinkResources@2025-06-01-preview' = {
+  parent: parentResource
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.appconfiguration/configurationstores/replicas
 
-Replicas_Create
+### Basic Microsoft.AppConfiguration/configurationStores/replicas resource
 ```bicep
 resource exampleResource 'Microsoft.AppConfiguration/configurationStores/replicas@2025-06-01-preview' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
   location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
+  }
 }
 ```
 
 ## microsoft.appconfiguration/configurationstores/snapshots
 
-Snapshots_Create
+### Basic Microsoft.AppConfiguration/configurationStores/snapshots resource
 ```bicep
 resource exampleResource 'Microsoft.AppConfiguration/configurationStores/snapshots@2025-06-01-preview' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    filters: [
-      {
-        key: 'app1/*'
-        label: 'Production'
-      }
-    ]
-    retentionPeriod: 3600
+    // Add resource-specific properties here
+  }
+}
+```
+
+## microsoft.appconfiguration/deletedconfigurationstores
+
+### Basic Microsoft.AppConfiguration/deletedConfigurationStores resource
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/deletedConfigurationStores@2025-06-01-preview' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
   }
 }
 ```

@@ -1,154 +1,102 @@
 # Microsoft.Relay
-  
+
 > [!NOTE]
-> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+> The code samples in this document are generated from TypeSpec definitions.
 
 
 ## microsoft.relay/namespaces
 
-RelayNamespaceCreate
+### Basic Microsoft.Relay/namespaces resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces@2024-01-01' = {
   name: 'example'
-  location: 'South Central US'
-  sku: {
-    name: 'Standard'
-    tier: 'Standard'
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.relay/namespaces/authorizationrules
 
-RelayNameSpaceAuthorizationRuleCreate
+### Basic Microsoft.Relay/namespaces/authorizationRules resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces/authorizationRules@2024-01-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.relay/namespaces/hybridconnections
 
-RelayHybridConnectionCreate
+### Basic Microsoft.Relay/namespaces/hybridConnections resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections@2024-01-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    requiresClientAuthorization: true
-  }
-}
-```
-
-## microsoft.relay/namespaces/hybridconnections/authorizationrules
-
-RelayHybridConnectionAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.relay/namespaces/networkrulesets
 
-NameSpaceNetworkRuleSetCreate
+### Basic Microsoft.Relay/namespaces/networkRuleSets resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces/networkRuleSets@2024-01-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    defaultAction: 'Deny'
-    ipRules: [
-      {
-        action: 'Allow'
-        ipMask: '1.1.1.1'
-      }
-      {
-        action: 'Allow'
-        ipMask: '1.1.1.2'
-      }
-      {
-        action: 'Allow'
-        ipMask: '1.1.1.3'
-      }
-      {
-        action: 'Allow'
-        ipMask: '1.1.1.4'
-      }
-      {
-        action: 'Allow'
-        ipMask: '1.1.1.5'
-      }
-    ]
-    trustedServiceAccessEnabled: false
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.relay/namespaces/privateendpointconnections
 
-NameSpacePrivateEndPointConnectionCreate
+### Basic Microsoft.Relay/namespaces/privateEndpointConnections resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces/privateEndpointConnections@2024-01-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    privateEndpoint: {
-      id: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1'
-    }
-    privateLinkServiceConnectionState: {
-      description: 'You may pass'
-      status: 'Approved'
-    }
+    // Add resource-specific properties here
+  }
+}
+```
+
+## microsoft.relay/namespaces/privatelinkresources
+
+### Basic Microsoft.Relay/namespaces/privateLinkResources resource
+```bicep
+resource exampleResource 'Microsoft.Relay/namespaces/privateLinkResources@2024-01-01' = {
+  parent: parentResource
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.relay/namespaces/wcfrelays
 
-RelayCreate
+### Basic Microsoft.Relay/namespaces/wcfRelays resource
 ```bicep
 resource exampleResource 'Microsoft.Relay/namespaces/wcfRelays@2024-01-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    relayType: 'NetTcp'
-    requiresClientAuthorization: true
-    requiresTransportSecurity: true
-  }
-}
-```
-
-## microsoft.relay/namespaces/wcfrelays/authorizationrules
-
-RelayAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
+    // Add resource-specific properties here
   }
 }
 ```

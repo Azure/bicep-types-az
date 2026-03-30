@@ -1,16 +1,10 @@
 [
   {
-    "$type": "StringType",
-    "minLength": 3,
-    "maxLength": 63,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+    "$type": "StringType"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.SignalRService/signalR"
-  },
-  {
-    "$type": "StringType"
+    "value": "Microsoft.SignalRService/signalR/privateEndpointConnections"
   },
   {
     "$type": "StringLiteralType",
@@ -18,11 +12,11 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.SignalRService/signalR",
+    "name": "Microsoft.SignalRService/signalR/privateEndpointConnections",
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
@@ -43,275 +37,97 @@
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/3"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 0,
-        "description": "A class that describes the properties of the resource"
-      },
-      "sku": {
-        "type": {
-          "$ref": "#/157"
-        },
-        "flags": 0,
-        "description": "The billing information of the resource."
-      },
-      "kind": {
-        "type": {
-          "$ref": "#/165"
-        },
-        "flags": 0,
-        "description": "The kind of the service"
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/166"
-        },
-        "flags": 0,
-        "description": "A class represent managed identities used for request and response"
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/173"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The geo-location where the resource lives"
-      },
       "systemData": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Private endpoint connection properties"
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "SignalRProperties",
+    "name": "SystemData",
     "properties": {
-      "provisioningState": {
+      "createdBy": {
         "type": {
-          "$ref": "#/15"
-        },
-        "flags": 2,
-        "description": "Provisioning state of the resource."
-      },
-      "externalIP": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The publicly accessible IP of the resource."
-      },
-      "hostName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "FQDN of the service instance."
-      },
-      "publicPort": {
-        "type": {
-          "$ref": "#/16"
-        },
-        "flags": 2,
-        "description": "The publicly accessible port of the resource which is designed for browser/client side usage."
-      },
-      "serverPort": {
-        "type": {
-          "$ref": "#/16"
-        },
-        "flags": 2,
-        "description": "The publicly accessible port of the resource which is designed for customer server side usage."
-      },
-      "version": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Version of the resource. Probably you need the same or higher version of client SDKs."
-      },
-      "privateEndpointConnections": {
-        "type": {
-          "$ref": "#/48"
-        },
-        "flags": 2,
-        "description": "Private endpoint connections to the resource."
-      },
-      "sharedPrivateLinkResources": {
-        "type": {
-          "$ref": "#/68"
-        },
-        "flags": 2,
-        "description": "The list of shared private link resources."
-      },
-      "tls": {
-        "type": {
-          "$ref": "#/69"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "TLS settings for the resource"
+        "description": "The identity that created the resource."
       },
-      "hostNamePrefix": {
+      "createdByType": {
         "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Deprecated."
-      },
-      "features": {
-        "type": {
-          "$ref": "#/79"
+          "$ref": "#/9"
         },
         "flags": 0,
-        "description": "List of the featureFlags.\n\nFeatureFlags that are not included in the parameters for the update operation will not be modified.\nAnd the response will only include featureFlags that are explicitly set.\nWhen a featureFlag is not explicitly set, its globally default value will be used\nBut keep in mind, the default value doesn't mean \"false\". It varies in terms of different FeatureFlags."
+        "description": "The type of identity that created the resource."
       },
-      "liveTraceConfiguration": {
+      "createdAt": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Live trace configuration of a Microsoft.SignalRService resource."
+        "description": "The timestamp of resource creation (UTC)."
       },
-      "resourceLogConfiguration": {
+      "lastModifiedBy": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Resource log configuration of a Microsoft.SignalRService resource."
+        "description": "The identity that last modified the resource."
       },
-      "cors": {
+      "lastModifiedByType": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/14"
         },
         "flags": 0,
-        "description": "Cross-Origin Resource Sharing (CORS) settings."
+        "description": "The type of identity that last modified the resource."
       },
-      "serverless": {
+      "lastModifiedAt": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Serverless settings."
-      },
-      "upstream": {
-        "type": {
-          "$ref": "#/90"
-        },
-        "flags": 0,
-        "description": "The settings for the Upstream when the service is in server-less mode."
-      },
-      "networkACLs": {
-        "type": {
-          "$ref": "#/98"
-        },
-        "flags": 0,
-        "description": "Network ACLs for the resource"
-      },
-      "applicationFirewall": {
-        "type": {
-          "$ref": "#/134"
-        },
-        "flags": 0,
-        "description": "Application firewall settings for the resource"
-      },
-      "publicNetworkAccess": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Enable or disable public network access. Default to \"Enabled\".\nWhen it's Enabled, network ACLs still apply.\nWhen it's Disabled, public network access is always disabled no matter what you set in network ACLs."
-      },
-      "disableLocalAuth": {
-        "type": {
-          "$ref": "#/70"
-        },
-        "flags": 0,
-        "description": "DisableLocalAuth\nEnable or disable local auth with AccessKey\nWhen set as true, connection with AccessKey=xxx won't work."
-      },
-      "disableAadAuth": {
-        "type": {
-          "$ref": "#/70"
-        },
-        "flags": 0,
-        "description": "DisableLocalAuth\nEnable or disable aad auth\nWhen set as true, connection with AuthType=aad won't work."
-      },
-      "regionEndpointEnabled": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Enable or disable the regional endpoint. Default to \"Enabled\".\nWhen it's Disabled, new connections will not be routed to this endpoint, however existing connections will not be affected.\nThis property is replica specific. Disable the regional endpoint without replica is not allowed."
-      },
-      "resourceStopped": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Stop or start the resource.  Default to \"False\".\nWhen it's true, the data plane of the resource is shutdown.\nWhen it's false, the data plane of the resource is started."
-      },
-      "routeSettings": {
-        "type": {
-          "$ref": "#/155"
-        },
-        "flags": 0,
-        "description": "Route settings for the resource"
+        "description": "The timestamp of resource last modification (UTC)"
       }
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "Unknown"
+    "value": "User"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Succeeded"
+    "value": "Application"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Failed"
+    "value": "ManagedIdentity"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Running"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Moving"
+    "value": "Key"
   },
   {
     "$type": "UnionType",
     "elements": [
+      {
+        "$ref": "#/5"
+      },
       {
         "$ref": "#/6"
       },
@@ -322,8 +138,29 @@
         "$ref": "#/8"
       },
       {
-        "$ref": "#/9"
-      },
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
       {
         "$ref": "#/10"
       },
@@ -337,56 +174,9 @@
         "$ref": "#/13"
       },
       {
-        "$ref": "#/14"
-      },
-      {
-        "$ref": "#/2"
+        "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PrivateEndpointConnection",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 0,
-        "description": "Private endpoint connection properties"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The name of the resource"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
   },
   {
     "$type": "ObjectType",
@@ -394,28 +184,28 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/25"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/29"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "Private endpoint"
       },
       "groupIds": {
         "type": {
-          "$ref": "#/30"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Group IDs"
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/28"
         },
         "flags": 0,
         "description": "Connection state of the private endpoint connection"
@@ -462,6 +252,18 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
         "$ref": "#/19"
       },
       {
@@ -478,18 +280,6 @@
       },
       {
         "$ref": "#/24"
-      },
-      {
-        "$ref": "#/25"
-      },
-      {
-        "$ref": "#/26"
-      },
-      {
-        "$ref": "#/27"
-      },
-      {
-        "$ref": "#/2"
       }
     ]
   },
@@ -499,7 +289,7 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Full qualified Id of the private endpoint"
@@ -509,7 +299,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2"
+      "$ref": "#/0"
     }
   },
   {
@@ -518,21 +308,21 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
       },
       "description": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The reason for approval/rejection of the connection."
       },
       "actionsRequired": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "A message indicating if changes on the service provider require any updates on the consumer."
@@ -559,186 +349,84 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
         "$ref": "#/32"
-      },
-      {
-        "$ref": "#/33"
-      },
-      {
-        "$ref": "#/34"
-      },
-      {
-        "$ref": "#/35"
-      },
-      {
-        "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SignalRService/signalR/privateEndpointConnections@2025-01-01-preview",
+    "body": {
+      "$ref": "#/3"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-01-01-preview"
   },
   {
     "$type": "ObjectType",
-    "name": "SystemData",
+    "name": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources",
     "properties": {
-      "createdBy": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The identity that created the resource."
-      },
-      "createdByType": {
-        "type": {
-          "$ref": "#/42"
-        },
-        "flags": 0,
-        "description": "The type of identity that created the resource."
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource creation (UTC)."
-      },
-      "lastModifiedBy": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The identity that last modified the resource."
-      },
-      "lastModifiedByType": {
-        "type": {
-          "$ref": "#/47"
-        },
-        "flags": 0,
-        "description": "The type of identity that last modified the resource."
-      },
-      "lastModifiedAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource last modification (UTC)"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/38"
-      },
-      {
-        "$ref": "#/39"
-      },
-      {
-        "$ref": "#/40"
-      },
-      {
-        "$ref": "#/41"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/43"
-      },
-      {
-        "$ref": "#/44"
-      },
-      {
-        "$ref": "#/45"
-      },
-      {
-        "$ref": "#/46"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/17"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SharedPrivateLinkResource",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 0,
-        "description": "Describes the properties of an existing Shared Private Link Resource"
-      },
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
-        "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+        "flags": 10,
+        "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
-        "flags": 2,
-        "description": "The name of the resource"
+        "flags": 9,
+        "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/35"
         },
-        "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Describes the properties of an existing Shared Private Link Resource"
       }
     }
   },
@@ -748,42 +436,42 @@
     "properties": {
       "groupId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The group id from the provider of resource the shared private link resource is for"
       },
       "privateLinkResourceId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The resource id of the resource the shared private link resource is for"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/48"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "requestMessage": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The request message for requesting approval of the shared private link resource"
       },
       "fqdns": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/49"
         },
         "flags": 0,
         "description": "A list of FQDNs for third party private link service"
       },
       "status": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/55"
         },
         "flags": 2,
         "description": "Status of the shared private link resource"
@@ -830,41 +518,41 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/51"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/52"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/53"
+        "$ref": "#/40"
       },
       {
-        "$ref": "#/54"
+        "$ref": "#/41"
       },
       {
-        "$ref": "#/55"
+        "$ref": "#/42"
       },
       {
-        "$ref": "#/56"
+        "$ref": "#/43"
       },
       {
-        "$ref": "#/57"
+        "$ref": "#/44"
       },
       {
-        "$ref": "#/58"
+        "$ref": "#/45"
       },
       {
-        "$ref": "#/59"
+        "$ref": "#/46"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/47"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2"
+      "$ref": "#/0"
     }
   },
   {
@@ -891,6 +579,350 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2025-01-01-preview",
+    "body": {
+      "$ref": "#/37"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SignalRService/signalR"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-01-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SignalRService/signalR",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "A class that describes the properties of the resource"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "The billing information of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 0,
+        "description": "The kind of the service"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 0,
+        "description": "A class represent managed identities used for request and response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalRProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      },
+      "externalIP": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The publicly accessible IP of the resource."
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "FQDN of the service instance."
+      },
+      "publicPort": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "The publicly accessible port of the resource which is designed for browser/client side usage."
+      },
+      "serverPort": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "The publicly accessible port of the resource which is designed for customer server side usage."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the resource. Probably you need the same or higher version of client SDKs."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "Private endpoint connections to the resource."
+      },
+      "sharedPrivateLinkResources": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "The list of shared private link resources."
+      },
+      "tls": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "TLS settings for the resource"
+      },
+      "hostNamePrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Deprecated."
+      },
+      "features": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "List of the featureFlags.\n\nFeatureFlags that are not included in the parameters for the update operation will not be modified.\nAnd the response will only include featureFlags that are explicitly set.\nWhen a featureFlag is not explicitly set, its globally default value will be used\nBut keep in mind, the default value doesn't mean \"false\". It varies in terms of different FeatureFlags."
+      },
+      "liveTraceConfiguration": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Live trace configuration of a Microsoft.SignalRService resource."
+      },
+      "resourceLogConfiguration": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "Resource log configuration of a Microsoft.SignalRService resource."
+      },
+      "cors": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "Cross-Origin Resource Sharing (CORS) settings."
+      },
+      "serverless": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Serverless settings."
+      },
+      "upstream": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "The settings for the Upstream when the service is in server-less mode."
+      },
+      "networkACLs": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Network ACLs for the resource"
+      },
+      "applicationFirewall": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Application firewall settings for the resource"
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Enable or disable public network access. Default to \"Enabled\".\nWhen it's Enabled, network ACLs still apply.\nWhen it's Disabled, public network access is always disabled no matter what you set in network ACLs."
+      },
+      "disableLocalAuth": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "DisableLocalAuth\nEnable or disable local auth with AccessKey\nWhen set as true, connection with AccessKey=xxx won't work."
+      },
+      "disableAadAuth": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "DisableLocalAuth\nEnable or disable aad auth\nWhen set as true, connection with AuthType=aad won't work."
+      },
+      "regionEndpointEnabled": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Enable or disable the regional endpoint. Default to \"Enabled\".\nWhen it's Disabled, new connections will not be routed to this endpoint, however existing connections will not be affected.\nThis property is replica specific. Disable the regional endpoint without replica is not allowed."
+      },
+      "resourceStopped": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Stop or start the resource.  Default to \"False\".\nWhen it's true, the data plane of the resource is shutdown.\nWhen it's false, the data plane of the resource is started."
+      },
+      "routeSettings": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Route settings for the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
         "$ref": "#/62"
       },
       {
@@ -906,14 +938,124 @@
         "$ref": "#/66"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
       }
     ]
   },
   {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 3,
+        "description": "The name of the private endpoint connection associated with the Azure resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Private endpoint connection properties"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": ""
+  },
+  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/49"
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedPrivateLinkResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 3,
+        "description": "The name of the shared private link resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Describes the properties of an existing Shared Private Link Resource"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/76"
     }
   },
   {
@@ -922,7 +1064,7 @@
     "properties": {
       "clientCertEnabled": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "Request client certificate during TLS handshake if enabled. Not supported for free tier. Any input will be ignored for free tier."
@@ -938,21 +1080,21 @@
     "properties": {
       "flag": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/86"
         },
         "flags": 1,
         "description": "FeatureFlags is the supported features of Azure SignalR service.\n- ServiceMode: Flag for backend server for SignalR service. Values allowed: \"Default\": have your own backend server; \"Serverless\": your application doesn't have a backend server; \"Classic\": for backward compatibility. Support both Default and Serverless mode but not recommended; \"PredefinedOnly\": for future use.\n- EnableConnectivityLogs: \"true\"/\"false\", to enable/disable the connectivity log category respectively.\n- EnableMessagingLogs: \"true\"/\"false\", to enable/disable the connectivity log category respectively.\n- EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: \"true\"/\"false\", to enable/disable live trace feature."
       },
       "value": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/87"
         },
         "flags": 1,
         "description": "Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values."
       },
       "properties": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "Optional properties related to this feature."
@@ -979,19 +1121,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/72"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/73"
+        "$ref": "#/82"
       },
       {
-        "$ref": "#/74"
+        "$ref": "#/83"
       },
       {
-        "$ref": "#/75"
+        "$ref": "#/84"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/85"
       }
     ]
   },
@@ -1001,17 +1143,9 @@
     "maxLength": 128
   },
   {
-    "$type": "ObjectType",
-    "name": "SignalRFeatureProperties",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/71"
+      "$ref": "#/81"
     }
   },
   {
@@ -1020,14 +1154,14 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Indicates whether or not enable live trace.\nWhen it's set to true, live trace client can connect to the service.\nOtherwise, live trace client can't connect to the service, so that you are unable to receive any log, no matter what you configure in \"categories\".\nAvailable values: true, false.\nCase insensitive."
       },
       "categories": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/91"
         },
         "flags": 0,
         "description": "Gets or sets the list of category configurations."
@@ -1040,14 +1174,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Gets or sets the live trace category's name.\nAvailable values: ConnectivityLogs, MessagingLogs.\nCase insensitive."
       },
       "enabled": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Indicates whether or the live trace category is enabled.\nAvailable values: true, false.\nCase insensitive."
@@ -1057,7 +1191,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/81"
+      "$ref": "#/90"
     }
   },
   {
@@ -1066,7 +1200,7 @@
     "properties": {
       "categories": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/94"
         },
         "flags": 0,
         "description": "Gets or sets the list of category configurations."
@@ -1079,14 +1213,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Gets or sets the resource log category's name.\nAvailable values: ConnectivityLogs, MessagingLogs.\nCase insensitive."
       },
       "enabled": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Indicates whether or the resource log category is enabled.\nAvailable values: true, false.\nCase insensitive."
@@ -1096,7 +1230,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/84"
+      "$ref": "#/93"
     }
   },
   {
@@ -1105,7 +1239,7 @@
     "properties": {
       "allowedOrigins": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use \"*\" to allow all. If omitted, allow all by default."
@@ -1115,7 +1249,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2"
+      "$ref": "#/0"
     }
   },
   {
@@ -1124,14 +1258,14 @@
     "properties": {
       "connectionTimeoutInSeconds": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Gets or sets Client Connection Timeout. Optional to be set.\nValue in seconds.\nDefault value is 30 seconds.\nCustomer should set the timeout to a shorter period if messages are expected to be sent in shorter intervals,\nand want the client to disconnect more quickly after the last message is sent.\nYou can set the timeout to a longer period if messages are expected to be sent in longer intervals,\nand they want to keep the same client connection alive during this session.\nThe service considers the client disconnected if it hasn't received a message (including keep-alive) in this interval."
       },
       "keepAliveIntervalInSeconds": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Gets or sets the Keep-Alive Interval. Optional to set.\nValue is in seconds.\nThe default value is 15 seconds.\nCustomers should set this value to a shorter period if they want the service to send keep-alive messages more frequently,\nensuring timely checks of the connection status.\nConversely, customers can set this value to a longer period if they want the service to send keep-alive messages less frequently,\nreducing network traffic, but note that it may take longer to detect a disconnection.\nThis interval ensures that the connection is maintained by sending periodic keep-alive messages to the client."
@@ -1139,17 +1273,12 @@
     }
   },
   {
-    "$type": "IntegerType",
-    "minValue": 1,
-    "maxValue": 120
-  },
-  {
     "$type": "ObjectType",
     "name": "ServerlessUpstreamSettings",
     "properties": {
       "templates": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/105"
         },
         "flags": 0,
         "description": "Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects."
@@ -1162,35 +1291,35 @@
     "properties": {
       "hubPattern": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Gets or sets the matching pattern for hub names. If not set, it matches any hub.\nThere are 3 kind of patterns supported:\n1. \"*\", it to matches any hub name.\n2. Combine multiple hubs with \",\", for example \"hub1,hub2\", it matches \"hub1\" and \"hub2\".\n3. The single hub name, for example, \"hub1\", it matches \"hub1\"."
       },
       "eventPattern": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Gets or sets the matching pattern for event names. If not set, it matches any event.\nThere are 3 kind of patterns supported:\n1. \"*\", it to matches any event name.\n2. Combine multiple events with \",\", for example \"connect,disconnect\", it matches event \"connect\" and \"disconnect\".\n3. The single event name, for example, \"connect\", it matches \"connect\"."
       },
       "categoryPattern": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Gets or sets the matching pattern for category names. If not set, it matches any category.\nThere are 3 kind of patterns supported:\n1. \"*\", it to matches any category name.\n2. Combine multiple categories with \",\", for example \"connections,messages\", it matches category \"connections\" and \"messages\".\n3. The single category name, for example, \"connections\", it matches the category \"connections\"."
       },
       "urlTemplate": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.\nFor example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`."
       },
       "auth": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/100"
         },
         "flags": 0,
         "description": "Upstream auth settings. If not set, no auth is used for upstream messages."
@@ -1203,14 +1332,14 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/103"
         },
         "flags": 0,
         "description": "Upstream auth type enum."
       },
       "managedIdentity": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "Managed identity settings for upstream."
@@ -1229,13 +1358,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/93"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/94"
+        "$ref": "#/101"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/102"
       }
     ]
   },
@@ -1245,7 +1374,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The Resource indicating the App ID URI of the target resource.\nIt also appears in the aud (audience) claim of the issued token."
@@ -1255,7 +1384,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/91"
+      "$ref": "#/99"
     }
   },
   {
@@ -1264,28 +1393,28 @@
     "properties": {
       "defaultAction": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/109"
         },
         "flags": 0,
         "description": "Azure Networking ACL Action."
       },
       "publicNetwork": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/110"
         },
         "flags": 0,
         "description": "Network ACL"
       },
       "privateEndpoints": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "ACLs for requests from private endpoints"
       },
       "ipRules": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "IP rules for filtering public traffic"
@@ -1304,13 +1433,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/99"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/100"
+        "$ref": "#/107"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/108"
       }
     ]
   },
@@ -1320,14 +1449,14 @@
     "properties": {
       "allow": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/116"
         },
         "flags": 0,
         "description": "Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
       },
       "deny": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
@@ -1354,52 +1483,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/103"
-      },
-      {
-        "$ref": "#/104"
-      },
-      {
-        "$ref": "#/105"
-      },
-      {
-        "$ref": "#/106"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/107"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ClientConnection"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ServerConnection"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "RESTAPI"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Trace"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/109"
-      },
-      {
-        "$ref": "#/110"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/111"
@@ -1408,41 +1492,17 @@
         "$ref": "#/112"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/113"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PrivateEndpointACL",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Name of the private endpoint connection"
-      },
-      "allow": {
-        "type": {
-          "$ref": "#/121"
-        },
-        "flags": 0,
-        "description": "Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
-      },
-      "deny": {
-        "type": {
-          "$ref": "#/127"
-        },
-        "flags": 0,
-        "description": "Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
-      }
+      "$ref": "#/115"
     }
   },
   {
@@ -1465,7 +1525,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/116"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/117"
@@ -1477,14 +1537,41 @@
         "$ref": "#/119"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/120"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/120"
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointACL",
+    "properties": {
+      "allow": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
+      },
+      "deny": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the private endpoint connection"
+      }
     }
   },
   {
@@ -1507,10 +1594,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/122"
-      },
-      {
-        "$ref": "#/123"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/124"
@@ -1519,20 +1603,65 @@
         "$ref": "#/125"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/126"
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientConnection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerConnection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RESTAPI"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Trace"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/134"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/115"
+      "$ref": "#/123"
     }
   },
   {
@@ -1541,14 +1670,14 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "An IP or CIDR or ServiceTag"
       },
       "action": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "Azure Networking ACL Action."
@@ -1567,22 +1696,21 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/130"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/131"
+        "$ref": "#/138"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/139"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/129"
-    },
-    "maxLength": 30
+      "$ref": "#/137"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1590,21 +1718,21 @@
     "properties": {
       "clientConnectionCountRules": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Rules to control the client connection count"
       },
       "clientTrafficControlRules": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "Rules to control the client traffic"
       },
       "maxClientConnectionLifetimeInSeconds": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Config to control the client connection lifetime in seconds, can be set to 0 to disable the config"
@@ -1618,13 +1746,13 @@
     "baseProperties": {},
     "elements": {
       "ThrottleByJwtCustomClaimRule": {
-        "$ref": "#/136"
+        "$ref": "#/144"
       },
       "ThrottleByJwtSignatureRule": {
-        "$ref": "#/139"
+        "$ref": "#/151"
       },
       "ThrottleByUserIdRule": {
-        "$ref": "#/141"
+        "$ref": "#/158"
       }
     }
   },
@@ -1632,32 +1760,60 @@
     "$type": "ObjectType",
     "name": "ThrottleByJwtCustomClaimRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 1
+      },
       "claimName": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The name of the claim in the JWT token. The client connection with the same claim value will be aggregated. If the claim is not found in the token, the connection will be allowed."
       },
       "maxCount": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum connection count allowed for the same Jwt claim value. Clients with the same Jwt claim will get rejected if the connection count exceeds this value. Default value is 20."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/138"
-        },
-        "flags": 1
       }
     }
   },
   {
-    "$type": "IntegerType",
-    "minValue": 0,
-    "maxValue": 2147483647
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtSignatureRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtCustomClaimRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1667,20 +1823,53 @@
     "$type": "ObjectType",
     "name": "ThrottleByJwtSignatureRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1
+      },
       "maxCount": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum connection count allowed for the same JWT signature. Clients with the same JWT signature will get rejected if the connection count exceeds this value. Default value is 20."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/140"
-        },
-        "flags": 1
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtSignatureRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtSignatureRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1690,20 +1879,53 @@
     "$type": "ObjectType",
     "name": "ThrottleByUserIdRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 1
+      },
       "maxCount": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum connection count allowed for the same user ID. Clients with the same user ID will get rejected if the connection count exceeds this value. Default value is 20."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/142"
-        },
-        "flags": 1
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtSignatureRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThrottleByUserIdRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1712,9 +1934,8 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/135"
-    },
-    "maxLength": 10
+      "$ref": "#/143"
+    }
   },
   {
     "$type": "DiscriminatedObjectType",
@@ -1723,13 +1944,13 @@
     "baseProperties": {},
     "elements": {
       "TrafficThrottleByJwtCustomClaimRule": {
-        "$ref": "#/145"
+        "$ref": "#/167"
       },
       "TrafficThrottleByJwtSignatureRule": {
-        "$ref": "#/149"
+        "$ref": "#/174"
       },
       "TrafficThrottleByUserIdRule": {
-        "$ref": "#/151"
+        "$ref": "#/181"
       }
     }
   },
@@ -1737,43 +1958,67 @@
     "$type": "ObjectType",
     "name": "TrafficThrottleByJwtCustomClaimRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 1
+      },
       "claimName": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The name of the claim in the JWT token. The message bytes with the same claim value will be aggregated. If the claim is not found in the token, the rule will be skipped."
       },
       "maxInboundMessageBytes": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT claim will get disconnected if the message bytes exceeds this value. Default value is 1GB."
       },
       "aggregationWindowInSeconds": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/148"
-        },
-        "flags": 1
       }
     }
   },
   {
-    "$type": "IntegerType",
-    "minValue": 0
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtSignatureRule"
   },
   {
-    "$type": "IntegerType",
-    "minValue": 10,
-    "maxValue": 3600
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtCustomClaimRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1783,27 +2028,60 @@
     "$type": "ObjectType",
     "name": "TrafficThrottleByJwtSignatureRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 1
+      },
       "maxInboundMessageBytes": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT signature will get disconnected if the message bytes exceeds this value. Default value is 1GB."
       },
       "aggregationWindowInSeconds": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/150"
-        },
-        "flags": 1
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtSignatureRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtSignatureRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1813,27 +2091,60 @@
     "$type": "ObjectType",
     "name": "TrafficThrottleByUserIdRule",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1
+      },
       "maxInboundMessageBytes": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Maximum accumulated inbound message bytes allowed for the same user ID within a time window. Clients with the same user ID will get disconnected if the message bytes exceeds this value. Default value is 1GB."
       },
       "aggregationWindowInSeconds": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/152"
-        },
-        "flags": 1
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtSignatureRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByUserIdRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByJwtCustomClaimRule"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrafficThrottleByUserIdRule"
   },
   {
     "$type": "StringLiteralType",
@@ -1842,14 +2153,8 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
-    },
-    "maxLength": 10
-  },
-  {
-    "$type": "IntegerType",
-    "minValue": 0,
-    "maxValue": 604800
+      "$ref": "#/166"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1857,21 +2162,21 @@
     "properties": {
       "serverBalanceWeight": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Gets or sets the server balance weight.\nA higher value means a greater balance of client connections across different app server instances.\nA value of 0 distributes connections randomly, while a value of 255 ensures maximum balancing.\nThe default value is 255.\nRecommended ```255``` for multiple app servers in same size."
       },
       "connectionBalanceWeight": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Gets or sets the connection balance weight.\nA higher value means a greater balance of client connections across different server connections.\nA value of 0 distributes connections randomly, while a value of 255 ensures maximum balancing.\nThe default value is 255.\nRecommended ```255``` for all of the cases."
       },
       "latencyWeight": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Gets or sets the weight for latency-based routing.\nA higher value increases the influence of latency-based routing.\nA value of 0 disables latency-based routing entirely, while a value of 255 enables it fully.\nThe default value is 0.\nRecommended ```255``` for replicas or app servers in different regions for disaster recovery."
@@ -1879,45 +2184,40 @@
     }
   },
   {
-    "$type": "IntegerType",
-    "minValue": 0,
-    "maxValue": 255
-  },
-  {
     "$type": "ObjectType",
     "name": "ResourceSku",
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The name of the SKU. Required.\n\nAllowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2"
       },
       "tier": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "Optional tier of this particular SKU. 'Standard' or 'Free'.\n\n`Basic` is deprecated, use `Standard` instead."
       },
       "size": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Not used. Retained for future use."
       },
       "family": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Not used. Retained for future use."
       },
       "capacity": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Optional, integer. The unit count of the resource.\n1 for Free_F1/Standard_S1/Premium_P1, 100 for Premium_P2 by default.\n\nIf present, following values are allowed:\nFree_F1: 1;\nStandard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;\nPremium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;\nPremium_P2:  100,200,300,400,500,600,700,800,900,1000;"
@@ -1944,19 +2244,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/158"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/159"
+        "$ref": "#/191"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/192"
       },
       {
-        "$ref": "#/161"
+        "$ref": "#/193"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/194"
       }
     ]
   },
@@ -1972,13 +2272,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/163"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/164"
+        "$ref": "#/196"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/197"
       }
     ]
   },
@@ -1988,28 +2288,28 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "Represents the identity type: systemAssigned, userAssigned, None"
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "Get or set the user assigned identities"
       },
       "principalId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Get the principal id for the system assigned identity.\nOnly be used in response."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Get the tenant id for the system assigned identity.\nOnly be used in response"
@@ -2032,60 +2332,24 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/167"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/168"
+        "$ref": "#/200"
       },
       {
-        "$ref": "#/169"
+        "$ref": "#/201"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/202"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentityProperty",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Get the principal id for the user assigned identity"
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Get the client id for the user assigned identity"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ManagedIdentityUserAssignedIdentities",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/171"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/signalR@2025-01-01-preview",
     "body": {
-      "$ref": "#/4"
+      "$ref": "#/59"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2104,45 +2368,45 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/205"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/206"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/178"
-        },
-        "flags": 1,
-        "description": "Custom certificate properties."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 1,
+        "description": "Custom certificate properties."
       }
     }
   },
@@ -2152,28 +2416,28 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/218"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "keyVaultBaseUri": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "Base uri of the KeyVault that stores certificate."
       },
       "keyVaultSecretName": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "Certificate secret name."
       },
       "keyVaultSecretVersion": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Certificate secret version."
@@ -2220,34 +2484,34 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/179"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/180"
+        "$ref": "#/209"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/210"
       },
       {
-        "$ref": "#/182"
+        "$ref": "#/211"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/212"
       },
       {
-        "$ref": "#/184"
+        "$ref": "#/213"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/214"
       },
       {
-        "$ref": "#/186"
+        "$ref": "#/215"
       },
       {
-        "$ref": "#/187"
+        "$ref": "#/216"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/217"
       }
     ]
   },
@@ -2255,7 +2519,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/signalR/customCertificates@2025-01-01-preview",
     "body": {
-      "$ref": "#/177"
+      "$ref": "#/207"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2274,45 +2538,45 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/190"
+          "$ref": "#/220"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/221"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/193"
-        },
-        "flags": 1,
-        "description": "Properties of a custom domain."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 1,
+        "description": "Properties of a custom domain."
       }
     }
   },
@@ -2322,21 +2586,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/233"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "domainName": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The custom domain name."
       },
       "customCertificate": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/234"
         },
         "flags": 1,
         "description": "Reference to a resource."
@@ -2383,34 +2647,34 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/194"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/195"
+        "$ref": "#/224"
       },
       {
-        "$ref": "#/196"
+        "$ref": "#/225"
       },
       {
-        "$ref": "#/197"
+        "$ref": "#/226"
       },
       {
-        "$ref": "#/198"
+        "$ref": "#/227"
       },
       {
-        "$ref": "#/199"
+        "$ref": "#/228"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/229"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/230"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/231"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/232"
       }
     ]
   },
@@ -2420,7 +2684,7 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Resource ID."
@@ -2431,72 +2695,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/signalR/customDomains@2025-01-01-preview",
     "body": {
-      "$ref": "#/192"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.SignalRService/signalR/privateEndpointConnections"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-01-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.SignalRService/signalR/privateEndpointConnections",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/206"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/207"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 0,
-        "description": "Private endpoint connection properties"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.SignalRService/signalR/privateEndpointConnections@2025-01-01-preview",
-    "body": {
-      "$ref": "#/208"
+      "$ref": "#/222"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2515,7 +2714,7 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
@@ -2529,51 +2728,51 @@
       },
       "type": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/236"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/237"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
+      "systemData": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/4"
         },
-        "flags": 0
-      },
-      "sku": {
-        "type": {
-          "$ref": "#/157"
-        },
-        "flags": 0,
-        "description": "The billing information of the resource."
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/224"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
-      "systemData": {
+      "properties": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/239"
         },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "flags": 0
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "The billing information of the resource."
       }
     }
   },
@@ -2583,21 +2782,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/249"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "regionEndpointEnabled": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Enable or disable the regional endpoint. Default to \"Enabled\".\nWhen it's Disabled, new connections will not be routed to this endpoint, however existing connections will not be affected."
       },
       "resourceStopped": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Stop or start the resource.  Default to \"false\".\nWhen it's true, the data plane of the resource is shutdown.\nWhen it's false, the data plane of the resource is started."
@@ -2644,180 +2843,42 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/214"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/215"
+        "$ref": "#/240"
       },
       {
-        "$ref": "#/216"
+        "$ref": "#/241"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/242"
       },
       {
-        "$ref": "#/218"
+        "$ref": "#/243"
       },
       {
-        "$ref": "#/219"
+        "$ref": "#/244"
       },
       {
-        "$ref": "#/220"
+        "$ref": "#/245"
       },
       {
-        "$ref": "#/221"
+        "$ref": "#/246"
       },
       {
-        "$ref": "#/222"
+        "$ref": "#/247"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/248"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/signalR/replicas@2025-01-01-preview",
     "body": {
-      "$ref": "#/212"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.SignalRService/signalR/replicas/sharedPrivateLinkResources"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-01-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.SignalRService/signalR/replicas/sharedPrivateLinkResources",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/226"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/227"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 0,
-        "description": "Describes the properties of an existing Shared Private Link Resource"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.SignalRService/signalR/replicas/sharedPrivateLinkResources@2025-01-01-preview",
-    "body": {
-      "$ref": "#/228"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-01-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/230"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/231"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 0,
-        "description": "Describes the properties of an existing Shared Private Link Resource"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2025-01-01-preview",
-    "body": {
-      "$ref": "#/232"
+      "$ref": "#/238"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2828,28 +2889,28 @@
     "properties": {
       "primaryKey": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The primary access key."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The secondary access key."
       },
       "primaryConnectionString": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Connection string constructed via the primaryKey"
       },
       "secondaryConnectionString": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Connection string constructed via the secondaryKey"
@@ -2857,16 +2918,66 @@
     }
   },
   {
-    "$type": "StringType",
-    "sensitive": true
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.SignalRService/signalR",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/234"
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "The type of access key."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Salt"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.SignalRService/signalR",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/251"
+    },
+    "input": {
+      "$ref": "#/253"
     }
   }
 ]

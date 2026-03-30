@@ -42,9 +42,30 @@
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
+      "systemData": {
         "type": {
           "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
         },
         "flags": 1,
         "description": "Redis cache properties."
@@ -54,247 +75,87 @@
           "$ref": "#/79"
         },
         "flags": 0,
-        "description": "A list of availability zones denoting where the resource needs to come from."
+        "description": "The availability zones."
       },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The geo-location where the resource lives"
-      },
-      "tags": {
+      "identity": {
         "type": {
           "$ref": "#/80"
         },
         "flags": 0,
-        "description": "Resource tags."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/81"
-        },
-        "flags": 0,
-        "description": "The identity of the resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "description": "The managed service identities assigned to this resource."
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "RedisCreatePropertiesOrRedisProperties",
+    "name": "SystemData",
     "properties": {
-      "sku": {
+      "createdBy": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/0"
         },
-        "flags": 1,
-        "description": "The SKU of the Redis cache to deploy."
+        "flags": 0,
+        "description": "The identity that created the resource."
       },
-      "subnetId": {
+      "createdByType": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
         "type": {
           "$ref": "#/14"
         },
         "flags": 0,
-        "description": "The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1"
+        "description": "The type of identity that last modified the resource."
       },
-      "staticIP": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 0,
-        "description": "Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default."
-      },
-      "redisConfiguration": {
-        "type": {
-          "$ref": "#/17"
-        },
-        "flags": 0,
-        "description": "All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta, maxmemory-policy,notify-keyspace-events, aof-backup-enabled, aof-storage-connection-string-0, aof-storage-connection-string-1 etc."
-      },
-      "redisVersion": {
+      "lastModifiedAt": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Redis version. This should be in the form 'major[.minor]' (only 'major' is required) or the value 'latest' which refers to the latest stable Redis version that is available. Supported versions: 4.0, 6.0 (latest). Default value is 'latest'."
-      },
-      "enableNonSslPort": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 0,
-        "description": "Specifies whether the non-ssl Redis server port (6379) is enabled."
-      },
-      "replicasPerMaster": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 0,
-        "description": "The number of replicas to be created per primary."
-      },
-      "replicasPerPrimary": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 0,
-        "description": "The number of replicas to be created per primary."
-      },
-      "tenantSettings": {
-        "type": {
-          "$ref": "#/19"
-        },
-        "flags": 0,
-        "description": "A dictionary of tenant settings"
-      },
-      "shardCount": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 0,
-        "description": "The number of shards to be created on a Premium Cluster Cache."
-      },
-      "minimumTlsVersion": {
-        "type": {
-          "$ref": "#/23"
-        },
-        "flags": 0,
-        "description": "Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')"
-      },
-      "publicNetworkAccess": {
-        "type": {
-          "$ref": "#/26"
-        },
-        "flags": 0,
-        "description": "Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method."
-      },
-      "updateChannel": {
-        "type": {
-          "$ref": "#/29"
-        },
-        "flags": 0,
-        "description": "Optional: Specifies the update channel for the monthly Redis updates your Redis Cache will receive. Caches using 'Preview' update channel get latest Redis updates at least 4 weeks ahead of 'Stable' channel caches. Default value is 'Stable'."
-      },
-      "disableAccessKeyAuthentication": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 0,
-        "description": "Authentication to Redis through access keys is disabled when set as true. Default value is false."
-      },
-      "zonalAllocationPolicy": {
-        "type": {
-          "$ref": "#/33"
-        },
-        "flags": 0,
-        "description": "Optional: Specifies how availability zones are allocated to the Redis cache. 'Automatic' enables zone redundancy and Azure will automatically select zones based on regional availability and capacity. 'UserDefined' will select availability zones passed in by you using the 'zones' parameter. 'NoZones' will produce a non-zonal cache. If 'zonalAllocationPolicy' is not passed, it will be set to 'UserDefined' when zones are passed in, otherwise, it will be set to 'Automatic' in regions where zones are supported and 'NoZones' in regions where zones are not supported."
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/47"
-        },
-        "flags": 2,
-        "description": "Redis instance provisioning status."
-      },
-      "hostName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Redis host name."
-      },
-      "port": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 2,
-        "description": "Redis non-SSL port."
-      },
-      "sslPort": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 2,
-        "description": "Redis SSL port."
-      },
-      "accessKeys": {
-        "type": {
-          "$ref": "#/48"
-        },
-        "flags": 2,
-        "description": "The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache"
-      },
-      "linkedServers": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 2,
-        "description": "List of the linked servers associated with the cache"
-      },
-      "instances": {
-        "type": {
-          "$ref": "#/52"
-        },
-        "flags": 2,
-        "description": "List of the Redis instances associated with the cache"
-      },
-      "privateEndpointConnections": {
-        "type": {
-          "$ref": "#/78"
-        },
-        "flags": 2,
-        "description": "List of private endpoint connection associated with the specified redis cache"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Sku",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/9"
-        },
-        "flags": 1,
-        "description": "The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)"
-      },
-      "family": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 1,
-        "description": "The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium)."
-      },
-      "capacity": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 1,
-        "description": "The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4)."
+        "description": "The timestamp of resource last modification (UTC)"
       }
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "Basic"
+    "value": "User"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Standard"
+    "value": "Application"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Premium"
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
   },
   {
     "$type": "UnionType",
     "elements": [
+      {
+        "$ref": "#/5"
+      },
       {
         "$ref": "#/6"
       },
@@ -311,11 +172,19 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "C"
+    "value": "User"
   },
   {
     "$type": "StringLiteralType",
-    "value": "P"
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
   },
   {
     "$type": "UnionType",
@@ -327,20 +196,190 @@
         "$ref": "#/11"
       },
       {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
         "$ref": "#/0"
       }
     ]
   },
   {
-    "$type": "IntegerType"
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
   },
   {
-    "$type": "StringType",
-    "pattern": "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"
-  },
-  {
-    "$type": "StringType",
-    "pattern": "^\\d+\\.\\d+\\.\\d+\\.\\d+$"
+    "$type": "ObjectType",
+    "name": "RedisProperties",
+    "properties": {
+      "redisConfiguration": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta, maxmemory-policy,notify-keyspace-events, aof-backup-enabled, aof-storage-connection-string-0, aof-storage-connection-string-1 etc."
+      },
+      "redisVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Redis version. This should be in the form 'major[.minor]' (only 'major' is required) or the value 'latest' which refers to the latest stable Redis version that is available. Supported versions: 4.0, 6.0 (latest). Default value is 'latest'."
+      },
+      "enableNonSslPort": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Specifies whether the non-ssl Redis server port (6379) is enabled."
+      },
+      "replicasPerMaster": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The number of replicas to be created per primary."
+      },
+      "replicasPerPrimary": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The number of replicas to be created per primary."
+      },
+      "tenantSettings": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "A dictionary of tenant settings"
+      },
+      "shardCount": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The number of shards to be created on a Premium Cluster Cache."
+      },
+      "minimumTlsVersion": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')"
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method."
+      },
+      "updateChannel": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Optional: Specifies the update channel for the monthly Redis updates your Redis Cache will receive. Caches using 'Preview' update channel get latest Redis updates at least 4 weeks ahead of 'Stable' channel caches. Default value is 'Stable'."
+      },
+      "disableAccessKeyAuthentication": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Authentication to Redis through access keys is disabled when set as true. Default value is false."
+      },
+      "zonalAllocationPolicy": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Optional: Specifies how availability zones are allocated to the Redis cache. 'Automatic' enables zone redundancy and Azure will automatically select zones based on regional availability and capacity. 'UserDefined' will select availability zones passed in by you using the 'zones' parameter. 'NoZones' will produce a non-zonal cache. If 'zonalAllocationPolicy' is not passed, it will be set to 'UserDefined' when zones are passed in, otherwise, it will be set to 'Automatic' in regions where zones are supported and 'NoZones' in regions where zones are not supported."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "The SKU of the Redis cache to deploy."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1"
+      },
+      "staticIP": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "Redis instance provisioning status."
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Redis host name."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Redis non-SSL port."
+      },
+      "sslPort": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Redis SSL port."
+      },
+      "accessKeys": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache"
+      },
+      "linkedServers": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "List of the linked servers associated with the cache"
+      },
+      "instances": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "List of the Redis instances associated with the cache"
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "List of private endpoint connection associated with the specified redis cache"
+      }
+    }
   },
   {
     "$type": "AnyType"
@@ -484,19 +523,14 @@
       }
     },
     "additionalProperties": {
-      "$ref": "#/16"
+      "$ref": "#/17"
     }
   },
   {
     "$type": "BooleanType"
   },
   {
-    "$type": "ObjectType",
-    "name": "RedisCommonPropertiesTenantSettings",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
+    "$type": "IntegerType"
   },
   {
     "$type": "StringLiteralType",
@@ -514,7 +548,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/20"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/21"
@@ -523,7 +557,7 @@
         "$ref": "#/22"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/23"
       }
     ]
   },
@@ -539,13 +573,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/24"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/25"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/26"
       }
     ]
   },
@@ -561,13 +595,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/27"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/28"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/29"
       }
     ]
   },
@@ -587,7 +621,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/30"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/31"
@@ -596,9 +630,95 @@
         "$ref": "#/32"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/33"
       }
     ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)"
+      },
+      "family": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium)."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "C"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^\\d+\\.\\d+\\.\\d+\\.\\d+$"
   },
   {
     "$type": "StringLiteralType",
@@ -656,37 +776,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/34"
-      },
-      {
-        "$ref": "#/35"
-      },
-      {
-        "$ref": "#/36"
-      },
-      {
-        "$ref": "#/37"
-      },
-      {
-        "$ref": "#/38"
-      },
-      {
-        "$ref": "#/39"
-      },
-      {
-        "$ref": "#/40"
-      },
-      {
-        "$ref": "#/41"
-      },
-      {
-        "$ref": "#/42"
-      },
-      {
-        "$ref": "#/43"
-      },
-      {
-        "$ref": "#/44"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/45"
@@ -695,7 +785,37 @@
         "$ref": "#/46"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
       }
     ]
   },
@@ -735,7 +855,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/49"
+      "$ref": "#/60"
     }
   },
   {
@@ -744,14 +864,14 @@
     "properties": {
       "sslPort": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/20"
         },
         "flags": 2,
         "description": "Redis instance SSL port."
       },
       "nonSslPort": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/20"
         },
         "flags": 2,
         "description": "If enableNonSslPort is true, provides Redis instance Non-SSL port."
@@ -765,21 +885,21 @@
       },
       "shardId": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/20"
         },
         "flags": 2,
         "description": "If clustering is enabled, the Shard ID of Redis Instance"
       },
       "isMaster": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 2,
         "description": "Specifies whether the instance is a primary node."
       },
       "isPrimary": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 2,
         "description": "Specifies whether the instance is a primary node."
@@ -789,26 +909,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/51"
+      "$ref": "#/62"
     }
   },
   {
     "$type": "ObjectType",
     "name": "PrivateEndpointConnection",
     "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/54"
-        },
-        "flags": 0,
-        "description": "Resource properties."
-      },
       "id": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
       },
       "name": {
         "type": {
@@ -826,10 +939,17 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Resource properties."
       }
     }
   },
@@ -839,28 +959,28 @@
     "properties": {
       "groupIds": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/66"
         },
         "flags": 2,
         "description": "The group ids for the private endpoint resource."
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/67"
         },
         "flags": 0,
         "description": "The private endpoint resource."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/68"
         },
         "flags": 1,
         "description": "A collection of information about the state of the connection between service consumer and provider."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/77"
         },
         "flags": 2,
         "description": "The provisioning state of the private endpoint connection resource."
@@ -882,7 +1002,7 @@
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The ARM identifier for private endpoint."
+        "description": "The resource identifier of the private endpoint"
       }
     }
   },
@@ -892,7 +1012,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
@@ -929,13 +1049,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/58"
+        "$ref": "#/69"
       },
       {
-        "$ref": "#/59"
+        "$ref": "#/70"
       },
       {
-        "$ref": "#/60"
+        "$ref": "#/71"
       },
       {
         "$ref": "#/0"
@@ -962,125 +1082,8 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/62"
-      },
-      {
-        "$ref": "#/63"
-      },
-      {
-        "$ref": "#/64"
-      },
-      {
-        "$ref": "#/65"
-      },
-      {
         "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SystemData",
-    "properties": {
-      "createdBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that created the resource."
       },
-      "createdByType": {
-        "type": {
-          "$ref": "#/72"
-        },
-        "flags": 0,
-        "description": "The type of identity that created the resource."
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource creation (UTC)."
-      },
-      "lastModifiedBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that last modified the resource."
-      },
-      "lastModifiedByType": {
-        "type": {
-          "$ref": "#/77"
-        },
-        "flags": 0,
-        "description": "The type of identity that last modified the resource."
-      },
-      "lastModifiedAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource last modification (UTC)"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/68"
-      },
-      {
-        "$ref": "#/69"
-      },
-      {
-        "$ref": "#/70"
-      },
-      {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
       {
         "$ref": "#/73"
       },
@@ -1092,29 +1095,18 @@
       },
       {
         "$ref": "#/76"
-      },
-      {
-        "$ref": "#/0"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/53"
+      "$ref": "#/64"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RedisCreateParametersTags",
-    "properties": {},
-    "additionalProperties": {
       "$ref": "#/0"
     }
   },
@@ -1124,39 +1116,33 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/86"
         },
         "flags": 1,
-        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
+        "description": "The type of managed identity assigned to this resource."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/15"
         },
         "flags": 0,
-        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
+        "description": "The identities assigned to this resource by the user."
       }
     }
-  },
-  {
-    "$type": "StringType",
-    "minLength": 36,
-    "maxLength": 36,
-    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
     "$type": "StringLiteralType",
@@ -1172,11 +1158,21 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "SystemAssigned, UserAssigned"
   },
   {
     "$type": "UnionType",
     "elements": [
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
       {
         "$ref": "#/83"
       },
@@ -1187,40 +1183,9 @@
         "$ref": "#/85"
       },
       {
-        "$ref": "#/86"
-      },
-      {
         "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/82"
-        },
-        "flags": 2,
-        "description": "The principal ID of the assigned identity."
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/82"
-        },
-        "flags": 2,
-        "description": "The client ID of the assigned identity."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/88"
-    }
   },
   {
     "$type": "ResourceType",
@@ -1232,10 +1197,136 @@
     "writableScopes": 8
   },
   {
-    "$type": "StringType",
-    "minLength": 3,
-    "maxLength": 63,
-    "pattern": "^([a-zA-Z0-9][a-zA-Z0-9- ]*[a-zA-Z0-9]|[a-zA-Z0-9])$"
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Cache/redis/linkedServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Cache/redis/linkedServers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Properties of the linked server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisLinkedServerProperties",
+    "properties": {
+      "linkedRedisCacheId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Fully qualified resourceId of the linked redis cache."
+      },
+      "linkedRedisCacheLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Location of the linked redis cache."
+      },
+      "serverRole": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 1,
+        "description": "Role of the linked server."
+      },
+      "geoReplicatedPrimaryHostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The unchanging DNS name which will always point to current geo-primary cache among the linked redis caches for seamless Geo Failover experience."
+      },
+      "primaryHostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The changing DNS name that resolves to the current geo-primary cache among the linked redis caches before or after the Geo Failover."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Terminal state of the link between primary and secondary redis cache."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Cache/redis/linkedServers@2024-11-01",
+    "body": {
+      "$ref": "#/90"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1258,38 +1349,38 @@
       },
       "name": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/96"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/97"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/95"
-        },
-        "flags": 0,
-        "description": "Properties of an access policy."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Properties of an access policy."
       }
     }
   },
@@ -1299,14 +1390,14 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/106"
         },
         "flags": 2,
         "description": "Provisioning state of access policy"
       },
       "type": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/109"
         },
         "flags": 2,
         "description": "Built-In or Custom access policy"
@@ -1348,16 +1439,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/96"
-      },
-      {
-        "$ref": "#/97"
-      },
-      {
-        "$ref": "#/98"
-      },
-      {
-        "$ref": "#/99"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/100"
@@ -1366,7 +1448,16 @@
         "$ref": "#/101"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
       }
     ]
   },
@@ -1382,13 +1473,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/103"
-      },
-      {
-        "$ref": "#/104"
-      },
-      {
         "$ref": "#/0"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
       }
     ]
   },
@@ -1396,16 +1487,10 @@
     "$type": "ResourceType",
     "name": "Microsoft.Cache/redis/accessPolicies@2024-11-01",
     "body": {
-      "$ref": "#/94"
+      "$ref": "#/98"
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "StringType",
-    "minLength": 3,
-    "maxLength": 63,
-    "pattern": "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"
   },
   {
     "$type": "StringLiteralType",
@@ -1428,38 +1513,38 @@
       },
       "name": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/111"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/112"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/111"
-        },
-        "flags": 0,
-        "description": "Properties of an access policy assignment"
-      },
       "systemData": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "Properties of an access policy assignment"
       }
     }
   },
@@ -1469,7 +1554,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/121"
         },
         "flags": 2,
         "description": "Provisioning state of an access policy assignment set"
@@ -1490,7 +1575,7 @@
       },
       "accessPolicyName": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/122"
         },
         "flags": 1,
         "description": "The name of the access policy that is being assigned"
@@ -1525,13 +1610,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/112"
-      },
-      {
-        "$ref": "#/113"
-      },
-      {
-        "$ref": "#/114"
+        "$ref": "#/0"
       },
       {
         "$ref": "#/115"
@@ -1543,7 +1622,13 @@
         "$ref": "#/117"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
       }
     ]
   },
@@ -1555,7 +1640,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Cache/redis/accessPolicyAssignments@2024-11-01",
     "body": {
-      "$ref": "#/110"
+      "$ref": "#/113"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1588,31 +1673,31 @@
       },
       "type": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/124"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/125"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/124"
-        },
-        "flags": 1,
-        "description": "redis cache firewall rule properties"
-      },
       "systemData": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "redis cache firewall rule properties"
       }
     }
   },
@@ -1640,139 +1725,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Cache/redis/firewallRules@2024-11-01",
     "body": {
-      "$ref": "#/123"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Cache/redis/linkedServers"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-11-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Cache/redis/linkedServers",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/126"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/127"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/129"
-        },
-        "flags": 1,
-        "description": "Properties required to create a linked server."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties",
-    "properties": {
-      "linkedRedisCacheId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Fully qualified resourceId of the linked redis cache."
-      },
-      "linkedRedisCacheLocation": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Location of the linked redis cache."
-      },
-      "serverRole": {
-        "type": {
-          "$ref": "#/132"
-        },
-        "flags": 1,
-        "description": "Role of the linked server."
-      },
-      "geoReplicatedPrimaryHostName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The unchanging DNS name which will always point to current geo-primary cache among the linked redis caches for seamless Geo Failover experience."
-      },
-      "primaryHostName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The changing DNS name that resolves to the current geo-primary cache among the linked redis caches before or after the Geo Failover."
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Terminal state of the link between primary and secondary redis cache."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Primary"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Secondary"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/130"
-      },
-      {
-        "$ref": "#/131"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Cache/redis/linkedServers@2024-11-01",
-    "body": {
-      "$ref": "#/128"
+      "$ref": "#/126"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1785,10 +1738,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/134"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/129"
       }
     ]
   },
@@ -1813,28 +1766,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/130"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/131"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/132"
         },
         "flags": 10,
         "description": "The resource api version"
       },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
       "properties": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/134"
         },
         "flags": 1,
         "description": "List of patch schedules for a Redis cache."
@@ -1845,13 +1805,6 @@
         },
         "flags": 2,
         "description": "The geo-location where the resource lives"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1861,7 +1814,7 @@
     "properties": {
       "scheduleEntries": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/146"
         },
         "flags": 1,
         "description": "List of patch schedules for a Redis cache."
@@ -1874,14 +1827,14 @@
     "properties": {
       "dayOfWeek": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/145"
         },
         "flags": 1,
         "description": "Day of the week when a cache can be patched."
       },
       "startHourUtc": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/20"
         },
         "flags": 1,
         "description": "Start hour after which cache patching can start."
@@ -1935,6 +1888,21 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
         "$ref": "#/141"
       },
       {
@@ -1945,111 +1913,179 @@
       },
       {
         "$ref": "#/144"
-      },
-      {
-        "$ref": "#/145"
-      },
-      {
-        "$ref": "#/146"
-      },
-      {
-        "$ref": "#/147"
-      },
-      {
-        "$ref": "#/148"
-      },
-      {
-        "$ref": "#/149"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/140"
+      "$ref": "#/135"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cache/redis/patchSchedules@2024-11-01",
     "body": {
-      "$ref": "#/138"
+      "$ref": "#/133"
     },
     "readableScopes": 8,
     "writableScopes": 8
   },
   {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Cache/redis/privateEndpointConnections"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-11-01"
-  },
-  {
     "$type": "ObjectType",
-    "name": "Microsoft.Cache/redis/privateEndpointConnections",
+    "name": "OperationStatusResult",
     "properties": {
       "id": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 10,
-        "description": "The resource id"
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
       },
       "name": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 9,
-        "description": "The resource name"
+        "flags": 0,
+        "description": "Name of the async operation."
       },
-      "type": {
+      "status": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/0"
         },
-        "flags": 10,
-        "description": "The resource type"
+        "flags": 1,
+        "description": "Operation status."
       },
-      "apiVersion": {
+      "percentComplete": {
         "type": {
-          "$ref": "#/154"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/54"
+          "$ref": "#/20"
         },
         "flags": 0,
-        "description": "Resource properties."
+        "description": "Percent of the operation that is complete."
       },
-      "systemData": {
+      "startTime": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
         },
         "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
       }
     }
   },
   {
-    "$type": "ResourceType",
-    "name": "Microsoft.Cache/redis/privateEndpointConnections@2024-11-01",
-    "body": {
-      "$ref": "#/155"
-    },
-    "readableScopes": 8,
-    "writableScopes": 8
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/152"
+    }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "listKeys",
+    "name": "flushCache",
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/48"
+      "$ref": "#/148"
     }
   }
 ]

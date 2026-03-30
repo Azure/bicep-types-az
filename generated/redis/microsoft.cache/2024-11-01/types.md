@@ -6,14 +6,14 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreatePropertiesOrRedisProperties](#rediscreatepropertiesorredisproperties) (Required): Redis cache properties.
+* **properties**: [RedisProperties](#redisproperties) (Required): Redis cache properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
+* **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.Cache/redis/accessPolicies@2024-11-01
 * **Readable Scope(s)**: ResourceGroup
@@ -21,7 +21,7 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^([a-zA-Z0-9][a-zA-Z0-9- ]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RedisCacheAccessPolicyProperties](#rediscacheaccesspolicyproperties): Properties of an access policy.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -32,7 +32,7 @@
 ### Properties
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RedisCacheAccessPolicyAssignmentProperties](#rediscacheaccesspolicyassignmentproperties): Properties of an access policy assignment
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/accessPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
@@ -55,7 +55,7 @@
 * **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties](#redislinkedservercreatepropertiesorredislinkedserverproperties) (Required): Properties required to create a linked server.
+* **properties**: [RedisLinkedServerProperties](#redislinkedserverproperties): Properties of the linked server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -71,36 +71,50 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/patchSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cache/redis/privateEndpointConnections@2024-11-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-11-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Function listKeys (Microsoft.Cache/redis@2024-11-01)
+## Function flushCache (Microsoft.Cache/redis@2024-11-01)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2024-11-01
-* **Output**: [RedisAccessKeys](#redisaccesskeys)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): The type of managed identity assigned to this resource.
+* **userAssignedIdentities**: [Record](#record): The identities assigned to this resource by the user.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly): The ARM identifier for private endpoint.
+* **id**: string (ReadOnly): The resource identifier of the private endpoint
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -118,6 +132,11 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RedisAccessKeys
 ### Properties
@@ -161,17 +180,34 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## RedisCommonPropertiesTenantSettings
+## RedisFirewallRuleProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **endIP**: string (Required): highest IP address included in the range
+* **startIP**: string (Required): lowest IP address included in the range
 
-## RedisCreateParametersTags
+## RedisInstanceDetails
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **isMaster**: bool (ReadOnly): Specifies whether the instance is a primary node.
+* **isPrimary**: bool (ReadOnly): Specifies whether the instance is a primary node.
+* **nonSslPort**: int (ReadOnly): If enableNonSslPort is true, provides Redis instance Non-SSL port.
+* **shardId**: int (ReadOnly): If clustering is enabled, the Shard ID of Redis Instance
+* **sslPort**: int (ReadOnly): Redis instance SSL port.
+* **zone**: string (ReadOnly): If the Cache uses availability zones, specifies availability zone where this instance is located.
 
-## RedisCreatePropertiesOrRedisProperties
+## RedisLinkedServer
+### Properties
+* **id**: string (ReadOnly): Linked server Id.
+
+## RedisLinkedServerProperties
+### Properties
+* **geoReplicatedPrimaryHostName**: string (ReadOnly): The unchanging DNS name which will always point to current geo-primary cache among the linked redis caches for seamless Geo Failover experience.
+* **linkedRedisCacheId**: string (Required): Fully qualified resourceId of the linked redis cache.
+* **linkedRedisCacheLocation**: string (Required): Location of the linked redis cache.
+* **primaryHostName**: string (ReadOnly): The changing DNS name that resolves to the current geo-primary cache among the linked redis caches before or after the Geo Failover.
+* **provisioningState**: string (ReadOnly): Terminal state of the link between primary and secondary redis cache.
+* **serverRole**: 'Primary' | 'Secondary' (Required): Role of the linked server.
+
+## RedisProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **disableAccessKeyAuthentication**: bool: Authentication to Redis through access keys is disabled when set as true. Default value is false.
@@ -193,36 +229,9 @@
 * **sslPort**: int (ReadOnly): Redis SSL port.
 * **staticIP**: string {pattern: "^\d+\.\d+\.\d+\.\d+$"}: Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
 * **subnetId**: string {pattern: "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"}: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
-* **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings): A dictionary of tenant settings
+* **tenantSettings**: [Record](#record): A dictionary of tenant settings
 * **updateChannel**: 'Preview' | 'Stable' | string: Optional: Specifies the update channel for the monthly Redis updates your Redis Cache will receive. Caches using 'Preview' update channel get latest Redis updates at least 4 weeks ahead of 'Stable' channel caches. Default value is 'Stable'.
 * **zonalAllocationPolicy**: 'Automatic' | 'NoZones' | 'UserDefined' | string: Optional: Specifies how availability zones are allocated to the Redis cache. 'Automatic' enables zone redundancy and Azure will automatically select zones based on regional availability and capacity. 'UserDefined' will select availability zones passed in by you using the 'zones' parameter. 'NoZones' will produce a non-zonal cache. If 'zonalAllocationPolicy' is not passed, it will be set to 'UserDefined' when zones are passed in, otherwise, it will be set to 'Automatic' in regions where zones are supported and 'NoZones' in regions where zones are not supported.
-
-## RedisFirewallRuleProperties
-### Properties
-* **endIP**: string (Required): highest IP address included in the range
-* **startIP**: string (Required): lowest IP address included in the range
-
-## RedisInstanceDetails
-### Properties
-* **isMaster**: bool (ReadOnly): Specifies whether the instance is a primary node.
-* **isPrimary**: bool (ReadOnly): Specifies whether the instance is a primary node.
-* **nonSslPort**: int (ReadOnly): If enableNonSslPort is true, provides Redis instance Non-SSL port.
-* **shardId**: int (ReadOnly): If clustering is enabled, the Shard ID of Redis Instance
-* **sslPort**: int (ReadOnly): Redis instance SSL port.
-* **zone**: string (ReadOnly): If the Cache uses availability zones, specifies availability zone where this instance is located.
-
-## RedisLinkedServer
-### Properties
-* **id**: string (ReadOnly): Linked server Id.
-
-## RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties
-### Properties
-* **geoReplicatedPrimaryHostName**: string (ReadOnly): The unchanging DNS name which will always point to current geo-primary cache among the linked redis caches for seamless Geo Failover experience.
-* **linkedRedisCacheId**: string (Required): Fully qualified resourceId of the linked redis cache.
-* **linkedRedisCacheLocation**: string (Required): Location of the linked redis cache.
-* **primaryHostName**: string (ReadOnly): The changing DNS name that resolves to the current geo-primary cache among the linked redis caches before or after the Geo Failover.
-* **provisioningState**: string (ReadOnly): Terminal state of the link between primary and secondary redis cache.
-* **serverRole**: 'Primary' | 'Secondary' (Required): Role of the linked server.
 
 ## ScheduleEntries
 ### Properties
@@ -248,14 +257,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 

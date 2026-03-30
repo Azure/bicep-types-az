@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): The managed identity information, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9_-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **sku**: [Sku](#sku) (Required): The sku of the configuration store.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/keyValues@2025-06-01-preview
@@ -44,7 +44,7 @@
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Private link resource properties.
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties): Private link resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -55,7 +55,7 @@
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the replica.
-* **name**: string {pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicaProperties](#replicaproperties): All replica properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/replicas' (ReadOnly, DeployTimeConstant): The resource type
@@ -66,26 +66,32 @@
 ### Properties
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^\x00-\x1F\x7F]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotProperties](#snapshotproperties): All snapshot properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppConfiguration/locations/deletedConfigurationStores@2025-06-01-preview
+## Resource Microsoft.AppConfiguration/deletedConfigurationStores@2025-06-01-preview
 * **Readable Scope(s)**: Subscription
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9_-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DeletedConfigurationStoreProperties](#deletedconfigurationstoreproperties) (ReadOnly): Properties of the deleted configuration store
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedConfigurationStoreProperties](#deletedconfigurationstoreproperties): Properties of the deleted configuration store
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.AppConfiguration/locations/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.AppConfiguration/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2025-06-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2025-06-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
+
+## Function regenerateKey (Microsoft.AppConfiguration/configurationStores@2025-06-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [ApiKey](#apikey)
 
 ## ApiKey
 ### Properties
@@ -135,12 +141,7 @@
 * **location**: string (ReadOnly): The location of the original configuration store.
 * **purgeProtectionEnabled**: bool (ReadOnly): Purge protection status of the original configuration store.
 * **scheduledPurgeDate**: string (ReadOnly): The scheduled purged date.
-* **tags**: [DeletedConfigurationStorePropertiesTags](#deletedconfigurationstorepropertiestags) (ReadOnly): Tags of the original configuration store.
-
-## DeletedConfigurationStorePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **tags**: [Record](#record) (ReadOnly): Tags of the original configuration store.
 
 ## EncryptionProperties
 ### Properties
@@ -163,13 +164,8 @@ The label is used in unison with the key to uniquely identify a key-value.
 * **lastModified**: string (ReadOnly): The last time a modifying operation was performed on the given key-value.
 * **locked**: bool (ReadOnly): A value indicating whether the key-value is locked.
 A locked key-value may not be modified until it is unlocked.
-* **tags**: [KeyValuePropertiesTags](#keyvaluepropertiestags): A dictionary of tags that can help identify what a key-value may be applicable for.
+* **tags**: [Record](#record): A dictionary of tags that can help identify what a key-value may be applicable for.
 * **value**: string: The value of the key-value.
-
-## KeyValuePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## KeyVaultProperties
 ### Properties
@@ -178,7 +174,7 @@ A locked key-value may not be modified until it is unlocked.
 
 ## ManagedOnBehalfOfConfiguration
 ### Properties
-* **moboBrokerResources**: [MoboBrokerResource](#mobobrokerresource)[]: Managed-On-Behalf-Of broker resources
+* **moboBrokerResources**: [MoboBrokerResource](#mobobrokerresource)[] (ReadOnly): Managed-On-Behalf-Of broker resources
 
 ## MoboBrokerResource
 ### Properties
@@ -213,6 +209,15 @@ A locked key-value may not be modified until it is unlocked.
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
 
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RegenerateKeyParameters
+### Properties
+* **id**: string: The id of the key to regenerate.
+
 ## ReplicaProperties
 ### Properties
 * **endpoint**: string (ReadOnly): The URI of the replica where the replica API will be available.
@@ -223,12 +228,7 @@ A locked key-value may not be modified until it is unlocked.
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
-* **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## ResourceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentity](#useridentity)
+* **userAssignedIdentities**: [Record](#record): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Sku
 ### Properties
@@ -240,18 +240,13 @@ A locked key-value may not be modified until it is unlocked.
 * **created**: string (ReadOnly): The time that the snapshot was created.
 * **etag**: string (ReadOnly): A value representing the current state of the snapshot.
 * **expires**: string (ReadOnly): The time that the snapshot will expire.
-* **filters**: [KeyValueFilter](#keyvaluefilter)[] {minLength: 1, maxLength: 3} (Required): A list of filters used to filter the key-values included in the snapshot.
+* **filters**: [KeyValueFilter](#keyvaluefilter)[] (Required): A list of filters used to filter the key-values included in the snapshot.
 * **itemsCount**: int (ReadOnly): The amount of key-values in the snapshot.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the snapshot.
-* **retentionPeriod**: int {minValue: 3600, maxValue: 7776000}: The amount of time, in seconds, that a snapshot will remain in the archived state before expiring. This property is only writable during the creation of a snapshot. If not specified, the default lifetime of key-value revisions will be used.
+* **retentionPeriod**: int: The amount of time, in seconds, that a snapshot will remain in the archived state before expiring. This property is only writable during the creation of a snapshot. If not specified, the default lifetime of key-value revisions will be used.
 * **size**: int (ReadOnly): The size in bytes of the snapshot.
 * **status**: 'Archived' | 'Failed' | 'Provisioning' | 'Ready' | string (ReadOnly): The current status of the snapshot.
-* **tags**: [SnapshotPropertiesTags](#snapshotpropertiestags): The tags of the snapshot. NOTE: These are data plane tags, not ARM tags.
-
-## SnapshotPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **tags**: [Record](#record): The tags of the snapshot. NOTE: These are data plane tags, not ARM tags.
 
 ## SystemData
 ### Properties
@@ -265,14 +260,4 @@ A locked key-value may not be modified until it is unlocked.
 ## TelemetryProperties
 ### Properties
 * **resourceId**: string: Resource ID of a resource enabling telemetry collection
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UserIdentity
-### Properties
-* **clientId**: string (ReadOnly): The client ID of the user-assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the user-assigned identity.
 

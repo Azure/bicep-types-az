@@ -7,20 +7,20 @@
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 3, maxLength: 20, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AgentPoolProperties](#agentpoolproperties): The properties associated with the agent pool
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview
 * **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RunProperties](#runproperties) (ReadOnly): The properties of a run.
+* **properties**: [RunProperties](#runproperties): The properties of a run.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string: The location of the resource
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant): The resource type
@@ -45,33 +45,28 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2025-03-01-preview)
-* **Resource**: Microsoft.ContainerRegistry/registries
-* **ApiVersion**: 2025-03-01-preview
-* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
-
-## Function listDetails (Microsoft.ContainerRegistry/registries/taskRuns@2025-03-01-preview)
-* **Resource**: Microsoft.ContainerRegistry/registries/taskRuns
-* **ApiVersion**: 2025-03-01-preview
-* **Output**: [TaskRun](#taskrun)
-
-## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2025-03-01-preview)
+## Function getDetails (Microsoft.ContainerRegistry/registries/tasks@2025-03-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries/tasks
 * **ApiVersion**: 2025-03-01-preview
 * **Output**: [Task](#task)
 
-## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview)
+## Function getDetails (Microsoft.ContainerRegistry/registries/taskRuns@2025-03-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/taskRuns
+* **ApiVersion**: 2025-03-01-preview
+* **Output**: [TaskRun](#taskrun)
+
+## Function getLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries/runs
 * **ApiVersion**: 2025-03-01-preview
 * **Output**: [RunGetLogResult](#rungetlogresult)
 
-## Function listQueueStatus (Microsoft.ContainerRegistry/registries/agentPools@2025-03-01-preview)
+## Function getQueueStatus (Microsoft.ContainerRegistry/registries/agentPools@2025-03-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries/agentPools
 * **ApiVersion**: 2025-03-01-preview
 * **Output**: [AgentPoolQueueStatus](#agentpoolqueuestatus)
@@ -124,41 +119,20 @@
 
 ## Credentials
 ### Properties
-* **customRegistries**: [CredentialsCustomRegistries](#credentialscustomregistries): Describes the credential parameters for accessing other custom registries. The key
+* **customRegistries**: [Record](#record): Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
 the value of the item will be the registry credentials for accessing the registry.
 * **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials): Describes the credential parameters for accessing the source registry.
-
-## CredentialsCustomRegistries
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
-
-## CustomRegistryCredentials
-### Properties
-* **identity**: string: Indicates the managed identity assigned to the custom credential. If a user-assigned identity
-this value is the Client ID. If a system-assigned identity, the value will be `system`. In
-the case of a system-assigned identity, the Client ID will be determined by the runner. This
-identity may be used to authenticate to key vault to retrieve credentials or it may be the only
-source of authentication used for accessing the registry.
-* **password**: [SecretObject](#secretobject): The password for logging into the custom registry. The password is a secret
-object that allows multiple ways of providing the value for it.
-* **userName**: [SecretObject](#secretobject): The username for logging into the custom registry.
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity
+* **userAssignedIdentities**: [Record](#record): The list of user identities associated with the resource. The user identity
 dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## IdentityPropertiesUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## ImageDescriptor
 ### Properties
@@ -189,10 +163,15 @@ executing a build step.
 * **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
 * **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
 
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Run
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: ""} (Required, ReadOnly): The run ID.
 * **properties**: [RunProperties](#runproperties): The properties of a run.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -238,59 +217,63 @@ executing a build step.
 ### DockerBuildRequest
 #### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **agentPoolName**: string: The dedicated agent pool for the run.
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing the run.
 * **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source location.
 * **imageNames**: string[]: The fully qualified image names including the repository and tag.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
+* **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **target**: string: The name of the target build stage for the docker build.
-* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
-* **type**: 'DockerBuildRequest' (Required): The type of the run request.
+* **timeout**: int: Run timeout in seconds.
+* **type**: 'DockerBuildRequest' (Required)
 
 ### EncodedTaskRunRequest
 #### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **agentPoolName**: string: The dedicated agent pool for the run.
 * **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
+* **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
-* **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
+* **timeout**: int: Run timeout in seconds.
+* **type**: 'EncodedTaskRunRequest' (Required)
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ### FileTaskRunRequest
 #### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **agentPoolName**: string: The dedicated agent pool for the run.
 * **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
+* **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **taskFilePath**: string (Required): The template/definition file path relative to the source.
-* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
-* **type**: 'FileTaskRunRequest' (Required): The type of the run request.
+* **timeout**: int: Run timeout in seconds.
+* **type**: 'FileTaskRunRequest' (Required)
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The values/parameters file path relative to the source.
 
 ### TaskRunRequest
 #### Properties
+* **agentPoolName**: string: The dedicated agent pool for the run.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
+* **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties): Set of overridable parameters that can be passed when running a Task.
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
-* **type**: 'TaskRunRequest' (Required): The type of the run request.
+* **type**: 'TaskRunRequest' (Required)
 
-
-## SecretObject
-### Properties
-* **type**: 'Opaque' | 'Vaultsecret' | string: The type of the secret object which determines how the value of the secret object has to be
-interpreted.
-* **value**: string: The value of the secret. The format of this value will be determined
-based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.
 
 ## SetValue
 ### Properties
@@ -332,11 +315,6 @@ the source registry during the run.
 * **pullRequestId**: string: The unique ID that identifies pull request.
 * **repositoryUrl**: string: The repository URL.
 
-## SourceUploadDefinition
-### Properties
-* **relativePath**: string: The relative path to the source. This is used to submit the subsequent queue build request.
-* **uploadUrl**: string: The URL where the client can upload the source.
-
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -348,13 +326,13 @@ the source registry during the run.
 
 ## Task
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (ReadOnly): The name of the resource
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, ReadOnly): The name of the container registry task.
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## TaskProperties
@@ -369,15 +347,15 @@ the source registry during the run.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties): The properties of a task step.
-* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
+* **timeout**: int: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskRun
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string: The location of the resource
-* **name**: string (ReadOnly): The name of the resource
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, ReadOnly): The name of the task run.
 * **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -400,24 +378,33 @@ the source registry during the run.
 ### DockerBuildStep
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
+* **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+* **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
 * **imageNames**: string[]: The fully qualified image names including the repository and tag.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'DockerBuildStep' (Required)
 
 ### EncodedTaskStep
 #### Properties
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
+* **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+* **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
+* **type**: 'EncodedTaskStep' (Required)
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ### FileTaskStep
 #### Properties
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
+* **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+* **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
+* **type**: 'FileTaskStep' (Required)
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -433,29 +420,9 @@ the source registry during the run.
 * **scheduleOccurrence**: string: The occurrence that triggered the run.
 * **timerTriggerName**: string: The timer trigger name that caused the run.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## TriggerProperties
 ### Properties
 * **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger): The trigger based on base image dependencies.
 * **sourceTriggers**: [SourceTrigger](#sourcetrigger)[]: The collection of triggers based on source code repository.
 * **timerTriggers**: [TimerTrigger](#timertrigger)[]: The collection of timer triggers.
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 

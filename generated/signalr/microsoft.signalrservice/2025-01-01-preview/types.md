@@ -9,11 +9,11 @@
 * **identity**: [ManagedIdentity](#managedidentity): A class represent managed identities used for request and response
 * **kind**: 'RawWebSockets' | 'SignalR' | string: The kind of the service
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the resource
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/signalR/customCertificates@2025-01-01-preview
@@ -56,23 +56,12 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicaProperties](#replicaproperties)
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.SignalRService/signalR/replicas' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.SignalRService/signalR/replicas/sharedPrivateLinkResources@2025-01-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SignalRService/signalR/replicas/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2025-01-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -80,7 +69,7 @@
 ### Properties
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SignalRService/signalR/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
@@ -90,11 +79,17 @@
 * **ApiVersion**: 2025-01-01-preview
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/signalR@2025-01-01-preview)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2025-01-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## ApplicationFirewallSettings
 ### Properties
-* **clientConnectionCountRules**: [ClientConnectionCountRule](#clientconnectioncountrule)[] {maxLength: 10}: Rules to control the client connection count
-* **clientTrafficControlRules**: [ClientTrafficControlRule](#clienttrafficcontrolrule)[] {maxLength: 10}: Rules to control the client traffic
-* **maxClientConnectionLifetimeInSeconds**: int {minValue: 0, maxValue: 604800}: Config to control the client connection lifetime in seconds, can be set to 0 to disable the config
+* **clientConnectionCountRules**: [ClientConnectionCountRule](#clientconnectioncountrule)[]: Rules to control the client connection count
+* **clientTrafficControlRules**: [ClientTrafficControlRule](#clienttrafficcontrolrule)[]: Rules to control the client traffic
+* **maxClientConnectionLifetimeInSeconds**: int: Config to control the client connection lifetime in seconds, can be set to 0 to disable the config
 
 ## ClientConnectionCountRule
 * **Discriminator**: type
@@ -104,17 +99,17 @@
 ### ThrottleByJwtCustomClaimRule
 #### Properties
 * **claimName**: string (Required): The name of the claim in the JWT token. The client connection with the same claim value will be aggregated. If the claim is not found in the token, the connection will be allowed.
-* **maxCount**: int {minValue: 0, maxValue: 2147483647}: Maximum connection count allowed for the same Jwt claim value. Clients with the same Jwt claim will get rejected if the connection count exceeds this value. Default value is 20.
+* **maxCount**: int: Maximum connection count allowed for the same Jwt claim value. Clients with the same Jwt claim will get rejected if the connection count exceeds this value. Default value is 20.
 * **type**: 'ThrottleByJwtCustomClaimRule' (Required)
 
 ### ThrottleByJwtSignatureRule
 #### Properties
-* **maxCount**: int {minValue: 0, maxValue: 2147483647}: Maximum connection count allowed for the same JWT signature. Clients with the same JWT signature will get rejected if the connection count exceeds this value. Default value is 20.
+* **maxCount**: int: Maximum connection count allowed for the same JWT signature. Clients with the same JWT signature will get rejected if the connection count exceeds this value. Default value is 20.
 * **type**: 'ThrottleByJwtSignatureRule' (Required)
 
 ### ThrottleByUserIdRule
 #### Properties
-* **maxCount**: int {minValue: 0, maxValue: 2147483647}: Maximum connection count allowed for the same user ID. Clients with the same user ID will get rejected if the connection count exceeds this value. Default value is 20.
+* **maxCount**: int: Maximum connection count allowed for the same user ID. Clients with the same user ID will get rejected if the connection count exceeds this value. Default value is 20.
 * **type**: 'ThrottleByUserIdRule' (Required)
 
 
@@ -125,21 +120,21 @@
 
 ### TrafficThrottleByJwtCustomClaimRule
 #### Properties
-* **aggregationWindowInSeconds**: int {minValue: 10, maxValue: 3600}: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
+* **aggregationWindowInSeconds**: int: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
 * **claimName**: string (Required): The name of the claim in the JWT token. The message bytes with the same claim value will be aggregated. If the claim is not found in the token, the rule will be skipped.
-* **maxInboundMessageBytes**: int {minValue: 0}: Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT claim will get disconnected if the message bytes exceeds this value. Default value is 1GB.
+* **maxInboundMessageBytes**: int: Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT claim will get disconnected if the message bytes exceeds this value. Default value is 1GB.
 * **type**: 'TrafficThrottleByJwtCustomClaimRule' (Required)
 
 ### TrafficThrottleByJwtSignatureRule
 #### Properties
-* **aggregationWindowInSeconds**: int {minValue: 10, maxValue: 3600}: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
-* **maxInboundMessageBytes**: int {minValue: 0}: Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT signature will get disconnected if the message bytes exceeds this value. Default value is 1GB.
+* **aggregationWindowInSeconds**: int: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
+* **maxInboundMessageBytes**: int: Maximum accumulated inbound message bytes allowed for the same JWT signature within a time window. Clients with the same JWT signature will get disconnected if the message bytes exceeds this value. Default value is 1GB.
 * **type**: 'TrafficThrottleByJwtSignatureRule' (Required)
 
 ### TrafficThrottleByUserIdRule
 #### Properties
-* **aggregationWindowInSeconds**: int {minValue: 10, maxValue: 3600}: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
-* **maxInboundMessageBytes**: int {minValue: 0}: Maximum accumulated inbound message bytes allowed for the same user ID within a time window. Clients with the same user ID will get disconnected if the message bytes exceeds this value. Default value is 1GB.
+* **aggregationWindowInSeconds**: int: The aggregation window for the message bytes. The message bytes will be aggregated in this window and be reset after the window. Default value is 60 seconds.
+* **maxInboundMessageBytes**: int: Maximum accumulated inbound message bytes allowed for the same user ID within a time window. Clients with the same user ID will get disconnected if the message bytes exceeds this value. Default value is 1GB.
 * **type**: 'TrafficThrottleByUserIdRule' (Required)
 
 
@@ -186,17 +181,12 @@ Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Represents the identity type: systemAssigned, userAssigned, None
-* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
+* **userAssignedIdentities**: [Record](#record): Get or set the user assigned identities
 
 ## ManagedIdentitySettings
 ### Properties
 * **resource**: string: The Resource indicating the App ID URI of the target resource.
 It also appears in the aud (audience) claim of the issued token.
-
-## ManagedIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
 
 ## NetworkACL
 ### Properties
@@ -215,8 +205,8 @@ It also appears in the aud (audience) claim of the issued token.
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: ""} (Required, ReadOnly): The name of the private endpoint connection associated with the Azure resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -233,6 +223,15 @@ It also appears in the aud (audience) claim of the issued token.
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Salt' | 'Secondary' | string: The type of access key.
 
 ## ReplicaProperties
 ### Properties
@@ -281,17 +280,17 @@ Allowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2
 
 ## RouteSettings
 ### Properties
-* **connectionBalanceWeight**: int {minValue: 0, maxValue: 255}: Gets or sets the connection balance weight.
+* **connectionBalanceWeight**: int: Gets or sets the connection balance weight.
 A higher value means a greater balance of client connections across different server connections.
 A value of 0 distributes connections randomly, while a value of 255 ensures maximum balancing.
 The default value is 255.
 Recommended ```255``` for all of the cases.
-* **latencyWeight**: int {minValue: 0, maxValue: 255}: Gets or sets the weight for latency-based routing.
+* **latencyWeight**: int: Gets or sets the weight for latency-based routing.
 A higher value increases the influence of latency-based routing.
 A value of 0 disables latency-based routing entirely, while a value of 255 enables it fully.
 The default value is 0.
 Recommended ```255``` for replicas or app servers in different regions for disaster recovery.
-* **serverBalanceWeight**: int {minValue: 0, maxValue: 255}: Gets or sets the server balance weight.
+* **serverBalanceWeight**: int: Gets or sets the server balance weight.
 A higher value means a greater balance of client connections across different app server instances.
 A value of 0 distributes connections randomly, while a value of 255 ensures maximum balancing.
 The default value is 255.
@@ -299,7 +298,7 @@ Recommended ```255``` for multiple app servers in same size.
 
 ## ServerlessSettings
 ### Properties
-* **connectionTimeoutInSeconds**: int {minValue: 1, maxValue: 120}: Gets or sets Client Connection Timeout. Optional to be set.
+* **connectionTimeoutInSeconds**: int: Gets or sets Client Connection Timeout. Optional to be set.
 Value in seconds.
 Default value is 30 seconds.
 Customer should set the timeout to a shorter period if messages are expected to be sent in shorter intervals,
@@ -307,7 +306,7 @@ and want the client to disconnect more quickly after the last message is sent.
 You can set the timeout to a longer period if messages are expected to be sent in longer intervals,
 and they want to keep the same client connection alive during this session.
 The service considers the client disconnected if it hasn't received a message (including keep-alive) in this interval.
-* **keepAliveIntervalInSeconds**: int {minValue: 1, maxValue: 120}: Gets or sets the Keep-Alive Interval. Optional to set.
+* **keepAliveIntervalInSeconds**: int: Gets or sets the Keep-Alive Interval. Optional to set.
 Value is in seconds.
 The default value is 15 seconds.
 Customers should set this value to a shorter period if they want the service to send keep-alive messages more frequently,
@@ -322,8 +321,8 @@ This interval ensures that the connection is maintained by sending periodic keep
 
 ## SharedPrivateLinkResource
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"} (Required, ReadOnly): The name of the shared private link resource.
 * **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -348,25 +347,20 @@ This interval ensures that the connection is maintained by sending periodic keep
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
-* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
+* **properties**: [Record](#record): Optional properties related to this feature.
 * **value**: string {minLength: 1, maxLength: 128} (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
-
-## SignalRFeatureProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SignalRKeys
 ### Properties
-* **primaryConnectionString**: string {sensitive}: Connection string constructed via the primaryKey
-* **primaryKey**: string {sensitive}: The primary access key.
-* **secondaryConnectionString**: string {sensitive}: Connection string constructed via the secondaryKey
-* **secondaryKey**: string {sensitive}: The secondary access key.
+* **primaryConnectionString**: string: Connection string constructed via the primaryKey
+* **primaryKey**: string: The primary access key.
+* **secondaryConnectionString**: string: Connection string constructed via the secondaryKey
+* **secondaryKey**: string: The secondary access key.
 
 ## SignalRNetworkACLs
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: Azure Networking ACL Action.
-* **ipRules**: [IPRule](#iprule)[] {maxLength: 30}: IP rules for filtering public traffic
+* **ipRules**: [IPRule](#iprule)[]: IP rules for filtering public traffic
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -425,16 +419,6 @@ When it's false, the data plane of the resource is started.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## UpstreamAuthSettings
 ### Properties
 * **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
@@ -460,9 +444,4 @@ There are 3 kind of patterns supported:
 3. The single hub name, for example, "hub1", it matches "hub1".
 * **urlTemplate**: string (Required): Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
-
-## UserAssignedIdentityProperty
-### Properties
-* **clientId**: string (ReadOnly): Get the client id for the user assigned identity
-* **principalId**: string (ReadOnly): Get the principal id for the user assigned identity
 

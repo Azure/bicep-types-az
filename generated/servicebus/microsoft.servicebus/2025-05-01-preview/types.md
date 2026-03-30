@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
 * **sku**: [SBSku](#sbsku): Properties of SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2025-05-01-preview
@@ -22,7 +22,7 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -34,22 +34,10 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2025-05-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
-* **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2025-05-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -83,7 +71,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter Configuration
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): Properties of the Network Security Perimeter Configuration
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -106,22 +94,10 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBQueueProperties](#sbqueueproperties): Queue Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2025-05-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
-* **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics@2025-05-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -130,22 +106,10 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBTopicProperties](#sbtopicproperties): Properties of topic resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2025-05-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
-* **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2025-05-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -154,7 +118,7 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Properties of subscriptions resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
@@ -166,40 +130,16 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2025-05-01-preview)
-* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+## Function checkNameAvailability (Microsoft.ServiceBus/namespaces@2025-05-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces
 * **ApiVersion**: 2025-05-01-preview
-* **Output**: [AccessKeys](#accesskeys)
-
-## Function listKeys (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2025-05-01-preview)
-* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules
-* **ApiVersion**: 2025-05-01-preview
-* **Output**: [AccessKeys](#accesskeys)
-
-## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2025-05-01-preview)
-* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
-* **ApiVersion**: 2025-05-01-preview
-* **Output**: [AccessKeys](#accesskeys)
-
-## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2025-05-01-preview)
-* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
-* **ApiVersion**: 2025-05-01-preview
-* **Output**: [AccessKeys](#accesskeys)
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
 
 ## Action
 ### Properties
@@ -214,6 +154,16 @@
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
 * **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
 * **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is availability, true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a namespace.
 
 ## ConfidentialCompute
 ### Properties
@@ -230,17 +180,12 @@
 * **correlationId**: string: Identifier of the correlation.
 * **label**: string: Application specific label.
 * **messageId**: string: Identifier of the message.
-* **properties**: [CorrelationFilterProperties](#correlationfilterproperties): dictionary object for custom filters
+* **properties**: [Record](#record): dictionary object for custom filters
 * **replyTo**: string: Address of the queue to reply to.
 * **replyToSessionId**: string: Session identifier to reply to.
 * **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
 * **sessionId**: string: Session identifier.
 * **to**: string: Address to send to.
-
-## CorrelationFilterProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Encryption
 ### Properties
@@ -258,12 +203,7 @@
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault
 * **tenantId**: string (ReadOnly): TenantId from the KeyVault
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): Properties for User Assigned Identities
-
-## IdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+* **userAssignedIdentities**: [Record](#record): Properties for User Assigned Identities
 
 ## KeyVaultProperties
 ### Properties
@@ -370,9 +310,9 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (ReadOnly): The name of the resource
+* **name**: string {pattern: ""} (Required, ReadOnly): The PrivateEndpointConnection name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -392,6 +332,11 @@
 ### Properties
 * **description**: string: Description of the issue
 * **issueType**: string: Type of Issue
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Ruleproperties
 ### Properties
@@ -418,7 +363,7 @@
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **geoDataReplication**: [GeoDataReplicationProperties](#geodatareplicationproperties): Geo Data Replication settings for the namespace
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
-* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
+* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | '1.3' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **platformCapabilities**: [PlatformCapabilities](#platformcapabilities)
 * **premiumMessagingPartitions**: int: The number of partitions of a Service Bus namespace. This property is only applicable to Premium SKU namespaces. The default value is 1 and possible values are 1, 2 and 4
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
@@ -523,16 +468,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Client Id of user assigned identity
-* **principalId**: string (ReadOnly): Principal Id of user assigned identity
 
 ## UserAssignedIdentityProperties
 ### Properties

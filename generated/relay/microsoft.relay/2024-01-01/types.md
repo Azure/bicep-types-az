@@ -7,11 +7,11 @@
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RelayNamespaceProperties](#relaynamespaceproperties): Description of Relay namespace
 * **sku**: [Sku](#sku): SKU of the namespace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/authorizationRules@2024-01-01
@@ -21,7 +21,7 @@
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Relay/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -33,22 +33,10 @@
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridConnectionProperties](#hybridconnectionproperties): Properties of the HybridConnection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Relay/namespaces/hybridConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2024-01-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Relay/namespaces/hybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/networkRuleSets@2024-01-01
 * **Readable Scope(s)**: ResourceGroup
@@ -80,7 +68,7 @@
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): A resource that supports private link capabilities.
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties): A resource that supports private link capabilities.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Relay/namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -91,45 +79,10 @@
 * **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WcfRelayProperties](#wcfrelayproperties): Properties of the WCF relay.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2024-01-01
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
-
-## Function listKeys (Microsoft.Relay/namespaces/authorizationRules@2024-01-01)
-* **Resource**: Microsoft.Relay/namespaces/authorizationRules
-* **ApiVersion**: 2024-01-01
-* **Output**: [AccessKeys](#accesskeys)
-
-## Function listKeys (Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2024-01-01)
-* **Resource**: Microsoft.Relay/namespaces/hybridConnections/authorizationRules
-* **ApiVersion**: 2024-01-01
-* **Output**: [AccessKeys](#accesskeys)
-
-## Function listKeys (Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2024-01-01)
-* **Resource**: Microsoft.Relay/namespaces/wcfRelays/authorizationRules
-* **ApiVersion**: 2024-01-01
-* **Output**: [AccessKeys](#accesskeys)
-
-## AccessKeys
-### Properties
-* **keyName**: string: A string that describes the authorization rule.
-* **primaryConnectionString**: string: Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string: Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string: A base64-encoded 256-bit secondary key for signing and validating the SAS token.
 
 ## AuthorizationRuleProperties
 ### Properties
@@ -143,7 +96,7 @@
 ## HybridConnectionProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the hybrid connection was created.
-* **listenerCount**: int {maxValue: 25} (ReadOnly): The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
+* **listenerCount**: int (ReadOnly): The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
 * **requiresClientAuthorization**: bool: Returns true if client authorization is needed for this hybrid connection; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 * **userMetadata**: string: The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
@@ -168,7 +121,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (ReadOnly): The name of the resource
+* **name**: string {pattern: ""} (Required, ReadOnly): The PrivateEndpointConnection name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -184,6 +137,11 @@
 * **groupId**: string: The private link resource group id.
 * **requiredMembers**: string[]: The private link resource required member names.
 * **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RelayNamespaceProperties
 ### Properties
@@ -210,16 +168,11 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## WcfRelayProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the WCF relay was created.
 * **isDynamic**: bool (ReadOnly): Returns true if the relay is dynamic; otherwise, false.
-* **listenerCount**: int {maxValue: 25} (ReadOnly): The number of listeners for this relay. Note that min :1 and max:25 are supported.
+* **listenerCount**: int (ReadOnly): The number of listeners for this relay. Note that min :1 and max:25 are supported.
 * **relayType**: 'Http' | 'NetTcp': WCF relay type.
 * **requiresClientAuthorization**: bool: Returns true if client authorization is needed for this relay; otherwise, false.
 * **requiresTransportSecurity**: bool: Returns true if transport security is needed for this relay; otherwise, false.

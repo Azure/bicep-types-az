@@ -7,34 +7,13 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the Event Grid Domain resource.
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Properties of the Event Grid Domain resource.
 * **sku**: [ResourceSku](#resourcesku): The Sku pricing tier for the Event Grid Domain resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/domains/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/domains/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics@2025-07-15-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -44,40 +23,29 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly): Properties of the Domain Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/topics/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/domains/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.EventGrid/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
-* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Readable Scope(s)**: ResourceGroup, Extension
+* **Writable Scope(s)**: ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/extensionTopics@2025-07-15-preview
-* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Readable Scope(s)**: Extension
 * **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the extension topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **properties**: [ExtensionTopicProperties](#extensiontopicproperties): Properties of the extension topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces@2025-07-15-preview
@@ -87,12 +55,12 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the Namespace resource.
-* **location**: string (Required): Location of the resource.
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Properties of the Namespace resource.
 * **sku**: [NamespaceSku](#namespacesku): Represents available Sku pricing tiers.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/caCertificates@2025-07-15-preview
@@ -101,9 +69,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CaCertificateProperties](#cacertificateproperties): The properties of CA certificate.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/caCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/clientGroups@2025-07-15-preview
@@ -112,9 +80,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientGroupProperties](#clientgroupproperties): The properties of client group.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/clientGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/clients@2025-07-15-preview
@@ -123,9 +91,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 128, pattern: "^[-a-zA-Z0-9:\._]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientProperties](#clientproperties): The properties of client.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/clients' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/permissionBindings@2025-07-15-preview
@@ -134,20 +102,10 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [PermissionBindingProperties](#permissionbindingproperties): The properties of permission binding.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/namespaces/permissionBindings' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/namespaces/privateEndpointConnections@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **type**: 'Microsoft.EventGrid/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+* **properties**: [PermissionBindingProperties](#permissionbindingproperties): The properties of permission binding.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.EventGrid/namespaces/permissionBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/topics@2025-07-15-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -155,9 +113,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceTopicProperties](#namespacetopicproperties): Properties of the namespace topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/topics/eventSubscriptions@2025-07-15-preview
@@ -166,9 +124,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionProperties](#subscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/namespaces/topicSpaces@2025-07-15-preview
@@ -177,9 +135,9 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicSpaceProperties](#topicspaceproperties): The properties of topic space.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/namespaces/topicSpaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerConfigurations@2025-07-15-preview
@@ -188,11 +146,11 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of the resource.
+* **location**: string: The geo-location where the resource lives
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerConfigurationProperties](#partnerconfigurationproperties): Properties of the partner configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [PartnerConfigurationTags](#partnerconfigurationtags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/partnerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerDestinations@2025-07-15-preview
@@ -201,11 +159,11 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Location of the resource.
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerDestinationProperties](#partnerdestinationproperties): Properties of the Partner Destination.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/partnerDestinations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces@2025-07-15-preview
@@ -214,11 +172,11 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerNamespaceProperties](#partnernamespaceproperties): Properties of the Partner Namespace.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/channels@2025-07-15-preview
@@ -229,18 +187,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ChannelProperties](#channelproperties): Properties of the Channel.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/channels' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **type**: 'Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerRegistrations@2025-07-15-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -248,11 +196,11 @@
 ### Properties
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerRegistrationProperties](#partnerregistrationproperties): Properties of the partner registration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerTopics@2025-07-15-preview
@@ -262,23 +210,12 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the Partner Topic resource.
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerTopicProperties](#partnertopicproperties): Properties of the Partner Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/partnerTopics' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/systemTopics@2025-07-15-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -287,23 +224,12 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SystemTopicProperties](#systemtopicproperties): Properties of the system topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2025-07-15-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -314,34 +240,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
 * **kind**: 'Azure' | 'AzureArc' | string: Kind of the resource.
-* **location**: string (Required): Location of the resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Properties of the topic.
 * **sku**: [ResourceSku](#resourcesku): The Sku pricing tier for the topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/topics/eventSubscriptions@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
-* **type**: 'Microsoft.EventGrid/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2025-07-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topicTypes@2025-07-15-preview
 * **Readable Scope(s)**: Tenant
@@ -350,7 +255,8 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
+* **properties**: [TopicTypeProperties](#topictypeproperties): Properties of the topic type info
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/verifiedPartners@2025-07-15-preview
@@ -360,34 +266,88 @@
 * **apiVersion**: '2025-07-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VerifiedPartnerProperties](#verifiedpartnerproperties) (ReadOnly): Properties of the verified partner.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid resource.
+* **properties**: [VerifiedPartnerProperties](#verifiedpartnerproperties): Properties of the verified partner.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventGrid/verifiedPartners' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listKeys (Microsoft.EventGrid/domains@2025-07-15-preview)
-* **Resource**: Microsoft.EventGrid/domains
+## Function activate (Microsoft.EventGrid/partnerDestinations@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerDestinations
 * **ApiVersion**: 2025-07-15-preview
-* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+* **Output**: [PartnerDestination](#partnerdestination)
 
-## Function listKeys (Microsoft.EventGrid/namespaces@2025-07-15-preview)
-* **Resource**: Microsoft.EventGrid/namespaces
+## Function activate (Microsoft.EventGrid/partnerTopics@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerTopics
 * **ApiVersion**: 2025-07-15-preview
-* **Output**: [NamespaceSharedAccessKeys](#namespacesharedaccesskeys)
+* **Output**: [PartnerTopic](#partnertopic)
 
-## Function listKeys (Microsoft.EventGrid/namespaces/topics@2025-07-15-preview)
-* **Resource**: Microsoft.EventGrid/namespaces/topics
+## Function authorizePartner (Microsoft.EventGrid/partnerConfigurations@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerConfigurations
 * **ApiVersion**: 2025-07-15-preview
-* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+* **Input**: [Partner](#partner)
+* **Output**: [PartnerConfiguration](#partnerconfiguration)
 
-## Function listKeys (Microsoft.EventGrid/partnerNamespaces@2025-07-15-preview)
+## Function deactivate (Microsoft.EventGrid/partnerTopics@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerTopics
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [PartnerTopic](#partnertopic)
+
+## Function getDeliveryAttributes (Microsoft.EventGrid/namespaces/topics/eventSubscriptions@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/namespaces/topics/eventSubscriptions
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [DeliveryAttributeListResult](#deliveryattributelistresult)
+
+## Function getFullUrl (Microsoft.EventGrid/partnerNamespaces/channels@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerNamespaces/channels
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [EventSubscriptionFullUrl](#eventsubscriptionfullurl)
+
+## Function getFullUrl (Microsoft.EventGrid/namespaces/topics/eventSubscriptions@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/namespaces/topics/eventSubscriptions
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [SubscriptionFullUrl](#subscriptionfullurl)
+
+## Function listSharedAccessKeys (Microsoft.EventGrid/partnerNamespaces@2025-07-15-preview)
 * **Resource**: Microsoft.EventGrid/partnerNamespaces
 * **ApiVersion**: 2025-07-15-preview
 * **Output**: [PartnerNamespaceSharedAccessKeys](#partnernamespacesharedaccesskeys)
 
-## Function listKeys (Microsoft.EventGrid/topics@2025-07-15-preview)
+## Function listSharedAccessKeys (Microsoft.EventGrid/domains@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function listSharedAccessKeys (Microsoft.EventGrid/namespaces@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/namespaces
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [NamespaceSharedAccessKeys](#namespacesharedaccesskeys)
+
+## Function listSharedAccessKeys (Microsoft.EventGrid/topics@2025-07-15-preview)
 * **Resource**: Microsoft.EventGrid/topics
 * **ApiVersion**: 2025-07-15-preview
 * **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
+## Function listSharedAccessKeys (Microsoft.EventGrid/namespaces/topics@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/namespaces/topics
+* **ApiVersion**: 2025-07-15-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
+## Function regenerateKey (Microsoft.EventGrid/partnerNamespaces@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerNamespaces
+* **ApiVersion**: 2025-07-15-preview
+* **Input**: [PartnerNamespaceRegenerateKeyRequest](#partnernamespaceregeneratekeyrequest)
+* **Output**: [PartnerNamespaceSharedAccessKeys](#partnernamespacesharedaccesskeys)
+
+## Function regenerateKey (Microsoft.EventGrid/domains@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2025-07-15-preview
+* **Input**: [DomainRegenerateKeyRequest](#domainregeneratekeyrequest)
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function unauthorizePartner (Microsoft.EventGrid/partnerConfigurations@2025-07-15-preview)
+* **Resource**: Microsoft.EventGrid/partnerConfigurations
+* **ApiVersion**: 2025-07-15-preview
+* **Input**: [Partner](#partner)
+* **Output**: [PartnerConfiguration](#partnerconfiguration)
 
 ## AdvancedFilter
 * **Discriminator**: operatorType
@@ -397,95 +357,114 @@
 
 ### BoolEqualsAdvancedFilter
 #### Properties
-* **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'BoolEqualsAdvancedFilter' (Required)
 * **value**: bool: The boolean filter value.
 
 ### IsNotNullAdvancedFilter
 #### Properties
-* **operatorType**: 'IsNotNull' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'IsNotNullAdvancedFilter' (Required)
 
 ### IsNullOrUndefinedAdvancedFilter
 #### Properties
-* **operatorType**: 'IsNullOrUndefined' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'IsNullOrUndefinedAdvancedFilter' (Required)
 
 ### NumberGreaterThanAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberGreaterThan' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberGreaterThanAdvancedFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberGreaterThanOrEqualsAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberGreaterThanOrEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberGreaterThanOrEqualsAdvancedFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberInAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberInAdvancedFilter' (Required)
 * **values**: int[]: The set of filter values.
 
 ### NumberInRangeAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberInRange' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberInRangeAdvancedFilter' (Required)
 * **values**: int[][]: The set of filter values.
 
 ### NumberLessThanAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberLessThan' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberLessThanAdvancedFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberLessThanOrEqualsAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberLessThanOrEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberLessThanOrEqualsAdvancedFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberNotInAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberNotIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberNotInAdvancedFilter' (Required)
 * **values**: int[]: The set of filter values.
 
 ### NumberNotInRangeAdvancedFilter
 #### Properties
-* **operatorType**: 'NumberNotInRange' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberNotInRangeAdvancedFilter' (Required)
 * **values**: int[][]: The set of filter values.
 
 ### StringBeginsWithAdvancedFilter
 #### Properties
-* **operatorType**: 'StringBeginsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringBeginsWithAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringContainsAdvancedFilter
 #### Properties
-* **operatorType**: 'StringContains' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringContainsAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringEndsWithAdvancedFilter
 #### Properties
-* **operatorType**: 'StringEndsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringEndsWithAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringInAdvancedFilter
 #### Properties
-* **operatorType**: 'StringIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringInAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotBeginsWithAdvancedFilter
 #### Properties
-* **operatorType**: 'StringNotBeginsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotBeginsWithAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotContainsAdvancedFilter
 #### Properties
-* **operatorType**: 'StringNotContains' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotContainsAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotEndsWithAdvancedFilter
 #### Properties
-* **operatorType**: 'StringNotEndsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotEndsWithAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotInAdvancedFilter
 #### Properties
-* **operatorType**: 'StringNotIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotInAdvancedFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 
@@ -540,7 +519,7 @@ Example : attributes.keyName IN ['a', 'b', 'c'].
 
 ## ClientProperties
 ### Properties
-* **attributes**: [ClientPropertiesAttributes](#clientpropertiesattributes): Attributes for the client. Supported values are int, bool, string, string[].
+* **attributes**: [Record](#record): Attributes for the client. Supported values are int, bool, string, string[].
 Example:
 "attributes": { "room": "345", "floor": 12, "deviceTypes": ["Fan", "Light"] }
 * **authenticationName**: string: The name presented by the client for authentication. The default value is the name of the resource.
@@ -548,11 +527,6 @@ Example:
 * **description**: string: Description for the Client resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Client resource.
 * **state**: 'Disabled' | 'Enabled' | string: Indicates if the client is enabled or not. Default value is Enabled.
-
-## ClientPropertiesAttributes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## ConfidentialCompute
 ### Properties
@@ -621,7 +595,7 @@ be used automatically.
 
 ### StorageBlobDeadLetterDestination
 #### Properties
-* **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
+* **endpointType**: 'StorageBlobDeadLetterDestination' (Required)
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): The properties of the Storage Blob based deadletter destination
 
 
@@ -631,6 +605,10 @@ be used automatically.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during dead-lettering.
 * **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity to use when dead-lettering events.
 
+## DeliveryAttributeListResult
+### Properties
+* **value**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: A collection of DeliveryAttributeMapping
+
 ## DeliveryAttributeMapping
 * **Discriminator**: type
 
@@ -639,13 +617,15 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 
 ### DynamicDeliveryAttributeMapping
 #### Properties
+* **name**: string: Name of the delivery attribute or header.
 * **properties**: [DynamicDeliveryAttributeMappingProperties](#dynamicdeliveryattributemappingproperties): Properties of dynamic delivery attribute mapping.
-* **type**: 'Dynamic' (Required): Type of the delivery attribute or header name.
+* **type**: 'DynamicDeliveryAttributeMapping' (Required)
 
 ### StaticDeliveryAttributeMapping
 #### Properties
+* **name**: string: Name of the delivery attribute or header.
 * **properties**: [StaticDeliveryAttributeMappingProperties](#staticdeliveryattributemappingproperties): Properties of static delivery attribute mapping.
-* **type**: 'Static' (Required): Type of the delivery attribute or header name.
+* **type**: 'StaticDeliveryAttributeMapping' (Required)
 
 
 ## DeliveryConfiguration
@@ -679,7 +659,7 @@ resources by the user.
 * **dataResidencyBoundary**: 'WithinGeopair' | 'WithinRegion' | string: Data Residency Boundary of the resource.
 * **disableLocalAuth**: bool: This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only Microsoft Entra ID token will be used to authenticate if user is allowed to publish to the domain.
 * **endpoint**: string (ReadOnly): Endpoint for the Event Grid Domain Resource which is used for publishing the events.
-* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the domain. This information is provided by the publisher and can be used by the 
+* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the domain. This information is provided by the publisher and can be used by the
 subscriber to view different types of events that are published.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the Event Grid Domain Resource.
@@ -690,6 +670,10 @@ subscriber to view different types of events that are published.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Event Grid Domain Resource.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled.
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
+
+## DomainRegenerateKeyRequest
+### Properties
+* **keyName**: string (Required): Key name to regenerate key1 or key2.
 
 ## DomainSharedAccessKeys
 ### Properties
@@ -726,52 +710,52 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'AzureFunctionEventSubscriptionDestination' (Required)
 * **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties): Azure Function Properties of the event subscription destination.
 
 ### EventHubEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'EventHubEventSubscriptionDestination' (Required)
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): Event Hub Properties of the event subscription destination.
 
 ### HybridConnectionEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'HybridConnectionEventSubscriptionDestination' (Required)
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): Hybrid connection Properties of the event subscription destination.
 
 ### MonitorAlertEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'MonitorAlert' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'MonitorAlertEventSubscriptionDestination' (Required)
 * **properties**: [MonitorAlertEventSubscriptionDestinationProperties](#monitoralerteventsubscriptiondestinationproperties): Monitor Alert properties of the event subscription destination.
 
 ### NamespaceTopicEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'NamespaceTopic' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'NamespaceTopicEventSubscriptionDestination' (Required)
 * **properties**: [NamespaceTopicEventSubscriptionDestinationProperties](#namespacetopiceventsubscriptiondestinationproperties): Namespace Topic properties of the event subscription destination.
 
 ### PartnerEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'PartnerDestination' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'PartnerEventSubscriptionDestination' (Required)
 * **properties**: [PartnerEventSubscriptionDestinationProperties](#partnereventsubscriptiondestinationproperties): Partner Destination Properties of the event subscription destination.
 
 ### ServiceBusQueueEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'ServiceBusQueue' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'ServiceBusQueueEventSubscriptionDestination' (Required)
 * **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): Service Bus Properties of the event subscription destination.
 
 ### ServiceBusTopicEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'ServiceBusTopic' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'ServiceBusTopicEventSubscriptionDestination' (Required)
 * **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties): Service Bus Topic Properties of the event subscription destination.
 
 ### StorageQueueEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'StorageQueueEventSubscriptionDestination' (Required)
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): Storage Queue Properties of the event subscription destination.
 
 ### WebHookEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination.
+* **endpointType**: 'WebHookEventSubscriptionDestination' (Required)
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): WebHook Properties of the event subscription destination.
 
 
@@ -787,6 +771,10 @@ The format of this depends on the publisher of the events.
 Wildcard characters are not supported in this path.
 * **subjectEndsWith**: string: An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.
+
+## EventSubscriptionFullUrl
+### Properties
+* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
 
 ## EventSubscriptionIdentity
 ### Properties
@@ -814,15 +802,10 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
 ## EventTypeInfo
 ### Properties
-* **inlineEventTypes**: [EventTypeInfoInlineEventTypes](#eventtypeinfoinlineeventtypes): A collection of inline event types for the resource. The inline event type keys are of type string which represents the name of the event.
+* **inlineEventTypes**: [Record](#record): A collection of inline event types for the resource. The inline event type keys are of type string which represents the name of the event.
 An example of a valid inline event name is "Contoso.OrderCreated".
 The inline event type values are of type InlineEventProperties and will contain additional information for every inline event type.
 * **kind**: 'Inline' | string: The kind of event type used.
-
-## EventTypeInfoInlineEventTypes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [InlineEventProperties](#inlineeventproperties)
 
 ## ExtendedLocation
 ### Properties
@@ -836,7 +819,7 @@ The inline event type values are of type InlineEventProperties and will contain 
 
 ## FederatedIdentityCredentialInfo
 ### Properties
-* **federatedClientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The Multi-Tenant Microsoft Entra ID Application where the Federated Identity Credential (FIC) is associated with.
+* **federatedClientId**: string (Required): The Multi-Tenant Microsoft Entra ID Application where the Federated Identity Credential (FIC) is associated with.
 
 ## Filter
 * **Discriminator**: operatorType
@@ -846,95 +829,114 @@ The inline event type values are of type InlineEventProperties and will contain 
 
 ### BoolEqualsFilter
 #### Properties
-* **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'BoolEqualsFilter' (Required)
 * **value**: bool: The boolean filter value.
 
 ### IsNotNullFilter
 #### Properties
-* **operatorType**: 'IsNotNull' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'IsNotNullFilter' (Required)
 
 ### IsNullOrUndefinedFilter
 #### Properties
-* **operatorType**: 'IsNullOrUndefined' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'IsNullOrUndefinedFilter' (Required)
 
 ### NumberGreaterThanFilter
 #### Properties
-* **operatorType**: 'NumberGreaterThan' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberGreaterThanFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberGreaterThanOrEqualsFilter
 #### Properties
-* **operatorType**: 'NumberGreaterThanOrEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberGreaterThanOrEqualsFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberInFilter
 #### Properties
-* **operatorType**: 'NumberIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberInFilter' (Required)
 * **values**: int[]: The set of filter values.
 
 ### NumberInRangeFilter
 #### Properties
-* **operatorType**: 'NumberInRange' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberInRangeFilter' (Required)
 * **values**: int[][]: The set of filter values.
 
 ### NumberLessThanFilter
 #### Properties
-* **operatorType**: 'NumberLessThan' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberLessThanFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberLessThanOrEqualsFilter
 #### Properties
-* **operatorType**: 'NumberLessThanOrEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberLessThanOrEqualsFilter' (Required)
 * **value**: int: The filter value.
 
 ### NumberNotInFilter
 #### Properties
-* **operatorType**: 'NumberNotIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberNotInFilter' (Required)
 * **values**: int[]: The set of filter values.
 
 ### NumberNotInRangeFilter
 #### Properties
-* **operatorType**: 'NumberNotInRange' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'NumberNotInRangeFilter' (Required)
 * **values**: int[][]: The set of filter values.
 
 ### StringBeginsWithFilter
 #### Properties
-* **operatorType**: 'StringBeginsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringBeginsWithFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringContainsFilter
 #### Properties
-* **operatorType**: 'StringContains' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringContainsFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringEndsWithFilter
 #### Properties
-* **operatorType**: 'StringEndsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringEndsWithFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringInFilter
 #### Properties
-* **operatorType**: 'StringIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringInFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotBeginsWithFilter
 #### Properties
-* **operatorType**: 'StringNotBeginsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotBeginsWithFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotContainsFilter
 #### Properties
-* **operatorType**: 'StringNotContains' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotContainsFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotEndsWithFilter
 #### Properties
-* **operatorType**: 'StringNotEndsWith' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotEndsWithFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 ### StringNotInFilter
 #### Properties
-* **operatorType**: 'StringNotIn' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+* **key**: string: The field/property in the event based on which you want to filter.
+* **operatorType**: 'StringNotInFilter' (Required)
 * **values**: string[]: The set of filter values.
 
 
@@ -953,26 +955,14 @@ The inline event type values are of type InlineEventProperties and will contain 
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
-* **userAssignedIdentities**: [IdentityInfoUserAssignedIdentities](#identityinfouserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+* **userAssignedIdentities**: [Record](#record): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 This property is currently not used and reserved for future usage.
-
-## IdentityInfoUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## InboundIpRule
 ### Properties
 * **action**: 'Allow' | string: Action to perform based on the match or no match of the IpMask.
 * **ipMask**: string: IP Address in CIDR notation e.g., 10.0.0.0/8.
-
-## InlineEventProperties
-### Properties
-* **dataSchemaUrl**: string: The dataSchemaUrl for the inline event.
-* **description**: string: The description for the inline event.
-* **displayName**: string: The displayName for the inline event.
-* **documentationUrl**: string: The documentationUrl for the inline event.
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
@@ -981,7 +971,7 @@ This property is currently not used and reserved for future usage.
 
 ### JsonInputSchemaMapping
 #### Properties
-* **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
+* **inputSchemaMappingType**: 'JsonInputSchemaMapping' (Required)
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): JSON Properties of the input schema mapping
 
 
@@ -1031,8 +1021,8 @@ This field must be provided.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
 * **isZoneRedundant**: bool: This is an optional property and it allows the user to specify if the namespace resource supports zone-redundancy capability or not. If this
 property is not specified explicitly by the user, its default value depends on the following conditions:
-    a. For Availability Zones enabled regions - The default property value would be true.
-    b. For non-Availability Zones enabled regions - The default property value would be false.
+a. For Availability Zones enabled regions - The default property value would be true.
+b. For non-Availability Zones enabled regions - The default property value would be false.
 Once specified, this property cannot be updated.
 * **minimumTlsVersionAllowed**: '1.0' | '1.1' | '1.2' | string: Minimum TLS version of the publisher allowed to publish to this namespace. Only TLS version 1.2 is supported.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
@@ -1044,8 +1034,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## NamespaceSharedAccessKeys
 ### Properties
-* **key1**: string {sensitive}: Shared access key1 for the namespace.
-* **key2**: string {sensitive}: Shared access key2 for the namespace.
+* **key1**: string: Shared access key1 for the namespace.
+* **key2**: string: Shared access key2 for the namespace.
 
 ## NamespaceSku
 ### Properties
@@ -1074,7 +1064,7 @@ Min event retention duration value is 1 day and max event retention duration val
 context will fail. If specified, the allowed values are between 1 to the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration.
 If not specified, the default value will be the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration or 7 if this value is not specified.
 * **partnerName**: string: The partner name.
-* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
 
 ## PartnerAuthorization
 ### Properties
@@ -1089,19 +1079,34 @@ not specified, the default is 7 days. Otherwise, allowed values are between 1 an
 
 ### AzureADPartnerClientAuthentication
 #### Properties
-* **clientAuthenticationType**: 'AzureAD' (Required): Type of client authentication
+* **clientAuthenticationType**: 'AzureADPartnerClientAuthentication' (Required)
 * **properties**: [AzureADPartnerClientAuthenticationProperties](#azureadpartnerclientauthenticationproperties): Microsoft Entra ID ClientAuthentication Properties
 
+
+## PartnerConfiguration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string: The geo-location where the resource lives
+* **name**: string {pattern: ""} (Required, ReadOnly)
+* **properties**: [PartnerConfigurationProperties](#partnerconfigurationproperties): Properties of the partner configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PartnerConfigurationProperties
 ### Properties
 * **partnerAuthorization**: [PartnerAuthorization](#partnerauthorization): The details of authorized partners.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the partner configuration.
 
-## PartnerConfigurationTags
+## PartnerDestination
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, ReadOnly): Name of the partner destination.
+* **properties**: [PartnerDestinationProperties](#partnerdestinationproperties): Properties of the Partner Destination.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PartnerDestinationInfo
 * **Discriminator**: endpointType
@@ -1117,8 +1122,15 @@ created under this resource group.
 
 ### WebhookPartnerDestinationInfo
 #### Properties
-* **endpointType**: 'WebHook' (Required): Type of the endpoint for the partner destination
+* **azureSubscriptionId**: string: Azure subscription ID of the subscriber. The partner destination associated with the channel will be
+created under this Azure subscription.
+* **endpointServiceContext**: string: Additional context of the partner destination endpoint.
+* **endpointType**: 'WebhookPartnerDestinationInfo' (Required)
+* **name**: string: Name of the partner destination associated with the channel.
 * **properties**: [WebhookPartnerDestinationProperties](#webhookpartnerdestinationproperties): WebHook Properties of the partner destination.
+* **resourceGroupName**: string: Azure Resource Group of the subscriber. The partner destination associated with the channel will be
+created under this resource group.
+* **resourceMoveChangeHistory**: [ResourceMoveChangeHistory](#resourcemovechangehistory)[]: Change history of the resource move.
 
 
 ## PartnerDestinationProperties
@@ -1129,7 +1141,7 @@ created under this resource group.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner destination. If this timer expires and the partner destination was never activated,
 the partner destination and corresponding channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process.
-* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutable Id of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string: The immutable Id of the corresponding partner registration.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'IdleDueToMirroredChannelResourceDeletion' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner destination.
 
 ## PartnerDetails
@@ -1158,6 +1170,10 @@ or use the channel name in the header when matching to the partner topic. If non
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled.
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
 
+## PartnerNamespaceRegenerateKeyRequest
+### Properties
+* **keyName**: string (Required): Key name to regenerate (key1 or key2).
+
 ## PartnerNamespaceSharedAccessKeys
 ### Properties
 * **key1**: string: Shared access key1 for the partner namespace.
@@ -1165,15 +1181,26 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## PartnerRegistrationProperties
 ### Properties
-* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
 Note: This property is marked for deprecation and is not supported in any future GA API version
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner registration.
+
+## PartnerTopic
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the Partner Topic resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {pattern: ""} (Required, ReadOnly): Name of the partner topic.
+* **properties**: [PartnerTopicProperties](#partnertopicproperties): Properties of the Partner Topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [Record](#record): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PartnerTopicInfo
 ### Properties
 * **azureSubscriptionId**: string: Azure subscription ID of the subscriber. The partner topic associated with the channel will be
 created under this Azure subscription.
-* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the partner topic. This information is provided by the publisher and can be used by the 
+* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the partner topic. This information is provided by the publisher and can be used by the
 subscriber to view different types of events that are published.
 * **name**: string: Name of the partner topic associated with the channel.
 * **resourceGroupName**: string: Azure Resource Group of the subscriber. The partner topic associated with the channel will be
@@ -1189,7 +1216,7 @@ created partner topic.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
 the partner topic and corresponding event channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
-* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'IdleDueToMirroredChannelResourceDeletion' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner topic.
@@ -1215,10 +1242,11 @@ The Topic space needs to be a resource under the same namespace the permission b
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified identifier of the resource.
-* **name**: string (ReadOnly): Name of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: ""} (Required, ReadOnly): The name of the private endpoint connection connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
-* **type**: string (ReadOnly): Type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -1237,20 +1265,20 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery.
 * **eventTimeToLive**: string: Time span duration in ISO 8601 format that determines how long messages are available to the subscription from the time the message was published.
 This duration value is expressed using the following format: \'P(n)Y(n)M(n)DT(n)H(n)M(n)S\', where:
-    - (n) is replaced by the value of each time element that follows the (n).
-    - P is the duration (or Period) designator and is always placed at the beginning of the duration.
-    - Y is the year designator, and it follows the value for the number of years.
-    - M is the month designator, and it follows the value for the number of months.
-    - W is the week designator, and it follows the value for the number of weeks.
-    - D is the day designator, and it follows the value for the number of days.
-    - T is the time designator, and it precedes the time components.
-    - H is the hour designator, and it follows the value for the number of hours.
-    - M is the minute designator, and it follows the value for the number of minutes.
-    - S is the second designator, and it follows the value for the number of seconds.
+- (n) is replaced by the value of each time element that follows the (n).
+- P is the duration (or Period) designator and is always placed at the beginning of the duration.
+- Y is the year designator, and it follows the value for the number of years.
+- M is the month designator, and it follows the value for the number of months.
+- W is the week designator, and it follows the value for the number of weeks.
+- D is the day designator, and it follows the value for the number of days.
+- T is the time designator, and it precedes the time components.
+- H is the hour designator, and it follows the value for the number of hours.
+- M is the minute designator, and it follows the value for the number of minutes.
+- S is the second designator, and it follows the value for the number of seconds.
 This duration value cannot be set greater than the topic’s EventRetentionInDays. It is is an optional field where its minimum value is 1 minute, and its maximum is determined
 by topic’s EventRetentionInDays value. The followings are examples of valid values:
-    - \'P0DT23H12M\' or \'PT23H12M\': for duration of 23 hours and 12 minutes.
-    - \'P1D\' or \'P1DT0H0M0S\': for duration of 1 day.
+- \'P0DT23H12M\' or \'PT23H12M\': for duration of 23 hours and 12 minutes.
+- \'P1D\' or \'P1DT0H0M0S\': for duration of 1 day.
 * **maxDeliveryCount**: int: The maximum delivery count of the events.
 
 ## QueueInfo
@@ -1259,24 +1287,29 @@ by topic’s EventRetentionInDays value. The followings are examples of valid va
 Uses the managed identity setup on the parent resource (namely, topic) to acquire the authentication tokens being used during delivery / dead-lettering.
 * **eventTimeToLive**: string: Time span duration in ISO 8601 format that determines how long messages are available to the subscription from the time the message was published.
 This duration value is expressed using the following format: \'P(n)Y(n)M(n)DT(n)H(n)M(n)S\', where:
-    - (n) is replaced by the value of each time element that follows the (n).
-    - P is the duration (or Period) designator and is always placed at the beginning of the duration.
-    - Y is the year designator, and it follows the value for the number of years.
-    - M is the month designator, and it follows the value for the number of months.
-    - W is the week designator, and it follows the value for the number of weeks.
-    - D is the day designator, and it follows the value for the number of days.
-    - T is the time designator, and it precedes the time components.
-    - H is the hour designator, and it follows the value for the number of hours.
-    - M is the minute designator, and it follows the value for the number of minutes.
-    - S is the second designator, and it follows the value for the number of seconds.
+- (n) is replaced by the value of each time element that follows the (n).
+- P is the duration (or Period) designator and is always placed at the beginning of the duration.
+- Y is the year designator, and it follows the value for the number of years.
+- M is the month designator, and it follows the value for the number of months.
+- W is the week designator, and it follows the value for the number of weeks.
+- D is the day designator, and it follows the value for the number of days.
+- T is the time designator, and it precedes the time components.
+- H is the hour designator, and it follows the value for the number of hours.
+- M is the minute designator, and it follows the value for the number of minutes.
+- S is the second designator, and it follows the value for the number of seconds.
 This duration value cannot be set greater than the topic’s EventRetentionInDays. It is is an optional field where its minimum value is 1 minute, and its maximum is determined
 by topic’s EventRetentionInDays value. The followings are examples of valid values:
-    - \'P0DT23H12M\' or \'PT23H12M\': for duration of 23 hours and 12 minutes.
-    - \'P1D\' or \'P1DT0H0M0S\': for duration of 1 day.
+- \'P0DT23H12M\' or \'PT23H12M\': for duration of 23 hours and 12 minutes.
+- \'P1D\' or \'P1DT0H0M0S\': for duration of 1 day.
 * **maxDeliveryCount**: int: The maximum delivery count of the events.
 * **receiveLockDurationInSeconds**: int: Maximum period in seconds in which once the message is in received (by the client) state and waiting to be accepted, released or rejected.
 If this time elapsed after a message has been received by the client and not transitioned into accepted (not processed), released or rejected,
 the message is available for redelivery. This is an optional field, where default is 60 seconds, minimum is 60 seconds and maximum is 300 seconds.
+
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceMoveChangeHistory
 ### Properties
@@ -1326,8 +1359,9 @@ the message is available for redelivery. This is an optional field, where defaul
 
 ### StaticStringRoutingEnrichment
 #### Properties
+* **key**: string: Static routing enrichment key.
 * **value**: string: String type routing enrichment value.
-* **valueType**: 'String' (Required): Static routing enrichment value type. For e.g. this property value can be 'String'.
+* **valueType**: 'StaticStringRoutingEnrichment' (Required)
 
 
 ## StorageBlobDeadLetterDestinationProperties
@@ -1341,6 +1375,10 @@ the message is available for redelivery. This is an optional field, where defaul
 * **queueName**: string: The name of the Storage queue under a storage account that is the destination of an event subscription.
 * **resourceId**: string: The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
 
+## SubscriptionFullUrl
+### Properties
+* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
+
 ## SubscriptionProperties
 ### Properties
 * **deliveryConfiguration**: [DeliveryConfiguration](#deliveryconfiguration): Information about the delivery configuration of the event subscription.
@@ -1348,12 +1386,7 @@ the message is available for redelivery. This is an optional field, where defaul
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
 * **filtersConfiguration**: [FiltersConfiguration](#filtersconfiguration): Information about the filter for the event subscription.
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'UpdatedFailed' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
-* **tags**: [SubscriptionPropertiesTags](#subscriptionpropertiestags): Tags relating to Event Subscription resource.
-
-## SubscriptionPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **tags**: [Record](#record): Tags relating to Event Subscription resource.
 
 ## SystemData
 ### Properties
@@ -1379,7 +1412,7 @@ the message is available for redelivery. This is an optional field, where defaul
 * **disableLocalAuth**: bool: This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only Microsoft Entra ID token will be used to authenticate if user is allowed to publish to the topic.
 * **encryption**: [KeyEncryption](#keyencryption): Key encryption configuration properties of the topic resource. This is an optional property. When not specified, no key encryption is used.
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the user topic. This information is provided by the publisher and can be used by the 
+* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the user topic. This information is provided by the publisher and can be used by the
 subscriber to view different types of events that are published.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the topic.
@@ -1389,7 +1422,7 @@ subscriber to view different types of events that are published.
 * **platformCapabilities**: [PlatformCapabilities](#platformcapabilities): Represents the platform capabilities of the resource, including Azure Confidential Compute related properties.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled. 
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled.
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
 
 ## TopicsConfiguration
@@ -1407,10 +1440,10 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **description**: string: Description for the Topic Space resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the TopicSpace resource.
 * **topicTemplates**: string[]: The topic filters in the topic space.
-Example: "topicTemplates": [ 
-              "devices/foo/bar",
-              "devices/topic1/+",
-              "devices/${principal.name}/${principal.attributes.keyName}" ].
+Example: "topicTemplates": [
+"devices/foo/bar",
+"devices/topic1/+",
+"devices/${principal.name}/${principal.attributes.keyName}" ].
 
 ## TopicSpacesConfiguration
 ### Properties
@@ -1446,57 +1479,12 @@ This topic should reside in the same region where namespace is located.
 * **supportedLocations**: string[]: List of locations supported by this topic type.
 * **supportedScopesForSource**: ('AzureSubscription' | 'ManagementGroup' | 'Resource' | 'ResourceGroup' | string)[]: Supported source scopes.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string: The client id of user assigned identity.
-* **principalId**: string: The principal id of user assigned identity.
-
 ## VerifiedPartnerProperties
 ### Properties
 * **organizationName**: string: Official name of the Partner.
 * **partnerDestinationDetails**: [PartnerDetails](#partnerdetails): Details of the partner destination scenario.
 * **partnerDisplayName**: string: Display name of the verified partner.
-* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ImmutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string: ImmutableId of the corresponding partner registration.
 * **partnerTopicDetails**: [PartnerDetails](#partnerdetails): Details of the partner topic scenario.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the verified partner.
 
@@ -1514,7 +1502,7 @@ This topic should reside in the same region where namespace is located.
 * **azureActiveDirectoryTenantId**: string: The Microsoft Entra ID Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
 * **endpointBaseUrl**: string (ReadOnly): The base URL that represents the endpoint of the destination of an event subscription.
-* **endpointUrl**: string {sensitive}: The URL that represents the endpoint of the destination of an event subscription.
+* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
 * **maxEventsPerBatch**: int: Maximum number of events per batch.
 * **minimumTlsVersionAllowed**: '1.0' | '1.1' | '1.2' | string: Minimum TLS version that should be supported by webhook endpoint
 * **preferredBatchSizeInKilobytes**: int: Preferred batch size in Kilobytes.

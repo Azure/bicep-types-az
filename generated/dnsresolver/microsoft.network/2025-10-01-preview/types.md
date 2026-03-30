@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsForwardingRulesetProperties](#dnsforwardingrulesetproperties) (Required): Properties of the DNS forwarding ruleset.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsForwardingRulesets/forwardingRules@2025-10-01-preview
@@ -46,10 +46,10 @@
 * **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsResolverDomainListProperties](#dnsresolverdomainlistproperties): Properties of the DNS resolver domain list.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolverDomainLists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies@2025-10-01-preview
@@ -60,10 +60,10 @@
 * **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsResolverPolicyProperties](#dnsresolverpolicyproperties): Properties of the DNS resolver policy.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolverPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies/dnsSecurityRules@2025-10-01-preview
@@ -74,10 +74,10 @@
 * **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsSecurityRuleProperties](#dnssecurityruleproperties) (Required): Properties of the DNS security rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolverPolicies/dnsSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolverPolicies/virtualNetworkLinks@2025-10-01-preview
@@ -88,10 +88,10 @@
 * **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]([a-zA-Z0-9_\-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsResolverPolicyVirtualNetworkLinkProperties](#dnsresolverpolicyvirtualnetworklinkproperties) (Required): Properties of the DNS resolver policy virtual network link.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolverPolicies/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers@2025-10-01-preview
@@ -105,7 +105,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsResolverProperties](#dnsresolverproperties) (Required): Properties of the DNS resolver.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers/inboundEndpoints@2025-10-01-preview
@@ -119,7 +119,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InboundEndpointProperties](#inboundendpointproperties) (Required): Properties of the inbound endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers/inboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsResolvers/outboundEndpoints@2025-10-01-preview
@@ -133,23 +133,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OutboundEndpointProperties](#outboundendpointproperties) (Required): Properties of the outbound endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers/outboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
-
-## Function listDnsForwardingRulesets (Microsoft.Network/virtualNetworks@2025-10-01-preview)
-* **Resource**: Microsoft.Network/virtualNetworks
-* **ApiVersion**: 2025-10-01-preview
-* **Output**: [VirtualNetworkDnsForwardingRulesetListResult](#virtualnetworkdnsforwardingrulesetlistresult)
-
-## Function listDnsResolverPolicies (Microsoft.Network/virtualNetworks@2025-10-01-preview)
-* **Resource**: Microsoft.Network/virtualNetworks
-* **ApiVersion**: 2025-10-01-preview
-* **Output**: [SubResourceListResult](#subresourcelistresult)
-
-## Function listDnsResolvers (Microsoft.Network/virtualNetworks@2025-10-01-preview)
-* **Resource**: Microsoft.Network/virtualNetworks
-* **ApiVersion**: 2025-10-01-preview
-* **Output**: [SubResourceListResult](#subresourcelistresult)
 
 ## DnsForwardingRulesetProperties
 ### Properties
@@ -191,6 +176,7 @@
 * **dnsResolverDomainLists**: [SubResource](#subresource)[]: DNS resolver policy domains lists that the DNS security rule applies to.
 * **dnsSecurityRuleState**: 'Disabled' | 'Enabled' | string: The state of DNS security rule.
 * **managedDomainLists**: ('AzureDnsThreatIntel' | string)[]: Managed domain lists that the DNS security rule applies to.
+* **oldDnsResolverDomainLists**: [SubResource](#subresource)[] (Required): DNS resolver policy domains lists that the DNS security rule applies to.
 * **priority**: int (Required): The priority of the DNS security rule.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the DNS security rule. This is a read-only property and any attempt to set this value will be ignored.
 
@@ -198,14 +184,9 @@
 ### Properties
 * **domainName**: string (Required): The domain name for the forwarding rule.
 * **forwardingRuleState**: 'Disabled' | 'Enabled' | string: The state of forwarding rule.
-* **metadata**: [ForwardingRulePropertiesMetadata](#forwardingrulepropertiesmetadata): Metadata attached to the forwarding rule.
+* **metadata**: [Record](#record): Metadata attached to the forwarding rule.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the forwarding rule. This is a read-only property and any attempt to set this value will be ignored.
 * **targetDnsServers**: [TargetDnsServer](#targetdnsserver)[] (Required): DNS servers to forward the DNS query to.
-
-## ForwardingRulePropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## InboundEndpointProperties
 ### Properties
@@ -225,14 +206,14 @@
 * **resourceGuid**: string (ReadOnly): The resourceGuid property of the outbound endpoint resource.
 * **subnet**: [SubResource](#subresource) (Required): The reference to the subnet used for the outbound endpoint.
 
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SubResource
 ### Properties
 * **id**: string (Required): Resource ID.
-
-## SubResourceListResult
-### Properties
-* **nextLink**: string: The link to the next page of items
-* **value**: [SubResource](#subresource)[] (Required): The SubResource items on this page
 
 ## SystemData
 ### Properties
@@ -248,68 +229,9 @@
 * **ipAddress**: string (Required): DNS server IP address.
 * **port**: int: DNS server port.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualNetworkDnsForwardingRuleset
-### Properties
-* **id**: string: DNS Forwarding Ruleset Resource ID.
-* **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties): Properties of the virtual network link sub-resource reference.
-
-## VirtualNetworkDnsForwardingRulesetListResult
-### Properties
-* **nextLink**: string: The link to the next page of items
-* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[] (Required): The VirtualNetworkDnsForwardingRuleset items on this page
-
 ## VirtualNetworkLinkProperties
 ### Properties
-* **metadata**: [VirtualNetworkLinkPropertiesMetadata](#virtualnetworklinkpropertiesmetadata): Metadata attached to the virtual network link.
+* **metadata**: [Record](#record): Metadata attached to the virtual network link.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the virtual network link. This is a read-only property and any attempt to set this value will be ignored.
 * **virtualNetwork**: [SubResource](#subresource) (Required): The reference to the virtual network. This cannot be changed after creation.
-
-## VirtualNetworkLinkPropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualNetworkLinkSubResourceProperties
-### Properties
-* **virtualNetworkLink**: [SubResource](#subresource): The reference to the virtual network link.
 

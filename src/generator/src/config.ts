@@ -22,7 +22,23 @@ const config: Record<string, GeneratorConfig> = {
       'Microsoft.KeyVault/preview/2018-02-14-preview/secrets.json',
       'Microsoft.KeyVault/stable/2019-09-01/secrets.json',
     ],
-  }
+    useTypeSpec: true,
+  },
+  'dns': { useTypeSpec: true },
+  'appconfiguration': { useTypeSpec: true },
+  'containerregistry': { useTypeSpec: true },
+  'cosmos-db': { useTypeSpec: true },
+  'eventgrid': { useTypeSpec: true },
+  'redis': { useTypeSpec: true },
+  'signalr': { useTypeSpec: true },
+  'servicebus': { useTypeSpec: true },
+  'maps': { useTypeSpec: true },
+  'relay': { useTypeSpec: true },
+  'attestation': { useTypeSpec: true },
+  'loadtestservice': { useTypeSpec: true },
+  'mongocluster': { useTypeSpec: true },
+  'dnsresolver': { useTypeSpec: true },
+  'hardwaresecuritymodules': { useTypeSpec: true },
 }
 
 export function getConfig(basePath: string): GeneratorConfig {

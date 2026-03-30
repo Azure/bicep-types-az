@@ -1,24 +1,46 @@
 # Microsoft.LoadTestService
-  
-> [!NOTE]
-> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
+> [!NOTE]
+> The code samples in this document are generated from TypeSpec definitions.
+
+
+## microsoft.loadtestservice/locations/playwrightquotas
+
+### Basic Microsoft.LoadTestService/locations/playwrightQuotas resource
+```bicep
+resource exampleResource 'Microsoft.LoadTestService/locations/playwrightQuotas@2026-02-01-preview' = {
+  parent: parentResource
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
+  }
+}
+```
 
 ## microsoft.loadtestservice/playwrightworkspaces
 
-PlaywrightWorkspaces_CreateOrUpdate
+### Basic Microsoft.LoadTestService/playwrightWorkspaces resource
 ```bicep
 resource exampleResource 'Microsoft.LoadTestService/playwrightWorkspaces@2026-02-01-preview' = {
   name: 'example'
-  location: 'westus3'
+  location: 'eastus'
   properties: {
-    localAuth: 'Enabled'
-    regionalAffinity: 'Enabled'
-    reporting: 'Enabled'
-    storageUri: 'https://examplestorageaccount.blob.core.windows.net'
+    // Add resource-specific properties here
   }
-  tags: {
-    Team: 'Dev Exp'
+}
+```
+
+## microsoft.loadtestservice/playwrightworkspaces/quotas
+
+### Basic Microsoft.LoadTestService/playwrightWorkspaces/quotas resource
+```bicep
+resource exampleResource 'Microsoft.LoadTestService/playwrightWorkspaces/quotas@2026-02-01-preview' = {
+  parent: parentResource
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    // Add resource-specific properties here
   }
 }
 ```

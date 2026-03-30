@@ -1,265 +1,102 @@
 # Microsoft.Cache
-  
+
 > [!NOTE]
-> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+> The code samples in this document are generated from TypeSpec definitions.
 
 
 ## microsoft.cache/redis
 
-RedisCacheCreate
+### Basic Microsoft.Cache/redis resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
   name: 'example'
-  location: 'East US'
+  location: 'eastus'
   properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    redisVersion: '4'
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
+    // Add resource-specific properties here
   }
-  zones: [
-    '1'
-  ]
-}
-```
-
-RedisCacheCreateAutomaticZonalAllocationPolicy
-```bicep
-resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
-    zonalAllocationPolicy: 'Automatic'
-  }
-}
-```
-
-RedisCacheCreateDefaultVersion
-```bicep
-resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
-  }
-  zones: [
-    '1'
-  ]
-}
-```
-
-RedisCacheCreateLatestVersion
-```bicep
-resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    redisVersion: 'Latest'
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
-  }
-  zones: [
-    '1'
-  ]
-}
-```
-
-RedisCacheCreateNoZonesZonalAllocationPolicy
-```bicep
-resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
-    zonalAllocationPolicy: 'NoZones'
-  }
-}
-```
-
-RedisCacheCreateUserDefinedZonalAllocationPolicy
-```bicep
-resource exampleResource 'Microsoft.Cache/redis@2024-11-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    enableNonSslPort: true
-    minimumTlsVersion: '1.2'
-    redisConfiguration: {
-      'maxmemory-policy': 'allkeys-lru'
-    }
-    redisVersion: 'Latest'
-    replicasPerPrimary: 2
-    shardCount: 2
-    sku: {
-      name: 'Premium'
-      capacity: 1
-      family: 'P'
-    }
-    staticIP: '192.168.0.5'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1'
-    zonalAllocationPolicy: 'UserDefined'
-  }
-  zones: [
-    '1'
-  ]
 }
 ```
 
 ## microsoft.cache/redis/accesspolicies
 
-RedisCacheAccessPolicyCreateUpdate
+### Basic Microsoft.Cache/redis/accessPolicies resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/accessPolicies@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    permissions: '+get +hget'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.cache/redis/accesspolicyassignments
 
-RedisCacheAccessPolicyAssignmentCreateUpdate
+### Basic Microsoft.Cache/redis/accessPolicyAssignments resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/accessPolicyAssignments@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    accessPolicyName: 'accessPolicy1'
-    objectId: '6497c918-11ad-41e7-1b0f-7c518a87d0b0'
-    objectIdAlias: 'TestAADAppRedis'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.cache/redis/firewallrules
 
-RedisCacheFirewallRuleCreate
+### Basic Microsoft.Cache/redis/firewallRules resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/firewallRules@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    endIP: '192.168.1.4'
-    startIP: '192.168.1.1'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.cache/redis/linkedservers
 
-LinkedServer_Create
+### Basic Microsoft.Cache/redis/linkedServers resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/linkedServers@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    linkedRedisCacheId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
-    linkedRedisCacheLocation: 'West US'
-    serverRole: 'Secondary'
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.cache/redis/patchschedules
 
-RedisCachePatchSchedulesCreateOrUpdate
+### Basic Microsoft.Cache/redis/patchSchedules resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/patchSchedules@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    scheduleEntries: [
-      {
-        dayOfWeek: 'Monday'
-        maintenanceWindow: 'PT5H'
-        startHourUtc: 12
-      }
-      {
-        dayOfWeek: 'Tuesday'
-        startHourUtc: 12
-      }
-    ]
+    // Add resource-specific properties here
   }
 }
 ```
 
 ## microsoft.cache/redis/privateendpointconnections
 
-RedisCachePutPrivateEndpointConnection
+### Basic Microsoft.Cache/redis/privateEndpointConnections resource
 ```bicep
 resource exampleResource 'Microsoft.Cache/redis/privateEndpointConnections@2024-11-01' = {
-  parent: parentResource 
+  parent: parentResource
   name: 'example'
+  location: 'eastus'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
+    // Add resource-specific properties here
   }
 }
 ```

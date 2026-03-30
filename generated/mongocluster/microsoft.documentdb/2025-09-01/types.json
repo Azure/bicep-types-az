@@ -1,16 +1,10 @@
 [
   {
-    "$type": "StringType",
-    "minLength": 3,
-    "maxLength": 40,
-    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*"
+    "$type": "StringType"
   },
   {
     "$type": "StringLiteralType",
     "value": "Microsoft.DocumentDB/mongoClusters"
-  },
-  {
-    "$type": "StringType"
   },
   {
     "$type": "StringLiteralType",
@@ -22,7 +16,7 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
@@ -43,195 +37,379 @@
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/3"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
+      "systemData": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/4"
         },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/101"
-        },
-        "flags": 0,
-        "description": "The managed service identities assigned to this resource."
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
-      "systemData": {
+      "properties": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/16"
         },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
       }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
     }
   },
   {
     "$type": "ObjectType",
     "name": "MongoClusterProperties",
     "properties": {
+      "oldCreateMode": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 4,
+        "description": "The mode to create a mongo cluster."
+      },
+      "oldRestoreParameters": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 4,
+        "description": "The parameters to create a point-in-time restore mongo cluster."
+      },
+      "oldReplicaParameters": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 4,
+        "description": "The parameters to create a replica mongo cluster."
+      },
       "createMode": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/28"
         },
         "flags": 0,
         "description": "The mode to create a mongo cluster."
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/11"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "The parameters to create a point-in-time restore mongo cluster."
       },
       "replicaParameters": {
         "type": {
-          "$ref": "#/12"
+          "$ref": "#/23"
         },
         "flags": 0,
         "description": "The parameters to create a replica mongo cluster."
       },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The administrator's login for the mongo cluster."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The password of the administrator login."
+      },
       "administrator": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/29"
         },
         "flags": 0,
         "description": "The local administrator properties for the mongo cluster."
       },
       "serverVersion": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The Mongo DB server version. Defaults to the latest available version if not specified."
       },
       "connectionString": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The default mongo connection string for the cluster."
       },
+      "earliestRestoreTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Earliest restore timestamp in UTC ISO8601 format."
+      },
       "provisioningState": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/37"
         },
         "flags": 2,
         "description": "The provisioning state of the mongo cluster."
       },
       "clusterStatus": {
         "type": {
-          "$ref": "#/29"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "The status of the mongo cluster."
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "Whether or not public endpoint access is allowed for this mongo cluster."
       },
+      "nodeGroupSpecs": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The list of node group specs in the cluster."
+      },
       "highAvailability": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "The high availability properties of the mongo cluster."
       },
       "storage": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "The storage properties of the mongo cluster."
       },
       "sharding": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "The sharding properties of the mongo cluster."
       },
       "compute": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "The compute properties of the mongo cluster."
       },
       "backup": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/66"
         },
         "flags": 0,
         "description": "The backup properties of the mongo cluster."
       },
       "dataApi": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/67"
         },
         "flags": 0,
         "description": "The Data API properties of the mongo cluster."
       },
       "privateEndpointConnections": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/85"
         },
         "flags": 2,
         "description": "List of private endpoint connections."
       },
       "previewFeatures": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/88"
         },
         "flags": 0,
         "description": "List of private endpoint connections."
       },
       "replica": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/89"
         },
         "flags": 2,
         "description": "The replication properties for the mongo cluster"
       },
       "infrastructureVersion": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The infrastructure version the cluster is provisioned on."
       },
       "authConfig": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/101"
         },
         "flags": 0,
         "description": "The authentication configuration for the cluster."
       },
+      "oldEncryption": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The encryption configuration for the cluster. Depends on identity being configured."
+      },
       "encryption": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/106"
         },
         "flags": 0,
         "description": "The encryption configuration for the cluster. Depends on identity being configured."
@@ -258,19 +436,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/6"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/7"
+        "$ref": "#/17"
       },
       {
-        "$ref": "#/8"
+        "$ref": "#/18"
       },
       {
-        "$ref": "#/9"
+        "$ref": "#/19"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/20"
       }
     ]
   },
@@ -280,14 +458,14 @@
     "properties": {
       "pointInTimeUTC": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "UTC point in time to restore a mongo cluster"
       },
       "sourceResourceId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "Resource ID to locate the source cluster to restore"
@@ -300,14 +478,14 @@
     "properties": {
       "sourceResourceId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The id of the replication source cluster."
       },
       "sourceLocation": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "The location of the source cluster"
@@ -315,28 +493,60 @@
     }
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PointInTimeRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoReplica"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Replica"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      }
+    ]
+  },
+  {
     "$type": "ObjectType",
     "name": "AdministratorProperties",
     "properties": {
       "userName": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The administrator user name."
       },
       "password": {
         "type": {
-          "$ref": "#/14"
+          "$ref": "#/0"
         },
         "flags": 4,
         "description": "The administrator password."
       }
     }
-  },
-  {
-    "$type": "StringType",
-    "sensitive": true
   },
   {
     "$type": "StringLiteralType",
@@ -349,6 +559,23 @@
   {
     "$type": "StringLiteralType",
     "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   },
   {
     "$type": "StringLiteralType",
@@ -366,25 +593,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/15"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/16"
+        "$ref": "#/33"
       },
       {
-        "$ref": "#/17"
+        "$ref": "#/34"
       },
       {
-        "$ref": "#/18"
+        "$ref": "#/35"
       },
       {
-        "$ref": "#/19"
-      },
-      {
-        "$ref": "#/20"
-      },
-      {
-        "$ref": "#/2"
+        "$ref": "#/36"
       }
     ]
   },
@@ -420,28 +641,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/22"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/23"
+        "$ref": "#/38"
       },
       {
-        "$ref": "#/24"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/25"
+        "$ref": "#/40"
       },
       {
-        "$ref": "#/26"
+        "$ref": "#/41"
       },
       {
-        "$ref": "#/27"
+        "$ref": "#/42"
       },
       {
-        "$ref": "#/28"
+        "$ref": "#/43"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/44"
       }
     ]
   },
@@ -457,15 +678,83 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/30"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/31"
+        "$ref": "#/46"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/47"
       }
     ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeGroupSpec",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource sku for the node group. This defines the size of CPU and memory that is provisioned for each node. Example values: 'M30', 'M40'."
+      },
+      "diskSizeGB": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The disk storage size for the node group in GB. Example values: 128, 256, 512, 1024."
+      },
+      "enableHa": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Whether high availability is enabled on the node group."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The node type deployed in the node group."
+      },
+      "nodeCount": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The number of nodes in the node group."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
   },
   {
     "$type": "ObjectType",
@@ -473,7 +762,7 @@
     "properties": {
       "targetMode": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "The target high availability mode requested for the cluster."
@@ -496,16 +785,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/34"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/35"
+        "$ref": "#/56"
       },
       {
-        "$ref": "#/36"
+        "$ref": "#/57"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/58"
       }
     ]
   },
@@ -515,22 +804,33 @@
     "properties": {
       "sizeGb": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "The size of the data disk assigned to each server."
       },
       "type": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/63"
         },
         "flags": 0,
         "description": "The type of storage to provision the cluster servers with."
+      },
+      "iops": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The IOPs of the storage assigned to each server. Only applicable if the type is 'PremiumSSDv2'."
+      },
+      "throughput": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The throughput of the storage assigned to each server. Only applicable if the type is 'PremiumSSDv2'."
       }
     }
-  },
-  {
-    "$type": "IntegerType"
   },
   {
     "$type": "StringLiteralType",
@@ -544,13 +844,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/40"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/41"
+        "$ref": "#/61"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/62"
       }
     ]
   },
@@ -560,7 +860,7 @@
     "properties": {
       "shardCount": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "Number of shards to provision on the cluster."
@@ -573,7 +873,7 @@
     "properties": {
       "tier": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The compute tier to assign to the cluster, where each tier maps to a virtual-core and memory size. Example values: 'M30', 'M40'."
@@ -586,7 +886,7 @@
     "properties": {
       "earliestRestoreTime": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Earliest restore timestamp in UTC ISO8601 format."
@@ -599,7 +899,7 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "The mode to indicate whether the Mongo Data API is enabled for a cluster."
@@ -618,13 +918,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/47"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/48"
+        "$ref": "#/68"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/69"
       }
     ]
   },
@@ -632,40 +932,40 @@
     "$type": "ObjectType",
     "name": "PrivateEndpointConnection",
     "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 0,
-        "description": "Resource properties."
-      },
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The name of the resource"
       },
       "type": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
       },
       "systemData": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The private endpoint connection properties"
       }
     }
   },
@@ -675,28 +975,28 @@
     "properties": {
       "groupIds": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/73"
         },
         "flags": 2,
         "description": "The group ids for the private endpoint resource."
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "The private endpoint resource."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/75"
         },
         "flags": 1,
         "description": "A collection of information about the state of the connection between service consumer and provider."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/84"
         },
         "flags": 2,
         "description": "The provisioning state of the private endpoint connection resource."
@@ -706,7 +1006,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2"
+      "$ref": "#/0"
     }
   },
   {
@@ -715,10 +1015,10 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The ARM identifier for private endpoint."
+        "description": "The resource identifier of the private endpoint"
       }
     }
   },
@@ -728,21 +1028,21 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
       },
       "description": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The reason for approval/rejection of the connection."
       },
       "actionsRequired": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "A message indicating if changes on the service provider require any updates on the consumer."
@@ -765,16 +1065,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/55"
+        "$ref": "#/76"
       },
       {
-        "$ref": "#/56"
+        "$ref": "#/77"
       },
       {
-        "$ref": "#/57"
+        "$ref": "#/78"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/0"
       }
     ]
   },
@@ -798,146 +1098,26 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/59"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/60"
+        "$ref": "#/80"
       },
       {
-        "$ref": "#/61"
+        "$ref": "#/81"
       },
       {
-        "$ref": "#/62"
+        "$ref": "#/82"
       },
       {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SystemData",
-    "properties": {
-      "createdBy": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The identity that created the resource."
-      },
-      "createdByType": {
-        "type": {
-          "$ref": "#/69"
-        },
-        "flags": 0,
-        "description": "The type of identity that created the resource."
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource creation (UTC)."
-      },
-      "lastModifiedBy": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The identity that last modified the resource."
-      },
-      "lastModifiedByType": {
-        "type": {
-          "$ref": "#/74"
-        },
-        "flags": 0,
-        "description": "The type of identity that last modified the resource."
-      },
-      "lastModifiedAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource last modification (UTC)"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/65"
-      },
-      {
-        "$ref": "#/66"
-      },
-      {
-        "$ref": "#/67"
-      },
-      {
-        "$ref": "#/68"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/70"
-      },
-      {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/2"
+        "$ref": "#/83"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/50"
+      "$ref": "#/71"
     }
   },
   {
@@ -948,17 +1128,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/76"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/86"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/77"
+      "$ref": "#/87"
     }
   },
   {
@@ -967,21 +1147,21 @@
     "properties": {
       "sourceResourceId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The resource id the source cluster for the replica cluster."
       },
       "role": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/93"
         },
         "flags": 2,
         "description": "The replication role of the cluster"
       },
       "replicationState": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/100"
         },
         "flags": 2,
         "description": "The replication link state of the replica cluster."
@@ -1004,16 +1184,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/80"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/81"
+        "$ref": "#/90"
       },
       {
-        "$ref": "#/82"
+        "$ref": "#/91"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/92"
       }
     ]
   },
@@ -1045,25 +1225,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/84"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/85"
+        "$ref": "#/94"
       },
       {
-        "$ref": "#/86"
+        "$ref": "#/95"
       },
       {
-        "$ref": "#/87"
+        "$ref": "#/96"
       },
       {
-        "$ref": "#/88"
+        "$ref": "#/97"
       },
       {
-        "$ref": "#/89"
+        "$ref": "#/98"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/99"
       }
     ]
   },
@@ -1073,7 +1253,7 @@
     "properties": {
       "allowedModes": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/105"
         },
         "flags": 0,
         "description": "Allowed authentication modes for data access on the cluster."
@@ -1092,20 +1272,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/92"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/93"
+        "$ref": "#/102"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/103"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/94"
+      "$ref": "#/104"
     }
   },
   {
@@ -1114,7 +1294,7 @@
     "properties": {
       "customerManagedKeyEncryption": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "Customer managed key encryption settings."
@@ -1127,14 +1307,14 @@
     "properties": {
       "keyEncryptionKeyIdentity": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/108"
         },
         "flags": 0,
         "description": "The identity used to access the key encryption key."
       },
       "keyEncryptionKeyUrl": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The URI of the key vault key used for encryption."
@@ -1147,14 +1327,14 @@
     "properties": {
       "identityType": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/110"
         },
         "flags": 0,
         "description": "The type of identity. Only 'UserAssignedIdentity' is supported."
       },
       "userAssignedIdentityResourceId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 0,
         "description": "The user assigned identity resource id."
@@ -1169,10 +1349,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/99"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/109"
       }
     ]
   },
@@ -1182,39 +1362,33 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/117"
         },
         "flags": 1,
-        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
+        "description": "The type of managed identity assigned to this resource."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/15"
         },
         "flags": 0,
-        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
+        "description": "The identities assigned to this resource by the user."
       }
     }
-  },
-  {
-    "$type": "StringType",
-    "minLength": 36,
-    "maxLength": 36,
-    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
     "$type": "StringLiteralType",
@@ -1233,75 +1407,40 @@
     "value": "SystemAssigned,UserAssigned"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned, UserAssigned"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/103"
+        "$ref": "#/112"
       },
       {
-        "$ref": "#/104"
+        "$ref": "#/113"
       },
       {
-        "$ref": "#/105"
+        "$ref": "#/114"
       },
       {
-        "$ref": "#/106"
+        "$ref": "#/115"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/102"
-        },
-        "flags": 2,
-        "description": "The principal ID of the assigned identity."
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/102"
-        },
-        "flags": 2,
-        "description": "The client ID of the assigned identity."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/108"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/mongoClusters@2025-09-01",
     "body": {
-      "$ref": "#/4"
+      "$ref": "#/3"
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "StringType",
-    "minLength": 1,
-    "maxLength": 80,
-    "pattern": "^[a-zA-Z0-9][-_.a-zA-Z0-9]*"
   },
   {
     "$type": "StringLiteralType",
@@ -1317,45 +1456,45 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/119"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/120"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/116"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
       }
     }
   },
@@ -1365,21 +1504,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/130"
         },
         "flags": 2,
         "description": "The provisioning state of the firewall rule."
       },
       "startIpAddress": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/131"
         },
         "flags": 1,
         "description": "The start IP address of the mongo cluster firewall rule. Must be IPv4 format."
       },
       "endIpAddress": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/131"
         },
         "flags": 1,
         "description": "The end IP address of the mongo cluster firewall rule. Must be IPv4 format."
@@ -1399,6 +1538,23 @@
     "value": "Canceled"
   },
   {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
     "$type": "StringLiteralType",
     "value": "InProgress"
   },
@@ -1414,25 +1570,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/117"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/118"
+        "$ref": "#/126"
       },
       {
-        "$ref": "#/119"
+        "$ref": "#/127"
       },
       {
-        "$ref": "#/120"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/121"
-      },
-      {
-        "$ref": "#/122"
-      },
-      {
-        "$ref": "#/2"
+        "$ref": "#/129"
       }
     ]
   },
@@ -1444,7 +1594,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/mongoClusters/firewallRules@2025-09-01",
     "body": {
-      "$ref": "#/115"
+      "$ref": "#/121"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1463,45 +1613,45 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/133"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/134"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
       }
     }
   },
@@ -1509,16 +1659,10 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/mongoClusters/privateEndpointConnections@2025-09-01",
     "body": {
-      "$ref": "#/128"
+      "$ref": "#/135"
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "StringType",
-    "minLength": 1,
-    "maxLength": 63,
-    "pattern": "^[a-zA-Z0-9\\-]*"
   },
   {
     "$type": "StringLiteralType",
@@ -1534,45 +1678,45 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/137"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/138"
         },
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/134"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/4"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
       }
     }
   },
@@ -1582,21 +1726,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/148"
         },
         "flags": 2,
         "description": "The provisioning state of the user."
       },
       "identityProvider": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "The user's identity provider definition."
       },
       "roles": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/163"
         },
         "flags": 0,
         "description": "Database roles that are assigned to the user."
@@ -1616,6 +1760,23 @@
     "value": "Canceled"
   },
   {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
     "$type": "StringLiteralType",
     "value": "InProgress"
   },
@@ -1631,25 +1792,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/135"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/136"
+        "$ref": "#/144"
       },
       {
-        "$ref": "#/137"
+        "$ref": "#/145"
       },
       {
-        "$ref": "#/138"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/139"
-      },
-      {
-        "$ref": "#/140"
-      },
-      {
-        "$ref": "#/2"
+        "$ref": "#/147"
       }
     ]
   },
@@ -1659,8 +1814,8 @@
     "discriminator": "type",
     "baseProperties": {},
     "elements": {
-      "MicrosoftEntraID": {
-        "$ref": "#/143"
+      "EntraIdentityProvider": {
+        "$ref": "#/150"
       }
     }
   },
@@ -1668,21 +1823,38 @@
     "$type": "ObjectType",
     "name": "EntraIdentityProvider",
     "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 1
+      },
       "properties": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/154"
         },
         "flags": 1,
         "description": "The Entra identity properties for the user."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/148"
-        },
-        "flags": 1,
-        "description": "The type of identity provider that the user belongs to."
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftEntraID"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/151"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
   },
   {
     "$type": "ObjectType",
@@ -1690,7 +1862,7 @@
     "properties": {
       "principalType": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/157"
         },
         "flags": 1,
         "description": "The principal type of the user."
@@ -1709,19 +1881,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/145"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/146"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/156"
       }
     ]
   },
   {
     "$type": "StringLiteralType",
-    "value": "MicrosoftEntraID"
+    "value": "EntraIdentityProvider"
   },
   {
     "$type": "ObjectType",
@@ -1729,19 +1901,23 @@
     "properties": {
       "db": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 1,
         "description": "Database scope that the role is assigned to."
       },
       "role": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/162"
         },
         "flags": 1,
         "description": "The role that is assigned to the user on the database scope."
       }
     }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "dbOwner"
   },
   {
     "$type": "StringLiteralType",
@@ -1751,24 +1927,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/150"
+        "$ref": "#/0"
       },
       {
-        "$ref": "#/2"
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/149"
+      "$ref": "#/159"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/mongoClusters/users@2025-09-01",
     "body": {
-      "$ref": "#/133"
+      "$ref": "#/139"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1779,7 +1958,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/167"
         },
         "flags": 2,
         "description": "An array that contains the connection strings for a mongo cluster."
@@ -1792,21 +1971,21 @@
     "properties": {
       "connectionString": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Value of the connection string"
       },
       "description": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Description of the connection string"
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 2,
         "description": "Name of the connection string."
@@ -1816,7 +1995,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/155"
+      "$ref": "#/166"
     }
   },
   {
@@ -1825,7 +2004,57 @@
     "resourceType": "Microsoft.DocumentDB/mongoClusters",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/154"
+      "$ref": "#/165"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PromoteReplicaRequest",
+    "properties": {
+      "promoteOption": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 1,
+        "description": "The promote option to apply to the operation."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "The mode to apply to the promote operation. Value is optional and default value is 'Switchover'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Forced"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/170"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Switchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/0"
+      },
+      {
+        "$ref": "#/172"
+      }
+    ]
   }
 ]
