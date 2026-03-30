@@ -119,7 +119,6 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2022-12-01' 
   location: 'westus'
   properties: {
     createMode: 'Replica'
-    pointInTimeUTC: '2021-06-27T00:04:59.4078005+00:00'
     sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/sourcepgservername'
   }
 }

@@ -34,8 +34,8 @@
 
 ## ServiceGroupCollectionResponse
 ### Properties
-* **nextLink**: string: URL to query the next page of results for this request
-* **value**: [ServiceGroup](#servicegroup)[]: Array of service groups based on the request criteria
+* **nextLink**: string: The link to the next page of items
+* **value**: [ServiceGroup](#servicegroup)[] (Required): The ServiceGroup items on this page
 
 ## ServiceGroupProperties
 ### Properties

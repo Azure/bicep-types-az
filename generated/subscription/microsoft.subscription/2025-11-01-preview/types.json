@@ -54,7 +54,7 @@
           "$ref": "#/19"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -491,7 +491,7 @@
           "$ref": "#/19"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -615,7 +615,7 @@
           "$ref": "#/19"
         },
         "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },

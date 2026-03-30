@@ -102,6 +102,11 @@
 ### Properties
 * **actionOnDiskDelay**: 'AutomaticReattach' | 'None' | string: Determines on how to handle disks with slow I/O.
 
+## CommonUserAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
 ## CopyCompletionError
 ### Properties
 * **errorCode**: 'CopySourceNotFound' | string (Required): Indicates the error code if the background copy of a resource created via the CopyStart operation fails.
@@ -220,7 +225,7 @@
 ## EncryptionSetIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+* **Additional Properties Type**: [CommonUserAssignedIdentitiesValue](#commonuserassignedidentitiesvalue)
 
 ## EncryptionSetProperties
 ### Properties
@@ -379,9 +384,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## UserAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 

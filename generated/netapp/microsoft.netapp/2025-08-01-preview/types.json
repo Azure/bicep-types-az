@@ -5382,11 +5382,24 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ListQuotaReportResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the ListQuotaReport."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListQuotaReportResponse",
     "properties": {
-      "value": {
+      "quotaReportRecords": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "List of quota reports"
@@ -5399,7 +5412,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "Type of quota"
@@ -5461,9 +5474,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/400"
-      },
-      {
         "$ref": "#/401"
       },
       {
@@ -5473,6 +5483,9 @@
         "$ref": "#/403"
       },
       {
+        "$ref": "#/404"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5480,7 +5493,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/399"
+      "$ref": "#/400"
     }
   },
   {
@@ -5498,7 +5511,7 @@
     "properties": {
       "exclude": {
         "type": {
-          "$ref": "#/410"
+          "$ref": "#/411"
         },
         "flags": 0,
         "description": "Exclude Replications filter. 'None' returns all replications, 'Deleted' excludes deleted replications. Default is 'None'"
@@ -5517,10 +5530,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/408"
+        "$ref": "#/409"
       },
       {
-        "$ref": "#/409"
+        "$ref": "#/410"
       },
       {
         "$ref": "#/2"
@@ -5533,7 +5546,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/424"
+          "$ref": "#/425"
         },
         "flags": 1,
         "description": "The Replication items on this page"
@@ -5560,14 +5573,14 @@
       },
       "endpointType": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/416"
         },
         "flags": 0,
         "description": "Indicates whether the local volume is the source or destination for the Volume Replication"
       },
       "replicationSchedule": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "Schedule"
@@ -5588,7 +5601,7 @@
       },
       "mirrorState": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 2,
         "description": "The status of the replication"
@@ -5621,10 +5634,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/413"
+        "$ref": "#/414"
       },
       {
-        "$ref": "#/414"
+        "$ref": "#/415"
       },
       {
         "$ref": "#/2"
@@ -5647,13 +5660,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/416"
-      },
-      {
         "$ref": "#/417"
       },
       {
         "$ref": "#/418"
+      },
+      {
+        "$ref": "#/419"
       },
       {
         "$ref": "#/2"
@@ -5676,13 +5689,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/420"
-      },
-      {
         "$ref": "#/421"
       },
       {
         "$ref": "#/422"
+      },
+      {
+        "$ref": "#/423"
       },
       {
         "$ref": "#/2"
@@ -5692,7 +5705,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/412"
+      "$ref": "#/413"
     }
   },
   {
@@ -5701,10 +5714,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/411"
+      "$ref": "#/412"
     },
     "input": {
-      "$ref": "#/407"
+      "$ref": "#/408"
     }
   }
 ]

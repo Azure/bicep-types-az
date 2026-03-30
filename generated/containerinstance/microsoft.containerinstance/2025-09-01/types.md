@@ -6,13 +6,13 @@
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerGroupProfileProperties](#containergroupprofileproperties): The container group profile properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ContainerGroupProfileTags](#containergroupprofiletags): Resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroupProfiles' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: The zones for the container group.
+* **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.ContainerInstance/containerGroupProfiles/revisions@2025-09-01
 * **Readable Scope(s)**: ResourceGroup
@@ -20,13 +20,13 @@
 ### Properties
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerGroupProfileProperties](#containergroupprofileproperties) (ReadOnly): The container group profile properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ContainerGroupProfileTags](#containergroupprofiletags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroupProfiles/revisions' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[] (ReadOnly): The zones for the container group.
+* **zones**: string[] (ReadOnly): The availability zones.
 
 ## Resource Microsoft.ContainerInstance/containerGroups@2025-09-01
 * **Readable Scope(s)**: ResourceGroup
@@ -37,10 +37,11 @@
 * **identity**: [ContainerGroupIdentity](#containergroupidentity): The identity of the container group, if configured.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerGroupPropertiesProperties](#containergrouppropertiesproperties) (Required): The container group properties
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required): The container group properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ContainerGroupTags](#containergrouptags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: The zones for the container group.
+* **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.ContainerInstance/ngroups@2025-09-01
 * **Readable Scope(s)**: ResourceGroup
@@ -49,13 +50,13 @@
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [NGroupIdentity](#ngroupidentity): The identity of the NGroup, if configured.
-* **location**: string: The resource location.
+* **location**: string: The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NGroupProperties](#ngroupproperties): Describes the properties of the NGroups resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [NGroupTags](#ngrouptags): Resource tags.
 * **type**: 'Microsoft.ContainerInstance/ngroups' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: The zones for the container group.
+* **zones**: string[]: The availability zones.
 
 ## ApiEntityReference
 ### Properties
@@ -74,7 +75,7 @@
 ### Properties
 * **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
 * **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
-* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
+* **storageAccountKey**: string {sensitive}: The storage account access key used to access the Azure File share.
 * **storageAccountKeyReference**: string: The reference to the storage account access key used to access the Azure File share.
 * **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
 
@@ -129,7 +130,7 @@
 * **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **priority**: 'Regular' | 'Spot' | string: The priority of the container group.
 * **registeredRevisions**: int[] (ReadOnly): Registered revisions are calculated at request time based off the records in the table logs.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
@@ -154,12 +155,17 @@
 * **revision**: int: The revision of the CG profile is an optional property. If customer does not to provide a revision then NGroups will pickup the latest revision of CGProfile.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage profile for storage related settings of a container group profile.
 
-## ContainerGroupPropertiesInstanceView
+## ContainerGroupProfileTags
 ### Properties
-* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
-* **state**: string (ReadOnly): The state of the container group. Only valid in response.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## ContainerGroupPropertiesProperties
+## ContainerGroupProfileTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ContainerGroupProperties
 ### Properties
 * **confidentialComputeProperties**: [ConfidentialComputeProperties](#confidentialcomputeproperties): The properties for confidential container group
 * **containerGroupProfile**: [ContainerGroupProfileReferenceDefinition](#containergroupprofilereferencedefinition): The reference container group profile properties.
@@ -177,7 +183,7 @@
 * **osType**: 'Linux' | 'Windows' | string: The operating system type required by the containers in the container group.
 * **priority**: 'Regular' | 'Spot' | string: The priority of the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
@@ -187,10 +193,20 @@
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
+## ContainerGroupPropertiesInstanceView
+### Properties
+* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
+* **state**: string (ReadOnly): The state of the container group. Only valid in response.
+
 ## ContainerGroupSubnetId
 ### Properties
 * **id**: string (Required): Resource ID of virtual network and subnet.
 * **name**: string: Friendly name for the subnet.
+
+## ContainerGroupTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ContainerHttpGet
 ### Properties
@@ -441,6 +457,11 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
 * **updateProfile**: [UpdateProfile](#updateprofile): Used by the customer to specify the way to update the Container Groups in NGroup.
 
+## NGroupTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PlacementProfile
 ### Properties
 * **faultDomainCount**: int: The number of fault domains to be used to spread CGs in the NGroups resource. This can only be specified during NGroup creation and is immutable after that.
@@ -467,41 +488,11 @@
 * **limits**: [ResourceLimits](#resourcelimits): The resource limits of this container instance.
 * **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests of this container instance.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SecretReference
 ### Properties
 * **identity**: string (Required): The ARM resource id of the managed identity that has access to the secret in the key vault
 * **name**: string (Required): The identifier of the secret reference
 * **secretReferenceUri**: string (Required): The URI to the secret in key vault
-
-## SecretReferenceVolume
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SecretVolume
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SecurityContextCapabilitiesDefinition
 ### Properties
@@ -558,12 +549,22 @@
 * **emptyDir**: any: The empty directory volume.
 * **gitRepo**: [GitRepoVolume](#gitrepovolume): The git repo volume.
 * **name**: string (Required): The name of the volume.
-* **secret**: [SecretVolume](#secretvolume): The secret volume.
-* **secretReference**: [SecretReferenceVolume](#secretreferencevolume): The secret reference volume.
+* **secret**: [VolumeSecret](#volumesecret): The secret volume.
+* **secretReference**: [VolumeSecretReference](#volumesecretreference): The secret reference volume.
 
 ## VolumeMount
 ### Properties
 * **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
 * **name**: string (Required): The name of the volume mount.
 * **readOnly**: bool: The flag indicating whether the volume mount is read-only.
+
+## VolumeSecret
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VolumeSecretReference
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -6,11 +6,11 @@
 ### Properties
 * **apiVersion**: '2026-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessConnectorProperties](#accessconnectorproperties): Azure Databricks Access Connector properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/accessConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -24,7 +24,7 @@
 * **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties) (Required): The workspace properties.
 * **sku**: [Sku](#sku): The SKU of the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -36,6 +36,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Databricks/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Databricks/workspaces/privateLinkResources@2026-01-01
@@ -46,6 +47,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GroupIdInformationProperties](#groupidinformationproperties) (ReadOnly): The group id properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Databricks/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2026-01-01
@@ -56,6 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat) (Required): List of properties for vNet Peering
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccessConnectorProperties
@@ -157,10 +160,11 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
-* **type**: string (ReadOnly): The resource type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties

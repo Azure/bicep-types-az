@@ -15,32 +15,32 @@
 
 ### FusionAlertRule
 #### Properties
-* **kind**: 'Fusion' (Required): The kind of the alert rule
+* **kind**: 'Fusion' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule properties
 
 ### MicrosoftSecurityIncidentCreationAlertRule
 #### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The kind of the alert rule
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule properties
 
 ### MLBehaviorAnalyticsAlertRule
 #### Properties
-* **kind**: 'MLBehaviorAnalytics' (Required): The kind of the alert rule
+* **kind**: 'MLBehaviorAnalytics' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MLBehaviorAnalyticsAlertRuleProperties](#mlbehavioranalyticsalertruleproperties): MLBehaviorAnalytics alert rule properties
 
 ### NrtAlertRule
 #### Properties
-* **kind**: 'NRT' (Required): The kind of the alert rule
+* **kind**: 'NRT' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [NrtAlertRuleProperties](#nrtalertruleproperties): NRT alert rule properties
 
 ### ScheduledAlertRule
 #### Properties
-* **kind**: 'Scheduled' (Required): The kind of the alert rule
+* **kind**: 'Scheduled' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule properties
 
 ### ThreatIntelligenceAlertRule
 #### Properties
-* **kind**: 'ThreatIntelligence' (Required): The kind of the alert rule
+* **kind**: 'ThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ThreatIntelligenceAlertRuleProperties](#threatintelligencealertruleproperties): Threat Intelligence alert rule properties
 
 
@@ -70,32 +70,32 @@
 
 ### FusionAlertRuleTemplate
 #### Properties
-* **kind**: 'Fusion' (Required): The kind of the alert rule
+* **kind**: 'Fusion' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FusionAlertRuleTemplateProperties](#fusionalertruletemplateproperties) (ReadOnly): Fusion alert rule template properties
 
 ### MicrosoftSecurityIncidentCreationAlertRuleTemplate
 #### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The kind of the alert rule
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties](#microsoftsecurityincidentcreationalertruletemplateproperties) (ReadOnly): MicrosoftSecurityIncidentCreation rule template properties
 
 ### MLBehaviorAnalyticsAlertRuleTemplate
 #### Properties
-* **kind**: 'MLBehaviorAnalytics' (Required): The kind of the alert rule
+* **kind**: 'MLBehaviorAnalytics' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MLBehaviorAnalyticsAlertRuleTemplateProperties](#mlbehavioranalyticsalertruletemplateproperties) (ReadOnly): MLBehaviorAnalytics alert rule template properties.
 
 ### NrtAlertRuleTemplate
 #### Properties
-* **kind**: 'NRT' (Required): The kind of the alert rule
+* **kind**: 'NRT' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [NrtAlertRuleTemplateProperties](#nrtalertruletemplateproperties) (ReadOnly): NRT alert rule template properties
 
 ### ScheduledAlertRuleTemplate
 #### Properties
-* **kind**: 'Scheduled' (Required): The kind of the alert rule
+* **kind**: 'Scheduled' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ScheduledAlertRuleTemplateProperties](#scheduledalertruletemplateproperties) (ReadOnly): Scheduled alert rule template properties
 
 ### ThreatIntelligenceAlertRuleTemplate
 #### Properties
-* **kind**: 'ThreatIntelligence' (Required): The kind of the alert rule
+* **kind**: 'ThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ThreatIntelligenceAlertRuleTemplateProperties](#threatintelligencealertruletemplateproperties) (ReadOnly): Threat Intelligence alert rule template properties
 
 
@@ -126,7 +126,7 @@
 
 ### SapSolutionUsageStatistic
 #### Properties
-* **kind**: 'SapSolutionUsage' (Required): The kind of the billing statistic
+* **kind**: 'SapSolutionUsage' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [SapSolutionUsageStatisticProperties](#sapsolutionusagestatisticproperties) (ReadOnly): The SAP solution usage object
 
 
@@ -217,7 +217,7 @@
 
 ### CustomizableConnectorDefinition
 #### Properties
-* **kind**: 'Customizable' (Required): The data connector kind
+* **kind**: 'Customizable' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [CustomizableConnectorDefinitionProperties](#customizableconnectordefinitionproperties): Customizable properties.
 
 
@@ -236,127 +236,127 @@
 
 ### AwsCloudTrailDataConnector
 #### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties): Amazon Web Services CloudTrail data connector properties.
 
 ### AwsS3DataConnector
 #### Properties
-* **kind**: 'AmazonWebServicesS3' (Required): The data connector kind
+* **kind**: 'AmazonWebServicesS3' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AwsS3DataConnectorProperties](#awss3dataconnectorproperties): Amazon Web Services S3 data connector properties.
 
 ### CodelessApiPollingDataConnector
 #### Properties
-* **kind**: 'APIPolling' (Required): The data connector kind
+* **kind**: 'APIPolling' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ApiPollingParameters](#apipollingparameters): Codeless poling data connector properties
 
 ### AADDataConnector
 #### Properties
-* **kind**: 'AzureActiveDirectory' (Required): The data connector kind
+* **kind**: 'AzureActiveDirectory' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AADIP (Azure Active Directory Identity Protection) data connector properties.
 
 ### AatpDataConnector
 #### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required): The data connector kind
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
 
 ### ASCDataConnector
 #### Properties
-* **kind**: 'AzureSecurityCenter' (Required): The data connector kind
+* **kind**: 'AzureSecurityCenter' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties): ASC (Azure Security Center) data connector properties.
 
 ### Dynamics365DataConnector
 #### Properties
-* **kind**: 'Dynamics365' (Required): The data connector kind
+* **kind**: 'Dynamics365' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [Dynamics365DataConnectorProperties](#dynamics365dataconnectorproperties): Dynamics365 data connector properties.
 
 ### GCPDataConnector
 #### Properties
-* **kind**: 'GCP' (Required): The data connector kind
+* **kind**: 'GCP' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [GCPDataConnectorProperties](#gcpdataconnectorproperties): Google Cloud Platform data connector properties.
 
 ### CodelessUiDataConnector
 #### Properties
-* **kind**: 'GenericUI' (Required): The data connector kind
+* **kind**: 'GenericUI' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [CodelessParameters](#codelessparameters): Codeless UI data connector properties
 
 ### IoTDataConnector
 #### Properties
-* **kind**: 'IOT' (Required): The data connector kind
+* **kind**: 'IOT' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [IoTDataConnectorProperties](#iotdataconnectorproperties): IoT data connector properties.
 
 ### McasDataConnector
 #### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required): The data connector kind
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
 
 ### MdatpDataConnector
 #### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): The data connector kind
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
 
 ### MicrosoftPurviewInformationProtectionDataConnector
 #### Properties
-* **kind**: 'MicrosoftPurviewInformationProtection' (Required): The data connector kind
+* **kind**: 'MicrosoftPurviewInformationProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MicrosoftPurviewInformationProtectionDataConnectorProperties](#microsoftpurviewinformationprotectiondataconnectorproperties): Microsoft Purview Information Protection data connector properties.
 
 ### MstiDataConnector
 #### Properties
-* **kind**: 'MicrosoftThreatIntelligence' (Required): The data connector kind
+* **kind**: 'MicrosoftThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MstiDataConnectorProperties](#mstidataconnectorproperties): Microsoft Threat Intelligence data connector properties.
 
 ### MTPDataConnector
 #### Properties
-* **kind**: 'MicrosoftThreatProtection' (Required): The data connector kind
+* **kind**: 'MicrosoftThreatProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MTPDataConnectorProperties](#mtpdataconnectorproperties): MTP (Microsoft Threat Protection) data connector properties.
 
 ### OfficeDataConnector
 #### Properties
-* **kind**: 'Office365' (Required): The data connector kind
+* **kind**: 'Office365' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties): Office data connector properties.
 
 ### Office365ProjectDataConnector
 #### Properties
-* **kind**: 'Office365Project' (Required): The data connector kind
+* **kind**: 'Office365Project' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [Office365ProjectDataConnectorProperties](#office365projectdataconnectorproperties): Office Microsoft Project data connector properties.
 
 ### OfficeATPDataConnector
 #### Properties
-* **kind**: 'OfficeATP' (Required): The data connector kind
+* **kind**: 'OfficeATP' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [OfficeATPDataConnectorProperties](#officeatpdataconnectorproperties): OfficeATP (Office 365 Advanced Threat Protection) data connector properties.
 
 ### OfficeIRMDataConnector
 #### Properties
-* **kind**: 'OfficeIRM' (Required): The data connector kind
+* **kind**: 'OfficeIRM' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [OfficeIRMDataConnectorProperties](#officeirmdataconnectorproperties): OfficeIRM (Microsoft Insider Risk Management) data connector properties.
 
 ### OfficePowerBIDataConnector
 #### Properties
-* **kind**: 'OfficePowerBI' (Required): The data connector kind
+* **kind**: 'OfficePowerBI' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [OfficePowerBIDataConnectorProperties](#officepowerbidataconnectorproperties): Office Microsoft PowerBI data connector properties.
 
 ### PremiumMicrosoftDefenderForThreatIntelligence
 #### Properties
-* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): The data connector kind
+* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Microsoft Defender for Threat Intelligence Premium data connector properties.
 
 ### PurviewAuditDataConnector
 #### Properties
-* **kind**: 'PurviewAudit' (Required): The data connector kind
+* **kind**: 'PurviewAudit' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [PurviewAuditDataConnectorProperties](#purviewauditdataconnectorproperties): PurviewAudit data connector properties.
 
 ### RestApiPollerDataConnector
 #### Properties
-* **kind**: 'RestApiPoller' (Required): The data connector kind
+* **kind**: 'RestApiPoller' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [RestApiPollerDataConnectorProperties](#restapipollerdataconnectorproperties): Rest Api Poller data connector properties.
 
 ### TIDataConnector
 #### Properties
-* **kind**: 'ThreatIntelligence' (Required): The data connector kind
+* **kind**: 'ThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [TIDataConnectorProperties](#tidataconnectorproperties): TI (Threat Intelligence) data connector properties.
 
 ### TiTaxiiDataConnector
 #### Properties
-* **kind**: 'ThreatIntelligenceTaxii' (Required): The data connector kind
+* **kind**: 'ThreatIntelligenceTaxii' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [TiTaxiiDataConnectorProperties](#titaxiidataconnectorproperties): Threat intelligence TAXII data connector properties.
 
 
@@ -374,112 +374,112 @@
 
 ### AccountEntity
 #### Properties
-* **kind**: 'Account' (Required): The kind of the entity.
+* **kind**: 'Account' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AccountEntityProperties](#accountentityproperties) (ReadOnly): Account entity properties
 
 ### AzureResourceEntity
 #### Properties
-* **kind**: 'AzureResource' (Required): The kind of the entity.
+* **kind**: 'AzureResource' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AzureResourceEntityProperties](#azureresourceentityproperties) (ReadOnly): AzureResource entity properties
 
 ### HuntingBookmark
 #### Properties
-* **kind**: 'Bookmark' (Required): The kind of the entity.
+* **kind**: 'Bookmark' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [HuntingBookmarkProperties](#huntingbookmarkproperties) (ReadOnly): HuntingBookmark entity properties
 
 ### CloudApplicationEntity
 #### Properties
-* **kind**: 'CloudApplication' (Required): The kind of the entity.
+* **kind**: 'CloudApplication' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [CloudApplicationEntityProperties](#cloudapplicationentityproperties) (ReadOnly): CloudApplication entity properties
 
 ### DnsEntity
 #### Properties
-* **kind**: 'DnsResolution' (Required): The kind of the entity.
+* **kind**: 'DnsResolution' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [DnsEntityProperties](#dnsentityproperties) (ReadOnly): Dns entity properties
 
 ### FileEntity
 #### Properties
-* **kind**: 'File' (Required): The kind of the entity.
+* **kind**: 'File' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FileEntityProperties](#fileentityproperties) (ReadOnly): File entity properties
 
 ### FileHashEntity
 #### Properties
-* **kind**: 'FileHash' (Required): The kind of the entity.
+* **kind**: 'FileHash' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FileHashEntityProperties](#filehashentityproperties) (ReadOnly): FileHash entity properties
 
 ### HostEntity
 #### Properties
-* **kind**: 'Host' (Required): The kind of the entity.
+* **kind**: 'Host' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [HostEntityProperties](#hostentityproperties) (ReadOnly): Host entity properties
 
 ### IoTDeviceEntity
 #### Properties
-* **kind**: 'IoTDevice' (Required): The kind of the entity.
+* **kind**: 'IoTDevice' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [IoTDeviceEntityProperties](#iotdeviceentityproperties) (ReadOnly): IoTDevice entity properties
 
 ### IpEntity
 #### Properties
-* **kind**: 'Ip' (Required): The kind of the entity.
+* **kind**: 'Ip' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [IpEntityProperties](#ipentityproperties) (ReadOnly): Ip entity properties
 
 ### MailboxEntity
 #### Properties
-* **kind**: 'Mailbox' (Required): The kind of the entity.
+* **kind**: 'Mailbox' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MailboxEntityProperties](#mailboxentityproperties) (ReadOnly): Mailbox entity properties
 
 ### MailClusterEntity
 #### Properties
-* **kind**: 'MailCluster' (Required): The kind of the entity.
+* **kind**: 'MailCluster' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MailClusterEntityProperties](#mailclusterentityproperties) (ReadOnly): Mail cluster entity properties
 
 ### MailMessageEntity
 #### Properties
-* **kind**: 'MailMessage' (Required): The kind of the entity.
+* **kind**: 'MailMessage' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MailMessageEntityProperties](#mailmessageentityproperties) (ReadOnly): Mail message entity properties
 
 ### MalwareEntity
 #### Properties
-* **kind**: 'Malware' (Required): The kind of the entity.
+* **kind**: 'Malware' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MalwareEntityProperties](#malwareentityproperties) (ReadOnly): File entity properties
 
 ### NicEntity
 #### Properties
-* **kind**: 'Nic' (Required): The kind of the entity.
+* **kind**: 'Nic' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [NicEntityProperties](#nicentityproperties) (ReadOnly): Network interface entity properties
 
 ### ProcessEntity
 #### Properties
-* **kind**: 'Process' (Required): The kind of the entity.
+* **kind**: 'Process' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ProcessEntityProperties](#processentityproperties) (ReadOnly): Process entity properties
 
 ### RegistryKeyEntity
 #### Properties
-* **kind**: 'RegistryKey' (Required): The kind of the entity.
+* **kind**: 'RegistryKey' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [RegistryKeyEntityProperties](#registrykeyentityproperties) (ReadOnly): RegistryKey entity properties
 
 ### RegistryValueEntity
 #### Properties
-* **kind**: 'RegistryValue' (Required): The kind of the entity.
+* **kind**: 'RegistryValue' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [RegistryValueEntityProperties](#registryvalueentityproperties) (ReadOnly): RegistryKey entity properties
 
 ### SecurityAlert
 #### Properties
-* **kind**: 'SecurityAlert' (Required): The kind of the entity.
+* **kind**: 'SecurityAlert' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [SecurityAlertProperties](#securityalertproperties) (ReadOnly): SecurityAlert entity properties
 
 ### SecurityGroupEntity
 #### Properties
-* **kind**: 'SecurityGroup' (Required): The kind of the entity.
+* **kind**: 'SecurityGroup' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [SecurityGroupEntityProperties](#securitygroupentityproperties) (ReadOnly): SecurityGroup entity properties
 
 ### SubmissionMailEntity
 #### Properties
-* **kind**: 'SubmissionMail' (Required): The kind of the entity.
+* **kind**: 'SubmissionMail' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [SubmissionMailEntityProperties](#submissionmailentityproperties) (ReadOnly): Submission mail entity properties
 
 ### UrlEntity
 #### Properties
-* **kind**: 'Url' (Required): The kind of the entity.
+* **kind**: 'Url' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [UrlEntityProperties](#urlentityproperties) (ReadOnly): Url entity properties
 
 
@@ -533,7 +533,7 @@
 
 ### ActivityEntityQueryTemplate
 #### Properties
-* **kind**: 'Activity' (Required): the entity query template kind
+* **kind**: 'Activity' (Required): The kind of the entity query template.
 * **properties**: [ActivityEntityQueryTemplateProperties](#activityentityquerytemplateproperties) (ReadOnly): Activity entity query properties
 
 
@@ -577,7 +577,6 @@
 * **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2025-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HuntRelationProperties](#huntrelationproperties): Hunt Relation properties
@@ -694,7 +693,7 @@
 
 ### AnomalySecurityMLAnalyticsSettings
 #### Properties
-* **kind**: 'Anomaly' (Required): The kind of security ML Analytics Settings
+* **kind**: 'Anomaly' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AnomalySecurityMLAnalyticsSettingsProperties](#anomalysecuritymlanalyticssettingsproperties): Anomaly Security ML Analytics Settings properties
 
 
@@ -713,22 +712,22 @@
 
 ### Anomalies
 #### Properties
-* **kind**: 'Anomalies' (Required): The kind of the setting
+* **kind**: 'Anomalies' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AnomaliesSettingsProperties](#anomaliessettingsproperties): Anomalies properties
 
 ### EntityAnalytics
 #### Properties
-* **kind**: 'EntityAnalytics' (Required): The kind of the setting
+* **kind**: 'EntityAnalytics' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [EntityAnalyticsProperties](#entityanalyticsproperties): EntityAnalytics properties
 
 ### EyesOn
 #### Properties
-* **kind**: 'EyesOn' (Required): The kind of the setting
+* **kind**: 'EyesOn' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [EyesOnSettingsProperties](#eyesonsettingsproperties): EyesOn properties
 
 ### Ueba
 #### Properties
-* **kind**: 'Ueba' (Required): The kind of the setting
+* **kind**: 'Ueba' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [UebaProperties](#uebaproperties): Ueba properties
 
 
@@ -1107,7 +1106,7 @@
 ## Availability
 ### Properties
 * **isPreview**: bool: Set connector as preview
-* **status**: '1': The connector Availability Status
+* **status**: int: The connector Availability Status
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
@@ -1194,7 +1193,7 @@
 
 ### BasicAuthModel
 #### Properties
-* **password**: string (Required): The password
+* **password**: string {sensitive} (Required): The password
 * **type**: 'Basic' (Required): The auth type
 * **userName**: string (Required): The user name.
 
@@ -1229,12 +1228,12 @@
 ### OAuthModel
 #### Properties
 * **accessTokenPrepend**: string: Access token prepend. Default is 'Bearer'.
-* **authorizationCode**: string: The user's authorization code.
+* **authorizationCode**: string {sensitive}: The user's authorization code.
 * **authorizationEndpoint**: string: The authorization endpoint.
 * **authorizationEndpointHeaders**: [OAuthModelAuthorizationEndpointHeaders](#oauthmodelauthorizationendpointheaders): The authorization endpoint headers.
 * **authorizationEndpointQueryParameters**: [OAuthModelAuthorizationEndpointQueryParameters](#oauthmodelauthorizationendpointqueryparameters): The authorization endpoint query parameters.
 * **clientId**: string (Required): The Application (client) ID that the OAuth provider assigned to your app.
-* **clientSecret**: string (Required): The Application (client) secret that the OAuth provider assigned to your app.
+* **clientSecret**: string {sensitive} (Required): The Application (client) secret that the OAuth provider assigned to your app.
 * **grantType**: string (Required): The grant type, usually will be 'authorization code'.
 * **isCredentialsInHeaders**: bool: Indicating whether we want to send the clientId and clientSecret to token endpoint in the headers.
 * **isJwtBearerFlow**: bool: A value indicating whether it's a JWT flow.
@@ -2274,14 +2273,14 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 * **author**: [MetadataAuthor](#metadataauthor): The creator of the content item.
 * **categories**: [MetadataCategories](#metadatacategories): Categories for the solution content item
-* **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+* **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies.  If an active content item is made from a template, both will have the same contentId.
 * **contentSchemaVersion**: string: Schema version of the content. Can be used to distinguish between different flow based on the schema version
 * **customVersion**: string: The custom version of the content. A optional free text
 * **dependencies**: [MetadataDependencies](#metadatadependencies): Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
-* **firstPublishDate**: string: first publish date solution content item
+* **firstPublishDate**: string: first publish date of solution content item
 * **icon**: string: the icon identifier. this id can later be fetched from the solution template
 * **kind**: string (Required): The kind of content the metadata is for.
-* **lastPublishDate**: string: last publish date for the solution content item
+* **lastPublishDate**: string: last publish date of solution content item
 * **parentId**: string (Required): Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
 * **previewImages**: string[]: preview image file names. These will be taken from the solution artifacts
 * **previewImagesDark**: string[]: preview image file names. These will be taken from the solution artifacts. used for dark theme support
@@ -2446,7 +2445,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
 * **alertRulesCreatedByTemplateCount**: int: The number of alert rules that were created by this template
 * **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
-* **customDetails**: [QueryBasedAlertRuleTemplatePropertiesCustomDetails](#querybasedalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
+* **customDetails**: [NrtAlertRuleTemplatePropertiesCustomDetails](#nrtalertruletemplatepropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule template.
 * **displayName**: string: The display name for alert rule template.
 * **entityMappings**: [EntityMapping](#entitymapping)[]: Array of the entity mappings of the alert rule
@@ -2460,6 +2459,11 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 * **version**: string: The version of this template - in format <a.b.c>, where all are numbers. For example <1.0.2>.
+
+## NrtAlertRuleTemplatePropertiesCustomDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## OAuthModelAuthorizationEndpointHeaders
 ### Properties
@@ -2701,11 +2705,6 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **dcrConfig**: [DCRConfiguration](#dcrconfiguration): The DCR related properties.
 * **sourceType**: string: The source type indicates which kind of data is relevant for this connector.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
-
-## QueryBasedAlertRuleTemplatePropertiesCustomDetails
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RecommendationProperties
 ### Properties
@@ -3219,7 +3218,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ## TriggeredAnalyticsRuleRunProperties
 ### Properties
 * **executionTimeUtc**: string (Required)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (Required): The triggered analytics rule run provisioning state
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (Required, ReadOnly): The triggered analytics rule run provisioning state
 * **ruleId**: string (Required)
 * **ruleRunAdditionalData**: [TriggeredAnalyticsRuleRunPropertiesRuleRunAdditionalData](#triggeredanalyticsrulerunpropertiesrulerunadditionaldata): Dictionary of <any>
 * **triggeredAnalyticsRuleRunId**: string (Required)
@@ -3276,7 +3275,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **labels**: string[]: List of labels relevant to this watchlist
 * **numberOfLinesToSkip**: int: The number of lines in a csv/tsv content to skip before the header
 * **provider**: string (Required): The provider of the watchlist
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string: The triggered analytics rule run provisioning state
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Describes provisioning state
 * **rawContent**: string: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
 * **source**: string: The filename of the watchlist, called 'source'
 * **sourceType**: 'AzureStorage' | 'Local' | string: The sourceType of the watchlist

@@ -3095,6 +3095,7 @@ Create/Update Managed Namespace
 resource exampleResource 'Microsoft.ContainerService/managedClusters/managedNamespaces@2025-10-02-preview' = {
   parent: parentResource 
   name: 'example'
+  location: 'eastus2'
   properties: {
     adoptionPolicy: 'IfIdentical'
     annotations: {

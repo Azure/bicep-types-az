@@ -28,7 +28,7 @@
 ### Properties
 * **apiVersion**: '2025-07-25' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity stores information about the cluster MSI(s) in a workload identity cluster.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OpenShiftClusterProperties](#openshiftclusterproperties): The cluster properties.

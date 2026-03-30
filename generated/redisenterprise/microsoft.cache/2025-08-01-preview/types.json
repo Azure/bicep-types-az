@@ -184,6 +184,13 @@
         },
         "flags": 2,
         "description": "List of private endpoint connections associated with the specified Redis Enterprise cluster"
+      },
+      "migratedEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration."
       }
     }
   },
@@ -2471,7 +2478,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/260"
+          "$ref": "#/261"
         },
         "flags": 2,
         "description": "Current provisioning status of the migration"
@@ -2500,7 +2507,7 @@
     },
     "elements": {
       "AzureCacheForRedis": {
-        "$ref": "#/261"
+        "$ref": "#/262"
       }
     }
   },
@@ -2533,6 +2540,10 @@
     "value": "Cancelled"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "CancellationFailed"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
@@ -2555,6 +2566,9 @@
       },
       {
         "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
       },
       {
         "$ref": "#/2"
@@ -2586,9 +2600,16 @@
         "flags": 1,
         "description": "Sets whether the data is migrated from source to target or not. This property must be true during the preview."
       },
+      "forceMigrate": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "Sets whether to ignore warnings when performing validation of the migration request. If this property is true, warning-level disparities between the source and target resources will be ignored, and the request will only fail validation if there are error-level disparities. The default value is false."
+      },
       "sourceType": {
         "type": {
-          "$ref": "#/262"
+          "$ref": "#/263"
         },
         "flags": 1,
         "description": "Describes the source of the migration operation."
@@ -2636,14 +2657,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/265"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/266"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -2668,7 +2689,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Cache/redisEnterprise/privateEndpointConnections@2025-08-01-preview",
     "body": {
-      "$ref": "#/266"
+      "$ref": "#/267"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2679,7 +2700,7 @@
     "properties": {
       "skus": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/271"
         },
         "flags": 0,
         "description": "List of SKUS available to scale up or scale down."
@@ -2709,7 +2730,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/269"
+      "$ref": "#/270"
     }
   },
   {
@@ -2718,7 +2739,7 @@
     "resourceType": "Microsoft.Cache/redisEnterprise",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/268"
+      "$ref": "#/269"
     }
   },
   {
@@ -2747,7 +2768,7 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/272"
+      "$ref": "#/273"
     }
   }
 ]

@@ -92,6 +92,7 @@
 * **highAvailability**: 'Disabled' | 'Enabled' | string: Enabled by default. If highAvailability is disabled, the data set is not replicated. This affects the availability SLA, and increases the risk of data loss.
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
 * **maintenanceConfiguration**: [MaintenanceConfiguration](#maintenanceconfiguration): Cluster-level maintenance configuration.
+* **migratedEndpoint**: string (ReadOnly): The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration.
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'. Newer versions can be added in the future. Note that TLS 1.0 and TLS 1.1 are now completely obsolete -- you cannot use them. They are mentioned only for the sake of consistency with old API versions.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified Redis Enterprise cluster
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status of the cluster
@@ -172,12 +173,13 @@
 ### Base Properties
 * **creationTime**: string (ReadOnly): The timestamp when the migration operation was created.
 * **lastModifiedTime**: string (ReadOnly): The timestamp when the migration operation was last updated.
-* **provisioningState**: 'Accepted' | 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'ReadyForDnsSwitch' | 'Succeeded' | string (ReadOnly): Current provisioning status of the migration
+* **provisioningState**: 'Accepted' | 'CancellationFailed' | 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'ReadyForDnsSwitch' | 'Succeeded' | string (ReadOnly): Current provisioning status of the migration
 * **statusDetails**: string (ReadOnly): Additional details about the migration operation's status in free text format.
 * **targetResourceId**: string (ReadOnly): The Azure resource ID of the Azure Managed Redis destination cache to migrate.
 
 ### AzureCacheForRedisMigrationProperties
 #### Properties
+* **forceMigrate**: bool: Sets whether to ignore warnings when performing validation of the migration request. If this property is true, warning-level disparities between the source and target resources will be ignored, and the request will only fail validation if there are error-level disparities. The default value is false.
 * **skipDataMigration**: bool (Required): Sets whether the data is migrated from source to target or not. This property must be true during the preview.
 * **sourceResourceId**: string (Required): The source resource ID to migrate from. This is the resource ID of the Azure Cache for Redis.
 * **sourceType**: 'AzureCacheForRedis' (Required): Describes the source of the migration operation.

@@ -1,7 +1,13 @@
 Generating types for 'specification/storage/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -57,6 +63,84 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (3 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:191" => "#/components/schemas/schemas:1073"
+  - properties.error.description: "Azure Storage Resource Provider error response body." => "The error object."
+  - title: <none> => "Error response"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (4 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:528" => "#/components/schemas/schemas:1116"
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:1143","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
+  - title: <none> => "Resource"
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -120,6 +204,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (4 differ
   - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:1034","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
   - title: <none> => "Resource"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -502,6 +591,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -876,6 +970,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 d
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1258,6 +1357,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1636,6 +1740,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1990,6 +2099,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2335,6 +2449,11 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2688,6 +2807,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3037,6 +3161,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3380,6 +3509,11 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3743,6 +3877,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4102,6 +4241,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4441,6 +4585,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4774,6 +4923,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5103,6 +5257,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5416,6 +5575,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5637,6 +5801,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5832,6 +6001,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6001,6 +6175,11 @@ warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerRequest' with a
 warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-07-01/blob.json:1201:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6183,6 +6362,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6344,6 +6528,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6477,6 +6666,11 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2017-10-01/storage.json:1905:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6618,6 +6812,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6723,6 +6922,11 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-12-01/storage.json:1312:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6836,6 +7040,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6937,6 +7146,11 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -7024,6 +7238,11 @@ warning | PreCheck/SchemaMissingType | The schema 'UsageListResult' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2015-06-15/storage.json:780:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

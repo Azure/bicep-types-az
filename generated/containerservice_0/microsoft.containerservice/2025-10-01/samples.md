@@ -20,7 +20,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
         type: 'VirtualMachineScaleSets'
         count: 3
         creationData: {
-          sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ContainerService/snapshots/snapshot1'
+          sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/snapshots/snapshot1'
         }
         enableFIPS: true
         enableNodePublicIP: true
@@ -33,7 +33,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -99,7 +99,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -172,7 +172,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -227,7 +227,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       {
         name: 'nodepool1'
         type: 'VirtualMachineScaleSets'
-        capacityReservationGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/capacityReservationGroups/crg1'
+        capacityReservationGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/capacityReservationGroups/crg1'
         count: 3
         enableNodePublicIP: true
         mode: 'System'
@@ -239,7 +239,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -305,7 +305,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -367,7 +367,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
         type: 'VirtualMachineScaleSets'
         count: 3
         enableNodePublicIP: true
-        hostGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg/providers/Microsoft.Compute/hostGroups/hostgroup1'
+        hostGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Compute/hostGroups/hostgroup1'
         osType: 'Linux'
         vmSize: 'Standard_DS2_v2'
       }
@@ -376,7 +376,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -443,7 +443,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -510,7 +510,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -577,7 +577,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     httpProxyConfig: {
@@ -652,7 +652,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     httpProxyConfig: {
@@ -789,7 +789,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
         count: 3
         enableNodePublicIP: true
         mode: 'System'
-        nodePublicIPPrefixID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Network/publicIPPrefixes/public-ip-prefix'
+        nodePublicIPPrefixID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/public-ip-prefix'
         osType: 'Linux'
         vmSize: 'Standard_DS2_v2'
       }
@@ -798,7 +798,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -865,7 +865,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     httpProxyConfig: {
@@ -940,7 +940,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1003,7 +1003,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
         enableNodePublicIP: true
         mode: 'System'
         osType: 'Linux'
-        proximityPlacementGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/proximityPlacementGroups/ppg1'
+        proximityPlacementGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/proximityPlacementGroups/ppg1'
         vmSize: 'Standard_DS2_v2'
       }
     ]
@@ -1011,7 +1011,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1163,7 +1163,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
     }
     securityProfile: {
       defender: {
-        logAnalyticsWorkspaceResourceId: '/subscriptions/SUB_ID/resourcegroups/RG_NAME/providers/microsoft.operationalinsights/workspaces/WORKSPACE_NAME'
+        logAnalyticsWorkspaceResourceId: '/subscriptions/SUB_ID/resourceGroups/RG_NAME/providers/microsoft.operationalinsights/workspaces/WORKSPACE_NAME'
         securityMonitoring: {
           enabled: true
         }
@@ -1208,7 +1208,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1274,7 +1274,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1392,7 +1392,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
     ]
     apiServerAccessProfile: {
       enablePrivateCluster: true
-      privateDNSZone: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io'
+      privateDNSZone: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io'
     }
     autoScalerProfile: {
       'scale-down-delay-after-add': '15m'
@@ -1542,7 +1542,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1592,7 +1592,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1626,7 +1626,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scan-interval': '20s'
       'skip-nodes-with-system-pods': 'false'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1705,7 +1705,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1784,7 +1784,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1818,7 +1818,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scan-interval': '20s'
       'skip-nodes-with-system-pods': 'false'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1872,7 +1872,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1900,7 +1900,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -1951,7 +1951,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1979,7 +1979,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2025-10-01'
       'scale-down-delay-after-add': '15m'
       'scan-interval': '20s'
     }
-    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    diskEncryptionSetID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
     enableRBAC: true
     kubernetesVersion: ''
@@ -2035,7 +2035,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
   properties: {
     count: 3
     creationData: {
-      sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ContainerService/snapshots/snapshot1'
+      sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/snapshots/snapshot1'
     }
     enableFIPS: true
     orchestratorVersion: ''
@@ -2051,7 +2051,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
   parent: parentResource 
   name: 'example'
   properties: {
-    capacityReservationGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/CapacityReservationGroups/crg1'
+    capacityReservationGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/CapacityReservationGroups/crg1'
     count: 3
     orchestratorVersion: ''
     osType: 'Linux'
@@ -2067,7 +2067,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
   name: 'example'
   properties: {
     count: 3
-    hostGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg/providers/Microsoft.Compute/hostGroups/hostgroup1'
+    hostGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Compute/hostGroups/hostgroup1'
     orchestratorVersion: ''
     osType: 'Linux'
     vmSize: 'Standard_DS2_v2'
@@ -2280,7 +2280,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
     count: 3
     orchestratorVersion: ''
     osType: 'Linux'
-    proximityPlacementGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.Compute/proximityPlacementGroups/ppg1'
+    proximityPlacementGroupID: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/proximityPlacementGroups/ppg1'
     vmSize: 'Standard_DS2_v2'
   }
 }
@@ -2511,6 +2511,7 @@ Create/Update Managed Namespace
 resource exampleResource 'Microsoft.ContainerService/managedClusters/managedNamespaces@2025-10-01' = {
   parent: parentResource 
   name: 'example'
+  location: 'eastus2'
   properties: {
     adoptionPolicy: 'IfIdentical'
     annotations: {
@@ -2578,7 +2579,7 @@ resource exampleResource 'Microsoft.ContainerService/snapshots@2025-10-01' = {
   location: 'westus'
   properties: {
     creationData: {
-      sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0'
+      sourceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0'
     }
   }
   tags: {

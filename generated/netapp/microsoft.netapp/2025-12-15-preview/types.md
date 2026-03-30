@@ -347,7 +347,7 @@
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-12-15-preview
 * **Input**: [QuotaReportFilterRequest](#quotareportfilterrequest)
-* **Output**: [ListQuotaReportResponse](#listquotareportresponse)
+* **Output**: [ListQuotaReportResult](#listquotareportresult)
 
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-12-15-preview)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
@@ -497,7 +497,7 @@ Possible values include: 'Update', 'Fail'
 * **encryption**: 'Disabled' | 'Enabled' | string (ReadOnly): Specifies if the cache is encryption or not.
 * **encryptionKeySource**: 'Microsoft.KeyVault' | 'Microsoft.NetApp' | string (Required): Source of key used to encrypt data in the cache. Applicable if NetApp account has encryption.keySource = 'Microsoft.KeyVault'. Possible values (case-insensitive) are: 'Microsoft.NetApp, Microsoft.KeyVault'
 * **exportPolicy**: [CachePropertiesExportPolicy](#cachepropertiesexportpolicy): Set of export policy rules
-* **filepath**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): The file path of the Cache.
+* **filePath**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): The file path of the Cache.
 * **globalFileLocking**: 'Disabled' | 'Enabled' | string: Flag indicating whether the global file lock is enabled for the cache.
 * **kerberos**: 'Disabled' | 'Enabled' | string: Describe if a cache is Kerberos enabled.
 * **keyVaultPrivateEndpointResourceId**: string: The resource ID of private endpoint for KeyVault. It must reside in the same VNET as the volume. Only applicable if encryptionKeySource = 'Microsoft.KeyVault'.
@@ -785,7 +785,11 @@ Possible values include: 'Update', 'Fail'
 
 ## ListQuotaReportResponse
 ### Properties
-* **value**: [QuotaReport](#quotareport)[]: List of quota reports
+* **quotaReportRecords**: [QuotaReport](#quotareport)[]: List of quota reports
+
+## ListQuotaReportResult
+### Properties
+* **properties**: [ListQuotaReportResponse](#listquotareportresponse): Represents the properties of the ListQuotaReport.
 
 ## ListReplications
 ### Properties
@@ -1097,7 +1101,7 @@ Possible values include: 'Update', 'Fail'
 ## VolumeGroupMetaData
 ### Properties
 * **applicationIdentifier**: string: Application specific identifier
-* **applicationType**: 'CUSTOM' | 'ORACLE' | 'SAP-HANA' | string: Application Type
+* **applicationType**: 'ORACLE' | 'SAP-HANA' | string: Application Type
 * **globalPlacementRules**: [PlacementKeyValuePairs](#placementkeyvaluepairs)[]: Application specific placement rules for the volume group
 * **groupDescription**: string: Group Description
 * **volumesCount**: int (ReadOnly): Number of volumes in volume group

@@ -288,6 +288,7 @@
 ## DeviceStatusEndpoint
 ### Properties
 * **error**: [StatusError](#statuserror) (ReadOnly): Defines the error related to this endpoint.
+* **healthState**: [HealthState](#healthstate) (ReadOnly): Health state of the endpoint.
 
 ## DeviceStatusEndpoints
 ### Properties
@@ -361,6 +362,14 @@
 ### Properties
 * **name**: string (Required): The extended location name.
 * **type**: string (Required): The extended location type.
+
+## HealthState
+### Properties
+* **lastTransitionTime**: string (ReadOnly): The timestamp (RFC3339) when the health status last changed.
+* **lastUpdateTime**: string (ReadOnly): The timestamp (RFC3339) when the health status was last updated, even if the status did not change.
+* **message**: string (ReadOnly): A human-readable message describing the last transition.
+* **reasonCode**: string (ReadOnly): Unique, CamelCase reason code describing the cause of the last health state transition.
+* **status**: 'Available' | 'Degraded' | 'Unavailable' | 'Unknown' | string (ReadOnly): The high-level health status of the resource.
 
 ## HostAuthentication
 ### Properties
@@ -496,6 +505,7 @@
 * **config**: [StatusConfig](#statusconfig) (ReadOnly): Defines the asset status config properties.
 * **datasets**: [NamespaceAssetStatusDataset](#namespaceassetstatusdataset)[] (ReadOnly): Array of dataset statuses that describe the status of each dataset.
 * **eventGroups**: [NamespaceAssetStatusEventGroup](#namespaceassetstatuseventgroup)[] (ReadOnly): Array of event group statuses that describe the status of each event group.
+* **healthState**: [HealthState](#healthstate) (ReadOnly): The details about the runtime health state of the asset.
 * **managementGroups**: [NamespaceAssetStatusManagementGroup](#namespaceassetstatusmanagementgroup)[] (ReadOnly): Array of management group statuses that describe the status of each management group.
 * **streams**: [NamespaceAssetStatusStream](#namespaceassetstatusstream)[] (ReadOnly): Array of stream statuses that describe the status of each stream.
 

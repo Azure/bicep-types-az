@@ -422,6 +422,11 @@ its default value is true
 * **currentCapacity**: int (ReadOnly): The value provides the current capacity of the VM size which was reserved successfully and for which the customer is getting billed. Minimum api-version: 2022-08-01.
 * **virtualMachinesAllocated**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of all virtual machines resource ids allocated against the capacity reservation.
 
+## CommonUserAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
 ## DataDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. Possible values are: **None,** **ReadOnly,** **ReadWrite.** The defaulting behavior is: **None for Standard storage. ReadOnly for Premium storage.**
@@ -1144,11 +1149,6 @@ its default value is true
 * **mode**: 'Automatic' | 'Manual' | 'Rolling': Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
 * **rollingUpgradePolicy**: [RollingUpgradePolicy](#rollingupgradepolicy): The configuration parameters used while performing a rolling upgrade.
 
-## UserAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
 ## UserInitiatedReboot
 ### Properties
 * **automaticallyApprove**: bool: Specifies Reboot Scheduled Event related configurations.
@@ -1239,7 +1239,7 @@ its default value is true
 ## VirtualMachineIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+* **Additional Properties Type**: [CommonUserAssignedIdentitiesValue](#commonuserassignedidentitiesvalue)
 
 ## VirtualMachineInstanceView
 ### Properties
@@ -1465,7 +1465,7 @@ its default value is true
 ## VirtualMachineScaleSetIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+* **Additional Properties Type**: [CommonUserAssignedIdentitiesValue](#commonuserassignedidentitiesvalue)
 
 ## VirtualMachineScaleSetIPConfiguration
 ### Properties

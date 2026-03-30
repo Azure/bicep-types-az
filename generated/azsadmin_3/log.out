@@ -1,7 +1,8 @@
 Generating types for 'specification/azsadmin/resource-manager/compute/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.22.0]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
