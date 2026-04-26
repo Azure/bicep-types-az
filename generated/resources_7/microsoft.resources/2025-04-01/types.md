@@ -10,6 +10,7 @@
 * **location**: string: The location to store the deployment data.
 * **name**: string {minLength: 1, maxLength: 64, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended) (Required): The deployment properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -70,16 +71,6 @@
 * **message**: string (Required, ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
 
-## DeploymentExtensionConfig
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
-
-## DeploymentExtensionConfig
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
-
 ## DeploymentExtensionConfigItem
 ### Properties
 * **keyVaultReference**: [KeyVaultParameterReference](#keyvaultparameterreference): The Azure Key Vault reference used to retrieve the secret value of the extension config property.
@@ -89,10 +80,15 @@
 ## DeploymentExtensionDefinition
 ### Properties
 * **alias**: string (ReadOnly): The alias of the extension as defined in the deployment template.
-* **config**: [DeploymentExtensionConfig](#deploymentextensionconfig) (ReadOnly): The extension configuration.
+* **config**: [DeploymentExtensionDefinitionConfig](#deploymentextensiondefinitionconfig) (ReadOnly): The extension configuration.
 * **configId**: string (ReadOnly): The extension configuration ID. It uniquely identifies a deployment control plane within an extension.
 * **name**: string (ReadOnly): The extension name.
 * **version**: string (ReadOnly): The extension version.
+
+## DeploymentExtensionDefinitionConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
 
 ## DeploymentExternalInput
 ### Properties
@@ -122,7 +118,7 @@
 ## DeploymentPropertiesExtensionConfigs
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [DeploymentExtensionConfig](#deploymentextensionconfig)
+* **Additional Properties Type**: [DictionaryOfDeploymentExtensionConfigItem](#dictionaryofdeploymentextensionconfigitem)
 
 ## DeploymentPropertiesExternalInputDefinitions
 ### Properties
@@ -171,6 +167,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DictionaryOfDeploymentExtensionConfigItem
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
 
 ## ErrorAdditionalInfo
 ### Properties
@@ -250,6 +251,15 @@
 * **id**: string (ReadOnly): The fully qualified Azure resource ID.
 * **identifiers**: any (ReadOnly): The extensible resource identifiers.
 * **resourceType**: string (ReadOnly): The resource type.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TemplateLink
 ### Properties

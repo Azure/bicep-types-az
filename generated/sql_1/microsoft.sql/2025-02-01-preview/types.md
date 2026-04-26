@@ -6,10 +6,11 @@
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InstancePoolProperties](#instancepoolproperties): Resource properties.
 * **sku**: [Sku](#sku): The name and tier of the SKU.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,6 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [InstancePoolOperationProperties](#instancepooloperationproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/instancePools/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/deletedServers@2025-02-01-preview
@@ -31,6 +33,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DeletedServerProperties](#deletedserverproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/deletedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/instanceFailoverGroups@2025-02-01-preview
@@ -41,6 +44,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/instanceFailoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2025-02-01-preview
@@ -51,6 +55,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceLongTermRetentionBackupProperties](#managedinstancelongtermretentionbackupproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview
@@ -61,6 +66,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/managedDatabaseMoveOperationResults@2025-02-01-preview
@@ -71,6 +77,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedDatabaseMoveOperationResultProperties](#manageddatabasemoveoperationresultproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/managedDatabaseMoveOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/serverTrustGroups@2025-02-01-preview
@@ -81,6 +88,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerTrustGroupProperties](#servertrustgroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/serverTrustGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/timeZones@2025-02-01-preview
@@ -91,6 +99,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TimeZoneProperties](#timezoneproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/timeZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/usages@2025-02-01-preview
@@ -101,6 +110,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionUsageProperties](#subscriptionusageproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances@2025-02-01-preview
@@ -110,10 +120,11 @@
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the managed instance.
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceProperties](#managedinstanceproperties): Resource properties.
 * **sku**: [Sku](#sku): Managed instance SKU. Allowed values for sku.name: GP_Gen5 (General Purpose, Standard-series); GP_G8IM (General Purpose, Premium-series); GP_G8IH (General Purpose, Premium-series memory optimized); BC_Gen5 (Business Critical, Standard-Series); BC_G8IM (Business Critical, Premium-series); BC_G8IH (Business Critical, Premium-series memory optimized).
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -125,6 +136,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'ActiveDirectory' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/advancedThreatProtectionSettings@2025-02-01-preview
@@ -135,7 +147,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2025-02-01-preview
@@ -146,6 +158,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceAzureADOnlyAuthProperties](#managedinstanceazureadonlyauthproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases@2025-02-01-preview
@@ -154,9 +167,10 @@
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -168,7 +182,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2025-02-01-preview
@@ -179,6 +193,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceLongTermRetentionPolicyProperties](#managedinstancelongtermretentionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2025-02-01-preview
@@ -189,6 +204,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/ledgerDigestUploads@2025-02-01-preview
@@ -199,6 +215,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedLedgerDigestUploadsProperties](#managedledgerdigestuploadsproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/queries@2025-02-01-preview
@@ -209,6 +226,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [QueryProperties](#queryproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/queries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2025-02-01-preview
@@ -219,6 +237,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/schemas@2025-02-01-preview
@@ -228,6 +247,7 @@
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables@2025-02-01-preview
@@ -238,6 +258,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2025-02-01-preview
@@ -248,6 +269,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseColumnProperties](#databasecolumnproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview
@@ -259,6 +281,7 @@
 * **managedBy**: string (ReadOnly): Resource that manages the sensitivity label.
 * **name**: 'current' | 'recommended' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/securityAlertPolicies@2025-02-01-preview
@@ -267,8 +290,9 @@
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/transparentDataEncryption@2025-02-01-preview
@@ -279,6 +303,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedTransparentDataEncryptionProperties](#managedtransparentdataencryptionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2025-02-01-preview
@@ -289,6 +314,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2025-02-01-preview
@@ -299,6 +325,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | 'master' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2025-02-01-preview
@@ -309,6 +336,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2025-02-01-preview
@@ -319,6 +347,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DistributedAvailabilityGroupProperties](#distributedavailabilitygroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/distributedAvailabilityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/dnsAliases@2025-02-01-preview
@@ -330,6 +359,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedServerDnsAliasProperties](#managedserverdnsaliasproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/dtc@2025-02-01-preview
@@ -340,6 +370,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceDtcProperties](#managedinstancedtcproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/dtc' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2025-02-01-preview
@@ -351,6 +382,7 @@
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/endpointCertificates@2025-02-01-preview
@@ -361,6 +393,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EndpointCertificateProperties](#endpointcertificateproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/endpointCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/keys@2025-02-01-preview
@@ -372,6 +405,7 @@
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/operations@2025-02-01-preview
@@ -382,6 +416,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/privateEndpointConnections@2025-02-01-preview
@@ -392,6 +427,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstancePrivateEndpointConnectionProperties](#managedinstanceprivateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/privateLinkResources@2025-02-01-preview
@@ -402,6 +438,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstancePrivateLinkProperties](#managedinstanceprivatelinkproperties) (ReadOnly): The private link resource group id.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/recoverableDatabases@2025-02-01-preview
@@ -412,6 +449,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecoverableManagedDatabaseProperties](#recoverablemanageddatabaseproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases@2025-02-01-preview
@@ -420,9 +458,10 @@
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RestorableDroppedManagedDatabaseProperties](#restorabledroppedmanageddatabaseproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -434,6 +473,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2025-02-01-preview
@@ -444,7 +484,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SecurityAlertPolicyResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/serverConfigurationOptions@2025-02-01-preview
@@ -455,6 +495,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'allowPolybaseExport' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConfigurationOptionProperties](#serverconfigurationoptionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/serverConfigurationOptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/serverTrustCertificates@2025-02-01-preview
@@ -465,6 +506,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerTrustCertificateProperties](#servertrustcertificateproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/serverTrustCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/sqlAgent@2025-02-01-preview
@@ -475,6 +517,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlAgentConfigurationProperties](#sqlagentconfigurationproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/sqlAgent' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/startStopSchedules@2025-02-01-preview
@@ -485,7 +528,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [StartStopManagedInstanceScheduleProperties](#startstopmanagedinstancescheduleproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): System data of the scheduled resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/startStopSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/vulnerabilityAssessments@2025-02-01-preview
@@ -496,6 +539,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceVulnerabilityAssessmentProperties](#managedinstancevulnerabilityassessmentproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers@2025-02-01-preview
@@ -506,9 +550,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the server.
 * **kind**: string (ReadOnly): Kind of sql server. This is metadata used for the Azure portal experience.
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -520,6 +565,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'ActiveDirectory' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdministratorProperties](#administratorproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/advancedThreatProtectionSettings@2025-02-01-preview
@@ -530,7 +576,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/advisors@2025-02-01-preview
@@ -543,6 +589,7 @@
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/auditingSettings@2025-02-01-preview
@@ -553,6 +600,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/automaticTuning@2025-02-01-preview
@@ -563,6 +611,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [AutomaticTuningServerProperties](#automatictuningserverproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2025-02-01-preview
@@ -573,6 +622,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureADOnlyAuthProperties](#azureadonlyauthproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/connectionPolicies@2025-02-01-preview
@@ -585,6 +635,7 @@
 * **location**: string (ReadOnly): Resource location.
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2025-02-01-preview
@@ -595,7 +646,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [DatabaseIdentity](#databaseidentity): The Azure Active Directory identity of the database.
 * **kind**: string (ReadOnly): Kind of database. This is metadata used for the Azure portal experience.
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string (ReadOnly): Resource that manages the database.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): Resource properties.
@@ -605,11 +656,12 @@ The list of SKUs may vary by region and support offer. To determine the SKUs (in
 
 ```azurecli
 az sql db list-editions -l <location> -o table
-````
+```
 
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
-````
+```
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -621,7 +673,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/advisors@2025-02-01-preview
@@ -634,6 +686,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/advisors/recommendedActions@2025-02-01-preview
@@ -646,6 +699,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecommendedActionProperties](#recommendedactionproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2025-02-01-preview
@@ -657,6 +711,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **kind**: string (ReadOnly): Resource kind.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/automaticTuning@2025-02-01-preview
@@ -667,6 +722,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAutomaticTuningProperties](#databaseautomatictuningproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2025-02-01-preview
@@ -677,6 +733,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [LongTermRetentionPolicyProperties](#longtermretentionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2025-02-01-preview
@@ -687,6 +744,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2025-02-01-preview
@@ -699,6 +757,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): The location of the data masking policy.
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2025-02-01-preview
@@ -711,6 +770,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): The location of the data masking rule.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2025-02-01-preview
@@ -721,6 +781,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataWarehouseUserActivitiesProperties](#datawarehouseuseractivitiesproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/extendedAuditingSettings@2025-02-01-preview
@@ -731,6 +792,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2025-02-01-preview
@@ -741,6 +803,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2025-02-01-preview
@@ -753,6 +816,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): Backup policy location.
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2025-02-01-preview
@@ -763,6 +827,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [LedgerDigestUploadsProperties](#ledgerdigestuploadsproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/replicationLinks@2025-02-01-preview
@@ -773,6 +838,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationLinkProperties](#replicationlinkproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/restorePoints@2025-02-01-preview
@@ -784,6 +850,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas@2025-02-01-preview
@@ -793,6 +860,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas/tables@2025-02-01-preview
@@ -803,6 +871,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas/tables/columns@2025-02-01-preview
@@ -813,6 +882,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseColumnProperties](#databasecolumnproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview
@@ -824,6 +894,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **managedBy**: string (ReadOnly): Resource that manages the sensitivity label.
 * **name**: 'current' | 'recommended' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2025-02-01-preview
@@ -832,9 +903,9 @@ Get-AzSqlServerServiceObjective -Location <location>
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SecurityAlertPolicyResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2025-02-01-preview
@@ -845,7 +916,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVulnerabilityAssessmentPolicyProperties](#sqlvulnerabilityassessmentpolicyproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines@2025-02-01-preview
@@ -856,7 +927,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseSqlVulnerabilityAssessmentRuleBaselineListInputPropertiesOrDatabaseSqlVulnerabilityAssessmentBaselineSetProperties](#databasesqlvulnerabilityassessmentrulebaselinelistinputpropertiesordatabasesqlvulnerabilityassessmentbaselinesetproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of DatabaseSqlVulnerabilityAssessmentRuleBaselineListInputResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines/rules@2025-02-01-preview
@@ -867,7 +938,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseSqlVulnerabilityAssessmentRuleBaselineInputPropertiesOrDatabaseSqlVulnerabilityAssessmentRuleBaselineProperties](#databasesqlvulnerabilityassessmentrulebaselineinputpropertiesordatabasesqlvulnerabilityassessmentrulebaselineproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of DatabaseSqlVulnerabilityAssessmentRuleBaselineInputResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans@2025-02-01-preview
@@ -878,7 +949,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVulnerabilityAssessmentScanRecordProperties](#sqlvulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentScanRecordResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults@2025-02-01-preview
@@ -889,7 +960,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVulnerabilityAssessmentScanResultProperties](#sqlvulnerabilityassessmentscanresultproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview
@@ -902,6 +973,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SyncGroupProperties](#syncgroupproperties): Resource properties.
 * **sku**: [Sku](#sku): The name and capacity of the SKU.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2025-02-01-preview
@@ -913,6 +985,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **identity**: [DataSyncParticipantIdentity](#datasyncparticipantidentity): Sync member authentication information.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SyncMemberProperties](#syncmemberproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/transparentDataEncryption@2025-02-01-preview
@@ -923,6 +996,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments@2025-02-01-preview
@@ -933,6 +1007,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines@2025-02-01-preview
@@ -943,6 +1018,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | 'master' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2025-02-01-preview
@@ -953,6 +1029,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2025-02-01-preview
@@ -963,6 +1040,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2025-02-01-preview
@@ -973,6 +1051,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/devOpsAuditingSettings@2025-02-01-preview
@@ -983,7 +1062,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerDevOpsAuditSettingsProperties](#serverdevopsauditsettingsproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of ServerDevOpsAuditSettingsResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/dnsAliases@2025-02-01-preview
@@ -994,6 +1073,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerDnsAliasProperties](#serverdnsaliasproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/elasticPools@2025-02-01-preview
@@ -1003,7 +1083,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of elastic pool. This is metadata used for the Azure portal experience.
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties): Resource properties.
 * **sku**: [Sku](#sku): The elastic pool SKU.
@@ -1012,7 +1092,8 @@ The list of SKUs may vary by region and support offer. To determine the SKUs (in
 
 ```azurecli
 az sql elastic-pool list-editions -l <location> -o table
-````
+```
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1026,6 +1107,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **location**: string (ReadOnly): Resource location.
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/extendedAuditingSettings@2025-02-01-preview
@@ -1036,6 +1118,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/failoverGroups@2025-02-01-preview
@@ -1047,6 +1130,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FailoverGroupProperties](#failovergroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [FailoverGroupTags](#failovergrouptags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1077,10 +1161,11 @@ az sql elastic-pool list-editions -l <location> -o table
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [JobAgentIdentity](#jobagentidentity): The identity of the job agent.
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobAgentProperties](#jobagentproperties): Resource properties.
 * **sku**: [Sku](#sku): The name and tier of the SKU.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1092,6 +1177,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobCredentialProperties](#jobcredentialproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs@2025-02-01-preview
@@ -1102,6 +1188,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2025-02-01-preview
@@ -1112,6 +1199,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2025-02-01-preview
@@ -1122,6 +1210,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2025-02-01-preview
@@ -1132,6 +1221,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2025-02-01-preview
@@ -1142,6 +1232,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobStepProperties](#jobstepproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/versions@2025-02-01-preview
@@ -1151,6 +1242,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: int (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2025-02-01-preview
@@ -1161,6 +1253,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobStepProperties](#jobstepproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/privateEndpoints@2025-02-01-preview
@@ -1171,6 +1264,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobPrivateEndpointProperties](#jobprivateendpointproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/privateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/targetGroups@2025-02-01-preview
@@ -1181,6 +1275,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobTargetGroupProperties](#jobtargetgroupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/jobAgents/targetGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/keys@2025-02-01-preview
@@ -1193,6 +1288,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/networkSecurityPerimeterConfigurations@2025-02-01-preview
@@ -1203,6 +1299,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/outboundFirewallRules@2025-02-01-preview
@@ -1213,6 +1310,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OutboundFirewallRuleProperties](#outboundfirewallruleproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/outboundFirewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/privateEndpointConnections@2025-02-01-preview
@@ -1223,6 +1321,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/privateLinkResources@2025-02-01-preview
@@ -1233,6 +1332,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The private link resource group id.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/recoverableDatabases@2025-02-01-preview
@@ -1243,6 +1343,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecoverableDatabaseProperties](#recoverabledatabaseproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/restorableDroppedDatabases@2025-02-01-preview
@@ -1255,6 +1356,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RestorableDroppedDatabaseProperties](#restorabledroppeddatabaseproperties) (ReadOnly): Resource properties.
 * **sku**: [Sku](#sku) (ReadOnly): The name and tier of the SKU.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [RestorableDroppedDatabaseTags](#restorabledroppeddatabasetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/servers/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1266,7 +1368,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SecurityAlertPolicyResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments@2025-02-01-preview
@@ -1277,7 +1379,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVulnerabilityAssessmentPolicyProperties](#sqlvulnerabilityassessmentpolicyproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentResource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/syncAgents@2025-02-01-preview
@@ -1288,6 +1390,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SyncAgentProperties](#syncagentproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/syncAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/virtualNetworkRules@2025-02-01-preview
@@ -1298,6 +1401,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/vulnerabilityAssessments@2025-02-01-preview
@@ -1308,6 +1412,7 @@ az sql elastic-pool list-editions -l <location> -o table
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/virtualClusters@2025-02-01-preview
@@ -1316,9 +1421,10 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualClusterProperties](#virtualclusterproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/virtualClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1474,7 +1580,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1491,7 +1597,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1867,7 +1973,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1885,7 +1991,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1957,7 +2063,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1985,7 +2091,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -2638,12 +2744,13 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## RecommendedAction
 ### Properties
-* **id**: string (ReadOnly): Resource ID.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (ReadOnly): Resource name.
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [RecommendedActionProperties](#recommendedactionproperties): Resource properties.
-* **type**: string (ReadOnly): Resource type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RecommendedActionErrorInfo
 ### Properties
@@ -2898,7 +3005,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -2925,7 +3032,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -2945,7 +3052,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## ServerDevOpsAuditSettingsProperties
 ### Properties
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether DevOps audit events are sent to Azure Monitor. 
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether DevOps audit events are sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure DevOps audit, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should be also created.
@@ -2957,7 +3064,7 @@ For more information, see [Diagnostic Settings REST API](https://go.microsoft.co
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **isManagedIdentityInUse**: bool: Specifies whether Managed Identity is used to access blob storage
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).

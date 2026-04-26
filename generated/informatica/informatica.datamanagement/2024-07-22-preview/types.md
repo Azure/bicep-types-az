@@ -81,7 +81,7 @@
 
 ## LinkOrganization
 ### Properties
-* **token**: string: Link organization token
+* **token**: string {sensitive} (WriteOnly): Link organization token
 
 ## ManagedServiceIdentity
 ### Properties
@@ -114,7 +114,7 @@
 ### Properties
 * **companyDetails**: [CompanyDetails](#companydetails): Company details.
 * **informaticaProperties**: [InformaticaProperties](#informaticaproperties): Informatica Organization properties.
-* **linkOrganization**: [LinkOrganization](#linkorganization): Link Organization
+* **linkOrganization**: [LinkOrganization](#linkorganization) (WriteOnly): Link Organization
 * **marketplaceDetails**: [MarketplaceDetails](#marketplacedetails): Marketplace details.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of the resource.
 * **userDetails**: [UserDetails](#userdetails): User details

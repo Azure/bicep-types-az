@@ -1,0 +1,55 @@
+# microsoft.insights @ 2016-09-01
+
+## Resource microsoft.insights/diagnosticSettings@2016-09-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: 'service' (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceDiagnosticSettings](#servicediagnosticsettings): The service diagnostics settings of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ServiceDiagnosticSettingsResourceTags](#servicediagnosticsettingsresourcetags): Resource tags
+* **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## LogSettings
+### Properties
+* **category**: string: Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+* **enabled**: bool (Required): a value indicating whether this log is enabled.
+* **retentionPolicy**: [MicrosoftCommonRetentionPolicy](#microsoftcommonretentionpolicy): the retention policy for this log.
+
+## MetricSettings
+### Properties
+* **enabled**: bool (Required): a value indicating whether this timegrain is enabled.
+* **retentionPolicy**: [MicrosoftCommonRetentionPolicy](#microsoftcommonretentionpolicy): the retention policy for this timegrain.
+* **timeGrain**: string (Required): the timegrain of the metric in ISO8601 format.
+
+## MicrosoftCommonRetentionPolicy
+### Properties
+* **days**: int {minValue: 0} (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+* **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
+
+## ServiceDiagnosticSettings
+### Properties
+* **eventHubAuthorizationRuleId**: string: The resource Id for the event hub namespace authorization rule.
+* **logs**: [LogSettings](#logsettings)[]: the list of logs settings.
+* **metrics**: [MetricSettings](#metricsettings)[]: the list of metric settings.
+* **serviceBusRuleId**: string: The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming Diagnostic Logs. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+* **storageAccountId**: string: The resource ID of the storage account to which you would like to send Diagnostic Logs.
+* **workspaceId**: string: The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+
+## ServiceDiagnosticSettingsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+

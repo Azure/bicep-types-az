@@ -53,19 +53,19 @@
         "flags": 0,
         "description": "Domain service properties"
       },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Resource location"
-      },
       "tags": {
         "type": {
           "$ref": "#/86"
         },
         "flags": 0,
-        "description": "Resource tags"
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The geo-location where the resource lives"
       },
       "etag": {
         "type": {
@@ -79,7 +79,7 @@
           "$ref": "#/87"
         },
         "flags": 2,
-        "description": "The system meta data relating to this resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1190,7 +1190,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "DomainServiceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -1327,7 +1327,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Aad/domainServices/ouContainer"
+    "value": "Microsoft.AAD/domainServices/ouContainer"
   },
   {
     "$type": "StringLiteralType",
@@ -1335,7 +1335,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Aad/domainServices/ouContainer",
+    "name": "Microsoft.AAD/domainServices/ouContainer",
     "properties": {
       "id": {
         "type": {
@@ -1393,19 +1393,19 @@
         "flags": 2,
         "description": "OuContainer properties"
       },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Resource location"
-      },
       "tags": {
         "type": {
           "$ref": "#/105"
         },
         "flags": 2,
-        "description": "Resource tags"
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The geo-location where the resource lives"
       },
       "etag": {
         "type": {
@@ -1419,7 +1419,7 @@
           "$ref": "#/87"
         },
         "flags": 2,
-        "description": "The system meta data relating to this resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1520,7 +1520,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "OuContainerTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -1528,7 +1528,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.Aad/domainServices/ouContainer@2025-10-01-preview",
+    "name": "Microsoft.AAD/domainServices/ouContainer@2025-10-01-preview",
     "body": {
       "$ref": "#/101"
     },

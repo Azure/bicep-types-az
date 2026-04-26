@@ -771,12 +771,6 @@ depending on each OAuth2 provider's implementation.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CustomTopicConfig
-### Properties
-* **blocking**: bool: If blocking would occur.
-* **source**: 'Completion' | 'PostRun' | 'PostToolCall' | 'PreRun' | 'PreToolCall' | 'Prompt' | string: Content source to apply the Content Filters.
-* **topicName**: string: Name of RAI topic.
-
 ## DefenderForAISettingProperties
 ### Properties
 * **state**: 'Disabled' | 'Enabled' | string: Defender for AI state on the AI resource.
@@ -814,7 +808,7 @@ depending on each OAuth2 provider's implementation.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Gets the status of the resource at the time the operation was called.
 * **raiPolicyName**: string: The name of RAI policy.
 * **rateLimits**: [ThrottlingRule](#throttlingrule)[] (ReadOnly)
-* **routing**: [DeploymentRouting](#deploymentrouting): Routing configuration for the deployment. This property is only applicable when the deployed model is 'model-router' version 2025-11-18 or later. Allows you to select the models subset for routing and the routing mode (balanced, accuracy, cost) for routing across all supported models or the model subset.
+* **routing**: [DeploymentRouting](#deploymentrouting): Routing configuration for the model-router deployment. This property is only applicable when the deployed model is 'model-router' version 2025-11-18 or later. Allows you to select the models subset for routing and the routing mode (balanced, quality, cost) for routing across all supported models or the model subset.
 * **scaleSettings**: [DeploymentScaleSettings](#deploymentscalesettings): Properties of Cognitive Services account deployment model. (Deprecated, please use Deployment.sku instead.)
 * **serviceTier**: 'Default' | 'Priority' | string: The service tier for the deployment. Determines the pricing and performance level for request processing. Use 'Default' for standard pricing or 'Priority' for higher-priority processing with premium pricing. Note: Pause operations are only supported on Standard, DataZoneStandard, and GlobalStandard SKUs.
 * **spilloverDeploymentName**: string: Specifies the deployment name that should serve requests when the request would have otherwise been throttled due to reaching current deployment throughput limit.
@@ -827,8 +821,8 @@ depending on each OAuth2 provider's implementation.
 
 ## DeploymentRouting
 ### Properties
-* **mode**: 'accuracy' | 'balanced' | 'cost' | string: The routing mode that determines how requests are distributed across models.
-* **models**: [DeploymentModel](#deploymentmodel)[]: Optional. The list of models that the model router can use to route requests across. If not specified, the model router will route to all available models specified in the model-router version.
+* **mode**: 'balanced' | 'cost' | 'quality' | string: The model-router routing mode that determines how requests are distributed across models.
+* **models**: [DeploymentModel](#deploymentmodel)[]: Optional. The list of model-router supported models that the model router can use to route requests across. If not specified, the model router will route to all available models specified in the model-router version.
 
 ## DeploymentScaleSettings
 ### Properties
@@ -1152,7 +1146,6 @@ depending on each OAuth2 provider's implementation.
 * **basePolicyName**: string: Name of Rai policy.
 * **contentFilters**: [RaiPolicyContentFilter](#raipolicycontentfilter)[]: The list of Content Filters.
 * **customBlocklists**: [CustomBlocklistConfig](#customblocklistconfig)[]: The list of custom Blocklist.
-* **customTopics**: [CustomTopicConfig](#customtopicconfig)[]: The list of custom rai topics.
 * **mode**: 'Asynchronous_filter' | 'Blocking' | 'Default' | 'Deferred' | string: Rai policy mode. The enum value mapping is as below: Default = 0, Deferred=1, Blocking=2, Asynchronous_filter =3. Please use 'Asynchronous_filter' after 2025-06-01. It is the same as 'Deferred' in previous version.
 * **safetyProviders**: [SafetyProviderConfig](#safetyproviderconfig)[]: The list of Safety Providers.
 * **type**: 'SystemManaged' | 'UserManaged' | string (ReadOnly): Content Filters policy type.

@@ -7,14 +7,14 @@
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location
+* **location**: string: The geo-location where the resource lives
 * **name**: string {pattern: "^(?=.{3,255}$)([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)(\.([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?))*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainServiceProperties](#domainserviceproperties): Domain service properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DomainServiceTags](#domainservicetags): Resource tags.
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Aad/domainServices/ouContainer@2025-10-01-preview
+## Resource Microsoft.AAD/domainServices/ouContainer@2025-10-01-preview
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
@@ -22,14 +22,14 @@
 * **apiVersion**: '2025-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location
+* **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **password**: string {sensitive} (WriteOnly): The account password
 * **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): OuContainer properties
 * **spn**: string (WriteOnly): The account spn
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
-* **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [OuContainerTags](#oucontainertags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.AAD/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigDiagnostics
 ### Properties
@@ -87,6 +87,11 @@
 * **syncScope**: 'All' | 'CloudOnly' | string: All or CloudOnly, All users in AAD are synced to AAD DS domain or only users actively syncing in the cloud
 * **tenantId**: string (ReadOnly): Azure Active Directory Tenant Id
 * **version**: int (ReadOnly): Data Model Version
+
+## DomainServiceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ForestTrust
 ### Properties
@@ -150,6 +155,11 @@
 * **serviceStatus**: string (ReadOnly): Status of OuContainer instance
 * **tenantId**: string (ReadOnly): Azure Active Directory tenant id
 
+## OuContainerTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ReplicaSet
 ### Properties
 * **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
@@ -168,16 +178,6 @@
 ### Properties
 * **resourceForest**: string: Resource Forest
 * **settings**: [ForestTrust](#foresttrust)[]: List of settings for Resource Forest
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties

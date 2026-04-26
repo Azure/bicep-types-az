@@ -575,12 +575,6 @@ depending on each OAuth2 provider's implementation.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CustomTopicConfig
-### Properties
-* **blocking**: bool: If blocking would occur.
-* **source**: 'Completion' | 'Prompt' | string: Content source to apply the Content Filters.
-* **topicName**: string: Name of RAI topic.
-
 ## DefenderForAISettingProperties
 ### Properties
 * **state**: 'Disabled' | 'Enabled' | string: Defender for AI state on the AI resource.
@@ -868,7 +862,6 @@ depending on each OAuth2 provider's implementation.
 * **basePolicyName**: string: Name of Rai policy.
 * **contentFilters**: [RaiPolicyContentFilter](#raipolicycontentfilter)[]: The list of Content Filters.
 * **customBlocklists**: [CustomBlocklistConfig](#customblocklistconfig)[]: The list of custom Blocklist.
-* **customTopics**: [CustomTopicConfig](#customtopicconfig)[]: The list of custom rai topics.
 * **mode**: 'Asynchronous_filter' | 'Blocking' | 'Default' | 'Deferred' | string: Rai policy mode. The enum value mapping is as below: Default = 0, Deferred=1, Blocking=2, Asynchronous_filter =3. Please use 'Asynchronous_filter' after 2025-06-01. It is the same as 'Deferred' in previous version.
 * **type**: 'SystemManaged' | 'UserManaged' | string (ReadOnly): Content Filters policy type.
 

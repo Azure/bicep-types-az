@@ -75,7 +75,7 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/connections@20
     }
     fieldDefinitionValues: {
       AutomationCertificateName: 'mysCertificateName'
-      SubscriptionID: 'subid'
+      SubscriptionID: 'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
     }
   }
 }

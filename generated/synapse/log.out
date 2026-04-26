@@ -1,5 +1,5 @@
 Generating types for 'specification/synapse/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.22.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -623,7 +623,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForP
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:911" => "#/components/schemas/schemas:1133"
+  - properties.id.$ref: "#/components/schemas/schemas:911" => "#/components/schemas/schemas:1180"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -756,7 +756,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForP
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:915" => "#/components/schemas/schemas:1295"
+  - properties.id.$ref: "#/components/schemas/schemas:915" => "#/components/schemas/schemas:1167"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>

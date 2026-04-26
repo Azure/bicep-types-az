@@ -1,5 +1,5 @@
 Generating types for 'specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.22.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.22.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -43,6 +43,84 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'Operation-properties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/Operation-properties
+warning | Modeler/MissingType | The schema 'ParameterExampleContract-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/ParameterExampleContract-value
+warning | Modeler/MissingType | The schema 'SchemaDocumentProperties-definitions' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/SchemaDocumentProperties-definitions
+warning | Modeler/MissingType | The schema 'SchemaDocumentProperties-components' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/SchemaDocumentProperties-components
+warning | Modeler/MissingType | The schema 'ContentTypeContractProperties-schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/ContentTypeContractProperties-schema
+warning | Modeler/MissingType | The schema 'components·ulft1e·schemas·contentitemcontract·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/components·ulft1e·schemas·contentitemcontract·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'paths·1q4h5s5·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-gateways-gatewayid-listtrace·post·responses·200·content·application-json·schema·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/paths·1q4h5s5·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-gateways-gatewayid-listtrace·post·responses·200·content·application-json·schema·additionalproperties
+warning | Modeler/MissingType | The schema 'GlobalSchemaContractProperties-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/GlobalSchemaContractProperties-value
+warning | Modeler/MissingType | The schema 'GlobalSchemaContractProperties-document' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/preview/2025-09-01-preview/openapi.json#/components/schemas/GlobalSchemaContractProperties-document
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PolicyIdName' -> 'PolicyIdNameAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SettingsTypeName' -> 'SettingsTypeNameAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ConfigurationIdName' -> 'ConfigurationIdNameAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ExportApi' -> 'ExportApiAutoGenerated'
+warning | Skipping Reports_ListByApi due to required query parameter "filter"
+warning | Skipping Reports_ListByGeo due to required query parameter "filter"
+warning | Skipping Reports_ListByOperation due to required query parameter "filter"
+warning | Skipping Reports_ListByProduct due to required query parameter "filter"
+warning | Skipping Reports_ListByRequest due to required query parameter "filter"
+warning | Skipping Reports_ListBySubscription due to required query parameter "filter"
+warning | Skipping Reports_ListByTime due to required query parameter "filter"
+warning | Skipping Reports_ListByTime due to required query parameter "interval"
+warning | Skipping Reports_ListByUser due to required query parameter "filter"
+warning | Skipping ApiExport_Get due to required query parameter "format"
+warning | Skipping ApiExport_Get due to required query parameter "export"
+warning | Skipping WorkspaceApiExport_Get due to required query parameter "format"
+warning | Skipping WorkspaceApiExport_Get due to required query parameter "export"
+warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/tenant/{configurationName}/syncState': Found mismatch between type segments (3) and name segments (2)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.

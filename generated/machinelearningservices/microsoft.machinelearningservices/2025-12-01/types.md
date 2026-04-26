@@ -816,12 +816,6 @@ Only 'Accuracy' is supported for Text-NER, so user need not set this explicitly.
 * **maxNodeCount**: int
 * **minNodeCount**: int
 
-## AzureOpenAiHyperParameters
-### Properties
-* **batchSize**: int: Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance.
-* **learningRateMultiplier**: int: Scaling factor for the learning rate. A smaller learning rate may be useful to avoid over fitting.
-* **nEpochs**: int: The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
-
 ## BatchDeploymentConfiguration
 * **Discriminator**: deploymentConfigurationType
 
@@ -1278,11 +1272,6 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 ### Properties
 * **metric**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The user-defined metric to calculate.
 * **threshold**: [MonitoringThreshold](#monitoringthreshold): The threshold value. If null, a default value will be set depending on the selected metric.
-
-## CustomModelFineTuningHyperParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## CustomMonitoringSignalInputAssets
 ### Properties
@@ -1792,31 +1781,6 @@ with encryption
 * **offlineStoreConnectionName**: string
 * **onlineStoreConnectionName**: string
 
-## FineTuningJobOutputs
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [JobOutput](#joboutput)
-
-## FineTuningVertical
-* **Discriminator**: modelProvider
-
-### Base Properties
-* **model**: [JobInput](#jobinput) (Required): [Required] Input model for fine tuning.
-* **taskType**: 'ChatCompletion' | 'ImageClassification' | 'ImageInstanceSegmentation' | 'ImageObjectDetection' | 'QuestionAnswering' | 'TextClassification' | 'TextCompletion' | 'TextSummarization' | 'TextTranslation' | 'TokenClassification' | 'VideoMultiObjectTracking' | string (Required): [Required] Fine tuning task type.
-* **trainingData**: [JobInput](#jobinput) (Required): [Required] Training data for fine tuning.
-* **validationData**: [JobInput](#jobinput): Validation data for fine tuning.
-
-### AzureOpenAiFineTuning
-#### Properties
-* **hyperParameters**: [AzureOpenAiHyperParameters](#azureopenaihyperparameters): HyperParameters for fine tuning Azure Open AI model.
-* **modelProvider**: 'AzureOpenAI' (Required): [Required] Enum to determine the type of fine tuning.
-
-### CustomModelFineTuning
-#### Properties
-* **hyperParameters**: [CustomModelFineTuningHyperParameters](#custommodelfinetuninghyperparameters): HyperParameters for fine tuning custom model.
-* **modelProvider**: 'Custom' (Required): [Required] Enum to determine the type of fine tuning.
-
-
 ## FlavorData
 ### Properties
 * **data**: [FlavorData](#flavordata): Model flavor-specific data.
@@ -2256,14 +2220,6 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **queueSettings**: [QueueSettings](#queuesettings): Queue settings for the job
 * **resources**: [JobResourceConfiguration](#jobresourceconfiguration): Compute Resource configuration for the job.
 
-### FineTuningJob
-#### Properties
-* **fineTuningDetails**: [FineTuningVertical](#finetuningvertical) (Required): [Required]
-* **jobType**: 'FineTuning' (Required): [Required] Specifies the type of job.
-* **outputs**: [FineTuningJobOutputs](#finetuningjoboutputs) (Required): [Required]
-* **queueSettings**: [QueueSettings](#queuesettings): Queue settings for the job
-* **resources**: [JobResources](#jobresources): Instance types and other resources for the job
-
 ### PipelineJob
 #### Properties
 * **inputs**: [PipelineJobInputs](#pipelinejobinputs): Inputs for the pipeline job.
@@ -2415,10 +2371,6 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **instanceType**: string: Optional type of VM used as supported by the compute target.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
 * **shmSize**: string {pattern: "\d+[bBkKmMgG]"}: Size of the docker container's shared memory block. This should be in the format of (number)(unit) where number as to be greater than 0 and the unit can be one of b(bytes), k(kilobytes), m(megabytes), or g(gigabytes).
-
-## JobResources
-### Properties
-* **instanceTypes**: string[]: List of instance types to choose from.
 
 ## JobService
 ### Properties

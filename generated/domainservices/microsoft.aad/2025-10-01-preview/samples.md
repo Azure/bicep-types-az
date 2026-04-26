@@ -47,7 +47,7 @@ resource exampleResource 'Microsoft.AAD/domainServices@2025-10-01-preview' = {
 
 Create OuContainer
 ```bicep
-resource exampleResource 'Microsoft.Aad/domainServices/ouContainer@2025-10-01-preview' = {
+resource exampleResource 'Microsoft.AAD/domainServices/ouContainer@2025-10-01-preview' = {
   parent: parentResource 
   name: 'example'
   accountName: 'AccountName1'

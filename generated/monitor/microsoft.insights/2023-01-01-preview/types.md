@@ -1,0 +1,77 @@
+# Microsoft.Insights @ 2023-01-01-preview
+
+## Resource Microsoft.Insights/activityLogAlerts@2023-01-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The geo-location where the resource lives
+* **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertRuleProperties](#alertruleproperties): The Activity Log Alert rule properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ActivityLogAlertResourceTags](#activitylogalertresourcetags): Resource tags.
+* **type**: 'Microsoft.Insights/activityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
+
+## ActionList
+### Properties
+* **actionGroups**: [ActivityLogAlertActionGroup](#activitylogalertactiongroup)[]: The list of the Action Groups.
+
+## ActivityLogAlertActionGroup
+### Properties
+* **actionGroupId**: string (Required): The resource ID of the Action Group. This cannot be null or empty.
+* **actionProperties**: [ActivityLogAlertActionGroupActionProperties](#activitylogalertactiongroupactionproperties): Predefined list of properties and configuration items for the action group.
+* **webhookProperties**: [ActivityLogAlertActionGroupWebhookProperties](#activitylogalertactiongroupwebhookproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+
+## ActivityLogAlertActionGroupActionProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ActivityLogAlertActionGroupWebhookProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ActivityLogAlertResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AlertRuleAllOfCondition
+### Properties
+* **allOf**: [AlertRuleAnyOfOrLeafCondition](#alertruleanyoforleafcondition)[] (Required): The list of Activity Log Alert rule conditions.
+
+## AlertRuleAnyOfOrLeafCondition
+### Properties
+* **anyOf**: [AlertRuleLeafCondition](#alertruleleafcondition)[]: An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
+* **containsAny**: string[]: The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+* **equals**: string: The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+* **field**: string: The name of the Activity Log event's field that this condition will examine.
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+
+## AlertRuleLeafCondition
+### Properties
+* **containsAny**: string[]: The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+* **equals**: string: The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+* **field**: string: The name of the Activity Log event's field that this condition will examine.
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+
+## AlertRuleProperties
+### Properties
+* **actions**: [ActionList](#actionlist) (Required): The actions that will activate when the condition is met.
+* **condition**: [AlertRuleAllOfCondition](#alertruleallofcondition) (Required): The condition that will cause this alert to activate.
+* **description**: string: A description of this Activity Log Alert rule.
+* **enabled**: bool: Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+* **scopes**: string[]: A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+* **tenantScope**: string: The tenant GUID. Must be provided for tenant-level and management group events rules.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+

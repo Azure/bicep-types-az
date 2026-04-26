@@ -1,5 +1,16 @@
 # Microsoft.Authorization @ 2024-09-01-preview
 
+## Resource Microsoft.Authorization/roleAssignmentScheduleInstances@2024-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleAssignmentScheduleInstanceProperties](#roleassignmentscheduleinstanceproperties) (ReadOnly): Role assignment schedule instance properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Authorization/roleAssignmentScheduleInstances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Authorization/roleAssignmentScheduleRequests@2024-09-01-preview
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
@@ -8,7 +19,30 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleAssignmentScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/roleAssignmentSchedules@2024-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleAssignmentScheduleProperties](#roleassignmentscheduleproperties) (ReadOnly): Role assignment schedule properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Authorization/roleAssignmentSchedules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/roleEligibilityScheduleInstances@2024-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleEligibilityScheduleInstanceProperties](#roleeligibilityscheduleinstanceproperties) (ReadOnly): Role eligibility schedule instance properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Authorization/roleEligibilityScheduleInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleEligibilityScheduleRequests@2024-09-01-preview
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
@@ -18,7 +52,30 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/roleEligibilitySchedules@2024-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleEligibilityScheduleProperties](#roleeligibilityscheduleproperties) (ReadOnly): role eligibility schedule properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Authorization/roleEligibilitySchedules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/roleManagementPolicies@2024-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleManagementPolicyProperties](#rolemanagementpolicyproperties) (ReadOnly): Role management policy properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Authorization/roleManagementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleManagementPolicyAssignments@2024-09-01-preview
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
@@ -28,6 +85,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApprovalSettings
@@ -72,6 +130,13 @@
 * **id**: string: Scope id of the resource
 * **type**: string: Type of the resource
 
+## MicrosoftCommonPrincipal
+### Properties
+* **displayName**: string: The name of the principal made changes
+* **email**: string: Email of principal
+* **id**: string: The id of the principal made changes
+* **type**: string: Type of principal such as user , group etc
+
 ## PIMOnlyModeSettings
 ### Properties
 * **excludedAssignmentTypes**: ('ServicePrincipalsAsRequestor' | 'ServicePrincipalsAsTarget' | string)[]: The list of excluded assignment types allowed.
@@ -87,7 +152,7 @@
 ## PolicyAssignmentPropertiesPolicy
 ### Properties
 * **id**: string: Id of the policy
-* **lastModifiedBy**: [Principal](#principal) (ReadOnly): The name of the entity last modified it
+* **lastModifiedBy**: [MicrosoftCommonPrincipal](#microsoftcommonprincipal) (ReadOnly): The name of the entity last modified it
 * **lastModifiedDateTime**: string: The last modified date time.
 
 ## PolicyAssignmentPropertiesRoleDefinition
@@ -102,12 +167,54 @@
 * **id**: string: Scope id of the resource
 * **type**: string: Type of the resource
 
-## Principal
+## PolicyProperties
 ### Properties
-* **displayName**: string: The name of the principal made changes
-* **email**: string: Email of principal
-* **id**: string: The id of the principal made changes
-* **type**: string: Type of principal such as user , group etc
+* **scope**: [PolicyPropertiesScope](#policypropertiesscope) (ReadOnly): Details of the resource scope
+
+## PolicyPropertiesScope
+### Properties
+* **displayName**: string: Display name of the resource
+* **id**: string: Scope id of the resource
+* **type**: string: Type of the resource
+
+## RoleAssignmentScheduleInstanceProperties
+### Properties
+* **assignmentType**: 'Activated' | 'Assigned' | string: Assignment type of the role assignment schedule
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string: DateTime when role assignment schedule was created
+* **endDateTime**: string: The endDateTime of the role assignment schedule instance
+* **expandedProperties**: [ExpandedProperties](#expandedproperties): Additional properties of principal, scope and role definition
+* **linkedRoleEligibilityScheduleId**: string: roleEligibilityScheduleId used to activate
+* **linkedRoleEligibilityScheduleInstanceId**: string: roleEligibilityScheduleInstanceId linked to this roleAssignmentScheduleInstance
+* **memberType**: 'Direct' | 'Group' | 'Inherited' | string: Membership type of the role assignment schedule
+* **originRoleAssignmentId**: string: Role Assignment Id in external system
+* **principalId**: string: The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
+* **roleAssignmentScheduleId**: string: Id of the master role assignment schedule
+* **roleDefinitionId**: string: The role definition ID.
+* **scope**: string: The role assignment schedule scope.
+* **startDateTime**: string: The startDateTime of the role assignment schedule instance
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role assignment schedule instance.
+
+## RoleAssignmentScheduleProperties
+### Properties
+* **assignmentType**: 'Activated' | 'Assigned' | string: Assignment type of the role assignment schedule
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string: DateTime when role assignment schedule was created
+* **endDateTime**: string: End DateTime when role assignment schedule
+* **expandedProperties**: [ExpandedProperties](#expandedproperties): Additional properties of principal, scope and role definition
+* **linkedRoleEligibilityScheduleId**: string: The id of roleEligibilitySchedule used to activated this roleAssignmentSchedule
+* **memberType**: 'Direct' | 'Group' | 'Inherited' | string: Membership type of the role assignment schedule
+* **principalId**: string: The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
+* **roleAssignmentScheduleRequestId**: string: The id of roleAssignmentScheduleRequest used to create this roleAssignmentSchedule
+* **roleDefinitionId**: string: The role definition ID.
+* **scope**: string: The role assignment schedule scope.
+* **startDateTime**: string: Start DateTime when role assignment schedule
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role assignment schedule.
+* **updatedOn**: string: DateTime when role assignment schedule was modified
 
 ## RoleAssignmentScheduleRequestProperties
 ### Properties
@@ -145,6 +252,39 @@
 ### Properties
 * **ticketNumber**: string: Ticket number for the role assignment
 * **ticketSystem**: string: Ticket system name for the role assignment
+
+## RoleEligibilityScheduleInstanceProperties
+### Properties
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string: DateTime when role eligibility schedule was created
+* **endDateTime**: string: The endDateTime of the role eligibility schedule instance
+* **expandedProperties**: [ExpandedProperties](#expandedproperties): Additional properties of principal, scope and role definition
+* **memberType**: 'Direct' | 'Group' | 'Inherited' | string: Membership type of the role eligibility schedule
+* **principalId**: string: The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
+* **roleDefinitionId**: string: The role definition ID.
+* **roleEligibilityScheduleId**: string: Id of the master role eligibility schedule
+* **scope**: string: The role eligibility schedule scope.
+* **startDateTime**: string: The startDateTime of the role eligibility schedule instance
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role eligibility schedule instance
+
+## RoleEligibilityScheduleProperties
+### Properties
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string: DateTime when role eligibility schedule was created
+* **endDateTime**: string: End DateTime when role eligibility schedule
+* **expandedProperties**: [ExpandedProperties](#expandedproperties): Additional properties of principal, scope and role definition
+* **memberType**: 'Direct' | 'Group' | 'Inherited' | string: Membership type of the role eligibility schedule
+* **principalId**: string: The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
+* **roleDefinitionId**: string: The role definition ID.
+* **roleEligibilityScheduleRequestId**: string: The id of roleEligibilityScheduleRequest used to create this roleAssignmentSchedule
+* **scope**: string: The role eligibility schedule scope.
+* **startDateTime**: string: Start DateTime when role eligibility schedule
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role eligibility schedule.
+* **updatedOn**: string: DateTime when role eligibility schedule was modified
 
 ## RoleEligibilityScheduleRequestProperties
 ### Properties
@@ -188,6 +328,18 @@
 * **policyAssignmentProperties**: [PolicyAssignmentProperties](#policyassignmentproperties) (ReadOnly): Additional properties of scope, role definition and policy
 * **policyId**: string: The policy id role management policy assignment.
 * **roleDefinitionId**: string: The role definition of management policy assignment.
+* **scope**: string: The role management policy scope.
+
+## RoleManagementPolicyProperties
+### Properties
+* **description**: string: The role management policy description.
+* **displayName**: string: The role management policy display name.
+* **effectiveRules**: [RoleManagementPolicyRule](#rolemanagementpolicyrule)[] (ReadOnly): The readonly computed rule applied to the policy.
+* **isOrganizationDefault**: bool: The role management policy is default policy.
+* **lastModifiedBy**: [MicrosoftCommonPrincipal](#microsoftcommonprincipal) (ReadOnly): The name of the entity last modified it
+* **lastModifiedDateTime**: string (ReadOnly): The last modified date time.
+* **policyProperties**: [PolicyProperties](#policyproperties) (ReadOnly): Additional properties of scope
+* **rules**: [RoleManagementPolicyRule](#rolemanagementpolicyrule)[]: The rule applied to the policy.
 * **scope**: string: The role management policy scope.
 
 ## RoleManagementPolicyRule
@@ -244,12 +396,21 @@
 * **operations**: string[]: The type of operation.
 * **targetObjects**: string[]: The list of target objects.
 
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
 ## UserSet
 ### Properties
 * **description**: string: The description of the user.
 * **id**: string: The object id of the user.
 * **isBackup**: bool: The value indicating whether the user is a backup fallback approver
-* **userType**: 'Group' | 'ServicePrincipal' | 'User' | string: The type of user.
+* **userType**: 'Group' | 'User' | string: The type of user.
 
 ## UsersOrServicePrincipalSet
 ### Properties

@@ -148,7 +148,7 @@
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): Diagnostics resource specific properties
+* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -247,7 +247,7 @@
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities needed by a container app job to interact with other Azure services to not maintain any secrets or credentials in code.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties): Container Apps Job resource specific properties.
@@ -262,7 +262,7 @@
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (ReadOnly): Managed identities needed by a container app job to interact with other Azure services to not maintain any secrets or credentials in code.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (ReadOnly): The managed service identities assigned to this resource.
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (ReadOnly): Container Apps Job resource specific properties.
@@ -277,9 +277,20 @@
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): Diagnostics resource specific properties
+* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/jobs/detectors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.App/jobs/executions@2025-10-02-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Container Apps Job execution specific properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.App/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/logicApps@2025-10-02-preview
 * **Readable Scope(s)**: Extension
@@ -310,7 +321,7 @@
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities for the Managed Environment to interact with other Azure services without maintaining any secrets or credentials in code.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **kind**: string: Kind of the Environment.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -371,7 +382,7 @@
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (ReadOnly): Managed identities for the Managed Environment to interact with other Azure services without maintaining any secrets or credentials in code.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (ReadOnly): The managed service identities assigned to this resource.
 * **kind**: string (ReadOnly): Kind of the Environment.
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: 'rootApi' (Required, DeployTimeConstant): The resource name
@@ -387,7 +398,7 @@
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): Diagnostics resource specific properties
+* **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -476,7 +487,7 @@
 ### Properties
 * **apiVersion**: '2025-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities needed by a session pool to interact with other Azure services to not maintain any secrets or credentials in code.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SessionPoolProperties](#sessionpoolproperties): Container App session pool resource specific properties
@@ -494,11 +505,6 @@
 * **ApiVersion**: 2025-10-02-preview
 * **Output**: [CustomHostnameAnalysisResult](#customhostnameanalysisresult)
 
-## Function listSecrets (Microsoft.App/connectedEnvironments/daprComponents@2025-10-02-preview)
-* **Resource**: Microsoft.App/connectedEnvironments/daprComponents
-* **ApiVersion**: 2025-10-02-preview
-* **Output**: [DaprSecretsCollection](#daprsecretscollection)
-
 ## Function listSecrets (Microsoft.App/containerApps@2025-10-02-preview)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2025-10-02-preview
@@ -508,6 +514,11 @@
 * **Resource**: Microsoft.App/jobs
 * **ApiVersion**: 2025-10-02-preview
 * **Output**: [JobSecretsCollection](#jobsecretscollection)
+
+## Function listSecrets (Microsoft.App/connectedEnvironments/daprComponents@2025-10-02-preview)
+* **Resource**: Microsoft.App/connectedEnvironments/daprComponents
+* **ApiVersion**: 2025-10-02-preview
+* **Output**: [DaprSecretsCollection](#daprsecretscollection)
 
 ## Function listSecrets (Microsoft.App/managedEnvironments/daprComponents@2025-10-02-preview)
 * **Resource**: Microsoft.App/managedEnvironments/daprComponents
@@ -596,7 +607,7 @@ a user logs in. Each parameter must be in the form "key=value".
 ## AzureActiveDirectoryRegistration
 ### Properties
 * **clientId**: string: The Client ID of this relying party application, known as the client_id.
-This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
+This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **clientSecretCertificateIssuer**: string: An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
@@ -698,7 +709,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **subjectName**: string (ReadOnly): Subject name of the certificate.
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
 * **valid**: bool (ReadOnly): Is the certificate valid?.
-* **value**: any (WriteOnly): PFX or PEM blob
+* **value**: string {sensitive} (WriteOnly): PFX or PEM blob
 
 ## CircuitBreakerPolicy
 ### Properties
@@ -836,6 +847,13 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **language**: string (ReadOnly): Programming language of the function.
 * **triggerType**: string (ReadOnly): Trigger type of the function.
 
+## ContainerExecutionStatus
+### Properties
+* **additionalInformation**: string: Additional information for the container status
+* **code**: int: Exit code
+* **name**: string: Container Name.
+* **status**: string: Status of the container
+
 ## ContainerRegistry
 ### Properties
 * **containerRegistryServer**: string (Required): Login server of the container registry.
@@ -883,7 +901,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ### Properties
 * **certificateKeyVaultProperties**: [CertificateKeyVaultProperties](#certificatekeyvaultproperties): Certificate stored in Azure Key Vault.
 * **certificatePassword**: string {sensitive}: Certificate password
-* **certificateValue**: any: PFX or PEM blob
+* **certificateValue**: string {sensitive}: PFX or PEM blob
 * **customDomainVerificationId**: string (ReadOnly): Id used to verify domain name ownership
 * **dnsSuffix**: string: Dns suffix for the environment domain
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
@@ -1203,6 +1221,10 @@ eg: azure-servicebus, redis etc.
 * **parameters**: string[]: Parameters for the template.
 * **target**: string: The error target.
 
+## ExecutionStatus
+### Properties
+* **replicas**: [ReplicaExecutionStatus](#replicaexecutionstatus)[]: Replicas in the execution.
+
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
@@ -1521,6 +1543,30 @@ configuration settings of the custom Open ID Connect provider.
 * **parallelism**: int: Number of parallel replicas of a job that can run at a given time.
 * **replicaCompletionCount**: int: Minimum number of successful replica completions before overall job completion.
 
+## JobExecutionContainer
+### Properties
+* **args**: string[]: Container start command arguments.
+* **command**: string[]: Container start command.
+* **env**: [EnvironmentVar](#environmentvar)[]: Container environment variables.
+* **image**: string: Container image tag.
+* **name**: string: Custom container name.
+* **resources**: [ContainerResources](#containerresources): Container resource requirements.
+
+## JobExecutionProperties
+### Properties
+* **detailedStatus**: [ExecutionStatus](#executionstatus): Detailed status of the job execution.
+* **endTime**: string: Job execution end time.
+* **message**: string (ReadOnly): Human readable message indicating details about the current condition of the job execution.
+* **reason**: string (ReadOnly): Reason for the current condition of job execution.
+* **startTime**: string: Job execution start time.
+* **status**: 'Degraded' | 'Failed' | 'Processing' | 'Running' | 'Stopped' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current running State of the job
+* **template**: [JobExecutionTemplate](#jobexecutiontemplate): Job's execution container.
+
+## JobExecutionTemplate
+### Properties
+* **containers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of container definitions for the Container Apps Job.
+* **initContainers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of specialized containers that run before job containers.
+
 ## JobProperties
 ### Properties
 * **configuration**: [JobConfiguration](#jobconfiguration): Container Apps Job configuration properties.
@@ -1828,7 +1874,7 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## RegistryInfo
 ### Properties
-* **registryPassword**: string {sensitive} (WriteOnly): registry secret.
+* **registryPassword**: string (WriteOnly): registry secret.
 * **registryUrl**: string: registry server Url.
 * **registryUserName**: string: registry username.
 
@@ -1844,6 +1890,11 @@ Note that URLs within the current domain are always implicitly allowed.
 * **runningState**: 'Running' | 'Terminated' | 'Waiting' | string (ReadOnly): Current running state of the container
 * **runningStateDetails**: string (ReadOnly): The details of container current running state
 * **started**: bool: The container start status
+
+## ReplicaExecutionStatus
+### Properties
+* **containers**: [ContainerExecutionStatus](#containerexecutionstatus)[]: Containers in the execution replica
+* **name**: string: Replica Name.
 
 ## ReplicaProperties
 ### Properties
@@ -2144,7 +2195,7 @@ as they were at the creation time
 ### Properties
 * **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore): The configuration settings of the storage of the tokens if blob storage is used.
 * **enabled**: bool: <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
- The default is <code>false</code>.
+The default is <code>false</code>.
 * **tokenRefreshExtensionHours**: int: The number of hours after session token expiration that a session token can be used to
 call the token refresh API. The default is 72 hours.
 
