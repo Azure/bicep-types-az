@@ -1999,7 +1999,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationGatewayIPConfiguration",
+    "name": "CommonApplicationGatewayIPConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -2040,7 +2040,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationGatewayIPConfigurationPropertiesFormat",
+    "name": "CommonApplicationGatewayIPConfigurationPropertiesFormat",
     "properties": {
       "subnet": {
         "type": {
@@ -2060,7 +2060,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SubResource",
+    "name": "CommonSubResource",
     "properties": {
       "id": {
         "type": {
@@ -3184,7 +3184,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationGatewayBackendAddressPool",
+    "name": "CommonApplicationGatewayBackendAddressPool",
     "properties": {
       "properties": {
         "type": {
@@ -3225,7 +3225,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationGatewayBackendAddressPoolPropertiesFormat",
+    "name": "CommonApplicationGatewayBackendAddressPoolPropertiesFormat",
     "properties": {
       "backendIPConfigurations": {
         "type": {
@@ -3252,7 +3252,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceIPConfiguration",
+    "name": "CommonNetworkInterfaceIPConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -3293,7 +3293,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceIPConfigurationPropertiesFormat",
+    "name": "CommonNetworkInterfaceIPConfigurationPropertiesFormat",
     "properties": {
       "gatewayLoadBalancer": {
         "type": {
@@ -3404,7 +3404,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkTap",
+    "name": "CommonVirtualNetworkTap",
     "properties": {
       "properties": {
         "type": {
@@ -3459,7 +3459,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkTapPropertiesFormat",
+    "name": "CommonVirtualNetworkTapPropertiesFormat",
     "properties": {
       "networkInterfaceTapConfigurations": {
         "type": {
@@ -3507,7 +3507,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceTapConfiguration",
+    "name": "CommonNetworkInterfaceTapConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -3548,7 +3548,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceTapConfigurationPropertiesFormat",
+    "name": "CommonNetworkInterfaceTapConfigurationPropertiesFormat",
     "properties": {
       "virtualNetworkTap": {
         "type": {
@@ -3674,7 +3674,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FrontendIPConfiguration",
+    "name": "CommonFrontendIPConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -3722,7 +3722,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FrontendIPConfigurationPropertiesFormat",
+    "name": "CommonFrontendIPConfigurationPropertiesFormat",
     "properties": {
       "inboundNatRules": {
         "type": {
@@ -3880,7 +3880,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Subnet",
+    "name": "CommonSubnet",
     "properties": {
       "properties": {
         "type": {
@@ -3921,7 +3921,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SubnetPropertiesFormat",
+    "name": "CommonSubnetPropertiesFormat",
     "properties": {
       "addressPrefix": {
         "type": {
@@ -4094,7 +4094,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkSecurityGroup",
+    "name": "CommonNetworkSecurityGroup",
     "properties": {
       "properties": {
         "type": {
@@ -4149,7 +4149,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkSecurityGroupPropertiesFormat",
+    "name": "CommonNetworkSecurityGroupPropertiesFormat",
     "properties": {
       "flushConnection": {
         "type": {
@@ -4211,7 +4211,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SecurityRule",
+    "name": "CommonSecurityRule",
     "properties": {
       "properties": {
         "type": {
@@ -4252,7 +4252,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SecurityRulePropertiesFormat",
+    "name": "CommonSecurityRulePropertiesFormat",
     "properties": {
       "description": {
         "type": {
@@ -4426,7 +4426,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationSecurityGroup",
+    "name": "CommonApplicationSecurityGroup",
     "properties": {
       "properties": {
         "type": {
@@ -4481,7 +4481,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationSecurityGroupPropertiesFormat",
+    "name": "CommonApplicationSecurityGroupPropertiesFormat",
     "properties": {
       "resourceGuid": {
         "type": {
@@ -4551,7 +4551,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -4695,7 +4695,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterface",
+    "name": "CommonNetworkInterface",
     "properties": {
       "properties": {
         "type": {
@@ -4757,7 +4757,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfacePropertiesFormat",
+    "name": "CommonNetworkInterfacePropertiesFormat",
     "properties": {
       "virtualMachine": {
         "type": {
@@ -4924,7 +4924,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpoint",
+    "name": "CommonPrivateEndpoint",
     "properties": {
       "properties": {
         "type": {
@@ -4986,7 +4986,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpointProperties",
+    "name": "CommonPrivateEndpointProperties",
     "properties": {
       "subnet": {
         "type": {
@@ -5147,7 +5147,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceConnection",
+    "name": "CommonPrivateLinkServiceConnection",
     "properties": {
       "properties": {
         "type": {
@@ -5188,7 +5188,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceConnectionProperties",
+    "name": "CommonPrivateLinkServiceConnectionProperties",
     "properties": {
       "provisioningState": {
         "type": {
@@ -5285,7 +5285,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceConnectionState",
+    "name": "CommonPrivateLinkServiceConnectionState",
     "properties": {
       "status": {
         "type": {
@@ -5324,7 +5324,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "CustomDnsConfigPropertiesFormat",
+    "name": "CommonCustomDnsConfigPropertiesFormat",
     "properties": {
       "fqdn": {
         "type": {
@@ -5362,7 +5362,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpointIPConfiguration",
+    "name": "CommonPrivateEndpointIPConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -5396,7 +5396,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpointIPConfigurationProperties",
+    "name": "CommonPrivateEndpointIPConfigurationProperties",
     "properties": {
       "groupId": {
         "type": {
@@ -5429,7 +5429,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ExtendedLocation",
+    "name": "CommonExtendedLocation",
     "properties": {
       "name": {
         "type": {
@@ -5464,7 +5464,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -5484,7 +5484,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceDnsSettings",
+    "name": "CommonNetworkInterfaceDnsSettings",
     "properties": {
       "dnsServers": {
         "type": {
@@ -5615,7 +5615,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkService",
+    "name": "CommonPrivateLinkService",
     "properties": {
       "properties": {
         "type": {
@@ -5677,7 +5677,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceProperties",
+    "name": "CommonPrivateLinkServiceProperties",
     "properties": {
       "loadBalancerFrontendIpConfigurations": {
         "type": {
@@ -5773,7 +5773,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceIpConfiguration",
+    "name": "CommonPrivateLinkServiceIpConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -5814,7 +5814,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServiceIpConfigurationProperties",
+    "name": "CommonPrivateLinkServiceIpConfigurationProperties",
     "properties": {
       "privateIPAddress": {
         "type": {
@@ -6040,7 +6040,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpointConnection",
+    "name": "CommonPrivateEndpointConnection",
     "properties": {
       "properties": {
         "type": {
@@ -6081,7 +6081,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateEndpointConnectionProperties",
+    "name": "CommonPrivateEndpointConnectionProperties",
     "properties": {
       "privateEndpoint": {
         "type": {
@@ -6178,7 +6178,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServicePropertiesVisibility",
+    "name": "CommonPrivateLinkServicePropertiesVisibility",
     "properties": {
       "subscriptions": {
         "type": {
@@ -6197,7 +6197,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PrivateLinkServicePropertiesAutoApproval",
+    "name": "CommonPrivateLinkServicePropertiesAutoApproval",
     "properties": {
       "subscriptions": {
         "type": {
@@ -6222,7 +6222,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -6352,7 +6352,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -6372,7 +6372,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FlowLog",
+    "name": "CommonFlowLog",
     "properties": {
       "properties": {
         "type": {
@@ -6434,7 +6434,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FlowLogPropertiesFormat",
+    "name": "CommonFlowLogPropertiesFormat",
     "properties": {
       "targetResourceId": {
         "type": {
@@ -6510,7 +6510,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RetentionPolicyParameters",
+    "name": "CommonRetentionPolicyParameters",
     "properties": {
       "days": {
         "type": {
@@ -6530,7 +6530,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FlowLogFormatParameters",
+    "name": "CommonFlowLogFormatParameters",
     "properties": {
       "type": {
         "type": {
@@ -6565,7 +6565,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "TrafficAnalyticsProperties",
+    "name": "CommonTrafficAnalyticsProperties",
     "properties": {
       "networkWatcherFlowAnalyticsConfiguration": {
         "type": {
@@ -6578,7 +6578,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "TrafficAnalyticsConfigurationProperties",
+    "name": "CommonTrafficAnalyticsConfigurationProperties",
     "properties": {
       "enabled": {
         "type": {
@@ -6669,7 +6669,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ManagedServiceIdentity",
+    "name": "CommonManagedServiceIdentity",
     "properties": {
       "principalId": {
         "type": {
@@ -6756,7 +6756,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ManagedServiceIdentityUserAssignedIdentities",
+    "name": "CommonManagedServiceIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/495"
@@ -6764,7 +6764,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -6828,7 +6828,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -6836,7 +6836,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RouteTable",
+    "name": "CommonRouteTable",
     "properties": {
       "properties": {
         "type": {
@@ -6891,7 +6891,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RouteTablePropertiesFormat",
+    "name": "CommonRouteTablePropertiesFormat",
     "properties": {
       "routes": {
         "type": {
@@ -6932,7 +6932,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Route",
+    "name": "CommonRoute",
     "properties": {
       "properties": {
         "type": {
@@ -6973,7 +6973,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RoutePropertiesFormat",
+    "name": "CommonRoutePropertiesFormat",
     "properties": {
       "addressPrefix": {
         "type": {
@@ -7169,7 +7169,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -7177,7 +7177,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceEndpointPropertiesFormat",
+    "name": "CommonServiceEndpointPropertiesFormat",
     "properties": {
       "service": {
         "type": {
@@ -7273,7 +7273,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceEndpointPolicy",
+    "name": "CommonServiceEndpointPolicy",
     "properties": {
       "properties": {
         "type": {
@@ -7335,7 +7335,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceEndpointPolicyPropertiesFormat",
+    "name": "CommonServiceEndpointPolicyPropertiesFormat",
     "properties": {
       "serviceEndpointPolicyDefinitions": {
         "type": {
@@ -7383,7 +7383,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceEndpointPolicyDefinition",
+    "name": "CommonServiceEndpointPolicyDefinition",
     "properties": {
       "properties": {
         "type": {
@@ -7424,7 +7424,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceEndpointPolicyDefinitionPropertiesFormat",
+    "name": "CommonServiceEndpointPolicyDefinitionPropertiesFormat",
     "properties": {
       "description": {
         "type": {
@@ -7582,7 +7582,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -7602,7 +7602,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IPConfiguration",
+    "name": "CommonIPConfiguration",
     "properties": {
       "properties": {
         "type": {
@@ -7636,7 +7636,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IPConfigurationPropertiesFormat",
+    "name": "CommonIPConfigurationPropertiesFormat",
     "properties": {
       "privateIPAddress": {
         "type": {
@@ -7699,7 +7699,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PublicIPAddress",
+    "name": "CommonPublicIPAddress",
     "properties": {
       "properties": {
         "type": {
@@ -7775,7 +7775,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PublicIPAddressPropertiesFormat",
+    "name": "CommonPublicIPAddressPropertiesFormat",
     "properties": {
       "publicIPAllocationMethod": {
         "type": {
@@ -7937,7 +7937,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PublicIPAddressDnsSettings",
+    "name": "CommonPublicIPAddressDnsSettings",
     "properties": {
       "domainNameLabel": {
         "type": {
@@ -8004,7 +8004,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DdosSettings",
+    "name": "CommonDdosSettings",
     "properties": {
       "protectionMode": {
         "type": {
@@ -8053,7 +8053,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IpTag",
+    "name": "CommonIpTag",
     "properties": {
       "ipTagType": {
         "type": {
@@ -8129,7 +8129,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NatGateway",
+    "name": "CommonNatGateway",
     "properties": {
       "properties": {
         "type": {
@@ -8198,7 +8198,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NatGatewayPropertiesFormat",
+    "name": "CommonNatGatewayPropertiesFormat",
     "properties": {
       "idleTimeoutInMinutes": {
         "type": {
@@ -8354,7 +8354,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NatGatewaySku",
+    "name": "CommonNatGatewaySku",
     "properties": {
       "name": {
         "type": {
@@ -8395,7 +8395,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -8468,7 +8468,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PublicIPAddressSku",
+    "name": "CommonPublicIPAddressSku",
     "properties": {
       "name": {
         "type": {
@@ -8545,7 +8545,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -8609,7 +8609,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IPConfigurationProfile",
+    "name": "CommonIPConfigurationProfile",
     "properties": {
       "properties": {
         "type": {
@@ -8650,7 +8650,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IPConfigurationProfilePropertiesFormat",
+    "name": "CommonIPConfigurationProfilePropertiesFormat",
     "properties": {
       "subnet": {
         "type": {
@@ -8732,7 +8732,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceNavigationLink",
+    "name": "CommonResourceNavigationLink",
     "properties": {
       "properties": {
         "type": {
@@ -8773,7 +8773,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceNavigationLinkFormat",
+    "name": "CommonResourceNavigationLinkFormat",
     "properties": {
       "linkedResourceType": {
         "type": {
@@ -8856,7 +8856,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceAssociationLink",
+    "name": "CommonServiceAssociationLink",
     "properties": {
       "properties": {
         "type": {
@@ -8897,7 +8897,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceAssociationLinkPropertiesFormat",
+    "name": "CommonServiceAssociationLinkPropertiesFormat",
     "properties": {
       "linkedResourceType": {
         "type": {
@@ -9000,7 +9000,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Delegation",
+    "name": "CommonDelegation",
     "properties": {
       "properties": {
         "type": {
@@ -9041,7 +9041,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ServiceDelegationPropertiesFormat",
+    "name": "CommonServiceDelegationPropertiesFormat",
     "properties": {
       "serviceName": {
         "type": {
@@ -9266,7 +9266,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IpamPoolPrefixAllocation",
+    "name": "CommonIpamPoolPrefixAllocation",
     "properties": {
       "pool": {
         "type": {
@@ -9292,7 +9292,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "IpamPoolPrefixAllocationPool",
+    "name": "CommonIpamPoolPrefixAllocationPool",
     "properties": {
       "id": {
         "type": {
@@ -9373,7 +9373,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -9393,7 +9393,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "BackendAddressPool",
+    "name": "CommonBackendAddressPool",
     "properties": {
       "properties": {
         "type": {
@@ -9434,7 +9434,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "BackendAddressPoolPropertiesFormat",
+    "name": "CommonBackendAddressPoolPropertiesFormat",
     "properties": {
       "location": {
         "type": {
@@ -9524,7 +9524,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "GatewayLoadBalancerTunnelInterface",
+    "name": "CommonGatewayLoadBalancerTunnelInterface",
     "properties": {
       "port": {
         "type": {
@@ -9622,7 +9622,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancerBackendAddress",
+    "name": "CommonLoadBalancerBackendAddress",
     "properties": {
       "properties": {
         "type": {
@@ -9642,7 +9642,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancerBackendAddressPropertiesFormat",
+    "name": "CommonLoadBalancerBackendAddressPropertiesFormat",
     "properties": {
       "virtualNetwork": {
         "type": {
@@ -9697,7 +9697,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NatRulePortMapping",
+    "name": "CommonNatRulePortMapping",
     "properties": {
       "inboundNatRuleName": {
         "type": {
@@ -9867,7 +9867,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "InboundNatRule",
+    "name": "CommonInboundNatRule",
     "properties": {
       "properties": {
         "type": {
@@ -9908,7 +9908,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "InboundNatRulePropertiesFormat",
+    "name": "CommonInboundNatRulePropertiesFormat",
     "properties": {
       "frontendIPConfiguration": {
         "type": {
@@ -10195,7 +10195,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties",
+    "name": "CommonNetworkInterfaceIPConfigurationPrivateLinkConnectionProperties",
     "properties": {
       "groupId": {
         "type": {
@@ -10234,7 +10234,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ApplicationGatewayBackendAddress",
+    "name": "CommonApplicationGatewayBackendAddress",
     "properties": {
       "fqdn": {
         "type": {
@@ -13842,7 +13842,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -14659,7 +14659,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -14766,7 +14766,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -15410,7 +15410,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -17021,7 +17021,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -17535,7 +17535,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -17986,7 +17986,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -20052,7 +20052,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -20997,7 +20997,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -21179,7 +21179,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -22297,7 +22297,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancerPropertiesFormat",
+    "name": "CommonLoadBalancerPropertiesFormat",
     "properties": {
       "frontendIPConfigurations": {
         "type": {
@@ -22385,7 +22385,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancingRule",
+    "name": "CommonLoadBalancingRule",
     "properties": {
       "properties": {
         "type": {
@@ -22426,7 +22426,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancingRulePropertiesFormat",
+    "name": "CommonLoadBalancingRulePropertiesFormat",
     "properties": {
       "frontendIPConfiguration": {
         "type": {
@@ -22657,7 +22657,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Probe",
+    "name": "CommonProbe",
     "properties": {
       "properties": {
         "type": {
@@ -22698,7 +22698,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ProbePropertiesFormat",
+    "name": "CommonProbePropertiesFormat",
     "properties": {
       "loadBalancingRules": {
         "type": {
@@ -22886,7 +22886,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "InboundNatPool",
+    "name": "CommonInboundNatPool",
     "properties": {
       "properties": {
         "type": {
@@ -22927,7 +22927,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "InboundNatPoolPropertiesFormat",
+    "name": "CommonInboundNatPoolPropertiesFormat",
     "properties": {
       "frontendIPConfiguration": {
         "type": {
@@ -23088,7 +23088,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "OutboundRule",
+    "name": "CommonOutboundRule",
     "properties": {
       "properties": {
         "type": {
@@ -23129,7 +23129,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "OutboundRulePropertiesFormat",
+    "name": "CommonOutboundRulePropertiesFormat",
     "properties": {
       "allocatedOutboundPorts": {
         "type": {
@@ -23347,7 +23347,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LoadBalancerSku",
+    "name": "CommonLoadBalancerSku",
     "properties": {
       "name": {
         "type": {
@@ -23418,7 +23418,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -23635,7 +23635,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -25001,7 +25001,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AddressSpace",
+    "name": "CommonAddressSpace",
     "properties": {
       "addressPrefixes": {
         "type": {
@@ -26525,7 +26525,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -26686,7 +26686,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -27113,7 +27113,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -27214,7 +27214,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -27305,7 +27305,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -27947,7 +27947,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -32540,7 +32540,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkWatcherPropertiesFormat",
+    "name": "CommonNetworkWatcherPropertiesFormat",
     "properties": {
       "provisioningState": {
         "type": {
@@ -32603,7 +32603,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -33762,7 +33762,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -34316,7 +34316,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetwork",
+    "name": "CommonVirtualNetwork",
     "properties": {
       "properties": {
         "type": {
@@ -34378,7 +34378,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkPropertiesFormat",
+    "name": "CommonVirtualNetworkPropertiesFormat",
     "properties": {
       "addressSpace": {
         "type": {
@@ -34496,7 +34496,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DhcpOptions",
+    "name": "CommonDhcpOptions",
     "properties": {
       "dnsServers": {
         "type": {
@@ -34521,7 +34521,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkPeering",
+    "name": "CommonVirtualNetworkPeering",
     "properties": {
       "properties": {
         "type": {
@@ -34562,7 +34562,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkPeeringPropertiesFormat",
+    "name": "CommonVirtualNetworkPeeringPropertiesFormat",
     "properties": {
       "allowVirtualNetworkAccess": {
         "type": {
@@ -34708,7 +34708,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkBgpCommunities",
+    "name": "CommonVirtualNetworkBgpCommunities",
     "properties": {
       "virtualNetworkCommunity": {
         "type": {
@@ -34728,7 +34728,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "VirtualNetworkEncryption",
+    "name": "CommonVirtualNetworkEncryption",
     "properties": {
       "enabled": {
         "type": {
@@ -34987,7 +34987,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -35351,7 +35351,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -35438,7 +35438,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -35937,7 +35937,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -36381,7 +36381,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -37086,7 +37086,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -37275,7 +37275,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -37369,7 +37369,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -37541,7 +37541,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -37635,7 +37635,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -38189,7 +38189,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -38276,7 +38276,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39052,7 +39052,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39146,7 +39146,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39260,7 +39260,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39611,7 +39611,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39698,7 +39698,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -39934,7 +39934,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -40028,7 +40028,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -40225,7 +40225,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -40590,7 +40590,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -43239,7 +43239,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -43808,7 +43808,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -49791,7 +49791,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -50467,7 +50467,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -51358,7 +51358,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "CommonResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"

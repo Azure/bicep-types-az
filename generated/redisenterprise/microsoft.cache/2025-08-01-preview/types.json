@@ -79,7 +79,7 @@
           "$ref": "#/152"
         },
         "flags": 0,
-        "description": "The identity of the resource."
+        "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
@@ -1487,7 +1487,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "SystemAssigned,UserAssigned"
+    "value": "SystemAssigned, UserAssigned"
   },
   {
     "$type": "UnionType",
@@ -1531,7 +1531,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ManagedServiceIdentityUserAssignedIdentities",
+    "name": "UserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/159"

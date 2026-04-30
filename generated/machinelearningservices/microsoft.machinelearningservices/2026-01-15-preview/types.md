@@ -1262,6 +1262,10 @@ Input expected is dictionary of key,value pairs in JSON format.
 * **displayName**: string: Name of the ComputeInstance application.
 * **endpointUri**: string: Application' endpoint URI.
 
+## ComputeInstanceAutologgerSettings
+### Properties
+* **mlflowAutologger**: 'Disabled' | 'Enabled' | string: Indicates whether mlflow autologger is enabled for notebooks.
+
 ## ComputeInstanceConnectivityEndpoints
 ### Properties
 * **privateIpAddress**: string (ReadOnly): Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
@@ -1318,6 +1322,7 @@ Input expected is dictionary of key,value pairs in JSON format.
 ### Properties
 * **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
 * **applicationSharingPolicy**: 'Personal' | 'Shared' | string: Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+* **autologgerSettings**: [ComputeInstanceAutologgerSettings](#computeinstanceautologgersettings): Specifies settings for autologger.
 * **computeInstanceAuthorizationType**: 'personal' | string: The Compute Instance Authorization type. Available values are personal (default).
 * **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Describes all connectivity endpoints available for this ComputeInstance.
 * **containers**: [ComputeInstanceContainer](#computeinstancecontainer)[] (ReadOnly): Describes informations of containers on this ComputeInstance.
@@ -1326,12 +1331,15 @@ Input expected is dictionary of key,value pairs in JSON format.
 * **dataDisks**: [ComputeInstanceDataDisk](#computeinstancedatadisk)[] (ReadOnly): Describes informations of dataDisks on this ComputeInstance.
 * **dataMounts**: [ComputeInstanceDataMount](#computeinstancedatamount)[] (ReadOnly): Describes informations of dataMounts on this ComputeInstance.
 * **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+* **enableOSPatching**: bool: Enable Auto OS Patching. Possible values are: true, false.
+* **enableRootAccess**: bool: Enable root access. Possible values are: true, false.
 * **enableSSO**: bool: Enable SSO (single sign on). Possible values are: true, false.
 * **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
 * **idleTimeBeforeShutdown**: string: Stops compute instance after user defined period of inactivity. Time is defined in ISO8601 format. Minimum is 15 min, maximum is 3 days.
 * **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
 * **osImageMetadata**: [ImageMetadata](#imagemetadata) (ReadOnly): Returns metadata about the operating system image for this compute instance.
 * **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
+* **releaseQuotaOnStop**: bool: Release quota if compute instance stopped. Possible values are: true - release quota if compute instance stopped. false - don't release quota when compute instance stopped.
 * **schedules**: [ComputeSchedules](#computeschedules): The list of schedules to be applied on the computes.
 * **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
 * **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
@@ -1421,6 +1429,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ## ContentSafety
 ### Properties
+* **contentSafetyLevel**: 'Blocking' | 'Deferred' | string: Specifies the current safety level for content safety.
 * **contentSafetyStatus**: 'Disabled' | 'Enabled' | string (Required): [Required] Specifies the status of content safety.
 
 ## CosmosDbSettings
@@ -1532,6 +1541,22 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: 'Categorical' | 'Numerical' | string
+
+## DataGenerationVertical
+* **Discriminator**: dataGenerationType
+
+### Base Properties
+* **dataGenerationTaskType**: 'Conversation' | 'Math' | 'Nli' | 'NluQa' | 'Summarization' | string (Required): [Required] DataGeneration Task type.
+* **promptSettings**: [PromptSettings](#promptsettings): Prompt Settings.
+* **teacherModelEndpoint**: [TeacherModelEndpoint](#teachermodelendpoint) (Required): [Required] Teacher Model Endpoint Details.
+* **teacherModelSettings**: [TeacherModelSettings](#teachermodelsettings)
+
+### LabelGeneration
+#### Properties
+* **dataGenerationType**: 'LabelGeneration' (Required): [Required] Enum to determine the type of Data Generation.
+* **trainingData**: [JobInput](#jobinput): Training data for fine tuning.
+* **validationData**: [JobInput](#jobinput): Validation data for fine tuning.
+
 
 ## DataLakeAnalyticsSchemaProperties
 ### Properties
@@ -1720,6 +1745,11 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 * **instanceType**: string: Optional type of VM used as supported by the compute target.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
 
+## DistillationJobOutputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [JobOutput](#joboutput)
+
 ## DistributionConfiguration
 * **Discriminator**: distributionType
 
@@ -1861,6 +1891,14 @@ with encryption
 * **type**: 'managedOnlineEndpoint' (Required): Kind of the deployment.
 
 
+## EndpointDeploymentResourcePropertiesBasicResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [EndpointDeploymentResourceProperties](#endpointdeploymentresourceproperties) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## EndpointKeys
 ### Properties
 * **keys**: [AccountApiKeys](#accountapikeys): Dictionary of Keys for the endpoint.
@@ -1948,6 +1986,7 @@ with encryption
 
 ### Base Properties
 * **associatedResourceId**: string: Byo resource id for creating the built-in model service endpoints.
+* **deployments**: [EndpointDeploymentResourcePropertiesBasicResource](#endpointdeploymentresourcepropertiesbasicresource)[]: Deployments info.
 * **endpointUri**: string: Uri of the endpoint.
 * **failureReason**: string: The failure reason if the creation failed.
 * **location**: string: Location of the endpoint.
@@ -2027,6 +2066,7 @@ we won't let customer specify the endpoint resource location since we will creat
 <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
 * **image**: string: Name of the image that will be used for the environment.
 <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
+* **imageDetails**: [ImageDetails](#imagedetails): Environment image details.
 * **inferenceConfig**: [InferenceContainerProperties](#inferencecontainerproperties): Defines configuration specific to inference.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
 * **isArchived**: bool: Is the asset archived?
@@ -2129,6 +2169,16 @@ we won't let customer specify the endpoint resource location since we will creat
 * **computeRuntime**: [ComputeRuntimeDto](#computeruntimedto)
 * **offlineStoreConnectionName**: string
 * **onlineStoreConnectionName**: string
+
+## FinetuningDetails
+### Properties
+* **hyperParameters**: [FinetuningDetailsHyperParameters](#finetuningdetailshyperparameters): Finetuning Hyperparameters
+* **studentModel**: [JobInput](#jobinput) (Required): [Required] Student model for fine tuning.
+
+## FinetuningDetailsHyperParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## FineTuningJobOutputs
 ### Properties
@@ -2268,6 +2318,19 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 * **version**: string: Version of image being used. If latest then skip this field
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## ImageDetails
+### Properties
+* **exists**: bool: Indicates if image exists
+* **image**: [ImageInfo](#imageinfo): Container image details
+* **vulnerabilityFindings**: [VulnerabilityFindings](#vulnerabilityfindings): Vulnerability findings details
+
+## ImageInfo
+### Properties
+* **digest**: string: Image digest
+* **hostname**: string: Container registry host name
+* **repository**: string: Repository name
+* **tag**: string: Image tag
 
 ## ImageLimitSettings
 ### Properties
@@ -2588,6 +2651,10 @@ Note: This settings is not supported for the 'yolov5' algorithm.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## IPRule
+### Properties
+* **value**: string: An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78). Value could be 'Allow' or  'Deny'.
+
 ## JobBaseProperties
 * **Discriminator**: jobType
 
@@ -2601,6 +2668,7 @@ Note: This settings is not supported for the 'yolov5' algorithm.
 Defaults to AmlToken if null.
 * **isArchived**: bool: Is the asset archived?
 * **notificationSetting**: [NotificationSetting](#notificationsetting): Notification setting for the job
+* **parentJobName**: string: Parent job name.
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **services**: [JobBasePropertiesServices](#jobbasepropertiesservices): List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
@@ -2632,6 +2700,15 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **parameters**: any (ReadOnly): Input parameters.
 * **queueSettings**: [QueueSettings](#queuesettings): Queue settings for the job
 * **resources**: [JobResourceConfiguration](#jobresourceconfiguration): Compute Resource configuration for the job.
+
+### DistillationJob
+#### Properties
+* **dataGenerationDetails**: [DataGenerationVertical](#datagenerationvertical) (Required): [Required]
+* **finetuningDetails**: [FinetuningDetails](#finetuningdetails) (Required): [Required]
+* **jobType**: 'Distillation' (Required): [Required] Specifies the type of job.
+* **outputs**: [DistillationJobOutputs](#distillationjoboutputs) (Required): [Required]
+* **queueSettings**: [QueueSettings](#queuesettings): Queue settings for the job
+* **resources**: [JobResources](#jobresources): Instance types and other resources for the job
 
 ### FineTuningJob
 #### Properties
@@ -3189,6 +3266,11 @@ We need this when we support UserAssignedIdentities
 * **value**: int (Required): [Required] N-Cross validations value.
 
 
+## NetworkAcls
+### Properties
+* **defaultAction**: 'Allow' | 'Deny' | string: The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+* **ipRules**: [IPRule](#iprule)[]: Rules governing the accessibility of a resource from a specific ip address or ip range.
+
 ## NlpVerticalFeaturizationSettings
 ### Properties
 * **datasetLanguage**: string: Dataset language, useful for the text data.
@@ -3390,6 +3472,13 @@ Defaults to 5000ms.
 * **type**: 'ServiceTag' (Required): Type of a managed network Outbound Rule of a machine learning workspace.
 
 
+## PackageDetails
+### Properties
+* **installedVersion**: string: Installed version.
+* **installPath**: string: Install path.
+* **name**: string: Package or dependency name.
+* **patchedVersion**: string: Patched version.
+
 ## Password
 ### Properties
 * **name**: string {sensitive} (ReadOnly)
@@ -3489,6 +3578,12 @@ Defaults to 5000ms.
 * **period**: string: The length of time between probes in ISO 8601 format.
 * **successThreshold**: int: The number of successful probes before returning a healthy status.
 * **timeout**: string: The probe timeout in ISO 8601 format.
+
+## PromptSettings
+### Properties
+* **enableChainOfDensity**: bool
+* **enableChainOfThought**: bool
+* **maxLenSummary**: int
 
 ## QueueSettings
 ### Properties
@@ -4225,6 +4320,25 @@ If 'Custom' is selected then user can specify additional inputs to customize how
 * **value**: int (Required): [Required] TargetRollingWindowSize value.
 
 
+## TeacherModelEndpoint
+### Properties
+* **endpointName**: string
+
+## TeacherModelEndpointRequestSettings
+### Properties
+* **minEndpointSuccessRatio**: int
+* **requestBatchSize**: int
+
+## TeacherModelSettings
+### Properties
+* **teacherModelEndpointRequestSettings**: [TeacherModelEndpointRequestSettings](#teachermodelendpointrequestsettings): Teacher Model Request Settings.
+* **teacherModelInferenceParameters**: [TeacherModelSettingsTeacherModelInferenceParameters](#teachermodelsettingsteachermodelinferenceparameters): Teacher Model Inference Settings.
+
+## TeacherModelSettingsTeacherModelInferenceParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TmpfsOptions
 ### Properties
 * **size**: int: Mention the Tmpfs size
@@ -4363,6 +4477,34 @@ The expression should follow NCronTab format.
 ## VolumeOptions
 ### Properties
 * **nocopy**: bool: Indicate whether volume is nocopy
+
+## VulnerabilityDetails
+### Properties
+* **cve**: string: CVE id.
+* **cveUrl**: string: CVE url.
+* **dueDate**: string: DueDate for vulnerability. Provider data or PublishDate + 30 days.
+* **id**: string (ReadOnly): Vulnerability ID.
+* **packageDetails**: [PackageDetails](#packagedetails)[]: Dependency details.
+* **patchable**: bool: Indicates if there is a known patch for vulnerability.
+* **providerId**: string: Vulnerability ID from provider.
+* **publishDate**: string: Vulnerability publish date.
+* **risk**: 'CRITICAL' | 'HIGH' | 'LOW' | 'MEDIUM' | 'UNKNOWN' | string: Vulnerability Risk value.
+* **solution**: string: Vulnerability description.
+* **title**: string: Vulnerability name.
+* **vendorId**: string: Vendor vulnerability ID (USN, GH Advisory, etc).
+* **vendorUrl**: string: Vendor vulnerability url.
+
+## VulnerabilityFindings
+### Properties
+* **assetId**: string: AssetId (Image digest).
+* **criticalFindingsCount**: int (ReadOnly): Number of critical findings.
+* **data**: [VulnerabilityDetails](#vulnerabilitydetails)[]: List of vulnerability findings.
+* **generatedTime**: string: Time the report was generated.
+* **highFindingsCount**: int (ReadOnly): Number of high findings.
+* **lastScanDate**: string: Scan result date.
+* **scanner**: string: Vulnerability scanner name.
+* **source**: string: Data source (internal).
+* **totalFindingsCount**: int (ReadOnly): Total findings count.
 
 ## Webhook
 * **Discriminator**: webhookType
@@ -4528,23 +4670,32 @@ depending on each OAuth2 provider's implementation.
 
 ## WorkspaceProperties
 ### Properties
+* **agentsEndpointUri**: string (ReadOnly): The URI of agents endpoint associated with this workspace.
 * **allowPublicAccessWhenBehindVnet**: bool: The flag to indicate whether to allow public access when behind VNet.
+* **allowRoleAssignmentOnRG**: bool: The flag to indicate whether we will do role assignment for the workspace MSI on resource group level.
 * **applicationInsights**: string: ARM id of the application insights associated with this workspace.
 * **associatedWorkspaces**: string[]
+* **containerRegistries**: string[]
 * **containerRegistry**: string: ARM id of the container registry associated with this workspace.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
 * **enableDataIsolation**: bool
 * **enableServiceSideCMKEncryption**: bool
+* **enableSimplifiedCmk**: bool: Flag to tell if simplified CMK should be enabled for this workspace.
+* **enableSoftwareBillOfMaterials**: bool: Flag to tell if SoftwareBillOfMaterials should be enabled for this workspace.
 * **encryption**: [EncryptionProperty](#encryptionproperty)
+* **existingWorkspaces**: string[]
 * **featureStoreSettings**: [FeatureStoreSettings](#featurestoresettings): Settings for feature store type workspace.
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **hubResourceId**: string
 * **imageBuildCompute**: string: The compute name for image build
+* **ipAllowlist**: string[]: The list of IPv4  addresses that are allowed to access the workspace.
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+* **keyVaults**: string[]
 * **managedNetwork**: [ManagedNetworkSettings](#managednetworksettings): Managed Network settings for a machine learning workspace.
 * **mlFlowTrackingUri**: string (ReadOnly): The URI associated with this workspace that machine learning flow must point at to set up tracking.
+* **networkAcls**: [NetworkAcls](#networkacls): A set of rules governing the network accessibility of the workspace.
 * **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly): The notebook info of Azure ML workspace.
 * **primaryUserAssignedIdentity**: string: The user assigned identity resource id that represents the workspace identity.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
@@ -4556,7 +4707,9 @@ depending on each OAuth2 provider's implementation.
 * **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings): The service managed resource settings.
 * **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
 * **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
+* **softDeleteRetentionInDays**: int: Retention time in days after workspace get soft deleted.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+* **storageAccounts**: string[]
 * **storageHnsEnabled**: bool (ReadOnly): If the storage associated with the workspace has hierarchical namespace(HNS) enabled.
 * **systemDatastoresAuthMode**: 'AccessKey' | 'Identity' | 'UserDelegationSAS' | string: The auth mode used for accessing the system datastores of the workspace.
 * **tenantId**: string (ReadOnly): The tenant id associated with this workspace.

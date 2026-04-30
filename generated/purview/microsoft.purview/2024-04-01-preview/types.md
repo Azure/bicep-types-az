@@ -169,7 +169,7 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity Type
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | string: Identity Type
 * **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): User Assigned Identities
 
 ## IdentityUserAssignedIdentities

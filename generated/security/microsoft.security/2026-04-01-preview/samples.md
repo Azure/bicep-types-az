@@ -38,7 +38,7 @@ resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments@2026-04
 
 ## microsoft.security/sqlvulnerabilityassessments/baselinerules
 
-Create a baseline for a rule on a resource (server-level) - Sql Managed Instance
+Create a baseline for a rule on a resource (using databaseName parameter) - Sql Managed Instance
 ```bicep
 resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments/baselineRules@2026-04-01-preview' = {
   parent: parentResource 
@@ -57,7 +57,7 @@ resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments/baselin
 }
 ```
 
-Create a baseline for a rule on a resource (server-level) - Sql Server
+Create a baseline for a rule on a resource (using databaseName parameter) - Sql Server
 ```bicep
 resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments/baselineRules@2026-04-01-preview' = {
   parent: parentResource 
@@ -76,7 +76,7 @@ resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments/baselin
 }
 ```
 
-Create a baseline for a rule on a resource (server-level) - Synapse
+Create a baseline for a rule on a resource (using databaseName parameter) - Synapse
 ```bicep
 resource exampleResource 'Microsoft.Security/sqlVulnerabilityAssessments/baselineRules@2026-04-01-preview' = {
   parent: parentResource 

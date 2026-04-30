@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z]{1}[a-zA-Z0-9-_]{2,127}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [AccessControlListProperties](#accesscontrollistproperties) (Required): The Access ControlList properties
+* **properties**: [AccessControlListProperties](#accesscontrollistproperties) (Required): The Access ControlList properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/accessControlLists' (ReadOnly, DeployTimeConstant): The resource type
@@ -170,7 +170,7 @@
 * **apiVersion**: '2024-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z]{1}[a-zA-Z0-9-_]{2,127}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkDeviceSkuProperties](#networkdeviceskuproperties) (ReadOnly): The NetworkDeviceSku properties
+* **properties**: [NetworkDeviceSkuProperties](#networkdeviceskuproperties) (ReadOnly): The Network Device SKU properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkDeviceSkus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -219,7 +219,7 @@
 * **apiVersion**: '2024-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z]{1}[a-zA-Z0-9-_]{2,127}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkFabricSkuProperties](#networkfabricskuproperties) (ReadOnly): The Network Fabric Sku properties
+* **properties**: [NetworkFabricSkuProperties](#networkfabricskuproperties) (ReadOnly): The Network Fabric SKU properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkFabricSkus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -231,7 +231,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z]{1}[a-zA-Z0-9-_]{2,127}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkMonitorProperties](#networkmonitorproperties) (Required): The NetworkFabric Properties
+* **properties**: [NetworkMonitorProperties](#networkmonitorproperties) (Required): The NetworkMonitor properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkMonitors' (ReadOnly, DeployTimeConstant): The resource type
@@ -257,7 +257,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z]{1}[a-zA-Z0-9-_]{2,127}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkRackProperties](#networkrackproperties) (Required): The NetworkRack properties
+* **properties**: [NetworkRackProperties](#networkrackproperties) (Required): Network Rack Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkRacks' (ReadOnly, DeployTimeConstant): The resource type

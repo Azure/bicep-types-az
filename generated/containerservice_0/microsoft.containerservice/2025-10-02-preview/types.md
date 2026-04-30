@@ -72,7 +72,7 @@
 * **properties**: [MachineProperties](#machineproperties): The properties of the machine
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools/machines' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[] (ReadOnly): The Availability zone in which machine is located.
+* **zones**: string[]: The Availability zone in which machine is located.
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools/upgradeProfiles@2025-10-02-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -715,7 +715,7 @@
 * **hardware**: [MachineHardwareProfile](#machinehardwareprofile): The hardware and GPU settings of the machine.
 * **kubernetes**: [MachineKubernetesProfile](#machinekubernetesprofile): The Kubernetes configurations used by the machine.
 * **mode**: 'Gateway' | 'Machines' | 'ManagedSystem' | 'System' | 'User' | string: Machine only allows 'System' and 'User' mode.
-* **network**: [MachineNetworkProperties](#machinenetworkproperties) (ReadOnly): network properties of the machine
+* **network**: [MachineNetworkProperties](#machinenetworkproperties): network properties of the machine
 * **nodeImageVersion**: string (ReadOnly): The version of node image.
 * **operatingSystem**: [MachineOSProfile](#machineosprofile): The operating system and disk used by the machine.
 * **priority**: 'Regular' | 'Spot' | string: The priority for the machine. If not specified, the default is 'Regular'.
@@ -827,7 +827,7 @@
 * **name**: string {pattern: "^[a-z][a-z0-9]{0,11}$"} (Required): Unique name of the agent pool profile in the context of the subscription and resource group. Windows agent pool names must be 6 characters or less.
 * **networkProfile**: [AgentPoolNetworkProfile](#agentpoolnetworkprofile): Network-related settings of an agent pool.
 * **nodeCustomizationProfile**: [NodeCustomizationProfile](#nodecustomizationprofile): Settings to determine the node customization used to provision nodes in a pool.
-* **nodeImageVersion**: string (ReadOnly): The version of node image
+* **nodeImageVersion**: string: The version of node image
 * **nodeInitializationTaints**: string[]: Taints added on the nodes during creation that will not be reconciled by AKS. These taints will not be reconciled by AKS and can be removed with a kubectl call. This field can be modified after node pool is created, but nodes will not be recreated with new taints until another operation that requires recreation (e.g. node image upgrade) happens. These taints allow for required configuration to run before the node is ready to accept workloads, for example 'key1=value1:NoSchedule' that then can be removed with `kubectl taint nodes node1 key1=value1:NoSchedule-`
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: The public IP prefix ID which VM nodes should use IPs from. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}
@@ -889,7 +889,7 @@
 * **mode**: 'Gateway' | 'Machines' | 'ManagedSystem' | 'System' | 'User' | string: The mode of an agent pool. A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
 * **networkProfile**: [AgentPoolNetworkProfile](#agentpoolnetworkprofile): Network-related settings of an agent pool.
 * **nodeCustomizationProfile**: [NodeCustomizationProfile](#nodecustomizationprofile): Settings to determine the node customization used to provision nodes in a pool.
-* **nodeImageVersion**: string (ReadOnly): The version of node image
+* **nodeImageVersion**: string: The version of node image
 * **nodeInitializationTaints**: string[]: Taints added on the nodes during creation that will not be reconciled by AKS. These taints will not be reconciled by AKS and can be removed with a kubectl call. This field can be modified after node pool is created, but nodes will not be recreated with new taints until another operation that requires recreation (e.g. node image upgrade) happens. These taints allow for required configuration to run before the node is ready to accept workloads, for example 'key1=value1:NoSchedule' that then can be removed with `kubectl taint nodes node1 key1=value1:NoSchedule-`
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: The public IP prefix ID which VM nodes should use IPs from. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}
@@ -1268,10 +1268,10 @@
 
 ## ManagedClusterPropertiesForSnapshot
 ### Properties
-* **enableRbac**: bool: Whether the cluster has enabled Kubernetes Role-Based Access Control or not.
-* **kubernetesVersion**: string: The current kubernetes version.
+* **enableRbac**: bool (ReadOnly): Whether the cluster has enabled Kubernetes Role-Based Access Control or not.
+* **kubernetesVersion**: string (ReadOnly): The current kubernetes version.
 * **networkProfile**: [NetworkProfileForSnapshot](#networkprofileforsnapshot) (ReadOnly): The current network profile.
-* **sku**: [ManagedClusterSKU](#managedclustersku): The current managed cluster sku.
+* **sku**: [ManagedClusterSKU](#managedclustersku) (ReadOnly): The current managed cluster sku.
 
 ## ManagedClusterPropertiesIdentityProfile
 ### Properties

@@ -943,7 +943,7 @@
 * **keyPolicy**: [KeyPolicy](#keypolicy): KeyPolicy assigned to the storage account.
 * **largeFileSharesState**: 'Disabled' | 'Enabled' | string: Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
 * **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLS1_3' | string: Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLS1_3' | string: Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property. Minimum TLS version 1.3 version is not supported.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.

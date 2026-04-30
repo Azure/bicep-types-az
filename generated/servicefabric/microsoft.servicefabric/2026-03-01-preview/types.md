@@ -5,7 +5,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **etag**: string (ReadOnly): Azure resource etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -19,14 +19,14 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **etag**: string (ReadOnly): Azure resource etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
-* **location**: string: The geo-location where the resource lives
+* **identity**: [ManagedIdentity](#managedidentity): The managed service identities assigned to this resource.
+* **location**: string: It will be deprecated in New API, resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties): The application resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ApplicationResourceTags](#applicationresourcetags): Resource tags.
+* **tags**: [ApplicationResourceTags](#applicationresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/clusters/applications/services@2026-03-01-preview
@@ -34,13 +34,13 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): Azure resource etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: It will be deprecated in New API, resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceResourceProperties](#serviceresourceproperties): The service resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ServiceResourceTags](#serviceresourcetags): Resource tags.
+* **tags**: [ServiceResourceTags](#serviceresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2026-03-01-preview
@@ -48,13 +48,13 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **etag**: string (ReadOnly): Azure resource etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: It will be deprecated in New API, resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationTypeResourceProperties](#applicationtyperesourceproperties): The application type name properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ApplicationTypeResourceTags](#applicationtyperesourcetags): Resource tags.
+* **tags**: [ApplicationTypeResourceTags](#applicationtyperesourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2026-03-01-preview
@@ -62,13 +62,13 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **etag**: string (ReadOnly): Azure resource etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: It will be deprecated in New API, resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationTypeVersionResourceProperties](#applicationtypeversionresourceproperties): The properties of the application type version resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ApplicationTypeVersionResourceTags](#applicationtypeversionresourcetags): Resource tags.
+* **tags**: [ApplicationTypeVersionResourceTags](#applicationtypeversionresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/locations/unsupportedVmSizes@2026-03-01-preview
@@ -370,12 +370,18 @@ The check is performed after every upgrade domain upgrade completion for all com
 * **endPort**: int (Required): End port of a range of ports
 * **startPort**: int (Required): Starting port of a range of ports
 
-## ManagedServiceIdentity
+## ManagedIdentity
 ### Properties
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **principalId**: string (ReadOnly): The principal id of the managed identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity for the resource.
+* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## ManagedIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## NodeTypeDescription
 ### Properties
@@ -458,7 +464,7 @@ should be split between the partition ‘count’
 ## ServiceCorrelationDescription
 ### Properties
 * **scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' | string (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
-* **serviceName**: string (Required): The name of the service that the correlation relationship is established with.
+* **serviceName**: string (Required): The full name of the service with 'fabric:' URI scheme.
 
 ## ServiceLoadMetricDescription
 ### Properties
@@ -557,15 +563,10 @@ The check is performed after every upgrade domain upgrade completion to make sur
 ### Properties
 * **targetVersion**: string (Required): The target code version.
 
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## VMSize
 ### Properties

@@ -638,7 +638,6 @@ resource exampleResource 'Microsoft.Sql/managedInstances/dtc@2025-02-01-preview'
       'dns.example1.com'
       'dns.example2.com'
     ]
-    fqdnEnabled: true
     securitySettings: {
       snaLu6point2TransactionsEnabled: false
       transactionManagerCommunicationSettings: {
@@ -914,9 +913,11 @@ resource exampleResource 'Microsoft.Sql/servers@2025-02-01-preview' = {
       sid: '00000011-1111-2222-2222-123456789111'
       tenantId: '00000011-1111-2222-2222-123456789111'
     }
+    createMode: 'Normal'
     isIPv6Enabled: 'Enabled'
     publicNetworkAccess: 'Enabled'
     restrictOutboundNetworkAccess: 'Enabled'
+    retentionDays: 7
   }
 }
 ```
@@ -1912,12 +1913,8 @@ Create a sync group
 resource exampleResource 'Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview' = {
   parent: parentResource 
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   properties: {
     conflictResolutionPolicy: 'HubWin'
-    hubDatabasePassword: 'password'
     hubDatabaseUserName: 'hubUser'
     interval: -1
     syncDatabaseId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328'
@@ -1952,9 +1949,6 @@ Update a sync group
 resource exampleResource 'Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview' = {
   parent: parentResource 
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   properties: {
     conflictResolutionPolicy: 'HubWin'
     hubDatabaseUserName: 'hubUser'
@@ -1972,13 +1966,9 @@ Create a new sync member
 resource exampleResource 'Microsoft.Sql/servers/databases/syncGroups/syncMembers@2025-02-01-preview' = {
   parent: parentResource 
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   properties: {
     databaseName: 'syncgroupcrud-7421'
     databaseType: 'AzureSqlDatabase'
-    password: 'password'
     serverName: 'syncgroupcrud-3379.database.windows.net'
     syncDirection: 'Bidirectional'
     syncMemberAzureDatabaseResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328'
@@ -2016,9 +2006,6 @@ Update a sync member
 resource exampleResource 'Microsoft.Sql/servers/databases/syncGroups/syncMembers@2025-02-01-preview' = {
   parent: parentResource 
   name: 'example'
-  identity: {
-    type: 'None'
-  }
   properties: {
     databaseName: 'syncgroupcrud-7421'
     databaseType: 'AzureSqlDatabase'
@@ -2230,6 +2217,9 @@ resource exampleResource 'Microsoft.Sql/servers/elasticPools@2025-02-01-preview'
       minCapacity: 0.25
     }
     zoneRedundant: true
+  }
+  sku: {
+    name: 'HS_Gen5_4'
   }
 }
 ```

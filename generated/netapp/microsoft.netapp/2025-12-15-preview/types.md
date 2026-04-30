@@ -409,7 +409,7 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' | 'Updating' | string (ReadOnly): Azure lifecycle management.
 * **secretPassword**: [SecretPassword](#secretpassword) (Required): Access password from Azure KeyVault Secrets to connect Active Directory
 * **securityOperators**: string[]: Domain Users in the Active directory to be given SecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
-* **site**: string {maxLength: 63}: The Active Directory site the service will limit Domain Controller discovery to
+* **site**: string {maxLength: 63} (Required): The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string {maxLength: 10}: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **userName**: string {maxLength: 255}: A domain user account with permission to create machine accounts
 
@@ -835,7 +835,7 @@ Possible values include: 'Update', 'Fail'
 ## OriginClusterInformation
 ### Properties
 * **peerAddresses**: string[] {minLength: 1} (Required): ONTAP Intercluster LIF IP addresses. One IP address per cluster node is required
-* **peerClusterName**: string (Required): ONTAP cluster name of external cluster hosting the origin volume
+* **peerClusterName**: string (Required): ONTAP cluster name of external cluster hosting the origin volume. Must match the exact cluster name.
 * **peerVolumeName**: string (Required): External origin volume name associated to this cache
 * **peerVserverName**: string (Required): External Vserver (SVM) name  name of the SVM hosting the origin volume
 

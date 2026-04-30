@@ -244,7 +244,8 @@
 * **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 24, pattern: "^[a-z][a-z0-9]{2,23}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageTaskAssignmentProperties](#storagetaskassignmentproperties) (Required): Properties of the storage task assignment.
+* **properties**: [StorageTaskAssignmentProperties](#storagetaskassignmentproperties): Properties of the storage task assignment.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Storage/storageAccounts/storageTaskAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices@2025-08-01
@@ -1150,7 +1151,7 @@
 * **keyPolicy**: [KeyPolicy](#keypolicy): KeyPolicy assigned to the storage account.
 * **largeFileSharesState**: 'Disabled' | 'Enabled' | string: Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
 * **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLS1_3' | string: Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLS1_3' | string: Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property. Minimum TLS version 1.3 version is not supported.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.

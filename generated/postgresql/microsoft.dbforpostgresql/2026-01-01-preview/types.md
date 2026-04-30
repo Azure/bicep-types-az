@@ -260,20 +260,20 @@
 ### Properties
 * **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
 * **standbyAvailabilityZone**: string: Availability zone associated to the standby server created when high availability is set to SameZone or ZoneRedundant.
-* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant.
+* **state**: 'ComputeUpdatingByFailover' | 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RecreatingStandby' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant.
 
 ## LtrBackupOperationResponseProperties
 ### Properties
-* **backupMetadata**: string: Metadata to be stored in RP. Store everything that will be required to perform a successful restore using this Recovery point. e.g. Versions, DataFormat etc
-* **backupName**: string: Name of Backup operation
-* **datasourceSizeInBytes**: int: Size of datasource in bytes
-* **dataTransferredInBytes**: int: Data transferred in bytes
+* **backupMetadata**: string: Metadata to be stored in RP. Store everything that will be required to perform a successful restore using this Recovery point. e.g. Versions, DataFormat etc.
+* **backupName**: string: Name of Backup operation.
+* **datasourceSizeInBytes**: int: Size of datasource in bytes.
+* **dataTransferredInBytes**: int: Data transferred in bytes.
 * **endTime**: string: End time of the operation.
-* **errorCode**: string (ReadOnly): The error code.
-* **errorMessage**: string (ReadOnly): The error message.
-* **percentComplete**: int {minValue: 0, maxValue: 100}: PercentageCompleted
+* **errorCode**: string (ReadOnly): Error code.
+* **errorMessage**: string (ReadOnly): Error message.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percentage completed.
 * **startTime**: string (Required): Start time of the operation.
-* **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | string (Required): Service-set extensible enum indicating the status of operation
+* **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | string (Required): Service-set extensible enum indicating the status of operation.
 
 ## MaintenanceWindow
 ### Properties

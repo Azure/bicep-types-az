@@ -168,7 +168,7 @@
 * **credentials**: [AzureKeyVaultS3WithHmacCredentials](#azurekeyvaults3withhmaccredentials): The Azure Key Vault credentials which stores the access key and secret key. Use empty string to clean-up existing value.
 * **endpointType**: 'S3WithHMAC' (Required): The Endpoint resource type.
 * **otherSourceTypeDescription**: string: The description for other source type of S3WithHmac endpoint.
-* **sourceType**: 'BACKBLAZE' | 'CLOUDFLARE' | 'GCS' | 'IBM' | 'MINIO' | string: The source type of S3WithHmac endpoint.
+* **sourceType**: 'ALIBABA' | 'DELL_EMC' | 'GCS' | 'IBM' | 'MINIO' | 'OTHER' | string: The source type of S3WithHmac endpoint.
 * **sourceUri**: string: The  URI which points to the source.
 
 ### SmbMountEndpointProperties
@@ -270,10 +270,15 @@
 * **daysOfMonth**: int[]: Days of the month for monthly schedules
 * **daysOfWeek**: string[]: Days of the week for weekly schedules
 * **endDate**: string: End time of the schedule (in UTC)
-* **executionTime**: [Time](#time): Time of day to execute (hours and minutes)
-* **frequency**: 'Daily' | 'Monthly' | 'Onetime' | 'Weekly' | string (Required): Type of schedule — Monthly, Weekly, or Daily
-* **isActive**: bool (Required): Whether the schedule is currently active
+* **executionTime**: [SchedulerTime](#schedulertime): Time of day to execute (hours and minutes)
+* **frequency**: 'Daily' | 'Monthly' | 'None' | 'Onetime' | 'Weekly' | string: Type of schedule — Monthly, Weekly, or Daily
+* **isActive**: bool: Whether the schedule is currently active
 * **startDate**: string: Specific one-time execution date and time
+
+## SchedulerTime
+### Properties
+* **hour**: int {minValue: 0, maxValue: 24}: The hour element of the time. Allowed values range from 0 (start of the selected day) to 24 (end of the selected day). Hour value 24 cannot be combined with any other minute value but 0.
+* **minute**: int: The minute element of the time. Allowed values are 0 and 30. If not specified, its value defaults to 0.
 
 ## SourceEndpoint
 ### Properties

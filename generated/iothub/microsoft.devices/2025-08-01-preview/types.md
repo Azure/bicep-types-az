@@ -8,12 +8,12 @@
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ArmIdentity](#armidentity): The managed identities for the IotHub.
-* **location**: string (Required): The resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IotHubProperties](#iothubproperties): IotHub properties
 * **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required): IotHub SKU info
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2025-08-01-preview
@@ -25,6 +25,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): The description of an X509 CA Certificate.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2025-08-01-preview
@@ -36,6 +37,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EventHubConsumerGroupNameOrEventHubConsumerGroupInfoProperties](#eventhubconsumergroupnameoreventhubconsumergroupinfoproperties) (Required): The EventHub consumer group name.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2025-08-01-preview
@@ -46,17 +48,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Function listkeys (Microsoft.Devices/IotHubs@2025-08-01-preview)
-* **Resource**: Microsoft.Devices/IotHubs
-* **ApiVersion**: 2025-08-01-preview
-* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
 
 ## Function listkeys (Microsoft.Devices/IotHubs/IotHubKeys@2025-08-01-preview)
 * **Resource**: Microsoft.Devices/IotHubs/IotHubKeys
 * **ApiVersion**: 2025-08-01-preview
 * **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
+
+## Function listkeys (Microsoft.Devices/IotHubs@2025-08-01-preview)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2025-08-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
 
 ## ArmIdentity
 ### Properties
@@ -235,10 +238,11 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
-* **type**: string (ReadOnly): The resource type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -250,11 +254,6 @@
 * **actionsRequired**: string: Actions required for a private endpoint connection
 * **description**: string (Required): The description for the current state of a private endpoint connection
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RootCertificateProperties
 ### Properties
@@ -361,8 +360,8 @@
 
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The list of shared access policies.
+* **nextLink**: string: The link to the next page of items
+* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[] (Required): The SharedAccessSignatureAuthorizationRule items on this page
 
 ## StorageEndpointProperties
 ### Properties
@@ -380,4 +379,9 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -401,7 +401,7 @@ resource exampleResource 'Microsoft.ServiceFabric/managedClusters/nodeTypes@2022
     frontendConfigurations: [
       {
         loadBalancerBackendAddressPoolId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.Network/loadBalancers/test-LB/backendAddressPools/LoadBalancerBEAddressPool'
-        loadBalancerInboundNatPoolId: ' /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.Network/loadBalancers/test-LB/inboundNatPools/LoadBalancerNATPool'
+        loadBalancerInboundNatPoolId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.Network/loadBalancers/test-LB/inboundNatPools/LoadBalancerNATPool'
       }
     ]
     isPrimary: false

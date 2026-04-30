@@ -682,7 +682,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "The version of node image"
       },
       "upgradeStrategy": {
@@ -6716,21 +6716,21 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The current kubernetes version."
       },
       "sku": {
         "type": {
           "$ref": "#/425"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The current managed cluster sku."
       },
       "enableRbac": {
         "type": {
           "$ref": "#/45"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Whether the cluster has enabled Kubernetes Role-Based Access Control or not."
       },
       "networkProfile": {
@@ -7433,7 +7433,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "The version of node image"
       },
       "upgradeStrategy": {
@@ -8213,7 +8213,7 @@
         "type": {
           "$ref": "#/656"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "The Availability zone in which machine is located."
       },
       "systemData": {
@@ -8233,7 +8233,7 @@
         "type": {
           "$ref": "#/587"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "network properties of the machine"
       },
       "resourceId": {
