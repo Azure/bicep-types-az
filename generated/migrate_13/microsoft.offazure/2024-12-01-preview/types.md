@@ -103,6 +103,34 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/importSites/deleteJobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.OffAzure/importSites/exportJobs@2024-12-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **displayName**: string (ReadOnly): Gets or sets the Display name.
+* **endTime**: string (ReadOnly): Gets or sets the Job end time.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ExportImportedMachinesJobEntityProperties](#exportimportedmachinesjobentityproperties) (ReadOnly): Gets or sets the export machines job properties.
+* **startTime**: string (ReadOnly): Gets or sets the Job start time.
+* **status**: string (ReadOnly): Gets or sets the Job status.
+* **type**: 'Microsoft.OffAzure/importSites/exportJobs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.OffAzure/importSites/importJobs@2024-12-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **displayName**: string (ReadOnly): Gets or sets the Display name.
+* **endTime**: string (ReadOnly): Gets or sets the Job end time.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ImportMachinesJobProperties](#importmachinesjobproperties) (ReadOnly): Gets or sets the import job properties.
+* **startTime**: string (ReadOnly): Gets or sets the Job start time.
+* **status**: string (ReadOnly): Gets or sets the Job status.
+* **type**: 'Microsoft.OffAzure/importSites/importJobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.OffAzure/importSites/jobs@2024-12-01-preview
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
@@ -181,6 +209,17 @@
 * **properties**: [SqlDiscoverySiteDataSourceProperties](#sqldiscoverysitedatasourceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/masterSites/sqlSites/discoverySiteDataSources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.OffAzure/masterSites/sqlSites/importJobs@2024-12-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ImportSqlInventoryJobProperties](#importsqlinventoryjobproperties) (ReadOnly): Gets or sets the import job properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.OffAzure/masterSites/sqlSites/importJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/masterSites/sqlSites/jobs@2024-12-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -488,7 +527,7 @@
 * **discoveryScopeStatus**: 'Disabled' | 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryNotStarted' | 'DiscoveryPartiallySucceded' | 'DiscoverySucceeded' | 'DiscoverySucceededAtleastOnce' | 'RunAsAccountNotAssociated' | string (ReadOnly): Gets discovery scope status.
 * **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Gets errors for discovery scope.
 * **hydratedRunAsAccountId**: string (ReadOnly): Gets the run as account ID with which feature worked successfully.
-           
+
 It is discovered by the agent from the list of credentials.
 
 ## AppsAndRoles
@@ -545,7 +584,7 @@ It is discovered by the agent from the list of credentials.
 * **discoveryScopeStatus**: 'Disabled' | 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryNotStarted' | 'DiscoveryPartiallySucceded' | 'DiscoverySucceeded' | 'DiscoverySucceededAtleastOnce' | 'RunAsAccountNotAssociated' | string (ReadOnly): Gets discovery scope status.
 * **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Gets errors for discovery scope.
 * **hydratedRunAsAccountId**: string (ReadOnly): Gets the run as account ID with which feature worked successfully.
-           
+
 It is discovered by the agent from the list of credentials.
 
 ## DirectoryPath
@@ -557,6 +596,19 @@ It is discovered by the agent from the list of credentials.
 ### Properties
 * **discoverySiteId**: string: Gets or sets the discovery site Id.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ErrorDetails
 ### Properties
@@ -570,6 +622,10 @@ It is discovered by the agent from the list of credentials.
 * **possibleCauses**: string (ReadOnly): Gets the possible causes of error.
 * **recommendedAction**: string (ReadOnly): Gets the recommended action to resolve error.
 * **severity**: string (ReadOnly): Gets the error severity.
+
+## ErrorResponse
+### Properties
+* **error**: [ErrorDetail](#errordetail): The error object.
 
 ## Errors
 ### Properties
@@ -599,6 +655,11 @@ It is discovered by the agent from the list of credentials.
 * **roles**: string (ReadOnly): Gets or sets Roles of the ExchangeServer.
 * **servicePack**: string (ReadOnly): Gets or sets ServicePack of the ExchangeServer.
 * **version**: string (ReadOnly): Gets or sets Version of the ExchangeServer.
+
+## ExportImportedMachinesJobEntityProperties
+### Properties
+* **blobName**: string: blob name
+* **sasUri**: string: sas uri
 
 ## Feature
 ### Properties
@@ -707,7 +768,7 @@ It is discovered by the agent from the list of credentials.
 * **dataProtectionRequested**: bool (ReadOnly): Gets or sets a value indicating whether data protection is requested for a VM.
 * **dependencyMapDiscovery**: [DependencyMapDiscovery](#dependencymapdiscovery) (ReadOnly): Gets the data related to dependency map discovery.
 * **dependencyMapping**: string (ReadOnly): Gets or sets if dependency mapping feature is enabled or not
-            for
+for
 the VM.
 * **dependencyMappingEndTime**: string (ReadOnly): Gets or sets when dependency mapping collection was last disabled.
 * **dependencyMappingStartTime**: string (ReadOnly): Gets or sets when dependency mapping collection is last started.
@@ -719,9 +780,9 @@ traffic is enabled for the VM.
 * **firmware**: string: Gets or sets the firmware.
 * **generation**: int (ReadOnly): Generation of the virtual machine.
 * **guestDetailsDiscoveryTimestamp**: string (ReadOnly): The last time at which the Guest Details was discovered
-            or the
+or the
 error while discovering guest details based discovery
-            of the
+of the
 machine.
 * **guestOsDetails**: [GuestOsDetails](#guestosdetails) (ReadOnly): Operating System Details extracted from the guest             bu executing script inside the guest VM.
 * **highAvailability**: 'No' | 'Unknown' | 'Yes' | string (ReadOnly): Value indicating whether the VM is highly available.
@@ -732,18 +793,18 @@ machine.
 * **isDeleted**: bool (ReadOnly): Value indicating whether VM is deleted.
 * **isDynamicMemoryEnabled**: bool (ReadOnly): Value indicating whether dynamic memory is enabled for the VM.
 * **isGuestDetailsDiscoveryInProgress**: bool (ReadOnly): Whether Refresh Fabric Layout Guest Details has been completed once.
-         
-  Portal will show discovery in progress, if this value is true.
+
+Portal will show discovery in progress, if this value is true.
 * **ksdEnabled**: bool (ReadOnly): Gets or sets a value indicating whether key storage device is enabled on the VM.
 * **managementServerType**: string (ReadOnly): Management server type captured as a string representation of the
-           
+
 {Microsoft.Azure.FDS.WebRole.HyperVMachineBase.HyperVMachineBaseProperties.ManagementServerType}
 enumeration.
 * **maxMemoryMb**: int (ReadOnly): Max memory of the virtual machine in MB.
 * **networkAdapters**: [HypervNetworkAdapter](#hypervnetworkadapter)[] (ReadOnly): Network adapters attached to the machine.
 * **numberOfApplications**: int (ReadOnly): Number of applications installed in the guest VM.
-* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores 
-            allocated for the
+* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores
+allocated for the
 machine.
 * **numberOfSecurityRisks**: int (ReadOnly): Number of security risks identified on the guest VM.
 * **numberOfSoftware**: int (ReadOnly): Number of software installed in the guest VM.
@@ -875,8 +936,8 @@ on 64 bit.
 * **networkOutThroughput**: int (ReadOnly): Network out throughput.
 * **numberOfDisks**: int (ReadOnly): Number of disks.
 * **numberOfNetworkAdapters**: int (ReadOnly): Number of network adapters.
-* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores 
-            allocated for the
+* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores
+allocated for the
 machine.
 * **operatingSystemDetails**: [WebRoleOperatingSystem](#webroleoperatingsystem): Gets or sets the Operating System Details installed on the machine.
 * **percentageCpuUtilization**: int (ReadOnly): CPU utilization.
@@ -897,12 +958,38 @@ machine.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ImportMachinesJobProperties
+### Properties
+* **blobCreationTimeStamp**: string: blob Creation TimeStamp
+* **blobName**: string: blob name
+* **blobSasUri**: string: blob sasUri
+* **errorSummary**: [JobErrorSummary](#joberrorsummary): error summary
+* **jobResult**: 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Failed' | 'InProgress' | 'Unknown' | 'WaitingForBlobUpload' | string: job Result
+* **numberOfMachinesImported**: int: number Of Machines Imported
+
 ## ImportSiteProperties
 ### Properties
 * **discoverySolutionId**: string: Gets or sets the ARM ID of migration hub solution for SDS.
 * **masterSiteId**: string (ReadOnly): Gets the Master Site this site is linked to.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string: The status of the last operation.
 * **serviceEndpoint**: string (ReadOnly): Gets the service endpoint.
+
+## ImportSqlInventoryJobProperties
+### Properties
+* **blobCreationTimeStamp**: string: Gets the Blob creation time stamp.
+* **blobName**: string: Gets the Blob name for the blob to fetch Import file from.
+* **blobSasUri**: string {sensitive}: Gets the blob SAS Uri of the input import file.
+* **errorSummary**: [SqlImportJobErrorSummary](#sqlimportjoberrorsummary): Gets the Job Error Summary.
+* **jobResult**: 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Failed' | 'InProgress' | 'Unknown' | 'WaitingForBlobUpload' | string: Gets the Job Result status.
+* **numberOfAvailabilityGroupsImported**: int: Gets the Number of availability groups imported.
+* **numberOfDatabasesImported**: int: Gets the Number of databases imported.
+* **numberOfServersImported**: int: Gets the Number of servers imported.
+
+## JobErrorSummary
+### Properties
+* **errorCount**: int: Total number of errors encountered during job execution
+* **errors**: string[]: List of error messages encountered during job execution
+* **warningCount**: int: Total number of warnings generated during job execution
 
 ## JobProperties
 ### Properties
@@ -931,7 +1018,7 @@ allowed.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the state of public network access.
 * **sites**: string[]: Gets or sets the sites that are a part of Master Site.
-            The key
+The key
 should contain the Site ARM name.
 
 ## OperatingSystem
@@ -1044,39 +1131,39 @@ should contain the Site ARM name.
 * **createdTimestamp**: string (ReadOnly): Gets the marking machine creation.
 * **dependencyMapDiscovery**: [DependencyMapDiscovery](#dependencymapdiscovery) (ReadOnly): Gets the data related to dependency map discovery.
 * **dependencyMapping**: string (ReadOnly): Gets or sets if dependency mapping feature is enabled or not
-            for
+for
 the VM.
 * **dependencyMappingEndTime**: string (ReadOnly): Gets or sets when dependency mapping collection was last disabled.
 * **dependencyMappingStartTime**: string (ReadOnly): Gets or sets when dependency mapping collection is last started.
 * **discoverySource**: 'Appliance' | 'Arc' | 'ImportCsvServer' | 'ImportRvTools' | string (ReadOnly): Gets the discovery state of the server.
 * **disks**: [ServerDisk](#serverdisk)[]: Gets or sets the disk details of server.
 * **displayName**: string (ReadOnly): Gets the Display name of the machine.
-            For server entity hydrated
+For server entity hydrated
 FQDN is set as display name
-            as the server id and server name are
+as the server id and server name are
 same.
 * **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Errors for machine.
 * **firmware**: string: Gets or sets the firmware.
 * **fqdn**: string: Gets or sets the FQDN/IPAddress of the server.
 * **guestDetailsDiscoveryTimestamp**: string (ReadOnly): The last time at which the Guest Details was discovered
-            or the
+or the
 error while discovering guest details based discovery
-            of the
+of the
 machine.
 * **guestOsDetails**: [GuestOsDetails](#guestosdetails) (ReadOnly): Operating System Details extracted from the guest
-            bu executing
+bu executing
 script inside the guest VM.
 * **hydratedFqdn**: string: Gets or sets the FQDN of machine which can be changed.
 * **hypervisor**: string (ReadOnly): Gets or sets the hypervisor type of the server.
 * **iisDiscovery**: [WebAppDiscovery](#webappdiscovery) (ReadOnly): Gets the data related to iis discovery.
 * **isDeleted**: bool (ReadOnly): Value indicating whether VM is deleted.
 * **isGuestDetailsDiscoveryInProgress**: bool (ReadOnly): Whether Refresh Fabric Layout Guest Details has been completed once.
-         
-  Portal will show discovery in progress, if this value is true.
+
+Portal will show discovery in progress, if this value is true.
 * **networkAdapters**: [ServerNetworkAdapter](#servernetworkadapter)[]: Gets or sets the network adapters of the server.
 * **numberOfApplications**: int (ReadOnly): Number of applications installed in the guest VM.
-* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores 
-            allocated for the
+* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores
+allocated for the
 machine.
 * **numberOfSecurityRisks**: int (ReadOnly): Number of security risks identified on the guest VM.
 * **numberOfSoftware**: int (ReadOnly): Number of software installed in the guest VM.
@@ -1152,8 +1239,8 @@ machine.
 
 ## SiteHealthSummaryCollection
 ### Properties
-* **nextLink**: string (ReadOnly): Gets the value of next link.
-* **value**: [SiteHealthSummary](#sitehealthsummary)[] (Required): Gets the list of SiteHealthSummary.
+* **nextLink**: string: The link to the next page of items
+* **value**: [SiteHealthSummary](#sitehealthsummary)[] (Required): The SiteHealthSummary items on this page
 
 ## SiteProperties
 ### Properties
@@ -1166,29 +1253,29 @@ machine.
 * **serviceEndpoint**: string (ReadOnly): Gets the service endpoint.
 * **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Gets or sets the service principal identity details used by agent for
 communication
-            to the service.
+to the service.
 * **siteAppliancePropertiesCollection**: [SiteApplianceProperties](#siteapplianceproperties)[]: Gets or sets the appliance details used by service to communicate to the appliance.
 
 ## SiteSpnProperties
 ### Properties
 * **aadAuthority**: string: Gets or sets the AAD Authority URL which was used to request the token for
 the
-            service principal.
+service principal.
 * **applicationId**: string: Gets or sets the application/client Id for the service principal with which
 the
-            on-premise management/data plane components would communicate
-with our Azure 
-            services.
+on-premise management/data plane components would communicate
+with our Azure
+services.
 * **audience**: string: Gets or sets the intended audience for the service principal.
 * **machineResourceId**: string: Gets or sets the ARM ID of the arc for servers resource.
 * **objectId**: string: Gets or sets the object Id of the service principal with which the on-premise
 
-           management/data plane components would communicate with our Azure
+management/data plane components would communicate with our Azure
 services.
 * **rawCertData**: string: Gets or sets the raw certificate data for building certificate expiry flows.
 * **tenantId**: string: Gets or sets the tenant Id for the service principal with which the
 on-premise
-            management/data plane components would communicate with
+management/data plane components would communicate with
 our Azure services.
 
 ## SitesProperties
@@ -1202,7 +1289,7 @@ our Azure services.
 * **serviceEndpoint**: string (ReadOnly): Gets the service endpoint.
 * **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Gets or sets the service principal identity details used by agent for
 communication
-            to the service.
+to the service.
 * **siteAppliancePropertiesCollection**: [SiteApplianceProperties](#siteapplianceproperties)[]: Gets or sets the appliance details used by service to communicate to the appliance.
 
 ## SpringBootDiscovery
@@ -1226,10 +1313,10 @@ communication
 * **isPartOfDistributedAvailabilityGroup**: bool: Gets or sets a value indicating whether this Availability group is part of a
 distributed AG.
 * **parentReplicaOverviewList**: [SqlAvailabilityReplicaOverview](#sqlavailabilityreplicaoverview)[] (ReadOnly): Gets the parent availability replica overview if any.
-            This would be
+This would be
 set with details of parent AG and AR for cases where this availability group is
 a part of a distributed AG.
-            Currently, we do not populate this
+Currently, we do not populate this
 since discovery and linking of DAG(Distributed Availability Group) is not
 implemented.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
@@ -1264,11 +1351,11 @@ database is a part of.
 * **replicaType**: 'AvailabilityGroupReplica' | 'DatabaseReplica' | 'Unknown' | string: Gets or sets the replica type of the availability group.
 * **sqlAvailabilityGroupReplicaInfo**: [SqlAvailabilityGroupReplicaInfo](#sqlavailabilitygroupreplicainfo): Gets or sets the Availability Replica object if Replica is of type AG. This is
 null in case Replica is
-            of type database. This is to be populated
+of type database. This is to be populated
 in case AG is of type DAG.
 * **sqlDatabaseReplicaInfo**: [SqlDatabaseReplicaInfo](#sqldatabasereplicainfo): Gets or sets the Availability Replica object if Replica is of type database.
 This is null in case Replica is
-            of type AG. This is to be populated
+of type AG. This is to be populated
 in case of normal AG.
 
 ## SqlDatabasePropertiesV2
@@ -1317,6 +1404,12 @@ which are in multiple subnets.
 * **networkName**: string: Gets or sets the FCI Network Name used to connect to this FCI instance.
 * **sharedDiskCount**: int: Gets or sets the count of Shared Disks for SQL FCI.
 * **state**: 'Failed' | 'Inherited' | 'Initializing' | 'Offline' | 'OfflinePending' | 'Online' | 'OnlinePending' | 'Pending' | 'Unknown' | string: Gets or sets the state of the FCI instance.
+
+## SqlImportJobErrorSummary
+### Properties
+* **errorCount**: int: Gets or sets the Number of errors while trying to import SQL Inventory from CSV.
+* **errors**: [ErrorResponse](#errorresponse)[]: Collection of errors encountered during the SQL import operation
+* **warningCount**: int: Gets or sets the Number of warnings while trying to import SQL Inventory from CSV. Warnings are included in the 'errors' array.
 
 ## SqlMachineOverview
 ### Properties
@@ -1389,7 +1482,7 @@ which are in multiple subnets.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
 * **serviceEndpoint**: string (ReadOnly): Gets the service endpoint.
 * **siteAppliancePropertiesCollection**: [SiteApplianceProperties](#siteapplianceproperties)[]: Gets or sets the appliance details used by service to communicate
-           
+
 to the appliance.
 
 ## StaticDiscovery
@@ -1397,7 +1490,7 @@ to the appliance.
 * **discoveryScopeStatus**: 'Disabled' | 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryNotStarted' | 'DiscoveryPartiallySucceded' | 'DiscoverySucceeded' | 'DiscoverySucceededAtleastOnce' | 'RunAsAccountNotAssociated' | string (ReadOnly): Gets discovery scope status.
 * **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Gets errors for discovery scope.
 * **hydratedRunAsAccountId**: string (ReadOnly): Gets the run as account ID with which feature worked successfully.
-           
+
 It is discovered by the agent from the list of credentials.
 
 ## SystemCenter
@@ -1543,10 +1636,10 @@ It is discovered by the agent from the list of credentials.
 * **controllerType**: string (ReadOnly): Gets or sets a value indicating the type of the disk controller type.
 * **diskMode**: string (ReadOnly): Disk mode property used for identifying independent disks.
 * **diskProvisioningPolicy**: string (ReadOnly): The provisioning policy of the disk.
-            It is Thin or Thick or
+It is Thin or Thick or
 Unknown for the VMWare VMDK.
 * **diskScrubbingPolicy**: string (ReadOnly): The scrubbing policy of disks which can be
-            eagerly zeroed or
+eagerly zeroed or
 lazily zeroed.
 * **diskType**: string: Gets or sets Type of the disk.
 * **isOSDisk**: string: Gets or sets a value indicating whether disk is os disk.
@@ -1583,7 +1676,7 @@ lazily zeroed.
 * **dataCenterScope**: string (ReadOnly): Scope of the data center.
 * **dependencyMapDiscovery**: [DependencyMapDiscovery](#dependencymapdiscovery) (ReadOnly): Gets the data related to dependency map discovery.
 * **dependencyMapping**: string (ReadOnly): Gets or sets if dependency mapping feature is enabled or not
-            for
+for
 the VM.
 * **dependencyMappingEndTime**: string (ReadOnly): Gets or sets when dependency mapping collection was last disabled.
 * **dependencyMappingStartTime**: string (ReadOnly): Gets or sets when dependency mapping collection is last started.
@@ -1594,12 +1687,12 @@ the VM.
 * **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Errors for machine.
 * **firmware**: string: Gets or sets the firmware.
 * **guestDetailsDiscoveryTimestamp**: string (ReadOnly): The last time at which the Guest Details was discovered
-            or the
+or the
 error while discovering guest details based discovery
-            of the
+of the
 machine.
 * **guestOsDetails**: [GuestOsDetails](#guestosdetails) (ReadOnly): Operating System Details extracted from the guest
-            bu executing
+bu executing
 script inside the guest VM.
 * **hostInMaintenanceMode**: bool (ReadOnly): Indicates whether the host is in maintenance mode.
 * **hostName**: string (ReadOnly): The host name.
@@ -1609,13 +1702,13 @@ script inside the guest VM.
 * **instanceUuid**: string (ReadOnly): On-premise Instance UUID of the machine.
 * **isDeleted**: bool (ReadOnly): Value indicating whether VM is deleted.
 * **isGuestDetailsDiscoveryInProgress**: bool (ReadOnly): Whether Refresh Fabric Layout Guest Details has been completed once.
-         
-  Portal will show discovery in progress, if this value is true.
+
+Portal will show discovery in progress, if this value is true.
 * **maxSnapshots**: int (ReadOnly): Maximum number of snapshots for the VM.            Default value is -1.
 * **networkAdapters**: [VmwareNetworkAdapter](#vmwarenetworkadapter)[] (ReadOnly): Network adapters attached to the machine.
 * **numberOfApplications**: int (ReadOnly): Number of applications installed in the guest VM.
-* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores 
-            allocated for the
+* **numberOfProcessorCore**: int: Gets or sets the Number of Processor Cores
+allocated for the
 machine.
 * **numberOfSecurityRisks**: int (ReadOnly): Number of security risks identified on the guest VM.
 * **numberOfSnapshots**: int (ReadOnly): Number of snapshots for the VM.             Default value is -1.
@@ -1700,10 +1793,10 @@ the user.
 ### Properties
 * **id**: string: Gets or sets the unique id corresponding to the application directory.
 * **isEditable**: bool: Gets or sets a value indicating whether the directory object is editable.
-     
-      True when the directory is added as an optional directory, false when
+
+True when the directory is added as an optional directory, false when
 discovery is done
-            manually.
+manually.
 * **localScratchPath**: string: Gets or sets the local scratch path at which the directories has been copied.
 * **mountPath**: string: Gets or sets the mount path of the application directory.
 * **sourcePaths**: string[]: Gets or sets the paths of the directory on the source machine.
@@ -1720,7 +1813,7 @@ discovery is done
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
 * **serviceEndpoint**: string (ReadOnly): Gets the service endpoint.
 * **siteAppliancePropertiesCollection**: [SiteApplianceProperties](#siteapplianceproperties)[]: Gets or sets the appliance details used by service to communicate
-           
+
 to the appliance.
 
 ## WebRoleImportDisk

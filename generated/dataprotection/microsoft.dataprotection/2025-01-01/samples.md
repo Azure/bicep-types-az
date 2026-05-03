@@ -62,7 +62,7 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults@2025-01-01' = {
       encryptionSettings: {
         infrastructureEncryption: 'Enabled'
         kekIdentity: {
-          identityId: '/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi'
+          identityId: '/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourceGroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi'
           identityType: 'UserAssigned'
         }
         keyVaultProperties: {
@@ -165,7 +165,7 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
     friendlyName: 'harshitbi2'
     identityDetails: {
       useSystemAssignedIdentity: false
-      userAssignedIdentityArmUrl: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourcegroups/rg-name/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testUami'
+      userAssignedIdentityArmUrl: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/rg-name/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testUami'
     }
     objectType: 'BackupInstance'
     policyInfo: {
@@ -234,7 +234,7 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
       }
     }
     resourceGuardOperationRequests: [
-      '/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourcegroups/ankurResourceGuard1/providers/Microsoft.DataProtection/resourceGuards/ResourceGuard38-1/dppModifyPolicy/default'
+      '/subscriptions/38304e13-357e-405e-9e9a-220351dcce8c/resourceGroups/ankurResourceGuard1/providers/Microsoft.DataProtection/resourceGuards/ResourceGuard38-1/dppModifyPolicy/default'
     ]
     validationType: 'ShallowValidation'
   }
@@ -271,7 +271,7 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
     friendlyName: 'aksbi'
     objectType: 'BackupInstance'
     policyInfo: {
-      policyId: '/subscriptions/62b829ee-7936-40c9-a1c9-47a93f9f3965/resourcegroups/aksrg/providers/Microsoft.DataProtection/BackupVaults/aksvault/backupPolicies/akspolicy'
+      policyId: '/subscriptions/62b829ee-7936-40c9-a1c9-47a93f9f3965/resourceGroups/aksrg/providers/Microsoft.DataProtection/BackupVaults/aksvault/backupPolicies/akspolicy'
       policyParameters: {
         backupDatasourceParametersList: [
           {

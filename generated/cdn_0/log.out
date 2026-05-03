@@ -30,6 +30,30 @@ warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query
 warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "rankings"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OriginProperties' has a property 'hostName' that is already declared the parent schema 'OriginUpdatePropertiesParameters' but isn't significantly different. The property has been removed from OriginProperties
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "customDomains"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "protocols"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "rankings"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "rankings"
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2025-07-01-preview/afdx.json:4085:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFirstPartyManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'

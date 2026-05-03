@@ -33,7 +33,7 @@
 * **apiVersion**: '2025-09-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExtensionValueProperties](#extensionvalueproperties) (ReadOnly): The single extension based on search criteria
+* **properties**: [ExtensionValueV2Properties](#extensionvaluev2properties) (ReadOnly): The single extension based on search criteria.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridCompute/locations/publishers/extensionTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,11 +98,11 @@
 ### Properties
 * **apiVersion**: '2025-09-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "[a-zA-Z0-9-_\.]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridComputePrivateLinkScopeProperties](#hybridcomputeprivatelinkscopeproperties): Properties that define a Azure Arc PrivateLinkScope resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
-* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2025-09-16-preview
@@ -113,6 +113,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[.]{1}.+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties that define a Network Security Perimeter resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2025-09-16-preview
@@ -188,11 +189,6 @@
 * **publisher**: string (ReadOnly): Publisher of the extension.
 * **type**: string (ReadOnly): Type of the extension.
 
-## DetectedProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Disk
 ### Properties
 * **diskType**: string: The type of the disk.
@@ -229,9 +225,13 @@
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 
-## ExtensionValueProperties
+## ExtensionValueV2Properties
 ### Properties
+* **architecture**: string[] (ReadOnly): Architectures (x64, arms64, etc.) that this extension supports.
+* **extensionSignatureUri**: string (ReadOnly): Location of the signature files for the extension.
 * **extensionType**: string (ReadOnly): The type of the Extension being received.
+* **extensionUris**: string[] (ReadOnly): A list of locations where the extension packages can be found.
+* **operatingSystem**: string (ReadOnly): The operating system (Windows, Linux, etc.) this extension supports.
 * **publisher**: string (ReadOnly): The publisher of the Extension being received.
 * **version**: string (ReadOnly): The version of the Extension being received.
 
@@ -259,7 +259,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnectionDataModel](#privateendpointconnectiondatamodel)[] (ReadOnly): The collection of associated Private Endpoint Connections.
 * **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
 * **serviceExtensions**: [ServiceExtension](#serviceextension)[]: Enable private link validation for an Azure Arc Extension.
 
 ## Identity
@@ -418,7 +418,7 @@
 * **agentVersion**: string (ReadOnly): The hybrid machine agent full version.
 * **clientPublicKey**: string: Public Key that the client provides to be used during initial resource onboarding
 * **cloudMetadata**: [CloudMetadata](#cloudmetadata): The metadata of the cloud environment (Azure/GCP/AWS/OCI...).
-* **detectedProperties**: [DetectedProperties](#detectedproperties) (ReadOnly): Detected properties from the machine.
+* **detectedProperties**: [MachinePropertiesDetectedProperties](#machinepropertiesdetectedproperties) (ReadOnly): Detected properties from the machine.
 * **displayName**: string (ReadOnly): Specifies the hybrid machine display name.
 * **dnsFqdn**: string (ReadOnly): Specifies the DNS fully qualified display name.
 * **domainName**: string (ReadOnly): Specifies the Windows domain name.
@@ -449,6 +449,11 @@
 * **tpmEkCertificate**: string: Endorsement Key Certificate of the Trusted Platform Module (TPM) that the client provides to be used during initial resource onboarding.
 * **vmId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the hybrid machine unique ID.
 * **vmUuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
+
+## MachinePropertiesDetectedProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MachineRunCommandInstanceView
 ### Properties
@@ -487,13 +492,13 @@
 ## NetworkInterface
 ### Properties
 * **id**: string: Represents the ID of the network interface.
-* **ipAddresses**: [IpAddress](#ipaddress)[]: The list of IP addresses in this interface.
+* **ipAddresses**: [IpAddress](#ipaddress)[] (ReadOnly): The list of IP addresses in this interface.
 * **macAddress**: string: Represents MAC address of the network interface.
 * **name**: string: Represents the name of the network interface.
 
 ## NetworkProfile
 ### Properties
-* **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The list of network interfaces.
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): The list of network interfaces.
 
 ## NetworkSecurityPerimeter
 ### Properties
@@ -567,11 +572,6 @@
 * **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
 * **requiredZoneNames**: string[] (ReadOnly): Required DNS zone names of the the private link resource.
 
-## PrivateLinkScopesResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
 * **actionsRequired**: string (ReadOnly): The actions required for private link service connection.
@@ -623,7 +623,7 @@
 
 ## ServiceExtension
 ### Properties
-* **serviceExtensionPublicNetworkAccess**: 'disabled' | 'enabled' | string: The network access policy to determine if the specified Azure Arc Extension can use public Azure Arc Extension service endpoints.
+* **serviceExtensionPublicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access policy to determine if the specified Azure Arc Extension can use public Azure Arc Extension service endpoints.
 * **serviceExtensionType**: string: The name of the Azure Arc Extension.
 
 ## ServiceStatus
@@ -647,7 +647,7 @@
 
 ## StorageProfile
 ### Properties
-* **disks**: [Disk](#disk)[]: The disks on the machine.
+* **disks**: [Disk](#disk)[] (ReadOnly): The disks on the machine.
 
 ## Subnet
 ### Properties
@@ -661,6 +661,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

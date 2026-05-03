@@ -9,6 +9,7 @@
 * **apiVersion**: '2023-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'azureServersSetting' | string (Required, DeployTimeConstant): The resource name
+* **properties**: any: The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/serverVulnerabilityAssessmentsSettings' (ReadOnly, DeployTimeConstant): The resource type
 

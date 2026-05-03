@@ -43,6 +43,7 @@ resource exampleResource 'Microsoft.FileShares/fileShares/fileShareSnapshots@202
   parent: parentResource 
   name: 'example'
   properties: {
+    initiatorId: 'backup-vault-001'
     metadata: {
       key9372: 'jtc'
     }

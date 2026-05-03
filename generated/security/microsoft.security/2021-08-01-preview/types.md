@@ -8,11 +8,11 @@
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of the resource
-* **location**: string: Location where the resource is stored
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AssignmentProperties](#assignmentproperties): Properties of a security assignment
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
+* **tags**: [AssignmentTags](#assignmenttags): Resource tags.
 * **type**: 'Microsoft.Security/assignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/standards@2021-08-01-preview
@@ -23,26 +23,22 @@
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of the resource
-* **location**: string: Location where the resource is stored
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StandardProperties](#standardproperties): Properties of a security standard
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
+* **tags**: [StandardTags](#standardtags): Resource tags.
 * **type**: 'Microsoft.Security/standards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssignedComponentItem
 ### Properties
 * **key**: string: unique key to a security assessment object
 
-## AssignedStandardItem
-### Properties
-* **id**: string: full resourceId of the Microsoft.Security/standard object
-
 ## AssignmentProperties
 ### Properties
 * **additionalData**: [AssignmentPropertiesAdditionalData](#assignmentpropertiesadditionaldata): Additional data about the assignment
 * **assignedComponent**: [AssignedComponentItem](#assignedcomponentitem): Component item with key as applied to this standard assignment over the given scope
-* **assignedStandard**: [AssignedStandardItem](#assignedstandarditem): Standard item with key as applied to this standard assignment over the given scope
+* **assignedStandard**: [CommonAssignedStandardItem](#commonassignedstandarditem): Standard item with key as applied to this standard assignment over the given scope
 * **description**: string: description of the standardAssignment
 * **displayName**: string: display name of the standardAssignment
 * **effect**: string: expected effect of this assignment (Disable/Exempt/etc)
@@ -53,6 +49,15 @@
 ## AssignmentPropertiesAdditionalData
 ### Properties
 * **exemptionCategory**: string: Exemption category of this assignment
+
+## AssignmentTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CommonAssignedStandardItem
+### Properties
+* **id**: string: Full resourceId of the Microsoft.Security/standard object
 
 ## StandardComponentProperties
 ### Properties
@@ -67,6 +72,11 @@
 * **standardType**: string (ReadOnly): standard type (Custom or BuiltIn only currently)
 * **supportedClouds**: ('AWS' | 'GCP')[]: List of all standard supported clouds.
 
+## StandardTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -75,14 +85,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## Tags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Tags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

@@ -67,7 +67,7 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/dataSources@2
   name: 'example'
   kind: 'AzureActivityLog'
   properties: {
-    LinkedResourceId: '/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management'
+    LinkedResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/providers/microsoft.insights/eventtypes/management'
   }
 }
 ```
@@ -80,7 +80,7 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/linkedService
   parent: parentResource 
   name: 'example'
   properties: {
-    writeAccessResourceId: '/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster'
+    writeAccessResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster'
   }
 }
 ```
@@ -94,8 +94,8 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/linkedStorage
   name: 'example'
   properties: {
     storageAccountIds: [
-      '/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA'
-      '/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB'
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA'
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB'
     ]
   }
 }

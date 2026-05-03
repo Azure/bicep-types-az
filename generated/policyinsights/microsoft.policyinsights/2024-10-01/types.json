@@ -4,7 +4,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.PolicyInsights/remediations"
+    "value": "Microsoft.PolicyInsights/attestations"
   },
   {
     "$type": "StringLiteralType",
@@ -12,7 +12,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.PolicyInsights/remediations",
+    "name": "Microsoft.PolicyInsights/attestations",
     "properties": {
       "id": {
         "type": {
@@ -46,12 +46,12 @@
         "type": {
           "$ref": "#/4"
         },
-        "flags": 0,
-        "description": "Properties for the remediation."
+        "flags": 1,
+        "description": "Properties for the attestation."
       },
       "systemData": {
         "type": {
-          "$ref": "#/14"
+          "$ref": "#/12"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -60,108 +60,98 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RemediationProperties",
+    "name": "AttestationProperties",
     "properties": {
       "policyAssignmentId": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 0,
-        "description": "The resource ID of the policy assignment that should be remediated."
+        "flags": 1,
+        "description": "The resource ID of the policy assignment that the attestation is setting the state for."
       },
       "policyDefinitionReferenceId": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition."
+        "description": "The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition."
       },
-      "resourceDiscoveryMode": {
+      "complianceState": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/8"
         },
         "flags": 0,
-        "description": "The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified."
+        "description": "The compliance state that should be set on the resource."
+      },
+      "expiresOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the compliance state should expire."
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID."
+      },
+      "comments": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Comments describing why this attestation was created."
+      },
+      "evidence": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The evidence supporting the compliance state set in this attestation."
       },
       "provisioningState": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The status of the remediation. This refers to the entire remediation task, not individual deployments. Allowed values are Evaluating, Canceled, Cancelling, Failed, Complete, or Succeeded."
+        "description": "The status of the attestation."
       },
-      "createdOn": {
+      "lastComplianceStateChangeAt": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The time at which the remediation was created."
+        "description": "The time the compliance state was last changed in this attestation."
       },
-      "lastUpdatedOn": {
+      "assessmentDate": {
         "type": {
           "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The time at which the remediation was last updated."
-      },
-      "filters": {
-        "type": {
-          "$ref": "#/8"
         },
         "flags": 0,
-        "description": "The filters that will be applied to determine which resources to remediate."
+        "description": "The time the evidence was assessed"
       },
-      "deploymentStatus": {
+      "metadata": {
         "type": {
           "$ref": "#/11"
         },
-        "flags": 2,
-        "description": "The deployment status summary for all deployments created by the remediation."
-      },
-      "statusMessage": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The remediation status message. Provides additional details regarding the state of the remediation."
-      },
-      "correlationId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The remediation correlation Id. Can be used to find events related to the remediation in the activity log."
-      },
-      "resourceCount": {
-        "type": {
-          "$ref": "#/12"
-        },
         "flags": 0,
-        "description": "Determines the max number of resources that can be remediated by the remediation job. If not provided, the default resource count is used."
-      },
-      "parallelDeployments": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 0,
-        "description": "Determines how many resources to remediate at any given time. Can be used to increase or reduce the pace of the remediation. If not provided, the default parallel deployments value is used."
-      },
-      "failureThreshold": {
-        "type": {
-          "$ref": "#/13"
-        },
-        "flags": 0,
-        "description": "The remediation failure threshold settings"
+        "description": "Additional metadata for this attestation"
       }
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "ExistingNonCompliant"
+    "value": "Compliant"
   },
   {
     "$type": "StringLiteralType",
-    "value": "ReEvaluateCompliance"
+    "value": "NonCompliant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
   },
   {
     "$type": "UnionType",
@@ -173,84 +163,41 @@
         "$ref": "#/6"
       },
       {
+        "$ref": "#/7"
+      },
+      {
         "$ref": "#/0"
       }
     ]
   },
   {
     "$type": "ObjectType",
-    "name": "RemediationFilters",
+    "name": "AttestationEvidence",
     "properties": {
-      "locations": {
+      "description": {
         "type": {
-          "$ref": "#/9"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The resource locations that will be remediated."
+        "description": "The description for this piece of evidence."
       },
-      "resourceIds": {
+      "sourceUri": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The IDs of the resources that will be remediated. Can specify at most 100 IDs. This filter cannot be used when ReEvaluateCompliance is set to ReEvaluateCompliance, and cannot be empty if provided."
+        "description": "The URI location of the evidence."
       }
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/0"
+      "$ref": "#/9"
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RemediationDeploymentSummary",
-    "properties": {
-      "totalDeployments": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 2,
-        "description": "The number of deployments required by the remediation."
-      },
-      "successfulDeployments": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 2,
-        "description": "The number of deployments required by the remediation that have succeeded."
-      },
-      "failedDeployments": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 2,
-        "description": "The number of deployments required by the remediation that have failed."
-      }
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RemediationPropertiesFailureThreshold",
-    "properties": {
-      "percentage": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 0,
-        "description": "A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold."
-      }
-    }
+    "$type": "AnyType"
   },
   {
     "$type": "ObjectType",
@@ -265,7 +212,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -286,7 +233,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -320,16 +267,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
         "$ref": "#/15"
       },
       {
         "$ref": "#/16"
-      },
-      {
-        "$ref": "#/17"
-      },
-      {
-        "$ref": "#/18"
       },
       {
         "$ref": "#/0"
@@ -356,16 +303,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
         "$ref": "#/20"
       },
       {
         "$ref": "#/21"
-      },
-      {
-        "$ref": "#/22"
-      },
-      {
-        "$ref": "#/23"
       },
       {
         "$ref": "#/0"
@@ -374,7 +321,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.PolicyInsights/remediations@2024-10-01",
+    "name": "Microsoft.PolicyInsights/attestations@2024-10-01",
     "body": {
       "$ref": "#/3"
     },
@@ -383,7 +330,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.PolicyInsights/attestations"
+    "value": "Microsoft.PolicyInsights/remediations"
   },
   {
     "$type": "StringLiteralType",
@@ -391,7 +338,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.PolicyInsights/attestations",
+    "name": "Microsoft.PolicyInsights/remediations",
     "properties": {
       "id": {
         "type": {
@@ -409,28 +356,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/24"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/25"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/29"
+          "$ref": "#/27"
         },
-        "flags": 1,
-        "description": "Properties for the attestation."
+        "flags": 0,
+        "description": "Properties for the remediation."
       },
       "systemData": {
         "type": {
-          "$ref": "#/14"
+          "$ref": "#/12"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -439,110 +386,117 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AttestationProperties",
+    "name": "RemediationProperties",
     "properties": {
       "policyAssignmentId": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 1,
-        "description": "The resource ID of the policy assignment that the attestation is setting the state for."
+        "flags": 0,
+        "description": "The resource ID of the policy assignment that should be remediated."
       },
       "policyDefinitionReferenceId": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition."
+        "description": "The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition."
       },
-      "complianceState": {
+      "resourceDiscoveryMode": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/30"
         },
         "flags": 0,
-        "description": "The compliance state that should be set on the resource."
-      },
-      "expiresOn": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The time the compliance state should expire."
-      },
-      "owner": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID."
-      },
-      "comments": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Comments describing why this attestation was created."
-      },
-      "evidence": {
-        "type": {
-          "$ref": "#/35"
-        },
-        "flags": 0,
-        "description": "The evidence supporting the compliance state set in this attestation."
+        "description": "The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified."
       },
       "provisioningState": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The status of the attestation."
+        "description": "The status of the remediation. This refers to the entire remediation task, not individual deployments. Allowed values are Evaluating, Canceled, Cancelling, Failed, Complete, or Succeeded."
       },
-      "lastComplianceStateChangeAt": {
+      "createdOn": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The time the compliance state was last changed in this attestation."
+        "description": "The time at which the remediation was created."
       },
-      "assessmentDate": {
+      "lastUpdatedOn": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 0,
-        "description": "The time the evidence was assessed"
+        "flags": 2,
+        "description": "The time at which the remediation was last updated."
       },
-      "metadata": {
+      "filters": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The filters that will be applied to determine which resources to remediate."
+      },
+      "deploymentStatus": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "The deployment status summary for all deployments created by the remediation."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The remediation status message. Provides additional details regarding the state of the remediation."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The remediation correlation Id. Can be used to find events related to the remediation in the activity log."
+      },
+      "resourceCount": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Determines the max number of resources that can be remediated by the remediation job. If not provided, the default resource count is used."
+      },
+      "parallelDeployments": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Determines how many resources to remediate at any given time. Can be used to increase or reduce the pace of the remediation. If not provided, the default parallel deployments value is used."
+      },
+      "failureThreshold": {
         "type": {
           "$ref": "#/36"
         },
         "flags": 0,
-        "description": "Additional metadata for this attestation"
+        "description": "The remediation failure threshold settings"
       }
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "Compliant"
+    "value": "ExistingNonCompliant"
   },
   {
     "$type": "StringLiteralType",
-    "value": "NonCompliant"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
+    "value": "ReEvaluateCompliance"
   },
   {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/30"
+        "$ref": "#/28"
       },
       {
-        "$ref": "#/31"
-      },
-      {
-        "$ref": "#/32"
+        "$ref": "#/29"
       },
       {
         "$ref": "#/0"
@@ -551,41 +505,214 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AttestationEvidence",
+    "name": "RemediationFilters",
     "properties": {
-      "description": {
+      "locations": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/32"
         },
         "flags": 0,
-        "description": "The description for this piece of evidence."
+        "description": "The resource locations that will be remediated."
       },
-      "sourceUri": {
+      "resourceIds": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/33"
         },
         "flags": 0,
-        "description": "The URI location of the evidence."
+        "description": "The IDs of the resources that will be remediated. Can specify at most 100 IDs. This filter cannot be used when ReEvaluateCompliance is set to ReEvaluateCompliance, and cannot be empty if provided."
       }
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/0"
     }
   },
   {
-    "$type": "AnyType"
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationDeploymentSummary",
+    "properties": {
+      "totalDeployments": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation."
+      },
+      "successfulDeployments": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation that have succeeded."
+      },
+      "failedDeployments": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation that have failed."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationPropertiesFailureThreshold",
+    "properties": {
+      "percentage": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold."
+      }
+    }
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.PolicyInsights/attestations@2024-10-01",
+    "name": "Microsoft.PolicyInsights/remediations@2024-10-01",
     "body": {
-      "$ref": "#/28"
+      "$ref": "#/26"
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.PolicyInsights/policyMetadata"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.PolicyInsights/policyMetadata",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Properties of the policy metadata."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyMetadataProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The description of the policy metadata."
+      },
+      "requirements": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The requirements of the policy metadata."
+      },
+      "metadataId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The policy metadata identifier."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The category of the policy metadata."
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The title of the policy metadata."
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The owner of the policy metadata."
+      },
+      "additionalContentUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Url for getting additional content about the resource metadata."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Additional metadata."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.PolicyInsights/policyMetadata@2024-10-01",
+    "body": {
+      "$ref": "#/40"
+    },
+    "readableScopes": 1,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",
@@ -593,17 +720,17 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/49"
         },
-        "flags": 2,
-        "description": "Array of deployments for the remediation."
+        "flags": 3,
+        "description": "The RemediationDeployment items on this page"
       },
       "nextLink": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 2,
-        "description": "The URL to get the next set of results."
+        "flags": 0,
+        "description": "The link to the next page of items"
       }
     }
   },
@@ -641,7 +768,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "Error encountered while remediated the resource."
@@ -689,14 +816,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/46"
         },
         "flags": 2,
         "description": "Internal error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/48"
         },
         "flags": 2,
         "description": "Additional scenario specific error details."
@@ -706,7 +833,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/40"
+      "$ref": "#/45"
     }
   },
   {
@@ -722,7 +849,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/11"
         },
         "flags": 2,
         "description": "The scenario specific error details."
@@ -732,13 +859,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/42"
+      "$ref": "#/47"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/39"
+      "$ref": "#/44"
     }
   },
   {
@@ -747,7 +874,7 @@
     "resourceType": "Microsoft.PolicyInsights/remediations",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/38"
+      "$ref": "#/43"
     }
   }
 ]

@@ -6,6 +6,61 @@ https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ComponentVersionProperties-componentSpec' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/ComponentVersionProperties-componentSpec
+warning | Modeler/MissingType | The schema 'components·1j3l7p·schemas·partialmanagedserviceidentity·properties·userassignedidentities·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1j3l7p·schemas·partialmanagedserviceidentity·properties·userassignedidentities·additionalproperties
+warning | Modeler/MissingType | The schema 'components·c2648e·schemas·resourceconfiguration·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·c2648e·schemas·resourceconfiguration·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'components·309t99·schemas·diagnoserequestproperties·properties·applicationinsights·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·309t99·schemas·diagnoserequestproperties·properties·applicationinsights·additionalproperties
+warning | Modeler/MissingType | The schema 'components·25ikg4·schemas·diagnoserequestproperties·properties·containerregistry·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·25ikg4·schemas·diagnoserequestproperties·properties·containerregistry·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1308z30·schemas·diagnoserequestproperties·properties·dnsresolution·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1308z30·schemas·diagnoserequestproperties·properties·dnsresolution·additionalproperties
+warning | Modeler/MissingType | The schema 'components·i936ih·schemas·diagnoserequestproperties·properties·keyvault·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·i936ih·schemas·diagnoserequestproperties·properties·keyvault·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1051c9e·schemas·diagnoserequestproperties·properties·nsg·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1051c9e·schemas·diagnoserequestproperties·properties·nsg·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1omvafb·schemas·diagnoserequestproperties·properties·others·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1omvafb·schemas·diagnoserequestproperties·properties·others·additionalproperties
+warning | Modeler/MissingType | The schema 'components·9pa7fp·schemas·diagnoserequestproperties·properties·requiredresourceproviders·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·9pa7fp·schemas·diagnoserequestproperties·properties·requiredresourceproviders·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1l019a0·schemas·diagnoserequestproperties·properties·resourcelock·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1l019a0·schemas·diagnoserequestproperties·properties·resourcelock·additionalproperties
+warning | Modeler/MissingType | The schema 'components·3kc9ly·schemas·diagnoserequestproperties·properties·storageaccount·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·3kc9ly·schemas·diagnoserequestproperties·properties·storageaccount·additionalproperties
+warning | Modeler/MissingType | The schema 'components·bqeq8w·schemas·diagnoserequestproperties·properties·udr·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·bqeq8w·schemas·diagnoserequestproperties·properties·udr·additionalproperties
+warning | Modeler/MissingType | The schema 'AmlComputeProperties-propertyBag' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/AmlComputeProperties-propertyBag
+warning | Modeler/MissingType | The schema 'ColumnTransformer-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/ColumnTransformer-parameters
+warning | Modeler/MissingType | The schema 'StackEnsembleSettings-stackMetaLearnerKWargs' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/StackEnsembleSettings-stackMetaLearnerKWargs
+warning | Modeler/MissingType | The schema 'CommandJob-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/CommandJob-parameters
+warning | Modeler/MissingType | The schema 'components·n18uwu·schemas·customservice·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·n18uwu·schemas·customservice·additionalproperties
+warning | Modeler/MissingType | The schema 'components·12dq4bp·schemas·image·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·12dq4bp·schemas·image·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ly1cgw·schemas·environmentvariable·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·1ly1cgw·schemas·environmentvariable·additionalproperties
+warning | Modeler/MissingType | The schema 'components·i5zray·schemas·docker·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·i5zray·schemas·docker·additionalproperties
+warning | Modeler/MissingType | The schema 'ComputeInstanceContainer-servicesItem' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/ComputeInstanceContainer-servicesItem
+warning | Modeler/MissingType | The schema 'components·108unbv·schemas·endpointscheduleaction·properties·endpointinvocationdefinition·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·108unbv·schemas·endpointscheduleaction·properties·endpointinvocationdefinition·additionalproperties
+warning | Modeler/MissingType | The schema 'components·11shlhg·schemas·pipelinejob·properties·jobs·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/components·11shlhg·schemas·pipelinejob·properties·jobs·additionalproperties
+warning | Modeler/MissingType | The schema 'PipelineJob-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/PipelineJob-settings
+warning | Modeler/MissingType | The schema 'SweepJob-searchSpace' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2026-03-01/openapi.json#/components/schemas/SweepJob-searchSpace
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'ComponentVersionProperties-componentSpec' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2026-01-15-preview/openapi.json#/components/schemas/ComponentVersionProperties-componentSpec
 warning | Modeler/MissingType | The schema 'components·1j3l7p·schemas·partialmanagedserviceidentity·properties·userassignedidentities·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2026-01-15-preview/openapi.json#/components/schemas/components·1j3l7p·schemas·partialmanagedserviceidentity·properties·userassignedidentities·additionalproperties
@@ -1012,7 +1067,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ComputeInstanceSshS
   - properties.sshPublicAccess.x-ms-enum.values: [{"name":"Enabled","value":"Enabled"},{"name":"Disabled","value":"Disabled"}] => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ComputeResource' (3 differences):
   - properties.properties: {"$ref":"#/components/schemas/schemas:281","description":"The resource-specific properties for this resource."} => <none>
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
   - allOf.1: <none> => {"$ref":"#/components/schemas/schemas:3202"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ComputeSchedules' (1 differences):
   - properties.computeStartStop.$ref: "#/components/schemas/schemas:351" => "#/components/schemas/schemas:3411"
@@ -1268,7 +1323,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointDeploymentR
   - properties.provisioningState.readOnly: true => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointDeploymentResourcePropertiesBasicResource' (2 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:598" => "#/components/schemas/schemas:5275"
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointDeploymentResourcePropertiesBasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:603" => "#/components/schemas/schemas:5281"
   - properties.value.description: "The EndpointDeploymentResourcePropertiesBasicResource items on this page" => <none>
@@ -1305,7 +1360,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointResourcePro
   - properties.provisioningState.readOnly: true => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointResourcePropertiesBasicResource' (2 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:652" => "#/components/schemas/schemas:5323"
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EndpointResourcePropertiesBasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:661" => "#/components/schemas/schemas:5334"
   - properties.value.description: "The EndpointResourcePropertiesBasicResource items on this page" => <none>
@@ -2277,7 +2332,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OutboundRule' (3 di
   - properties.parentRuleNames.x-ms-mutability: <none> => ["read"]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OutboundRuleBasicResource' (2 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:1318" => "#/components/schemas/schemas:5413"
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OutboundRuleListResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1324" => "#/components/schemas/schemas:5419"
   - properties.value.description: "The OutboundRuleBasicResource items on this page" => "The list of machine learning workspaces. Since this list may be incomplete, the nextLink field should be used to request the next list of machine learning workspaces."
@@ -2353,7 +2408,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConn
   - properties.properties.$ref: "#/components/schemas/schemas:1398" => "#/components/schemas/schemas:5430"
   - properties.identity.description: "The managed service identities assigned to this resource." => <none>
   - properties.location.description: "*Same as workspace location." => "Same as workspace location."
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConnectionListResult' (2 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1396" => "#/components/schemas/schemas:5429"
   - properties.nextLink: {"$ref":"#/components/schemas/schemas:1397"} => <none>
@@ -2385,7 +2440,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QuotaBaseProperties
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QuotaUpdateParameters' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1448" => "#/components/schemas/schemas:3170"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiBlocklistItemPropertiesBasicResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiBlocklistItemPropertiesBasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1458" => "#/components/schemas/schemas:5468"
   - properties.value.description: "The RaiBlocklistItemPropertiesBasicResource items on this page" => <none>
@@ -2393,7 +2448,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiBlocklistItemPro
   - properties.nextLink.description: "The link to the next page of items" => <none>
   - required: ["value"] => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiBlocklistPropertiesBasicResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiBlocklistPropertiesBasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1466" => "#/components/schemas/schemas:5474"
   - properties.value.description: "The RaiBlocklistPropertiesBasicResource items on this page" => <none>
@@ -2410,7 +2465,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiPolicyProperties
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiPolicyPropertiesBasicResource' (3 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:1472" => "#/components/schemas/schemas:5479"
   - properties.properties.description: "Azure OpenAI Content Filters properties." => <none>
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RaiPolicyPropertiesBasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1479" => "#/components/schemas/schemas:5487"
   - properties.value.description: "The RaiPolicyPropertiesBasicResource items on this page" => <none>
@@ -2904,7 +2959,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Webhook' (5 differe
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Workspace' (3 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:2005" => "#/components/schemas/schemas:5595"
   - properties.identity.description: "The managed service identities assigned to this resource." => <none>
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'WorkspaceConnectionOAuth2' (8 differences):
   - properties.authUrl.$ref: "#/components/schemas/schemas:1962" => "#/components/schemas/schemas:5551"
   - properties.clientId.$ref: "#/components/schemas/schemas:102" => "#/components/schemas/schemas:5552"
@@ -2918,7 +2973,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'WorkspaceConnection
   - properties.createdByWorkspaceArmId.description: "A type definition that refers the id to an Azure Resource Manager resource." => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'WorkspaceConnectionPropertiesV2BasicResource' (2 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:1971" => "#/components/schemas/schemas:5561"
-  - allOf.0.$ref: "#/components/schemas/schemas:5788" => "#/components/schemas/schemas:5789"
+  - allOf.0.$ref: "#/components/schemas/schemas:5755" => "#/components/schemas/schemas:5756"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:1982" => "#/components/schemas/schemas:5573"
   - properties.value.description: "The WorkspaceConnectionPropertiesV2BasicResource items on this page" => <none>

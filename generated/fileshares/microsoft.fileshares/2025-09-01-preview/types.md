@@ -69,7 +69,7 @@
 
 ## FileShareSnapshotProperties
 ### Properties
-* **initiatorId**: string (ReadOnly): The initiator of the FileShareSnapshot. This is a user-defined value.
+* **initiatorId**: string: The initiator of the FileShareSnapshot. This is a user-defined value.
 * **metadata**: [FileShareSnapshotPropertiesMetadata](#filesharesnapshotpropertiesmetadata): The metadata
 * **snapshotTime**: string (ReadOnly): The FileShareSnapshot time in UTC in string representation
 

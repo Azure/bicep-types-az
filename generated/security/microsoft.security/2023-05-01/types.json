@@ -58,9 +58,16 @@
         "flags": 10,
         "description": "The resource api version"
       },
-      "systemData": {
+      "properties": {
         "type": {
           "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/7"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -68,9 +75,12 @@
     },
     "elements": {
       "AzureServersSetting": {
-        "$ref": "#/17"
+        "$ref": "#/18"
       }
     }
+  },
+  {
+    "$type": "AnyType"
   },
   {
     "$type": "ObjectType",
@@ -85,7 +95,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/11"
+          "$ref": "#/12"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -106,7 +116,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -140,9 +150,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/7"
-      },
-      {
         "$ref": "#/8"
       },
       {
@@ -150,6 +157,9 @@
       },
       {
         "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
       },
       {
         "$ref": "#/0"
@@ -176,9 +186,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/12"
-      },
-      {
         "$ref": "#/13"
       },
       {
@@ -186,6 +193,9 @@
       },
       {
         "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
       },
       {
         "$ref": "#/0"
@@ -198,14 +208,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 0,
         "description": "The vulnerability assessments setting properties on Azure servers in the defined scope."
       },
       "kind": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/22"
         },
         "flags": 1,
         "description": "The kind of the server vulnerability assessments setting."
@@ -218,7 +228,7 @@
     "properties": {
       "selectedProvider": {
         "type": {
-          "$ref": "#/20"
+          "$ref": "#/21"
         },
         "flags": 1,
         "description": "The selected vulnerability assessments provider on Azure servers in the defined scope."
@@ -233,7 +243,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/19"
+        "$ref": "#/20"
       },
       {
         "$ref": "#/0"
