@@ -984,14 +984,14 @@
           "$ref": "#/98"
         },
         "flags": 0,
-        "description": "Resource tags."
+        "description": "The common properties of tracked resources in the service."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The common properties for any location based resource, tracked or proxy."
       },
       "etag": {
         "type": {
@@ -1297,14 +1297,14 @@
           "$ref": "#/140"
         },
         "flags": 0,
-        "description": "Resource tags."
+        "description": "The common properties of tracked resources in the service."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The common properties for any location based resource, tracked or proxy."
       },
       "etag": {
         "type": {
@@ -1885,14 +1885,14 @@
           "$ref": "#/205"
         },
         "flags": 0,
-        "description": "Resource tags."
+        "description": "The common properties of tracked resources in the service."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The common properties for any location based resource, tracked or proxy."
       },
       "etag": {
         "type": {
@@ -2605,14 +2605,14 @@
           "$ref": "#/231"
         },
         "flags": 0,
-        "description": "Resource tags."
+        "description": "The common properties of tracked resources in the service."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The common properties for any location based resource, tracked or proxy."
       },
       "etag": {
         "type": {

@@ -18,7 +18,8 @@
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[{]?[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [StandardProperties](#standardproperties): Properties of a security standard
+* **properties**: [SecurityStandardProperties](#securitystandardproperties): Properties of a security standard
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityStandards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/standardAssignments@2024-08-01
@@ -29,20 +30,21 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[{]?[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StandardAssignmentProperties](#standardassignmentproperties): Properties of a standard assignments assignment
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/standardAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssignedAssessmentItem
 ### Properties
 * **assessmentKey**: string: Unique key to a security assessment object
 
-## AssignedStandardItem
-### Properties
-* **id**: string: Full resourceId of the Microsoft.Security/standard object
-
 ## AttestationEvidence
 ### Properties
 * **description**: string: The description of the evidence
 * **sourceUrl**: string: The source url of the evidence
+
+## CommonAssignedStandardItem
+### Properties
+* **id**: string: Full resourceId of the Microsoft.Security/standard object
 
 ## CustomRecommendationProperties
 ### Properties
@@ -59,6 +61,16 @@
 ### Properties
 * **assessmentKey**: string: The assessment key
 
+## SecurityStandardProperties
+### Properties
+* **assessments**: [PartialAssessmentProperties](#partialassessmentproperties)[]: List of assessment keys to apply to standard scope.
+* **cloudProviders**: ('AWS' | 'Azure' | 'GCP' | string)[]: List of all standard supported clouds.
+* **description**: string: Description of the standard
+* **displayName**: string: Display name of the standard, equivalent to the standardId
+* **metadata**: [StandardMetadata](#standardmetadata): The security standard metadata.
+* **policySetDefinitionId**: string: The policy set definition id associated with the standard.
+* **standardType**: 'Compliance' | 'Custom' | 'Default' | string (ReadOnly): Standard type (Custom or Default or Compliance only currently)
+
 ## StandardAssignmentMetadata
 ### Properties
 * **createdBy**: string (ReadOnly): Standard assignment Created by object id (GUID)
@@ -68,7 +80,7 @@
 
 ## StandardAssignmentProperties
 ### Properties
-* **assignedStandard**: [AssignedStandardItem](#assignedstandarditem): Standard item with key as applied to this standard assignment over the given scope
+* **assignedStandard**: [CommonAssignedStandardItem](#commonassignedstandarditem): Standard item with key as applied to this standard assignment over the given scope
 * **attestationData**: [StandardAssignmentPropertiesAttestationData](#standardassignmentpropertiesattestationdata): Additional data about assignment that has Attest effect
 * **description**: string: Description of the standardAssignment
 * **displayName**: string: Display name of the standardAssignment
@@ -96,16 +108,6 @@
 * **createdOn**: string (ReadOnly): Standard creation date
 * **lastUpdatedBy**: string (ReadOnly): Standard last updated by object id (GUID)
 * **lastUpdatedOn**: string (ReadOnly): Standard last update date
-
-## StandardProperties
-### Properties
-* **assessments**: [PartialAssessmentProperties](#partialassessmentproperties)[]: List of assessment keys to apply to standard scope.
-* **cloudProviders**: ('AWS' | 'Azure' | 'GCP' | string)[]: List of all standard supported clouds.
-* **description**: string: Description of the standard
-* **displayName**: string: Display name of the standard, equivalent to the standardId
-* **metadata**: [StandardMetadata](#standardmetadata): The security standard metadata.
-* **policySetDefinitionId**: string: The policy set definition id associated with the standard.
-* **standardType**: 'Compliance' | 'Custom' | 'Default' | string (ReadOnly): Standard type (Custom or Default or Compliance only currently)
 
 ## SystemData
 ### Properties

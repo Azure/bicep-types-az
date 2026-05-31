@@ -18,11 +18,11 @@
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of the resource
-* **location**: string: Location where the resource is stored
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityConnectorProperties](#securityconnectorproperties): Security connector data
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
+* **tags**: [SecurityConnectorTags](#securityconnectortags): Resource tags.
 * **type**: 'Microsoft.Security/securityConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ArcAutoProvisioningConfiguration
@@ -539,6 +539,11 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 * **hierarchyIdentifierTrialEndDate**: string (ReadOnly): The date on which the trial period will end, if applicable. Trial period exists for 30 days after upgrading to payed offerings.
 * **offerings**: [CloudOffering](#cloudoffering)[]: A collection of offerings for the security connector.
 
+## SecurityConnectorTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SensitiveDataDiscoveryProperties
 ### Properties
 * **isEnabled**: bool: Indicates whether Sensitive Data Discovery should be enabled.
@@ -552,11 +557,6 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## Tags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## VmScannersBaseConfiguration
 ### Properties

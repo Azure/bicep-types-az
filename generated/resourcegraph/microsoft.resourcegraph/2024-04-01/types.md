@@ -7,7 +7,7 @@
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The location of the resource
 * **name**: string {pattern: "^[^<>&:\?]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GraphQueryProperties](#graphqueryproperties): Metadata describing a graph query for an Azure resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.

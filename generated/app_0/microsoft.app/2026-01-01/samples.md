@@ -102,6 +102,168 @@ resource exampleResource 'Microsoft.App/connectedEnvironments/storages@2026-01-0
 
 ## microsoft.app/containerapps
 
+Create or Update App On A Connected Environment
+```bicep
+resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.ExtendedLocation/customLocations/testcustomlocation'
+    type: 'CustomLocation'
+  }
+  location: 'East US'
+  properties: {
+    configuration: {
+      dapr: {
+        appPort: 3000
+        appProtocol: 'http'
+        enableApiLogging: true
+        enabled: true
+        httpMaxRequestSize: 10
+        httpReadBufferSize: 30
+        logLevel: 'debug'
+      }
+      ingress: {
+        additionalPortMappings: [
+          {
+            external: true
+            targetPort: 1234
+          }
+          {
+            exposedPort: 3456
+            external: false
+            targetPort: 2345
+          }
+        ]
+        clientCertificateMode: 'accept'
+        corsPolicy: {
+          allowCredentials: true
+          allowedHeaders: [
+            'HEADER1'
+            'HEADER2'
+          ]
+          allowedMethods: [
+            'GET'
+            'POST'
+          ]
+          allowedOrigins: [
+            'https://a.test.com'
+            'https://b.test.com'
+          ]
+          exposeHeaders: [
+            'HEADER3'
+            'HEADER4'
+          ]
+          maxAge: 1234
+        }
+        customDomains: [
+          {
+            name: 'www.my-name.com'
+            bindingType: 'SniEnabled'
+            certificateId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/connectedEnvironments/demokube/certificates/my-certificate-for-my-name-dot-com'
+          }
+          {
+            name: 'www.my-other-name.com'
+            bindingType: 'SniEnabled'
+            certificateId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/connectedEnvironments/demokube/certificates/my-certificate-for-my-other-name-dot-com'
+          }
+        ]
+        external: true
+        ipSecurityRestrictions: [
+          {
+            name: 'Allow work IP A subnet'
+            description: 'Allowing all IP\'s within the subnet below to access containerapp'
+            action: 'Allow'
+            ipAddressRange: '192.168.1.1/32'
+          }
+          {
+            name: 'Allow work IP B subnet'
+            description: 'Allowing all IP\'s within the subnet below to access containerapp'
+            action: 'Allow'
+            ipAddressRange: '192.168.1.1/8'
+          }
+        ]
+        stickySessions: {
+          affinity: 'sticky'
+        }
+        targetPort: 3000
+        traffic: [
+          {
+            label: 'production'
+            revisionName: 'testcontainerApp0-ab1234'
+          }
+        ]
+      }
+      maxInactiveRevisions: 10
+      runtime: {
+        java: {
+          enableMetrics: true
+        }
+      }
+    }
+    environmentId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/connectedEnvironments/demokube'
+    template: {
+      containers: [
+        {
+          name: 'testcontainerApp0'
+          image: 'repo/testcontainerApp0:v1'
+          probes: [
+            {
+              type: 'Liveness'
+              httpGet: {
+                path: '/health'
+                httpHeaders: [
+                  {
+                    name: 'Custom-Header'
+                    value: 'Awesome'
+                  }
+                ]
+                port: 8080
+              }
+              initialDelaySeconds: 3
+              periodSeconds: 3
+            }
+          ]
+        }
+      ]
+      initContainers: [
+        {
+          name: 'testinitcontainerApp0'
+          args: [
+            '-c'
+            'while true; do echo hello; sleep 10;done'
+          ]
+          command: [
+            '/bin/sh'
+          ]
+          image: 'repo/testcontainerApp0:v4'
+          resources: {
+            cpu: 0.2
+            memory: '100Mi'
+          }
+        }
+      ]
+      scale: {
+        cooldownPeriod: 350
+        maxReplicas: 5
+        minReplicas: 1
+        pollingInterval: 35
+        rules: [
+          {
+            name: 'httpscalingrule'
+            custom: {
+              type: 'http'
+              metadata: {
+                concurrentRequests: '50'
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
 Create or Update Container App
 ```bicep
 resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
@@ -210,8 +372,7 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
         traffic: [
           {
             label: 'production'
-            revisionName: 'testcontainerapp0-ab1234'
-            weight: 100
+            revisionName: 'testcontainerApp0-ab1234'
           }
         ]
       }
@@ -229,8 +390,8 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
     template: {
       containers: [
         {
-          name: 'testcontainerapp0'
-          image: 'repo/testcontainerapp0:v1'
+          name: 'testcontainerApp0'
+          image: 'repo/testcontainerApp0:v1'
           probes: [
             {
               type: 'Liveness'
@@ -272,10 +433,10 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
           command: [
             '/bin/sh'
           ]
-          image: 'repo/testcontainerapp0:v4'
+          image: 'repo/testcontainerApp0:v4'
           resources: {
-            cpu: 0.5
-            memory: '1Gi'
+            cpu: 0.2
+            memory: '100Mi'
           }
         }
       ]
@@ -408,8 +569,7 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
         targetPort: 3000
         traffic: [
           {
-            revisionName: 'testcontainerappmanagedby-ab1234'
-            weight: 100
+            revisionName: 'testcontainerAppManagedBy-ab1234'
           }
         ]
         transport: 'tcp'
@@ -419,8 +579,8 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
     template: {
       containers: [
         {
-          name: 'testcontainerappmanagedby'
-          image: 'repo/testcontainerappmanagedby:v1'
+          name: 'testcontainerAppManagedBy'
+          image: 'repo/testcontainerAppManagedBy:v1'
           probes: [
             {
               type: 'Liveness'
@@ -467,8 +627,7 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
         targetPort: 3000
         traffic: [
           {
-            revisionName: 'testcontainerapptcp-ab1234'
-            weight: 100
+            revisionName: 'testcontainerAppTcp-ab1234'
           }
         ]
         transport: 'tcp'
@@ -478,8 +637,8 @@ resource exampleResource 'Microsoft.App/containerApps@2026-01-01' = {
     template: {
       containers: [
         {
-          name: 'testcontainerapptcp'
-          image: 'repo/testcontainerapptcp:v1'
+          name: 'testcontainerAppTcp'
+          image: 'repo/testcontainerAppTcp:v1'
           probes: [
             {
               type: 'Liveness'
@@ -582,6 +741,76 @@ resource exampleResource 'Microsoft.App/containerApps/authConfigs@2026-01-01' = 
 }
 ```
 
+Create or Update Container App AuthConfig with msi clientID blob storage token store
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2026-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    encryptionSettings: {
+      containerAppAuthEncryptionSecretName: 'testEncryptionSecretName'
+      containerAppAuthSigningSecretName: 'testSigningSecretName'
+    }
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
+      }
+    }
+    login: {
+      tokenStore: {
+        azureBlobStorage: {
+          sasUrlSettingName: 'sasUrlSettingName1'
+        }
+      }
+    }
+    platform: {
+      enabled: true
+    }
+  }
+}
+```
+
+Create or Update Container App AuthConfig with msi managedIdentityResourceId blob storage token store
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2026-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    encryptionSettings: {
+      containerAppAuthEncryptionSecretName: 'testEncryptionSecretName'
+      containerAppAuthSigningSecretName: 'testSigningSecretName'
+    }
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
+      }
+    }
+    login: {
+      tokenStore: {
+        azureBlobStorage: {
+          sasUrlSettingName: 'sasUrlSettingName1'
+        }
+      }
+    }
+    platform: {
+      enabled: true
+    }
+  }
+}
+```
+
 ## microsoft.app/containerapps/sourcecontrols
 
 Create or Update Container App SourceControl
@@ -609,6 +838,15 @@ resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2026-01-01'
     }
     repoUrl: 'https://github.com/xwang971/ghatest'
   }
+}
+```
+
+## microsoft.app/logicapps
+
+Create logic app extension
+```bicep
+resource exampleResource 'Microsoft.App/logicApps@2026-01-01' = {
+  name: 'example'
 }
 ```
 
@@ -881,7 +1119,7 @@ resource exampleResource 'Microsoft.App/managedEnvironments/httpRouteConfigs@202
         targets: [
           {
             containerApp: 'capp-1'
-            revision: 'capp-1--0000001'
+            revision: 'rev-1'
           }
         ]
       }
@@ -899,7 +1137,7 @@ resource exampleResource 'Microsoft.App/managedEnvironments/httpRouteConfigs@202
     customDomains: [
       {
         name: 'example.com'
-        bindingType: 'SniEnabled'
+        bindingType: 'Disabled'
         certificateId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/testcontainerenv/certificates/certificate-1'
       }
     ]
@@ -938,7 +1176,7 @@ resource exampleResource 'Microsoft.App/managedEnvironments/httpRouteConfigs@202
     customDomains: [
       {
         name: 'example.com'
-        bindingType: 'SniEnabled'
+        bindingType: 'Disabled'
         certificateId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/testcontainerenv/certificates/certificate-1'
       }
     ]
@@ -1210,8 +1448,8 @@ resource exampleResource 'Microsoft.App/sessionPools@2026-01-01' = {
     }
     dynamicPoolConfiguration: {
       lifecycleConfiguration: {
-        lifecycleType: 'OnContainerExit'
-        maxAlivePeriodInSeconds: 86400
+        cooldownPeriodInSeconds: 600
+        lifecycleType: 'Timed'
       }
     }
     environmentId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/managedEnvironments/demokube'
@@ -1225,6 +1463,30 @@ resource exampleResource 'Microsoft.App/sessionPools@2026-01-01' = {
     scaleConfiguration: {
       maxConcurrentSessions: 500
       readySessionInstances: 100
+    }
+    sessionNetworkConfiguration: {
+      status: 'EgressEnabled'
+    }
+  }
+}
+```
+
+Create or Update Session Pool with MCP server
+```bicep
+resource exampleResource 'Microsoft.App/sessionPools@2026-01-01' = {
+  name: 'example'
+  location: 'East US'
+  properties: {
+    containerType: 'Shell'
+    dynamicPoolConfiguration: {
+      lifecycleConfiguration: {
+        cooldownPeriodInSeconds: 600
+        lifecycleType: 'Timed'
+      }
+    }
+    poolManagementType: 'Dynamic'
+    scaleConfiguration: {
+      maxConcurrentSessions: 50
     }
     sessionNetworkConfiguration: {
       status: 'EgressEnabled'

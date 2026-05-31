@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiCollectionProperties](#apicollectionproperties) (ReadOnly): Describes the properties of an API collection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/apiCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiCollectionProperties
@@ -20,6 +21,15 @@
 * **numberOfExternalApiEndpoints**: int (ReadOnly): The number of API endpoints in this API collection for which API traffic from the internet was observed.
 * **numberOfInactiveApiEndpoints**: int (ReadOnly): The number of API endpoints in this API collection that have not received any API traffic in the last 30 days.
 * **numberOfUnauthenticatedApiEndpoints**: int (ReadOnly): The number of API endpoints in this API collection that are unauthenticated.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Gets the provisioning state of the API collection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the API collection.
 * **sensitivityLabel**: string (ReadOnly): The highest priority sensitivity label from Microsoft Purview in this API collection.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

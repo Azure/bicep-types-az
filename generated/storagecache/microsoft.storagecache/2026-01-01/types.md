@@ -75,7 +75,7 @@
 * **apiVersion**: '2026-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [CacheIdentity](#cacheidentity): The identity of the cache, if configured.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: Region name string.
 * **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the cache.
 * **sku**: [CacheSku](#cachesku): SKU for the cache.

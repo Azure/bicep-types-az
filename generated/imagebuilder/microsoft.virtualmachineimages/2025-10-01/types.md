@@ -142,7 +142,12 @@
 ## ImageTemplateIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned': The type of identity used for the image template. The type 'None' will remove any identities from the image template.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **userAssignedIdentities**: [ImageTemplateIdentityUserAssignedIdentities](#imagetemplateidentityuserassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## ImageTemplateIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## ImageTemplateInVMValidator
 * **Discriminator**: type
@@ -321,11 +326,6 @@
 * **code**: string (ReadOnly): The status code.
 * **message**: string (ReadOnly): The detailed status message, including for alerts and error messages.
 * **time**: string (ReadOnly): The time of the status.
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties

@@ -1109,7 +1109,7 @@
           "$ref": "#/85"
         },
         "flags": 0,
-        "description": "ActiveRevisionsMode controls how active revisions are handled for the Container app:\n<list><item>Single: Only one revision can be active at a time. Traffic weights cannot be used. This is the default.</item><item>Multiple: Multiple revisions can be active, including optional traffic weights and labels.</item><item>Labels: Only revisions with labels are active. Traffic weights can be applied to labels.</item></list>"
+        "description": "ActiveRevisionsMode controls how active revisions are handled for the Container app:\n<list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode. If no value if provided, this is the default.</item></list>"
       },
       "targetLabel": {
         "type": {
@@ -2821,14 +2821,14 @@
           "$ref": "#/88"
         },
         "flags": 0,
-        "description": "Optional. KEDA Cooldown Period. Defaults to 300 seconds if not set."
+        "description": "Optional. KEDA Cooldown Period in seconds. Defaults to 300 seconds if not set."
       },
       "pollingInterval": {
         "type": {
           "$ref": "#/88"
         },
         "flags": 0,
-        "description": "Optional. KEDA Polling Interval. Defaults to 30 seconds if not set."
+        "description": "Optional. KEDA Polling Interval in seconds. Defaults to 30 seconds if not set."
       },
       "rules": {
         "type": {
@@ -3883,7 +3883,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/230"
         },
         "flags": 9,
         "description": "The resource name"
@@ -8282,7 +8282,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The name of the app secrets containing the SAS URL of the blob storage containing the tokens. Should not be used along with blobContainerUri."
+        "description": "The name of the app secrets containing the SAS URL of the blob storage containing the tokens."
       },
       "blobContainerUri": {
         "type": {
@@ -9140,7 +9140,7 @@
       },
       "registryPassword": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/50"
         },
         "flags": 4,
         "description": "registry secret."
@@ -10199,7 +10199,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Label/Revision to route requests to"
+        "description": "Label to route requests to"
       },
       "weight": {
         "type": {
@@ -11255,7 +11255,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Server for NFS azure file."
+        "description": "Server for NFS azure file. Specify the Azure storage account server address."
       },
       "accessMode": {
         "type": {

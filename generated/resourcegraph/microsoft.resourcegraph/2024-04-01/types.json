@@ -65,7 +65,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The location of the resource"
       },
       "etag": {
         "type": {

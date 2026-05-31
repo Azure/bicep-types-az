@@ -11,6 +11,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.PolicyInsights/policyMetadata@2024-10-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyMetadataProperties](#policymetadataproperties) (ReadOnly): Properties of the policy metadata.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.PolicyInsights/policyMetadata' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.PolicyInsights/remediations@2024-10-01
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
@@ -54,6 +65,17 @@
 * **message**: string (ReadOnly): Description of the error.
 * **target**: string (ReadOnly): The target of the error.
 
+## PolicyMetadataProperties
+### Properties
+* **additionalContentUrl**: string (ReadOnly): Url for getting additional content about the resource metadata.
+* **category**: string (ReadOnly): The category of the policy metadata.
+* **description**: string (ReadOnly): The description of the policy metadata.
+* **metadata**: any (ReadOnly): Additional metadata.
+* **metadataId**: string (ReadOnly): The policy metadata identifier.
+* **owner**: string (ReadOnly): The owner of the policy metadata.
+* **requirements**: string (ReadOnly): The requirements of the policy metadata.
+* **title**: string (ReadOnly): The title of the policy metadata.
+
 ## RemediationDeployment
 ### Properties
 * **createdOn**: string (ReadOnly): The time at which the remediation was created.
@@ -66,8 +88,8 @@
 
 ## RemediationDeploymentsListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [RemediationDeployment](#remediationdeployment)[] (ReadOnly): Array of deployments for the remediation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [RemediationDeployment](#remediationdeployment)[] (Required, ReadOnly): The RemediationDeployment items on this page
 
 ## RemediationDeploymentSummary
 ### Properties

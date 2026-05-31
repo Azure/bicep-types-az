@@ -63,7 +63,7 @@ resource exampleResource 'Microsoft.HybridCompute/machines@2025-09-16-preview' =
         }
       }
     }
-    parentClusterResourceId: '{AzureStackHCIResourceId}'
+    parentClusterResourceId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.AzureStackHCI/clusters/myAzureStackHCICluster'
     privateLinkScopeResourceId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/privateLinkScopeName'
     tpmEkCertificate: 'string'
     vmId: 'b7a098cc-b0b8-46e8-a205-62f301a62a8f'

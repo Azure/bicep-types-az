@@ -6,11 +6,11 @@
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
 * **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertRuleProperties](#alertruleproperties) (Required): The Activity Log Alert rule properties of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TenantActivityLogAlertResourceTags](#tenantactivitylogalertresourcetags): Resource tags.
+* **tags**: [TenantActivityLogAlertResourceTags](#tenantactivitylogalertresourcetags): The tags of the resource.
 * **type**: 'Microsoft.AlertsManagement/tenantActivityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionGroup

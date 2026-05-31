@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAssessmentMetadataPropertiesResponse](#securityassessmentmetadatapropertiesresponse): Describes properties of an assessment metadata response.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessments@2025-05-04
@@ -18,6 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAssessmentPropertiesOrSecurityAssessmentPropertiesResponse](#securityassessmentpropertiesorsecurityassessmentpropertiesresponse): Describes properties of an assessment.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssessmentLinks
@@ -32,13 +34,7 @@
 * **firstEvaluationDate**: string (ReadOnly): The time that the assessment was created and first evaluated. Returned as UTC time in ISO 8601 format
 * **statusChangeDate**: string (ReadOnly): The time that the status of the assessment last changed. Returned as UTC time in ISO 8601 format
 
-## Components1Uu4J47SchemasSecurityassessmentpropertiesbasePropertiesRiskPropertiesPathsItemsPropertiesEdgesItems
-### Properties
-* **id**: string (Required): Edge identifier
-* **sourceId**: string (Required): Source node identifier
-* **targetId**: string (Required): Target node identifier
-
-## ResourceDetails
+## CommonResourceDetails
 * **Discriminator**: source
 
 ### Base Properties
@@ -124,11 +120,17 @@
 
 ## SecurityAssessmentPropertiesBaseRiskPathsItem
 ### Properties
-* **edges**: [Components1Uu4J47SchemasSecurityassessmentpropertiesbasePropertiesRiskPropertiesPathsItemsPropertiesEdgesItems](#components1uu4j47schemassecurityassessmentpropertiesbasepropertiesriskpropertiespathsitemspropertiesedgesitems)[]: Connections between nodes
+* **edges**: [SecurityAssessmentPropertiesBaseRiskPathsItemEdgeItem](#securityassessmentpropertiesbaseriskpathsitemedgeitem)[]: Connections between nodes
 * **id**: string: Unique identifier for the path
-* **nodes**: [SecurityAssessmentPropertiesBaseRiskPathsPropertiesItemsItem](#securityassessmentpropertiesbaseriskpathspropertiesitemsitem)[]
+* **nodes**: [SecurityAssessmentPropertiesBaseRiskPathsItemNodesItem](#securityassessmentpropertiesbaseriskpathsitemnodesitem)[]
 
-## SecurityAssessmentPropertiesBaseRiskPathsPropertiesItemsItem
+## SecurityAssessmentPropertiesBaseRiskPathsItemEdgeItem
+### Properties
+* **id**: string (Required): Edge identifier
+* **sourceId**: string (Required): Source node identifier
+* **targetId**: string (Required): Target node identifier
+
+## SecurityAssessmentPropertiesBaseRiskPathsItemNodesItem
 ### Properties
 * **id**: string: Node identifier
 * **nodePropertiesLabel**: string[]: Properties associated with the node
@@ -140,7 +142,16 @@
 * **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly): Links relevant to the assessment
 * **metadata**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties): Describes properties of an assessment metadata.
 * **partnersData**: [SecurityAssessmentPartnerData](#securityassessmentpartnerdata): Data regarding 3rd party partner integration
-* **resourceDetails**: [ResourceDetails](#resourcedetails) (Required): Details of the resource that was assessed
+* **resourceDetails**: [CommonResourceDetails](#commonresourcedetails) (Required): Details of the resource that was assessed
 * **risk**: [SecurityAssessmentPropertiesBaseRisk](#securityassessmentpropertiesbaserisk): External model of risk result
 * **status**: [AssessmentStatusOrAssessmentStatusResponse](#assessmentstatusorassessmentstatusresponse) (Required): The result of the assessment
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

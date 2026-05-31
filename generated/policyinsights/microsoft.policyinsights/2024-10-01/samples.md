@@ -6,18 +6,7 @@
 
 ## microsoft.policyinsights/attestations
 
-Create attestation at subscription scope
-```bicep
-resource exampleResource 'Microsoft.PolicyInsights/attestations@2024-10-01' = {
-  name: 'example'
-  properties: {
-    complianceState: 'Compliant'
-    policyAssignmentId: '/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
-  }
-}
-```
-
-Create attestation at subscription scope with all properties
+Create attestation at individual resource scope
 ```bicep
 resource exampleResource 'Microsoft.PolicyInsights/attestations@2024-10-01' = {
   name: 'example'
@@ -44,12 +33,12 @@ resource exampleResource 'Microsoft.PolicyInsights/attestations@2024-10-01' = {
 
 ## microsoft.policyinsights/remediations
 
-Create remediation at management group scope
+Create remediation at individual resource scope
 ```bicep
 resource exampleResource 'Microsoft.PolicyInsights/remediations@2024-10-01' = {
   name: 'example'
   properties: {
-    policyAssignmentId: '/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
+    policyAssignmentId: '/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
   }
 }
 ```

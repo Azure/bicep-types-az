@@ -5620,7 +5620,7 @@
 
 ## StaticRoutesConfig
 ### Properties
-* **propagateStaticRoutes**: bool (ReadOnly): Boolean indicating whether static routes on this connection are automatically propagate to route tables which this connection propagates to.
+* **propagateStaticRoutes**: bool: Boolean indicating whether static routes on this connection are automatically propagate to route tables which this connection propagates to.
 * **vnetLocalRouteOverrideCriteria**: 'Contains' | 'Equal' | string: Parameter determining whether NVA in spoke vnet is bypassed for traffic with destination in spoke.
 
 ## SubscriptionId

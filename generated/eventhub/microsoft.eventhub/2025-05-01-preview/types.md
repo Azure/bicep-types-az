@@ -6,7 +6,7 @@
 ### Properties
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: Resource location.
 * **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
 * **sku**: [ClusterSku](#clustersku): Properties of the cluster SKU.
@@ -21,7 +21,7 @@
 * **apiVersion**: '2025-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
-* **location**: string: The geo-location where the resource lives
+* **location**: string: Resource location.
 * **name**: string {minLength: 6, maxLength: 50, pattern: "^[a-zA-Z][a-zA-Z0-9-]{6,50}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): Properties of sku resource

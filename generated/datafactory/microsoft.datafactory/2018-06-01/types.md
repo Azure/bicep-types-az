@@ -8,11 +8,11 @@
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The resource location.
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [FactoryTags](#factorytags): Resource tags.
+* **tags**: [FactoryTags](#factorytags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/adfcdcs@2018-06-01

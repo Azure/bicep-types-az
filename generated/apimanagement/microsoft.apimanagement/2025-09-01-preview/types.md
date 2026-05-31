@@ -2240,11 +2240,12 @@ Instrumentation key for applicationInsights logger.
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+* **id**: string (ReadOnly): The ARM identifier for private endpoint.
 
 ## PrivateEndpointConnectionRequestPropertiesOrPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The resource of private end point.
+* **groupIds**: string[] (ReadOnly): The group ids for the private endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
@@ -2259,7 +2260,7 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **groupId**: string (ReadOnly): The private link resource group id.
 * **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
-* **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
+* **requiredZoneNames**: string[]: The private link resource private link DNS zone name.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -2346,7 +2347,7 @@ Instrumentation key for applicationInsights logger.
 
 ## ResourceCollectionValueItem
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"

@@ -516,7 +516,7 @@
         "type": {
           "$ref": "#/49"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "SaaS Offer Status"
       }
     }

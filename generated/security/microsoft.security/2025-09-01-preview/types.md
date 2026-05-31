@@ -6,8 +6,9 @@
 ### Properties
 * **apiVersion**: '2025-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
+* **name**: 'MCAS' | 'Sentinel' | 'WDATP' | 'WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW' | 'WDATP_UNIFIED_SOLUTION' | 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DefenderForStorageSettingProperties](#defenderforstoragesettingproperties): Defender for Storage resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/defenderForStorageSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/privateLinks@2025-09-01-preview
@@ -45,6 +46,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/privateLinks/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## CommonOperationStatus
+### Properties
+* **code**: string: The operation status code.
+* **message**: string: Additional information regarding the success/failure of the operation.
+
 ## DefenderForStorageSettingProperties
 ### Properties
 * **isEnabled**: bool: Indicates whether Defender for Storage is enabled on this storage account.
@@ -57,7 +63,7 @@
 * **automatedResponse**: 'BlobSoftDelete' | 'None' | string: Optional. Specifies the automated response action to take when malware is detected.
 * **blobScanResultsOptions**: 'BlobIndexTags' | 'None' | string: Optional. Write scan result on BlobIndexTags by default.
 * **onUpload**: [OnUploadProperties](#onuploadproperties): Properties of On Upload malware scanning.
-* **operationStatus**: [OperationStatus](#operationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Malware Scanning enable/disable operation.
+* **operationStatus**: [CommonOperationStatus](#commonoperationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Malware Scanning enable/disable operation.
 * **scanResultsEventGridTopicResourceId**: string: Optional. Resource id of an Event Grid Topic to send scan results to.
 
 ## OnUploadFilters
@@ -74,11 +80,6 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 * **capGBPerMonth**: int: Defines the max GB to be scanned per Month. Set to -1 if no capping is needed. If not specified, the default value is -1.
 * **filters**: [OnUploadFilters](#onuploadfilters): Optional. Determine which blobs get scanned by On Upload malware scanning. An Or operation is performed between each filter type.
 * **isEnabled**: bool: Indicates whether On Upload malware scanning should be enabled.
-
-## OperationStatus
-### Properties
-* **code**: string: The operation status code.
-* **message**: string: Additional information regarding the success/failure of the operation.
 
 ## PrivateEndpoint
 ### Properties
@@ -128,7 +129,7 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 ## SensitiveDataDiscoveryProperties
 ### Properties
 * **isEnabled**: bool: Indicates whether Sensitive Data Discovery should be enabled.
-* **operationStatus**: [OperationStatus](#operationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Sensitive Data Discovery enable/disable operation.
+* **operationStatus**: [CommonOperationStatus](#commonoperationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Sensitive Data Discovery enable/disable operation.
 
 ## SystemData
 ### Properties

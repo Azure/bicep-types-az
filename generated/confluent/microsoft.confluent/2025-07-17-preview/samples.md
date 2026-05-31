@@ -43,11 +43,9 @@ resource exampleResource 'Microsoft.Confluent/organizations@2025-07-17-preview' 
         'xxicntimrbamglfemon'
       ]
       publisherId: 'rhuwuuysplxudflrcinitpqfpueqzuzletllhc'
-      status: 'Started'
       termId: 'lgvbpqpqgcauqwvynqylooruxqqepaxajyecbliktelsohfefa'
       termUnit: 'kpwpfldakesjtxq'
     }
-    provisioningState: 'Accepted'
     userDetail: {
       aadEmail: 'brfhckweqympuydjhwwvwnuklhq'
       emailAddress: 'user4@example.com'

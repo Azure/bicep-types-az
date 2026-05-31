@@ -1078,7 +1078,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "Region name string."
       },
       "identity": {
         "type": {

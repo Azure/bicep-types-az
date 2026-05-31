@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DevOpsConfigurationProperties](#devopsconfigurationproperties): DevOps Configuration properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs@2025-11-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureDevOpsOrgProperties](#azuredevopsorgproperties): Azure DevOps Organization properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs/projects@2025-11-01-preview
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureDevOpsProjectProperties](#azuredevopsprojectproperties): Azure DevOps Project properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs/projects/repos@2025-11-01-preview
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureDevOpsRepositoryProperties](#azuredevopsrepositoryproperties): Azure DevOps Repository properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs/projects/repos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/gitHubOwners@2025-11-01-preview
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GitHubOwnerProperties](#githubownerproperties) (ReadOnly): GitHub Owner properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/gitHubOwners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/gitHubOwners/repos@2025-11-01-preview
@@ -63,7 +63,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GitHubRepositoryProperties](#githubrepositoryproperties) (ReadOnly): GitHub Repository properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/gitHubOwners/repos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/gitLabGroups@2025-11-01-preview
@@ -74,7 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GitLabGroupProperties](#gitlabgroupproperties) (ReadOnly): GitLab Group properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/gitLabGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors/devops/gitLabGroups/projects@2025-11-01-preview
@@ -85,7 +85,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GitLabProjectProperties](#gitlabprojectproperties) (ReadOnly): GitLab Project properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityConnectors/devops/gitLabGroups/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAvailableAzureDevOpsOrgs (Microsoft.Security/securityConnectors/devops@2025-11-01-preview)
@@ -138,16 +138,16 @@ Only used during PUT/PATCH operations. The secret is cleared during GET.
 
 ## AzureDevOpsOrg
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [AzureDevOpsOrgProperties](#azuredevopsorgproperties): Azure DevOps Organization properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## AzureDevOpsOrgListResponse
 ### Properties
-* **nextLink**: string: Gets or sets next link to scroll over the results.
-* **value**: [AzureDevOpsOrg](#azuredevopsorg)[]: Gets or sets list of resources.
+* **nextLink**: string: The link to the next page of items.
+* **value**: [AzureDevOpsOrg](#azuredevopsorg)[]: The AzureDevOpsOrg items on this page.
 
 ## AzureDevOpsOrgProperties
 ### Properties
@@ -257,16 +257,16 @@ This field is ignored when AutoDiscovery is enabled.
 
 ## GitHubOwner
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [GitHubOwnerProperties](#githubownerproperties): GitHub Owner properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## GitHubOwnerListResponse
 ### Properties
-* **nextLink**: string: Gets or sets next link to scroll over the results.
-* **value**: [GitHubOwner](#githubowner)[]: Gets or sets list of resources.
+* **nextLink**: string: The link to the next page of items.
+* **value**: [GitHubOwner](#githubowner)[]: The GitHubOwner items on this page.
 
 ## GitHubOwnerProperties
 ### Properties
@@ -323,16 +323,16 @@ Eg: "new-repo-1".
 
 ## GitLabGroup
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [GitLabGroupProperties](#gitlabgroupproperties): GitLab Group properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## GitLabGroupListResponse
 ### Properties
-* **nextLink**: string: Gets or sets next link to scroll over the results.
-* **value**: [GitLabGroup](#gitlabgroup)[]: Gets or sets list of resources.
+* **nextLink**: string: The link to the next page of items.
+* **value**: [GitLabGroup](#gitlabgroup)[]: The GitLabGroup items on this page.
 
 ## GitLabGroupProperties
 ### Properties

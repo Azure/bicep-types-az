@@ -42,13 +42,6 @@
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
-        "type": {
-          "$ref": "#/4"
-        },
-        "flags": 0,
-        "description": "IotHub properties"
-      },
       "etag": {
         "type": {
           "$ref": "#/0"
@@ -56,40 +49,47 @@
         "flags": 0,
         "description": "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
       },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "IotHub properties"
+      },
       "sku": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/146"
         },
         "flags": 1,
         "description": "IotHub SKU info"
       },
       "identity": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "The managed identities for the IotHub."
       },
-      "tags": {
+      "systemData": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/169"
         },
-        "flags": 0,
-        "description": "Resource tags."
+        "flags": 2,
+        "description": "The system meta data relating to this resource."
       },
       "location": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
-        "description": "The geo-location where the resource lives"
+        "description": "The resource location."
       },
-      "systemData": {
+      "tags": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/180"
         },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "flags": 0,
+        "description": "The resource tags."
       }
     }
   },
@@ -169,7 +169,7 @@
       },
       "privateEndpointConnections": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "Private endpoint connections created on this IotHub"
@@ -197,28 +197,28 @@
       },
       "eventHubEndpoints": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/54"
         },
         "flags": 0,
         "description": "The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub."
       },
       "routing": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging"
       },
       "storageEndpoints": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown."
       },
       "messagingEndpoints": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "The messaging endpoint properties for the file upload notification queue."
@@ -232,7 +232,7 @@
       },
       "cloudToDevice": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "The IoT hub cloud-to-device messaging properties."
@@ -246,28 +246,28 @@
       },
       "deviceStreams": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/127"
         },
         "flags": 0,
         "description": "The device streams properties of iothub."
       },
       "features": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/131"
         },
         "flags": 0,
         "description": "The capabilities and features enabled for the IoT hub."
       },
       "encryption": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/132"
         },
         "flags": 0,
         "description": "The encryption properties for the IoT hub."
       },
       "locations": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/139"
         },
         "flags": 2,
         "description": "Primary and secondary location for iot hub"
@@ -281,21 +281,21 @@
       },
       "rootCertificate": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "This property store root certificate related information"
       },
       "ipVersion": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/144"
         },
         "flags": 0,
         "description": "This property specifies the IP Version the hub is currently utilizing."
       },
       "deviceRegistry": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Represents properties related to the Azure Device Registry (ADR)."
@@ -636,40 +636,33 @@
     "$type": "ObjectType",
     "name": "PrivateEndpointConnection",
     "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/42"
-        },
-        "flags": 1,
-        "description": "The properties of a private endpoint connection"
-      },
       "id": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+        "description": "The resource identifier."
       },
       "name": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The name of the resource"
+        "description": "The resource name."
       },
       "type": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+        "description": "The resource type."
       },
-      "systemData": {
+      "properties": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/42"
         },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+        "flags": 1,
+        "description": "The properties of a private endpoint connection"
       }
     }
   },
@@ -770,126 +763,6 @@
     ]
   },
   {
-    "$type": "ObjectType",
-    "name": "SystemData",
-    "properties": {
-      "createdBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that created the resource."
-      },
-      "createdByType": {
-        "type": {
-          "$ref": "#/55"
-        },
-        "flags": 0,
-        "description": "The type of identity that created the resource."
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource creation (UTC)."
-      },
-      "lastModifiedBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that last modified the resource."
-      },
-      "lastModifiedByType": {
-        "type": {
-          "$ref": "#/60"
-        },
-        "flags": 0,
-        "description": "The type of identity that last modified the resource."
-      },
-      "lastModifiedAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource last modification (UTC)"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/51"
-      },
-      {
-        "$ref": "#/52"
-      },
-      {
-        "$ref": "#/53"
-      },
-      {
-        "$ref": "#/54"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/56"
-      },
-      {
-        "$ref": "#/57"
-      },
-      {
-        "$ref": "#/58"
-      },
-      {
-        "$ref": "#/59"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/41"
@@ -901,21 +774,21 @@
     "properties": {
       "retentionTimeInDays": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages"
       },
       "partitionCount": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages."
       },
       "partitionIds": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/53"
         },
         "flags": 2,
         "description": "The partition ids in the Event Hub-compatible endpoint."
@@ -950,7 +823,7 @@
     "name": "IotHubPropertiesEventHubEndpoints",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/62"
+      "$ref": "#/51"
     }
   },
   {
@@ -959,28 +832,28 @@
     "properties": {
       "endpoints": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/56"
         },
         "flags": 0,
         "description": "The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs."
       },
       "routes": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/102"
         },
         "flags": 0,
         "description": "The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs."
       },
       "fallbackRoute": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/103"
         },
         "flags": 0,
         "description": "The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint."
       },
       "enrichments": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/116"
         },
         "flags": 0,
         "description": "The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid"
@@ -993,35 +866,35 @@
     "properties": {
       "serviceBusQueues": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules."
       },
       "serviceBusTopics": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/69"
         },
         "flags": 0,
         "description": "The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules."
       },
       "eventHubs": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint."
       },
       "storageContainers": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/85"
         },
         "flags": 0,
         "description": "The list of storage container endpoints that IoT hub routes messages to, based on the routing rules."
       },
       "cosmosDBSqlContainers": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "The list of Cosmos DB container endpoints that IoT hub routes messages to, based on the routing rules."
@@ -1041,7 +914,7 @@
       },
       "connectionString": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The connection string of the service bus queue endpoint."
@@ -1062,21 +935,21 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "Method used to authenticate against the service bus queue endpoint"
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of routing service bus queue endpoint."
       },
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name."
@@ -1113,10 +986,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/70"
+        "$ref": "#/59"
       },
       {
-        "$ref": "#/71"
+        "$ref": "#/60"
       },
       {
         "$ref": "#/0"
@@ -1143,7 +1016,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/68"
+      "$ref": "#/57"
     }
   },
   {
@@ -1159,7 +1032,7 @@
       },
       "connectionString": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The connection string of the service bus topic endpoint."
@@ -1180,21 +1053,21 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "Method used to authenticate against the service bus topic endpoint"
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of routing service bus topic endpoint."
       },
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name."
@@ -1227,10 +1100,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/77"
+        "$ref": "#/66"
       },
       {
-        "$ref": "#/78"
+        "$ref": "#/67"
       },
       {
         "$ref": "#/0"
@@ -1240,7 +1113,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/76"
+      "$ref": "#/65"
     }
   },
   {
@@ -1256,7 +1129,7 @@
       },
       "connectionString": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The connection string of the event hub endpoint."
@@ -1277,21 +1150,21 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/73"
         },
         "flags": 0,
         "description": "Method used to authenticate against the event hub endpoint"
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of routing event hub endpoint."
       },
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types."
@@ -1324,10 +1197,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/82"
+        "$ref": "#/71"
       },
       {
-        "$ref": "#/83"
+        "$ref": "#/72"
       },
       {
         "$ref": "#/0"
@@ -1337,7 +1210,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/81"
+      "$ref": "#/70"
     }
   },
   {
@@ -1353,7 +1226,7 @@
       },
       "connectionString": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The connection string of the storage account."
@@ -1367,21 +1240,21 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/78"
         },
         "flags": 0,
         "description": "Method used to authenticate against the storage endpoint"
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of routing storage endpoint."
       },
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types."
@@ -1416,21 +1289,21 @@
       },
       "batchFrequencyInSeconds": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds."
       },
       "maxChunkSizeInBytes": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB)."
       },
       "encoding": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/84"
         },
         "flags": 0,
         "description": "Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'."
@@ -1449,10 +1322,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/87"
+        "$ref": "#/76"
       },
       {
-        "$ref": "#/88"
+        "$ref": "#/77"
       },
       {
         "$ref": "#/0"
@@ -1485,13 +1358,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/92"
+        "$ref": "#/81"
       },
       {
-        "$ref": "#/93"
+        "$ref": "#/82"
       },
       {
-        "$ref": "#/94"
+        "$ref": "#/83"
       },
       {
         "$ref": "#/0"
@@ -1501,7 +1374,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/86"
+      "$ref": "#/75"
     }
   },
   {
@@ -1510,7 +1383,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types."
@@ -1545,28 +1418,28 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/89"
         },
         "flags": 0,
         "description": "Method used to authenticate against the cosmos DB sql container endpoint"
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of routing cosmos DB container endpoint."
       },
       "primaryKey": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The primary key of the cosmos DB account."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The secondary key of the cosmos DB account."
@@ -1613,10 +1486,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/98"
+        "$ref": "#/87"
       },
       {
-        "$ref": "#/99"
+        "$ref": "#/88"
       },
       {
         "$ref": "#/0"
@@ -1626,7 +1499,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/97"
+      "$ref": "#/86"
     }
   },
   {
@@ -1635,14 +1508,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 1,
         "description": "The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique."
       },
       "source": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/100"
         },
         "flags": 1,
         "description": "The source that the routing rule is to be applied to, such as DeviceMessages."
@@ -1656,7 +1529,7 @@
       },
       "endpointNames": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/101"
         },
         "flags": 1,
         "description": "The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed."
@@ -1706,28 +1579,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/103"
+        "$ref": "#/92"
       },
       {
-        "$ref": "#/104"
+        "$ref": "#/93"
       },
       {
-        "$ref": "#/105"
+        "$ref": "#/94"
       },
       {
-        "$ref": "#/106"
+        "$ref": "#/95"
       },
       {
-        "$ref": "#/107"
+        "$ref": "#/96"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/97"
       },
       {
-        "$ref": "#/109"
+        "$ref": "#/98"
       },
       {
-        "$ref": "#/110"
+        "$ref": "#/99"
       },
       {
         "$ref": "#/0"
@@ -1745,7 +1618,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/102"
+      "$ref": "#/91"
     }
   },
   {
@@ -1761,7 +1634,7 @@
       },
       "source": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/112"
         },
         "flags": 1,
         "description": "The source to which the routing rule is to be applied to. For example, DeviceMessages"
@@ -1775,7 +1648,7 @@
       },
       "endpointNames": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/113"
         },
         "flags": 1,
         "description": "The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed."
@@ -1825,28 +1698,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/115"
+        "$ref": "#/104"
       },
       {
-        "$ref": "#/116"
+        "$ref": "#/105"
       },
       {
-        "$ref": "#/117"
+        "$ref": "#/106"
       },
       {
-        "$ref": "#/118"
+        "$ref": "#/107"
       },
       {
-        "$ref": "#/119"
+        "$ref": "#/108"
       },
       {
-        "$ref": "#/120"
+        "$ref": "#/109"
       },
       {
-        "$ref": "#/121"
+        "$ref": "#/110"
       },
       {
-        "$ref": "#/122"
+        "$ref": "#/111"
       },
       {
         "$ref": "#/0"
@@ -1881,7 +1754,7 @@
       },
       "endpointNames": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/115"
         },
         "flags": 1,
         "description": "The list of endpoints for which the enrichment is applied to the message."
@@ -1898,7 +1771,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/125"
+      "$ref": "#/114"
     }
   },
   {
@@ -1928,14 +1801,14 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/120"
         },
         "flags": 0,
         "description": "Specifies authentication type being used for connecting to the storage account."
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of storage endpoint for file upload."
@@ -1954,10 +1827,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/129"
+        "$ref": "#/118"
       },
       {
-        "$ref": "#/130"
+        "$ref": "#/119"
       },
       {
         "$ref": "#/0"
@@ -1969,7 +1842,7 @@
     "name": "IotHubPropertiesStorageEndpoints",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/128"
+      "$ref": "#/117"
     }
   },
   {
@@ -1992,7 +1865,7 @@
       },
       "maxDeliveryCount": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload."
@@ -2009,7 +1882,7 @@
     "name": "IotHubPropertiesMessagingEndpoints",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/133"
+      "$ref": "#/122"
     }
   },
   {
@@ -2018,7 +1891,7 @@
     "properties": {
       "maxDeliveryCount": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages."
@@ -2032,7 +1905,7 @@
       },
       "feedback": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "The properties of the feedback queue for cloud-to-device messages."
@@ -2059,7 +1932,7 @@
       },
       "maxDeliveryCount": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages."
@@ -2072,7 +1945,7 @@
     "properties": {
       "streamingEndpoints": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "List of Device Streams Endpoints."
@@ -2097,10 +1970,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/140"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/141"
+        "$ref": "#/130"
       },
       {
         "$ref": "#/0"
@@ -2120,7 +1993,7 @@
       },
       "keyVaultProperties": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "The properties of the KeyVault key."
@@ -2140,7 +2013,7 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "Managed identity properties of KeyVault Key."
@@ -2150,7 +2023,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
+      "$ref": "#/133"
     }
   },
   {
@@ -2166,7 +2039,7 @@
       },
       "role": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to."
@@ -2185,10 +2058,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/147"
+        "$ref": "#/136"
       },
       {
-        "$ref": "#/148"
+        "$ref": "#/137"
       },
       {
         "$ref": "#/0"
@@ -2198,7 +2071,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/146"
+      "$ref": "#/135"
     }
   },
   {
@@ -2237,13 +2110,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/152"
+        "$ref": "#/141"
       },
       {
-        "$ref": "#/153"
+        "$ref": "#/142"
       },
       {
-        "$ref": "#/154"
+        "$ref": "#/143"
       },
       {
         "$ref": "#/0"
@@ -2276,21 +2149,21 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/155"
         },
         "flags": 1,
         "description": "The name of the SKU."
       },
       "tier": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/160"
         },
         "flags": 2,
         "description": "The billing tier for the IoT hub."
       },
       "capacity": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits."
@@ -2333,28 +2206,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/158"
+        "$ref": "#/147"
       },
       {
-        "$ref": "#/159"
+        "$ref": "#/148"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/149"
       },
       {
-        "$ref": "#/161"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/162"
+        "$ref": "#/151"
       },
       {
-        "$ref": "#/163"
+        "$ref": "#/152"
       },
       {
-        "$ref": "#/164"
+        "$ref": "#/153"
       },
       {
-        "$ref": "#/165"
+        "$ref": "#/154"
       },
       {
         "$ref": "#/0"
@@ -2381,16 +2254,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/167"
+        "$ref": "#/156"
       },
       {
-        "$ref": "#/168"
+        "$ref": "#/157"
       },
       {
-        "$ref": "#/169"
+        "$ref": "#/158"
       },
       {
-        "$ref": "#/170"
+        "$ref": "#/159"
       }
     ]
   },
@@ -2414,14 +2287,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "Dictionary of <ArmUserIdentity>"
@@ -2448,16 +2321,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/173"
+        "$ref": "#/162"
       },
       {
-        "$ref": "#/174"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/175"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/176"
+        "$ref": "#/165"
       }
     ]
   },
@@ -2484,12 +2357,132 @@
     "name": "ArmIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/178"
+      "$ref": "#/167"
     }
   },
   {
     "$type": "ObjectType",
-    "name": "TrackedResourceTags",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
@@ -2557,13 +2550,6 @@
         },
         "flags": 2,
         "description": "The etag."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2610,7 +2596,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/63"
         },
         "flags": 9,
         "description": "The resource name"
@@ -2642,13 +2628,6 @@
         },
         "flags": 2,
         "description": "The entity tag."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2769,13 +2748,6 @@
         },
         "flags": 1,
         "description": "The properties of a private endpoint connection"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2789,31 +2761,22 @@
     "writableScopes": 8
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "listkeys",
-    "resourceType": "Microsoft.Devices/IotHubs/IotHubKeys",
-    "apiVersion": "2025-08-01-preview",
-    "output": {
-      "$ref": "#/5"
-    }
-  },
-  {
     "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/197"
         },
-        "flags": 1,
-        "description": "The SharedAccessSignatureAuthorizationRule items on this page"
+        "flags": 0,
+        "description": "The list of shared access policies."
       },
       "nextLink": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 0,
-        "description": "The link to the next page of items"
+        "flags": 2,
+        "description": "The next link."
       }
     }
   },
@@ -2829,7 +2792,16 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/197"
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listkeys",
+    "resourceType": "Microsoft.Devices/IotHubs/IotHubKeys",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/5"
     }
   }
 ]

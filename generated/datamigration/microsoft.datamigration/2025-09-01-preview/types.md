@@ -32,12 +32,12 @@
 * **etag**: string: HTTP strong entity tag value. Ignored if submitted
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: The resource kind. Only 'vm' (the default) is supported.
-* **location**: string: The geo-location where the resource lives
+* **location**: string
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMigrationServiceProperties](#datamigrationserviceproperties): Custom service properties
 * **sku**: [ServiceSku](#servicesku): Service SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [DataMigrationServiceTags](#datamigrationservicetags): Resource tags.
+* **tags**: [DataMigrationServiceTags](#datamigrationservicetags): Dictionary of <string>
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects@2025-09-01-preview
@@ -47,11 +47,11 @@
 * **apiVersion**: '2025-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProjectProperties](#projectproperties): Project properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ProjectTags](#projecttags): Resource tags.
+* **tags**: [ProjectTags](#projecttags): Dictionary of <string>
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects/files@2025-09-01-preview
@@ -96,11 +96,11 @@
 ### Properties
 * **apiVersion**: '2025-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlMigrationServiceProperties](#sqlmigrationserviceproperties): The SQL Migration Service properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [SqlMigrationServiceTags](#sqlmigrationservicetags): Resource tags.
+* **tags**: [SqlMigrationServiceTags](#sqlmigrationservicetags): Dictionary of <string>
 * **type**: 'Microsoft.DataMigration/sqlMigrationServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAuthKeys (Microsoft.DataMigration/sqlMigrationServices@2025-09-01-preview)

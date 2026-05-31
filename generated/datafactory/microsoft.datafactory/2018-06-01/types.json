@@ -55,19 +55,26 @@
         "flags": 0,
         "description": "Properties of the factory."
       },
-      "tags": {
+      "identity": {
         "type": {
           "$ref": "#/29"
         },
         "flags": 0,
-        "description": "Resource tags."
+        "description": "Managed service identity of the factory."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The resource tags."
       },
       "eTag": {
         "type": {
@@ -75,13 +82,6 @@
         },
         "flags": 2,
         "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/30"
-        },
-        "flags": 0,
-        "description": "Managed service identity of the factory."
       },
       "systemData": {
         "type": {
@@ -468,40 +468,32 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FactoryTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "FactoryIdentity",
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/33"
         },
         "flags": 1,
         "description": "The identity type."
       },
       "principalId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The principal id of the identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The client tenant id of the identity."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/35"
         },
         "flags": 0,
         "description": "List of user assigned identities for the factory."
@@ -524,13 +516,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/30"
+      },
+      {
         "$ref": "#/31"
       },
       {
         "$ref": "#/32"
-      },
-      {
-        "$ref": "#/33"
       },
       {
         "$ref": "#/2"
@@ -549,6 +541,14 @@
     "properties": {},
     "additionalProperties": {
       "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FactoryTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
     }
   },
   {

@@ -123,7 +123,7 @@
 * **helmChartPath**: string: Helm chart directory path in repository.
 * **helmValues**: string: Helm Values.yaml file location in repository.
 * **kubeManifestLocations**: string[]
-* **manifestType**: 'helm' | 'kube' | string: Determines the type of manifests within the repository.
+* **manifestType**: 'helm' | 'kube' | 'kustomize' | string: Determines the type of manifests within the repository.
 * **overrides**: [DeploymentOverrides](#deploymentoverrides): Manifest override values.
 
 ## DeploymentOverrides

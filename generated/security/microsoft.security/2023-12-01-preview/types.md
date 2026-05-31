@@ -8,10 +8,11 @@
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of the resource
-* **location**: string: Location where the resource is stored
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutomationProperties](#automationproperties): Security automation data
-* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [AutomationTags](#automationtags): Resource tags.
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityContacts@2023-12-01-preview
@@ -22,6 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityContactProperties](#securitycontactproperties): Security contact data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutomationAction
@@ -71,6 +73,11 @@
 * **eventSource**: 'Alerts' | 'Assessments' | 'AssessmentsSnapshot' | 'AttackPaths' | 'AttackPathsSnapshot' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments' | 'SubAssessmentsSnapshot' | string: A valid event source type.
 * **ruleSets**: [AutomationRuleSet](#automationruleset)[]: A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
 
+## AutomationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AutomationTriggeringRule
 ### Properties
 * **expectedValue**: string: The expected value.
@@ -105,10 +112,14 @@
 ## SecurityContactPropertiesNotificationsByRole
 ### Properties
 * **roles**: ('AccountAdmin' | 'Contributor' | 'Owner' | 'ServiceAdmin' | string)[]: Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
-* **state**: 'Off' | 'On' | string: Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
+* **state**: 'Failed' | 'Off' | 'On' | 'Passed' | 'Skipped' | 'Unsupported' | string: Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
 
-## Tags
+## SystemData
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

@@ -12519,25 +12519,25 @@
         "flags": 2,
         "description": "The properties associated to this reservation"
       },
-      "tags": {
-        "type": {
-          "$ref": "#/1036"
-        },
-        "flags": 2,
-        "description": "Resource tags."
-      },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The geo-location where the resource lives"
+        "description": "The location of the reservation."
       },
       "etag": {
         "type": {
           "$ref": "#/74"
         },
         "flags": 2
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1036"
+        },
+        "flags": 2,
+        "description": "Tags for this reservation"
       },
       "sku": {
         "type": {
@@ -14284,25 +14284,25 @@
         "flags": 0,
         "description": "The properties associated to this reservation"
       },
-      "tags": {
-        "type": {
-          "$ref": "#/1074"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "The location of the reservation."
       },
       "etag": {
         "type": {
           "$ref": "#/74"
         },
         "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1074"
+        },
+        "flags": 0,
+        "description": "Tags for this reservation"
       },
       "sku": {
         "type": {

@@ -30,10 +30,10 @@
 ## Condition
 ### Properties
 * **dimensionName**: string: Dimension name used in filtering.
-* **operator**: '!=' | '!contains' | '!in' | '!startswith' | '<' | '<=' | '==' | '>' | '>=' | '@in' | 'contains' | 'startswith' | string (Required): Operator used in the filtering condition.
-* **samplingType**: 'avg' | 'max' | 'min' | 'sum' | string: Defines the sampling type.
+* **operator**: 'contains' | 'eq' | 'gt' | 'gte' | 'in' | 'lt' | 'lte' | 'ne' | 'notcontains' | 'notin' | 'notstartswith' | 'startswith' | string (Required): Operator used in the filtering condition.
+* **samplingType**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' | string: Defines the sampling type.
 * **scalarFunction**: 'avg' | 'max' | 'min' | 'sum' | string: Scalar function applied for filtering.
-* **value**: string (Required): Value used in filtering.
+* **value**: string (Required): Value used in filtering. For most operators (eq, ne, lt, lte, gt, gte, startswith, notstartswith, contains, notcontains) this is a single value (for example "GetContosoUsers"). For the `in` and `notin` operators, multiple values must be joined by the delimiter `^^` (for example "east^^west^^north").
 
 ## ExecutionState
 ### Properties
@@ -121,6 +121,6 @@
 
 ## WindowUptimeCriteria
 ### Properties
-* **comparator**: '<' | '<=' | '>' | '>=' | string (Required): Comparison operator used for uptime evaluation.
+* **comparator**: 'gt' | 'gte' | 'lt' | 'lte' | string (Required): Comparison operator used for uptime evaluation.
 * **target**: int (Required): Threshold value used to determine uptime.
 

@@ -25,9 +25,6 @@ Create auto provisioning settings for subscription
 ```bicep
 resource exampleResource 'Microsoft.Security/autoProvisioningSettings@2017-08-01-preview' = {
   name: 'example'
-  name: 'default'
-  type: 'Microsoft.Security/autoProvisioningSettings'
-  id: '/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/autoProvisioningSettings/default'
   properties: {
     autoProvision: 'On'
   }
@@ -204,9 +201,6 @@ Create a workspace setting data for subscription
 ```bicep
 resource exampleResource 'Microsoft.Security/workspaceSettings@2017-08-01-preview' = {
   name: 'example'
-  name: 'default'
-  type: 'Microsoft.Security/workspaceSettings'
-  id: '/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/workspaceSettings/default'
   properties: {
     scope: '/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23'
     workspaceId: '/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace'

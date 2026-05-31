@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertsSuppressionRuleProperties](#alertssuppressionruleproperties): describes AlertsSuppressionRule properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/alertsSuppressionRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessmentMetadata@2019-01-01-preview
@@ -38,6 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecuritySubAssessmentProperties](#securitysubassessmentproperties) (ReadOnly): Describes properties of an sub-assessment.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/assessments/subAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/automations@2019-01-01-preview
@@ -62,6 +64,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegulatoryComplianceStandardProperties](#regulatorycompliancestandardproperties) (ReadOnly): Regulatory compliance standard data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls@2019-01-01-preview
@@ -72,6 +75,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegulatoryComplianceControlProperties](#regulatorycompliancecontrolproperties) (ReadOnly): Regulatory compliance control data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments@2019-01-01-preview
@@ -82,6 +86,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegulatoryComplianceAssessmentProperties](#regulatorycomplianceassessmentproperties) (ReadOnly): Regulatory compliance assessment data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdditionalData
@@ -192,6 +197,12 @@
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
 
+## CommonResourceDetails
+* **Discriminator**: source
+
+### Base Properties
+
+
 ## ContainerRegistryVulnerabilityPropertiesCvss
 ### Properties
 ### Additional Properties
@@ -214,7 +225,7 @@
 * **failedResources**: int (ReadOnly): The given assessment's related resources count with failed state.
 * **passedResources**: int (ReadOnly): The given assessment's related resources count with passed state.
 * **skippedResources**: int (ReadOnly): The given assessment's related resources count with skipped state.
-* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the assessment's scanned resources states
+* **state**: 'Failed' | 'Off' | 'On' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the assessment's scanned resources states
 * **unsupportedResources**: int (ReadOnly): The given assessment's related resources count with unsupported state.
 
 ## RegulatoryComplianceControlProperties
@@ -223,14 +234,14 @@
 * **failedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a failed state
 * **passedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a passed state
 * **skippedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a skipped state
-* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the control's supported assessments states
+* **state**: 'Failed' | 'Off' | 'On' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the control's supported assessments states
 
 ## RegulatoryComplianceStandardProperties
 ### Properties
 * **failedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a failed state
 * **passedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a passed state
 * **skippedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a skipped state
-* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the standard's supported controls states
+* **state**: 'Failed' | 'Off' | 'On' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the standard's supported controls states
 * **unsupportedControls**: int (ReadOnly): The number of regulatory compliance controls of the given standard which are unsupported by automated assessments
 
 ## ResourceDetails
@@ -270,7 +281,7 @@
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
+* **severity**: 'Critical' | 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
 * **threats**: ('accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string)[]
 * **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
 
@@ -296,7 +307,7 @@
 * **id**: string (ReadOnly): Vulnerability ID
 * **impact**: string (ReadOnly): Description of the impact of this sub-assessment
 * **remediation**: string (ReadOnly): Information on how to remediate this sub-assessment
-* **resourceDetails**: [ResourceDetails](#resourcedetails): Details of the resource that was assessed
+* **resourceDetails**: [CommonResourceDetails](#commonresourcedetails): Details of the resource that was assessed
 * **status**: [SubAssessmentStatus](#subassessmentstatus): Status of the sub-assessment
 * **timeGenerated**: string (ReadOnly): The date and time the sub-assessment was generated
 
@@ -310,11 +321,20 @@
 * **cause**: string (ReadOnly): Programmatic code for the cause of the assessment status
 * **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (ReadOnly): Programmatic code for the status of the assessment
 * **description**: string (ReadOnly): Human readable description of the assessment status
-* **severity**: 'High' | 'Low' | 'Medium' | string (ReadOnly): The sub-assessment severity level
+* **severity**: 'Critical' | 'High' | 'Low' | 'Medium' | string (ReadOnly): The sub-assessment severity level
 
 ## SuppressionAlertsScope
 ### Properties
 * **allOf**: [ScopeElement](#scopeelement)[] (Required): All the conditions inside need to be true in order to suppress the alert
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Tags
 ### Properties
