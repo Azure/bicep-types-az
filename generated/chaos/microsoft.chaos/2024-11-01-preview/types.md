@@ -192,7 +192,7 @@
 ## CustomerDataStorageProperties
 ### Properties
 * **blobContainerName**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9]([a-z0-9]|(-(?!-))){1,61}[a-z0-9]$"}: Name of the Azure Blob Storage container to use or create.
-* **storageAccountResourceId**: string: ARM Resource ID of the Storage account to use for Customer Data storage.
+* **storageAccountResourceId**: string: Azure Resource ID of the Storage account to use for Customer Data storage.
 
 ## ExperimentExecutionProperties
 ### Properties
@@ -228,7 +228,7 @@
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly): The ARM identifier for private endpoint.
+* **id**: string (ReadOnly): The Azure identifier for private endpoint.
 
 ## PrivateEndpointConnection
 ### Properties

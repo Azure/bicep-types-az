@@ -49,20 +49,6 @@
         "flags": 0,
         "description": "Custom service properties"
       },
-      "tags": {
-        "type": {
-          "$ref": "#/17"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The geo-location where the resource lives"
-      },
       "etag": {
         "type": {
           "$ref": "#/0"
@@ -79,10 +65,23 @@
       },
       "sku": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "Service SKU"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
       },
       "systemData": {
         "type": {
@@ -224,14 +223,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DataMigrationServiceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "ServiceSku",
     "properties": {
       "name": {
@@ -264,7 +255,7 @@
       },
       "capacity": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The capacity of the SKU, if it supports scaling"
@@ -273,6 +264,14 @@
   },
   {
     "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
   },
   {
     "$type": "ObjectType",
@@ -604,19 +603,18 @@
         "flags": 0,
         "description": "The SQL Migration Service properties."
       },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
       "tags": {
         "type": {
           "$ref": "#/49"
         },
         "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The geo-location where the resource lives"
+        "description": "Dictionary of <string>"
       },
       "systemData": {
         "type": {
@@ -711,26 +709,25 @@
         "flags": 0,
         "description": "Project properties"
       },
-      "tags": {
-        "type": {
-          "$ref": "#/119"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The geo-location where the resource lives"
-      },
       "etag": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
         "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
       },
       "systemData": {
         "type": {
@@ -1056,7 +1053,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "port for server"
@@ -1151,7 +1148,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "Port for Server"
@@ -1260,7 +1257,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "port for server"
@@ -1362,7 +1359,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "Port for Server"
@@ -1478,7 +1475,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Port for Server"
@@ -1765,7 +1762,7 @@
       },
       "size": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "File size."
@@ -2272,7 +2269,7 @@
       },
       "hResult": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Coded numerical value that is assigned to a specific exception"
@@ -2587,7 +2584,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "port for server"
@@ -2726,21 +2723,21 @@
       },
       "averageDocumentSize": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The average document size, or -1 if the average size is unknown"
       },
       "dataSize": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The estimated total data size, in bytes, or -1 if the size is unknown."
       },
       "documentCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The estimated total number of documents, or -1 if the document count is unknown"
@@ -2816,21 +2813,21 @@
       },
       "averageDocumentSize": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The average document size, or -1 if the average size is unknown"
       },
       "dataSize": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The estimated total data size, in bytes, or -1 if the size is unknown."
       },
       "documentCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The estimated total number of documents, or -1 if the document count is unknown"
@@ -3058,7 +3055,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "Port for Server"
@@ -3294,7 +3291,7 @@
       },
       "serverDatabaseCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of databases in the server"
@@ -3390,7 +3387,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "port for server"
@@ -3598,7 +3595,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "Port for Server"
@@ -3883,7 +3880,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Port for Server"
@@ -4204,7 +4201,7 @@
       },
       "sizeMB": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Size of the file in megabytes"
@@ -4287,7 +4284,7 @@
       },
       "sizeMB": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Size of the file in megabytes"
@@ -6207,7 +6204,7 @@
     "properties": {
       "boostRUs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The RU limit on a CosmosDB target that collections will be temporarily increased to (if lower) during the initial copy of a migration, from 10,000 to 1,000,000, or 0 to use the default boost (which is generally the maximum), or null to not boost the RUs. This setting has no effect on non-CosmosDB targets."
@@ -6262,7 +6259,7 @@
       },
       "targetRUs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The RUs that should be configured on a CosmosDB target, or null to use the default, or 0 if throughput should not be provisioned for the database. This has no effect on non-CosmosDB targets."
@@ -6289,7 +6286,7 @@
       },
       "targetRUs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The RUs that should be configured on a CosmosDB target, or null to use the default. This has no effect on non-CosmosDB targets."
@@ -6373,21 +6370,21 @@
     "properties": {
       "minFreeCpu": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The percentage of CPU time that the migrator will try to avoid using, from 0 to 100"
       },
       "minFreeMemoryMb": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The number of megabytes of RAM that the migrator will try to avoid using"
       },
       "maxParallelism": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The maximum number of work items (e.g. collection copies) that will be processed in parallel"
@@ -6401,14 +6398,14 @@
     "baseProperties": {
       "bytesCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of document bytes copied during the Copying stage"
       },
       "documentsCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of documents copied during the Copying stage"
@@ -6429,14 +6426,14 @@
       },
       "eventsPending": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events awaiting replay"
       },
       "eventsReplayed": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events replayed so far"
@@ -6477,14 +6474,14 @@
       },
       "totalBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown"
       },
       "totalDocuments": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown"
@@ -6515,7 +6512,7 @@
       },
       "count": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "The number of times the error or warning has occurred"
@@ -6701,14 +6698,14 @@
     "properties": {
       "bytesCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of document bytes copied during the Copying stage"
       },
       "documentsCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of documents copied during the Copying stage"
@@ -6729,14 +6726,14 @@
       },
       "eventsPending": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events awaiting replay"
       },
       "eventsReplayed": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events replayed so far"
@@ -6784,14 +6781,14 @@
       },
       "totalBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown"
       },
       "totalDocuments": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown"
@@ -6965,14 +6962,14 @@
       },
       "bytesCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of document bytes copied during the Copying stage"
       },
       "documentsCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of documents copied during the Copying stage"
@@ -6993,14 +6990,14 @@
       },
       "eventsPending": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events awaiting replay"
       },
       "eventsReplayed": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events replayed so far"
@@ -7048,14 +7045,14 @@
       },
       "totalBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown"
       },
       "totalDocuments": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown"
@@ -7442,21 +7439,21 @@
       },
       "numberOfObjects": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of objects"
       },
       "numberOfObjectsCompleted": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of successfully completed objects"
       },
       "errorCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of database/object errors."
@@ -7666,7 +7663,7 @@
       },
       "durationInSeconds": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Duration of task execution in seconds."
@@ -7913,14 +7910,14 @@
       },
       "itemsCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of items"
       },
       "itemsCompletedCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of successfully completed items"
@@ -8295,63 +8292,63 @@
       },
       "incomingChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of incoming changes"
       },
       "appliedChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied changes"
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc inserts"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc deletes"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc updates"
       },
       "fullLoadCompletedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables completed in full load"
       },
       "fullLoadLoadingTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables loading in full load"
       },
       "fullLoadQueuedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables queued in full load"
       },
       "fullLoadErroredTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables errored in full load"
@@ -8365,7 +8362,7 @@
       },
       "latency": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "CDC apply latency"
@@ -8662,7 +8659,7 @@
       },
       "fullLoadTotalRows": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of rows applied in full load"
@@ -8676,14 +8673,14 @@
       },
       "totalChangesApplied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Total number of applied changes"
       },
       "dataErrorsCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of data errors occurred"
@@ -9024,63 +9021,63 @@
       },
       "incomingChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of incoming changes"
       },
       "appliedChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied changes"
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc inserts"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc deletes"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc updates"
       },
       "fullLoadCompletedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables completed in full load"
       },
       "fullLoadLoadingTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables loading in full load"
       },
       "fullLoadQueuedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables queued in full load"
       },
       "fullLoadErroredTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables errored in full load"
@@ -9094,7 +9091,7 @@
       },
       "latency": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "CDC apply latency"
@@ -9349,21 +9346,21 @@
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied inserts"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied updates"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied deletes"
@@ -9391,7 +9388,7 @@
       },
       "fullLoadTotalRows": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of rows applied in full load"
@@ -9405,14 +9402,14 @@
       },
       "totalChangesApplied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Total number of applied changes"
       },
       "dataErrorsCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of data errors occurred"
@@ -9795,63 +9792,63 @@
       },
       "incomingChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of incoming changes"
       },
       "appliedChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied changes"
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc inserts"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc deletes"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc updates"
       },
       "fullLoadCompletedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables completed in full load"
       },
       "fullLoadLoadingTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables loading in full load"
       },
       "fullLoadQueuedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables queued in full load"
       },
       "fullLoadErroredTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables errored in full load"
@@ -9865,7 +9862,7 @@
       },
       "latency": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "CDC apply latency"
@@ -10123,7 +10120,7 @@
       },
       "databaseCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Number of databases to include"
@@ -10353,21 +10350,21 @@
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied inserts"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied updates"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied deletes"
@@ -10395,7 +10392,7 @@
       },
       "fullLoadTotalRows": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of rows applied in full load"
@@ -10409,14 +10406,14 @@
       },
       "totalChangesApplied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Total number of applied changes"
       },
       "dataErrorsCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of data errors occurred"
@@ -10791,63 +10788,63 @@
       },
       "incomingChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of incoming changes"
       },
       "appliedChanges": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied changes"
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc inserts"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc deletes"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of cdc updates"
       },
       "fullLoadCompletedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables completed in full load"
       },
       "fullLoadLoadingTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables loading in full load"
       },
       "fullLoadQueuedTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables queued in full load"
       },
       "fullLoadErroredTables": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of tables errored in full load"
@@ -10861,7 +10858,7 @@
       },
       "latency": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "CDC apply latency"
@@ -11085,7 +11082,7 @@
       },
       "databaseCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Count of databases"
@@ -11123,21 +11120,21 @@
       },
       "cdcInsertCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied inserts"
       },
       "cdcUpdateCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied updates"
       },
       "cdcDeleteCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of applied deletes"
@@ -11165,7 +11162,7 @@
       },
       "fullLoadTotalRows": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of rows applied in full load"
@@ -11179,14 +11176,14 @@
       },
       "totalChangesApplied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Total number of applied changes"
       },
       "dataErrorsCounter": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of data errors occurred"
@@ -11682,7 +11679,7 @@
       },
       "sizeMB": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Size of the database in megabytes"
@@ -12418,7 +12415,7 @@
     "properties": {
       "numberOfParallelDatabaseMigrations": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Number of database migrations to start in parallel"
@@ -12812,7 +12809,7 @@
       },
       "familySequenceNumber": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Sequence number of the backup file in the backup set"
@@ -12935,7 +12932,7 @@
     "properties": {
       "databaseCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Count of databases"
@@ -13005,7 +13002,7 @@
       },
       "databaseErrorCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of database level errors"
@@ -13337,21 +13334,21 @@
       },
       "numberOfObjects": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of objects"
       },
       "numberOfObjectsCompleted": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of successfully completed objects"
       },
       "errorCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of database/object errors."
@@ -13825,7 +13822,7 @@
     "name": "SchemaComparisonValidationResultSourceDatabaseObjectCount",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/19"
+      "$ref": "#/18"
     }
   },
   {
@@ -13833,7 +13830,7 @@
     "name": "SchemaComparisonValidationResultTargetDatabaseObjectCount",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/19"
+      "$ref": "#/18"
     }
   },
   {
@@ -13869,7 +13866,7 @@
       },
       "statementsInBatch": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Total no. of statements in the batch"
@@ -13896,21 +13893,21 @@
     "properties": {
       "executionCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "No. of query executions"
       },
       "cpuTimeMs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "CPU Time in millisecond(s) for the query execution"
       },
       "elapsedTimeMs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Time taken in millisecond(s) for executing the query"
@@ -13951,14 +13948,14 @@
       },
       "waitTimeMs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Total wait time in millisecond(s)"
       },
       "waitCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Total no. of waits"
@@ -14067,7 +14064,7 @@
       },
       "durationInSeconds": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Duration of task execution in seconds."
@@ -14629,14 +14626,14 @@
       },
       "itemsCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of items"
       },
       "itemsCompletedCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of successfully completed items"
@@ -15554,14 +15551,14 @@
       },
       "numberOfSuccessfulOperations": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of successful operations for this database"
       },
       "numberOfFailedOperations": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of failed operations for this database"
@@ -16224,14 +16221,14 @@
       },
       "bytesCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of document bytes copied during the Copying stage"
       },
       "documentsCopied": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of documents copied during the Copying stage"
@@ -16252,14 +16249,14 @@
       },
       "eventsPending": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events awaiting replay"
       },
       "eventsReplayed": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The number of oplog events replayed so far"
@@ -16307,14 +16304,14 @@
       },
       "totalBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown"
       },
       "totalDocuments": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 1,
         "description": "The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown"
@@ -16752,7 +16749,7 @@
       },
       "position": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Position of current database backup in the file."
@@ -16773,7 +16770,7 @@
       },
       "familyCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Number of files in the backup set."
@@ -17333,7 +17330,7 @@
       },
       "port": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Port of mongo connection."
@@ -17433,21 +17430,21 @@
       },
       "sourceDocumentCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Source Document Count"
       },
       "processedDocumentCount": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Processed Document Count"
       },
       "durationInSeconds": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Migration duration"
@@ -17687,49 +17684,49 @@
       },
       "availableMemoryInMB": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Available memory (MB) on the integration runtime node."
       },
       "cpuUtilization": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "CPU percentage on the integration runtime node."
       },
       "concurrentJobsLimit": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Maximum concurrent jobs on the integration runtime node."
       },
       "concurrentJobsRunning": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "The number of jobs currently running on the integration runtime node."
       },
       "maxConcurrentJobs": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "The maximum concurrent jobs in this integration runtime."
       },
       "sentBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Sent bytes on the integration runtime node."
       },
       "receivedBytes": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/18"
         },
         "flags": 2,
         "description": "Received bytes on the integration runtime node."

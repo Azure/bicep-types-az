@@ -97,7 +97,7 @@
 ## EnvironmentInfo
 ### Properties
 * **environmentId**: string: Id of the environment created
-* **ingestionKey**: string: Ingestion key of the environment
+* **ingestionKey**: string {sensitive} (ReadOnly): Ingestion key of the environment
 * **landingURL**: string: Landing URL for Dynatrace environment
 * **logsIngestionEndpoint**: string: Ingestion endpoint used for sending logs
 

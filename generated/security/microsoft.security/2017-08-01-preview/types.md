@@ -18,6 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties): Auto provisioning setting data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/compliances@2017-08-01-preview
@@ -28,6 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ComplianceProperties](#complianceproperties) (ReadOnly): Compliance data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/compliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
@@ -48,6 +50,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'custom' | 'effective' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [InformationProtectionPolicyProperties](#informationprotectionpolicyproperties): Information protection policy data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2017-08-01-preview
@@ -129,6 +132,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceSettingProperties](#workspacesettingproperties): Workspace setting data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/workspaceSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdvancedThreatProtectionProperties
@@ -339,6 +343,15 @@
 * **enabled**: bool: Indicates whether the label is enabled or not.
 * **order**: int: The order of the sensitivity label.
 * **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TagsResourceTags
 ### Properties

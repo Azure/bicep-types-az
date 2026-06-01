@@ -101,7 +101,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       storageSizeGB: 512
       tier: 'P20'
     }
-    version: '16'
+    version: '18'
   }
   sku: {
     name: 'Standard_D4ds_v5'
@@ -144,7 +144,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       storageSizeGB: 512
       tier: 'P20'
     }
-    version: '16'
+    version: '18'
   }
   sku: {
     name: 'Standard_D4ds_v5'
@@ -179,7 +179,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       storageSizeGB: 512
       tier: 'P20'
     }
-    version: '16'
+    version: '18'
   }
   sku: {
     name: 'Standard_D4ds_v5'

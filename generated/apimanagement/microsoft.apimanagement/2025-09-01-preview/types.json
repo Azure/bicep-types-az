@@ -11121,20 +11121,33 @@
         "flags": 0,
         "description": "A collection of information about the state of the connection between service consumer and provider."
       },
-      "privateEndpoint": {
+      "groupIds": {
         "type": {
           "$ref": "#/772"
         },
         "flags": 2,
-        "description": "The resource of private end point."
+        "description": "The group ids for the private endpoint resource."
+      },
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/773"
+        },
+        "flags": 2,
+        "description": "The private endpoint resource."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/777"
+          "$ref": "#/778"
         },
         "flags": 2,
         "description": "The provisioning state of the private endpoint connection resource."
       }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
     }
   },
   {
@@ -11146,7 +11159,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The ARM identifier for Private Endpoint"
+        "description": "The ARM identifier for private endpoint."
       }
     }
   },
@@ -11170,9 +11183,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/773"
-      },
-      {
         "$ref": "#/774"
       },
       {
@@ -11180,6 +11190,9 @@
       },
       {
         "$ref": "#/776"
+      },
+      {
+        "$ref": "#/777"
       },
       {
         "$ref": "#/2"
@@ -11223,21 +11236,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/779"
+          "$ref": "#/780"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/780"
+          "$ref": "#/781"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/783"
         },
         "flags": 0,
         "description": "Product entity contract properties."
@@ -11299,21 +11312,21 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/786"
+          "$ref": "#/787"
         },
         "flags": 0,
         "description": "Type of supported authentication for the product. The application configuration is required for application-token authentication type. The subscription-key authentication type is used by default. If the property is omitted, the subscription-key authentication type is used."
       },
       "application": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/788"
         },
         "flags": 0,
         "description": "Specifies identity provider settings needed to authorize applications API calls."
       },
       "state": {
         "type": {
-          "$ref": "#/791"
+          "$ref": "#/792"
         },
         "flags": 0,
         "description": "whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished."
@@ -11332,10 +11345,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/783"
+        "$ref": "#/784"
       },
       {
-        "$ref": "#/784"
+        "$ref": "#/785"
       },
       {
         "$ref": "#/2"
@@ -11345,7 +11358,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/785"
+      "$ref": "#/786"
     }
   },
   {
@@ -11354,7 +11367,7 @@
     "properties": {
       "entra": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/789"
         },
         "flags": 0,
         "description": "Specifies Microsoft Entra settings needed to authorize product API calls using client application with Microsoft Entra OAuth token."
@@ -11393,10 +11406,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/789"
+        "$ref": "#/790"
       },
       {
-        "$ref": "#/790"
+        "$ref": "#/791"
       }
     ]
   },
@@ -11404,7 +11417,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products@2025-09-01-preview",
     "body": {
-      "$ref": "#/781"
+      "$ref": "#/782"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11437,21 +11450,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/794"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/795"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/797"
         },
         "flags": 0,
         "description": "Product-API link entity contract properties."
@@ -11482,7 +11495,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/apiLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/795"
+      "$ref": "#/796"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11515,14 +11528,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/798"
+          "$ref": "#/799"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/799"
+          "$ref": "#/800"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11533,7 +11546,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/apis@2025-09-01-preview",
     "body": {
-      "$ref": "#/800"
+      "$ref": "#/801"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -11566,21 +11579,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/802"
+          "$ref": "#/803"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/803"
+          "$ref": "#/804"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/806"
         },
         "flags": 0,
         "description": "Product-group link entity contract properties."
@@ -11611,7 +11624,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/groupLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/804"
+      "$ref": "#/805"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11644,14 +11657,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/807"
+          "$ref": "#/808"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/808"
+          "$ref": "#/809"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11662,7 +11675,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/groups@2025-09-01-preview",
     "body": {
-      "$ref": "#/809"
+      "$ref": "#/810"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -11675,7 +11688,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/811"
+        "$ref": "#/812"
       },
       {
         "$ref": "#/2"
@@ -11703,21 +11716,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/813"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/813"
+          "$ref": "#/814"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/814"
+          "$ref": "#/815"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11742,7 +11755,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/policies@2025-09-01-preview",
     "body": {
-      "$ref": "#/815"
+      "$ref": "#/816"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11772,21 +11785,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/818"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/818"
+          "$ref": "#/819"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/820"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11811,7 +11824,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/products/wikis@2025-09-01-preview",
     "body": {
-      "$ref": "#/820"
+      "$ref": "#/821"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11844,21 +11857,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/822"
+          "$ref": "#/823"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/823"
+          "$ref": "#/824"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/825"
+          "$ref": "#/826"
         },
         "flags": 0,
         "description": "Properties of the Global Schema."
@@ -11878,7 +11891,7 @@
     "properties": {
       "schemaType": {
         "type": {
-          "$ref": "#/828"
+          "$ref": "#/829"
         },
         "flags": 1,
         "description": "Schema Type. Immutable."
@@ -11925,10 +11938,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/826"
+        "$ref": "#/827"
       },
       {
-        "$ref": "#/827"
+        "$ref": "#/828"
       },
       {
         "$ref": "#/2"
@@ -11939,7 +11952,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/schemas@2025-09-01-preview",
     "body": {
-      "$ref": "#/824"
+      "$ref": "#/825"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11972,21 +11985,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/830"
+          "$ref": "#/831"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/831"
+          "$ref": "#/832"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/834"
         },
         "flags": 0,
         "description": "Subscription contract properties."
@@ -12041,7 +12054,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/840"
+          "$ref": "#/841"
         },
         "flags": 0,
         "description": "Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated."
@@ -12125,9 +12138,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/834"
-      },
-      {
         "$ref": "#/835"
       },
       {
@@ -12141,6 +12151,9 @@
       },
       {
         "$ref": "#/839"
+      },
+      {
+        "$ref": "#/840"
       }
     ]
   },
@@ -12148,7 +12161,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/subscriptions@2025-09-01-preview",
     "body": {
-      "$ref": "#/832"
+      "$ref": "#/833"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12181,21 +12194,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/842"
+          "$ref": "#/843"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/843"
+          "$ref": "#/844"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/846"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -12226,7 +12239,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/tags/apiLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/844"
+      "$ref": "#/845"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12259,21 +12272,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/847"
+          "$ref": "#/848"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/848"
+          "$ref": "#/849"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/850"
+          "$ref": "#/851"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -12304,7 +12317,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/tags/operationLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/849"
+      "$ref": "#/850"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12337,21 +12350,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/852"
+          "$ref": "#/853"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/853"
+          "$ref": "#/854"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/856"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -12382,7 +12395,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/tags/productLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/854"
+      "$ref": "#/855"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12447,9 +12460,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/857"
-      },
-      {
         "$ref": "#/858"
       },
       {
@@ -12489,6 +12499,9 @@
         "$ref": "#/870"
       },
       {
+        "$ref": "#/871"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -12514,28 +12527,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/871"
+          "$ref": "#/872"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/872"
+          "$ref": "#/873"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/873"
+          "$ref": "#/874"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/875"
+          "$ref": "#/876"
         },
         "flags": 0,
         "description": "Email Template Update contract properties."
@@ -12583,7 +12596,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/878"
+          "$ref": "#/879"
         },
         "flags": 0,
         "description": "Email Template Parameter values."
@@ -12610,7 +12623,7 @@
       },
       "title": {
         "type": {
-          "$ref": "#/877"
+          "$ref": "#/878"
         },
         "flags": 0,
         "description": "Template parameter title."
@@ -12632,14 +12645,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/876"
+      "$ref": "#/877"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/templates@2025-09-01-preview",
     "body": {
-      "$ref": "#/874"
+      "$ref": "#/875"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12656,10 +12669,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/880"
+        "$ref": "#/881"
       },
       {
-        "$ref": "#/881"
+        "$ref": "#/882"
       },
       {
         "$ref": "#/2"
@@ -12687,28 +12700,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/882"
+          "$ref": "#/883"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/883"
+          "$ref": "#/884"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/884"
+          "$ref": "#/885"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/886"
+          "$ref": "#/887"
         },
         "flags": 0,
         "description": "Tenant access information update parameter properties."
@@ -12767,7 +12780,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/tenant@2025-09-01-preview",
     "body": {
-      "$ref": "#/885"
+      "$ref": "#/886"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12800,21 +12813,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/888"
+          "$ref": "#/889"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/889"
+          "$ref": "#/890"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/892"
         },
         "flags": 0,
         "description": "User entity create contract properties."
@@ -12834,7 +12847,7 @@
     "properties": {
       "email": {
         "type": {
-          "$ref": "#/892"
+          "$ref": "#/893"
         },
         "flags": 1,
         "description": "Email address. Must not be empty and must be unique within the service instance."
@@ -12862,21 +12875,21 @@
       },
       "appType": {
         "type": {
-          "$ref": "#/895"
+          "$ref": "#/896"
         },
         "flags": 4,
         "description": "Determines the type of application which send the create user request. Default is legacy portal."
       },
       "confirmation": {
         "type": {
-          "$ref": "#/898"
+          "$ref": "#/899"
         },
         "flags": 4,
         "description": "Determines the type of confirmation e-mail that will be sent to the newly created user."
       },
       "state": {
         "type": {
-          "$ref": "#/903"
+          "$ref": "#/904"
         },
         "flags": 0,
         "description": "Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active."
@@ -12890,7 +12903,7 @@
       },
       "identities": {
         "type": {
-          "$ref": "#/905"
+          "$ref": "#/906"
         },
         "flags": 0,
         "description": "Collection of user identities."
@@ -12904,7 +12917,7 @@
       },
       "groups": {
         "type": {
-          "$ref": "#/911"
+          "$ref": "#/912"
         },
         "flags": 2,
         "description": "Collection of groups user is part of."
@@ -12928,10 +12941,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/893"
+        "$ref": "#/894"
       },
       {
-        "$ref": "#/894"
+        "$ref": "#/895"
       },
       {
         "$ref": "#/2"
@@ -12950,10 +12963,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/896"
+        "$ref": "#/897"
       },
       {
-        "$ref": "#/897"
+        "$ref": "#/898"
       },
       {
         "$ref": "#/2"
@@ -12980,9 +12993,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/899"
-      },
-      {
         "$ref": "#/900"
       },
       {
@@ -12990,6 +13000,9 @@
       },
       {
         "$ref": "#/902"
+      },
+      {
+        "$ref": "#/903"
       },
       {
         "$ref": "#/2"
@@ -13019,7 +13032,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/904"
+      "$ref": "#/905"
     }
   },
   {
@@ -13049,7 +13062,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/910"
+          "$ref": "#/911"
         },
         "flags": 0,
         "description": "Group type."
@@ -13079,27 +13092,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/907"
-      },
-      {
         "$ref": "#/908"
       },
       {
         "$ref": "#/909"
+      },
+      {
+        "$ref": "#/910"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/906"
+      "$ref": "#/907"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/users@2025-09-01-preview",
     "body": {
-      "$ref": "#/890"
+      "$ref": "#/891"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13132,21 +13145,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/913"
+          "$ref": "#/914"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/914"
+          "$ref": "#/915"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/916"
+          "$ref": "#/917"
         },
         "flags": 0,
         "description": "Workspace entity contract properties."
@@ -13184,7 +13197,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces@2025-09-01-preview",
     "body": {
-      "$ref": "#/915"
+      "$ref": "#/916"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13217,14 +13230,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/918"
+          "$ref": "#/919"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/919"
+          "$ref": "#/920"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13249,7 +13262,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apiVersionSets@2025-09-01-preview",
     "body": {
-      "$ref": "#/920"
+      "$ref": "#/921"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13282,14 +13295,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/922"
+          "$ref": "#/923"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/923"
+          "$ref": "#/924"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13314,7 +13327,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis@2025-09-01-preview",
     "body": {
-      "$ref": "#/924"
+      "$ref": "#/925"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13347,14 +13360,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/926"
+          "$ref": "#/927"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/927"
+          "$ref": "#/928"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13379,7 +13392,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/diagnostics@2025-09-01-preview",
     "body": {
-      "$ref": "#/928"
+      "$ref": "#/929"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13412,14 +13425,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/930"
+          "$ref": "#/931"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/931"
+          "$ref": "#/932"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13444,7 +13457,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/operations@2025-09-01-preview",
     "body": {
-      "$ref": "#/932"
+      "$ref": "#/933"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13457,7 +13470,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/934"
+        "$ref": "#/935"
       },
       {
         "$ref": "#/2"
@@ -13485,21 +13498,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/935"
+          "$ref": "#/936"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/936"
+          "$ref": "#/937"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/937"
+          "$ref": "#/938"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13524,7 +13537,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/operations/policies@2025-09-01-preview",
     "body": {
-      "$ref": "#/938"
+      "$ref": "#/939"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13537,7 +13550,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/940"
+        "$ref": "#/941"
       },
       {
         "$ref": "#/2"
@@ -13565,21 +13578,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/941"
+          "$ref": "#/942"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/942"
+          "$ref": "#/943"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/943"
+          "$ref": "#/944"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13604,7 +13617,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/policies@2025-09-01-preview",
     "body": {
-      "$ref": "#/944"
+      "$ref": "#/945"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13637,14 +13650,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/946"
+          "$ref": "#/947"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/947"
+          "$ref": "#/948"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13669,7 +13682,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/releases@2025-09-01-preview",
     "body": {
-      "$ref": "#/948"
+      "$ref": "#/949"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13702,14 +13715,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/950"
+          "$ref": "#/951"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/951"
+          "$ref": "#/952"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13734,7 +13747,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/apis/schemas@2025-09-01-preview",
     "body": {
-      "$ref": "#/952"
+      "$ref": "#/953"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13767,14 +13780,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/954"
+          "$ref": "#/955"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/955"
+          "$ref": "#/956"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13799,7 +13812,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/backends@2025-09-01-preview",
     "body": {
-      "$ref": "#/956"
+      "$ref": "#/957"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13832,14 +13845,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/958"
+          "$ref": "#/959"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/959"
+          "$ref": "#/960"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13864,7 +13877,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/certificates@2025-09-01-preview",
     "body": {
-      "$ref": "#/960"
+      "$ref": "#/961"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13897,14 +13910,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/962"
+          "$ref": "#/963"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/963"
+          "$ref": "#/964"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13929,7 +13942,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/diagnostics@2025-09-01-preview",
     "body": {
-      "$ref": "#/964"
+      "$ref": "#/965"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13962,14 +13975,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/966"
+          "$ref": "#/967"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/967"
+          "$ref": "#/968"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13994,7 +14007,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/groups@2025-09-01-preview",
     "body": {
-      "$ref": "#/968"
+      "$ref": "#/969"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14027,14 +14040,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/970"
+          "$ref": "#/971"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/971"
+          "$ref": "#/972"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14045,7 +14058,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/groups/users@2025-09-01-preview",
     "body": {
-      "$ref": "#/972"
+      "$ref": "#/973"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -14078,14 +14091,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/974"
+          "$ref": "#/975"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/975"
+          "$ref": "#/976"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14110,7 +14123,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/loggers@2025-09-01-preview",
     "body": {
-      "$ref": "#/976"
+      "$ref": "#/977"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14143,14 +14156,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/978"
+          "$ref": "#/979"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/979"
+          "$ref": "#/980"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14175,7 +14188,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/namedValues@2025-09-01-preview",
     "body": {
-      "$ref": "#/980"
+      "$ref": "#/981"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14212,9 +14225,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/982"
-      },
-      {
         "$ref": "#/983"
       },
       {
@@ -14231,6 +14241,9 @@
       },
       {
         "$ref": "#/988"
+      },
+      {
+        "$ref": "#/989"
       },
       {
         "$ref": "#/2"
@@ -14258,21 +14271,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/989"
+          "$ref": "#/990"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/990"
+          "$ref": "#/991"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/991"
+          "$ref": "#/992"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14297,7 +14310,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/notifications@2025-09-01-preview",
     "body": {
-      "$ref": "#/992"
+      "$ref": "#/993"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14330,14 +14343,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/994"
+          "$ref": "#/995"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/995"
+          "$ref": "#/996"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14348,7 +14361,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails@2025-09-01-preview",
     "body": {
-      "$ref": "#/996"
+      "$ref": "#/997"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -14381,14 +14394,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/998"
+          "$ref": "#/999"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/999"
+          "$ref": "#/1000"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14399,7 +14412,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers@2025-09-01-preview",
     "body": {
-      "$ref": "#/1000"
+      "$ref": "#/1001"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -14412,7 +14425,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1002"
+        "$ref": "#/1003"
       },
       {
         "$ref": "#/2"
@@ -14440,21 +14453,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1003"
+          "$ref": "#/1004"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1004"
+          "$ref": "#/1005"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1005"
+          "$ref": "#/1006"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14479,7 +14492,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/policies@2025-09-01-preview",
     "body": {
-      "$ref": "#/1006"
+      "$ref": "#/1007"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14512,14 +14525,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1008"
+          "$ref": "#/1009"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1009"
+          "$ref": "#/1010"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14544,7 +14557,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/policyFragments@2025-09-01-preview",
     "body": {
-      "$ref": "#/1010"
+      "$ref": "#/1011"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14577,21 +14590,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1012"
+          "$ref": "#/1013"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1013"
+          "$ref": "#/1014"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/783"
         },
         "flags": 0,
         "description": "Product entity contract properties."
@@ -14609,7 +14622,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/products@2025-09-01-preview",
     "body": {
-      "$ref": "#/1014"
+      "$ref": "#/1015"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14642,21 +14655,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1016"
+          "$ref": "#/1017"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1017"
+          "$ref": "#/1018"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/797"
         },
         "flags": 0,
         "description": "Product-API link entity contract properties."
@@ -14674,7 +14687,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/products/apiLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1018"
+      "$ref": "#/1019"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14707,21 +14720,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1020"
+          "$ref": "#/1021"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1022"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/806"
         },
         "flags": 0,
         "description": "Product-group link entity contract properties."
@@ -14739,7 +14752,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/products/groupLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1022"
+      "$ref": "#/1023"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14752,7 +14765,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1024"
+        "$ref": "#/1025"
       },
       {
         "$ref": "#/2"
@@ -14780,21 +14793,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1025"
+          "$ref": "#/1026"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1026"
+          "$ref": "#/1027"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1027"
+          "$ref": "#/1028"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14819,7 +14832,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/products/policies@2025-09-01-preview",
     "body": {
-      "$ref": "#/1028"
+      "$ref": "#/1029"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14852,21 +14865,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1030"
+          "$ref": "#/1031"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1031"
+          "$ref": "#/1032"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/825"
+          "$ref": "#/826"
         },
         "flags": 0,
         "description": "Properties of the Global Schema."
@@ -14884,7 +14897,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/schemas@2025-09-01-preview",
     "body": {
-      "$ref": "#/1032"
+      "$ref": "#/1033"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14917,21 +14930,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1034"
+          "$ref": "#/1035"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1035"
+          "$ref": "#/1036"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/834"
         },
         "flags": 0,
         "description": "Subscription contract properties."
@@ -14949,7 +14962,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/subscriptions@2025-09-01-preview",
     "body": {
-      "$ref": "#/1036"
+      "$ref": "#/1037"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14982,14 +14995,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1038"
+          "$ref": "#/1039"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1039"
+          "$ref": "#/1040"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15014,7 +15027,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/tags@2025-09-01-preview",
     "body": {
-      "$ref": "#/1040"
+      "$ref": "#/1041"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15047,21 +15060,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1042"
+          "$ref": "#/1043"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1043"
+          "$ref": "#/1044"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/846"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -15079,7 +15092,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/tags/apiLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1044"
+      "$ref": "#/1045"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15112,21 +15125,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1046"
+          "$ref": "#/1047"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1047"
+          "$ref": "#/1048"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/850"
+          "$ref": "#/851"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -15144,7 +15157,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/tags/operationLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1048"
+      "$ref": "#/1049"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15177,21 +15190,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1050"
+          "$ref": "#/1051"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1051"
+          "$ref": "#/1052"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/856"
         },
         "flags": 0,
         "description": "Tag-API link entity contract properties."
@@ -15209,7 +15222,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaces/tags/productLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1052"
+      "$ref": "#/1053"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15242,21 +15255,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1054"
+          "$ref": "#/1055"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1055"
+          "$ref": "#/1056"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1057"
+          "$ref": "#/1058"
         },
         "flags": 2,
         "description": "Deleted API Management Service details."
@@ -15308,7 +15321,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/locations/deletedservices@2025-09-01-preview",
     "body": {
-      "$ref": "#/1056"
+      "$ref": "#/1057"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -15341,14 +15354,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1059"
+          "$ref": "#/1060"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1060"
+          "$ref": "#/1061"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15373,7 +15386,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/issues@2025-09-01-preview",
     "body": {
-      "$ref": "#/1061"
+      "$ref": "#/1062"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15406,21 +15419,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1063"
+          "$ref": "#/1064"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1064"
+          "$ref": "#/1065"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1066"
+          "$ref": "#/1067"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -15447,17 +15460,17 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/1067"
+          "$ref": "#/1068"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/1068"
+          "$ref": "#/1069"
         },
         "flags": 0,
-        "description": "The private link resource Private link DNS zone name."
+        "description": "The private link resource private link DNS zone name."
       }
     }
   },
@@ -15477,7 +15490,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/privateLinkResources@2025-09-01-preview",
     "body": {
-      "$ref": "#/1065"
+      "$ref": "#/1066"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15490,7 +15503,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1070"
+        "$ref": "#/1071"
       },
       {
         "$ref": "#/2"
@@ -15518,28 +15531,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1071"
+          "$ref": "#/1072"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1073"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1073"
+          "$ref": "#/1074"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1075"
+          "$ref": "#/1076"
         },
         "flags": 2,
         "description": "TenantSettings entity contract properties."
@@ -15559,7 +15572,7 @@
     "properties": {
       "settings": {
         "type": {
-          "$ref": "#/1076"
+          "$ref": "#/1077"
         },
         "flags": 0,
         "description": "Tenant settings"
@@ -15578,7 +15591,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/settings@2025-09-01-preview",
     "body": {
-      "$ref": "#/1074"
+      "$ref": "#/1075"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15611,21 +15624,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1078"
+          "$ref": "#/1079"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1079"
+          "$ref": "#/1080"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1081"
+          "$ref": "#/1082"
         },
         "flags": 2,
         "description": "Subscription contract properties."
@@ -15666,7 +15679,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1088"
+          "$ref": "#/1089"
         },
         "flags": 1,
         "description": "Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated."
@@ -15708,14 +15721,14 @@
       },
       "primaryKey": {
         "type": {
-          "$ref": "#/1089"
+          "$ref": "#/1090"
         },
         "flags": 0,
         "description": "Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/1089"
+          "$ref": "#/1090"
         },
         "flags": 0,
         "description": "Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value."
@@ -15764,9 +15777,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1082"
-      },
-      {
         "$ref": "#/1083"
       },
       {
@@ -15780,6 +15790,9 @@
       },
       {
         "$ref": "#/1087"
+      },
+      {
+        "$ref": "#/1088"
       }
     ]
   },
@@ -15793,7 +15806,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/users/subscriptions@2025-09-01-preview",
     "body": {
-      "$ref": "#/1080"
+      "$ref": "#/1081"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15826,21 +15839,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1091"
+          "$ref": "#/1092"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1092"
+          "$ref": "#/1093"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1094"
+          "$ref": "#/1095"
         },
         "flags": 2,
         "description": "Properties of the API Management WorkspaceLinks."
@@ -15874,7 +15887,7 @@
       },
       "gateways": {
         "type": {
-          "$ref": "#/1096"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "The array of linked gateways."
@@ -15897,14 +15910,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1095"
+      "$ref": "#/1096"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.ApiManagement/service/workspaceLinks@2025-09-01-preview",
     "body": {
-      "$ref": "#/1093"
+      "$ref": "#/1094"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15942,7 +15955,7 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationServers",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1098"
+      "$ref": "#/1099"
     }
   },
   {
@@ -15951,7 +15964,7 @@
     "properties": {
       "entra": {
         "type": {
-          "$ref": "#/1101"
+          "$ref": "#/1102"
         },
         "flags": 0,
         "description": "Microsoft EntraID client application secrets"
@@ -15984,7 +15997,7 @@
     "resourceType": "Microsoft.ApiManagement/service/clientApplications",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1100"
+      "$ref": "#/1101"
     }
   },
   {
@@ -16000,7 +16013,7 @@
       },
       "purposes": {
         "type": {
-          "$ref": "#/1106"
+          "$ref": "#/1107"
         },
         "flags": 1,
         "description": "Purposes of debug credential."
@@ -16022,7 +16035,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1104"
+        "$ref": "#/1105"
       },
       {
         "$ref": "#/2"
@@ -16032,7 +16045,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1105"
+      "$ref": "#/1106"
     }
   },
   {
@@ -16054,10 +16067,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1107"
+      "$ref": "#/1108"
     },
     "input": {
-      "$ref": "#/1103"
+      "$ref": "#/1104"
     }
   },
   {
@@ -16086,7 +16099,7 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1109"
+      "$ref": "#/1110"
     }
   },
   {
@@ -16116,10 +16129,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1112"
+      "$ref": "#/1113"
     },
     "input": {
-      "$ref": "#/1111"
+      "$ref": "#/1112"
     }
   },
   {
@@ -16141,7 +16154,7 @@
     "resourceType": "Microsoft.ApiManagement/service/identityProviders",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1114"
+      "$ref": "#/1115"
     }
   },
   {
@@ -16163,7 +16176,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1116"
+      "$ref": "#/1117"
     }
   },
   {
@@ -16172,7 +16185,7 @@
     "resourceType": "Microsoft.ApiManagement/service/openidConnectProviders",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1114"
+      "$ref": "#/1115"
     }
   },
   {
@@ -16181,7 +16194,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1121"
+          "$ref": "#/1122"
         },
         "flags": 0,
         "description": "A collection of resources."
@@ -16211,7 +16224,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
       },
       "name": {
         "type": {
@@ -16239,7 +16252,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1120"
+      "$ref": "#/1121"
     }
   },
   {
@@ -16248,7 +16261,7 @@
     "resourceType": "Microsoft.ApiManagement/service/policyFragments",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1119"
+      "$ref": "#/1120"
     }
   },
   {
@@ -16270,7 +16283,7 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1123"
+      "$ref": "#/1124"
     }
   },
   {
@@ -16299,7 +16312,7 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1125"
+      "$ref": "#/1126"
     }
   },
   {
@@ -16349,7 +16362,7 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1127"
+      "$ref": "#/1128"
     }
   },
   {
@@ -16358,7 +16371,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/namedValues",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1116"
+      "$ref": "#/1117"
     }
   },
   {
@@ -16367,7 +16380,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/policyFragments",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1119"
+      "$ref": "#/1120"
     }
   },
   {
@@ -16376,7 +16389,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/subscriptions",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1125"
+      "$ref": "#/1126"
     }
   }
 ]

@@ -36443,13 +36443,6 @@
         "flags": 0,
         "description": "Properties of the DDoS protection plan."
       },
-      "tags": {
-        "type": {
-          "$ref": "#/2910"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
       "etag": {
         "type": {
           "$ref": "#/2"
@@ -36463,6 +36456,13 @@
         },
         "flags": 0,
         "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2910"
+        },
+        "flags": 0,
+        "description": "Resource tags."
       }
     }
   },
@@ -43658,7 +43658,7 @@
         "type": {
           "$ref": "#/13"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "Boolean indicating whether static routes on this connection are automatically propagate to route tables which this connection propagates to."
       },
       "vnetLocalRouteOverrideCriteria": {

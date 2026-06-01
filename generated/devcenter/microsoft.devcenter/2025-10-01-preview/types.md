@@ -385,7 +385,7 @@
 ## CatalogProperties
 ### Properties
 * **adoGit**: [GitCatalog](#gitcatalog): Properties for an Azure DevOps catalog type.
-* **autoImageBuildEnableStatus**: 'Disabled' | 'Enabled' | string: Indicates whether the catalog is configured to automatically build image definitions. Defaults to enabled.
+* **autoImageBuildEnableStatus**: 'Disabled' | 'Enabled' | string: Indicates whether the catalog is configured to automatically build image definitions. Defaults to disabled for newly created catalogs.
 * **connectionState**: 'Connected' | 'Disconnected' | string (ReadOnly): The connection state of the catalog.
 * **gitHub**: [GitCatalog](#gitcatalog): Properties for a GitHub catalog type.
 * **lastConnectionTime**: string (ReadOnly): When the catalog was last connected.

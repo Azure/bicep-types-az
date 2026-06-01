@@ -6106,6 +6106,13 @@
         "flags": 0,
         "description": "Gets or sets the watcher properties."
       },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the etag of the resource."
+      },
       "tags": {
         "type": {
           "$ref": "#/408"
@@ -6119,13 +6126,6 @@
         },
         "flags": 0,
         "description": "The geo-location where the resource lives"
-      },
-      "etag": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets the etag of the resource."
       },
       "systemData": {
         "type": {

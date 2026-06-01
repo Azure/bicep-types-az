@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): describes security alert properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/locations/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertEntity
@@ -15,16 +16,6 @@
 * **type**: string (ReadOnly): Type of entity
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## AlertExtendedLinks
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AlertExtendedProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## AlertProperties
 ### Properties
@@ -36,8 +27,8 @@
 * **description**: string (ReadOnly): Description of the suspicious activity that was detected.
 * **endTimeUtc**: string (ReadOnly): The UTC time of the last event or activity included in the alert in ISO8601 format.
 * **entities**: [AlertEntity](#alertentity)[] (ReadOnly): A list of entities related to the alert.
-* **extendedLinks**: [AlertExtendedLinks](#alertextendedlinks)[] (ReadOnly): Links related to the alert
-* **extendedProperties**: [AlertExtendedProperties](#alertextendedproperties): Custom properties for the alert.
+* **extendedLinks**: [AlertPropertiesExtendedLinksItem](#alertpropertiesextendedlinksitem)[] (ReadOnly): Links related to the alert
+* **extendedProperties**: [AlertPropertiesExtendedProperties](#alertpropertiesextendedproperties): Custom properties for the alert.
 * **intent**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Exploitation' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Probing' | 'Unknown' | string (ReadOnly): The kill chain related intent behind the alert. For list of supported values, and explanations of Azure Security Center's supported kill chain intents.
 * **isIncident**: bool (ReadOnly): This field determines whether the alert is an incident (a compound grouping of several alerts) or a single alert.
 * **processingEndTimeUtc**: string (ReadOnly): The UTC processing end time of the alert in ISO8601 format.
@@ -55,6 +46,16 @@
 * **timeGeneratedUtc**: string (ReadOnly): The UTC time the alert was generated in ISO8601 format.
 * **vendorName**: string (ReadOnly): The name of the vendor that raises the alert.
 * **version**: string (ReadOnly): Schema version.
+
+## AlertPropertiesExtendedLinksItem
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AlertPropertiesExtendedProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## AlertPropertiesSupportingEvidence
 ### Properties
@@ -80,4 +81,13 @@
 * **workspaceResourceGroup**: string (ReadOnly): The azure resource group for the LogAnalytics workspace storing this alert
 * **workspaceSubscriptionId**: string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"} (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
 
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

@@ -35,7 +35,7 @@
 * **apiVersion**: '2025-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ContainerGroupIdentity](#containergroupidentity): The identity of the container group, if configured.
-* **location**: string: The resource location.
+* **location**: string: The resource location of the container group.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerGroupProperties](#containergroupproperties) (Required): The container group properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.

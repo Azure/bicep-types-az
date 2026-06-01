@@ -45,11 +45,11 @@
 * **apiVersion**: '2025-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The common properties for any location based resource, tracked or proxy.
 * **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspaces resource specific properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [WorkspaceTags](#workspacetags): Resource tags.
+* **tags**: [WorkspaceTags](#workspacetags): The common properties of tracked resources in the service.
 * **type**: 'Microsoft.HealthcareApis/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/dicomservices@2025-04-01-preview
@@ -60,11 +60,11 @@
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ServiceManagedIdentity](#servicemanagedidentity): Setting indicating whether the service has a managed identity associated with it.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The common properties for any location based resource, tracked or proxy.
 * **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [DicomServiceProperties](#dicomserviceproperties): Dicom Service configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [DicomServiceTags](#dicomservicetags): Resource tags.
+* **tags**: [DicomServiceTags](#dicomservicetags): The common properties of tracked resources in the service.
 * **type**: 'Microsoft.HealthcareApis/workspaces/dicomservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/fhirservices@2025-04-01-preview
@@ -76,11 +76,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ServiceManagedIdentity](#servicemanagedidentity): Setting indicating whether the service has a managed identity associated with it.
 * **kind**: 'fhir-R4' | 'fhir-Stu3' | string: The kind of the service.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The common properties for any location based resource, tracked or proxy.
 * **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [FhirServiceProperties](#fhirserviceproperties): Fhir Service configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [FhirServiceTags](#fhirservicetags): Resource tags.
+* **tags**: [FhirServiceTags](#fhirservicetags): The common properties of tracked resources in the service.
 * **type**: 'Microsoft.HealthcareApis/workspaces/fhirservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/iotconnectors@2025-04-01-preview
@@ -91,11 +91,11 @@
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ServiceManagedIdentity](#servicemanagedidentity): Setting indicating whether the service has a managed identity associated with it.
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The common properties for any location based resource, tracked or proxy.
 * **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [IotConnectorProperties](#iotconnectorproperties): IoT Connector configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [IotConnectorTags](#iotconnectortags): Resource tags.
+* **tags**: [IotConnectorTags](#iotconnectortags): The common properties of tracked resources in the service.
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations@2025-04-01-preview

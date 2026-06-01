@@ -357,7 +357,7 @@
 * **privateOfferId**: string {maxLength: 255}: Private Offer Id
 * **privateOfferIds**: string[]: Array of Private Offer Ids
 * **publisherId**: string {maxLength: 50} (Required): Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string: SaaS Offer Status
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status
 * **termId**: string {maxLength: 50}: Offer Plan Term Id
 * **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
 

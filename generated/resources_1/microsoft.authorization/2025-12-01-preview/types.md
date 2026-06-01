@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The managed identity associated with the policy assignment.
 * **location**: string: The location of the policy assignment. Only required when utilizing managed identity.
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): Properties for the policy assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,7 +30,7 @@
 ### Properties
 * **apiVersion**: '2025-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyDefinitionProperties](#policydefinitionproperties): The policy definition properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
@@ -52,7 +52,7 @@
 ### Properties
 * **apiVersion**: '2025-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyExemptionProperties](#policyexemptionproperties): Properties for the policy exemption.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/policyExemptions' (ReadOnly, DeployTimeConstant): The resource type
@@ -63,7 +63,7 @@
 ### Properties
 * **apiVersion**: '2025-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties): The policy set definition properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant): The resource type
@@ -85,7 +85,7 @@
 ### Properties
 * **apiVersion**: '2025-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyVariableProperties](#policyvariableproperties): Properties for the variable.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/variables' (ReadOnly, DeployTimeConstant): The resource type
@@ -96,7 +96,7 @@
 ### Properties
 * **apiVersion**: '2025-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^<>*%&:\?.+/]*[^<>*%&:\?.+/ ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^<>%&:\?/]*[^<>%&:\?/ ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyVariableValueProperties](#policyvariablevalueproperties): Properties for the variable value.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/variables/values' (ReadOnly, DeployTimeConstant): The resource type

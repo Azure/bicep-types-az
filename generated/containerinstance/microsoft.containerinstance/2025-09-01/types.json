@@ -47,7 +47,7 @@
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The resource location."
+        "description": "The resource location of the container group."
       },
       "tags": {
         "type": {

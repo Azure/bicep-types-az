@@ -1870,7 +1870,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
+    "name": "ImageTemplateIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/145"

@@ -324,7 +324,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **kind**: string: Kind of the Environment.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentProperties](#managedenvironmentproperties): Managed environment resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -658,7 +658,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **blobContainerUri**: string: The URI of the blob storage containing the tokens. Should not be used along with sasUrlSettingName.
 * **clientId**: string: The Client ID of a User-Assigned Managed Identity. Should not be used along with managedIdentityResourceId.
 * **managedIdentityResourceId**: string: The Resource ID of a User-Assigned Managed Identity. Should not be used along with clientId.
-* **sasUrlSettingName**: string: The name of the app secrets containing the SAS URL of the blob storage containing the tokens. Should not be used along with blobContainerUri.
+* **sasUrlSettingName**: string: The name of the app secrets containing the SAS URL of the blob storage containing the tokens.
 
 ## BuildConfiguration
 ### Properties
@@ -725,7 +725,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## Configuration
 ### Properties
 * **activeRevisionsMode**: 'Labels' | 'Multiple' | 'Single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
-<list><item>Single: Only one revision can be active at a time. Traffic weights cannot be used. This is the default.</item><item>Multiple: Multiple revisions can be active, including optional traffic weights and labels.</item><item>Labels: Only revisions with labels are active. Traffic weights can be applied to labels.</item></list>
+<list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode. If no value if provided, this is the default.</item></list>
 * **dapr**: [Dapr](#dapr): Dapr configuration for the Container App.
 * **identitySettings**: [IdentitySettings](#identitysettings)[]: Optional settings for Managed Identities that are assigned to the Container App. If a Managed Identity is not specified here, default settings will be used.
 * **ingress**: [Ingress](#ingress): Ingress configurations.
@@ -1361,7 +1361,7 @@ action is set to "RedirectToLoginPage".
 ## HttpRouteTarget
 ### Properties
 * **containerApp**: string (Required): Container App Name to route requests to
-* **label**: string: Label/Revision to route requests to
+* **label**: string: Label to route requests to
 * **revision**: string: Revision to route requests to
 * **weight**: int {minValue: 0, maxValue: 100}: Weighted routing
 
@@ -1747,7 +1747,7 @@ Note that URLs within the current domain are always implicitly allowed.
 ## NfsAzureFileProperties
 ### Properties
 * **accessMode**: 'ReadOnly' | 'ReadWrite' | string: Access mode for storage
-* **server**: string: Server for NFS azure file.
+* **server**: string: Server for NFS azure file. Specify the Azure storage account server address.
 * **shareName**: string: NFS Azure file share name.
 
 ## Nonce
@@ -1874,7 +1874,7 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## RegistryInfo
 ### Properties
-* **registryPassword**: string (WriteOnly): registry secret.
+* **registryPassword**: string {sensitive} (WriteOnly): registry secret.
 * **registryUrl**: string: registry server Url.
 * **registryUserName**: string: registry username.
 
@@ -1947,10 +1947,10 @@ as they were at the creation time
 
 ## Scale
 ### Properties
-* **cooldownPeriod**: int: Optional. KEDA Cooldown Period. Defaults to 300 seconds if not set.
+* **cooldownPeriod**: int: Optional. KEDA Cooldown Period in seconds. Defaults to 300 seconds if not set.
 * **maxReplicas**: int: Optional. Maximum number of container replicas. Defaults to 10 if not set.
 * **minReplicas**: int: Optional. Minimum number of container replicas.
-* **pollingInterval**: int: Optional. KEDA Polling Interval. Defaults to 30 seconds if not set.
+* **pollingInterval**: int: Optional. KEDA Polling Interval in seconds. Defaults to 30 seconds if not set.
 * **rules**: [ScaleRule](#scalerule)[]: Scaling rules.
 
 ## ScaleConfiguration

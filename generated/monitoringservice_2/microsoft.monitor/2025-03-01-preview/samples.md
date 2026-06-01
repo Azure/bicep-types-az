@@ -36,7 +36,7 @@ resource exampleResource 'Microsoft.Monitor/slis@2025-03-01-preview' = {
             filters: [
               {
                 dimensionName: 'ApiName'
-                operator: '=='
+                operator: 'eq'
                 value: 'GetContosoUsers'
               }
             ]
@@ -61,7 +61,7 @@ resource exampleResource 'Microsoft.Monitor/slis@2025-03-01-preview' = {
             filters: [
               {
                 dimensionName: 'ApiName'
-                operator: '=='
+                operator: 'eq'
                 value: 'GetContosoUsers'
               }
             ]
@@ -85,7 +85,7 @@ resource exampleResource 'Microsoft.Monitor/slis@2025-03-01-preview' = {
         ]
       }
       windowUptimeCriteria: {
-        comparator: '>='
+        comparator: 'gte'
         target: 95
       }
     }

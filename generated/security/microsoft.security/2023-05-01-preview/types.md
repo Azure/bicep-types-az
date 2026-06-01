@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "[{]?[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HealthReportProperties](#healthreportproperties) (ReadOnly): Properties of a health report
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/healthReports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EnvironmentDetails
@@ -59,7 +60,7 @@
 ### Properties
 * **connectorId**: string (ReadOnly): The id of the connector
 * **id**: string (ReadOnly): The azure id of the resource
-* **source**: 'Aws' | 'Azure' | 'Gcp' | string: The status of the health report
+* **source**: 'Aws' | 'Azure' | 'Gcp' | 'OnPremise' | 'OnPremiseResourceDetails' | 'OnPremiseSql' | string: The status of the health report
 
 ## Status
 ### Properties
@@ -68,4 +69,13 @@
 * **lastScannedDate**: string (ReadOnly): The date of when the resource was scanned in the last time
 * **reason**: string (ReadOnly): The reason of the given status
 * **statusChangeDate**: string (ReadOnly): The date of when the status of the health report was changed in the last time
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

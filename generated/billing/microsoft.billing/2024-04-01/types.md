@@ -476,12 +476,12 @@
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The geo-location where the resource lives
+* **location**: string (ReadOnly): The location of the reservation.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReservationProperty](#reservationproperty) (ReadOnly): The properties associated to this reservation
 * **sku**: [ReservationSkuProperty](#reservationskuproperty) (ReadOnly): The sku information associated to this reservation
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ReservationTags](#reservationtags) (ReadOnly): Resource tags.
+* **tags**: [ReservationTags](#reservationtags) (ReadOnly): Tags for this reservation
 * **type**: 'Microsoft.Billing/billingAccounts/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/savingsPlanOrders@2024-04-01
@@ -1784,12 +1784,12 @@
 ### Properties
 * **etag**: int
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **location**: string: The geo-location where the resource lives
+* **location**: string: The location of the reservation.
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [ReservationProperty](#reservationproperty): The properties associated to this reservation
 * **sku**: [ReservationSkuProperty](#reservationskuproperty): The sku information associated to this reservation
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ReservationTags](#reservationtags): Resource tags.
+* **tags**: [ReservationTags](#reservationtags): Tags for this reservation
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ReservationAppliedScopeProperties

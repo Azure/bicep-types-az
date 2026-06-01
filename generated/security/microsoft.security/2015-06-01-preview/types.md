@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: any (ReadOnly): An empty set of properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/locations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/locations/alerts@2015-06-01-preview
@@ -73,6 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityTaskProperties](#securitytaskproperties) (ReadOnly): Describes properties of a task.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/locations/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/locations/topologies@2015-06-01-preview
@@ -207,6 +209,15 @@
 * **securityTaskParameters**: [SecurityTaskParameters](#securitytaskparameters): Changing set of properties, depending on the task type that is derived from the name field
 * **state**: string (ReadOnly): State of the task (Active, Resolved etc.)
 * **subState**: string (ReadOnly): Additional data on the state of the task
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TopologyResourceProperties
 ### Properties

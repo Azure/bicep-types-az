@@ -7382,19 +7382,19 @@
     "$type": "ObjectType",
     "name": "StorageApplianceProperties",
     "properties": {
+      "administratorCredentials": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "The credentials of the administrative interface on this storage appliance."
+      },
       "rackId": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
         "description": "The resource ID of the rack where this storage appliance resides."
-      },
-      "storageApplianceSkuId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The SKU for the storage appliance."
       },
       "rackSlot": {
         "type": {
@@ -7410,12 +7410,12 @@
         "flags": 1,
         "description": "The serial number for the storage appliance."
       },
-      "administratorCredentials": {
+      "storageApplianceSkuId": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/0"
         },
         "flags": 1,
-        "description": "The credentials of the administrative interface on this storage appliance."
+        "description": "The SKU for the storage appliance."
       },
       "caCertificate": {
         "type": {

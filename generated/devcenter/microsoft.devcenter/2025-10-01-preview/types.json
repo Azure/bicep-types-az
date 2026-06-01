@@ -2188,7 +2188,7 @@
           "$ref": "#/237"
         },
         "flags": 0,
-        "description": "Indicates whether the catalog is configured to automatically build image definitions. Defaults to enabled."
+        "description": "Indicates whether the catalog is configured to automatically build image definitions. Defaults to disabled for newly created catalogs."
       },
       "tags": {
         "type": {
