@@ -260,7 +260,7 @@
 ### AzureBlobStorageSinkConnectorServiceInfo
 #### Properties
 * **connectorServiceType**: 'AzureBlobStorageSinkConnector' (Required): The connector service type.
-* **storageAccountKey**: string: Azure Blob Storage Account Key
+* **storageAccountKey**: string {sensitive}: Azure Blob Storage Account Key
 * **storageAccountName**: string: Azure Blob Storage Account Name
 * **storageContainerName**: string: Azure Blob Storage Account Container Name
 
@@ -278,7 +278,7 @@
 * **cosmosContainersTopicMapping**: string: Azure Cosmos Database Containers Topic Mapping
 * **cosmosDatabaseName**: string: Azure Cosmos Database Name
 * **cosmosIdStrategy**: string: Azure Cosmos Database Id Strategy
-* **cosmosMasterKey**: string: Azure Cosmos Database Master Key
+* **cosmosMasterKey**: string {sensitive}: Azure Cosmos Database Master Key
 * **cosmosWriteDetails**: string: Azure Cosmos write config details
 
 ### AzureCosmosDBSourceConnectorServiceInfo
@@ -288,7 +288,7 @@
 * **cosmosContainersTopicMapping**: string: Azure Cosmos Database Containers Topic Mapping
 * **cosmosDatabaseName**: string: Azure Cosmos Database Name
 * **cosmosIncludeAllContainers**: string: Azure Cosmos Database Include all the containers in the database.
-* **cosmosMasterKey**: string: Azure Cosmos Database Master Key
+* **cosmosMasterKey**: string {sensitive}: Azure Cosmos Database Master Key
 * **cosmosMessageKeyEnabled**: bool: Azure Cosmos Database Message Key Enabled
 * **cosmosMessageKeyField**: string: Azure Cosmos Database Message Key Field
 
@@ -296,7 +296,7 @@
 #### Properties
 * **connectorServiceType**: 'AzureSynapseAnalyticsSinkConnector' (Required): The connector service type.
 * **synapseSqlDatabaseName**: string: Azure Synapse Dedicated SQL Pool Database Name
-* **synapseSqlPassword**: string: Azure Synapse SQL login details
+* **synapseSqlPassword**: string {sensitive}: Azure Synapse SQL login details
 * **synapseSqlServerName**: string: Azure Synapse Analytics SQL Server Name
 * **synapseSqlUser**: string: Azure Synapse SQL login details
 
@@ -378,8 +378,8 @@
 
 ### KafkaAzureBlobStorageSinkConnectorInfo
 #### Properties
-* **apiKey**: string: Kafka API Key
-* **apiSecret**: string: Kafka API Key Secret
+* **apiKey**: string {sensitive}: Kafka API Key
+* **apiSecret**: string {sensitive}: Kafka API Key Secret
 * **authType**: 'KAFKA_API_KEY' | 'SERVICE_ACCOUNT' | string: Kafka Auth Type
 * **flushSize**: string: Flush size
 * **inputFormat**: 'AVRO' | 'BYTES' | 'JSON' | 'PROTOBUF' | 'STRING' | string: Kafka Input Data Format Type
@@ -394,7 +394,7 @@
 
 ### KafkaAzureBlobStorageSourceConnectorInfo
 #### Properties
-* **apiKey**: string: Kafka API Key
+* **apiKey**: string {sensitive}: Kafka API Key
 * **apiSecret**: string {sensitive}: Kafka API Secret
 * **authType**: 'KAFKA_API_KEY' | 'SERVICE_ACCOUNT' | string: Kafka Auth Type
 * **inputFormat**: 'AVRO' | 'BYTES' | 'JSON' | 'PROTOBUF' | 'STRING' | string: Kafka Input Data Format Type
@@ -408,8 +408,8 @@
 
 ### KafkaAzureCosmosDBSinkConnectorInfo
 #### Properties
-* **apiKey**: string: Kafka API Key
-* **apiSecret**: string: Kafka API Key Secret
+* **apiKey**: string {sensitive}: Kafka API Key
+* **apiSecret**: string {sensitive}: Kafka API Key Secret
 * **authType**: 'KAFKA_API_KEY' | 'SERVICE_ACCOUNT' | string: Kafka Auth Type
 * **flushSize**: string: Flush size
 * **inputFormat**: 'AVRO' | 'BYTES' | 'JSON' | 'PROTOBUF' | 'STRING' | string: Kafka Input Data Format Type
@@ -424,7 +424,7 @@
 
 ### KafkaAzureCosmosDBSourceConnectorInfo
 #### Properties
-* **apiKey**: string: Kafka API Key
+* **apiKey**: string {sensitive}: Kafka API Key
 * **apiSecret**: string {sensitive}: Kafka API Secret
 * **authType**: 'KAFKA_API_KEY' | 'SERVICE_ACCOUNT' | string: Kafka Auth Type
 * **inputFormat**: 'AVRO' | 'BYTES' | 'JSON' | 'PROTOBUF' | 'STRING' | string: Kafka Input Data Format Type
@@ -438,8 +438,8 @@
 
 ### KafkaAzureSynapseAnalyticsSinkConnectorInfo
 #### Properties
-* **apiKey**: string: Kafka API Key
-* **apiSecret**: string: Kafka API Key Secret
+* **apiKey**: string {sensitive}: Kafka API Key
+* **apiSecret**: string {sensitive}: Kafka API Key Secret
 * **authType**: 'KAFKA_API_KEY' | 'SERVICE_ACCOUNT' | string: Kafka Auth Type
 * **flushSize**: string: Flush size
 * **inputFormat**: 'AVRO' | 'BYTES' | 'JSON' | 'PROTOBUF' | 'STRING' | string: Kafka Input Data Format Type

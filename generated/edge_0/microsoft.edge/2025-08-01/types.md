@@ -14,6 +14,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Edge/configTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Edge/configTemplates/configTemplateMetadatas@2025-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^(?!.*\.\.)[a-zA-Z0-9-][a-zA-Z0-9._-]{1,68}[a-zA-Z0-9-]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigTemplateMetadataProperties](#configtemplatemetadataproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/configTemplates/configTemplateMetadatas' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Edge/configTemplates/versions@2025-08-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
@@ -25,6 +37,18 @@
 * **properties**: [ConfigTemplateVersionProperties](#configtemplateversionproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/configTemplates/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Edge/configTemplates/versions/configTemplateSchemas@2025-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^(?!.*\.\.)[a-zA-Z0-9-][a-zA-Z0-9._-]{1,68}[a-zA-Z0-9-]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigTemplateSchemaProperties](#configtemplateschemaproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/configTemplates/versions/configTemplateSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts@2025-08-01
 * **Readable Scope(s)**: ResourceGroup
@@ -104,6 +128,28 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Edge/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Edge/hierarchyConfigurationMetadatas@2025-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [HierarchyConfigurationMetadataProperties](#hierarchyconfigurationmetadataproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/hierarchyConfigurationMetadatas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Edge/hierarchyConfigurationMetadatas/versions@2025-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [HierarchyConfigurationMetadataVersionProperties](#hierarchyconfigurationmetadataversionproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/hierarchyConfigurationMetadatas/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Edge/jobs@2025-08-01
 * **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Writable Scope(s)**: None
@@ -178,6 +224,28 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/schemas/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Edge/solutionMetadatas@2025-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [SolutionMetadataProperties](#solutionmetadataproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/solutionMetadatas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Edge/solutionMetadatas/versions@2025-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [SolutionMetadataVersionProperties](#solutionmetadataversionproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/solutionMetadatas/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Edge/solutionTemplates@2025-08-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
@@ -203,6 +271,18 @@
 * **properties**: [SolutionTemplateVersionProperties](#solutiontemplateversionproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/solutionTemplates/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Edge/solutionTemplates/versions/solutionSchemas@2025-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2025-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^(?!.*\.\.)[a-zA-Z0-9-][a-zA-Z0-9._-]{1,68}[a-zA-Z0-9-]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [SolutionSchemaProperties](#solutionschemaproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Edge/solutionTemplates/versions/solutionSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/targets@2025-08-01
 * **Readable Scope(s)**: ResourceGroup
@@ -297,12 +377,25 @@
 * **name**: string: Component name
 * **status**: string: Component status
 
+## ConfigTemplateMetadataProperties
+### Properties
+* **linkedHierarchies**: [HierarchyMetadata](#hierarchymetadata)[]: Hierarchy ARM Ids
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
+* **templateUniqueIdentifier**: string (ReadOnly): Unique identifier for the config template, generated by the system
+* **unLinkedHierarchies**: [HierarchyMetadata](#hierarchymetadata)[]: Hierarchy ARM Ids
+
 ## ConfigTemplateProperties
 ### Properties
 * **description**: string (Required): Description of config template
 * **latestVersion**: string (ReadOnly): Latest config template version
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
 * **uniqueIdentifier**: string (ReadOnly): A unique identifier for the config template, generated by the system
+
+## ConfigTemplateSchemaProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
+* **templateUniqueIdentifier**: string (ReadOnly): Unique identifier for the config template, generated by the system
+* **value**: string (ReadOnly): Value of schema
 
 ## ConfigTemplateVersionProperties
 ### Properties
@@ -314,6 +407,7 @@
 * **capabilities**: [Capability](#capability)[] (Required): List of Capabilities
 * **hierarchies**: [Hierarchy](#hierarchy)[] (Required): List of Hierarchies
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
+* **uniqueIdentifier**: string (ReadOnly): A unique identifier for the context, generated by the system
 
 ## DeploymentStatus
 ### Properties
@@ -379,6 +473,24 @@
 * **description**: string (Required): Description of Hierarchy
 * **name**: string (Required): Name of Hierarchy
 
+## HierarchyConfigurationMetadataProperties
+### Properties
+* **configTemplateId**: string (ReadOnly): Configuration template Id
+* **displayName**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (ReadOnly): Display name of the hierarchy configuration metadata resource
+
+## HierarchyConfigurationMetadataVersionProperties
+### Properties
+* **configTemplateVersionId**: string (ReadOnly): Configuration template version Id
+* **configurationStatus**: 'ConfigurationCompleted' | 'ConfigurationPending' | string (ReadOnly): Configuration status of the config template version
+* **dynamicConfigurationVersionId**: string (ReadOnly): Dynamic Configuration Id for the config template version
+* **parentDisplayName**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (ReadOnly): Display name of the hierarchy configuration metadata resource
+* **schemaId**: string (ReadOnly): Schema Id for the config template version at the hierarchy
+
+## HierarchyMetadata
+### Properties
+* **hierarchyIds**: string[]: Hierarchy Ids
+* **level**: string: Hierarchy Level
+
 ## InstallSolutionParameter
 ### Properties
 * **solutionVersionId**: string (Required): Solution Version ARM Id
@@ -419,6 +531,11 @@
 * **jobType**: 'publish' (Required): Job type discriminator value
 * **parameter**: [SolutionVersionParameter](#solutionversionparameter): Solution Version Parameter
 
+### UninstallJobParameter
+#### Properties
+* **jobType**: 'uninstall' (Required): Job type discriminator value
+* **parameter**: [UninstallSolutionParameter](#uninstallsolutionparameter): Uninstall Solution Parameter
+
 
 ## JobProperties
 ### Properties
@@ -427,7 +544,7 @@
 * **endTime**: string: End time of the job (ISO8601).
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Error Details if any failure is there
 * **jobParameter**: [JobParameterBase](#jobparameterbase): Parameters for the job.
-* **jobType**: 'deploy' | 'externalValidation' | 'publish' | 'staging' | string (Required): The type of job.
+* **jobType**: 'deploy' | 'externalValidation' | 'publish' | 'staging' | 'uninstall' | string (Required): The type of job.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **startTime**: string: Start time of the job (ISO8601).
 * **status**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (Required, ReadOnly): Status of the job.
@@ -461,6 +578,13 @@
 #### Properties
 * **failedCount**: int: Count of failed items in this step
 * **statisticsType**: 'publish' (Required): Statistics type discriminator value
+* **successCount**: int: Count of successful items in this step
+* **totalCount**: int: Total count of items processed in this step
+
+### UninstallJobStepStatistics
+#### Properties
+* **failedCount**: int: Count of failed items in this step
+* **statisticsType**: 'uninstall' (Required): Statistics type discriminator value
 * **successCount**: int: Count of successful items in this step
 * **totalCount**: int: Total count of items processed in this step
 
@@ -498,12 +622,34 @@
 * **solutionVersionId**: string (Required): Solution Version Id
 * **targetId**: string (Required): Target Id
 
+## SolutionMetadataProperties
+### Properties
+* **currentVersion**: string (ReadOnly): Current solution template version
+* **displayName**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (ReadOnly): Display name of the solution metadata resource
+* **latestVersion**: string (ReadOnly): Latest solution template version
+* **solutionTemplateId**: string (ReadOnly): Solution template Id
+
+## SolutionMetadataVersionProperties
+### Properties
+* **configurationStatus**: 'ConfigurationCompleted' | 'ConfigurationPending' | string (ReadOnly): Configuration status of the solution template version
+* **dynamicConfigurationVersionId**: string (ReadOnly): Dynamic Configuration Id for the solution template version
+* **parentDisplayName**: string {minLength: 3, maxLength: 61, pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"} (ReadOnly): Display name of the solution metadata resource
+* **schemaId**: string (ReadOnly): Schema Id for the solution template version at the hierarchy
+* **solutionTemplateVersionId**: string (ReadOnly): Solution template version Id
+
 ## SolutionProperties
 ### Properties
 * **availableSolutionTemplateVersions**: [AvailableSolutionTemplateVersion](#availablesolutiontemplateversion)[] (ReadOnly): List of latest revisions for available solution template versions
 * **displayName**: string (ReadOnly): Display name of the solution
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
 * **solutionTemplateId**: string (ReadOnly): Solution template Id
+
+## SolutionSchemaProperties
+### Properties
+* **level**: string (ReadOnly): Hierarchy Level
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
+* **templateUniqueIdentifier**: string (ReadOnly): Unique identifier for the solution template, generated by the system
+* **value**: string (ReadOnly): Value of schema
 
 ## SolutionTemplateProperties
 ### Properties
@@ -518,6 +664,7 @@
 ## SolutionTemplateVersionProperties
 ### Properties
 * **configurations**: string (Required): Config expressions for this solution version
+* **internalState**: 'PendingValidation' | 'Validated' | 'ValidatedWithSchema' | 'ValidatedWithoutSchema' | string (ReadOnly): Internal State of resource
 * **orchestratorType**: 'TO' | string: Orchestrator type
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Initialized' | 'Succeeded' | string (ReadOnly): Provisioning state of resource
 * **specification**: [SolutionTemplateVersionPropertiesSpecification](#solutiontemplateversionpropertiesspecification) (Required): App components spec
@@ -533,7 +680,7 @@
 
 ## SolutionVersionProperties
 ### Properties
-* **actionType**: 'deploy' | 'externalValidation' | 'publish' | 'staging' | string (ReadOnly): The type of the latest action performed on this solution version.
+* **actionType**: 'deploy' | 'externalValidation' | 'publish' | 'staging' | 'uninstall' | string (ReadOnly): The type of the latest action performed on this solution version.
 * **configuration**: string (ReadOnly): Resolved configuration values
 * **currentStage**: [StageMap](#stagemap) (ReadOnly): Current Stage of revision
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Error Details if any failure is there
@@ -698,6 +845,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UninstallSolutionParameter
+### Properties
+* **solutionInstanceName**: string: Solution Instance Name
+* **solutionTemplateId**: string (Required): Solution Template ARM Id
 
 ## WorkflowProperties
 ### Properties

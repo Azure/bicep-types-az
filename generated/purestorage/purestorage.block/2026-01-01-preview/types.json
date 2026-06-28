@@ -1104,6 +1104,11 @@
     "writableScopes": 8
   },
   {
+    "$type": "StringType",
+    "minLength": 2,
+    "pattern": "^[A-Za-z][A-Za-z0-9-]*[A-Za-z0-9]$"
+  },
+  {
     "$type": "StringLiteralType",
     "value": "PureStorage.Block/storagePools/volumeGroups/volumes"
   },
@@ -1124,28 +1129,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/76"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/77"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/78"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -1165,14 +1170,14 @@
     "properties": {
       "space": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 2,
         "description": "Storage space usage for the volume"
       },
       "provisionedSize": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/82"
         },
         "flags": 0,
         "description": "Currently provisioned size of the volume, in bytes"
@@ -1207,7 +1212,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/88"
         },
         "flags": 2,
         "description": "Provisioning state of the resource"
@@ -1276,9 +1281,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/82"
-      },
-      {
         "$ref": "#/83"
       },
       {
@@ -1291,6 +1293,9 @@
         "$ref": "#/86"
       },
       {
+        "$ref": "#/87"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -1299,7 +1304,7 @@
     "$type": "ResourceType",
     "name": "PureStorage.Block/storagePools/volumeGroups/volumes@2026-01-01-preview",
     "body": {
-      "$ref": "#/78"
+      "$ref": "#/79"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1329,28 +1334,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/90"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/91"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/92"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/94"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
@@ -1370,14 +1375,14 @@
     "properties": {
       "space": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 2,
         "description": "Storage space usage"
       },
       "resourceName": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/90"
         },
         "flags": 3,
         "description": "Name of the storage container"
@@ -1391,7 +1396,7 @@
       },
       "datastore": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/95"
         },
         "flags": 2,
         "description": "VMware datastore associated with this storage container (if any)"
@@ -1413,7 +1418,7 @@
     "$type": "ResourceType",
     "name": "PureStorage.Block/storagePools/avsStorageContainers@2026-01-01-preview",
     "body": {
-      "$ref": "#/92"
+      "$ref": "#/93"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -1443,28 +1448,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/97"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/98"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/99"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/101"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
@@ -1512,14 +1517,14 @@
       },
       "space": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 2,
         "description": "Storage space usage"
       },
       "softDeletion": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/102"
         },
         "flags": 1,
         "description": "Volume's soft-deletion state"
@@ -1540,21 +1545,21 @@
       },
       "volumeType": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/104"
         },
         "flags": 2,
         "description": "Specify which control plane handles the lifecycle of the volume"
       },
       "avs": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/105"
         },
         "flags": 2,
         "description": "AVS-specific volume information"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/109"
         },
         "flags": 2,
         "description": "Provisioning state of the resource"
@@ -1589,7 +1594,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/102"
+        "$ref": "#/103"
       },
       {
         "$ref": "#/2"
@@ -1667,13 +1672,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/105"
-      },
-      {
         "$ref": "#/106"
       },
       {
         "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
       },
       {
         "$ref": "#/2"
@@ -1684,7 +1689,7 @@
     "$type": "ResourceType",
     "name": "PureStorage.Block/storagePools/avsStorageContainers/volumes@2026-01-01-preview",
     "body": {
-      "$ref": "#/99"
+      "$ref": "#/100"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -1710,28 +1715,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/97"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/111"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/112"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/114"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
@@ -1779,35 +1784,35 @@
       },
       "softDeletion": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/102"
         },
         "flags": 0,
         "description": "AVS VM's soft-deletion state"
       },
       "volumeContainerType": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/116"
         },
         "flags": 2,
         "description": "Specify which control plane handles the lifecycle of the volume container"
       },
       "avs": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/117"
         },
         "flags": 2,
         "description": "AVS VM details"
       },
       "space": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 2,
         "description": "Contains properties related to used Flash space"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/123"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
@@ -1822,7 +1827,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/114"
+        "$ref": "#/115"
       },
       {
         "$ref": "#/2"
@@ -1849,7 +1854,7 @@
       },
       "vmType": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/119"
         },
         "flags": 1,
         "description": "Type of the VMware VM using this set of volumes"
@@ -1871,7 +1876,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/117"
+        "$ref": "#/118"
       },
       {
         "$ref": "#/2"
@@ -1894,13 +1899,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/119"
-      },
-      {
         "$ref": "#/120"
       },
       {
         "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
       },
       {
         "$ref": "#/2"
@@ -1911,7 +1916,7 @@
     "$type": "ResourceType",
     "name": "PureStorage.Block/storagePools/avsVms@2026-01-01-preview",
     "body": {
-      "$ref": "#/112"
+      "$ref": "#/113"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -1937,28 +1942,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/97"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/125"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/126"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/101"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
@@ -1976,7 +1981,7 @@
     "$type": "ResourceType",
     "name": "PureStorage.Block/storagePools/avsVms/avsVmVolumes@2026-01-01-preview",
     "body": {
-      "$ref": "#/126"
+      "$ref": "#/127"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -1987,7 +1992,7 @@
     "properties": {
       "iscsi": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/130"
         },
         "flags": 1,
         "description": "ISCSI connection parameters"
@@ -2000,7 +2005,7 @@
     "properties": {
       "endpoints": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/132"
         },
         "flags": 1,
         "description": "List of ISCSI endpoints for connection"
@@ -2037,7 +2042,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/130"
+      "$ref": "#/131"
     }
   },
   {
@@ -2046,7 +2051,7 @@
     "resourceType": "PureStorage.Block/storagePools/volumeGroups",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/128"
+      "$ref": "#/129"
     }
   }
 ]

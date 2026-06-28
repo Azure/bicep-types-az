@@ -1,99 +1,180 @@
 # Microsoft.Monitor @ 2025-03-01-preview
 
-## Resource Microsoft.Monitor/slis@2025-03-01-preview
-* **Readable Scope(s)**: Extension
-* **Writable Scope(s)**: Extension
+## Resource Microsoft.Monitor/pipelineGroups@2025-03-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
-* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_()~-]{2,63}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SliResource](#sliresource): The resource-specific properties for this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [PipelineGroupProperties](#pipelinegroupproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Monitor/slis' (ReadOnly, DeployTimeConstant): The resource type
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.Monitor/pipelineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## AmwAccount
+## AzureMonitorWorkspaceLogsApiConfig
 ### Properties
-* **identity**: string (Required): The ARM resource ID of the managed identity with access to the source account.
-* **resourceId**: string (Required): The ARM resource ID of the account where metrics are emitted.
+* **dataCollectionEndpointUrl**: string {pattern: "^(https?)://[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$"} (Required): Data collection endpoint ingestion url.
+* **dataCollectionRule**: string {pattern: "^(?!-)[a-zA-Z0-9.-]{1,1000}[^-]$"} (Required): Data Collection Rule (DCR) immutable id.
+* **schema**: [SchemaMap](#schemamap) (Required): The schema mapping for incoming data.
+* **stream**: string {pattern: "^(?!-)[a-zA-Z0-9._-]{1,1000}[^-]$"} (Required): Stream name in destination. Azure Monitor stream is related to the destination table.
 
-## Baseline
+## AzureMonitorWorkspaceLogsExporter
 ### Properties
-* **evaluationCalculationType**: 'CalendarDays' | 'RollingDays' | string (Required): Specifies how evaluation is calculated, either based on calendar days or a rolling window.
-* **evaluationPeriodDays**: int {minValue: 1, maxValue: 90} (Required): The time frame (in days) used for SLI evaluation.
-* **value**: int {minValue: 0, maxValue: 100} (Required): The user-defined or Azure-defined target value used for comparison against the SLI value.
+* **api**: [AzureMonitorWorkspaceLogsApiConfig](#azuremonitorworkspacelogsapiconfig) (Required): API configurations for Azure Monitor workspace exporter.
+* **cache**: [CacheConfiguration](#cacheconfiguration): Cache configurations.
+* **concurrency**: [ConcurrencyConfiguration](#concurrencyconfiguration): Concurrency configuration for the exporter.
 
-## BaselineProperties
+## AzureResourceManagerCommonTypesExtendedLocation
 ### Properties
-* **baseline**: [Baseline](#baseline) (Required): Defines the baseline target, which is compared against the SLI value to determine compliance.
+* **name**: string (Required): The name of the extended location.
+* **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
 
-## Condition
+## BatchProcessor
 ### Properties
-* **dimensionName**: string: Dimension name used in filtering.
-* **operator**: 'contains' | 'eq' | 'gt' | 'gte' | 'in' | 'lt' | 'lte' | 'ne' | 'notcontains' | 'notin' | 'notstartswith' | 'startswith' | string (Required): Operator used in the filtering condition.
-* **samplingType**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' | string: Defines the sampling type.
-* **scalarFunction**: 'avg' | 'max' | 'min' | 'sum' | string: Scalar function applied for filtering.
-* **value**: string (Required): Value used in filtering. For most operators (eq, ne, lt, lte, gt, gte, startswith, notstartswith, contains, notcontains) this is a single value (for example "GetContosoUsers"). For the `in` and `notin` operators, multiple values must be joined by the delimiter `^^` (for example "east^^west^^north").
+* **batchSize**: int {minValue: 10, maxValue: 100000}: Size of the batch.
+* **timeout**: int {minValue: 10, maxValue: 300000}: Timeout in milliseconds.
 
-## ExecutionState
+## CacheConfiguration
 ### Properties
-* **message**: string: A descriptive message related to the execution state.
-* **state**: string (Required): The execution state value.
+* **maxStorageUsage**: int: Max storage usage in megabytes.
+* **retentionPeriod**: int: Retention period in minutes.
 
-## ManagedServiceIdentity
+## CertificateSource
 ### Properties
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **location**: string (Required): Location of the certificate source.
+* **subLocation**: string (Required): Sub-location within the certificate source.
+* **type**: 'kubernetesConfigMap' | 'kubernetesSecret' | string (Required): The type of certificate source.
 
-## Metric
+## CertificateWithKey
 ### Properties
-* **metricName**: string (Required): The name of the metric.
-* **metricNamespace**: string (Required): The namespace of the metric.
+* **certificate**: [CertificateSource](#certificatesource) (Required): Source configuration for the TLS certificate.
+* **privateKey**: [PrivateKeySource](#privatekeysource) (Required): Source configuration for the private key. Private keys must be stored in Kubernetes secrets for security reasons.
 
-## Signal
+## ConcurrencyConfiguration
 ### Properties
-* **signalFormula**: string (Required): Mathematical formula used to combine multiple metrics.
-* **signalSources**: [SignalSource](#signalsource)[] (Required): Sources of metrics used for SLIs.
+* **batchQueueSize**: int: Size of the queue for log batches.
+* **workerCount**: int: Number of parallel workers processing the log queues.
 
-## SignalSource
+## DistributionPolicy
 ### Properties
-* **filters**: [Condition](#condition)[] (Required): Filters applied to modify signal values.
-* **metricName**: string (Required): Name of the metric.
-* **metricNamespace**: string (Required): Namespace of the metric.
-* **signalSourceId**: string (Required): Unique identifier for the signal source.
-* **sourceAmwAccountManagedIdentity**: string (Required): Managed identity for authenticating the signal source.
-* **sourceAmwAccountResourceId**: string (Required): Resource ID of the source AMW account.
-* **spatialAggregation**: [SpatialAggregation](#spatialaggregation) (Required): Defines how measurements are aggregated across multiple time series.
-* **temporalAggregation**: [TemporalAggregation](#temporalaggregation) (Required): Defines how measurements are aggregated over a specific time window within the same time series.
+* **maxInstancesPerHost**: int: Maximum number of instances allowed per compute unit (node/VM). If not specified, default scheduling applies.
 
-## SliProperties
+## ExecutionPlacement
 ### Properties
-* **goodSignals**: [Signal](#signal): Represents good signals used in request-based SLI calculations.
-* **signals**: [Signal](#signal): Signals used for window-based SLI calculations.
-* **totalSignals**: [Signal](#signal): Represents total signals used in request-based SLI calculations.
-* **windowUptimeCriteria**: [WindowUptimeCriteria](#windowuptimecriteria): Defines the uptime criteria for window-based SLIs.
+* **constraints**: [PlacementConstraint](#placementconstraint)[]: A list of placement constraints to guide where pipelineGroup instances should run.
+* **distribution**: [DistributionPolicy](#distributionpolicy): Distribution policy for spreading instances across compute units (nodes/VMs).
 
-## SliResource
+## Exporter
 ### Properties
-* **baselineProperties**: [BaselineProperties](#baselineproperties) (Required): Defines the SLO baseline associated with the SLI.
-* **category**: 'Availability' | 'Latency' | string (Required): Specifies the category of the SLI, used to classify signals such as Availability and Latency.
-* **description**: string {pattern: "^[\s\S]{0,1000}$"} (Required): A user-provided description of the SLI, with a maximum length of 1000 characters.
-* **destinationAmwAccounts**: [AmwAccount](#amwaccount)[] (Required): Destination AMW accounts.
-* **destinationMetrics**: [Metric](#metric)[] (ReadOnly): The destination Azure Monitor Workspace (AMW) accounts where the SLI emits metrics.
-* **enableAlert**: bool (Required): A flag to determine whether alert is enabled.
-* **evaluationType**: 'RequestBased' | 'WindowBased' | string (Required): Determines how the SLI is evaluated—either based on request counts or time windows.
-* **executionState**: [ExecutionState](#executionstate) (ReadOnly): Indicates the current execution status of the SLI resource in ARM responses.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Indicates the provisioning status of the last operation.
-* **sliProperties**: [SliProperties](#sliproperties) (Required): Defines the SLI properties associated with the SLI.
-* **streamingRuleId**: string (ReadOnly): The streaming rule Id associated with the Sli resource.
-* **streamingRuleLastUpdatedTimestamp**: string (ReadOnly): The streaming rule last updated timestamp associated with the Sli resource.
+* **azureMonitorWorkspaceLogs**: [AzureMonitorWorkspaceLogsExporter](#azuremonitorworkspacelogsexporter): Azure Monitor Workspace Logs specific configurations.
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): The name of exporter.
+* **type**: 'AzureMonitorWorkspaceLogs' | string (Required): The type of exporter.
 
-## SpatialAggregation
+## JsonArrayMapper
 ### Properties
-* **dimensions**: string[] (Required): Dimensions considered for spatial aggregation.
-* **type**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' | string (Required): Type of spatial aggregation.
+* **destinationField**: [JsonMapperDestinationField](#jsonmapperdestinationfield): Define a destination field to which the parsed output will be written. The output is a map, it's keys is the given keys array and the matching values are the parsed json array elements.
+* **keys**: string[] (Required): Define the names of the keys in the resulting map. The input json array elements are mapped in order, one for every key.
+* **sourceField**: [JsonMapperSourceField](#jsonmappersourcefield): Define a source field from which a json array will be read and parsed to it's elements. The number of elements in the json array is expected to be the same as the length of keys.
+
+## JsonMapperDestinationField
+### Properties
+* **destination**: 'attributes' | 'body' | string: Define the destination's element. The element is the body or the attributes of the message, to which the json array mapper will write the output map.
+* **fieldName**: string: Define a destination field name under the given element. Leaving this empty, means the root of the element. In case element=attributes and fieldName is empty, the object's attributes themselves will contain the key value output pairs.
+
+## JsonMapperSourceField
+### Properties
+* **fieldName**: string: Define a source field name from which the json array mapper will read the json array. Leaving this empty, means reading the body of the message itself.
+
+## OtlpReceiver
+### Properties
+* **endpoint**: string {pattern: "^[a-zA-Z0-9-\.]+:[0-9]+$"} (Required): OTLP GRPC endpoint definition. Example: 0.0.0.0:<port>.
+
+## PersistenceConfigurations
+### Properties
+* **persistentVolumeName**: string (Required): The name of the mounted persistent volume.
+
+## Pipeline
+### Properties
+* **exporters**: string[] (Required): Reference to exporters configured for the pipeline.
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): Name of the pipeline.
+* **processors**: string[]: Reference to processors configured for the pipeline.
+* **receivers**: string[] (Required): Reference to receivers configured for the pipeline.
+* **type**: 'Logs' | string (Required): The type of pipeline
+
+## PipelineGroupProperties
+### Properties
+* **executionPlacement**: [ExecutionPlacement](#executionplacement): Constraints for guiding the execution environment of the pipeline group.
+* **exporters**: [Exporter](#exporter)[] (Required): The exporters specified for a pipeline group instance.
+* **processors**: [Processor](#processor)[] (Required): The processors specified for a pipeline group instance.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of a pipeline group instance. Set to Succeeded if everything is healthy.
+* **receivers**: [Receiver](#receiver)[] (Required): The receivers specified for a pipeline group instance.
+* **replicas**: int: Defines the amount of replicas of the pipeline group instance.
+* **service**: [Service](#service) (Required): The service section for a given pipeline group instance.
+* **tlsConfigurations**: [TlsConfiguration](#tlsconfiguration)[]: TLS configurations for the pipeline group instance.
+
+## PlacementConstraint
+### Properties
+* **capability**: string (Required): The capability or attribute key used to match compute unit properties.
+* **operator**: 'DoesNotExist' | 'Exists' | 'In' | 'NotIn' | string (Required): The match operator, e.g., In, NotIn, Exists, DoesNotExist.
+* **values**: string[]: The values to match against. Not required for Exists/DoesNotExist.
+
+## PrivateKeySource
+### Properties
+* **location**: string (Required): Location of the private key source.
+* **subLocation**: string (Required): Sub-location within the private key source.
+* **type**: 'kubernetesSecret' | string (Required): The type of private key source. Only kubernetesSecret is supported for security reasons.
+
+## Processor
+### Properties
+* **batch**: [BatchProcessor](#batchprocessor): Batch processor configurations.
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): The name of processor.
+* **transformLanguage**: [TransformLanguageProcessor](#transformlanguageprocessor): Transform language processor configurations.
+* **type**: 'Batch' | 'MicrosoftCommonSecurityLog' | 'MicrosoftSyslog' | 'TransformLanguage' | string (Required): The type of processor.
+
+## Receiver
+### Properties
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): The name of receiver.
+* **otlp**: [OtlpReceiver](#otlpreceiver): OTLP receiver configurations. This field is mandatory for OTLP receivers.
+* **syslog**: [SyslogReceiver](#syslogreceiver): Syslog configurations. This field is mandatory for syslog type receivers.
+* **tlsConfiguration**: string: Reference to a named TLS configuration. If not specified, default TLS configuration is used.
+* **type**: 'OTLP' | 'Syslog' | 'UDP' | string (Required): The type of receiver.
+* **udp**: [UdpReceiver](#udpreceiver): UDP receiver configurations. This field is mandatory for UDP receivers.
+
+## RecordMap
+### Properties
+* **from**: string (Required): Record Map Key.
+* **to**: string (Required): Record Map Value.
+
+## ResourceMap
+### Properties
+* **from**: string (Required): Resource Map Key.
+* **to**: string (Required): Resource Map Value.
+
+## SchemaMap
+### Properties
+* **recordMap**: [RecordMap](#recordmap)[] (Required): Record Map.
+* **resourceMap**: [ResourceMap](#resourcemap)[]: Resource Map captures information about the entity for which telemetry is recorded. For example, metrics exposed by a Kubernetes container can be linked to a resource that specifies the cluster, namespace, pod, and container name.Resource may capture an entire hierarchy of entity identification. It may describe the host in the cloud and specific container or an application running in the process.
+* **scopeMap**: [ScopeMap](#scopemap)[]: A scope map is a logical unit of the application code with which the emitted telemetry can be associated.
+
+## ScopeMap
+### Properties
+* **from**: string (Required): Scope Map Key.
+* **to**: string (Required): Scope Map Value.
+
+## Service
+### Properties
+* **persistence**: [PersistenceConfigurations](#persistenceconfigurations): Persistence options to all pipelines in the instance.
+* **pipelines**: [Pipeline](#pipeline)[] (Required): Pipelines belonging to a given pipeline group.
+
+## SyslogReceiver
+### Properties
+* **allowSkipPriHeader**: bool: Configure the receiver to allow parsing of messages without the PRI header. Default false.
+* **endpoint**: string {pattern: "^[a-zA-Z0-9-\.]+:[0-9]+$"} (Required): Syslog receiver endpoint definition. Example: 0.0.0.0:<port>.
+* **protocol**: 'rfc3164' | 'rfc5424' | string: Protocol to parse syslog messages. Default rfc3164
+* **transportProtocol**: 'tcp' | 'udp' | string: Transport protocol. Default tcp.
 
 ## SystemData
 ### Properties
@@ -104,23 +185,26 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TemporalAggregation
+## TlsConfiguration
 ### Properties
-* **type**: 'Average' | 'Delta' | 'IDelta' | 'IRate' | 'Increase' | 'Max' | 'Min' | 'Rate' | 'Sum' | string (Required): Type of temporal aggregation.
-* **windowSizeMinutes**: int: Time window size for aggregation, in minutes.
+* **clientCa**: [CertificateSource](#certificatesource): Certificate source configuration for the client CA certificate for validating client certificates. If not specified, default CA certificates are used.
+* **mode**: 'disabled' | 'mutualTls' | 'serverOnly' | string: The TLS security mode for receivers using this configuration. Default is 'mutualTls'.
+* **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): The name of the TLS configuration.
+* **tlsCertificate**: [CertificateWithKey](#certificatewithkey): TLS certificate and its private key. If not specified, default TLS certificate is used.
 
-## UserAssignedIdentities
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+* **Additional Properties Type**: string
 
-## UserAssignedIdentity
+## TransformLanguageProcessor
 ### Properties
-* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+* **transformStatement**: string {minLength: 1, maxLength: 10000} (Required): Transform statement to execute over the data passing through the processor.
 
-## WindowUptimeCriteria
+## UdpReceiver
 ### Properties
-* **comparator**: 'gt' | 'gte' | 'lt' | 'lte' | string (Required): Comparison operator used for uptime evaluation.
-* **target**: int (Required): Threshold value used to determine uptime.
+* **encoding**: 'ascii' | 'big5' | 'nop' | 'utf-16be' | 'utf-16le' | 'utf-8' | string: The encoding of the stream being received.
+* **endpoint**: string {pattern: "^[a-zA-Z0-9-\.]+:[0-9]+$"} (Required): TCP endpoint definition. Example: 0.0.0.0:<port>.
+* **jsonArrayMapper**: [JsonArrayMapper](#jsonarraymapper): Json array mapper - allows this udp receiver to parse a value from a given source field as a json array, match a key to each parsed value and output the key-value map to a given output field.
+* **readQueueLength**: int {minValue: 100, maxValue: 100000}: Max read queue length.
 

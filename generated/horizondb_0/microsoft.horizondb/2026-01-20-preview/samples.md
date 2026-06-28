@@ -6,7 +6,7 @@
 
 ## microsoft.horizondb/clusters
 
-Create or update a HorizonDb cluster
+Create or update a HorizonDB cluster
 ```bicep
 resource exampleResource 'Microsoft.HorizonDb/clusters@2026-01-20-preview' = {
   name: 'example'
@@ -16,10 +16,9 @@ resource exampleResource 'Microsoft.HorizonDb/clusters@2026-01-20-preview' = {
     administratorLoginPassword: 'examplepassword'
     createMode: 'Create'
     replicaCount: 2
-    sourceClusterResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/examplesourceresourcegroup/providers/Microsoft.HorizonDb/clusters/examplesourcecluster'
     vCores: 4
     version: '17'
-    zonePlacementPolicy: 'Strict'
+    zonePlacementPolicy: 'BestEffort'
   }
   tags: {
     env: 'dev'
@@ -29,7 +28,7 @@ resource exampleResource 'Microsoft.HorizonDb/clusters@2026-01-20-preview' = {
 
 ## microsoft.horizondb/clusters/pools/firewallrules
 
-Create or update a HorizonDb firewall rule
+Create or update a HorizonDB firewall rule
 ```bicep
 resource exampleResource 'Microsoft.HorizonDb/clusters/pools/firewallRules@2026-01-20-preview' = {
   parent: parentResource 
@@ -44,7 +43,7 @@ resource exampleResource 'Microsoft.HorizonDb/clusters/pools/firewallRules@2026-
 
 ## microsoft.horizondb/clusters/pools/replicas
 
-Create or update a HorizonDb replica
+Create or update a HorizonDB replica
 ```bicep
 resource exampleResource 'Microsoft.HorizonDb/clusters/pools/replicas@2026-01-20-preview' = {
   parent: parentResource 
@@ -58,7 +57,7 @@ resource exampleResource 'Microsoft.HorizonDb/clusters/pools/replicas@2026-01-20
 
 ## microsoft.horizondb/parametergroups
 
-Create or update a HorizonDb parameter group
+Create or update a HorizonDB parameter group
 ```bicep
 resource exampleResource 'Microsoft.HorizonDb/parameterGroups@2026-01-20-preview' = {
   name: 'example'

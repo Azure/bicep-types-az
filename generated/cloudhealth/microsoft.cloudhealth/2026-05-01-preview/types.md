@@ -125,7 +125,7 @@
 * **metricName**: string {minLength: 1, maxLength: 256}: Name of the metric
 * **metricNamespace**: string {minLength: 1, maxLength: 256}: Metric namespace
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Unique name of the signal within the entity.
-* **refreshInterval**: 'PT10M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
+* **refreshInterval**: 'PT10M' | 'PT15M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
 * **signalDefinitionName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"}: Optional reference to a signal definition that provides default values.
 * **signalKind**: 'AzureResourceMetric' | 'External' | 'LogAnalyticsQuery' | 'PrometheusMetricsQuery' | string (Required): Kind of the signal instance
 * **status**: [SignalStatus](#signalstatus) (ReadOnly): Current status of the signal.
@@ -242,7 +242,7 @@
 * **evaluationRules**: [EvaluationRule](#evaluationrule): Evaluation rules for the signal definition
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Unique name of the signal within the entity.
 * **queryText**: string {minLength: 1, maxLength: 5000}: Query text in KQL syntax
-* **refreshInterval**: 'PT10M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
+* **refreshInterval**: 'PT10M' | 'PT15M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
 * **signalDefinitionName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"}: Optional reference to a signal definition that provides default values.
 * **signalKind**: 'AzureResourceMetric' | 'External' | 'LogAnalyticsQuery' | 'PrometheusMetricsQuery' | string (Required): Kind of the signal instance
 * **status**: [SignalStatus](#signalstatus) (ReadOnly): Current status of the signal.
@@ -274,7 +274,7 @@
 * **evaluationRules**: [EvaluationRule](#evaluationrule): Evaluation rules for the signal definition
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Unique name of the signal within the entity.
 * **queryText**: string {minLength: 1, maxLength: 5000}: Query text in PromQL syntax
-* **refreshInterval**: 'PT10M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
+* **refreshInterval**: 'PT10M' | 'PT15M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
 * **signalDefinitionName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"}: Optional reference to a signal definition that provides default values.
 * **signalKind**: 'AzureResourceMetric' | 'External' | 'LogAnalyticsQuery' | 'PrometheusMetricsQuery' | string (Required): Kind of the signal instance
 * **status**: [SignalStatus](#signalstatus) (ReadOnly): Current status of the signal.
@@ -302,7 +302,7 @@
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **evaluationRules**: [EvaluationRule](#evaluationrule) (Required): Evaluation rules for the signal definition
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
-* **refreshInterval**: 'PT10M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
+* **refreshInterval**: 'PT10M' | 'PT15M' | 'PT1H' | 'PT1M' | 'PT2H' | 'PT30M' | 'PT5M' | string: Interval in which the signal is being evaluated. Defaults to PT1M (1 minute).
 * **tags**: [SignalDefinitionPropertiesTags](#signaldefinitionpropertiestags): Optional set of tags (key-value pairs)
 
 ### ResourceMetricSignalDefinitionProperties

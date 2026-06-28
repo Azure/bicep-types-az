@@ -328,7 +328,7 @@
 ## ManagedHsmSku
 ### Properties
 * **family**: 'B' | 'C' | string (Required): SKU Family of the managed HSM Pool
-* **name**: 'Custom_B32' | 'Custom_B6' | 'Custom_C10' | 'Custom_C42' | 'Standard_B1' (Required): SKU of the managed HSM Pool
+* **name**: 'Custom_B32' | 'Custom_B6' | 'Custom_C10' | 'Custom_C42' | 'Standard_B1' | string (Required): SKU of the managed HSM Pool
 
 ## ManagedHsmTags
 ### Properties

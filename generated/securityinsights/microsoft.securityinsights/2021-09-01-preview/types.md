@@ -511,18 +511,6 @@
 * **properties**: [UebaProperties](#uebaproperties): Ueba properties
 
 
-## Resource Microsoft.SecurityInsights/sourcecontrols@2021-09-01-preview
-* **Readable Scope(s)**: Extension
-* **Writable Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlProperties](#sourcecontrolproperties): source control properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SecurityInsights/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2021-09-01-preview
 * **Readable Scope(s)**: Extension
 * **Writable Scope(s)**: Extension
@@ -909,11 +897,6 @@
 ### Properties
 * **description**: string: The sample query description
 * **query**: string: the sample query
-
-## ContentPathMap
-### Properties
-* **contentType**: 'AnalyticsRule' | 'Workbook' | string: Content type.
-* **path**: string: The path to the content.
 
 ## DataConnectorDataTypeCommon
 ### Properties
@@ -1632,14 +1615,6 @@
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
 
-## Repository
-### Properties
-* **branch**: string: Branch name of repository.
-* **deploymentLogsUrl**: string: Url to access repository action logs.
-* **displayUrl**: string: Display url of repository.
-* **pathMapping**: [ContentPathMap](#contentpathmap)[]: Dictionary of source control content type and path mapping.
-* **url**: string: Url of repository.
-
 ## RequiredPermissions
 ### Properties
 * **action**: bool: action permission
@@ -1738,15 +1713,6 @@
 ## SentinelOnboardingStateProperties
 ### Properties
 * **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
-
-## SourceControlProperties
-### Properties
-* **contentTypes**: ('AnalyticsRule' | 'Workbook' | string)[] (Required): Array of source control content types.
-* **description**: string: A description of the source control
-* **displayName**: string (Required): The display name of the source control
-* **id**: string: The id (a Guid) of the source control
-* **repository**: [Repository](#repository) (Required): Repository metadata.
-* **repoType**: 'DevOps' | 'Github' | string (Required): The repository type of the source control
 
 ## SubmissionMailEntityProperties
 ### Properties

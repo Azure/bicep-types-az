@@ -560,40 +560,6 @@ resource exampleResource 'Microsoft.SecurityInsights/settings@2021-03-01-preview
 }
 ```
 
-## microsoft.securityinsights/sourcecontrols
-
-Creates a source control.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a source control'
-    contentTypes: [
-      'AnalyticRules'
-      'Workbook'
-    ]
-    displayName: 'My Source Control'
-    repoType: 'Github'
-    repository: {
-      branch: 'master'
-      displayUrl: 'https://github.com/user/repo'
-      pathMapping: [
-        {
-          path: 'path/to/rules'
-          contentType: 'AnalyticRules'
-        }
-        {
-          path: 'path/to/workbooks'
-          contentType: 'Workbook'
-        }
-      ]
-      url: 'https://github.com/user/repo'
-    }
-  }
-}
-```
-
 ## microsoft.securityinsights/watchlists
 
 Creates or updates a watchlist and bulk creates watchlist items.

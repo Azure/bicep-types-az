@@ -94,7 +94,7 @@ resource exampleResource 'Microsoft.Confluent/organizations/environments/cluster
       storageContainerName: 'continer-1'
     }
     partnerConnectorInfo: {
-      apiKey: 'xxxxxxx'
+      apiKey: '*******'
       apiSecret: '*******'
       authType: 'KAFKA_API_KEY'
       flushSize: '1000'

@@ -1,8 +1,24 @@
 Generating types for 'specification/advisor/resource-manager/Microsoft.Advisor/Advisor/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.22.3]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.23.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·dezfye·schemas·recommendationproperties·properties·metadata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/components·dezfye·schemas·recommendationproperties·properties·metadata·additionalproperties
+warning | Modeler/MissingType | The schema 'components·31a4y8·schemas·resourcemetadata·properties·action·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/components·31a4y8·schemas·resourcemetadata·properties·action·additionalproperties
+warning | Modeler/MissingType | The schema 'components·5huey3·schemas·recommendationproperties·properties·actions·items·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/components·5huey3·schemas·recommendationproperties·properties·actions·items·additionalproperties
+warning | Modeler/MissingType | The schema 'components·r96k5y·schemas·recommendationproperties·properties·remediation·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/components·r96k5y·schemas·recommendationproperties·properties·remediation·additionalproperties
+warning | Modeler/MissingType | The schema 'components·ptgpor·schemas·recommendationproperties·properties·exposedmetadataproperties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/components·ptgpor·schemas·recommendationproperties·properties·exposedmetadataproperties·additionalproperties
+warning | Modeler/MissingType | The schema 'PredictionRequestProperties-extendedProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/PredictionRequestProperties-extendedProperties
+warning | Modeler/MissingType | The schema 'PredictionResponseProperties-extendedProperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-03-01-preview/openapi.json#/components/schemas/PredictionResponseProperties-extendedProperties
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·dezfye·schemas·recommendationproperties·properties·metadata·additionalproperties' has no type or format information whatsoever. Location:

@@ -135,7 +135,7 @@
 
 ## ConfigurationInfo
 ### Properties
-* **action**: 'Internal' | 'enable' | 'optOut' | string: Optional, indicate whether to apply configurations on source application. If enable, generate configurations and applied to the source application. Default is enable. If optOut, no configuration change will be made on source.
+* **action**: 'Internal' | 'enable' | 'optOut' | string: Indicates how to apply the connector operations, such as opt out network configuration, opt in configuration.
 * **additionalConfigurations**: [ConfigurationInfoAdditionalConfigurations](#configurationinfoadditionalconfigurations): A dictionary of additional configurations to be added. Service will auto generate a set of basic configurations and this property is to full fill more customized configurations
 * **additionalConnectionStringProperties**: [ConfigurationInfoAdditionalConnectionStringProperties](#configurationinfoadditionalconnectionstringproperties): A dictionary of additional properties to be added in the end of connection string.
 * **configurationStore**: [ConfigurationStore](#configurationstore): An option to store configuration into different place
@@ -257,7 +257,7 @@
 
 ## PublicNetworkSolution
 ### Properties
-* **action**: 'Internal' | 'enable' | 'optOut' | string: Optional. Indicates public network solution. If enable, enable public network access of target service with best try. Default is enable. If optOut, opt out public network access configuration.
+* **action**: 'Internal' | 'enable' | 'optOut' | string: Indicates how to apply the connector operations, such as opt out network configuration, opt in configuration.
 * **deleteOrUpdateBehavior**: 'Default' | 'ForcedCleanup' | string: Indicates whether to clean up previous operation(such as firewall rules) when Linker is updating or deleting
 * **firewallRules**: [FirewallRules](#firewallrules): Describe firewall rules of target service to make sure source application could connect to the target.
 
