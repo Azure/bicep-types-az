@@ -60,7 +60,7 @@
 ### Properties
 * **capacity**: int: Sku capacity
 * **family**: 'B' | string (Required): Sku family of the Cloud HSM Cluster
-* **name**: 'Standard B10' | 'Standard_B1' (Required): Sku name of the Cloud HSM Cluster
+* **name**: 'Standard B10' | 'Standard_B1' | string (Required): Sku name of the Cloud HSM Cluster
 
 ## CloudHsmProperties
 ### Properties

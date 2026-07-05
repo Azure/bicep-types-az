@@ -78,7 +78,7 @@
 
 ## AccessPolicyAssignmentProperties
 ### Properties
-* **accessPolicyName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required): Name of access policy under specific access policy assignment. Only "default" policy is supported for now.
+* **accessPolicyName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required): **Deprecated.** This property always returns "default". Use `accessString` to configure custom Redis ACL permissions instead.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status of the access policy assignment.
 * **user**: [AccessPolicyAssignmentPropertiesUser](#accesspolicyassignmentpropertiesuser) (Required): The user associated with the access policy.
 

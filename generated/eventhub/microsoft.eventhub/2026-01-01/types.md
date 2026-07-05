@@ -290,7 +290,7 @@
 * **disableLocalAuth**: bool: This property disables SAS authentication for the Event Hubs namespace.
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **geoDataReplication**: [GeoDataReplicationProperties](#geodatareplicationproperties): Geo Data Replication settings for the namespace
-* **ipV6Enabled**: bool: Value that indicates whether IPv6 is enabled for public network access.
+* **ipAddressType**: 'DualStack' | 'IPv4' | string: The IP address type for the namespace. Determines whether the namespace supports IPv4 only or both IPv4 and IPv6 (dual stack).
 * **isAutoInflateEnabled**: bool: Value that indicates whether AutoInflate is enabled for eventhub namespace.
 * **kafkaEnabled**: bool: Value that indicates whether Kafka is enabled for eventhub namespace.
 * **maximumThroughputUnits**: int {minValue: 0}: Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)

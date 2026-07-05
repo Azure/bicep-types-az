@@ -1,0 +1,904 @@
+# Microsoft.CognitiveServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.cognitiveservices/accounts
+
+Create Account
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts@2026-05-15-preview' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'Emotion'
+  location: 'West US'
+  properties: {
+    encryption: {
+      keySource: 'Microsoft.KeyVault'
+      keyVaultProperties: {
+        keyName: 'KeyName'
+        keyVaultUri: 'https://pltfrmscrts-use-pc-dev.vault.azure.net/'
+        keyVersion: '891CF236-D241-4738-9462-D506AF493DFA'
+      }
+    }
+    userOwnedStorage: [
+      {
+        resourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+      }
+    ]
+  }
+  sku: {
+    name: 'S0'
+  }
+}
+```
+
+Create Account Min
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts@2026-05-15-preview' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'CognitiveServices'
+  location: 'West US'
+  properties: {
+  }
+  sku: {
+    name: 'S0'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/capabilityhosts
+
+CreateOrUpdate Account CapabilityHost.
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/capabilityHosts@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    customerSubnet: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroups/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+    enablePublicHostingEnvironment: true
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/commitmentplans
+
+PutCommitmentPlan
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/commitmentPlans@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    autoRenew: true
+    current: {
+      tier: 'T1'
+    }
+    hostingModel: 'Web'
+    planType: 'Speech2Text'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/computes
+
+PutCompute
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/computes@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'None'
+  }
+  location: 'eastus'
+  properties: {
+    computeType: 'Cluster'
+    pools: [
+      {
+        name: 'default'
+        instanceType: 'Standard_DS3_v2'
+        nodeCount: 2
+        vmPriority: 'Regular'
+      }
+    ]
+    subnetArmId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/default'
+  }
+}
+```
+
+PutContainerInstanceCompute
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/computes@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myIdentity': {
+      }
+    }
+  }
+  location: 'eastus'
+  properties: {
+    computeType: 'ContainerInstance'
+    idleTimeBeforeShutdown: 'PT30M'
+    imageLink: 'mcr.microsoft.com/azureml/curated/pytorch-gpu:latest'
+    sshSettings: {
+      adminEnabled: true
+      sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQ...'
+    }
+    targetClusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.CognitiveServices/accounts/myAccount/computes/myCluster'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/connections
+
+CreateAccountConnection
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/connections@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authType: 'None'
+    category: 'ContainerRegistry'
+    expiryTime: '2024-03-15T14:30:00Z'
+    target: '[target url]'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/defenderforaisettings
+
+PutDefenderForAISetting
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/defenderForAISettings@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    state: 'Enabled'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/deployments
+
+PutDeployment
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/deployments@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    deploymentState: 'Running'
+    model: {
+      name: 'ada'
+      format: 'OpenAI'
+      version: '1'
+    }
+    serviceTier: 'Priority'
+  }
+  sku: {
+    name: 'Standard'
+    capacity: 1
+  }
+}
+```
+
+PutDeploymentWithSpeculativeDecoding
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/deployments@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    deploymentState: 'Running'
+    model: {
+      name: 'FW-Qwen3-14B'
+      format: 'Fireworks'
+      version: '1'
+    }
+    serviceTier: 'Default'
+    speculativeDecoding: {
+      draftModel: {
+        name: 'testDraftModel'
+        format: 'FireworksCustom'
+        source: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroupName/providers/Microsoft.CognitiveServices/accounts/accountName/projects/projectName'
+        version: '1'
+      }
+      draftTokenCount: 4
+    }
+  }
+  sku: {
+    name: 'GlobalProvisionedManaged'
+    capacity: 80
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/encryptionscopes
+
+PutEncryptionScope
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/encryptionScopes@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    keySource: 'Microsoft.KeyVault'
+    keyVaultProperties: {
+      identityClientId: '00000000-0000-0000-0000-000000000000'
+      keyName: 'DevKeyWestUS2'
+      keyVaultUri: 'https://devkvwestus2.vault.azure.net/'
+      keyVersion: '9f85549d7bf14ff4bf178c10d3bdca95'
+    }
+    state: 'Enabled'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/managedcomputedeployments
+
+CreateOrUpdateManagedComputeDeployment
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/managedComputeDeployments@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    acceleratorType: 'H100_80GB'
+    deploymentTemplate: 'azureml://registries/azureml-openai-oss/deploymenttemplates/gpt-oss-120b-short-context/versions/1'
+    model: 'azureml://registries/azureml-openai-oss/models/gpt-oss-120b/versions/4'
+    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
+  }
+  sku: {
+    name: 'GlobalManagedCompute'
+    capacity: 1
+  }
+}
+```
+
+CreateOrUpdateVmManagedComputeDeployment
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/managedComputeDeployments@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    computeId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroupName/providers/Microsoft.CognitiveServices/accounts/accountName/computes/my-h100-pool'
+    deploymentTemplate: 'projects/my-project/deploymentTemplates/gpt-oss-120b-vllm-tuned/versions/2'
+    model: 'azureml://registries/azureml-openai-oss/models/gpt-oss-120b/versions/4'
+    priority: 'High'
+  }
+  sku: {
+    name: 'VmManagedCompute'
+    capacity: 2
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/managednetworks
+
+Put ManagedNetworkSettings
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/managedNetworks@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    managedNetwork: {
+      firewallSku: 'Standard'
+      isolationMode: 'AllowOnlyApprovedOutbound'
+      outboundRules: {
+        rule_name_1: {
+          type: 'FQDN'
+          category: 'UserDefined'
+          destination: 'destination_endpoint'
+        }
+      }
+    }
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/managednetworks/outboundrules
+
+CreateOrUpdate OutboundRule
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/managedNetworks/outboundRules@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'FQDN'
+    category: 'UserDefined'
+    destination: 'destination_endpoint'
+    status: 'Active'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/privateendpointconnections
+
+PutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects
+
+Create Project
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
+  properties: {
+    description: 'Description of this project'
+    displayName: 'p1'
+  }
+}
+```
+
+Create Project Min
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
+  properties: {
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects/applications
+
+Create or Update Account Agent Application.
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/applications@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'Sample agent application for customer support'
+    displayName: 'Customer Support Agent'
+    tags: {
+      environment: 'production'
+      team: 'ai-platform'
+    }
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects/applications/agentdeployments
+
+Create or Update Agent Deployment.
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    agents: [
+      {
+        agentId: 'agent-123'
+        agentName: 'support-agent'
+        agentVersion: '1.0.0'
+      }
+    ]
+    deploymentType: 'Managed'
+    displayName: 'Production Deployment'
+    protocols: [
+      {
+        version: '1.0'
+        protocol: 'Agent'
+      }
+    ]
+    state: 'Starting'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects/capabilityhosts
+
+CreateOrUpdate Project CapabilityHost.
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/capabilityHosts@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    aiServicesConnections: [
+      'aoai_connection'
+    ]
+    storageConnections: [
+      'blob_connection'
+    ]
+    threadStorageConnections: [
+      'aca_connection'
+    ]
+    vectorStoreConnections: [
+      'acs_connection'
+    ]
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects/connections
+
+CreateProjectConnection
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/connections@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authType: 'None'
+    category: 'ContainerRegistry'
+    expiryTime: '2024-03-15T14:30:00Z'
+    target: '[target url]'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/projects/workbenches
+
+PutWorkbench
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/projects/workbenches@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myIdentity': {
+      }
+    }
+  }
+  location: 'eastus'
+  properties: {
+    datasetId: 'dataset-12345'
+    idleTimeBeforeShutdown: 'PT30M'
+    imageLink: 'mcr.microsoft.com/azureml/curated/pytorch-gpu:latest'
+    sshSettings: {
+      adminEnabled: true
+      sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQ...'
+    }
+    targetClusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.CognitiveServices/accounts/myAccount/computes/myCluster'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raiblocklists
+
+PutRaiBlocklist
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'Basic blocklist description'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raiblocklists/raiblocklistitems
+
+PutRaiBlocklistItem
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    isRegex: false
+    pattern: 'Pattern To Block'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raipolicies
+
+PutRaiPolicy
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiPolicies@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    basePolicyName: 'Microsoft.Default'
+    contentFilters: [
+      {
+        name: 'Hate'
+        blocking: false
+        enabled: false
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Hate'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Sexual'
+        blocking: true
+        enabled: true
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Sexual'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Selfharm'
+        blocking: true
+        enabled: true
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Selfharm'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Violence'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Prompt'
+      }
+      {
+        name: 'Violence'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Jailbreak'
+        blocking: true
+        enabled: true
+        source: 'Prompt'
+      }
+      {
+        name: 'Protected Material Text'
+        blocking: true
+        enabled: true
+        source: 'Completion'
+      }
+      {
+        name: 'Protected Material Code'
+        blocking: true
+        enabled: true
+        source: 'Completion'
+      }
+      {
+        name: 'Profanity'
+        blocking: true
+        enabled: true
+        source: 'Prompt'
+      }
+    ]
+    mode: 'Asynchronous_filter'
+  }
+}
+```
+
+PutRaiPolicyWithEgress
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiPolicies@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    basePolicyName: 'Microsoft.Default'
+    egressPolicy: {
+      description: 'Corporate baseline egress policy for sandboxed agents'
+      defaultAction: 'Deny'
+      mode: 'Enforced'
+      rules: [
+        {
+          name: 'allow-openai'
+          description: 'Allow traffic to OpenAI API'
+          action: {
+            actionType: 'Allow'
+          }
+          match: {
+            host: '*.openai.com'
+          }
+          ruleType: 'Fqdn'
+        }
+        {
+          name: 'inject-auth-for-internal'
+          description: 'Inject managed identity token for internal services'
+          action: {
+            actionType: 'Transform'
+            headers: [
+              {
+                name: 'Authorization'
+                operation: 'Set'
+                valueRef: {
+                  managedIdentityRef: {
+                    format: 'Bearer {value}'
+                    resource: 'https://internal.contoso.com/.default'
+                  }
+                }
+              }
+            ]
+          }
+          match: {
+            host: '*.internal.contoso.com'
+          }
+          ruleType: 'Fqdn'
+        }
+        {
+          name: 'rewrite-legacy-api'
+          description: 'Rewrite legacy API hostname to new internal endpoint'
+          action: {
+            actionType: 'Rewrite'
+            headers: [
+              {
+                name: 'X-Forwarded-Host'
+                operation: 'Set'
+                value: 'legacy-api.contoso.com'
+              }
+            ]
+            rewrite: {
+              path: '/v2/'
+              host: 'api-v2.internal.contoso.com'
+              scheme: 'https'
+            }
+          }
+          match: {
+            path: '/v1/*'
+            host: 'legacy-api.contoso.com'
+          }
+          ruleType: 'Fqdn'
+        }
+      ]
+    }
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raitoollabels
+
+PutRaiToolLabel
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiToolLabels@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    accountScope: {
+      labelValues: {
+        confidentiality: 'low'
+      }
+    }
+    projectScopes: [
+      {
+        labelValues: {
+          confidentiality: 'low'
+        }
+        project: 'test-project'
+      }
+      {
+        labelValues: {
+          confidentiality: 'low'
+        }
+        project: 'sample-project'
+      }
+    ]
+    toolConnectionName: 'Web_Search'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raitopics
+
+PutRaiTopic
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raitopics@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'This is a sample topic.'
+    sampleBlobUrl: 'https://example.blob.core.windows.net/sampleblob'
+    topicName: 'raiTopicName'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/testraiexternalsafetyprovider
+
+TestRaiExternalSafetyProvider
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    keyVaultUri: 'https://contoso-vault.vault.azure.net/'
+    managedIdentity: 'f3b9c2e7-4aad-4b1f-9d9c-9e9b1e9b1f9b'
+    mode: 'sync'
+    providerId: '00000000-0000-0000-0000-000000000000'
+    providerName: 'safetyProviderName'
+    secretName: 'safety-provider-secret'
+    url: 'https://example-safety-provider.contoso.com/webhook'
+  }
+}
+```
+
+## microsoft.cognitiveservices/commitmentplans
+
+Create Commitment Plan
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans@2026-05-15-preview' = {
+  name: 'example'
+  kind: 'SpeechServices'
+  location: 'West US'
+  properties: {
+    autoRenew: true
+    current: {
+      tier: 'T1'
+    }
+    hostingModel: 'Web'
+    planType: 'STT'
+  }
+  sku: {
+    name: 'S0'
+  }
+}
+```
+
+## microsoft.cognitiveservices/commitmentplans/accountassociations
+
+PutCommitmentPlan
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2026-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    accountId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.CognitiveServices/accounts/accountName'
+  }
+}
+```
+
+## microsoft.cognitiveservices/quotatiers
+
+Update the quota tier resource for a subscription
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/quotaTiers@2026-05-15-preview' = {
+  name: 'example'
+  properties: {
+    tierUpgradePolicy: 'NoAutoUpgrade'
+  }
+}
+```
+
+## microsoft.cognitiveservices/raiexternalsafetyproviders
+
+PutRaiExternalSafetyProvider
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/raiExternalSafetyProviders@2026-05-15-preview' = {
+  name: 'example'
+  properties: {
+    keyVaultUri: 'https://example.vault.azure.net'
+    managedIdentity: '00000000-0000-0000-0000-000000000000'
+    mode: 'sync'
+    providerId: '00000000-0000-0000-0000-000000000000'
+    providerName: 'safetyProviderName'
+    secretName: 'mySecretName'
+    url: 'https://example.webhook.endpoint'
+  }
+}
+```
+
+## microsoft.cognitiveservices/raipolicy
+
+PutRaiPolicy
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/raiPolicy@2026-05-15-preview' = {
+  name: 'example'
+  properties: {
+    basePolicyName: 'Microsoft.Default'
+    contentFilters: [
+      {
+        name: 'Hate'
+        blocking: false
+        enabled: false
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Hate'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Sexual'
+        blocking: true
+        enabled: true
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Sexual'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Selfharm'
+        blocking: true
+        enabled: true
+        severityThreshold: 'High'
+        source: 'Prompt'
+      }
+      {
+        name: 'Selfharm'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Violence'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Prompt'
+      }
+      {
+        name: 'Violence'
+        blocking: true
+        enabled: true
+        severityThreshold: 'Medium'
+        source: 'Completion'
+      }
+      {
+        name: 'Jailbreak'
+        blocking: true
+        enabled: true
+        source: 'Prompt'
+      }
+      {
+        name: 'Protected Material Text'
+        blocking: true
+        enabled: true
+        source: 'Completion'
+      }
+      {
+        name: 'Protected Material Code'
+        blocking: true
+        enabled: true
+        source: 'Completion'
+      }
+      {
+        name: 'Profanity'
+        blocking: true
+        enabled: true
+        source: 'Prompt'
+      }
+    ]
+    mode: 'Asynchronous_filter'
+  }
+}
+```

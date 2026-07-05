@@ -90,7 +90,7 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 2, maxLength: 40, pattern: "^[A-Za-z][A-Za-z0-9-]{0,38}[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, pattern: "^[A-Za-z][A-Za-z0-9-]*[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureVolumeProperties](#azurevolumeproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/volumeGroups/volumes' (ReadOnly, DeployTimeConstant): The resource type

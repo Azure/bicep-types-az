@@ -13018,7 +13018,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/969"
+          "$ref": "#/971"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -13136,21 +13136,21 @@
       },
       "restrictOutboundNetworkAccess": {
         "type": {
-          "$ref": "#/959"
+          "$ref": "#/960"
         },
         "flags": 0,
         "description": "Whether or not to restrict outbound network access for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
       },
       "isIPv6Enabled": {
         "type": {
-          "$ref": "#/962"
+          "$ref": "#/964"
         },
         "flags": 0,
         "description": "Whether or not to enable IPv6 support for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
       },
       "externalGovernanceStatus": {
         "type": {
-          "$ref": "#/965"
+          "$ref": "#/967"
         },
         "flags": 2,
         "description": "Status of external governance."
@@ -13164,7 +13164,7 @@
       },
       "createMode": {
         "type": {
-          "$ref": "#/968"
+          "$ref": "#/970"
         },
         "flags": 0,
         "description": "Create mode for server, only valid values for this are Normal and Restore."
@@ -13392,6 +13392,10 @@
     "value": "Disabled"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "SecuredByPerimeter"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
@@ -13401,6 +13405,9 @@
         "$ref": "#/958"
       },
       {
+        "$ref": "#/959"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -13414,15 +13421,22 @@
     "value": "Disabled"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "SecuredByPerimeter"
+  },
+  {
     "$type": "UnionType",
     "elements": [
-      {
-        "$ref": "#/960"
-      },
       {
         "$ref": "#/961"
       },
       {
+        "$ref": "#/962"
+      },
+      {
+        "$ref": "#/963"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -13439,10 +13453,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/963"
+        "$ref": "#/965"
       },
       {
-        "$ref": "#/964"
+        "$ref": "#/966"
       },
       {
         "$ref": "#/0"
@@ -13461,10 +13475,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/966"
+        "$ref": "#/968"
       },
       {
-        "$ref": "#/967"
+        "$ref": "#/969"
       },
       {
         "$ref": "#/0"
@@ -13496,7 +13510,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/971"
+        "$ref": "#/973"
       },
       {
         "$ref": "#/0"
@@ -13524,21 +13538,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/972"
+          "$ref": "#/974"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/973"
+          "$ref": "#/975"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/974"
+          "$ref": "#/976"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13563,7 +13577,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/securityAlertPolicies@2025-01-01",
     "body": {
-      "$ref": "#/975"
+      "$ref": "#/977"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13596,21 +13610,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/977"
+          "$ref": "#/979"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/978"
+          "$ref": "#/980"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/980"
+          "$ref": "#/982"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -13655,7 +13669,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/serverTrustCertificates@2025-01-01",
     "body": {
-      "$ref": "#/979"
+      "$ref": "#/981"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13688,21 +13702,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/982"
+          "$ref": "#/984"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/983"
+          "$ref": "#/985"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/985"
+          "$ref": "#/987"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -13722,14 +13736,14 @@
     "properties": {
       "groupMembers": {
         "type": {
-          "$ref": "#/987"
+          "$ref": "#/989"
         },
         "flags": 1,
         "description": "Group members information for the server trust group."
       },
       "trustScopes": {
         "type": {
-          "$ref": "#/991"
+          "$ref": "#/993"
         },
         "flags": 1,
         "description": "Trust scope of the server trust group."
@@ -13752,7 +13766,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/986"
+      "$ref": "#/988"
     }
   },
   {
@@ -13767,10 +13781,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/988"
+        "$ref": "#/990"
       },
       {
-        "$ref": "#/989"
+        "$ref": "#/991"
       },
       {
         "$ref": "#/0"
@@ -13780,14 +13794,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/990"
+      "$ref": "#/992"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/serverTrustGroups@2025-01-01",
     "body": {
-      "$ref": "#/984"
+      "$ref": "#/986"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13800,7 +13814,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/993"
+        "$ref": "#/995"
       },
       {
         "$ref": "#/0"
@@ -13828,28 +13842,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/994"
+          "$ref": "#/996"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/995"
+          "$ref": "#/997"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/996"
+          "$ref": "#/998"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/998"
+          "$ref": "#/1000"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -13901,7 +13915,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/vulnerabilityAssessments@2025-01-01",
     "body": {
-      "$ref": "#/997"
+      "$ref": "#/999"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13931,28 +13945,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1000"
+          "$ref": "#/1002"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1001"
+          "$ref": "#/1003"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1002"
+          "$ref": "#/1004"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1004"
+          "$ref": "#/1006"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -13972,7 +13986,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/1007"
+          "$ref": "#/1009"
         },
         "flags": 0,
         "description": "The state of Sql Agent."
@@ -13991,10 +14005,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1005"
+        "$ref": "#/1007"
       },
       {
-        "$ref": "#/1006"
+        "$ref": "#/1008"
       },
       {
         "$ref": "#/0"
@@ -14005,7 +14019,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/sqlAgent@2025-01-01",
     "body": {
-      "$ref": "#/1003"
+      "$ref": "#/1005"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14018,7 +14032,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1009"
+        "$ref": "#/1011"
       },
       {
         "$ref": "#/0"
@@ -14046,28 +14060,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1010"
+          "$ref": "#/1012"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1011"
+          "$ref": "#/1013"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1012"
+          "$ref": "#/1014"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1014"
+          "$ref": "#/1016"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -14087,7 +14101,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/1017"
+          "$ref": "#/1019"
         },
         "flags": 0,
         "description": "Specifies the state of the SQL Vulnerability Assessment, whether it is enabled or disabled or a state has not been applied yet on the specific database or server."
@@ -14106,10 +14120,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1015"
+        "$ref": "#/1017"
       },
       {
-        "$ref": "#/1016"
+        "$ref": "#/1018"
       }
     ]
   },
@@ -14117,7 +14131,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/sqlVulnerabilityAssessments@2025-01-01",
     "body": {
-      "$ref": "#/1013"
+      "$ref": "#/1015"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14130,7 +14144,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1019"
+        "$ref": "#/1021"
       },
       {
         "$ref": "#/0"
@@ -14158,28 +14172,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1020"
+          "$ref": "#/1022"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1023"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1022"
+          "$ref": "#/1024"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1024"
+          "$ref": "#/1026"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -14213,7 +14227,7 @@
       },
       "scheduleList": {
         "type": {
-          "$ref": "#/1042"
+          "$ref": "#/1044"
         },
         "flags": 1,
         "description": "Schedule list."
@@ -14240,7 +14254,7 @@
     "properties": {
       "startDay": {
         "type": {
-          "$ref": "#/1033"
+          "$ref": "#/1035"
         },
         "flags": 1,
         "description": "Start day."
@@ -14254,7 +14268,7 @@
       },
       "stopDay": {
         "type": {
-          "$ref": "#/1041"
+          "$ref": "#/1043"
         },
         "flags": 1,
         "description": "Stop day."
@@ -14300,12 +14314,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1026"
-      },
-      {
-        "$ref": "#/1027"
-      },
-      {
         "$ref": "#/1028"
       },
       {
@@ -14319,6 +14327,12 @@
       },
       {
         "$ref": "#/1032"
+      },
+      {
+        "$ref": "#/1033"
+      },
+      {
+        "$ref": "#/1034"
       },
       {
         "$ref": "#/0"
@@ -14357,12 +14371,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1034"
-      },
-      {
-        "$ref": "#/1035"
-      },
-      {
         "$ref": "#/1036"
       },
       {
@@ -14378,6 +14386,12 @@
         "$ref": "#/1040"
       },
       {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -14385,14 +14399,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1025"
+      "$ref": "#/1027"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/startStopSchedules@2025-01-01",
     "body": {
-      "$ref": "#/1023"
+      "$ref": "#/1025"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14425,21 +14439,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1044"
+          "$ref": "#/1046"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1045"
+          "$ref": "#/1047"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1047"
+          "$ref": "#/1049"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -14480,7 +14494,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1051"
+          "$ref": "#/1053"
         },
         "flags": 2,
         "description": "State of the sync agent."
@@ -14524,13 +14538,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1048"
-      },
-      {
-        "$ref": "#/1049"
-      },
-      {
         "$ref": "#/1050"
+      },
+      {
+        "$ref": "#/1051"
+      },
+      {
+        "$ref": "#/1052"
       },
       {
         "$ref": "#/0"
@@ -14541,7 +14555,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/syncAgents@2025-01-01",
     "body": {
-      "$ref": "#/1046"
+      "$ref": "#/1048"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14574,21 +14588,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1053"
+          "$ref": "#/1055"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1054"
+          "$ref": "#/1056"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1056"
+          "$ref": "#/1058"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -14629,7 +14643,7 @@
       },
       "conflictResolutionPolicy": {
         "type": {
-          "$ref": "#/1059"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "Conflict resolution policy of the sync group."
@@ -14657,14 +14671,14 @@
       },
       "syncState": {
         "type": {
-          "$ref": "#/1065"
+          "$ref": "#/1067"
         },
         "flags": 2,
         "description": "Sync state of the sync group."
       },
       "schema": {
         "type": {
-          "$ref": "#/1066"
+          "$ref": "#/1068"
         },
         "flags": 0,
         "description": "Sync schema of the sync group."
@@ -14711,10 +14725,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1057"
+        "$ref": "#/1059"
       },
       {
-        "$ref": "#/1058"
+        "$ref": "#/1060"
       },
       {
         "$ref": "#/0"
@@ -14745,12 +14759,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1060"
-      },
-      {
-        "$ref": "#/1061"
-      },
-      {
         "$ref": "#/1062"
       },
       {
@@ -14758,6 +14766,12 @@
       },
       {
         "$ref": "#/1064"
+      },
+      {
+        "$ref": "#/1065"
+      },
+      {
+        "$ref": "#/1066"
       },
       {
         "$ref": "#/0"
@@ -14770,7 +14784,7 @@
     "properties": {
       "tables": {
         "type": {
-          "$ref": "#/1070"
+          "$ref": "#/1072"
         },
         "flags": 0,
         "description": "List of tables in sync group schema."
@@ -14790,7 +14804,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/1069"
+          "$ref": "#/1071"
         },
         "flags": 0,
         "description": "List of columns in sync group schema."
@@ -14834,20 +14848,20 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1068"
+      "$ref": "#/1070"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1067"
+      "$ref": "#/1069"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups@2025-01-01",
     "body": {
-      "$ref": "#/1055"
+      "$ref": "#/1057"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14880,21 +14894,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1074"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1073"
+          "$ref": "#/1075"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1075"
+          "$ref": "#/1077"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -14914,7 +14928,7 @@
     "properties": {
       "databaseType": {
         "type": {
-          "$ref": "#/1078"
+          "$ref": "#/1080"
         },
         "flags": 0,
         "description": "Database type of the sync member."
@@ -14984,14 +14998,14 @@
       },
       "syncDirection": {
         "type": {
-          "$ref": "#/1082"
+          "$ref": "#/1084"
         },
         "flags": 0,
         "description": "Sync direction of the sync member."
       },
       "syncState": {
         "type": {
-          "$ref": "#/1101"
+          "$ref": "#/1103"
         },
         "flags": 2,
         "description": "Sync state of the sync member."
@@ -15010,10 +15024,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1076"
+        "$ref": "#/1078"
       },
       {
-        "$ref": "#/1077"
+        "$ref": "#/1079"
       },
       {
         "$ref": "#/0"
@@ -15036,13 +15050,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1079"
-      },
-      {
-        "$ref": "#/1080"
-      },
-      {
         "$ref": "#/1081"
+      },
+      {
+        "$ref": "#/1082"
+      },
+      {
+        "$ref": "#/1083"
       },
       {
         "$ref": "#/0"
@@ -15125,12 +15139,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1083"
-      },
-      {
-        "$ref": "#/1084"
-      },
-      {
         "$ref": "#/1085"
       },
       {
@@ -15179,6 +15187,12 @@
         "$ref": "#/1100"
       },
       {
+        "$ref": "#/1101"
+      },
+      {
+        "$ref": "#/1102"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -15187,7 +15201,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/syncGroups/syncMembers@2025-01-01",
     "body": {
-      "$ref": "#/1074"
+      "$ref": "#/1076"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15200,7 +15214,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1103"
+        "$ref": "#/1105"
       },
       {
         "$ref": "#/0"
@@ -15228,28 +15242,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1104"
+          "$ref": "#/1106"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1105"
+          "$ref": "#/1107"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1106"
+          "$ref": "#/1108"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1108"
+          "$ref": "#/1110"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15269,14 +15283,14 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/1111"
+          "$ref": "#/1113"
         },
         "flags": 1,
         "description": "Specifies the state of the transparent data encryption."
       },
       "scanState": {
         "type": {
-          "$ref": "#/1118"
+          "$ref": "#/1120"
         },
         "flags": 0,
         "description": "Specifies the encryption scan state of the transparent data encryption."
@@ -15295,10 +15309,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1109"
+        "$ref": "#/1111"
       },
       {
-        "$ref": "#/1110"
+        "$ref": "#/1112"
       }
     ]
   },
@@ -15330,12 +15344,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1112"
-      },
-      {
-        "$ref": "#/1113"
-      },
-      {
         "$ref": "#/1114"
       },
       {
@@ -15348,6 +15356,12 @@
         "$ref": "#/1117"
       },
       {
+        "$ref": "#/1118"
+      },
+      {
+        "$ref": "#/1119"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -15356,7 +15370,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/transparentDataEncryption@2025-01-01",
     "body": {
-      "$ref": "#/1107"
+      "$ref": "#/1109"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15389,28 +15403,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1120"
+          "$ref": "#/1122"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1121"
+          "$ref": "#/1123"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1123"
+          "$ref": "#/1125"
         },
         "flags": 0,
         "description": "Resource properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/1125"
+          "$ref": "#/1127"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -15451,7 +15465,7 @@
       },
       "childResources": {
         "type": {
-          "$ref": "#/1124"
+          "$ref": "#/1126"
         },
         "flags": 2,
         "description": "List of resources in this virtual cluster."
@@ -15476,7 +15490,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/virtualClusters@2025-01-01",
     "body": {
-      "$ref": "#/1122"
+      "$ref": "#/1124"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15509,21 +15523,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1127"
+          "$ref": "#/1129"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1128"
+          "$ref": "#/1130"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1130"
+          "$ref": "#/1132"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15557,7 +15571,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1137"
+          "$ref": "#/1139"
         },
         "flags": 2,
         "description": "Virtual Network Rule State"
@@ -15592,12 +15606,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1131"
-      },
-      {
-        "$ref": "#/1132"
-      },
-      {
         "$ref": "#/1133"
       },
       {
@@ -15610,6 +15618,12 @@
         "$ref": "#/1136"
       },
       {
+        "$ref": "#/1137"
+      },
+      {
+        "$ref": "#/1138"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -15618,7 +15632,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/virtualNetworkRules@2025-01-01",
     "body": {
-      "$ref": "#/1129"
+      "$ref": "#/1131"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15651,21 +15665,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1139"
+          "$ref": "#/1141"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1140"
+          "$ref": "#/1142"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1144"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15731,7 +15745,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2025-01-01",
     "body": {
-      "$ref": "#/1141"
+      "$ref": "#/1143"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15764,21 +15778,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1144"
+          "$ref": "#/1146"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1145"
+          "$ref": "#/1147"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1147"
+          "$ref": "#/1149"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15844,7 +15858,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/workloadGroups@2025-01-01",
     "body": {
-      "$ref": "#/1146"
+      "$ref": "#/1148"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15877,21 +15891,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1149"
+          "$ref": "#/1151"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1150"
+          "$ref": "#/1152"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1152"
+          "$ref": "#/1154"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -15925,21 +15939,21 @@
     "properties": {
       "advisorStatus": {
         "type": {
-          "$ref": "#/1157"
+          "$ref": "#/1159"
         },
         "flags": 2,
         "description": "Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'."
       },
       "autoExecuteStatus": {
         "type": {
-          "$ref": "#/1161"
+          "$ref": "#/1163"
         },
         "flags": 1,
         "description": "Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'"
       },
       "autoExecuteStatusInheritedFrom": {
         "type": {
-          "$ref": "#/1167"
+          "$ref": "#/1169"
         },
         "flags": 2,
         "description": "Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level)."
@@ -15960,7 +15974,7 @@
       },
       "recommendedActions": {
         "type": {
-          "$ref": "#/1210"
+          "$ref": "#/1212"
         },
         "flags": 2,
         "description": "Gets the recommended actions for this advisor."
@@ -15987,16 +16001,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1153"
-      },
-      {
-        "$ref": "#/1154"
-      },
-      {
         "$ref": "#/1155"
       },
       {
         "$ref": "#/1156"
+      },
+      {
+        "$ref": "#/1157"
+      },
+      {
+        "$ref": "#/1158"
       }
     ]
   },
@@ -16016,13 +16030,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1158"
-      },
-      {
-        "$ref": "#/1159"
-      },
-      {
         "$ref": "#/1160"
+      },
+      {
+        "$ref": "#/1161"
+      },
+      {
+        "$ref": "#/1162"
       }
     ]
   },
@@ -16050,12 +16064,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1162"
-      },
-      {
-        "$ref": "#/1163"
-      },
-      {
         "$ref": "#/1164"
       },
       {
@@ -16063,6 +16071,12 @@
       },
       {
         "$ref": "#/1166"
+      },
+      {
+        "$ref": "#/1167"
+      },
+      {
+        "$ref": "#/1168"
       }
     ]
   },
@@ -16072,7 +16086,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1169"
+          "$ref": "#/1171"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -16148,7 +16162,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1170"
+          "$ref": "#/1172"
         },
         "flags": 1,
         "description": "Gets the info of the current state the recommended action is in."
@@ -16204,7 +16218,7 @@
       },
       "executeActionInitiatedBy": {
         "type": {
-          "$ref": "#/1191"
+          "$ref": "#/1193"
         },
         "flags": 2,
         "description": "Gets if approval for applying this recommended action was given by user/system."
@@ -16218,7 +16232,7 @@
       },
       "revertActionInitiatedBy": {
         "type": {
-          "$ref": "#/1194"
+          "$ref": "#/1196"
         },
         "flags": 2,
         "description": "Gets if approval for reverting this recommended action was given by user/system."
@@ -16239,49 +16253,49 @@
       },
       "implementationDetails": {
         "type": {
-          "$ref": "#/1195"
+          "$ref": "#/1197"
         },
         "flags": 2,
         "description": "Gets the implementation details of this recommended action for user to apply it manually."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/1199"
+          "$ref": "#/1201"
         },
         "flags": 2,
         "description": "Gets the error details if and why this recommended action is put to error state."
       },
       "estimatedImpact": {
         "type": {
-          "$ref": "#/1204"
+          "$ref": "#/1206"
         },
         "flags": 2,
         "description": "Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change"
       },
       "observedImpact": {
         "type": {
-          "$ref": "#/1205"
+          "$ref": "#/1207"
         },
         "flags": 2,
         "description": "Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change"
       },
       "timeSeries": {
         "type": {
-          "$ref": "#/1207"
+          "$ref": "#/1209"
         },
         "flags": 2,
         "description": "Gets the time series info of metrics for this recommended action e.g., CPU consumption time series"
       },
       "linkedObjects": {
         "type": {
-          "$ref": "#/1208"
+          "$ref": "#/1210"
         },
         "flags": 2,
         "description": "Gets the linked objects, if any."
       },
       "details": {
         "type": {
-          "$ref": "#/1209"
+          "$ref": "#/1211"
         },
         "flags": 2,
         "description": "Gets additional details specific to this recommended action."
@@ -16294,14 +16308,14 @@
     "properties": {
       "currentValue": {
         "type": {
-          "$ref": "#/1185"
+          "$ref": "#/1187"
         },
         "flags": 1,
         "description": "Current state the recommended action is in. Some commonly used states are: Active      -> recommended action is active and no action has been taken yet. Pending     -> recommended action is approved for and is awaiting execution. Executing   -> recommended action is being applied on the user database. Verifying   -> recommended action was applied and is being verified of its usefulness by the system. Success     -> recommended action was applied and improvement found during verification. Pending Revert  -> verification found little or no improvement so recommended action is queued for revert or user has manually reverted. Reverting   -> changes made while applying recommended action are being reverted on the user database. Reverted    -> successfully reverted the changes made by recommended action on user database. Ignored     -> user explicitly ignored/discarded the recommended action."
       },
       "actionInitiatedBy": {
         "type": {
-          "$ref": "#/1188"
+          "$ref": "#/1190"
         },
         "flags": 2,
         "description": "Gets who initiated the execution of this recommended action. Possible Value are: User    -> When user explicity notified system to apply the recommended action. System  -> When auto-execute status of this advisor was set to 'Enabled', in which case the system applied it."
@@ -16375,12 +16389,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1171"
-      },
-      {
-        "$ref": "#/1172"
-      },
-      {
         "$ref": "#/1173"
       },
       {
@@ -16417,6 +16425,12 @@
         "$ref": "#/1184"
       },
       {
+        "$ref": "#/1185"
+      },
+      {
+        "$ref": "#/1186"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -16433,29 +16447,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1186"
+        "$ref": "#/1188"
       },
-      {
-        "$ref": "#/1187"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "System"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
       {
         "$ref": "#/1189"
-      },
-      {
-        "$ref": "#/1190"
       }
     ]
   },
@@ -16471,10 +16466,29 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1192"
+        "$ref": "#/1191"
       },
       {
-        "$ref": "#/1193"
+        "$ref": "#/1192"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1194"
+      },
+      {
+        "$ref": "#/1195"
       }
     ]
   },
@@ -16484,7 +16498,7 @@
     "properties": {
       "method": {
         "type": {
-          "$ref": "#/1198"
+          "$ref": "#/1200"
         },
         "flags": 2,
         "description": "Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell."
@@ -16510,10 +16524,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1196"
+        "$ref": "#/1198"
       },
       {
-        "$ref": "#/1197"
+        "$ref": "#/1199"
       }
     ]
   },
@@ -16530,7 +16544,7 @@
       },
       "isRetryable": {
         "type": {
-          "$ref": "#/1202"
+          "$ref": "#/1204"
         },
         "flags": 2,
         "description": "Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No"
@@ -16549,10 +16563,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1200"
+        "$ref": "#/1202"
       },
       {
-        "$ref": "#/1201"
+        "$ref": "#/1203"
       }
     ]
   },
@@ -16600,13 +16614,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1203"
+      "$ref": "#/1205"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1203"
+      "$ref": "#/1205"
     }
   },
   {
@@ -16653,7 +16667,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1206"
+      "$ref": "#/1208"
     }
   },
   {
@@ -16673,14 +16687,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1168"
+      "$ref": "#/1170"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors@2025-01-01",
     "body": {
-      "$ref": "#/1151"
+      "$ref": "#/1153"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -16710,28 +16724,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1212"
+          "$ref": "#/1214"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1213"
+          "$ref": "#/1215"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1214"
+          "$ref": "#/1216"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1216"
+          "$ref": "#/1218"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -16751,21 +16765,21 @@
     "properties": {
       "desiredState": {
         "type": {
-          "$ref": "#/1221"
+          "$ref": "#/1223"
         },
         "flags": 0,
         "description": "Automatic tuning desired state."
       },
       "actualState": {
         "type": {
-          "$ref": "#/1226"
+          "$ref": "#/1228"
         },
         "flags": 2,
         "description": "Automatic tuning actual state."
       },
       "options": {
         "type": {
-          "$ref": "#/1243"
+          "$ref": "#/1245"
         },
         "flags": 0,
         "description": "Automatic tuning options definition."
@@ -16792,16 +16806,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1217"
-      },
-      {
-        "$ref": "#/1218"
-      },
-      {
         "$ref": "#/1219"
       },
       {
         "$ref": "#/1220"
+      },
+      {
+        "$ref": "#/1221"
+      },
+      {
+        "$ref": "#/1222"
       }
     ]
   },
@@ -16825,16 +16839,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1222"
-      },
-      {
-        "$ref": "#/1223"
-      },
-      {
         "$ref": "#/1224"
       },
       {
         "$ref": "#/1225"
+      },
+      {
+        "$ref": "#/1226"
+      },
+      {
+        "$ref": "#/1227"
       }
     ]
   },
@@ -16844,14 +16858,14 @@
     "properties": {
       "desiredState": {
         "type": {
-          "$ref": "#/1231"
+          "$ref": "#/1233"
         },
         "flags": 0,
         "description": "Automatic tuning option desired state."
       },
       "actualState": {
         "type": {
-          "$ref": "#/1234"
+          "$ref": "#/1236"
         },
         "flags": 2,
         "description": "Automatic tuning option actual state."
@@ -16865,7 +16879,7 @@
       },
       "reasonDesc": {
         "type": {
-          "$ref": "#/1242"
+          "$ref": "#/1244"
         },
         "flags": 2,
         "description": "Reason description if desired and actual state are different."
@@ -16888,13 +16902,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1228"
-      },
-      {
-        "$ref": "#/1229"
-      },
-      {
         "$ref": "#/1230"
+      },
+      {
+        "$ref": "#/1231"
+      },
+      {
+        "$ref": "#/1232"
       }
     ]
   },
@@ -16910,10 +16924,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1232"
+        "$ref": "#/1234"
       },
       {
-        "$ref": "#/1233"
+        "$ref": "#/1235"
       }
     ]
   },
@@ -16949,12 +16963,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1235"
-      },
-      {
-        "$ref": "#/1236"
-      },
-      {
         "$ref": "#/1237"
       },
       {
@@ -16968,6 +16976,12 @@
       },
       {
         "$ref": "#/1241"
+      },
+      {
+        "$ref": "#/1242"
+      },
+      {
+        "$ref": "#/1243"
       }
     ]
   },
@@ -16976,14 +16990,14 @@
     "name": "DatabaseAutomaticTuningPropertiesOptions",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1227"
+      "$ref": "#/1229"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/automaticTuning@2025-01-01",
     "body": {
-      "$ref": "#/1215"
+      "$ref": "#/1217"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -17016,21 +17030,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1245"
+          "$ref": "#/1247"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1246"
+          "$ref": "#/1248"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1248"
+          "$ref": "#/1250"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -17050,14 +17064,14 @@
     "properties": {
       "columnType": {
         "type": {
-          "$ref": "#/1283"
+          "$ref": "#/1285"
         },
         "flags": 0,
         "description": "The column data type."
       },
       "temporalType": {
         "type": {
-          "$ref": "#/1287"
+          "$ref": "#/1289"
         },
         "flags": 0,
         "description": "The table temporal type."
@@ -17218,12 +17232,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1249"
-      },
-      {
-        "$ref": "#/1250"
-      },
-      {
         "$ref": "#/1251"
       },
       {
@@ -17320,6 +17328,12 @@
         "$ref": "#/1282"
       },
       {
+        "$ref": "#/1283"
+      },
+      {
+        "$ref": "#/1284"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -17340,13 +17354,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1284"
-      },
-      {
-        "$ref": "#/1285"
-      },
-      {
         "$ref": "#/1286"
+      },
+      {
+        "$ref": "#/1287"
+      },
+      {
+        "$ref": "#/1288"
       },
       {
         "$ref": "#/0"
@@ -17357,7 +17371,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas/tables/columns@2025-01-01",
     "body": {
-      "$ref": "#/1247"
+      "$ref": "#/1249"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -17390,21 +17404,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1289"
+          "$ref": "#/1291"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1290"
+          "$ref": "#/1292"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1169"
+          "$ref": "#/1171"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -17436,7 +17450,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/advisors/recommendedActions@2025-01-01",
     "body": {
-      "$ref": "#/1291"
+      "$ref": "#/1293"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -17469,14 +17483,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1293"
+          "$ref": "#/1295"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1294"
+          "$ref": "#/1296"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -17494,7 +17508,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas@2025-01-01",
     "body": {
-      "$ref": "#/1295"
+      "$ref": "#/1297"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -17527,21 +17541,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1297"
+          "$ref": "#/1299"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1298"
+          "$ref": "#/1300"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1300"
+          "$ref": "#/1302"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -17568,7 +17582,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1304"
+          "$ref": "#/1306"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule result status."
@@ -17589,28 +17603,28 @@
       },
       "queryResults": {
         "type": {
-          "$ref": "#/1306"
+          "$ref": "#/1308"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment query results that was run."
       },
       "remediation": {
         "type": {
-          "$ref": "#/1307"
+          "$ref": "#/1309"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment the remediation details."
       },
       "baselineAdjustedResult": {
         "type": {
-          "$ref": "#/1309"
+          "$ref": "#/1311"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule result adjusted with baseline."
       },
       "ruleMetadata": {
         "type": {
-          "$ref": "#/1321"
+          "$ref": "#/1323"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule metadata."
@@ -17633,13 +17647,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1301"
-      },
-      {
-        "$ref": "#/1302"
-      },
-      {
         "$ref": "#/1303"
+      },
+      {
+        "$ref": "#/1304"
+      },
+      {
+        "$ref": "#/1305"
       },
       {
         "$ref": "#/0"
@@ -17655,7 +17669,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1305"
+      "$ref": "#/1307"
     }
   },
   {
@@ -17671,7 +17685,7 @@
       },
       "scripts": {
         "type": {
-          "$ref": "#/1308"
+          "$ref": "#/1310"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment remediation script."
@@ -17704,28 +17718,28 @@
     "properties": {
       "baseline": {
         "type": {
-          "$ref": "#/1310"
+          "$ref": "#/1312"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment baseline details"
       },
       "status": {
         "type": {
-          "$ref": "#/1316"
+          "$ref": "#/1318"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment baseline status"
       },
       "resultsNotInBaseline": {
         "type": {
-          "$ref": "#/1318"
+          "$ref": "#/1320"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment results that are not in baseline"
       },
       "resultsOnlyInBaseline": {
         "type": {
-          "$ref": "#/1320"
+          "$ref": "#/1322"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment results that are in baseline."
@@ -17738,7 +17752,7 @@
     "properties": {
       "expectedResults": {
         "type": {
-          "$ref": "#/1312"
+          "$ref": "#/1314"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment baseline expected results"
@@ -17761,7 +17775,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1311"
+      "$ref": "#/1313"
     }
   },
   {
@@ -17780,13 +17794,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1313"
-      },
-      {
-        "$ref": "#/1314"
-      },
-      {
         "$ref": "#/1315"
+      },
+      {
+        "$ref": "#/1316"
+      },
+      {
+        "$ref": "#/1317"
       },
       {
         "$ref": "#/0"
@@ -17802,7 +17816,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1317"
+      "$ref": "#/1319"
     }
   },
   {
@@ -17814,7 +17828,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1319"
+      "$ref": "#/1321"
     }
   },
   {
@@ -17830,7 +17844,7 @@
       },
       "severity": {
         "type": {
-          "$ref": "#/1327"
+          "$ref": "#/1329"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule severity."
@@ -17844,7 +17858,7 @@
       },
       "ruleType": {
         "type": {
-          "$ref": "#/1332"
+          "$ref": "#/1334"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule type."
@@ -17872,14 +17886,14 @@
       },
       "queryCheck": {
         "type": {
-          "$ref": "#/1333"
+          "$ref": "#/1335"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment rule query details."
       },
       "benchmarkReferences": {
         "type": {
-          "$ref": "#/1338"
+          "$ref": "#/1340"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment benchmark references."
@@ -17910,12 +17924,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1322"
-      },
-      {
-        "$ref": "#/1323"
-      },
-      {
         "$ref": "#/1324"
       },
       {
@@ -17923,6 +17931,12 @@
       },
       {
         "$ref": "#/1326"
+      },
+      {
+        "$ref": "#/1327"
+      },
+      {
+        "$ref": "#/1328"
       },
       {
         "$ref": "#/0"
@@ -17949,16 +17963,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1328"
-      },
-      {
-        "$ref": "#/1329"
-      },
-      {
         "$ref": "#/1330"
       },
       {
         "$ref": "#/1331"
+      },
+      {
+        "$ref": "#/1332"
+      },
+      {
+        "$ref": "#/1333"
       },
       {
         "$ref": "#/0"
@@ -17978,14 +17992,14 @@
       },
       "expectedResult": {
         "type": {
-          "$ref": "#/1335"
+          "$ref": "#/1337"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment query expected result."
       },
       "columnNames": {
         "type": {
-          "$ref": "#/1336"
+          "$ref": "#/1338"
         },
         "flags": 2,
         "description": "SQL Vulnerability Assessment column names of query expected result."
@@ -18001,7 +18015,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1334"
+      "$ref": "#/1336"
     }
   },
   {
@@ -18033,14 +18047,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1337"
+      "$ref": "#/1339"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults@2025-01-01",
     "body": {
-      "$ref": "#/1299"
+      "$ref": "#/1301"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18073,21 +18087,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1340"
+          "$ref": "#/1342"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1341"
+          "$ref": "#/1343"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1343"
+          "$ref": "#/1345"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18114,14 +18128,14 @@
       },
       "triggerType": {
         "type": {
-          "$ref": "#/1346"
+          "$ref": "#/1348"
         },
         "flags": 2,
         "description": "The scan trigger type."
       },
       "state": {
         "type": {
-          "$ref": "#/1351"
+          "$ref": "#/1353"
         },
         "flags": 2,
         "description": "The scan status."
@@ -18142,7 +18156,7 @@
       },
       "errors": {
         "type": {
-          "$ref": "#/1353"
+          "$ref": "#/1355"
         },
         "flags": 2,
         "description": "The scan errors."
@@ -18238,10 +18252,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1344"
+        "$ref": "#/1346"
       },
       {
-        "$ref": "#/1345"
+        "$ref": "#/1347"
       },
       {
         "$ref": "#/0"
@@ -18268,16 +18282,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1347"
-      },
-      {
-        "$ref": "#/1348"
-      },
-      {
         "$ref": "#/1349"
       },
       {
         "$ref": "#/1350"
+      },
+      {
+        "$ref": "#/1351"
+      },
+      {
+        "$ref": "#/1352"
       },
       {
         "$ref": "#/0"
@@ -18307,14 +18321,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1352"
+      "$ref": "#/1354"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans@2025-01-01",
     "body": {
-      "$ref": "#/1342"
+      "$ref": "#/1344"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18327,7 +18341,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1355"
+        "$ref": "#/1357"
       },
       {
         "$ref": "#/0"
@@ -18355,28 +18369,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1356"
+          "$ref": "#/1358"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1357"
+          "$ref": "#/1359"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1358"
+          "$ref": "#/1360"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1014"
+          "$ref": "#/1016"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18394,7 +18408,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2025-01-01",
     "body": {
-      "$ref": "#/1359"
+      "$ref": "#/1361"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18427,21 +18441,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1361"
+          "$ref": "#/1363"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1362"
+          "$ref": "#/1364"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1364"
+          "$ref": "#/1366"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18461,7 +18475,7 @@
     "properties": {
       "temporalType": {
         "type": {
-          "$ref": "#/1368"
+          "$ref": "#/1370"
         },
         "flags": 0,
         "description": "The table temporal type."
@@ -18491,13 +18505,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1365"
-      },
-      {
-        "$ref": "#/1366"
-      },
-      {
         "$ref": "#/1367"
+      },
+      {
+        "$ref": "#/1368"
+      },
+      {
+        "$ref": "#/1369"
       },
       {
         "$ref": "#/0"
@@ -18508,7 +18522,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/schemas/tables@2025-01-01",
     "body": {
-      "$ref": "#/1363"
+      "$ref": "#/1365"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18541,21 +18555,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1370"
+          "$ref": "#/1372"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1371"
+          "$ref": "#/1373"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1373"
+          "$ref": "#/1375"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18582,14 +18596,14 @@
       },
       "triggerType": {
         "type": {
-          "$ref": "#/1376"
+          "$ref": "#/1378"
         },
         "flags": 2,
         "description": "The scan trigger type."
       },
       "state": {
         "type": {
-          "$ref": "#/1381"
+          "$ref": "#/1383"
         },
         "flags": 2,
         "description": "The scan status."
@@ -18610,7 +18624,7 @@
       },
       "errors": {
         "type": {
-          "$ref": "#/1383"
+          "$ref": "#/1385"
         },
         "flags": 2,
         "description": "The scan errors."
@@ -18643,10 +18657,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1374"
+        "$ref": "#/1376"
       },
       {
-        "$ref": "#/1375"
+        "$ref": "#/1377"
       },
       {
         "$ref": "#/0"
@@ -18673,16 +18687,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1377"
-      },
-      {
-        "$ref": "#/1378"
-      },
-      {
         "$ref": "#/1379"
       },
       {
         "$ref": "#/1380"
+      },
+      {
+        "$ref": "#/1381"
+      },
+      {
+        "$ref": "#/1382"
       },
       {
         "$ref": "#/0"
@@ -18712,14 +18726,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1382"
+      "$ref": "#/1384"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2025-01-01",
     "body": {
-      "$ref": "#/1372"
+      "$ref": "#/1374"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18732,7 +18746,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1385"
+        "$ref": "#/1387"
       },
       {
         "$ref": "#/0"
@@ -18760,28 +18774,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1386"
+          "$ref": "#/1388"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1387"
+          "$ref": "#/1389"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1388"
+          "$ref": "#/1390"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1390"
+          "$ref": "#/1392"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18812,7 +18826,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2025-01-01",
     "body": {
-      "$ref": "#/1389"
+      "$ref": "#/1391"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -18845,21 +18859,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1392"
+          "$ref": "#/1394"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1393"
+          "$ref": "#/1395"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1395"
+          "$ref": "#/1397"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18911,7 +18925,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/deletedServers@2025-01-01",
     "body": {
-      "$ref": "#/1394"
+      "$ref": "#/1396"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -18944,21 +18958,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1397"
+          "$ref": "#/1399"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1398"
+          "$ref": "#/1400"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1400"
+          "$ref": "#/1402"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -18989,7 +19003,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/endpointCertificates@2025-01-01",
     "body": {
-      "$ref": "#/1399"
+      "$ref": "#/1401"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19022,21 +19036,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1402"
+          "$ref": "#/1404"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1403"
+          "$ref": "#/1405"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1405"
+          "$ref": "#/1407"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -19091,7 +19105,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1412"
+          "$ref": "#/1414"
         },
         "flags": 2,
         "description": "The operation state."
@@ -19119,7 +19133,7 @@
       },
       "errorType": {
         "type": {
-          "$ref": "#/1415"
+          "$ref": "#/1417"
         },
         "flags": 2,
         "description": "Error type (e.g. None, User)."
@@ -19175,12 +19189,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1406"
-      },
-      {
-        "$ref": "#/1407"
-      },
-      {
         "$ref": "#/1408"
       },
       {
@@ -19191,6 +19199,12 @@
       },
       {
         "$ref": "#/1411"
+      },
+      {
+        "$ref": "#/1412"
+      },
+      {
+        "$ref": "#/1413"
       },
       {
         "$ref": "#/0"
@@ -19209,10 +19223,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1413"
+        "$ref": "#/1415"
       },
       {
-        "$ref": "#/1414"
+        "$ref": "#/1416"
       },
       {
         "$ref": "#/0"
@@ -19223,7 +19237,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/instancePools/operations@2025-01-01",
     "body": {
-      "$ref": "#/1404"
+      "$ref": "#/1406"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19256,14 +19270,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1417"
+          "$ref": "#/1419"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1418"
+          "$ref": "#/1420"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -19288,7 +19302,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2025-01-01",
     "body": {
-      "$ref": "#/1419"
+      "$ref": "#/1421"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19321,14 +19335,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1421"
+          "$ref": "#/1423"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1422"
+          "$ref": "#/1424"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -19353,7 +19367,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2025-01-01",
     "body": {
-      "$ref": "#/1423"
+      "$ref": "#/1425"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19386,14 +19400,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1425"
+          "$ref": "#/1427"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1426"
+          "$ref": "#/1428"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -19418,7 +19432,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2025-01-01",
     "body": {
-      "$ref": "#/1427"
+      "$ref": "#/1429"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19451,14 +19465,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1429"
+          "$ref": "#/1431"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1430"
+          "$ref": "#/1432"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -19476,7 +19490,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/jobAgents/jobs/versions@2025-01-01",
     "body": {
-      "$ref": "#/1431"
+      "$ref": "#/1433"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -19509,21 +19523,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1433"
+          "$ref": "#/1435"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1434"
+          "$ref": "#/1436"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1436"
+          "$ref": "#/1438"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -19585,14 +19599,14 @@
       },
       "backupStorageRedundancy": {
         "type": {
-          "$ref": "#/1441"
+          "$ref": "#/1443"
         },
         "flags": 2,
         "description": "The storage redundancy type of the backup"
       },
       "requestedBackupStorageRedundancy": {
         "type": {
-          "$ref": "#/1446"
+          "$ref": "#/1448"
         },
         "flags": 4,
         "description": "The storage redundancy type of the backup"
@@ -19606,28 +19620,28 @@
       },
       "timeBasedImmutability": {
         "type": {
-          "$ref": "#/1449"
+          "$ref": "#/1451"
         },
         "flags": 0,
         "description": "The setting for whether or not time-based immutability is enabled for the LTR backup. When time-based immutability is enabled and locked, the backup cannot be deleted until BackupExpirationTime."
       },
       "timeBasedImmutabilityMode": {
         "type": {
-          "$ref": "#/1452"
+          "$ref": "#/1454"
         },
         "flags": 0,
         "description": "The time-based immutability mode. Only applicable if time-based immutability is enabled."
       },
       "legalHoldImmutability": {
         "type": {
-          "$ref": "#/1455"
+          "$ref": "#/1457"
         },
         "flags": 0,
         "description": "The setting for whether LegalHold is enabled or disabled on the LTR backup. When LegalHold is enabled, the backup cannot be deleted until the LegalHold is removed."
       },
       "backupStorageAccessTier": {
         "type": {
-          "$ref": "#/1458"
+          "$ref": "#/1460"
         },
         "flags": 2,
         "description": "The BackupStorageAccessTier for the LTR backup"
@@ -19654,16 +19668,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1437"
-      },
-      {
-        "$ref": "#/1438"
-      },
-      {
         "$ref": "#/1439"
       },
       {
         "$ref": "#/1440"
+      },
+      {
+        "$ref": "#/1441"
+      },
+      {
+        "$ref": "#/1442"
       },
       {
         "$ref": "#/0"
@@ -19690,16 +19704,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1442"
-      },
-      {
-        "$ref": "#/1443"
-      },
-      {
         "$ref": "#/1444"
       },
       {
         "$ref": "#/1445"
+      },
+      {
+        "$ref": "#/1446"
+      },
+      {
+        "$ref": "#/1447"
       },
       {
         "$ref": "#/0"
@@ -19718,10 +19732,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1447"
+        "$ref": "#/1449"
       },
       {
-        "$ref": "#/1448"
+        "$ref": "#/1450"
       },
       {
         "$ref": "#/0"
@@ -19740,10 +19754,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1450"
+        "$ref": "#/1452"
       },
       {
-        "$ref": "#/1451"
+        "$ref": "#/1453"
       },
       {
         "$ref": "#/0"
@@ -19762,10 +19776,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1453"
+        "$ref": "#/1455"
       },
       {
-        "$ref": "#/1454"
+        "$ref": "#/1456"
       },
       {
         "$ref": "#/0"
@@ -19784,10 +19798,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1456"
+        "$ref": "#/1458"
       },
       {
-        "$ref": "#/1457"
+        "$ref": "#/1459"
       },
       {
         "$ref": "#/0"
@@ -19798,7 +19812,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-01-01",
     "body": {
-      "$ref": "#/1435"
+      "$ref": "#/1437"
     },
     "readableScopes": 12,
     "writableScopes": 0
@@ -19831,21 +19845,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1460"
+          "$ref": "#/1462"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1461"
+          "$ref": "#/1463"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1463"
+          "$ref": "#/1465"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -19907,14 +19921,14 @@
       },
       "backupStorageRedundancy": {
         "type": {
-          "$ref": "#/1468"
+          "$ref": "#/1470"
         },
         "flags": 2,
         "description": "The storage redundancy type of the backup"
       },
       "backupStorageAccessTier": {
         "type": {
-          "$ref": "#/1471"
+          "$ref": "#/1473"
         },
         "flags": 2,
         "description": "The BackupStorageAccessTier for the LTR backup"
@@ -19941,16 +19955,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1464"
-      },
-      {
-        "$ref": "#/1465"
-      },
-      {
         "$ref": "#/1466"
       },
       {
         "$ref": "#/1467"
+      },
+      {
+        "$ref": "#/1468"
+      },
+      {
+        "$ref": "#/1469"
       },
       {
         "$ref": "#/0"
@@ -19969,10 +19983,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1469"
+        "$ref": "#/1471"
       },
       {
-        "$ref": "#/1470"
+        "$ref": "#/1472"
       },
       {
         "$ref": "#/0"
@@ -19983,7 +19997,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2025-01-01",
     "body": {
-      "$ref": "#/1462"
+      "$ref": "#/1464"
     },
     "readableScopes": 12,
     "writableScopes": 0
@@ -20016,21 +20030,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1473"
+          "$ref": "#/1475"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1474"
+          "$ref": "#/1476"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1248"
+          "$ref": "#/1250"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20048,7 +20062,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2025-01-01",
     "body": {
-      "$ref": "#/1475"
+      "$ref": "#/1477"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20081,21 +20095,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1477"
+          "$ref": "#/1479"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1478"
+          "$ref": "#/1480"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1480"
+          "$ref": "#/1482"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20136,14 +20150,14 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1487"
+          "$ref": "#/1489"
         },
         "flags": 2,
         "description": "The operation state."
       },
       "operationMode": {
         "type": {
-          "$ref": "#/1490"
+          "$ref": "#/1492"
         },
         "flags": 2,
         "description": "Operation mode."
@@ -20255,12 +20269,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1481"
-      },
-      {
-        "$ref": "#/1482"
-      },
-      {
         "$ref": "#/1483"
       },
       {
@@ -20271,6 +20279,12 @@
       },
       {
         "$ref": "#/1486"
+      },
+      {
+        "$ref": "#/1487"
+      },
+      {
+        "$ref": "#/1488"
       },
       {
         "$ref": "#/0"
@@ -20289,10 +20303,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1488"
+        "$ref": "#/1490"
       },
       {
-        "$ref": "#/1489"
+        "$ref": "#/1491"
       },
       {
         "$ref": "#/0"
@@ -20303,7 +20317,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/managedDatabaseMoveOperationResults@2025-01-01",
     "body": {
-      "$ref": "#/1479"
+      "$ref": "#/1481"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20336,21 +20350,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1492"
+          "$ref": "#/1494"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1493"
+          "$ref": "#/1495"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1495"
+          "$ref": "#/1497"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20381,7 +20395,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/queries@2025-01-01",
     "body": {
-      "$ref": "#/1494"
+      "$ref": "#/1496"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20394,7 +20408,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1497"
+        "$ref": "#/1499"
       },
       {
         "$ref": "#/0"
@@ -20422,28 +20436,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1498"
+          "$ref": "#/1500"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1499"
+          "$ref": "#/1501"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1500"
+          "$ref": "#/1502"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1502"
+          "$ref": "#/1504"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20589,28 +20603,28 @@
       },
       "fullBackupSets": {
         "type": {
-          "$ref": "#/1504"
+          "$ref": "#/1506"
         },
         "flags": 2,
         "description": "Full backup sets."
       },
       "diffBackupSets": {
         "type": {
-          "$ref": "#/1505"
+          "$ref": "#/1507"
         },
         "flags": 2,
         "description": "Diff backup sets."
       },
       "logBackupSets": {
         "type": {
-          "$ref": "#/1506"
+          "$ref": "#/1508"
         },
         "flags": 2,
         "description": "Log backup sets."
       },
       "unrestorableFiles": {
         "type": {
-          "$ref": "#/1508"
+          "$ref": "#/1510"
         },
         "flags": 2,
         "description": "Unrestorable files."
@@ -20668,19 +20682,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1503"
+      "$ref": "#/1505"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1503"
+      "$ref": "#/1505"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1503"
+      "$ref": "#/1505"
     }
   },
   {
@@ -20699,14 +20713,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1507"
+      "$ref": "#/1509"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/restoreDetails@2025-01-01",
     "body": {
-      "$ref": "#/1501"
+      "$ref": "#/1503"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20739,14 +20753,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1510"
+          "$ref": "#/1512"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1511"
+          "$ref": "#/1513"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -20764,7 +20778,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas@2025-01-01",
     "body": {
-      "$ref": "#/1512"
+      "$ref": "#/1514"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20797,21 +20811,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1514"
+          "$ref": "#/1516"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1515"
+          "$ref": "#/1517"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1364"
+          "$ref": "#/1366"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20829,7 +20843,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/schemas/tables@2025-01-01",
     "body": {
-      "$ref": "#/1516"
+      "$ref": "#/1518"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20862,21 +20876,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1518"
+          "$ref": "#/1520"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1519"
+          "$ref": "#/1521"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1373"
+          "$ref": "#/1375"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20894,7 +20908,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2025-01-01",
     "body": {
-      "$ref": "#/1520"
+      "$ref": "#/1522"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -20927,21 +20941,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1522"
+          "$ref": "#/1524"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1523"
+          "$ref": "#/1525"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1525"
+          "$ref": "#/1527"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -20996,7 +21010,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/1532"
+          "$ref": "#/1534"
         },
         "flags": 2,
         "description": "The operation state."
@@ -21052,14 +21066,14 @@
       },
       "operationParameters": {
         "type": {
-          "$ref": "#/1533"
+          "$ref": "#/1535"
         },
         "flags": 2,
         "description": "The operation parameters."
       },
       "operationSteps": {
         "type": {
-          "$ref": "#/1535"
+          "$ref": "#/1537"
         },
         "flags": 2,
         "description": "The operation steps."
@@ -21094,12 +21108,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1526"
-      },
-      {
-        "$ref": "#/1527"
-      },
-      {
         "$ref": "#/1528"
       },
       {
@@ -21112,6 +21120,12 @@
         "$ref": "#/1531"
       },
       {
+        "$ref": "#/1532"
+      },
+      {
+        "$ref": "#/1533"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -21122,14 +21136,14 @@
     "properties": {
       "currentParameters": {
         "type": {
-          "$ref": "#/1534"
+          "$ref": "#/1536"
         },
         "flags": 2,
         "description": "The current parameters."
       },
       "requestedParameters": {
         "type": {
-          "$ref": "#/1534"
+          "$ref": "#/1536"
         },
         "flags": 2,
         "description": "The requested parameters."
@@ -21186,7 +21200,7 @@
       },
       "stepsList": {
         "type": {
-          "$ref": "#/1544"
+          "$ref": "#/1546"
         },
         "flags": 2,
         "description": "The operation steps list."
@@ -21229,7 +21243,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1543"
+          "$ref": "#/1545"
         },
         "flags": 0
       }
@@ -21263,12 +21277,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1537"
-      },
-      {
-        "$ref": "#/1538"
-      },
-      {
         "$ref": "#/1539"
       },
       {
@@ -21281,6 +21289,12 @@
         "$ref": "#/1542"
       },
       {
+        "$ref": "#/1543"
+      },
+      {
+        "$ref": "#/1544"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -21288,14 +21302,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1536"
+      "$ref": "#/1538"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/operations@2025-01-01",
     "body": {
-      "$ref": "#/1524"
+      "$ref": "#/1526"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -21328,21 +21342,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1546"
+          "$ref": "#/1548"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1547"
+          "$ref": "#/1549"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1549"
+          "$ref": "#/1551"
         },
         "flags": 2,
         "description": "The private link resource group id."
@@ -21369,14 +21383,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/1550"
+          "$ref": "#/1552"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/1551"
+          "$ref": "#/1553"
         },
         "flags": 2,
         "description": "The private link resource required zone names."
@@ -21399,7 +21413,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/privateLinkResources@2025-01-01",
     "body": {
-      "$ref": "#/1548"
+      "$ref": "#/1550"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -21432,21 +21446,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1553"
+          "$ref": "#/1555"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1554"
+          "$ref": "#/1556"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1556"
+          "$ref": "#/1558"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -21472,25 +21486,25 @@
       },
       "networkSecurityPerimeter": {
         "type": {
-          "$ref": "#/1557"
+          "$ref": "#/1559"
         },
         "flags": 0
       },
       "resourceAssociation": {
         "type": {
-          "$ref": "#/1558"
+          "$ref": "#/1560"
         },
         "flags": 0
       },
       "profile": {
         "type": {
-          "$ref": "#/1559"
+          "$ref": "#/1561"
         },
         "flags": 0
       },
       "provisioningIssues": {
         "type": {
-          "$ref": "#/1573"
+          "$ref": "#/1575"
         },
         "flags": 0
       }
@@ -21556,7 +21570,7 @@
       },
       "accessRules": {
         "type": {
-          "$ref": "#/1568"
+          "$ref": "#/1570"
         },
         "flags": 0
       }
@@ -21574,7 +21588,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1561"
+          "$ref": "#/1563"
         },
         "flags": 0
       }
@@ -21592,31 +21606,31 @@
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/1562"
+          "$ref": "#/1564"
         },
         "flags": 0
       },
       "fullyQualifiedDomainNames": {
         "type": {
-          "$ref": "#/1563"
+          "$ref": "#/1565"
         },
         "flags": 0
       },
       "subscriptions": {
         "type": {
-          "$ref": "#/1564"
+          "$ref": "#/1566"
         },
         "flags": 0
       },
       "networkSecurityPerimeters": {
         "type": {
-          "$ref": "#/1566"
+          "$ref": "#/1568"
         },
         "flags": 0
       },
       "serviceTags": {
         "type": {
-          "$ref": "#/1567"
+          "$ref": "#/1569"
         },
         "flags": 0
       }
@@ -21667,7 +21681,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1565"
+      "$ref": "#/1567"
     }
   },
   {
@@ -21679,7 +21693,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1560"
+      "$ref": "#/1562"
     }
   },
   {
@@ -21694,7 +21708,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1570"
+          "$ref": "#/1572"
         },
         "flags": 0
       }
@@ -21724,13 +21738,13 @@
       },
       "suggestedResourceIds": {
         "type": {
-          "$ref": "#/1571"
+          "$ref": "#/1573"
         },
         "flags": 0
       },
       "suggestedAccessRules": {
         "type": {
-          "$ref": "#/1572"
+          "$ref": "#/1574"
         },
         "flags": 0
       }
@@ -21751,14 +21765,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1569"
+      "$ref": "#/1571"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/networkSecurityPerimeterConfigurations@2025-01-01",
     "body": {
-      "$ref": "#/1555"
+      "$ref": "#/1557"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -21791,21 +21805,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1575"
+          "$ref": "#/1577"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1576"
+          "$ref": "#/1578"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1578"
+          "$ref": "#/1580"
         },
         "flags": 2,
         "description": "The private link resource group id."
@@ -21832,14 +21846,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/1579"
+          "$ref": "#/1581"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/1580"
+          "$ref": "#/1582"
         },
         "flags": 2,
         "description": "The private link resource required zone names."
@@ -21862,7 +21876,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/privateLinkResources@2025-01-01",
     "body": {
-      "$ref": "#/1577"
+      "$ref": "#/1579"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -21895,21 +21909,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1582"
+          "$ref": "#/1584"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1583"
+          "$ref": "#/1585"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1585"
+          "$ref": "#/1587"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -21957,7 +21971,7 @@
       },
       "keys": {
         "type": {
-          "$ref": "#/1586"
+          "$ref": "#/1588"
         },
         "flags": 0,
         "description": "The resource ids of the user assigned identities to use"
@@ -21976,7 +21990,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/recoverableDatabases@2025-01-01",
     "body": {
-      "$ref": "#/1584"
+      "$ref": "#/1586"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22009,21 +22023,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1588"
+          "$ref": "#/1590"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1589"
+          "$ref": "#/1591"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1591"
+          "$ref": "#/1593"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22054,7 +22068,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/recoverableDatabases@2025-01-01",
     "body": {
-      "$ref": "#/1590"
+      "$ref": "#/1592"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22087,21 +22101,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1593"
+          "$ref": "#/1595"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1594"
+          "$ref": "#/1596"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1596"
+          "$ref": "#/1598"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22122,7 +22136,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1603"
+          "$ref": "#/1605"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -22177,14 +22191,14 @@
       },
       "backupStorageRedundancy": {
         "type": {
-          "$ref": "#/1601"
+          "$ref": "#/1603"
         },
         "flags": 2,
         "description": "The storage account type used to store backups for this database."
       },
       "keys": {
         "type": {
-          "$ref": "#/1602"
+          "$ref": "#/1604"
         },
         "flags": 0,
         "description": "The resource ids of the user assigned identities to use"
@@ -22211,16 +22225,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1597"
-      },
-      {
-        "$ref": "#/1598"
-      },
-      {
         "$ref": "#/1599"
       },
       {
         "$ref": "#/1600"
+      },
+      {
+        "$ref": "#/1601"
+      },
+      {
+        "$ref": "#/1602"
       },
       {
         "$ref": "#/0"
@@ -22247,7 +22261,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/restorableDroppedDatabases@2025-01-01",
     "body": {
-      "$ref": "#/1595"
+      "$ref": "#/1597"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22280,28 +22294,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1605"
+          "$ref": "#/1607"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1606"
+          "$ref": "#/1608"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1608"
+          "$ref": "#/1610"
         },
         "flags": 2,
         "description": "Resource properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/1609"
+          "$ref": "#/1611"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -22368,7 +22382,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/managedInstances/restorableDroppedDatabases@2025-01-01",
     "body": {
-      "$ref": "#/1607"
+      "$ref": "#/1609"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22401,21 +22415,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1611"
+          "$ref": "#/1613"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1612"
+          "$ref": "#/1614"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1614"
+          "$ref": "#/1616"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22442,7 +22456,7 @@
     "properties": {
       "restorePointType": {
         "type": {
-          "$ref": "#/1617"
+          "$ref": "#/1619"
         },
         "flags": 2,
         "description": "The type of restore point"
@@ -22482,10 +22496,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1615"
+        "$ref": "#/1617"
       },
       {
-        "$ref": "#/1616"
+        "$ref": "#/1618"
       }
     ]
   },
@@ -22493,7 +22507,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/databases/restorePoints@2025-01-01",
     "body": {
-      "$ref": "#/1613"
+      "$ref": "#/1615"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22526,21 +22540,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1619"
+          "$ref": "#/1621"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1620"
+          "$ref": "#/1622"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1152"
+          "$ref": "#/1154"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22572,7 +22586,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/advisors@2025-01-01",
     "body": {
-      "$ref": "#/1621"
+      "$ref": "#/1623"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22602,28 +22616,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1623"
+          "$ref": "#/1625"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1624"
+          "$ref": "#/1626"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1625"
+          "$ref": "#/1627"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1627"
+          "$ref": "#/1629"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22643,21 +22657,21 @@
     "properties": {
       "desiredState": {
         "type": {
-          "$ref": "#/1631"
+          "$ref": "#/1633"
         },
         "flags": 0,
         "description": "Automatic tuning desired state."
       },
       "actualState": {
         "type": {
-          "$ref": "#/1635"
+          "$ref": "#/1637"
         },
         "flags": 2,
         "description": "Automatic tuning actual state."
       },
       "options": {
         "type": {
-          "$ref": "#/1648"
+          "$ref": "#/1650"
         },
         "flags": 0,
         "description": "Automatic tuning options definition."
@@ -22680,13 +22694,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1628"
-      },
-      {
-        "$ref": "#/1629"
-      },
-      {
         "$ref": "#/1630"
+      },
+      {
+        "$ref": "#/1631"
+      },
+      {
+        "$ref": "#/1632"
       }
     ]
   },
@@ -22706,13 +22720,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1632"
-      },
-      {
-        "$ref": "#/1633"
-      },
-      {
         "$ref": "#/1634"
+      },
+      {
+        "$ref": "#/1635"
+      },
+      {
+        "$ref": "#/1636"
       }
     ]
   },
@@ -22722,14 +22736,14 @@
     "properties": {
       "desiredState": {
         "type": {
-          "$ref": "#/1640"
+          "$ref": "#/1642"
         },
         "flags": 0,
         "description": "Automatic tuning option desired state."
       },
       "actualState": {
         "type": {
-          "$ref": "#/1643"
+          "$ref": "#/1645"
         },
         "flags": 2,
         "description": "Automatic tuning option actual state."
@@ -22743,7 +22757,7 @@
       },
       "reasonDesc": {
         "type": {
-          "$ref": "#/1647"
+          "$ref": "#/1649"
         },
         "flags": 2,
         "description": "Reason description if desired and actual state are different."
@@ -22766,13 +22780,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1637"
-      },
-      {
-        "$ref": "#/1638"
-      },
-      {
         "$ref": "#/1639"
+      },
+      {
+        "$ref": "#/1640"
+      },
+      {
+        "$ref": "#/1641"
       }
     ]
   },
@@ -22788,10 +22802,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1641"
+        "$ref": "#/1643"
       },
       {
-        "$ref": "#/1642"
+        "$ref": "#/1644"
       }
     ]
   },
@@ -22811,13 +22825,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1644"
-      },
-      {
-        "$ref": "#/1645"
-      },
-      {
         "$ref": "#/1646"
+      },
+      {
+        "$ref": "#/1647"
+      },
+      {
+        "$ref": "#/1648"
       }
     ]
   },
@@ -22826,14 +22840,14 @@
     "name": "AutomaticTuningServerPropertiesOptions",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1636"
+      "$ref": "#/1638"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Sql/servers/automaticTuning@2025-01-01",
     "body": {
-      "$ref": "#/1626"
+      "$ref": "#/1628"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -22866,21 +22880,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1650"
+          "$ref": "#/1652"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1651"
+          "$ref": "#/1653"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1653"
+          "$ref": "#/1655"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -22932,7 +22946,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/usages@2025-01-01",
     "body": {
-      "$ref": "#/1652"
+      "$ref": "#/1654"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -22965,21 +22979,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1655"
+          "$ref": "#/1657"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1656"
+          "$ref": "#/1658"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1658"
+          "$ref": "#/1660"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -23017,7 +23031,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Sql/locations/timeZones@2025-01-01",
     "body": {
-      "$ref": "#/1657"
+      "$ref": "#/1659"
     },
     "readableScopes": 4,
     "writableScopes": 0

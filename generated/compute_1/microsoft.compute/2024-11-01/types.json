@@ -4974,12 +4974,12 @@
     "$type": "ObjectType",
     "name": "VirtualMachineScaleSetExtension",
     "properties": {
-      "properties": {
+      "name": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Describes the properties of a Virtual Machine Scale Set Extension."
+        "description": "Resource name"
       },
       "type": {
         "type": {
@@ -4988,12 +4988,12 @@
         "flags": 2,
         "description": "Resource type"
       },
-      "name": {
+      "properties": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/346"
         },
         "flags": 0,
-        "description": "Resource name"
+        "description": "Describes the properties of a Virtual Machine Scale Set Extension."
       },
       "id": {
         "type": {
@@ -12553,7 +12553,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/922"
+          "$ref": "#/923"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -12594,7 +12594,7 @@
       },
       "progress": {
         "type": {
-          "$ref": "#/921"
+          "$ref": "#/922"
         },
         "flags": 2,
         "description": "Information about the number of virtual machine instances in each upgrade state."
@@ -12614,7 +12614,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/917"
+          "$ref": "#/918"
         },
         "flags": 2,
         "description": "Code indicating the current status of the upgrade."
@@ -12628,7 +12628,7 @@
       },
       "lastAction": {
         "type": {
-          "$ref": "#/920"
+          "$ref": "#/921"
         },
         "flags": 2,
         "description": "The last action performed on the rolling upgrade."
@@ -12645,6 +12645,10 @@
   {
     "$type": "StringLiteralType",
     "value": "RollingForward"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RollingBack"
   },
   {
     "$type": "StringLiteralType",
@@ -12672,6 +12676,9 @@
       },
       {
         "$ref": "#/916"
+      },
+      {
+        "$ref": "#/917"
       }
     ]
   },
@@ -12687,10 +12694,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/918"
+        "$ref": "#/919"
       },
       {
-        "$ref": "#/919"
+        "$ref": "#/920"
       }
     ]
   },

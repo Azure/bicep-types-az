@@ -718,7 +718,7 @@ resource exampleResource 'Microsoft.Compute/galleries/images/versions@2025-03-03
           additionalReplicaSets: [
             {
               regionalReplicaCount: 1
-              storageAccountType: 'PreviumV2_LRS'
+              storageAccountType: 'PremiumV2_LRS'
             }
           ]
           encryption: {
