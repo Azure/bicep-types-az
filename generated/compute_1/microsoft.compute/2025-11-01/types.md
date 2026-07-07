@@ -962,7 +962,7 @@ its default value is true
 
 ## RollingUpgradeRunningStatus
 ### Properties
-* **code**: 'Cancelled' | 'Completed' | 'Faulted' | 'RollingForward' (ReadOnly): Code indicating the current status of the upgrade.
+* **code**: 'Cancelled' | 'Completed' | 'Faulted' | 'RollingBack' | 'RollingForward' (ReadOnly): Code indicating the current status of the upgrade.
 * **lastAction**: 'Cancel' | 'Start' (ReadOnly): The last action performed on the rolling upgrade.
 * **lastActionTime**: string (ReadOnly): Last action time of the upgrade.
 * **startTime**: string (ReadOnly): Start time of the upgrade.

@@ -101,14 +101,14 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The version of the HorizonDb cluster."
+        "description": "The version of the HorizonDB cluster."
       },
       "createMode": {
         "type": {
           "$ref": "#/11"
         },
         "flags": 0,
-        "description": "The mode to create a new HorizonDb cluster."
+        "description": "The mode to create a new HorizonDB cluster."
       },
       "pointInTimeUTC": {
         "type": {
@@ -150,7 +150,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The processor type for the HorizonDb cluster."
+        "description": "The processor type for the HorizonDB cluster."
       },
       "network": {
         "type": {
@@ -432,7 +432,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "Indication of if parameter group is applied on HorizonDb resource."
+        "description": "Indication of if parameter group is applied on HorizonDB resource."
       },
       "applyImmediately": {
         "type": {
@@ -924,7 +924,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The description of the HorizonDb firewall rule."
+        "description": "The description of the HorizonDB firewall rule."
       },
       "provisioningState": {
         "type": {
@@ -1294,7 +1294,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The location of the HorizonDb pool."
+        "description": "The location of the HorizonDB pool."
       },
       "state": {
         "type": {
@@ -1315,7 +1315,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The version of the HorizonDb pool."
+        "description": "The version of the HorizonDB pool."
       },
       "createMode": {
         "type": {

@@ -220,7 +220,7 @@
 * **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA. Default for RSA and RSA-HSM keys is 2048. Exception made for bring your own key (BYOK), key exchange keys default to 4096.
 * **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
 * **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
-* **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM' | string: The type of the key. For valid values, see JsonWebKeyType.
+* **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM' | 'oct-HSM' | string: The type of the key. For valid values, see JsonWebKeyType.
 * **release_policy**: [KeyReleasePolicy](#keyreleasepolicy): Key release policy in response. It will be used for both output and input. Omitted if empty
 * **rotationPolicy**: [RotationPolicy](#rotationpolicy): Key rotation policy in response. It will be used for both output and input. Omitted if empty
 
@@ -272,7 +272,7 @@
 * **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA. Default for RSA and RSA-HSM keys is 2048. Exception made for bring your own key (BYOK), key exchange keys default to 4096.
 * **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
 * **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
-* **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM' | string: The type of the key. For valid values, see JsonWebKeyType.
+* **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM' | 'oct-HSM' | string: The type of the key. For valid values, see JsonWebKeyType.
 * **release_policy**: [ManagedHsmKeyReleasePolicy](#managedhsmkeyreleasepolicy): Key release policy in response. It will be used for both output and input. Omitted if empty
 * **rotationPolicy**: [ManagedHsmRotationPolicy](#managedhsmrotationpolicy): Key rotation policy in response. It will be used for both output and input. Omitted if empty
 
@@ -328,7 +328,7 @@
 ## ManagedHsmSku
 ### Properties
 * **family**: 'B' | 'C' | string (Required): SKU Family of the managed HSM Pool
-* **name**: 'Custom_B32' | 'Custom_B6' | 'Custom_C10' | 'Custom_C42' | 'Standard_B1' (Required): SKU of the managed HSM Pool
+* **name**: 'Custom_B32' | 'Custom_B6' | 'Custom_C10' | 'Custom_C42' | 'Standard_B1' | string (Required): SKU of the managed HSM Pool
 
 ## ManagedHsmTags
 ### Properties

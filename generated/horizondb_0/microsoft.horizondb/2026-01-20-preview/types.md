@@ -86,31 +86,31 @@
 ### Properties
 * **applyImmediately**: bool: Indicates whether the parameters should be applied immediately.
 * **id**: string: The resource ID of the connected parameter group.
-* **syncStatus**: string (ReadOnly): Indication of if parameter group is applied on HorizonDb resource.
+* **syncStatus**: string (ReadOnly): Indication of if parameter group is applied on HorizonDB resource.
 
 ## HorizonDbClusterProperties
 ### Properties
 * **administratorLogin**: string {minLength: 1, maxLength: 63} (Required): The administrator login name.
 * **administratorLoginPassword**: string {sensitive, minLength: 8, maxLength: 128} (WriteOnly): The administrator login password.
-* **createMode**: 'Create' | 'PointInTimeRestore' | 'Update' | string: The mode to create a new HorizonDb cluster.
+* **createMode**: 'Create' | 'PointInTimeRestore' | 'Update' | string: The mode to create a new HorizonDB cluster.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the cluster.
 * **network**: [Network](#network): The network related info.
 * **parameterGroup**: [HorizonDbClusterParameterGroupConnectionProperties](#horizondbclusterparametergroupconnectionproperties): Defines connection to a parameter group.
 * **pointInTimeUTC**: string: Restore point creation time specifying the time to restore from.
 * **poolName**: string: The pool name for restore or replica operations.
-* **processorType**: string: The processor type for the HorizonDb cluster.
+* **processorType**: string: The processor type for the HorizonDB cluster.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the cluster.
 * **readonlyEndpoint**: string (ReadOnly): The fully qualified domain name used for readonly endpoint for the cluster.
 * **replicaCount**: int {minValue: 1}: Number of replicas.
 * **sourceClusterResourceId**: string: The source cluster resource ID for restore or replica creation.
 * **state**: 'Disabled' | 'Dropping' | 'Healthy' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): Current state of the cluster.
 * **vCores**: int {minValue: 1, maxValue: 96}: Number of vCores.
-* **version**: string: The version of the HorizonDb cluster.
+* **version**: string: The version of the HorizonDB cluster.
 * **zonePlacementPolicy**: 'BestEffort' | 'Strict' | string: Defines how replicas are placed across availability zones.
 
 ## HorizonDbFirewallRuleProperties
 ### Properties
-* **description**: string: The description of the HorizonDb firewall rule.
+* **description**: string: The description of the HorizonDB firewall rule.
 * **endIpAddress**: string (Required): The end IP address of the firewall rule (IPv4).
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the firewall rule.
 * **startIpAddress**: string (Required): The start IP address of the firewall rule (IPv4).
@@ -127,11 +127,11 @@
 ## HorizonDbPoolProperties
 ### Properties
 * **createMode**: 'Create' | 'Update' | string (ReadOnly): The create mode for the pool.
-* **location**: string: The location of the HorizonDb pool.
+* **location**: string: The location of the HorizonDB pool.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the pool.
 * **replicaCount**: int (ReadOnly): Number of replicas in the pool.
 * **state**: 'Disabled' | 'Dropping' | 'Healthy' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): Current state of the pool.
-* **version**: string (ReadOnly): The version of the HorizonDb pool.
+* **version**: string (ReadOnly): The version of the HorizonDB pool.
 
 ## HorizonDbPoolTags
 ### Properties

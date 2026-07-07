@@ -923,7 +923,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityPerimeterProperties](#networksecurityperimeterproperties): The network security perimeter properties
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [SecurityPerimeterTrackedResourceTags](#securityperimetertrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -935,7 +935,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspLinkReferenceProperties](#nsplinkreferenceproperties) (ReadOnly): Properties of the network security perimeter linkReference resource.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/linkReferences' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/links@2025-07-01
@@ -946,7 +946,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspLinkProperties](#nsplinkproperties): Properties of the network security perimeter link resource.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/links' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/loggingConfigurations@2025-07-01
@@ -957,7 +957,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspLoggingConfigurationProperties](#nsploggingconfigurationproperties): Properties of the NSP logging configuration.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/loggingConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/profiles@2025-07-01
@@ -968,7 +968,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspProfileProperties](#nspprofileproperties): Properties of the network security perimeter profile
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2025-07-01
@@ -979,7 +979,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspAccessRuleProperties](#nspaccessruleproperties): Properties of the NSP access rule.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2025-07-01
@@ -990,7 +990,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {maxLength: 80, pattern: "(^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*[a-zA-Z0-9_]+$)|(^[a-zA-Z0-9]$)"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NspAssociationProperties](#nspassociationproperties): Properties of the NSP resource association.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkVirtualAppliances@2025-07-01
@@ -1296,7 +1296,7 @@
 * **name**: string {pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceGatewayPropertiesFormat](#servicegatewaypropertiesformat): Properties of service gateway.
 * **sku**: [ServiceGatewaySku](#servicegatewaysku): The service gateway SKU.
-* **systemData**: [SecurityPerimeterSystemData](#securityperimetersystemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [SecurityPerimeterTrackedResourceTags](#securityperimetertrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/serviceGateways' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the zone in which service gateway should be deployed.
@@ -5601,15 +5601,6 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the Security Partner Provider resource.
 * **securityProviderName**: 'Checkpoint' | 'IBoss' | 'ZScaler' | string: The security provider name.
 * **virtualHub**: [CommonSubResource](#commonsubresource): The virtualHub to which the Security Partner Provider belongs.
-
-## SecurityPerimeterSystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## SecurityPerimeterTrackedResourceTags
 ### Properties

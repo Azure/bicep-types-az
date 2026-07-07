@@ -39,6 +39,41 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces@2026-01-01' = {
 }
 ```
 
+NameSpaceCreateWithIpAddressTypeDualStack
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces@2026-01-01' = {
+  name: 'example'
+  location: 'South Central US'
+  properties: {
+    geoDataReplication: {
+      locations: [
+        {
+          locationName: 'eastus'
+          roleType: 'Primary'
+        }
+        {
+          locationName: 'southcentralus'
+          roleType: 'Secondary'
+        }
+      ]
+      maxReplicationLagDurationInSeconds: 300
+    }
+    ipAddressType: 'DualStack'
+    premiumMessagingPartitions: 2
+    publicNetworkAccess: 'Enabled'
+  }
+  sku: {
+    name: 'Premium'
+    capacity: 4
+    tier: 'Premium'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
+
 ## microsoft.servicebus/namespaces/authorizationrules
 
 NameSpaceAuthorizationRuleCreate

@@ -662,18 +662,6 @@
 * **properties**: [UebaProperties](#uebaproperties): Ueba properties
 
 
-## Resource Microsoft.SecurityInsights/sourcecontrols@2023-04-01-preview
-* **Readable Scope(s)**: Extension
-* **Writable Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlProperties](#sourcecontrolproperties): source control properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SecurityInsights/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2023-04-01-preview
 * **Readable Scope(s)**: Extension
 * **Writable Scope(s)**: Extension
@@ -1055,11 +1043,6 @@
 * **roleArn**: string (Required): The Aws Role Arn that is used to access the Aws account.
 * **sqsUrls**: string[] (Required): The AWS sqs urls for the connector.
 
-## AzureDevOpsResourceInfo
-### Properties
-* **pipelineId**: string: Id of the pipeline created for the source-control.
-* **serviceConnectionId**: string: Id of the service-connection created for the source-control.
-
 ## AzureResourceEntityProperties
 ### Properties
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
@@ -1210,11 +1193,6 @@
 * **description**: string: The sample query description
 * **query**: string: the sample query
 
-## ContentPathMap
-### Properties
-* **contentType**: 'AnalyticsRule' | 'Workbook' | string: Content type.
-* **path**: string: The path to the content.
-
 ## DataConnectorDataTypeCommon
 ### Properties
 * **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
@@ -1222,20 +1200,6 @@
 ## DataTypeDefinitions
 ### Properties
 * **dataType**: string: The data type name
-
-## Deployment
-### Properties
-* **deploymentId**: string: Deployment identifier.
-* **deploymentLogsUrl**: string: Url to access repository action logs.
-* **deploymentResult**: 'Canceled' | 'Failed' | 'Success' | string: The outcome of the deployment.
-* **deploymentState**: 'Canceling' | 'Completed' | 'In_Progress' | 'Queued' | string: Current status of the deployment.
-* **deploymentTime**: string: The time when the deployment finished.
-
-## DeploymentInfo
-### Properties
-* **deployment**: [Deployment](#deployment): Deployment information.
-* **deploymentFetchStatus**: 'NotFound' | 'Success' | 'Unauthorized' | string: Status while fetching the last deployment.
-* **message**: string: Additional details about the deployment that can be shown to the user.
 
 ## DnsEntityProperties
 ### Properties
@@ -1535,10 +1499,6 @@
 * **latitude**: int (ReadOnly): The latitude of the identified location, expressed as a floating point number with range of - 90 to 90. Latitude and longitude are derived from the city or postal code.
 * **longitude**: int (ReadOnly): The longitude of the identified location, expressed as a floating point number with range of -180 to 180. Latitude and longitude are derived from the city or postal code.
 * **state**: string (ReadOnly): State name
-
-## GitHubResourceInfo
-### Properties
-* **appInstallationId**: string: GitHub application installation id.
 
 ## GroupingConfiguration
 ### Properties
@@ -2243,20 +2203,6 @@
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
 
-## Repository
-### Properties
-* **branch**: string: Branch name of repository.
-* **deploymentLogsUrl**: string: Url to access repository action logs.
-* **displayUrl**: string: Display url of repository.
-* **pathMapping**: [ContentPathMap](#contentpathmap)[]: Dictionary of source control content type and path mapping.
-* **url**: string: Url of repository.
-
-## RepositoryResourceInfo
-### Properties
-* **azureDevOpsResourceInfo**: [AzureDevOpsResourceInfo](#azuredevopsresourceinfo): Resources created in Azure DevOps for this source-control.
-* **gitHubResourceInfo**: [GitHubResourceInfo](#githubresourceinfo): Resources created in GitHub for this source-control.
-* **webhook**: [Webhook](#webhook): The webhook object created for the source-control.
-
 ## RequiredPermissions
 ### Properties
 * **action**: bool: action permission
@@ -2378,18 +2324,6 @@
 ## SentinelOnboardingStateProperties
 ### Properties
 * **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
-
-## SourceControlProperties
-### Properties
-* **contentTypes**: ('AnalyticsRule' | 'Workbook' | string)[] (Required): Array of source control content types.
-* **description**: string: A description of the source control
-* **displayName**: string (Required): The display name of the source control
-* **id**: string: The id (a Guid) of the source control
-* **lastDeploymentInfo**: [DeploymentInfo](#deploymentinfo): Information regarding the latest deployment for the source control.
-* **repository**: [Repository](#repository) (Required): Repository metadata.
-* **repositoryResourceInfo**: [RepositoryResourceInfo](#repositoryresourceinfo): Information regarding the resources created in user's repository.
-* **repoType**: 'DevOps' | 'Github' | string (Required): The repository type of the source control
-* **version**: 'V1' | 'V2' | string: The version number associated with the source control
 
 ## SubmissionMailEntityProperties
 ### Properties
@@ -2696,13 +2630,6 @@
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist
-
-## Webhook
-### Properties
-* **rotateWebhookSecret**: bool: A flag to instruct the backend service to rotate webhook secret.
-* **webhookId**: string: Unique identifier for the webhook.
-* **webhookSecretUpdateTime**: string: Time when the webhook secret was updated.
-* **webhookUrl**: string: URL that gets invoked by the webhook.
 
 ## WorkspaceManagerAssignmentProperties
 ### Properties

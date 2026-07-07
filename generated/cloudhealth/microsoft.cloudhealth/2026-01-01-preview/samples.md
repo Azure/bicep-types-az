@@ -11,17 +11,14 @@ HealthModels_Create
 resource exampleResource 'Microsoft.CloudHealth/healthmodels@2026-01-01-preview' = {
   name: 'example'
   identity: {
-    type: 'SystemAssigned, UserAssigned'
-    userAssignedIdentities: {
-      '/subscriptions/4980D7D5-4E07-47AD-AD34-E76C6BC9F061/resourceGroups/rgopenapi/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ua1': {
-      }
-    }
+    type: 'SystemAssigned'
   }
-  location: 'eastus2'
+  location: 'eastus'
   properties: {
   }
   tags: {
-    key2961: 'hbljozzkqrpcthsjtfkyozpwyx'
+    environment: 'production'
+    team: 'online-store'
   }
 }
 ```
@@ -35,7 +32,7 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/authenticationsetti
   name: 'example'
   properties: {
     authenticationKind: 'ManagedIdentity'
-    displayName: 'myDisplayName'
+    displayName: 'Default managed identity'
     managedIdentityName: 'SystemAssigned'
   }
 }
@@ -50,12 +47,12 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/discoveryrules@2026
   name: 'example'
   properties: {
     addRecommendedSignals: 'Enabled'
-    authenticationSetting: 'authSetting1'
+    authenticationSetting: 'default-auth'
     discoverRelationships: 'Enabled'
-    displayName: 'myDisplayName'
+    displayName: 'Discover web apps'
     specification: {
       kind: 'ResourceGraphQuery'
-      resourceGraphQuery: 'resources | where subscriptionId == \'7ddfffd7-9b32-40df-1234-828cbd55d6f4\' | where resourceGroup == \'my-rg\''
+      resourceGraphQuery: 'resources | where type =~ \'microsoft.web/sites\' and resourceGroup =~ \'online-store-rg\' | project id, name, location'
     }
   }
 }
@@ -71,40 +68,65 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/entities@2026-01-01
   properties: {
     alerts: {
       degraded: {
-        description: 'Alert description'
+        description: 'Orders API is degraded.'
         actionGroupIds: [
-          '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Insights/actionGroups/myactiongroup'
+          '/subscriptions/abcdef12-3456-7890-abcd-ef1234567890/resourceGroups/online-store-rg/providers/Microsoft.Insights/actionGroups/online-store-oncall'
         ]
-        severity: 'Sev4'
+        severity: 'Sev3'
       }
       unhealthy: {
-        description: 'Alert description'
+        description: 'Orders API is unhealthy.'
         actionGroupIds: [
-          '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Insights/actionGroups/myactiongroup'
+          '/subscriptions/abcdef12-3456-7890-abcd-ef1234567890/resourceGroups/online-store-rg/providers/Microsoft.Insights/actionGroups/online-store-oncall'
         ]
         severity: 'Sev1'
       }
     }
     canvasPosition: {
-      x: 14
-      y: 13
+      x: 360
+      y: 240
     }
-    displayName: 'My entity'
-    healthObjective: 62
+    displayName: 'Orders API'
+    healthObjective: 99.9
     icon: {
-      customData: 'rcitntvapruccrhtxmkqjphbxunkz'
-      iconName: 'Custom'
+      iconName: 'Kubernetes'
     }
     impact: 'Standard'
     signalGroups: {
       azureLogAnalytics: {
-        authenticationSetting: 'auth123'
-        logAnalyticsWorkspaceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.OperationalInsights/workspaces/myworkspace'
+        authenticationSetting: 'default-auth'
+        logAnalyticsWorkspaceResourceId: '/subscriptions/abcdef12-3456-7890-abcd-ef1234567890/resourceGroups/online-store-rg/providers/Microsoft.OperationalInsights/workspaces/online-store-law'
         signals: [
           {
-            name: 'uniqueSignalName2'
-            dataUnit: 'my unit'
-            displayName: 'Test LA signal'
+            name: 'unhealthy-pods'
+            dataUnit: 'Count'
+            displayName: 'Unhealthy pods'
+            evaluationRules: {
+              degradedRule: {
+                operator: 'GreaterThan'
+                threshold: 0
+              }
+              unhealthyRule: {
+                operator: 'GreaterThan'
+                threshold: 2
+              }
+            }
+            queryText: 'KubePodInventory | where TimeGenerated > ago(5m) | where Namespace == \'online-store\' | where PodStatus != \'Running\' | summarize unhealthyPods = dcount(Name)'
+            refreshInterval: 'PT5M'
+            signalKind: 'LogAnalyticsQuery'
+            timeGrain: 'PT5M'
+            valueColumnName: 'unhealthyPods'
+          }
+        ]
+      }
+      azureMonitorWorkspace: {
+        authenticationSetting: 'default-auth'
+        azureMonitorWorkspaceResourceId: '/subscriptions/abcdef12-3456-7890-abcd-ef1234567890/resourceGroups/online-store-rg/providers/Microsoft.Monitor/accounts/online-store-amw'
+        signals: [
+          {
+            name: 'error-rate'
+            dataUnit: 'Percent'
+            displayName: 'HTTP 5xx error rate'
             evaluationRules: {
               degradedRule: {
                 operator: 'GreaterThan'
@@ -115,24 +137,34 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/entities@2026-01-01
                 threshold: 5
               }
             }
-            queryText: 'print 1'
+            queryText: 'sum(rate(http_requests_total{job="orders-api", code=~"5.."}[5m])) / sum(rate(http_requests_total{job="orders-api"}[5m])) * 100'
             refreshInterval: 'PT1M'
-            signalDefinitionName: {
-            }
-            signalKind: 'LogAnalyticsQuery'
-            timeGrain: 'PT30M'
-            valueColumnName: 'result'
+            signalKind: 'PrometheusMetricsQuery'
+            timeGrain: 'PT5M'
           }
-        ]
-      }
-      azureMonitorWorkspace: {
-        authenticationSetting: 'auth123'
-        azureMonitorWorkspaceResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.OperationalInsights/workspaces/myworkspace'
-        signals: [
           {
-            name: 'pod-cpu-usage'
+            name: 'p95-latency'
+            dataUnit: 'MilliSeconds'
+            displayName: 'p95 request latency'
+            evaluationRules: {
+              degradedRule: {
+                operator: 'GreaterThan'
+                threshold: 300
+              }
+              unhealthyRule: {
+                operator: 'GreaterThan'
+                threshold: 800
+              }
+            }
+            queryText: 'histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket{job="orders-api"}[5m]))) * 1000'
+            refreshInterval: 'PT1M'
+            signalKind: 'PrometheusMetricsQuery'
+            timeGrain: 'PT5M'
+          }
+          {
+            name: 'pod-cpu'
             dataUnit: 'Percent'
-            displayName: 'Pod CPU Usage'
+            displayName: 'Pod CPU utilization'
             evaluationRules: {
               degradedRule: {
                 operator: 'GreaterThan'
@@ -143,54 +175,53 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/entities@2026-01-01
                 threshold: 90
               }
             }
-            queryText: 'rate(container_cpu_usage_seconds_total{pod=~"my-app-.*"}[5m]) * 100'
+            queryText: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-store", pod=~"orders-api-.*"}[5m])) * 100'
             refreshInterval: 'PT1M'
-            signalDefinitionName: 'PodCpuUsageDefinition'
+            signalDefinitionName: 'pod-cpu-usage'
             signalKind: 'PrometheusMetricsQuery'
             timeGrain: 'PT5M'
           }
         ]
       }
       azureResource: {
-        authenticationSetting: 'auth123'
-        azureResourceId: '/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1'
-        azureResourceKind: 'functionapp'
+        authenticationSetting: 'default-auth'
+        azureResourceId: '/subscriptions/abcdef12-3456-7890-abcd-ef1234567890/resourceGroups/online-store-rg/providers/Microsoft.ContainerService/managedClusters/online-store-aks'
+        azureResourceKind: 'managedClusters'
         signals: [
           {
-            name: 'uniqueSignalName1'
-            aggregationType: 'None'
-            dataUnit: 'Count'
-            dimension: 'nodename'
-            dimensionFilter: 'node1'
-            displayName: 'CPU usage'
+            name: 'node-cpu'
+            aggregationType: 'Average'
+            dataUnit: 'Percent'
+            displayName: 'Node CPU utilization'
             evaluationRules: {
               degradedRule: {
-                operator: 'LowerThan'
-                threshold: 10
+                operator: 'GreaterThan'
+                threshold: 70
               }
               unhealthyRule: {
-                operator: 'LowerThan'
-                threshold: 1
+                operator: 'GreaterThan'
+                threshold: 90
               }
             }
-            metricName: 'cpuusage'
-            metricNamespace: 'microsoft.compute/virtualMachines'
+            metricName: 'node_cpu_usage_percentage'
+            metricNamespace: 'Microsoft.ContainerService/managedClusters'
             refreshInterval: 'PT1M'
-            signalDefinitionName: 'sigdef1'
             signalKind: 'AzureResourceMetric'
-            timeGrain: 'PT1M'
+            timeGrain: 'PT5M'
           }
         ]
       }
       dependencies: {
         aggregationType: 'MinHealthy'
-        degradedThreshold: 80
+        degradedThreshold: 100
+        ignoreUnknown: true
         unhealthyThreshold: 50
         unit: 'Percentage'
       }
     }
     tags: {
-      key1376: 'sample tag'
+      environment: 'production'
+      team: 'online-store'
     }
   }
 }
@@ -204,11 +235,12 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/relationships@2026-
   parent: parentResource 
   name: 'example'
   properties: {
-    childEntityName: 'Entity2'
-    displayName: 'My relationship'
-    parentEntityName: 'Entity1'
+    childEntityName: 'orders-api'
+    displayName: 'Web Frontend depends on Orders API'
+    parentEntityName: 'web-frontend'
     tags: {
-      key9681: 'ixfvzsfnpvkkbrce'
+      environment: 'production'
+      team: 'online-store'
     }
   }
 }
@@ -222,29 +254,28 @@ resource exampleResource 'Microsoft.CloudHealth/healthmodels/signaldefinitions@2
   parent: parentResource 
   name: 'example'
   properties: {
-    aggregationType: 'None'
-    dataUnit: 'byte'
-    dimension: 'nodename'
-    dimensionFilter: 'node1'
-    displayName: 'cpu usage'
+    aggregationType: 'Average'
+    dataUnit: 'Percent'
+    displayName: 'SQL CPU utilization'
     evaluationRules: {
       degradedRule: {
-        operator: 'LowerThan'
-        threshold: 65
+        operator: 'GreaterThan'
+        threshold: 70
       }
       unhealthyRule: {
-        operator: 'LowerThan'
-        threshold: 60
+        operator: 'GreaterThan'
+        threshold: 90
       }
     }
-    metricName: 'cpuusage'
-    metricNamespace: 'microsoft.compute/virtualMachines'
+    metricName: 'cpu_percent'
+    metricNamespace: 'Microsoft.Sql/servers/databases'
     refreshInterval: 'PT1M'
     signalKind: 'AzureResourceMetric'
     tags: {
-      key4788: 'ixfvzsfnpvkkbrce'
+      environment: 'production'
+      team: 'online-store'
     }
-    timeGrain: 'PT1M'
+    timeGrain: 'PT5M'
   }
 }
 ```

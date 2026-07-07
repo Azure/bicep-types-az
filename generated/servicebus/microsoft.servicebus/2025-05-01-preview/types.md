@@ -290,7 +290,6 @@
 
 ## NamespaceReplicaLocation
 ### Properties
-* **clusterArmId**: string: Optional property that denotes the ARM ID of the Cluster. This is required, if a namespace replica should be placed in a Dedicated Event Hub Cluster
 * **locationName**: string: Azure regions where a replica of the namespace is maintained
 * **roleType**: 'Primary' | 'Secondary' | string: GeoDR Role Types
 

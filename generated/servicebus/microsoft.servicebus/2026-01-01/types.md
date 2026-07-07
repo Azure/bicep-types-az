@@ -290,7 +290,6 @@
 
 ## NamespaceReplicaLocation
 ### Properties
-* **clusterArmId**: string: Optional property that denotes the ARM ID of the Cluster. This is required, if a namespace replica should be placed in a Dedicated Event Hub Cluster
 * **locationName**: string: Azure regions where a replica of the namespace is maintained
 * **roleType**: 'Primary' | 'Secondary' | string: GeoDR Role Types
 
@@ -417,7 +416,7 @@
 * **disableLocalAuth**: bool: This property disables SAS authentication for the Service Bus namespace.
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **geoDataReplication**: [GeoDataReplicationProperties](#geodatareplicationproperties): Geo Data Replication settings for the namespace
-* **ipV6Enabled**: bool: Value that indicates whether IPv6 is enabled for public network access.
+* **ipAddressType**: 'DualStack' | 'IPv4' | string: The IP address type for the namespace. Determines whether the namespace supports IPv4 only or both IPv4 and IPv6 (dual stack).
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | '1.3' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **platformCapabilities**: [PlatformCapabilities](#platformcapabilities)

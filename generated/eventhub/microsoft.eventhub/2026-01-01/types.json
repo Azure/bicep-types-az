@@ -490,14 +490,14 @@
       },
       "sku": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/85"
         },
         "flags": 0,
         "description": "Properties of sku resource"
       },
       "identity": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/94"
         },
         "flags": 0,
         "description": "Properties of BYOK Identity description"
@@ -511,7 +511,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/99"
+          "$ref": "#/102"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -661,12 +661,12 @@
         "flags": 0,
         "description": "Geo Data Replication settings for the namespace"
       },
-      "ipV6Enabled": {
+      "ipAddressType": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/84"
         },
         "flags": 0,
-        "description": "Value that indicates whether IPv6 is enabled for public network access."
+        "description": "The IP address type for the namespace. Determines whether the namespace supports IPv4 only or both IPv4 and IPv6 (dual stack)."
       }
     }
   },
@@ -1108,19 +1108,41 @@
     }
   },
   {
+    "$type": "StringLiteralType",
+    "value": "IPv4"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DualStack"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
     "$type": "ObjectType",
     "name": "Sku",
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/89"
         },
         "flags": 1,
         "description": "Name of this SKU."
       },
       "tier": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The billing tier of this particular SKU."
@@ -1150,13 +1172,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/83"
+        "$ref": "#/86"
       },
       {
-        "$ref": "#/84"
+        "$ref": "#/87"
       },
       {
-        "$ref": "#/85"
+        "$ref": "#/88"
       },
       {
         "$ref": "#/2"
@@ -1179,13 +1201,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/87"
+        "$ref": "#/90"
       },
       {
-        "$ref": "#/88"
+        "$ref": "#/91"
       },
       {
-        "$ref": "#/89"
+        "$ref": "#/92"
       },
       {
         "$ref": "#/2"
@@ -1212,14 +1234,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/99"
         },
         "flags": 0,
         "description": "Type of managed service identity."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/101"
         },
         "flags": 0,
         "description": "Properties for User Assigned Identities"
@@ -1246,16 +1268,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/92"
-      },
-      {
-        "$ref": "#/93"
-      },
-      {
-        "$ref": "#/94"
-      },
-      {
         "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
       }
     ]
   },
@@ -1284,7 +1306,7 @@
     "name": "IdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/97"
+      "$ref": "#/100"
     }
   },
   {
@@ -1329,28 +1351,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/104"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/105"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/106"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/108"
         },
         "flags": 0,
         "description": "Properties supplied to create or update AuthorizationRule"
@@ -1377,7 +1399,7 @@
     "properties": {
       "rights": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/113"
         },
         "flags": 1,
         "description": "The rights associated with the rule."
@@ -1400,13 +1422,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/106"
+        "$ref": "#/109"
       },
       {
-        "$ref": "#/107"
+        "$ref": "#/110"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/111"
       },
       {
         "$ref": "#/2"
@@ -1416,14 +1438,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/109"
+      "$ref": "#/112"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/authorizationRules@2026-01-01",
     "body": {
-      "$ref": "#/104"
+      "$ref": "#/107"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1453,28 +1475,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/115"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/116"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/117"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/119"
         },
         "flags": 0,
         "description": "NetworkRuleSet properties"
@@ -1508,28 +1530,28 @@
       },
       "defaultAction": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "Default Action for Network Rule Set"
       },
       "virtualNetworkRules": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "List VirtualNetwork Rules"
       },
       "ipRules": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "List of IpRules"
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/133"
         },
         "flags": 0,
         "description": "This determines if traffic is allowed over public network. By default it is enabled. If value is SecuredByPerimeter then Inbound and Outbound communication is controlled by the network security perimeter and profile's access rules."
@@ -1548,10 +1570,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/117"
+        "$ref": "#/120"
       },
       {
-        "$ref": "#/118"
+        "$ref": "#/121"
       },
       {
         "$ref": "#/2"
@@ -1564,7 +1586,7 @@
     "properties": {
       "subnet": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "Subnet properties"
@@ -1594,7 +1616,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/120"
+      "$ref": "#/123"
     }
   },
   {
@@ -1610,7 +1632,7 @@
       },
       "action": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "The IP Filter Action"
@@ -1625,7 +1647,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/124"
+        "$ref": "#/127"
       },
       {
         "$ref": "#/2"
@@ -1635,7 +1657,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/123"
+      "$ref": "#/126"
     }
   },
   {
@@ -1654,13 +1676,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/127"
+        "$ref": "#/130"
       },
       {
-        "$ref": "#/128"
+        "$ref": "#/131"
       },
       {
-        "$ref": "#/129"
+        "$ref": "#/132"
       },
       {
         "$ref": "#/2"
@@ -1671,7 +1693,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/networkRuleSets@2026-01-01",
     "body": {
-      "$ref": "#/115"
+      "$ref": "#/118"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1702,28 +1724,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/135"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/136"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/137"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/139"
         },
         "flags": 0
       },
@@ -1763,7 +1785,7 @@
       },
       "policies": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "List of group policies that define the behavior of application group. The policies can support resource governance scenarios such as limiting ingress or egress traffic."
@@ -1785,7 +1807,7 @@
     },
     "elements": {
       "ThrottlingPolicy": {
-        "$ref": "#/138"
+        "$ref": "#/141"
       }
     }
   },
@@ -1802,14 +1824,14 @@
       },
       "metricId": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/146"
         },
         "flags": 1,
         "description": "Metric Id on which the throttle limit should be set, MetricId can be discovered by hovering over Metric in the Metrics section of Event Hub Namespace inside Azure Portal"
       },
       "type": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/147"
         },
         "flags": 1,
         "description": "Application Group Policy types"
@@ -1836,16 +1858,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/139"
-      },
-      {
-        "$ref": "#/140"
-      },
-      {
-        "$ref": "#/141"
-      },
-      {
         "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
       },
       {
         "$ref": "#/2"
@@ -1859,14 +1881,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/137"
+      "$ref": "#/140"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/applicationGroups@2026-01-01",
     "body": {
-      "$ref": "#/135"
+      "$ref": "#/138"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1897,28 +1919,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/150"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/151"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/152"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Properties required to the Create Or Update Alias(Disaster Recovery configurations)"
@@ -1945,7 +1967,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/158"
         },
         "flags": 2,
         "description": "Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'"
@@ -1966,7 +1988,7 @@
       },
       "role": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/162"
         },
         "flags": 2,
         "description": "role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'"
@@ -1996,13 +2018,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/152"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/153"
+        "$ref": "#/156"
       },
       {
-        "$ref": "#/154"
+        "$ref": "#/157"
       }
     ]
   },
@@ -2022,13 +2044,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/156"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/157"
+        "$ref": "#/160"
       },
       {
-        "$ref": "#/158"
+        "$ref": "#/161"
       }
     ]
   },
@@ -2036,7 +2058,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2026-01-01",
     "body": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2062,28 +2084,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/135"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/164"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/165"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Properties supplied to the Create Or Update Event Hub operation."
@@ -2110,7 +2132,7 @@
     "properties": {
       "partitionIds": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/168"
         },
         "flags": 2,
         "description": "Current number of shards on the Event Hub."
@@ -2145,28 +2167,28 @@
       },
       "status": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/178"
         },
         "flags": 0,
         "description": "Enumerates the possible values for the status of the Event Hub."
       },
       "captureDescription": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "Properties of capture description"
       },
       "retentionDescription": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/190"
         },
         "flags": 0,
         "description": "Event Hub retention settings"
       },
       "messageTimestampDescription": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "Properties of MessageTimestamp Description"
@@ -2233,15 +2255,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/166"
-      },
-      {
-        "$ref": "#/167"
-      },
-      {
-        "$ref": "#/168"
-      },
-      {
         "$ref": "#/169"
       },
       {
@@ -2258,6 +2271,15 @@
       },
       {
         "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
       }
     ]
   },
@@ -2274,7 +2296,7 @@
       },
       "encoding": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/182"
         },
         "flags": 0,
         "description": "Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version"
@@ -2295,7 +2317,7 @@
       },
       "destination": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "Properties of Destination where capture will be stored. (Storage Account, Blob Names)"
@@ -2321,10 +2343,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/177"
+        "$ref": "#/180"
       },
       {
-        "$ref": "#/178"
+        "$ref": "#/181"
       }
     ]
   },
@@ -2341,14 +2363,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "A value that indicates whether capture description is enabled."
       },
       "properties": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "Properties describing the storage account, blob container and archive name format for capture destination"
@@ -2361,7 +2383,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Type of Azure Active Directory Managed Identity."
@@ -2387,10 +2409,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/182"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/186"
       }
     ]
   },
@@ -2421,7 +2443,7 @@
       },
       "dataLakeSubscriptionId": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/189"
         },
         "flags": 0,
         "description": "Subscription Id of Azure Data Lake Store"
@@ -2454,7 +2476,7 @@
     "properties": {
       "cleanupPolicy": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/194"
         },
         "flags": 0,
         "description": "Enumerates the possible values for cleanup policy"
@@ -2498,13 +2520,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/188"
+        "$ref": "#/191"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/192"
       },
       {
-        "$ref": "#/190"
+        "$ref": "#/193"
       },
       {
         "$ref": "#/2"
@@ -2517,7 +2539,7 @@
     "properties": {
       "timestampType": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/198"
         },
         "flags": 0,
         "description": "Denotes the type of timestamp the message will hold.Two types of timestamp types - \"AppendTime\" and \"CreateTime\". AppendTime refers the time in which message got appended inside broker log. CreateTime refers to the time in which the message was generated on source side and producers can set this timestamp while sending the message. Default value is AppendTime. If you are using AMQP protocol, CreateTime equals AppendTime and its behavior remains the same."
@@ -2536,10 +2558,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/193"
+        "$ref": "#/196"
       },
       {
-        "$ref": "#/194"
+        "$ref": "#/197"
       },
       {
         "$ref": "#/2"
@@ -2550,7 +2572,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs@2026-01-01",
     "body": {
-      "$ref": "#/163"
+      "$ref": "#/166"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2576,28 +2598,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/104"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/200"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/201"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/108"
         },
         "flags": 0,
         "description": "Properties supplied to create or update AuthorizationRule"
@@ -2622,7 +2644,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2026-01-01",
     "body": {
-      "$ref": "#/199"
+      "$ref": "#/202"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2648,28 +2670,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/150"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/204"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/205"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "Single item in List or Get Consumer group operation"
@@ -2721,7 +2743,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs/consumergroups@2026-01-01",
     "body": {
-      "$ref": "#/203"
+      "$ref": "#/206"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2754,14 +2776,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/209"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/210"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -2793,7 +2815,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/privateEndpointConnections@2026-01-01",
     "body": {
-      "$ref": "#/208"
+      "$ref": "#/211"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2819,28 +2841,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/135"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/213"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/214"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/216"
         },
         "flags": 0
       },
@@ -2880,27 +2902,27 @@
       },
       "eTag": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/189"
         },
         "flags": 2,
         "description": "The ETag value."
       },
       "groupProperties": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/217"
         },
         "flags": 0,
         "description": "dictionary object for SchemaGroup group properties"
       },
       "schemaCompatibility": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/221"
         },
         "flags": 0
       },
       "schemaType": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/226"
         },
         "flags": 0
       }
@@ -2930,13 +2952,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/215"
+        "$ref": "#/218"
       },
       {
-        "$ref": "#/216"
+        "$ref": "#/219"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/220"
       },
       {
         "$ref": "#/2"
@@ -2963,16 +2985,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/219"
-      },
-      {
-        "$ref": "#/220"
-      },
-      {
-        "$ref": "#/221"
-      },
-      {
         "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
       },
       {
         "$ref": "#/2"
@@ -2983,7 +3005,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/schemagroups@2026-01-01",
     "body": {
-      "$ref": "#/212"
+      "$ref": "#/215"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3009,28 +3031,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/104"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/228"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/229"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/108"
         },
         "flags": 2,
         "description": "Properties supplied to create or update AuthorizationRule"
@@ -3055,7 +3077,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2026-01-01",
     "body": {
-      "$ref": "#/227"
+      "$ref": "#/230"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -3088,21 +3110,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/229"
+          "$ref": "#/232"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/233"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/235"
         },
         "flags": 2,
         "description": "Properties of the Network Security Perimeter Configuration"
@@ -3129,35 +3151,35 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/244"
+          "$ref": "#/247"
         },
         "flags": 0,
         "description": "Provisioning state of NetworkSecurityPerimeter configuration propagation"
       },
       "provisioningIssues": {
         "type": {
-          "$ref": "#/247"
+          "$ref": "#/250"
         },
         "flags": 2,
         "description": "List of Provisioning Issues if any"
       },
       "networkSecurityPerimeter": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/251"
         },
         "flags": 2,
         "description": "NetworkSecurityPerimeter related information"
       },
       "resourceAssociation": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/252"
         },
         "flags": 2,
         "description": "Information about resource association"
       },
       "profile": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/259"
         },
         "flags": 2,
         "description": "Information about current network profile"
@@ -3171,7 +3193,7 @@
       },
       "applicableFeatures": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/271"
         },
         "flags": 2,
         "description": "Indicates that the NSP controls related to backing association are only applicable to a specific feature in backing resource's data plane."
@@ -3240,15 +3262,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/233"
-      },
-      {
-        "$ref": "#/234"
-      },
-      {
-        "$ref": "#/235"
-      },
-      {
         "$ref": "#/236"
       },
       {
@@ -3273,6 +3286,15 @@
         "$ref": "#/243"
       },
       {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/246"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -3290,7 +3312,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/246"
+          "$ref": "#/249"
         },
         "flags": 2,
         "description": "Properties of Provisioning Issue"
@@ -3320,7 +3342,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/245"
+      "$ref": "#/248"
     }
   },
   {
@@ -3363,7 +3385,7 @@
       },
       "accessMode": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/258"
         },
         "flags": 0,
         "description": "Access Mode of the resource association"
@@ -3394,19 +3416,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/250"
-      },
-      {
-        "$ref": "#/251"
-      },
-      {
-        "$ref": "#/252"
-      },
-      {
         "$ref": "#/253"
       },
       {
         "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/257"
       },
       {
         "$ref": "#/2"
@@ -3433,7 +3455,7 @@
       },
       "accessRules": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/270"
         },
         "flags": 0,
         "description": "List of Access Rules"
@@ -3467,7 +3489,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/261"
         },
         "flags": 2,
         "description": "Properties of Access Rule"
@@ -3480,35 +3502,35 @@
     "properties": {
       "direction": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/264"
         },
         "flags": 0,
         "description": "Direction of Access Rule"
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/262"
+          "$ref": "#/265"
         },
         "flags": 0,
         "description": "Address prefixes in the CIDR format for inbound rules"
       },
       "subscriptions": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/267"
         },
         "flags": 0,
         "description": "Subscriptions for inbound rules"
       },
       "networkSecurityPerimeters": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/268"
         },
         "flags": 2,
         "description": "NetworkSecurityPerimeters for inbound rules"
       },
       "fullyQualifiedDomainNames": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/269"
         },
         "flags": 2,
         "description": "FQDN for outbound rules"
@@ -3527,10 +3549,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/259"
+        "$ref": "#/262"
       },
       {
-        "$ref": "#/260"
+        "$ref": "#/263"
       },
       {
         "$ref": "#/2"
@@ -3559,13 +3581,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/263"
+      "$ref": "#/266"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/248"
+      "$ref": "#/251"
     }
   },
   {
@@ -3577,7 +3599,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/257"
+      "$ref": "#/260"
     }
   },
   {
@@ -3590,7 +3612,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2026-01-01",
     "body": {
-      "$ref": "#/231"
+      "$ref": "#/234"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -3656,7 +3678,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/273"
     }
   },
   {
@@ -3665,7 +3687,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/273"
     }
   },
   {
@@ -3674,7 +3696,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/273"
     }
   }
 ]
