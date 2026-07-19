@@ -1145,7 +1145,7 @@ OnRead - All client-driven data read is pulled from cool tier to standard storag
 Never - No client-driven data is pulled from cool tier to standard storage.
 * **coolAccessTieringPolicy**: 'Auto' | 'SnapshotOnly' | string: coolAccessTieringPolicy determines which cold data blocks are moved to cool tier. The possible values for this field are: Auto - Moves cold user data blocks in both the Snapshot copies and the active file system to the cool tier tier. This policy is the default. SnapshotOnly - Moves user data blocks of the Volume Snapshot copies that are not associated with the active file system to the cool tier.
 * **coolnessPeriod**: int {minValue: 2, maxValue: 183}: Specifies the number of days after which data that is not accessed by clients will be tiered.
-* **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
+* **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
 * **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection): DataProtection type volumes include an object containing details of the replication
 * **dataStoreResourceId**: string[] (ReadOnly): Data store resource unique identifier
 * **defaultGroupQuotaInKiBs**: int: Default group quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
@@ -1153,6 +1153,7 @@ Never - No client-driven data is pulled from cool tier to standard storage.
 * **deleteBaseSnapshot**: bool: If enabled (true) the snapshot the volume was created from will be automatically deleted after the volume create operation has finished.  Defaults to false
 * **effectiveNetworkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string (ReadOnly): The effective value of the network features type available to the volume, or current effective state of update.
 * **enableSubvolumes**: 'Disabled' | 'Enabled' | string: Flag indicating whether subvolume operations are enabled on the volume
+Deprecated. Subvolume operations and this flag will be removed in a future API version.
 * **encrypted**: bool (ReadOnly): Specifies if the volume is encrypted or not. Only available on volumes created or updated after 2022-01-01.
 * **encryptionKeySource**: 'Microsoft.KeyVault' | 'Microsoft.NetApp' | string: Source of key used to encrypt data in volume. Applicable if NetApp account has encryption.keySource = 'Microsoft.KeyVault'. Possible values (case-insensitive) are: 'Microsoft.NetApp, Microsoft.KeyVault'
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules

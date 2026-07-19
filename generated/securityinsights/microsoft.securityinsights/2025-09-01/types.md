@@ -15,17 +15,17 @@
 
 ### FusionAlertRule
 #### Properties
-* **kind**: 'Fusion' (Required): The alert rule kind
+* **kind**: 'Fusion' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule properties
 
 ### MicrosoftSecurityIncidentCreationAlertRule
 #### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule properties
 
 ### ScheduledAlertRule
 #### Properties
-* **kind**: 'Scheduled' (Required): The alert rule kind
+* **kind**: 'Scheduled' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule properties
 
 
@@ -55,17 +55,17 @@
 
 ### FusionAlertRuleTemplate
 #### Properties
-* **kind**: 'Fusion' (Required): The alert rule kind
+* **kind**: 'Fusion' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [FusionAlertRuleTemplateProperties](#fusionalertruletemplateproperties) (ReadOnly): Fusion alert rule template properties
 
 ### MicrosoftSecurityIncidentCreationAlertRuleTemplate
 #### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties](#microsoftsecurityincidentcreationalertruletemplateproperties) (ReadOnly): MicrosoftSecurityIncidentCreation rule template properties
 
 ### ScheduledAlertRuleTemplate
 #### Properties
-* **kind**: 'Scheduled' (Required): The alert rule kind
+* **kind**: 'Scheduled' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ScheduledAlertRuleTemplateProperties](#scheduledalertruletemplateproperties) (ReadOnly): Scheduled alert rule template properties
 
 
@@ -156,7 +156,7 @@
 
 ### CustomizableConnectorDefinition
 #### Properties
-* **kind**: 'Customizable' (Required): The data connector kind
+* **kind**: 'Customizable' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [CustomizableConnectorDefinitionProperties](#customizableconnectordefinitionproperties): Customizable properties.
 
 
@@ -175,57 +175,57 @@
 
 ### AwsCloudTrailDataConnector
 #### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties): Amazon Web Services CloudTrail data connector properties.
 
 ### AADDataConnector
 #### Properties
-* **kind**: 'AzureActiveDirectory' (Required): The data connector kind
-* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): Microsoft Entra ID data connector properties.
+* **kind**: 'AzureActiveDirectory' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AADIP (Azure Active Directory Identity Protection) data connector properties.
 
 ### AatpDataConnector
 #### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required): The data connector kind
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
 
 ### ASCDataConnector
 #### Properties
-* **kind**: 'AzureSecurityCenter' (Required): The data connector kind
+* **kind**: 'AzureSecurityCenter' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties): ASC (Azure Security Center) data connector properties.
 
 ### McasDataConnector
 #### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required): The data connector kind
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
 
 ### MdatpDataConnector
 #### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): The data connector kind
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
 
 ### MstiDataConnector
 #### Properties
-* **kind**: 'MicrosoftThreatIntelligence' (Required): The data connector kind
+* **kind**: 'MicrosoftThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [MstiDataConnectorProperties](#mstidataconnectorproperties): Microsoft Threat Intelligence data connector properties.
 
 ### OfficeDataConnector
 #### Properties
-* **kind**: 'Office365' (Required): The data connector kind
+* **kind**: 'Office365' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties): Office data connector properties.
 
 ### PremiumMicrosoftDefenderForThreatIntelligence
 #### Properties
-* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): The data connector kind
+* **kind**: 'PremiumMicrosoftDefenderForThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [PremiumMdtiDataConnectorProperties](#premiummdtidataconnectorproperties): Microsoft Defender for Threat Intelligence Premium data connector properties.
 
 ### RestApiPollerDataConnector
 #### Properties
-* **kind**: 'RestApiPoller' (Required): The data connector kind
+* **kind**: 'RestApiPoller' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [RestApiPollerDataConnectorProperties](#restapipollerdataconnectorproperties): Rest Api Poller data connector properties.
 
 ### TIDataConnector
 #### Properties
-* **kind**: 'ThreatIntelligence' (Required): The data connector kind
+* **kind**: 'ThreatIntelligence' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [TIDataConnectorProperties](#tidataconnectorproperties): TI (Threat Intelligence) data connector properties.
 
 
@@ -316,7 +316,7 @@
 
 ### AnomalySecurityMLAnalyticsSettings
 #### Properties
-* **kind**: 'Anomaly' (Required): The kind of security ML Analytics Settings
+* **kind**: 'Anomaly' (Required): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **properties**: [AnomalySecurityMLAnalyticsSettingsProperties](#anomalysecuritymlanalyticssettingsproperties): Anomaly Security ML Analytics Settings properties
 
 
@@ -441,7 +441,7 @@
 
 ### AutomationRuleAddIncidentTaskAction
 #### Properties
-* **actionConfiguration**: [AddIncidentTaskActionProperties](#addincidenttaskactionproperties): Describes an automation rule action to add a task to an incident.
+* **actionConfiguration**: [AddIncidentTaskActionProperties](#addincidenttaskactionproperties)
 * **actionType**: 'AddIncidentTask' (Required): The type of the automation rule action.
 
 ### AutomationRuleModifyPropertiesAction
@@ -458,7 +458,7 @@
 ## AutomationRuleBooleanCondition
 ### Properties
 * **innerConditions**: [AutomationRuleCondition](#automationrulecondition)[] {minLength: 2, maxLength: 10}
-* **operator**: 'And' | 'Or' | string: Describes a boolean condition operator.
+* **operator**: 'And' | 'Or' | string
 
 ## AutomationRuleCondition
 * **Discriminator**: conditionType
@@ -467,7 +467,7 @@
 
 ### BooleanConditionProperties
 #### Properties
-* **conditionProperties**: [AutomationRuleBooleanCondition](#automationrulebooleancondition): Describes an automation rule condition with boolean operators.
+* **conditionProperties**: [AutomationRuleBooleanCondition](#automationrulebooleancondition)
 * **conditionType**: 'Boolean' (Required)
 
 ### PropertyConditionProperties
@@ -477,7 +477,7 @@
 
 ### PropertyArrayConditionProperties
 #### Properties
-* **conditionProperties**: [AutomationRulePropertyArrayValuesCondition](#automationrulepropertyarrayvaluescondition): Describes an automation rule condition on array properties.
+* **conditionProperties**: [AutomationRulePropertyArrayValuesCondition](#automationrulepropertyarrayvaluescondition)
 * **conditionType**: 'PropertyArray' (Required)
 
 ### PropertyArrayChangedConditionProperties
@@ -509,8 +509,8 @@
 
 ## AutomationRulePropertyArrayValuesCondition
 ### Properties
-* **arrayConditionType**: 'AllItems' | 'AnyItem' | string: Describes an array condition evaluation type.
-* **arrayType**: 'CustomDetailValues' | 'CustomDetails' | string: Describes an array condition evaluated array type.
+* **arrayConditionType**: 'AllItems' | 'AnyItem' | string
+* **arrayType**: 'CustomDetailValues' | 'CustomDetails' | string
 * **itemConditions**: [AutomationRuleCondition](#automationrulecondition)[] {maxLength: 10}
 
 ## AutomationRulePropertyValuesChangedCondition
@@ -589,7 +589,7 @@
 
 ### BasicAuthModel
 #### Properties
-* **password**: string (Required): The password
+* **password**: string {sensitive} (Required): The password
 * **type**: 'Basic' (Required): The auth type
 * **userName**: string (Required): The user name.
 
@@ -624,12 +624,12 @@
 ### OAuthModel
 #### Properties
 * **accessTokenPrepend**: string: Access token prepend. Default is 'Bearer'.
-* **authorizationCode**: string: The user's authorization code.
+* **authorizationCode**: string {sensitive}: The user's authorization code.
 * **authorizationEndpoint**: string: The authorization endpoint.
 * **authorizationEndpointHeaders**: [OAuthModelAuthorizationEndpointHeaders](#oauthmodelauthorizationendpointheaders): The authorization endpoint headers.
 * **authorizationEndpointQueryParameters**: [OAuthModelAuthorizationEndpointQueryParameters](#oauthmodelauthorizationendpointqueryparameters): The authorization endpoint query parameters.
 * **clientId**: string (Required): The Application (client) ID that the OAuth provider assigned to your app.
-* **clientSecret**: string (Required): The Application (client) secret that the OAuth provider assigned to your app.
+* **clientSecret**: string {sensitive} (Required): The Application (client) secret that the OAuth provider assigned to your app.
 * **grantType**: string (Required): The grant type, usually will be 'authorization code'.
 * **isCredentialsInHeaders**: bool: Indicating whether we want to send the clientId and clientSecret to token endpoint in the headers.
 * **isJwtBearerFlow**: bool: A value indicating whether it's a JWT flow.
@@ -817,7 +817,7 @@ The logo value should be in SVG format.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule template
-* **techniques**: string[]: The techniques of the alert rule template
+* **techniques**: string[]: The techniques of the alert rule
 
 ## GenericBlobSbsAuthModelCredentialsConfig
 ### Properties
@@ -1005,14 +1005,14 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 * **author**: [MetadataAuthor](#metadataauthor): The creator of the content item.
 * **categories**: [MetadataCategories](#metadatacategories): Categories for the solution content item
-* **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+* **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies.  If an active content item is made from a template, both will have the same contentId.
 * **contentSchemaVersion**: string: Schema version of the content. Can be used to distinguish between different flow based on the schema version
 * **customVersion**: string: The custom version of the content. A optional free text
 * **dependencies**: [MetadataDependencies](#metadatadependencies): Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
-* **firstPublishDate**: string: first publish date solution content item
+* **firstPublishDate**: string: first publish date of solution content item
 * **icon**: string: the icon identifier. this id can later be fetched from the solution template
 * **kind**: string (Required): The kind of content the metadata is for.
-* **lastPublishDate**: string: last publish date for the solution content item
+* **lastPublishDate**: string: last publish date of solution content item
 * **parentId**: string (Required): Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
 * **previewImages**: string[]: preview image file names. These will be taken from the solution artifacts
 * **previewImagesDark**: string[]: preview image file names. These will be taken from the solution artifacts. used for dark theme support
@@ -1064,11 +1064,11 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## MstiDataConnectorDataTypes
 ### Properties
-* **microsoftEmergingThreatFeed**: [MstiDataConnectorDataTypesMicrosoftEmergingThreatFeed](#mstidataconnectordatatypesmicrosoftemergingthreatfeed) (Required): Data type for Microsoft Threat Intelligence data connector.
+* **microsoftEmergingThreatFeed**: [MstiDataConnectorDataTypesMicrosoftEmergingThreatFeed](#mstidataconnectordatatypesmicrosoftemergingthreatfeed) (Required): Data type for Microsoft Threat Intelligence Platforms data connector.
 
 ## MstiDataConnectorDataTypesMicrosoftEmergingThreatFeed
 ### Properties
-* **lookbackPeriod**: string (Required): The lookback period for the feed to be imported. The date-time to begin importing the feed from, for example: 2024-01-01T00:00:00.000Z.
+* **lookbackPeriod**: string (Required): The lookback period for the feed to be imported.
 * **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## MstiDataConnectorProperties
@@ -1363,7 +1363,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule template
-* **techniques**: string[]: The techniques of the alert rule template
+* **techniques**: string[]: The techniques of the alert rule
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
 * **version**: string: The version of this template - in format <a.b.c>, where all are numbers. For example <1.0.2>.

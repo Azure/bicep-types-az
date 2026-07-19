@@ -3356,14 +3356,14 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Host pattern to match using DNS wildcard syntax (e.g., \"*.openai.com\").\nA leading \"*.\" matches any subdomain. Omit to match all hosts."
+        "description": "Host pattern to match using DNS wildcard syntax (e.g., \"\\*.openai.com\").\nA leading \"\\*.\" matches any subdomain. Omit to match all hosts."
       },
       "path": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Path pattern to match using URI prefix with '*' wildcard (e.g., \"/v1/*\").\nOmit to match all paths."
+        "description": "Path pattern to match using URI prefix matching.\nAn asterisk serves as a single-segment wildcard.\nFor example, \"/v1/\\*\" matches \"/v1/chat\". Omit to match all paths."
       }
     }
   },
