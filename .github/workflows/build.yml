@@ -101,6 +101,10 @@ jobs:
         run: npm run build
         working-directory: ./src/generator
 
+      - name: Test
+        run: npm test
+        working-directory: ./src/generator
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
 
