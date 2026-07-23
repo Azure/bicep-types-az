@@ -25,7 +25,7 @@ export interface ProviderDefinition {
   namespace: string;
   apiVersion: string;
   resourcesByType: Dictionary<ResourceDefinition[]>;
-  resourceActions: ResourceListActionDefinition[];
+  resourceActions: ResourceActionDefinition[];
 }
 
 export interface ResourceOperationDefintion {
@@ -43,7 +43,7 @@ export interface ResourceDefinition {
   putExamples?: PutExample[];
 }
 
-export interface ResourceListActionDefinition {
+export interface ResourceActionDefinition {
   actionName: string;
   descriptor: ResourceDescriptor;
   postRequest: HttpRequest;
@@ -282,7 +282,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     const getOperationsByPath: Dictionary<Operation> = {};
     const putOperationsByPath: Dictionary<Operation> = {};
-    const postListOperationsByPath: Dictionary<Operation> = {};
+    const postOperationsByPath: Dictionary<Operation> = {};
 
     function addProviderDefinition(namespace: string) {
       const lcNamespace = namespace.toLowerCase();
@@ -331,20 +331,13 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         }
       }
 
-      const postListRequest = requests.filter(r => {
+      const postRequest = requests.filter(r => {
         if (r.httpRequest.method !== HttpMethod.Post) {
           return false;
         }
 
         const parseResult = parseResourceScopes(r.httpRequest.path);
         if (!parseResult.success) {
-          return false;
-        }
-
-        const { routingScope: actionRoutingScope } = parseResult.value;
-        const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
-        if (!actionName.toLowerCase().startsWith('list'))
-        {
           return false;
         }
 
@@ -359,8 +352,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
         return parameterWarnings.length === 0;
       })[0];
-      if (postListRequest) {
-        postListOperationsByPath[postListRequest.httpRequest.path.toLowerCase()] = operation;
+      if (postRequest) {
+        postOperationsByPath[postRequest.httpRequest.path.toLowerCase()] = operation;
       }
     });
 
@@ -423,18 +416,18 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       }
     }
 
-    const actionsByProvider: Dictionary<ResourceListActionDefinition[]> = {};
-    for (const lcPath in postListOperationsByPath) {
-      const listOperation = postListOperationsByPath[lcPath];
+    const actionsByProvider: Dictionary<ResourceActionDefinition[]> = {};
+    for (const lcPath in postOperationsByPath) {
+      const operation = postOperationsByPath[lcPath];
 
-      const listData = getPostSchema(listOperation);
-      if (!listData) {
+      const postData = getPostSchema(operation);
+      if (!postData) {
         continue;
       }
 
-      const parseResult = parseResourceActionMethod(listData.request.path, listData.parameters, apiVersion);
+      const parseResult = parseResourceActionMethod(postData.request.path, postData.parameters, apiVersion);
       if (!parseResult.success) {
-        logWarning(`Skipping resource POST action path '${listData.request.path}': ${parseResult.error}`);
+        logWarning(`Skipping resource POST action path '${postData.request.path}': ${parseResult.error}`);
         continue;
       }
 
@@ -443,12 +436,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       for (const descriptor of descriptors) {
         addProviderDefinition(descriptor.namespace);
 
-        const action: ResourceListActionDefinition = {
+        const action: ResourceActionDefinition = {
           actionName: normalizeListActionName(actionName),
           descriptor,
-          postRequest: listData.request,
-          requestSchema: listData.requestSchema,
-          responseSchema: listData.responseSchema,
+          postRequest: postData.request,
+          requestSchema: postData.requestSchema,
+          responseSchema: postData.responseSchema,
         };
 
         const lcNamespace = descriptor.namespace.toLowerCase();
@@ -848,7 +841,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return groupByType(collapsedResources);
   }
 
-  function collapseActions(actions: ResourceListActionDefinition[]) {
+  function collapseActions(actions: ResourceActionDefinition[]) {
     const actionsByType = groupByType(actions);
 
     return Object.values(actionsByType).flatMap(actions => uniqBy(actions, x => x.actionName.toLowerCase()));
