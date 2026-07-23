@@ -117310,5 +117310,13 @@
       ]
     }
   },
-  "namespaceFunctions": []
+  "namespaceFunctions": [],
+  "settings": {
+    "name": "AzureResourceManager",
+    "version": "1.0",
+    "isSingleton": true,
+    "configurationType": {
+      "$ref": "extensions/az/types.json#/285"
+    }
+  }
 }

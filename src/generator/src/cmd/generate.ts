@@ -6,11 +6,12 @@ import { existsSync } from 'fs';
 import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers'
-import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from "bicep-types";
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
+import { TypeFile, TypeSettings, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from 'bicep-types';
 import { copyRecursive, executeSynchronous, getLogger, lowerCaseCompare, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive } from '../utils';
+import { addAzExtensionConfigurationType } from '../index/azExtensionConfiguration';
 
 const rootDir = `${__dirname}/../../../../`;
 
@@ -297,11 +298,22 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
   for (const typePath of typesPaths) {
     const content = await readFile(typePath, { encoding: 'utf8' });
     typeFiles.push({
-      relativePath: path.relative(baseDir, typePath),
+      relativePath: path.relative(baseDir, typePath).replace(/\\/g, '/'),
       types: readTypesJson(content),
     });
   }
-  const indexContent = await buildIndex(typeFiles,  (log) => logOut(logger, log));
+
+  const preliminaryIndex = await buildIndex(typeFiles, (log: string) => logOut(logger, log));
+  const { configurationType, typeFile } = await addAzExtensionConfigurationType(baseDir, preliminaryIndex.resources);
+  const indexTypeFiles = [...typeFiles, typeFile];
+  const settings: TypeSettings = {
+    name: 'AzureResourceManager',
+    version: '1.0',
+    isSingleton: true,
+    configurationType,
+  };
+
+  const indexContent = await buildIndex(indexTypeFiles, (log: string) => logOut(logger, log), settings);
 
   await writeFile(`${baseDir}/index.json`, writeIndexJson(indexContent));
   await writeFile(`${baseDir}/index.md`, writeIndexMarkdown(indexContent));
