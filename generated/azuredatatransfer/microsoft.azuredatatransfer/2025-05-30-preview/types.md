@@ -205,7 +205,7 @@
 * **linkedFlowId**: string (ReadOnly): Resource ID of the linked flow
 * **linkStatus**: 'Linked' | 'Unlinked' | string (ReadOnly): Link status of the current flow
 * **messagingOptions**: [MessagingOptions](#messagingoptions): The messaging options for this flow
-* **passphrase**: string: The passphrase used for SRT streams
+* **passphrase**: string: The passphrase used for SRT streams (non-secret)
 * **policies**: string[]: The policies for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the flow
 * **schema**: [Schema](#schema): The selected schema for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
@@ -329,7 +329,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **messagingOptions**: [MessagingOptions](#messagingoptions): The messaging options for this flow
 * **name**: string (ReadOnly): The name of the resource
-* **passphrase**: string: The passphrase used for SRT streams
+* **passphrase**: string: The passphrase used for SRT streams (non-secret)
 * **policies**: string[]: The policies for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the flow
 * **schema**: [Schema](#schema): The selected schema for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead.

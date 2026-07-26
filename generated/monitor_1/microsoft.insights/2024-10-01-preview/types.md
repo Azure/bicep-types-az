@@ -18,17 +18,17 @@
 ### Properties
 * **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
 * **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]: The list of AutomationRunbook receivers that are part of this action group.
-* **azureAppPushReceivers**: [AzureAppPushReceiver](#azureapppushreceiver)[]: The list of AzureAppPush receivers that are part of this action group.
+* **azureAppPushReceivers**: [MicrosoftCommonAzureAppPushReceiver](#microsoftcommonazureapppushreceiver)[]: The list of AzureAppPush receivers that are part of this action group.
 * **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]: The list of azure function receivers that are part of this action group.
-* **emailReceivers**: [EmailReceiver](#emailreceiver)[]: The list of email receivers that are part of this action group.
+* **emailReceivers**: [MicrosoftCommonEmailReceiver](#microsoftcommonemailreceiver)[]: The list of email receivers that are part of this action group.
 * **enabled**: bool (Required): Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
 * **eventHubReceivers**: [EventHubReceiver](#eventhubreceiver)[]: The list of event hub receivers that are part of this action group.
 * **groupShortName**: string {maxLength: 12} (Required): The short name of the action group. This will be used in SMS messages.
 * **incidentReceivers**: [IncidentReceiver](#incidentreceiver)[]: The list of incident receivers that are part of this action group.
 * **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]: The list of ITSM receivers that are part of this action group.
 * **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]: The list of logic app receivers that are part of this action group.
-* **smsReceivers**: [SmsReceiver](#smsreceiver)[]: The list of SMS receivers that are part of this action group.
-* **voiceReceivers**: [VoiceReceiver](#voicereceiver)[]: The list of voice receivers that are part of this action group.
+* **smsReceivers**: [MicrosoftCommonSmsReceiver](#microsoftcommonsmsreceiver)[]: The list of SMS receivers that are part of this action group.
+* **voiceReceivers**: [MicrosoftCommonVoiceReceiver](#microsoftcommonvoicereceiver)[]: The list of voice receivers that are part of this action group.
 * **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]: The list of webhook receivers that are part of this action group.
 
 ## ArmRoleReceiver
@@ -48,11 +48,6 @@
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 * **webhookResourceId**: string (Required): The resource id for webhook linked to this runbook.
 
-## AzureAppPushReceiver
-### Properties
-* **emailAddress**: string (Required): The email address registered for the Azure mobile app.
-* **name**: string (Required): The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
-
 ## AzureFunctionReceiver
 ### Properties
 * **functionAppResourceId**: string (Required): The azure resource id of the function app.
@@ -60,13 +55,6 @@
 * **httpTriggerUrl**: string (Required): The http trigger url where http request sent to.
 * **managedIdentity**: string: The principal id of the managed identity. The value can be "None", "SystemAssigned"
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
-* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
-
-## EmailReceiver
-### Properties
-* **emailAddress**: string (Required): The email address of this receiver.
-* **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## EventHubReceiver
@@ -119,12 +107,30 @@
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
-## SmsReceiver
+## MicrosoftCommonAzureAppPushReceiver
+### Properties
+* **emailAddress**: string (Required): The email address registered for the Azure mobile app.
+* **name**: string (Required): The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+
+## MicrosoftCommonEmailReceiver
+### Properties
+* **emailAddress**: string (Required): The email address of this receiver.
+* **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
+
+## MicrosoftCommonSmsReceiver
 ### Properties
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
 * **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
+
+## MicrosoftCommonVoiceReceiver
+### Properties
+* **countryCode**: string (Required): The country code of the voice receiver.
+* **name**: string (Required): The name of the voice receiver. Names must be unique across all receivers within an action group.
+* **phoneNumber**: string (Required): The phone number of the voice receiver.
 
 ## SystemData
 ### Properties
@@ -149,12 +155,6 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
-
-## VoiceReceiver
-### Properties
-* **countryCode**: string (Required): The country code of the voice receiver.
-* **name**: string (Required): The name of the voice receiver. Names must be unique across all receivers within an action group.
-* **phoneNumber**: string (Required): The phone number of the voice receiver.
 
 ## WebhookReceiver
 ### Properties

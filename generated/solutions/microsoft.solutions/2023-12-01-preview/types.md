@@ -40,7 +40,7 @@
 * **apiVersion**: '2023-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 10} (Required, DeployTimeConstant): The resource name
 * **properties**: [JitRequestProperties](#jitrequestproperties): The JIT request properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
@@ -98,7 +98,7 @@
 * **displayName**: string: The managed application definition display name.
 * **isEnabled**: bool: A value indicating whether the package is enabled or not.
 * **lockingPolicy**: [ApplicationPackageLockingPolicyDefinition](#applicationpackagelockingpolicydefinition): The managed application locking policy.
-* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level.
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' | string (Required): The managed application lock level.
 * **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
 * **managementPolicy**: [ApplicationManagementPolicy](#applicationmanagementpolicy): The managed application management policy that determines publisher's access to the managed resource group.
 * **notificationPolicy**: [ApplicationNotificationPolicy](#applicationnotificationpolicy): The managed application notification policy.

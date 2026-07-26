@@ -307,9 +307,9 @@
 ## Selector
 ### Properties
 * **in**: string[]: The list of values to filter in.
-* **kind**: 'groupPrincipalId' | 'policyDefinitionReferenceId' | 'resourceLocation' | 'resourcePercentage' | 'resourceType' | 'resourceWithoutLocation' | 'userPrincipalId' | string: The selector kind.
+* **kind**: 'groupPrincipalId' | 'policyDefinitionReferenceId' | 'resourceLocation' | 'resourceRolloutPercentage' | 'resourceType' | 'resourceWithoutLocation' | 'userPrincipalId' | string: The selector kind.
 * **notIn**: string[]: The list of values to filter out.
-* **progress**: int {minValue: 1, maxValue: 99}: The percent of total resources that will be governed by the policy.
+* **progress**: int {minValue: 0, maxValue: 100}: The percent of total resources that will be governed by the policy.
 
 ## SelfServeExemptionSettings
 ### Properties

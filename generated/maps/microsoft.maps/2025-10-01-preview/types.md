@@ -86,17 +86,17 @@
 * **storageUnits**: int {minValue: 1, maxValue: 100} (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
 * **totalStorageUnitSizeInBytes**: int: The total allocated storage unit size in bytes for the creator resource.
 
+## CustomerManagedKeyEncryption
+### Properties
+* **keyEncryptionKeyIdentity**: [KeyEncryptionKeyIdentity](#keyencryptionkeyidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
+* **keyEncryptionKeyUrl**: string: key encryption key Url, versioned or non-versioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek.
+
 ## Encryption
 ### Properties
-* **customerManagedKeyEncryption**: [EncryptionCustomerManagedKeyEncryption](#encryptioncustomermanagedkeyencryption): All Customer-managed key encryption properties for the resource.
-* **infrastructureEncryption**: 'disabled' | 'enabled' | string: (Optional) Discouraged to include in resource definition. Only needed where it is possible to disable platform (AKA infrastructure) encryption. Azure SQL TDE is an example of this. Values are enabled and disabled.
+* **customerManagedKeyEncryption**: [CustomerManagedKeyEncryption](#customermanagedkeyencryption): All Customer-managed key encryption properties for the resource.
+* **infrastructureEncryption**: 'disabled' | 'enabled' | string: Values are enabled and disabled.
 
-## EncryptionCustomerManagedKeyEncryption
-### Properties
-* **keyEncryptionKeyIdentity**: [EncryptionCustomerManagedKeyEncryptionKeyIdentity](#encryptioncustomermanagedkeyencryptionkeyidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
-* **keyEncryptionKeyUrl**: string: key encryption key Url, versioned or unversioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek.
-
-## EncryptionCustomerManagedKeyEncryptionKeyIdentity
+## KeyEncryptionKeyIdentity
 ### Properties
 * **delegatedIdentityClientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: delegated identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId. Mutually exclusive with identityType systemAssignedIdentity and userAssignedIdentity - internal use only.
 * **federatedClientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: application client identity to use for accessing key encryption key Url in a different tenant. Ex: f83c6b1b-4d34-47e4-bb34-9d83df58b540
