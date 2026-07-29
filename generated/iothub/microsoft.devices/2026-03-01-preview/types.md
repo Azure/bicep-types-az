@@ -98,7 +98,7 @@
 ## DeviceRegistry
 ### Properties
 * **identityResourceId**: string: The identity used to manage the ADR namespace from the data plane.
-* **namespaceResourceId**: string: The identifier of the Azure Device Registry namespace associated with the GEN2 SKU hub.
+* **namespaceResourceId**: string: The identifier of the Azure Device Registry namespace
 
 ## EncryptionPropertiesDescription
 ### Properties

@@ -808,12 +808,27 @@
 * **sizeInBytes**: string (ReadOnly): The size of the disk in bytes.
 * **type**: string (ReadOnly): The type of the disk. For example, S2D or SAN.
 
+## EdgeMachineAdapterPropertyOverrides
+### Properties
+* **jumboPacket**: string (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+* **networkDirect**: string (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+* **networkDirectTechnology**: string (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation. Expected values are 'iWARP', 'RoCEv2', 'RoCE'
+
 ## EdgeMachineCollectLogJobReportedProperties
 ### Properties
 * **deploymentStatus**: [EceActionStatus](#eceactionstatus) (ReadOnly): Deployment status of job.
 * **logCollectionSessionDetails**: [LogCollectionJobSession](#logcollectionjobsession)[] (ReadOnly): Details of the log collection session.
 * **percentComplete**: int (ReadOnly): The percentage of the job that is complete.
 * **validationStatus**: [EceActionStatus](#eceactionstatus) (ReadOnly): Validation status of job.
+
+## EdgeMachineDiskInfo
+### Properties
+* **id**: string (Required, ReadOnly): The unique identifier of the disk.
+* **isSupported**: bool (ReadOnly): Indicates whether the manufacturer is supported.
+* **manufacturer**: string (ReadOnly): The manufacturer of the disk.
+* **model**: string (ReadOnly): Model number of the hardware.
+* **sizeInBytes**: string (ReadOnly): The size of the disk in bytes.
+* **type**: string (ReadOnly): The type of the disk. For example, S2D or SAN.
 
 ## EdgeMachineDiskJobProperties
 * **Discriminator**: jobType
@@ -922,6 +937,33 @@
 * **status**: string (ReadOnly): The status of the GPU.
 * **totalMemoryInBytes**: string (ReadOnly): The total memory of the GPU in bytes.
 
+## EdgeMachineHostNetwork
+### Properties
+* **enableStorageAutoIp**: bool (ReadOnly): Optional parameter required only for 3 Nodes Switchless deployments. This allows users to specify IPs and Mask for Storage NICs when Network ATC is not assigning the IPs for storage automatically.
+* **intents**: [EdgeMachineHostNetworkIntent](#edgemachinehostnetworkintent)[] (ReadOnly): The network intents assigned to the network reference pattern used for the deployment. Each intent will define its own name, traffic type, adapter names, and overrides as recommended by your OEM.
+* **storageConnectivitySwitchless**: bool (ReadOnly): Defines how the storage adapters between nodes are connected either switch or switch less.
+* **storageNetworks**: [EdgeMachineStorageNetwork](#edgemachinestoragenetwork)[] (ReadOnly): List of StorageNetworks config to deploy AzureStackHCI Cluster.
+
+## EdgeMachineHostNetworkIntent
+### Properties
+* **adapterPropertyOverrides**: [EdgeMachineAdapterPropertyOverrides](#edgemachineadapterpropertyoverrides) (ReadOnly): Set Adapter PropertyOverrides for cluster.
+* **intentAdapters**: string[] (ReadOnly): Array of adapters used for the network intent.
+* **intentName**: string (ReadOnly): Name of the network intent you wish to create.
+* **intentType**: int (ReadOnly): IntentType for host network intent.
+* **isComputeIntentSet**: bool (ReadOnly): IsComputeIntentSet for host network intent.
+* **isManagementIntentSet**: bool (ReadOnly): IsManagementIntentSet for host network intent.
+* **isNetworkIntentType**: bool (ReadOnly): IsNetworkIntentType for host network intent.
+* **isOnlyStorage**: bool (ReadOnly): IntentType for host network intent.
+* **isOnlyStretch**: bool (ReadOnly): IsOnlyStretch for host network intent.
+* **isStorageIntentSet**: bool (ReadOnly): IsStorageIntentSet for host network intent.
+* **isStretchIntentSet**: bool (ReadOnly): IsStretchIntentSet for host network intent.
+* **overrideAdapterProperty**: bool (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+* **overrideQosPolicy**: bool (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+* **overrideVirtualSwitchConfiguration**: bool (ReadOnly): This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+* **qosPolicyOverrides**: [QosPolicyOverrides](#qospolicyoverrides) (ReadOnly): Set QoS PolicyOverrides for cluster.
+* **scope**: int (ReadOnly): Scope for host network intent.
+* **virtualSwitchConfigurationOverrides**: [EdgeMachineVirtualSwitchConfigurationOverrides](#edgemachinevirtualswitchconfigurationoverrides) (ReadOnly): Set virtualSwitch ConfigurationOverrides for cluster.
+
 ## EdgeMachineJobProperties
 * **Discriminator**: jobType
 
@@ -999,7 +1041,9 @@
 
 ## EdgeMachineNetworkProfile
 ### Properties
+* **hostNetwork**: [EdgeMachineHostNetwork](#edgemachinehostnetwork) (ReadOnly): HostNetwork configuration reported for the edge machine.
 * **nicDetails**: [EdgeMachineNicDetail](#edgemachinenicdetail)[] (ReadOnly): List of Network Interface Card (NIC) Details of edge machine.
+* **sdnProperties**: [SdnProperties](#sdnproperties) (ReadOnly): Software Defined Networking (SDN) properties reported for the edge machine.
 * **switchDetails**: [SwitchDetail](#switchdetail)[] (ReadOnly): List of switch Details of edge machine.
 
 ## EdgeMachineNicDetail
@@ -1059,6 +1103,7 @@
 
 ## EdgeMachineReportedProperties
 ### Properties
+* **confidentialVmProfile**: [ConfidentialVmProfile](#confidentialvmprofile) (ReadOnly): CVM (Confidential VM) support details for the edge machine.
 * **extensionProfile**: [ExtensionProfile](#extensionprofile) (ReadOnly): Extension details for edge machine.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile) (ReadOnly): Hardware related information for edge machine.
 * **lastUpdated**: string (ReadOnly): Last time data reported.
@@ -1068,6 +1113,19 @@
 * **storageProfile**: [StorageProfile](#storageprofile) (ReadOnly): Storage related information for edge machine.
 * **workloadInventory**: [EdgeMachineWorkloadInventoryItem](#edgemachineworkloadinventoryitem)[] (ReadOnly): Read-only Hyper-V VM inventory reported by the device management extension for VMs visible on this node.
 * **workloadInventoryLastUpdated**: string (ReadOnly): Last time the device management extension refreshed the local Hyper-V workload inventory.
+
+## EdgeMachineStorageAdapterIpInfo
+### Properties
+* **ipv4Address**: string (ReadOnly): The IPv4 address assigned to each storage adapter physical node on your Azure Stack HCI cluster.
+* **physicalNode**: string (ReadOnly): storage adapter physical node name.
+* **subnetMask**: string (ReadOnly): The SubnetMask address assigned to each storage adapter physical node on your Azure Stack HCI cluster.
+
+## EdgeMachineStorageNetwork
+### Properties
+* **name**: string (ReadOnly): Name of the storage network.
+* **networkAdapterName**: string (ReadOnly): Name of the storage network adapter.
+* **storageAdapterIPInfo**: [EdgeMachineStorageAdapterIpInfo](#edgemachinestorageadapteripinfo)[] (ReadOnly): List of Storage adapter physical nodes config to deploy AzureStackHCI Cluster.
+* **storageVlanId**: string (ReadOnly): ID specified for the VLAN storage network. This setting is applied to the network interfaces that route the storage and VM migration traffic.
 
 ## EdgeMachineUpdateInfo
 ### Properties
@@ -1085,6 +1143,11 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the updates resource.
 * **solutionType**: 'AzureLinux' | 'HCI' | string: The solution type for the available updates.
 * **values**: [EdgeMachineUpdateInfo](#edgemachineupdateinfo)[] (Required): The list of available updates.
+
+## EdgeMachineVirtualSwitchConfigurationOverrides
+### Properties
+* **enableIov**: string (ReadOnly): Enable IoV for Virtual Switch
+* **loadBalancingAlgorithm**: string (ReadOnly): Load Balancing Algorithm for Virtual Switch
 
 ## EdgeMachineVolumeProperties
 ### Properties
@@ -1947,6 +2010,7 @@
 
 ## StorageProfile
 ### Properties
+* **disks**: [EdgeMachineDiskInfo](#edgemachinediskinfo)[] (ReadOnly): List of storage disks on the edge machine.
 * **poolableDisksCount**: int (ReadOnly): Number of storage disks in the device with $CanPool as true.
 
 ## StorageS2DConfig

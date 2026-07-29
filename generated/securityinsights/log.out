@@ -10,23 +10,126 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'productTemplateProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/ContentProductTemplates.json:187:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'paths·1y68tu1·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/paths·1y68tu1·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·200·content·application-json·schema
+warning | Modeler/MissingType | The schema 'paths·uamcf9·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·204·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/paths·uamcf9·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·204·content·application-json·schema
+warning | Modeler/MissingType | The schema 'ConnectedEntity-additionalData' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/ConnectedEntity-additionalData
+warning | Modeler/MissingType | The schema 'productPackageProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/productPackageProperties-packagedContent
+warning | Modeler/MissingType | The schema 'productTemplateProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/productTemplateProperties-packagedContent
+warning | Modeler/MissingType | The schema 'templateProperties-mainTemplate' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/templateProperties-mainTemplate
+warning | Modeler/MissingType | The schema 'DataConnectorConnectBody-requestConfigUserInputValuesItem' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/DataConnectorConnectBody-requestConfigUserInputValuesItem
+warning | Modeler/MissingType | The schema 'components·18qo7dz·schemas·entityedges·properties·additionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·18qo7dz·schemas·entityedges·properties·additionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'SecurityAlertProperties-resourceIdentifiersItem' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/SecurityAlertProperties-resourceIdentifiersItem
+warning | Modeler/MissingType | The schema 'components·nhyli8·schemas·entitycommonproperties·properties·additionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·nhyli8·schemas·entitycommonproperties·properties·additionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'paths·hntg5k·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-incidents-incidentidentifier-runplaybook·post·responses·204·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/paths·hntg5k·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-incidents-incidentidentifier-runplaybook·post·responses·204·content·application-json·schema
+warning | Modeler/MissingType | The schema 'components·5nhrn8·schemas·tiobjectcommonproperties·properties·data·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·5nhrn8·schemas·tiobjectcommonproperties·properties·data·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'WatchlistItemProperties-itemsKeyValue' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/WatchlistItemProperties-itemsKeyValue
+warning | Modeler/MissingType | The schema 'WatchlistItemProperties-entityMapping' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/WatchlistItemProperties-entityMapping
+warning | Modeler/MissingType | The schema 'AnomalySecurityMLAnalyticsSettingsProperties-customizableObservations' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/AnomalySecurityMLAnalyticsSettingsProperties-customizableObservations
+warning | Modeler/MissingType | The schema 'ConnectorInstructionModelBase-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/ConnectorInstructionModelBase-parameters
+warning | Modeler/MissingType | The schema 'CodelessConnectorPollingAuthProperties-authorizationEndpointQueryParameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/CodelessConnectorPollingAuthProperties-authorizationEndpointQueryParameters
+warning | Modeler/MissingType | The schema 'CodelessConnectorPollingAuthProperties-tokenEndpointHeaders' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/CodelessConnectorPollingAuthProperties-tokenEndpointHeaders
+warning | Modeler/MissingType | The schema 'CodelessConnectorPollingAuthProperties-tokenEndpointQueryParameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/CodelessConnectorPollingAuthProperties-tokenEndpointQueryParameters
+warning | Modeler/MissingType | The schema 'CodelessConnectorPollingRequestProperties-headers' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/CodelessConnectorPollingRequestProperties-headers
+warning | Modeler/MissingType | The schema 'CodelessConnectorPollingRequestProperties-queryParameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/CodelessConnectorPollingRequestProperties-queryParameters
+warning | Modeler/MissingType | The schema 'InstructionStepDetails-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/InstructionStepDetails-parameters
+warning | Modeler/MissingType | The schema 'EntityQueryItemProperties-entitiesFilter' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/EntityQueryItemProperties-entitiesFilter
+warning | Modeler/MissingType | The schema 'InsightQueryItemProperties-chartQuery' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/InsightQueryItemProperties-chartQuery
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByDeliveryStatus' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/MailClusterEntityProperties-countByDeliveryStatus
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByThreatType' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/MailClusterEntityProperties-countByThreatType
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByProtectionStatus' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/MailClusterEntityProperties-countByProtectionStatus
 warning | Modeler/MissingType | The schema 'components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/DataConnectors.json#/components/schemas/components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties
 warning | Modeler/MissingType | The schema 'components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/DataConnectors.json#/components/schemas/components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties
+warning | Modeler/MissingType | The schema 'productPackageAdditionalProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/productPackageAdditionalProperties-packagedContent
+warning | Modeler/MissingType | The schema 'productTemplateAdditionalProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/productTemplateAdditionalProperties-packagedContent
+warning | Modeler/MissingType | The schema 'templateAdditionalProperties-mainTemplate' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2025-10-01-preview/openapi.json#/components/schemas/templateAdditionalProperties-mainTemplate
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'EnrichmentType' -> 'EnrichmentTypeAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'EntityItemQueryKind' -> 'EntityItemQueryKindAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'TiType' -> 'TiTypeAutoGenerated'
+warning | Skipping Entities_Queries due to required query parameter "kind"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'paths·1y68tu1·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/paths·1y68tu1·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·200·content·application-json·schema
+warning | Modeler/MissingType | The schema 'paths·uamcf9·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·204·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/paths·uamcf9·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-automationrules-automationruleid·delete·responses·204·content·application-json·schema
+warning | Modeler/MissingType | The schema 'productPackageProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/productPackageProperties-packagedContent
+warning | Modeler/MissingType | The schema 'productTemplateProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/productTemplateProperties-packagedContent
+warning | Modeler/MissingType | The schema 'templateProperties-mainTemplate' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/templateProperties-mainTemplate
+warning | Modeler/MissingType | The schema 'SecurityAlertProperties-resourceIdentifiersItem' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/SecurityAlertProperties-resourceIdentifiersItem
+warning | Modeler/MissingType | The schema 'components·nhyli8·schemas·entitycommonproperties·properties·additionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/components·nhyli8·schemas·entitycommonproperties·properties·additionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'WatchlistItemProperties-itemsKeyValue' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/WatchlistItemProperties-itemsKeyValue
+warning | Modeler/MissingType | The schema 'WatchlistItemProperties-entityMapping' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/WatchlistItemProperties-entityMapping
+warning | Modeler/MissingType | The schema 'AnomalySecurityMLAnalyticsSettingsProperties-customizableObservations' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/AnomalySecurityMLAnalyticsSettingsProperties-customizableObservations
+warning | Modeler/MissingType | The schema 'InstructionStepDetails-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/InstructionStepDetails-parameters
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByDeliveryStatus' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/MailClusterEntityProperties-countByDeliveryStatus
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByThreatType' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/MailClusterEntityProperties-countByThreatType
+warning | Modeler/MissingType | The schema 'MailClusterEntityProperties-countByProtectionStatus' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/MailClusterEntityProperties-countByProtectionStatus
+warning | Modeler/MissingType | The schema 'components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties
+warning | Modeler/MissingType | The schema 'components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties
+warning | Modeler/MissingType | The schema 'productPackageAdditionalProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/productPackageAdditionalProperties-packagedContent
+warning | Modeler/MissingType | The schema 'productTemplateAdditionalProperties-packagedContent' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/productTemplateAdditionalProperties-packagedContent
+warning | Modeler/MissingType | The schema 'templateAdditionalProperties-mainTemplate' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2025-09-01/openapi.json#/components/schemas/templateAdditionalProperties-mainTemplate
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -314,9 +417,9 @@ warning | PreCheck/SchemaMissingType | The schema 'productTemplateProperties' wi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2024-03-01/ContentProductTemplates.json:187:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:646" => "#/components/schemas/schemas:743"
-  - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-  - properties.systemData.type: <none> => "object"
+  - properties.id.$ref: "#/components/schemas/schemas:645" => "#/components/schemas/schemas:738"
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData.type: "object" => <none>
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MCASDataConnectorDataTypes' has a property 'alerts' that is already declared the parent schema 'AlertsDataTypeOfDataConnector' but isn't significantly different. The property has been removed from MCASDataConnectorDataTypes
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/stable/2024-03-01/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
@@ -364,18 +467,18 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Query' (5 differenc
   - properties.maxPageSize: <none> => {"$ref":"#/components/schemas/schemas:1080","description":"Represents the maximum size of the page that will be returned from the query API."}
   - properties.minPageSize: <none> => {"$ref":"#/components/schemas/schemas:1081","description":"Represents the minimum size of the page that will be returned from the query API."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'UserInfo' (10 differences):
-  - properties.objectId.$ref: "#/components/schemas/schemas:1089" => "#/components/schemas/schemas:1784"
+  - properties.objectId.$ref: "#/components/schemas/schemas:1089" => "#/components/schemas/schemas:1943"
   - properties.objectId.description: "The user's object ID." => "The object id of the user."
   - properties.objectId.readOnly: true => <none>
   - properties.objectId.nullable: <none> => true
-  - properties.email.$ref: "#/components/schemas/schemas:1090" => "#/components/schemas/schemas:1782"
+  - properties.email.$ref: "#/components/schemas/schemas:1090" => "#/components/schemas/schemas:1941"
   - properties.email.description: "The user's email address." => "The email of the user."
   - properties.email.readOnly: <none> => true
-  - properties.name.$ref: "#/components/schemas/schemas:1091" => "#/components/schemas/schemas:1783"
+  - properties.name.$ref: "#/components/schemas/schemas:1091" => "#/components/schemas/schemas:1942"
   - properties.name.description: "The user's name." => "The name of the user."
   - properties.name.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1735" => "#/components/schemas/schemas:1864"
+  - properties.id.$ref: "#/components/schemas/schemas:1735" => "#/components/schemas/schemas:1828"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -741,7 +844,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1529"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1531"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -752,7 +855,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateProperties'
   - properties.mainTemplate: <none> => {"$ref":"#/components/schemas/schemas:359","description":"The JSON of the ARM template to deploy active content"}
   - required.5: <none> => "packageId"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1431" => "#/components/schemas/schemas:1881"
+  - properties.id.$ref: "#/components/schemas/schemas:1443" => "#/components/schemas/schemas:1881"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -825,7 +928,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1529"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1503"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -1043,7 +1146,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2023-02-01-preview/dataConnectors.json:2820:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1278" => "#/components/schemas/schemas:1682"
+  - properties.id.$ref: "#/components/schemas/schemas:1288" => "#/components/schemas/schemas:1682"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties' has no type or format information whatsoever. Location:
@@ -1718,7 +1821,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2022-01-01-preview/dataConnectors.json:2653:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1132" => "#/components/schemas/schemas:1521"
+  - properties.id.$ref: "#/components/schemas/schemas:1132" => "#/components/schemas/schemas:1504"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:

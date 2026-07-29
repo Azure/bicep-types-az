@@ -17,6 +17,10 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseCreateProperti
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseUpdateProperties' has a property 'accessKeysAuthentication' that is already declared the parent schema 'DatabaseProperties' but isn't significantly different. The property has been removed from DatabaseUpdateProperties
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseCreateProperties' has a property 'accessKeysAuthentication' that is already declared the parent schema 'DatabaseProperties' but isn't significantly different. The property has been removed from DatabaseCreateProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseUpdateProperties' has a property 'accessKeysAuthentication' that is already declared the parent schema 'DatabaseProperties' but isn't significantly different. The property has been removed from DatabaseUpdateProperties
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
   - allOf.0.$ref: "#/components/schemas/schemas:183" => "#/components/schemas/schemas:223"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (1 differences):

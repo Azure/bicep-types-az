@@ -1329,10 +1329,11 @@ not allowed for Allow or Deny.
 
 ## RaiEgressRuleMatch
 ### Properties
-* **host**: string: Host pattern to match using DNS wildcard syntax (e.g., "*.openai.com").
-A leading "*." matches any subdomain. Omit to match all hosts.
-* **path**: string: Path pattern to match using URI prefix with '*' wildcard (e.g., "/v1/*").
-Omit to match all paths.
+* **host**: string: Host pattern to match using DNS wildcard syntax (e.g., "\*.openai.com").
+A leading "\*." matches any subdomain. Omit to match all hosts.
+* **path**: string: Path pattern to match using URI prefix matching.
+An asterisk serves as a single-segment wildcard.
+For example, "/v1/\*" matches "/v1/chat". Omit to match all paths.
 
 ## RaiEgressSecretRef
 ### Properties

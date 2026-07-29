@@ -58,7 +58,7 @@ resource exampleResource 'Microsoft.Authorization/policyAssignments@2026-06-01' 
 }
 ```
 
-Create or update a policy assignment with a resource percentage selector
+Create or update a policy assignment with a resource rollout percentage selector
 ```bicep
 resource exampleResource 'Microsoft.Authorization/policyAssignments@2026-06-01' = {
   name: 'example'
@@ -74,7 +74,7 @@ resource exampleResource 'Microsoft.Authorization/policyAssignments@2026-06-01' 
         name: 'SDPRollout'
         selectors: [
           {
-            kind: 'resourcePercentage'
+            kind: 'resourceRolloutPercentage'
             progress: 80
           }
         ]

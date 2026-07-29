@@ -238,9 +238,6 @@ resource exampleResource 'Microsoft.Chaos/workspaces/scenarios/configurations@20
       ]
     }
     filters: {
-      locations: [
-        'westus2'
-      ]
       physicalZones: [
         'westus2-az1'
       ]
