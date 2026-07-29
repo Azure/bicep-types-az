@@ -28,10 +28,41 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2017-04-18)
+* **Resource**: Microsoft.CognitiveServices/locations
+* **ApiVersion**: 2017-04-18
+* **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
+* **Output**: [CheckSkuAvailabilityResultList](#checkskuavailabilityresultlist)
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2017-04-18)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2017-04-18
 * **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
+
+## Function regenerateKey (Microsoft.CognitiveServices/accounts@2017-04-18)
+* **Resource**: Microsoft.CognitiveServices/accounts
+* **ApiVersion**: 2017-04-18
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
+
+## CheckSkuAvailabilityParameter
+### Properties
+* **kind**: string (Required): The Kind of the resource.
+* **skus**: string[] (Required): The SKU of the resource.
+* **type**: string (Required): The Type of the resource.
+
+## CheckSkuAvailabilityResult
+### Properties
+* **kind**: string: The Kind of the resource.
+* **message**: string: Additional error message.
+* **reason**: string: Reason why the SKU is not available.
+* **skuAvailable**: bool: Indicates the given SKU is available or not.
+* **skuName**: string: The SKU of Cognitive Services account.
+* **type**: string: The Type of the resource.
+
+## CheckSkuAvailabilityResultList
+### Properties
+* **value**: [CheckSkuAvailabilityResult](#checkskuavailabilityresult)[]: Check SKU availability result list.
 
 ## CognitiveServicesAccountApiProperties
 ### Properties
@@ -136,6 +167,10 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyName**: 'Key1' | 'Key2' (Required): key name to generate (Key1|Key2)
 
 ## Sku
 ### Properties

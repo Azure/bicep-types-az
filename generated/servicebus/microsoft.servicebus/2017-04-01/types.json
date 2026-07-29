@@ -2091,6 +2091,110 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateAccessKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/137"
+    },
+    "input": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SBNamespaceMigrate",
+    "properties": {
+      "targetNamespaceType": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 1,
+        "description": "Type of namespaces"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Messaging"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotificationHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mixed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relay"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      }
+    ]
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
@@ -2101,11 +2205,35 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/137"
+    },
+    "input": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
       "$ref": "#/137"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/137"
+    },
+    "input": {
+      "$ref": "#/139"
     }
   },
   {

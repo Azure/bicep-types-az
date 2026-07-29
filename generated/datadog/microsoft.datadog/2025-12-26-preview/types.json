@@ -1549,22 +1549,38 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DatadogApiKeyListResponse",
+    "name": "DatadogApplicationKey",
     "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/128"
-        },
-        "flags": 1,
-        "description": "The DatadogApiKey items on this page"
-      },
-      "nextLink": {
+      "createdBy": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The link to the next page of items"
+        "description": "The user that created the Application key."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the Application key."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The value of the Application key."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDefaultApplicationKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/126"
     }
   },
   {
@@ -1602,9 +1618,38 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogApiKeyListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1,
+        "description": "The DatadogApiKey items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/127"
+      "$ref": "#/128"
     }
   },
   {
@@ -1613,7 +1658,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/126"
+      "$ref": "#/130"
     }
   },
   {
@@ -1622,7 +1667,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/140"
         },
         "flags": 1,
         "description": "The DatadogHost items on this page"
@@ -1649,21 +1694,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/135"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/137"
         },
         "flags": 0
       }
@@ -1694,13 +1739,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/138"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/139"
         },
         "flags": 0
       }
@@ -1749,7 +1794,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/131"
+      "$ref": "#/134"
     }
   },
   {
@@ -1758,7 +1803,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/130"
+      "$ref": "#/133"
     }
   },
   {
@@ -1767,7 +1812,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/144"
         },
         "flags": 1,
         "description": "The LinkedResource items on this page"
@@ -1804,7 +1849,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/140"
+      "$ref": "#/143"
     }
   },
   {
@@ -1813,7 +1858,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/139"
+      "$ref": "#/142"
     }
   },
   {
@@ -1822,7 +1867,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -1880,7 +1925,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
+      "$ref": "#/147"
     }
   },
   {
@@ -1889,7 +1934,372 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/143"
+      "$ref": "#/146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SreAgentConnectorRequest",
+    "properties": {
+      "mcpConnectorResourceIdList": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 1,
+        "description": "The list of ARM resource ID of the MCP connector integrated with SRE Agent resource."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 1,
+        "description": "Add/Remove action."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SreAgentConfigurationListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "The SreAgentConfiguration items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manageSreAgentConnectors",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/155"
+    },
+    "input": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogSetPasswordLink",
+    "properties": {
+      "setPasswordLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSetPasswordLink",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingInfoResponse",
+    "properties": {
+      "marketplaceSaasInfo": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription details"
+      },
+      "partnerBillingEntity": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "Partner Billing Entity details: Organization Info"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfo",
+    "properties": {
+      "marketplaceSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
+      },
+      "marketplaceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SAAS Name"
+      },
+      "marketplaceStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SaaS Subscription Status"
+      },
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Offer Id of the Marketplace offer"
+      },
+      "subscribed": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Flag specifying if the Marketplace status is subscribed or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PartnerBillingEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Datadog Organization Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Datadog Organization Name."
+      },
+      "partnerEntityUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link to the datadog organization page"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBillingInfo",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LatestLinkedSaaSResponse",
+    "properties": {
+      "isHiddenSaaS": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Flag indicating if the SaaS resource is hidden"
+      },
+      "saaSResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SaaS resource id"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "latestLinkedSaaS",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/164"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogMonitorResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Properties specific to the monitor resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkSaaS",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResubscribeProperties",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0
+      },
+      "azureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resubscribe",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/169"
     }
   }
 ]

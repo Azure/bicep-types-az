@@ -58,6 +58,69 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Commvault.ContentStore/cloudAccounts/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-07-01-preview
+* **Input**: [BackupProtectionGroupRequest](#backupprotectiongrouprequest)
+* **Output**: [BackupProtectionGroupResponse](#backupprotectiongroupresponse)
+
+## Function getRestorePoints (Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems
+* **ApiVersion**: 2026-07-01-preview
+* **Output**: [RestorePoints](#restorepoints)
+
+## Function latestLinkedSaaS (Commvault.ContentStore/cloudAccounts@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts
+* **ApiVersion**: 2026-07-01-preview
+* **Output**: [LatestLinkedSaaSResponse](#latestlinkedsaasresponse)
+
+## Function linkSaaS (Commvault.ContentStore/cloudAccounts@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts
+* **ApiVersion**: 2026-07-01-preview
+* **Input**: [SaaSData](#saasdata)
+* **Output**: [CloudAccount](#cloudaccount)
+
+## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-07-01-preview
+* **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
+* **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
+
+## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-07-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems
+* **ApiVersion**: 2026-07-01-preview
+* **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
+* **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
+
+## BackupOptions
+### Properties
+* **backupCopyImmediately**: bool (Required): Indicates whether to run backup immediately or not for the VM
+* **backupLevel**: 'DIFFERENTIAL' | 'FULL' | 'INCREMENTAL' | 'SYNTHETIC_FULL' | string: Indicates whether to stop backup or not for the VM
+* **jobDescription**: string (Required): The name of the backup job to be shown in Commvault
+* **notifyUserOnJobCompletion**: bool (Required): Indicates whether to notify the user on job completion
+* **runSnapShotBackup**: bool (Required): Indicates whether to run snapshot backup or not for the VM, if false, it will run regular backup
+
+## BackupProtectionGroupRequest
+### Properties
+* **backupOptions**: [BackupOptions](#backupoptions) (Required): The backup options for the VM backup
+* **vmList**: [VmListItem](#vmlistitem)[] (Required): The vm list details.
+
+## BackupProtectionGroupResponse
+### Properties
+* **jobIds**: string[] (Required, ReadOnly): The jobIds returned from Commvault.
+* **taskId**: int (Required, ReadOnly): The Commvault response for taskId
+
+## CloudAccount
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CloudAccountProperties](#cloudaccountproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## CloudAccountProperties
 ### Properties
 * **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details of the resource.
@@ -70,6 +133,11 @@
 * **backupRuleType**: 'ALL_FULLS' | 'ALL_JOBS' | 'DAILY_FULLS' | 'HALF_YEARLY_FULLS' | 'HOURLY_FULLS' | 'MONTHLY_FULLS' | 'QUARTERLY_FULLS' | 'WEEKLY_FULLS' | 'YEARLY_FULLS' | string: Backup Rule Type for Extended Retention
 * **retentionPeriod**: int: Retention period for Extended Retention
 * **retentionTime**: 'monthly' | 'yearly' | string: Retention time for Extended Retention
+
+## LatestLinkedSaaSResponse
+### Properties
+* **isHiddenSaaS**: bool: Flag indicating if the SaaS resource is hidden
+* **saaSResourceId**: string: SaaS resource id
 
 ## LiftrBaseMarketplaceDetails
 ### Properties
@@ -139,6 +207,22 @@
 * **matchType**: 'all' | 'any' | string (Required): match Type all or any
 * **rules**: [Rule](#rule)[] (Required): rules to match
 
+## RestorePoints
+### Properties
+* **restoreTimes**: int[] (Required, ReadOnly): The Commvault Protected Item Restore points
+
+## RestoreProtectionItemRequest
+### Properties
+* **inPlaceRestore**: bool (Required): Check whether inplace or out of place restore.
+* **restoreType**: 'DISK_ATTACH' | 'NONE' | 'VIRTUAL_MACHINE' | string: Type of Restore
+* **toTime**: string: Time to restore
+* **vmDestinationInfo**: [VmDestinationInfo](#vmdestinationinfo) (Required): The vm destination details of the VM.
+
+## RestoreProtectionItemResponse
+### Properties
+* **jobIds**: string[] (Required, ReadOnly): The jobIds returned from Commvault.
+* **taskId**: int (Required, ReadOnly): The Commvault response for taskId
+
 ## Retention
 ### Properties
 * **numberOfSnapshots**: int: Number of Snapshots
@@ -148,6 +232,10 @@
 * **operator**: 'contains' | 'doesNotContains' | 'doesNotEqual' | 'endsWith' | 'equals' | 'startsWith' | string (Required): property of the rule
 * **property**: 'name' | 'region' | 'resourceGroup' | 'status' | 'tagName' | 'tagValue' | string (Required): property of the rule
 * **value**: string (Required): property of the rule
+
+## SaaSData
+### Properties
+* **saaSResourceId**: string: SaaS resource id
 
 ## Schedule
 ### Properties
@@ -195,6 +283,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -204,4 +297,31 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## VmDestinationInfo
+### Properties
+* **vmInfoList**: [VmInfo](#vminfo)[] (Required): List of information on VMs
+
+## VmInfo
+### Properties
+* **attachAndSwapOsDisk**: bool: The identifier to check if to attach and swap disk of the VM.
+* **name**: string: The name of the VM.
+* **networkId**: string: The network Id of the VM.
+* **powerOnVmAfterRestore**: bool: The identifier to check if VM needs to be powered on.
+* **region**: string: The region of the VM.
+* **resourceGroup**: string: The resource group of the VM.
+* **sourceVmGuid**: string (Required): The GUID of VM to be restored.
+* **storageAccountId**: string (Required): The storage account to be used for restore.
+* **subnetId**: string: The subnet Id of the VM.
+* **targetVmGuid**: string: The GUID of target VM used in DISK ATTACH.
+* **vmtags**: [VmTag](#vmtag)[]: The vmTag of the VM.
+
+## VmListItem
+### Properties
+* **vmGuid**: string (Required): The GUID of the VM to backup
+
+## VmTag
+### Properties
+* **name**: string (Required): The name of VM tag.
+* **value**: string (Required): The value of VM tag.
 

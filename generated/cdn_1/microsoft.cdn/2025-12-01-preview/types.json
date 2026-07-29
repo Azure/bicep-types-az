@@ -744,5 +744,46 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VersionCode",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The version code deployment content"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The version code name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deployVersionCode",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/43"
+    },
+    "input": {
+      "$ref": "#/62"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVersionCode",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/62"
+    }
   }
 ]

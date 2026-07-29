@@ -2751,6 +2751,80 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ExportClusterParameters",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 1,
+        "description": "SAS URI for the target directory to export to"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlushParameters",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/276"
+        },
+        "flags": 0,
+        "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceUnlinkParameters",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 1,
+        "description": "The resource IDs of the database resources to be unlinked."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportClusterParameters",
+    "properties": {
+      "sasUris": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 1,
+        "description": "SAS URIs for the target blobs to import from"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/274"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryKey": {
@@ -2775,7 +2849,187 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2026-02-01-preview",
     "output": {
-      "$ref": "#/273"
+      "$ref": "#/281"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 1,
+        "description": "Which access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/284"
+      },
+      {
+        "$ref": "#/285"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/281"
+    },
+    "input": {
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationRequest",
+    "properties": {
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The source resource ID to validate migration from. This is the resource ID of the Azure Cache for Redis."
+      },
+      "skipDataMigration": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "Sets whether the data is migrated from source to target or not. The default value is true."
+      },
+      "forceMigrate": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "Sets whether to ignore warnings when validating if the source cache can be migrated to the target cache. If this property is true, the isValid property in the response will ignore warning-level disparities between the source and target resource. The default value is false."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationResponse",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "Indicates whether the migration validation passed."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 0,
+        "description": "List of validation errors that prevent migration."
+      },
+      "warnings": {
+        "type": {
+          "$ref": "#/296"
+        },
+        "flags": 0,
+        "description": "List of validation warnings that may impact migration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationError",
+    "properties": {
+      "disparities": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 1,
+        "description": "List of specific disparities that cause this error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationDisparity",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A localized string denoting the category of the validation issue. Examples are \"Region\", \"Data\", \"Identity\", \"Clustering Mode\", and \"TLS\"."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Detailed message describing the validation issue."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/290"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationWarning",
+    "properties": {
+      "disparities": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 1,
+        "description": "List of specific disparities that cause this warning."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/294"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Cache/redisEnterprise/migrations",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/289"
+    },
+    "input": {
+      "$ref": "#/288"
     }
   }
 ]

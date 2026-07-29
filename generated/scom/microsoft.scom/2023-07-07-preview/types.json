@@ -1054,5 +1054,174 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScalingProperties",
+    "properties": {
+      "serverCount": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Required management server count"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetServerCountResponseProperties",
+    "properties": {
+      "serverCount": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Management server count"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setServerCount",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/65"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchServersResponseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the patch operation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "patchServers",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/22"
+    },
+    "input": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnlinkLogAnalyticsResponseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the unlink operation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlinkLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsUpdateConfiguration",
+    "properties": {
+      "dataTypes": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The types of data to be ingested to Log Analytics workspace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "State"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Event"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Audit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/73"
+    },
+    "input": {
+      "$ref": "#/73"
+    }
   }
 ]

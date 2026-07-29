@@ -86,6 +86,16 @@
 * **Input**: [ManagedProxyRequest](#managedproxyrequest)
 * **Output**: [ManagedProxyResource](#managedproxyresource)
 
+## Function syncNow (Microsoft.HybridConnectivity/solutionConfigurations@2024-12-01)
+* **Resource**: Microsoft.HybridConnectivity/solutionConfigurations
+* **ApiVersion**: 2024-12-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function testPermissions (Microsoft.HybridConnectivity/publicCloudConnectors@2024-12-01)
+* **Resource**: Microsoft.HybridConnectivity/publicCloudConnectors
+* **ApiVersion**: 2024-12-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
 ## AADProfileProperties
 ### Properties
 * **serverId**: string (Required): The arc ingress gateway server app id.
@@ -106,6 +116,19 @@
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **resourceId**: string: The resource Id of the connectivity endpoint (optional).
 * **type**: 'custom' | 'default' | string (Required): The type of endpoint.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## IngressGatewayResource
 ### Properties
@@ -144,6 +167,18 @@
 ### Properties
 * **expiresOn**: int (Required): The expiration time of short lived proxy name in unix epoch.
 * **proxy**: string (Required): The short lived proxy name.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## PublicCloudConnectorProperties
 ### Properties

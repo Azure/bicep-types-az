@@ -24,6 +24,113 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ComputeSchedule/scheduledActions/occurrences' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function attachResources (Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ResourceAttachRequest](#resourceattachrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function cancel (Microsoft.ComputeSchedule/scheduledActions/occurrences@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions/occurrences
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [CancelOccurrenceRequest](#canceloccurrencerequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function cancelNextOccurrence (Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [CancelOccurrenceRequest](#canceloccurrencerequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function delay (Microsoft.ComputeSchedule/scheduledActions/occurrences@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions/occurrences
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [DelayRequest](#delayrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function detachResources (Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ResourceDetachRequest](#resourcedetachrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function patchResources (Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ResourcePatchRequest](#resourcepatchrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function triggerManualOccurrence (Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2025-04-15-preview
+* **Output**: [Occurrence](#occurrence)
+
+## Function virtualMachinesCancelOperations (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [CancelOperationsRequest](#canceloperationsrequest)
+* **Output**: [CancelOperationsResponse](#canceloperationsresponse)
+
+## Function virtualMachinesExecuteCreate (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ExecuteCreateRequest](#executecreaterequest)
+* **Output**: [CreateResourceOperationResponse](#createresourceoperationresponse)
+
+## Function virtualMachinesExecuteDeallocate (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ExecuteDeallocateRequest](#executedeallocaterequest)
+* **Output**: [DeallocateResourceOperationResponse](#deallocateresourceoperationresponse)
+
+## Function virtualMachinesExecuteDelete (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ExecuteDeleteRequest](#executedeleterequest)
+* **Output**: [DeleteResourceOperationResponse](#deleteresourceoperationresponse)
+
+## Function virtualMachinesExecuteHibernate (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ExecuteHibernateRequest](#executehibernaterequest)
+* **Output**: [HibernateResourceOperationResponse](#hibernateresourceoperationresponse)
+
+## Function virtualMachinesExecuteStart (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [ExecuteStartRequest](#executestartrequest)
+* **Output**: [StartResourceOperationResponse](#startresourceoperationresponse)
+
+## Function virtualMachinesGetOperationErrors (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [GetOperationErrorsRequest](#getoperationerrorsrequest)
+* **Output**: [GetOperationErrorsResponse](#getoperationerrorsresponse)
+
+## Function virtualMachinesGetOperationStatus (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [GetOperationStatusRequest](#getoperationstatusrequest)
+* **Output**: [GetOperationStatusResponse](#getoperationstatusresponse)
+
+## Function virtualMachinesSubmitDeallocate (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [SubmitDeallocateRequest](#submitdeallocaterequest)
+* **Output**: [DeallocateResourceOperationResponse](#deallocateresourceoperationresponse)
+
+## Function virtualMachinesSubmitHibernate (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [SubmitHibernateRequest](#submithibernaterequest)
+* **Output**: [HibernateResourceOperationResponse](#hibernateresourceoperationresponse)
+
+## Function virtualMachinesSubmitStart (Microsoft.ComputeSchedule/locations@2025-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2025-04-15-preview
+* **Input**: [SubmitStartRequest](#submitstartrequest)
+* **Output**: [StartResourceOperationResponse](#startresourceoperationresponse)
+
 ## AzureCoreFoundationsError
 ### Properties
 * **code**: string (Required): One of a server-defined set of error codes.
@@ -37,10 +144,104 @@
 * **code**: string: One of a server-defined set of error codes.
 * **innererror**: [AzureCoreFoundationsInnerError](#azurecorefoundationsinnererror): Inner error.
 
+## CancelOccurrenceRequest
+### Properties
+* **resourceIds**: string[] (Required): The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources.
+
+## CancelOperationsRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to cancel operations on
+
+## CancelOperationsResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations that were successfully cancelled
+
+## CreateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the create request eg virtual machines
+
+## DeallocateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the deallocate request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the deallocate request if no errors exist
+* **type**: string (Required): The type of resources used in the deallocate request eg virtual machines
+
+## DelayRequest
+### Properties
+* **delay**: string (Required): The exact time to delay the operations to
+* **resourceIds**: string[] (Required): The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence.
+
+## DeleteResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the delete request eg virtual machines
+
+## ExecuteCreateRequest
+### Properties
+* **correlationid**: string: CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resourceConfigParameters**: [ResourceProvisionPayload](#resourceprovisionpayload) (Required): resource creation payload
+
+## ExecuteDeallocateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteDeleteRequest
+### Properties
+* **correlationid**: string: CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **forceDeletion**: bool: Forced delete resource item
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteHibernateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteStartRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
 ## ExecutionParameters
 ### Properties
 * **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+
+## GetOperationErrorsRequest
+### Properties
+* **operationIds**: string[] (Required): The list of operation ids to query errors of
+
+## GetOperationErrorsResponse
+### Properties
+* **results**: [OperationErrorsResult](#operationerrorsresult)[] (Required): An array of operationids and their corresponding errors if any
+
+## GetOperationStatusRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to get the status of
+
+## GetOperationStatusResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations based on their operation ids
+
+## HibernateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the Hibernate request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the Hibernate request if no errors exist
+* **type**: string (Required): The type of resources used in the Hibernate request eg virtual machines
 
 ## NotificationProperties
 ### Properties
@@ -48,6 +249,14 @@
 * **disabled**: bool: Tells if the notification is enabled or not.
 * **language**: 'en-us' | string (Required): The language the notification should be sent on.
 * **type**: 'Email' | string (Required): Type of notification to be sent.
+
+## Occurrence
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [OccurrenceProperties](#occurrenceproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## OccurrenceProperties
 ### Properties
@@ -60,16 +269,114 @@
 * **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): The summarized status of the resources.
 * **total**: int (Required): The total number of resources that the occurrence was supposed to act on.
 
+## OperationErrorDetails
+### Properties
+* **azureOperationName**: string: The compute operationid of the Start/Deallocate/Hibernate request
+* **crpOperationId**: string: The compute operationid of the Start/Deallocate/Hibernate request
+* **errorCode**: string (Required): The error code of the operation
+* **errorDetails**: string (Required): The error details of the operation
+* **timestamp**: string: The timestamp of the error occurence
+* **timeStamp**: string: The timestamp of the error occurence
+
+## OperationErrorsResult
+### Properties
+* **activationTime**: string: The activation time of a vm operation
+* **completedAt**: string: The completion time of the operation if the operation was completed
+* **creationTime**: string: The creation time of the error result
+* **operationErrors**: [OperationErrorDetails](#operationerrordetails)[]: A list of errors associated with the operationid
+* **operationId**: string: The operationId identifying a vm operation
+* **requestErrorCode**: string: Request level error code
+* **requestErrorDetails**: string: Request level error details
+
+## ResourceAttachRequest
+### Properties
+* **resources**: [ScheduledActionResource](#scheduledactionresource)[] (Required): List of resources to be attached/patched
+
+## ResourceDetachRequest
+### Properties
+* **resources**: string[] (Required): List of resources to be detached
+
+## ResourceOperation
+### Properties
+* **errorCode**: string: Resource level error code if it exists
+* **errorDetails**: string: Resource level error details if they exist
+* **operation**: [ResourceOperationDetails](#resourceoperationdetails): Details of the operation performed on a resource
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg ArmId
+
+## ResourceOperationDetails
+### Properties
+* **completedAt**: string: Time the operation was complete if errors are null
+* **deadline**: string: Deadline for the operation
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: Type of deadline of the operation
+* **operationId**: string (Required): Operation identifier for the unique operation
+* **opType**: 'Deallocate' | 'Hibernate' | 'Start' | 'Unknown' | string: Type of operation performed on the resources
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg ArmId
+* **resourceOperationError**: [ResourceOperationError](#resourceoperationerror): Operation level errors if they exist
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+* **state**: 'Blocked' | 'Cancelled' | 'Executing' | 'Failed' | 'PendingExecution' | 'PendingScheduling' | 'Scheduled' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current state of the operation
+* **subscriptionId**: string: Subscription id attached to the request
+* **timezone**: string: Timezone for the operation
+* **timeZone**: string: Timezone for the operation
+
+## ResourceOperationError
+### Properties
+* **errorCode**: string (Required): Code for the error eg 404, 500
+* **errorDetails**: string (Required): Detailed message about the error
+
+## ResourceOperationResponse
+### Properties
+* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The resource status of for each resource
+* **totalResources**: int (Required): The total number of resources operated on
+
+## ResourcePatchRequest
+### Properties
+* **resources**: [ScheduledActionResource](#scheduledactionresource)[] (Required): The list of resources we watch to patch
+
+## ResourceProvisionPayload
+### Properties
+* **baseProfile**: [ResourceProvisionPayloadBaseProfile](#resourceprovisionpayloadbaseprofile): Virtual machine profile object that contains VM properties that are common across all VMs in this batch  (if you want to create 100 VMs in this request, and they all have same vmSize, then include vmSize in baseProfile)
+* **resourceCount**: int (Required): Number of VMs to be created
+* **resourceOverrides**: [ResourceProvisionPayloadResourceOverridesItem](#resourceprovisionpayloadresourceoverridesitem)[]: Virtual machine profile array that contains VM properties that needs to be overridden for each VM in the batch (if you want to create 100 VMs, they all need a distinct computerName property, you pass computerNames for each VM in batch in this array), service will merge baseProfile with VM specific overrides and create a merged VMProfile.
+* **resourcePrefix**: string: if resourceOverrides doesn't contain "name", service will create name based of prefix and ResourceCount e.g. resourceprefix-0,resourceprefix-1..
+
+## ResourceProvisionPayloadBaseProfile
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ResourceProvisionPayloadResourceOverridesItem
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ResourceResultSummary
 ### Properties
 * **code**: string (Required): The error code for those resources. In case of success, code is populated with Success.
 * **count**: int (Required): The number of resources that the code applies to.
 * **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): The error details for the resources. Not populated on success cases.
 
+## Resources
+### Properties
+* **ids**: string[] (Required): The resource ids used for the request
+
+## ResourceStatus
+### Properties
+* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Errors encountered while trying to perform
+* **resourceId**: string (Required): The arm identifier of the resource
+* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The state the resource is currently on
+
 ## RetryPolicy
 ### Properties
 * **retryCount**: int: Retry count for user request
 * **retryWindowInMinutes**: int: Retry window in minutes for user request
+
+## Schedule
+### Properties
+* **deadline**: string: The deadline for the operation
+* **deadLine**: string: The deadline for the operation
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string (Required): The deadlinetype of the operation, this can either be InitiateAt or CompleteBy
+* **timezone**: string: The timezone for the operation
+* **timeZone**: string: The timezone for the operation
 
 ## ScheduledActionProperties
 ### Properties
@@ -82,6 +389,15 @@
 * **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The schedule the scheduled action is supposed to follow
 * **startTime**: string (Required): The time which the scheduled action is supposed to start running
 
+## ScheduledActionResource
+### Properties
+* **id**: string (Required, ReadOnly): The compute RP resource id of the resource in the scheduled actions scope.
+* **name**: string (Required, ReadOnly): The name of the resource
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: The desired notification settings for the specified resource.
+* **resourceId**: string (Required): The ARM Id of the resource.
+"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+* **type**: string (ReadOnly): The type of resource
+
 ## ScheduledActionsSchedule
 ### Properties
 * **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt.
@@ -91,6 +407,34 @@
 * **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): The week days the scheduled action is supposed to run on
 * **scheduledTime**: string (Required): The time the scheduled action is supposed to run on
 * **timeZone**: string (Required): The timezone the scheduled time is specified on
+
+## StartResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the start request eg virtual machines
+
+## SubmitDeallocateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
+
+## SubmitHibernateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
+
+## SubmitStartRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
 
 ## SystemData
 ### Properties

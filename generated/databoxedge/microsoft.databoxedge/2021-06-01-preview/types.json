@@ -6495,11 +6495,623 @@
   },
   {
     "$type": "ObjectType",
+    "name": "GenerateCertResponse",
+    "properties": {
+      "publicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets base64 encoded certificate raw data,\r\nthis is the public part needed to be uploaded to cert vault"
+      },
+      "privateKey": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "Gets or sets base64 encoded private part of the certificate,\r\nneeded to form the activation key"
+      },
+      "expiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets expiry time in UTC"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCertificate",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/523"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfo",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/526"
+        },
+        "flags": 0,
+        "description": "The extended info properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoProperties",
+    "properties": {
+      "encryptionKeyThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The digital signature of encrypted certificate."
+      },
+      "encryptionKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public part of the encryption certificate. Client uses this to encrypt any secret."
+      },
+      "resourceKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Resource ID of the Resource."
+      },
+      "clientSecretStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Key Vault ARM Id for client secrets"
+      },
+      "clientSecretStoreUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url to access the Client Key Vault"
+      },
+      "channelIntegrityKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "channelIntegrityKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "keyVaultSyncStatus": {
+        "type": {
+          "$ref": "#/533"
+        },
+        "flags": 0,
+        "description": "Key vault sync status"
+      },
+      "deviceSecrets": {
+        "type": {
+          "$ref": "#/535"
+        },
+        "flags": 2,
+        "description": "Device secrets, will be returned only with ODataFilter $expand=deviceSecrets"
+      },
+      "clusterWitnessType": {
+        "type": {
+          "$ref": "#/539"
+        },
+        "flags": 2,
+        "description": "Cluster Witness Type"
+      },
+      "fileShareWitnessLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The witness location of file share."
+      },
+      "fileShareWitnessUsername": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The username of file share."
+      },
+      "cloudWitnessStorageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Cloud Witness Storage account name."
+      },
+      "cloudWitnessContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Container for cloud witness in the storage account."
+      },
+      "cloudWitnessStorageEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure service endpoint of the cloud witness storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSynced"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotSynced"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/527"
+      },
+      {
+        "$ref": "#/528"
+      },
+      {
+        "$ref": "#/529"
+      },
+      {
+        "$ref": "#/530"
+      },
+      {
+        "$ref": "#/531"
+      },
+      {
+        "$ref": "#/532"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Secret",
+    "properties": {
+      "encryptedSecret": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 0,
+        "description": "Encrypted (using device public key) secret value."
+      },
+      "keyVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoPropertiesDeviceSecrets",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileShare"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/536"
+      },
+      {
+        "$ref": "#/537"
+      },
+      {
+        "$ref": "#/538"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExtendedInformation",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/525"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoPatch",
+    "properties": {
+      "clientSecretStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Key Vault ARM Id for client secrets"
+      },
+      "clientSecretStoreUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url to access the Client Key Vault"
+      },
+      "channelIntegrityKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name for Channel Integrity Key stored in the Client Key Vault"
+      },
+      "channelIntegrityKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "syncStatus": {
+        "type": {
+          "$ref": "#/548"
+        },
+        "flags": 0,
+        "description": "For changing or to initiate the resync to key-vault set the status to KeyVaultSyncPending, rest of the status will not be applicable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSynced"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotSynced"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/543"
+      },
+      {
+        "$ref": "#/544"
+      },
+      {
+        "$ref": "#/545"
+      },
+      {
+        "$ref": "#/546"
+      },
+      {
+        "$ref": "#/547"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateExtendedInformation",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/525"
+    },
+    "input": {
+      "$ref": "#/541"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/551"
+        },
+        "flags": 1,
+        "description": "The Base 64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "authenticationType": {
+        "type": {
+          "$ref": "#/554"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The base64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/552"
+      },
+      {
+        "$ref": "#/553"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateResponse",
+    "properties": {
+      "authType": {
+        "type": {
+          "$ref": "#/558"
+        },
+        "flags": 0,
+        "description": "Specifies authentication type."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource ID of the Data Box Edge/Gateway device."
+      },
+      "aadAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant authority."
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant ID."
+      },
+      "servicePrincipalClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal client ID."
+      },
+      "servicePrincipalObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal object ID."
+      },
+      "azureManagementEndpointAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The azure management endpoint audience."
+      },
+      "aadAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Identifier of the target resource that is the recipient of the requested token."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/557"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/555"
+    },
+    "input": {
+      "$ref": "#/550"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerSupportPackageRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/561"
+        },
+        "flags": 1,
+        "description": "The TriggerSupportPackageRequest properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportPackageRequestProperties",
+    "properties": {
+      "minimumTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start of the timespan of the log collection"
+      },
+      "maximumTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "MaximumTimeStamp until where logs need to be collected"
+      },
+      "include": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of files, which need to be included in the logs\r\nThis will contain the type of logs (Default/DefaultWithDumps/None/All/DefaultWithArchived)\r\nor a comma separated list of log types that are required"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DCAccessCode",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/563"
         },
         "flags": 0,
         "description": "DCAccessCode properties."
@@ -6525,7 +7137,7 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/523"
+      "$ref": "#/562"
     }
   }
 ]

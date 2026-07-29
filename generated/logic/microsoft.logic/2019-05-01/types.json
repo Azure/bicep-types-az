@@ -10424,6 +10424,31 @@
   },
   {
     "$type": "ObjectType",
+    "name": "GenerateUpgradedDefinitionParameters",
+    "properties": {
+      "targetSchemaVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target schema version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateUpgradedDefinition",
+    "resourceType": "Microsoft.Logic/workflows",
+    "apiVersion": "2019-05-01",
+    "output": {
+      "$ref": "#/60"
+    },
+    "input": {
+      "$ref": "#/747"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "GetCallbackUrlParameters",
     "properties": {
       "notAfter": {
@@ -10435,7 +10460,7 @@
       },
       "keyType": {
         "type": {
-          "$ref": "#/751"
+          "$ref": "#/753"
         },
         "flags": 0,
         "description": "The key type."
@@ -10458,13 +10483,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/748"
-      },
-      {
-        "$ref": "#/749"
-      },
-      {
         "$ref": "#/750"
+      },
+      {
+        "$ref": "#/751"
+      },
+      {
+        "$ref": "#/752"
       },
       {
         "$ref": "#/0"
@@ -10505,14 +10530,14 @@
       },
       "relativePathParameters": {
         "type": {
-          "$ref": "#/753"
+          "$ref": "#/755"
         },
         "flags": 0,
         "description": "Gets the workflow trigger callback URL relative path parameters."
       },
       "queries": {
         "type": {
-          "$ref": "#/754"
+          "$ref": "#/756"
         },
         "flags": 0,
         "description": "Gets the workflow trigger callback URL query parameters."
@@ -10572,10 +10597,10 @@
     "resourceType": "Microsoft.Logic/workflows",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10588,12 +10613,198 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "WorkflowReference",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateActionParameter",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/764"
+        },
+        "flags": 0,
+        "description": "The key type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/761"
+      },
+      {
+        "$ref": "#/762"
+      },
+      {
+        "$ref": "#/763"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Workflow",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The workflow properties."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Managed service identity properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/766"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetTriggerStateActionDefinition",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/768"
+        },
+        "flags": 1,
+        "description": "The source."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkflowTriggerReference",
+    "properties": {
+      "flowName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The workflow name."
+      },
+      "triggerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The workflow trigger name."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource type."
+      }
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listCallbackUrl",
     "resourceType": "Microsoft.Logic/workflows/triggers",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     }
   },
   {
@@ -10602,10 +10813,10 @@
     "resourceType": "Microsoft.Logic/workflows/versions/triggers",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10614,7 +10825,7 @@
     "properties": {
       "inputs": {
         "type": {
-          "$ref": "#/766"
+          "$ref": "#/778"
         },
         "flags": 0
       }
@@ -10647,14 +10858,14 @@
       },
       "subexpressions": {
         "type": {
-          "$ref": "#/765"
+          "$ref": "#/777"
         },
         "flags": 0,
         "description": "The sub expressions."
       },
       "error": {
         "type": {
-          "$ref": "#/763"
+          "$ref": "#/775"
         },
         "flags": 0,
         "description": "The azure resource error info."
@@ -10681,14 +10892,14 @@
       },
       "subexpressions": {
         "type": {
-          "$ref": "#/762"
+          "$ref": "#/774"
         },
         "flags": 0,
         "description": "The sub expressions."
       },
       "error": {
         "type": {
-          "$ref": "#/763"
+          "$ref": "#/775"
         },
         "flags": 0,
         "description": "The azure resource error info."
@@ -10698,7 +10909,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/761"
+      "$ref": "#/773"
     }
   },
   {
@@ -10714,7 +10925,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/764"
+          "$ref": "#/776"
         },
         "flags": 0,
         "description": "The error details."
@@ -10731,19 +10942,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/763"
+      "$ref": "#/775"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/761"
+      "$ref": "#/773"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/760"
+      "$ref": "#/772"
     }
   },
   {
@@ -10752,7 +10963,7 @@
     "resourceType": "Microsoft.Logic/workflows/runs/actions",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/759"
+      "$ref": "#/771"
     }
   },
   {
@@ -10761,7 +10972,7 @@
     "resourceType": "Microsoft.Logic/workflows/runs/actions/repetitions",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/759"
+      "$ref": "#/771"
     }
   },
   {
@@ -10783,10 +10994,10 @@
     "resourceType": "Microsoft.Logic/integrationAccounts",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/769"
+      "$ref": "#/781"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10795,7 +11006,7 @@
     "properties": {
       "keyVault": {
         "type": {
-          "$ref": "#/772"
+          "$ref": "#/784"
         },
         "flags": 1,
         "description": "The key vault reference."
@@ -10842,7 +11053,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/776"
+          "$ref": "#/788"
         },
         "flags": 0,
         "description": "The key vault keys."
@@ -10869,7 +11080,7 @@
       },
       "attributes": {
         "type": {
-          "$ref": "#/775"
+          "$ref": "#/787"
         },
         "flags": 0,
         "description": "The key attributes."
@@ -10906,7 +11117,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/774"
+      "$ref": "#/786"
     }
   },
   {
@@ -10915,10 +11126,368 @@
     "resourceType": "Microsoft.Logic/integrationAccounts",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/773"
+      "$ref": "#/785"
     },
     "input": {
-      "$ref": "#/771"
+      "$ref": "#/783"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingEventsDefinition",
+    "properties": {
+      "sourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The source type."
+      },
+      "trackEventsOptions": {
+        "type": {
+          "$ref": "#/793"
+        },
+        "flags": 0,
+        "description": "The track events options."
+      },
+      "events": {
+        "type": {
+          "$ref": "#/820"
+        },
+        "flags": 1,
+        "description": "The events."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DisableSourceInfoEnrich"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/791"
+      },
+      {
+        "$ref": "#/792"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingEvent",
+    "properties": {
+      "eventLevel": {
+        "type": {
+          "$ref": "#/801"
+        },
+        "flags": 1,
+        "description": "The event level."
+      },
+      "eventTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The event time."
+      },
+      "recordType": {
+        "type": {
+          "$ref": "#/818"
+        },
+        "flags": 1,
+        "description": "The record type."
+      },
+      "record": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The record."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/819"
+        },
+        "flags": 0,
+        "description": "The error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LogAlways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Verbose"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/795"
+      },
+      {
+        "$ref": "#/796"
+      },
+      {
+        "$ref": "#/797"
+      },
+      {
+        "$ref": "#/798"
+      },
+      {
+        "$ref": "#/799"
+      },
+      {
+        "$ref": "#/800"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AS2Message"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AS2MDN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12Interchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12FunctionalGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12TransactionSet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12InterchangeAcknowledgment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12FunctionalGroupAcknowledgment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X12TransactionSetAcknowledgment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactInterchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactFunctionalGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactTransactionSet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactInterchangeAcknowledgment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactFunctionalGroupAcknowledgment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdifactTransactionSetAcknowledgment"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/802"
+      },
+      {
+        "$ref": "#/803"
+      },
+      {
+        "$ref": "#/804"
+      },
+      {
+        "$ref": "#/805"
+      },
+      {
+        "$ref": "#/806"
+      },
+      {
+        "$ref": "#/807"
+      },
+      {
+        "$ref": "#/808"
+      },
+      {
+        "$ref": "#/809"
+      },
+      {
+        "$ref": "#/810"
+      },
+      {
+        "$ref": "#/811"
+      },
+      {
+        "$ref": "#/812"
+      },
+      {
+        "$ref": "#/813"
+      },
+      {
+        "$ref": "#/814"
+      },
+      {
+        "$ref": "#/815"
+      },
+      {
+        "$ref": "#/816"
+      },
+      {
+        "$ref": "#/817"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingEventErrorInfo",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The message."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The code."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/794"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationAccount",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "The integration account properties."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "The sku."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/822"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAccessKey",
+    "resourceType": "Microsoft.Logic/integrationAccounts",
+    "apiVersion": "2019-05-01",
+    "output": {
+      "$ref": "#/821"
+    },
+    "input": {
+      "$ref": "#/760"
     }
   },
   {
@@ -10927,7 +11496,7 @@
     "resourceType": "Microsoft.Logic/integrationAccounts/assemblies",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     }
   },
   {
@@ -10936,10 +11505,10 @@
     "resourceType": "Microsoft.Logic/integrationAccounts/schemas",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10948,10 +11517,10 @@
     "resourceType": "Microsoft.Logic/integrationAccounts/maps",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10960,10 +11529,10 @@
     "resourceType": "Microsoft.Logic/integrationAccounts/partners",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   },
   {
@@ -10972,10 +11541,10 @@
     "resourceType": "Microsoft.Logic/integrationAccounts/agreements",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/752"
+      "$ref": "#/754"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/749"
     }
   }
 ]

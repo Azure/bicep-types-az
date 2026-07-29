@@ -1257,5 +1257,388 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequestProperties",
+    "properties": {
+      "azureStorageBlobContainerUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure blob storage container Uri which contains the backup"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The SAS token pointing to an Azure blob storage container. This property is reserved for Azure Backup Service."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "Properties of the Cloud HSM Cluster"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupResultProperties",
+    "properties": {
+      "azureStorageBlobContainerUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure blob storage container Uri which contains the backup"
+      },
+      "backupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of the backup."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 2,
+        "description": "Status of the backup/restore operation"
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status details of backup/restore operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Error encountered, if any, during the backup/restore operation."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of the backup/restore operation in UTC"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time of the backup/restore operation in UTC"
+      },
+      "jobId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier for the backup/restore operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/117"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateBackupProperties",
+    "resourceType": "Microsoft.HardwareSecurityModules/cloudHsmClusters",
+    "apiVersion": "2024-06-30-preview",
+    "output": {
+      "$ref": "#/110"
+    },
+    "input": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.HardwareSecurityModules/cloudHsmClusters",
+    "apiVersion": "2024-06-30-preview",
+    "output": {
+      "$ref": "#/110"
+    },
+    "input": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreRequestProperties",
+    "properties": {
+      "backupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "An autogenerated unique string ID for labeling the backup. It contains both a UUID and a date timestamp."
+      },
+      "azureStorageBlobContainerUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure blob storage container Uri which contains the backup"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The SAS token pointing to an Azure blob storage container. This property is reserved for Azure Backup Service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "Backup and Restore operation common properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRestoreBaseResultProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Status of the backup/restore operation"
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status details of backup/restore operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Error encountered, if any, during the backup/restore operation."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of the backup/restore operation in UTC"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time of the backup/restore operation in UTC"
+      },
+      "jobId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier for the backup/restore operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateRestoreProperties",
+    "resourceType": "Microsoft.HardwareSecurityModules/cloudHsmClusters",
+    "apiVersion": "2024-06-30-preview",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.HardwareSecurityModules/cloudHsmClusters",
+    "apiVersion": "2024-06-30-preview",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/124"
+    }
   }
 ]

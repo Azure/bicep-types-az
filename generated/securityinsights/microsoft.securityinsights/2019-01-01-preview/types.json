@@ -5012,5 +5012,3157 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BookmarkExpandParameters",
+    "properties": {
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date filter, so the only expansion results returned are before this date."
+      },
+      "expansionId": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The Id of the expansion to perform."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start date filter, so the only expansion results returned are after this date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BookmarkExpandResponse",
+    "properties": {
+      "metaData": {
+        "type": {
+          "$ref": "#/398"
+        },
+        "flags": 0,
+        "description": "The metadata from the expansion operation results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 0,
+        "description": "The expansion result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpansionResultsMetadata",
+    "properties": {
+      "aggregations": {
+        "type": {
+          "$ref": "#/422"
+        },
+        "flags": 0,
+        "description": "Information of the aggregated nodes in the expansion result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpansionResultAggregation",
+    "properties": {
+      "aggregationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The common type of the aggregation. (for e.g. entity field name)"
+      },
+      "count": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Total number of aggregations of the given kind (and aggregationType if given) in the expansion result."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the aggregation by type."
+      },
+      "entityKind": {
+        "type": {
+          "$ref": "#/421"
+        },
+        "flags": 1,
+        "description": "The kind of the aggregated entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/400"
+      },
+      {
+        "$ref": "#/401"
+      },
+      {
+        "$ref": "#/402"
+      },
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/406"
+      },
+      {
+        "$ref": "#/407"
+      },
+      {
+        "$ref": "#/408"
+      },
+      {
+        "$ref": "#/409"
+      },
+      {
+        "$ref": "#/410"
+      },
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/416"
+      },
+      {
+        "$ref": "#/417"
+      },
+      {
+        "$ref": "#/418"
+      },
+      {
+        "$ref": "#/419"
+      },
+      {
+        "$ref": "#/420"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/399"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BookmarkExpandResponseValue",
+    "properties": {
+      "entities": {
+        "type": {
+          "$ref": "#/447"
+        },
+        "flags": 0,
+        "description": "Array of the expansion result entities."
+      },
+      "edges": {
+        "type": {
+          "$ref": "#/449"
+        },
+        "flags": 0,
+        "description": "Array of expansion result connected entities"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Entity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource type"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/446"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/426"
+      },
+      {
+        "$ref": "#/427"
+      },
+      {
+        "$ref": "#/428"
+      },
+      {
+        "$ref": "#/429"
+      },
+      {
+        "$ref": "#/430"
+      },
+      {
+        "$ref": "#/431"
+      },
+      {
+        "$ref": "#/432"
+      },
+      {
+        "$ref": "#/433"
+      },
+      {
+        "$ref": "#/434"
+      },
+      {
+        "$ref": "#/435"
+      },
+      {
+        "$ref": "#/436"
+      },
+      {
+        "$ref": "#/437"
+      },
+      {
+        "$ref": "#/438"
+      },
+      {
+        "$ref": "#/439"
+      },
+      {
+        "$ref": "#/440"
+      },
+      {
+        "$ref": "#/441"
+      },
+      {
+        "$ref": "#/442"
+      },
+      {
+        "$ref": "#/443"
+      },
+      {
+        "$ref": "#/444"
+      },
+      {
+        "$ref": "#/445"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/424"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectedEntity",
+    "properties": {
+      "targetEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Entity Id of the connected entity"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/310"
+        },
+        "flags": 0,
+        "description": "key-value pairs for a connected entity mapping"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/448"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "expand",
+    "resourceType": "Microsoft.SecurityInsights/bookmarks",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/397"
+    },
+    "input": {
+      "$ref": "#/396"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityExpandParameters",
+    "properties": {
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date filter, so the only expansion results returned are before this date."
+      },
+      "expansionId": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The Id of the expansion to perform."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start date filter, so the only expansion results returned are after this date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityExpandResponse",
+    "properties": {
+      "metaData": {
+        "type": {
+          "$ref": "#/398"
+        },
+        "flags": 0,
+        "description": "The metadata from the expansion operation results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0,
+        "description": "The expansion result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityExpandResponseValue",
+    "properties": {
+      "entities": {
+        "type": {
+          "$ref": "#/454"
+        },
+        "flags": 0,
+        "description": "Array of the expansion result entities."
+      },
+      "edges": {
+        "type": {
+          "$ref": "#/457"
+        },
+        "flags": 0,
+        "description": "Array of edges that connects the entity to the list of entities."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/424"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityEdges",
+    "properties": {
+      "targetEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target entity Id."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 0,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityEdgesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/455"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "expand",
+    "resourceType": "Microsoft.SecurityInsights/entities",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/452"
+    },
+    "input": {
+      "$ref": "#/451"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityGetInsightsParameters",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start timeline date, so the results returned are after this date."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end timeline date, so the results returned are before this date."
+      },
+      "addDefaultExtendedTimeRange": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Indicates if query time range should be extended with default time range of the query. Default value is false"
+      },
+      "insightQueryIds": {
+        "type": {
+          "$ref": "#/460"
+        },
+        "flags": 0,
+        "description": "List of Insights Query Id. If empty, default value is all insights of this entity"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityGetInsightsResponse",
+    "properties": {
+      "metaData": {
+        "type": {
+          "$ref": "#/462"
+        },
+        "flags": 0,
+        "description": "The metadata from the get insights operation results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/475"
+        },
+        "flags": 0,
+        "description": "The insights result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetInsightsResultsMetadata",
+    "properties": {
+      "totalCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "the total items found for the insights request"
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/466"
+        },
+        "flags": 0,
+        "description": "information about the failed queries"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetInsightsError",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 1,
+        "description": "the query kind"
+      },
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the query id"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "the error message"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Insight"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/463"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityInsightItem",
+    "properties": {
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The query id of the insight"
+      },
+      "queryTimeInterval": {
+        "type": {
+          "$ref": "#/468"
+        },
+        "flags": 0,
+        "description": "The Time interval that the query actually executed on."
+      },
+      "tableQueryResults": {
+        "type": {
+          "$ref": "#/469"
+        },
+        "flags": 0,
+        "description": "Query results for table insights query."
+      },
+      "chartQueryResults": {
+        "type": {
+          "$ref": "#/474"
+        },
+        "flags": 0,
+        "description": "Query results for table insights query."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityInsightItemQueryTimeInterval",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Insight query start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Insight query end time"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InsightsTableResult",
+    "properties": {
+      "columns": {
+        "type": {
+          "$ref": "#/471"
+        },
+        "flags": 0,
+        "description": "Columns Metadata of the table"
+      },
+      "rows": {
+        "type": {
+          "$ref": "#/473"
+        },
+        "flags": 0,
+        "description": "Rows data of the table"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InsightsTableResultColumnsItem",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the type of the column"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the name of the column"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/470"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/472"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/469"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/467"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getInsights",
+    "resourceType": "Microsoft.SecurityInsights/entities",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/461"
+    },
+    "input": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityTimelineParameters",
+    "properties": {
+      "kinds": {
+        "type": {
+          "$ref": "#/482"
+        },
+        "flags": 0,
+        "description": "Array of timeline Item kinds."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start timeline date, so the results returned are after this date."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end timeline date, so the results returned are before this date."
+      },
+      "numberOfBucket": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of bucket for timeline queries aggregation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/478"
+      },
+      {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/480"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/481"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityTimelineResponse",
+    "properties": {
+      "metaData": {
+        "type": {
+          "$ref": "#/484"
+        },
+        "flags": 0,
+        "description": "The metadata from the timeline operation results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/510"
+        },
+        "flags": 0,
+        "description": "The timeline result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TimelineResultsMetadata",
+    "properties": {
+      "totalCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "the total items found for the timeline request"
+      },
+      "aggregations": {
+        "type": {
+          "$ref": "#/490"
+        },
+        "flags": 1,
+        "description": "timeline aggregation per kind"
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 0,
+        "description": "information about the failure queries"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TimelineAggregation",
+    "properties": {
+      "count": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "the total items found for a kind"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/489"
+        },
+        "flags": 1,
+        "description": "the query kind"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/488"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/485"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TimelineError",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 1,
+        "description": "the query kind"
+      },
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the query id"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "the error message"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/492"
+      },
+      {
+        "$ref": "#/493"
+      },
+      {
+        "$ref": "#/494"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/491"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "EntityTimelineItem",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "Activity": {
+        "$ref": "#/498"
+      },
+      "Bookmark": {
+        "$ref": "#/500"
+      },
+      "SecurityAlert": {
+        "$ref": "#/503"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivityTimelineItem",
+    "properties": {
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The activity query id."
+      },
+      "bucketStartTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The grouping bucket start time."
+      },
+      "bucketEndTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The grouping bucket end time."
+      },
+      "firstActivityTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time of the first activity in the grouping bucket."
+      },
+      "lastActivityTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time of the last activity in the grouping bucket."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The activity timeline content."
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The activity timeline title."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 1,
+        "description": "The entity query kind type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activity"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BookmarkTimelineItem",
+    "properties": {
+      "azureResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The bookmark azure resource id."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bookmark display name."
+      },
+      "notes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The notes of the bookmark"
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bookmark end time."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bookmark start time."
+      },
+      "eventTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The bookmark event time."
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Describes a user that created the bookmark"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/501"
+        },
+        "flags": 0,
+        "description": "List of labels relevant to this bookmark"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/502"
+        },
+        "flags": 1,
+        "description": "The entity query kind type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertTimelineItem",
+    "properties": {
+      "azureResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert azure resource id."
+      },
+      "productName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The alert product name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The alert description."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert name."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/508"
+        },
+        "flags": 1,
+        "description": "The alert severity."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert end time."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert start time."
+      },
+      "timeGenerated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert generated time."
+      },
+      "alertType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the alert type."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/509"
+        },
+        "flags": 1,
+        "description": "The entity query kind type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/506"
+      },
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/497"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getTimeline",
+    "resourceType": "Microsoft.SecurityInsights/entities",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/483"
+    },
+    "input": {
+      "$ref": "#/477"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentAlertList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/592"
+        },
+        "flags": 1,
+        "description": "Array of incident alerts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlert",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/514"
+        },
+        "flags": 0,
+        "description": "SecurityAlert entity properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource type"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/591"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertProperties",
+    "properties": {
+      "alertDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the alert."
+      },
+      "alertType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type name of the alert."
+      },
+      "compromisedEntity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Display name of the main entity being reported on."
+      },
+      "confidenceLevel": {
+        "type": {
+          "$ref": "#/518"
+        },
+        "flags": 2,
+        "description": "The confidence level of this alert."
+      },
+      "confidenceReasons": {
+        "type": {
+          "$ref": "#/520"
+        },
+        "flags": 2,
+        "description": "The confidence reasons"
+      },
+      "confidenceScore": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The confidence score of the alert."
+      },
+      "confidenceScoreStatus": {
+        "type": {
+          "$ref": "#/525"
+        },
+        "flags": 2,
+        "description": "The confidence score calculation status, i.e. indicating if score calculation is pending for this alert, not applicable or final."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alert description."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The impact end time of the alert (the time of the last event contributing to the alert)."
+      },
+      "intent": {
+        "type": {
+          "$ref": "#/540"
+        },
+        "flags": 2,
+        "description": "Holds the alert intent stage(s) mapping for this alert."
+      },
+      "providerAlertId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of the alert inside the product which generated the alert."
+      },
+      "processingEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the alert was made available for consumption."
+      },
+      "productComponentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of a component inside the product which generated the alert."
+      },
+      "productName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the product which published this alert."
+      },
+      "productVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of the product generating the alert."
+      },
+      "remediationSteps": {
+        "type": {
+          "$ref": "#/541"
+        },
+        "flags": 2,
+        "description": "Manual action items to take to remediate the alert."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/546"
+        },
+        "flags": 0,
+        "description": "The severity of the alert"
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The impact start time of the alert (the time of the first event contributing to the alert)."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/552"
+        },
+        "flags": 2,
+        "description": "The lifecycle status of the alert."
+      },
+      "systemAlertId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Holds the product identifier of the alert for the product."
+      },
+      "tactics": {
+        "type": {
+          "$ref": "#/567"
+        },
+        "flags": 2,
+        "description": "The tactics of the alert"
+      },
+      "timeGenerated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the alert was generated."
+      },
+      "vendorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the vendor that raise the alert."
+      },
+      "alertLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The uri link of the alert."
+      },
+      "resourceIdentifiers": {
+        "type": {
+          "$ref": "#/568"
+        },
+        "flags": 2,
+        "description": "The list of resource identifiers of the alert."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/515"
+      },
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertPropertiesConfidenceReasonsItem",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason's description"
+      },
+      "reasonType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type (category) of the reason"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/519"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProcess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotFinal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Final"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/521"
+      },
+      {
+        "$ref": "#/522"
+      },
+      {
+        "$ref": "#/523"
+      },
+      {
+        "$ref": "#/524"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Probing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exploitation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivilegeEscalation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefenseEvasion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CredentialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LateralMovement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Execution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Collection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exfiltration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommandAndControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Impact"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/526"
+      },
+      {
+        "$ref": "#/527"
+      },
+      {
+        "$ref": "#/528"
+      },
+      {
+        "$ref": "#/529"
+      },
+      {
+        "$ref": "#/530"
+      },
+      {
+        "$ref": "#/531"
+      },
+      {
+        "$ref": "#/532"
+      },
+      {
+        "$ref": "#/533"
+      },
+      {
+        "$ref": "#/534"
+      },
+      {
+        "$ref": "#/535"
+      },
+      {
+        "$ref": "#/536"
+      },
+      {
+        "$ref": "#/537"
+      },
+      {
+        "$ref": "#/538"
+      },
+      {
+        "$ref": "#/539"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/543"
+      },
+      {
+        "$ref": "#/544"
+      },
+      {
+        "$ref": "#/545"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dismissed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/547"
+      },
+      {
+        "$ref": "#/548"
+      },
+      {
+        "$ref": "#/549"
+      },
+      {
+        "$ref": "#/550"
+      },
+      {
+        "$ref": "#/551"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Execution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivilegeEscalation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefenseEvasion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CredentialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LateralMovement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Collection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exfiltration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommandAndControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Impact"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreAttack"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/553"
+      },
+      {
+        "$ref": "#/554"
+      },
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/557"
+      },
+      {
+        "$ref": "#/558"
+      },
+      {
+        "$ref": "#/559"
+      },
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      },
+      {
+        "$ref": "#/564"
+      },
+      {
+        "$ref": "#/565"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/566"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/570"
+      },
+      {
+        "$ref": "#/571"
+      },
+      {
+        "$ref": "#/572"
+      },
+      {
+        "$ref": "#/573"
+      },
+      {
+        "$ref": "#/574"
+      },
+      {
+        "$ref": "#/575"
+      },
+      {
+        "$ref": "#/576"
+      },
+      {
+        "$ref": "#/577"
+      },
+      {
+        "$ref": "#/578"
+      },
+      {
+        "$ref": "#/579"
+      },
+      {
+        "$ref": "#/580"
+      },
+      {
+        "$ref": "#/581"
+      },
+      {
+        "$ref": "#/582"
+      },
+      {
+        "$ref": "#/583"
+      },
+      {
+        "$ref": "#/584"
+      },
+      {
+        "$ref": "#/585"
+      },
+      {
+        "$ref": "#/586"
+      },
+      {
+        "$ref": "#/587"
+      },
+      {
+        "$ref": "#/588"
+      },
+      {
+        "$ref": "#/589"
+      },
+      {
+        "$ref": "#/590"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/513"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "alerts",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/512"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentBookmarkList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/621"
+        },
+        "flags": 1,
+        "description": "Array of incident bookmarks."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HuntingBookmark",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/596"
+        },
+        "flags": 0,
+        "description": "HuntingBookmark entity properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource type"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HuntingBookmarkProperties",
+    "properties": {
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the bookmark was created"
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Describes a user that created the bookmark"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The display name of the bookmark"
+      },
+      "eventTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the event"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/597"
+        },
+        "flags": 0,
+        "description": "List of labels relevant to this bookmark"
+      },
+      "notes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The notes of the bookmark"
+      },
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The query of the bookmark."
+      },
+      "queryResult": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The query result of the bookmark."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time the bookmark was updated"
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Describes a user that updated the bookmark"
+      },
+      "incidentInfo": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Describes an incident that relates to bookmark"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/598"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/599"
+      },
+      {
+        "$ref": "#/600"
+      },
+      {
+        "$ref": "#/601"
+      },
+      {
+        "$ref": "#/602"
+      },
+      {
+        "$ref": "#/603"
+      },
+      {
+        "$ref": "#/604"
+      },
+      {
+        "$ref": "#/605"
+      },
+      {
+        "$ref": "#/606"
+      },
+      {
+        "$ref": "#/607"
+      },
+      {
+        "$ref": "#/608"
+      },
+      {
+        "$ref": "#/609"
+      },
+      {
+        "$ref": "#/610"
+      },
+      {
+        "$ref": "#/611"
+      },
+      {
+        "$ref": "#/612"
+      },
+      {
+        "$ref": "#/613"
+      },
+      {
+        "$ref": "#/614"
+      },
+      {
+        "$ref": "#/615"
+      },
+      {
+        "$ref": "#/616"
+      },
+      {
+        "$ref": "#/617"
+      },
+      {
+        "$ref": "#/618"
+      },
+      {
+        "$ref": "#/619"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/595"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bookmarks",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/594"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentEntitiesResponse",
+    "properties": {
+      "entities": {
+        "type": {
+          "$ref": "#/624"
+        },
+        "flags": 0,
+        "description": "Array of the incident related entities."
+      },
+      "metaData": {
+        "type": {
+          "$ref": "#/648"
+        },
+        "flags": 0,
+        "description": "The metadata from the incident related entities results."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/424"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentEntitiesResultsMetadata",
+    "properties": {
+      "count": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Total number of aggregations of the given kind in the incident related entities result."
+      },
+      "entityKind": {
+        "type": {
+          "$ref": "#/647"
+        },
+        "flags": 1,
+        "description": "The kind of the aggregated entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/626"
+      },
+      {
+        "$ref": "#/627"
+      },
+      {
+        "$ref": "#/628"
+      },
+      {
+        "$ref": "#/629"
+      },
+      {
+        "$ref": "#/630"
+      },
+      {
+        "$ref": "#/631"
+      },
+      {
+        "$ref": "#/632"
+      },
+      {
+        "$ref": "#/633"
+      },
+      {
+        "$ref": "#/634"
+      },
+      {
+        "$ref": "#/635"
+      },
+      {
+        "$ref": "#/636"
+      },
+      {
+        "$ref": "#/637"
+      },
+      {
+        "$ref": "#/638"
+      },
+      {
+        "$ref": "#/639"
+      },
+      {
+        "$ref": "#/640"
+      },
+      {
+        "$ref": "#/641"
+      },
+      {
+        "$ref": "#/642"
+      },
+      {
+        "$ref": "#/643"
+      },
+      {
+        "$ref": "#/644"
+      },
+      {
+        "$ref": "#/645"
+      },
+      {
+        "$ref": "#/646"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/625"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "entities",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/623"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceIndicatorModelForRequestBody",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0,
+        "description": "Threat Intelligence Entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/652"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "indicator"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/651"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceInformation",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource type"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/655"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "indicator"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/654"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createIndicator",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/653"
+    },
+    "input": {
+      "$ref": "#/650"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceFilteringCriteria",
+    "properties": {
+      "pageSize": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Page size"
+      },
+      "minConfidence": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Minimum confidence."
+      },
+      "maxConfidence": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum confidence."
+      },
+      "minValidUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time for ValidUntil filter."
+      },
+      "maxValidUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time for ValidUntil filter."
+      },
+      "includeDisabled": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Parameter to include/exclude disabled indicators."
+      },
+      "sortBy": {
+        "type": {
+          "$ref": "#/663"
+        },
+        "flags": 0,
+        "description": "Columns to sort by and sorting order"
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/664"
+        },
+        "flags": 0,
+        "description": "Sources of threat intelligence indicators"
+      },
+      "patternTypes": {
+        "type": {
+          "$ref": "#/665"
+        },
+        "flags": 0,
+        "description": "Pattern types"
+      },
+      "threatTypes": {
+        "type": {
+          "$ref": "#/666"
+        },
+        "flags": 0,
+        "description": "Threat types of threat intelligence indicators"
+      },
+      "ids": {
+        "type": {
+          "$ref": "#/667"
+        },
+        "flags": 0,
+        "description": "Ids of threat intelligence indicators"
+      },
+      "keywords": {
+        "type": {
+          "$ref": "#/668"
+        },
+        "flags": 0,
+        "description": "Keywords for searching threat intelligence indicators"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Skip token."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceSortingCriteriaAutoGenerated",
+    "properties": {
+      "itemKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Column name"
+      },
+      "sortOrder": {
+        "type": {
+          "$ref": "#/662"
+        },
+        "flags": 0,
+        "description": "Sorting order (ascending/descending/unsorted)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unsorted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ascending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "descending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/659"
+      },
+      {
+        "$ref": "#/660"
+      },
+      {
+        "$ref": "#/661"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/658"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceInformationList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URL to fetch the next set of information objects."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/670"
+        },
+        "flags": 1,
+        "description": "Array of threat intelligence information objects."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/653"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryIndicators",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/669"
+    },
+    "input": {
+      "$ref": "#/657"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceAppendTags",
+    "properties": {
+      "threatIntelligenceTags": {
+        "type": {
+          "$ref": "#/673"
+        },
+        "flags": 0,
+        "description": "List of tags to be appended."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "replaceTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2019-01-01-preview",
+    "output": {
+      "$ref": "#/653"
+    },
+    "input": {
+      "$ref": "#/650"
+    }
   }
 ]

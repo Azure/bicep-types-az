@@ -48,6 +48,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Purview/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ingestionPrivateEndpointConnectionStatus (Microsoft.Purview/accounts@2024-04-01-preview)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [PrivateEndpointConnectionStatusUpdateRequest](#privateendpointconnectionstatusupdaterequest)
+* **Output**: [PrivateEndpointConnectionStatusUpdateResponse](#privateendpointconnectionstatusupdateresponse)
+
 ## Function listFeatures (Microsoft.Purview/accounts@2024-04-01-preview)
 * **Resource**: Microsoft.Purview/accounts
 * **ApiVersion**: 2024-04-01-preview
@@ -210,6 +216,16 @@ Configured in AWS to allow use of the role arn used for scanning
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint information.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
 * **provisioningState**: string (ReadOnly): The provisioning state.
+
+## PrivateEndpointConnectionStatusUpdateRequest
+### Properties
+* **privateEndpointId**: string: The private endpoint resource identifier.
+* **status**: string: The private endpoint connection status.
+
+## PrivateEndpointConnectionStatusUpdateResponse
+### Properties
+* **privateEndpointId**: string: The private endpoint resource identifier.
+* **status**: string: The private endpoint connection status.
 
 ## PrivateLinkResourceProperties
 ### Properties

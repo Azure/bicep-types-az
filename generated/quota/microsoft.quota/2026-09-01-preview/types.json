@@ -3049,5 +3049,176 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncomingQuotaTransferApproveRequest",
+    "properties": {
+      "comment": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Optional free-text comment recorded on the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncomingQuotaTransfer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0,
+        "description": "Properties of the incoming quota transfer."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approve",
+    "resourceType": "Microsoft.Quota/incomingQuotaTransfers",
+    "apiVersion": "2026-09-01-preview",
+    "output": {
+      "$ref": "#/238"
+    },
+    "input": {
+      "$ref": "#/237"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncomingQuotaTransferRejectRequest",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Optional free-text reason recorded on the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reject",
+    "resourceType": "Microsoft.Quota/incomingQuotaTransfers",
+    "apiVersion": "2026-09-01-preview",
+    "output": {
+      "$ref": "#/238"
+    },
+    "input": {
+      "$ref": "#/240"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaTransferCancelRequest",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Optional free-text reason recorded on the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaTransfer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Properties of the quota transfer."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Quota/quotaTransfers",
+    "apiVersion": "2026-09-01-preview",
+    "output": {
+      "$ref": "#/243"
+    },
+    "input": {
+      "$ref": "#/242"
+    }
   }
 ]

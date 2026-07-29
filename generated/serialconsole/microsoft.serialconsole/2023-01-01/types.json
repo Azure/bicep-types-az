@@ -244,5 +244,74 @@
     },
     "readableScopes": 16,
     "writableScopes": 16
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisableSerialConsoleResult",
+    "properties": {
+      "disabled": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Whether or not Serial Console is disabled."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableConsole",
+    "resourceType": "Microsoft.SerialConsole/consoleServices",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableSerialConsoleResult",
+    "properties": {
+      "disabled": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Whether or not Serial Console is disabled."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableConsole",
+    "resourceType": "Microsoft.SerialConsole/consoleServices",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SerialPortConnectResult",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connection string to the serial port of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.SerialConsole/serialPorts",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/28"
+    }
   }
 ]

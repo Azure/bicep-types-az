@@ -1938,5 +1938,40 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationRejectBody",
+    "properties": {
+      "reasonForRejection": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "Reason for rejecting recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotARisk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RiskAccepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   }
 ]

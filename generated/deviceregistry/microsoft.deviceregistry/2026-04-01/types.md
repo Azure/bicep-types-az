@@ -147,6 +147,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries/schemas/schemaVersions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function executeAction (Microsoft.DeviceRegistry/namespaces/assets@2026-04-01)
+* **Resource**: Microsoft.DeviceRegistry/namespaces/assets
+* **ApiVersion**: 2026-04-01
+* **Input**: [NamespaceAssetExecuteActionRequest](#namespaceassetexecuteactionrequest)
+* **Output**: [NamespaceAssetExecuteActionResponse](#namespaceassetexecuteactionresponse)
+
+## Function migrate (Microsoft.DeviceRegistry/namespaces@2026-04-01)
+* **Resource**: Microsoft.DeviceRegistry/namespaces
+* **ApiVersion**: 2026-04-01
+* **Input**: [NamespaceMigrateRequest](#namespacemigraterequest)
+* **Output**: [NamespaceMigrateResponse](#namespacemigrateresponse)
+
 ## AssetEndpointProfileProperties
 ### Properties
 * **additionalConfiguration**: string: Stringified JSON that contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF).
@@ -327,6 +339,12 @@
 ### Additional Properties
 * **Additional Properties Type**: [DeviceMessagingEndpoint](#devicemessagingendpoint)
 
+## Error
+### Properties
+* **code**: string (ReadOnly): Error code for classification of errors (ex: '400', '404', '500', etc.).
+* **details**: [ErrorDetails](#errordetails)[] (ReadOnly): Array of error details that describe the status of each error.
+* **message**: string (ReadOnly): Human-readable helpful error message to provide additional context for error (e.g.,: “Capability ID 'foo' does not exist”).
+
 ## ErrorDetails
 ### Properties
 * **code**: string (ReadOnly): Multi-part error code for classification and root causing of errors (ex: 400.200.100.432).
@@ -453,12 +471,38 @@
 ### Additional Properties
 * **Additional Properties Type**: [InboundEndpoints](#inboundendpoints)
 
+## MigrateResult
+### Properties
+* **error**: [Error](#error): The error if the migrate operation is not successful.
+* **resourceId**: string: The resource Id of the asset resource.
+* **result**: 'Failed' | 'Succeeded' | string (ReadOnly): The result of the migrate operation.
+
 ## MqttDestinationConfiguration
 ### Properties
 * **qos**: 'Qos0' | 'Qos1' | string: The MQTT QoS setting. Defaults to QoS 1.
 * **retain**: 'Keep' | 'Never' | string: When set to 'Keep', messages published to an MQTT broker will have the retain flag set. Default: 'Never'.
 * **topic**: string (Required): The MQTT topic.
 * **ttl**: int: The MQTT TTL setting.
+
+## NamespaceAssetExecuteActionRequest
+### Properties
+* **managementActionName**: string (Required): Name of the management action to be executed.
+* **managementGroupName**: string (Required): Name of the management group under which the action is to be executed.
+* **payload**: [NamespaceAssetExecuteActionRequestPayload](#namespaceassetexecuteactionrequestpayload): Payload required for executing the management action.
+
+## NamespaceAssetExecuteActionRequestPayload
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## NamespaceAssetExecuteActionResponse
+### Properties
+* **assetResourceId**: string (Required): Resource ID of the asset on which the management action was executed.
+* **error**: [Error](#error): Error if the execute action operation is not successful.
+* **managementActionName**: string (Required): Name of the management action that was executed.
+* **managementGroupName**: string (Required): Name of the management group under which the action was executed.
+* **response**: string: Response from the asset regarding the management action execution.
+* **status**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (Required, ReadOnly): Status of the management action execution.
 
 ## NamespaceAssetProperties
 ### Properties
@@ -724,6 +768,15 @@
 * **schemaName**: string (Required, ReadOnly): The message schema name.
 * **schemaRegistryNamespace**: string (Required, ReadOnly): The message schema registry namespace.
 * **schemaVersion**: string (Required, ReadOnly): The message schema version.
+
+## NamespaceMigrateRequest
+### Properties
+* **resourceIds**: string[]: List of asset resources to be migrated.
+* **scope**: 'Resources' | string: Scope of the migrate resources operation.
+
+## NamespaceMigrateResponse
+### Properties
+* **migrateResults**: [MigrateResult](#migrateresult)[]: List of migrate results containing result of each asset migrate operation.
 
 ## NamespaceProperties
 ### Properties

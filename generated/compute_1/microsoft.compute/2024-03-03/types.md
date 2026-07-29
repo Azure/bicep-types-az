@@ -92,6 +92,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/inVMAccessControlProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function share (Microsoft.Compute/galleries@2024-03-03)
+* **Resource**: Microsoft.Compute/galleries
+* **ApiVersion**: 2024-03-03
+* **Input**: [SharingUpdate](#sharingupdate)
+* **Output**: [SharingUpdate](#sharingupdate)
+
 ## AccessControlRules
 ### Properties
 * **identities**: [AccessControlRulesIdentity](#accesscontrolrulesidentity)[]: A list of identities.
@@ -451,6 +457,11 @@
 ### Properties
 * **aggregatedState**: 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): Aggregated sharing state of current gallery.
 * **summary**: [RegionalSharingStatus](#regionalsharingstatus)[]: Summary of all regional sharing status.
+
+## SharingUpdate
+### Properties
+* **groups**: [SharingProfileGroup](#sharingprofilegroup)[]: A list of sharing profile groups.
+* **operationType**: 'Add' | 'EnableCommunity' | 'Remove' | 'Reset' | string (Required): This property allows you to specify the operation type of gallery sharing update. Possible values are: **Add,** **Remove,** **Reset.**
 
 ## SoftDeletePolicy
 ### Properties

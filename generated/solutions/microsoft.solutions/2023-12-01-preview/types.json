@@ -2016,5 +2016,152 @@
     "input": {
       "$ref": "#/150"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAccessDefinition",
+    "properties": {
+      "Approver": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The approver name."
+      },
+      "Metadata": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "The JIT request metadata."
+      },
+      "Status": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      },
+      "SubStatus": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitRequestMetadata",
+    "properties": {
+      "originRequestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The origin request id."
+      },
+      "requestorId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The requestor id."
+      },
+      "tenantDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The publisher's tenant name."
+      },
+      "subjectDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subject display name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Elevate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timeout"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
   }
 ]

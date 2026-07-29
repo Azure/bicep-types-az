@@ -200,10 +200,46 @@
 * **properties**: [BillingPropertyProperties](#billingpropertyproperties) (ReadOnly): A billing property.
 * **type**: 'Microsoft.Billing/billingProperty' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadDocuments (Microsoft.Billing/billingAccounts@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts
+* **ApiVersion**: 2020-05-01
+* **Input**: string[]
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadDocuments (Microsoft.Billing/billingAccounts/billingSubscriptions@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2020-05-01
+* **Input**: string[]
+* **Output**: [DownloadUrl](#downloadurl)
+
 ## Function listInvoiceSectionsWithCreateSubscriptionPermission (Microsoft.Billing/billingAccounts@2020-05-01)
 * **Resource**: Microsoft.Billing/billingAccounts
 * **ApiVersion**: 2020-05-01
 * **Output**: [InvoiceSectionListWithCreateSubPermissionResult](#invoicesectionlistwithcreatesubpermissionresult)
+
+## Function move (Microsoft.Billing/billingAccounts/billingSubscriptions@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2020-05-01
+* **Input**: [TransferBillingSubscriptionRequestProperties](#transferbillingsubscriptionrequestproperties)
+* **Output**: [BillingSubscription](#billingsubscription)
+
+## Function move (Microsoft.Billing/billingAccounts/products@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts/products
+* **ApiVersion**: 2020-05-01
+* **Input**: [TransferProductRequestProperties](#transferproductrequestproperties)
+* **Output**: [Product](#product)
+
+## Function validateMoveEligibility (Microsoft.Billing/billingAccounts/billingSubscriptions@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2020-05-01
+* **Input**: [TransferBillingSubscriptionRequestProperties](#transferbillingsubscriptionrequestproperties)
+* **Output**: [ValidateSubscriptionTransferEligibilityResult](#validatesubscriptiontransfereligibilityresult)
+
+## Function validateMoveEligibility (Microsoft.Billing/billingAccounts/products@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts/products
+* **ApiVersion**: 2020-05-01
+* **Input**: [TransferProductRequestProperties](#transferproductrequestproperties)
+* **Output**: [ValidateProductTransferEligibilityResult](#validateproducttransfereligibilityresult)
 
 ## AddressDetails
 ### Properties
@@ -348,6 +384,13 @@
 * **permissions**: [BillingPermissionsProperties](#billingpermissionsproperties)[]: The billingPermissions the role has
 * **roleName**: string (ReadOnly): The name of the role
 
+## BillingSubscription
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BillingSubscriptionProperties](#billingsubscriptionproperties): The billing properties of a subscription.
+* **type**: string (ReadOnly): Resource type.
+
 ## BillingSubscriptionProperties
 ### Properties
 * **billingProfileDisplayName**: string (ReadOnly): The name of the billing profile to which the subscription is billed.
@@ -398,6 +441,11 @@
 * **kind**: 'CreditNote' | 'Invoice' | 'TaxReceipt' | 'VoidNote' | string (ReadOnly): The type of the document.
 * **source**: 'DRS' | 'ENF' | string (ReadOnly): The source of the document. ENF for Brazil and DRS for rest of the world.
 * **url**: string (ReadOnly): Document URL.
+
+## DownloadUrl
+### Properties
+* **expiryTime**: string (ReadOnly): The time in UTC when the download URL will expire.
+* **url**: string (ReadOnly): The URL to the PDF file.
 
 ## Enrollment
 ### Properties
@@ -551,6 +599,13 @@
 * **reservationPurchases**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether Azure reservation purchases are allowed for a billing profile.
 * **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
 
+## Product
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProductProperties](#productproperties): The properties of a product.
+* **type**: string (ReadOnly): Resource type.
+
 ## ProductProperties
 ### Properties
 * **autoRenew**: 'Off' | 'On' | string: Indicates whether auto renewal is turned on or off for a product.
@@ -591,4 +646,34 @@
 ### Properties
 * **description**: string (ReadOnly): The name of the reseller.
 * **resellerId**: string (ReadOnly): The MPN ID of the reseller.
+
+## TransferBillingSubscriptionRequestProperties
+### Properties
+* **destinationInvoiceSectionId**: string (Required): The destination invoice section id.
+
+## TransferProductRequestProperties
+### Properties
+* **destinationInvoiceSectionId**: string: The destination invoice section id.
+
+## ValidateProductTransferEligibilityError
+### Properties
+* **code**: 'CrossBillingAccountNotAllowed' | 'DestinationBillingProfilePastDue' | 'InsufficientPermissionOnDestination' | 'InsufficientPermissionOnSource' | 'InvalidSource' | 'NotAvailableForDestinationMarket' | 'OneTimePurchaseProductTransferNotAllowed' | 'ProductNotActive' | 'ProductTypeNotSupported' | string: Error code for the product transfer validation.
+* **details**: string: Detailed error message explaining the error.
+* **message**: string: The error message.
+
+## ValidateProductTransferEligibilityResult
+### Properties
+* **errorDetails**: [ValidateProductTransferEligibilityError](#validateproducttransfereligibilityerror): Validation error details.
+* **isMoveEligible**: bool (ReadOnly): Specifies whether the transfer is eligible or not.
+
+## ValidateSubscriptionTransferEligibilityError
+### Properties
+* **code**: 'BillingAccountInactive' | 'CrossBillingAccountNotAllowed' | 'DestinationBillingProfileInactive' | 'DestinationBillingProfileNotFound' | 'DestinationBillingProfilePastDue' | 'DestinationInvoiceSectionInactive' | 'DestinationInvoiceSectionNotFound' | 'InsufficientPermissionOnDestination' | 'InsufficientPermissionOnSource' | 'InvalidDestination' | 'InvalidSource' | 'MarketplaceNotEnabledOnDestination' | 'NotAvailableForDestinationMarket' | 'ProductInactive' | 'ProductNotFound' | 'ProductTypeNotSupported' | 'SourceBillingProfilePastDue' | 'SourceInvoiceSectionInactive' | 'SubscriptionNotActive' | 'SubscriptionTypeNotSupported' | string: Error code for the product transfer validation.
+* **details**: string: Detailed error message explaining the error.
+* **message**: string: The error message.
+
+## ValidateSubscriptionTransferEligibilityResult
+### Properties
+* **errorDetails**: [ValidateSubscriptionTransferEligibilityError](#validatesubscriptiontransfereligibilityerror): Validation error details.
+* **isMoveEligible**: bool (ReadOnly): Specifies whether the subscription is eligible to be transferred.
 

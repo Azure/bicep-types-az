@@ -471,10 +471,79 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans
+* **ApiVersion**: 2021-06-01
+* **Output**: [SqlPoolVulnerabilityAssessmentScansExport](#sqlpoolvulnerabilityassessmentscansexport)
+
+## Function getConnectionInfo (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Output**: [IntegrationRuntimeConnectionInfo](#integrationruntimeconnectioninfo)
+
+## Function getObjectMetadata (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Input**: [GetSsisObjectMetadataRequest](#getssisobjectmetadatarequest)
+* **Output**: [SsisObjectMetadataListResponse](#ssisobjectmetadatalistresponse)
+
+## Function getStatus (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function ipAddress (Microsoft.Synapse/workspaces/integrationRuntimes/nodes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes/nodes
+* **ApiVersion**: 2021-06-01
+* **Output**: [IntegrationRuntimeNodeIpAddress](#integrationruntimenodeipaddress)
+
 ## Function listAuthKeys (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
 * **ApiVersion**: 2021-06-01
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
+## Function monitoringData (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Output**: [IntegrationRuntimeMonitoringData](#integrationruntimemonitoringdata)
+
+## Function pause (Microsoft.Synapse/workspaces/sqlPools@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools
+* **ApiVersion**: 2021-06-01
+* **Output**: [SqlPool](#sqlpool)
+
+## Function refreshObjectMetadata (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Output**: [SsisObjectMetadataStatusResponse](#ssisobjectmetadatastatusresponse)
+
+## Function regenerateAuthKey (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Input**: [IntegrationRuntimeRegenerateKeyParameters](#integrationruntimeregeneratekeyparameters)
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
+## Function replaceAllIpFirewallRules (Microsoft.Synapse/workspaces@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces
+* **ApiVersion**: 2021-06-01
+* **Input**: [ReplaceAllIpFirewallRulesRequest](#replaceallipfirewallrulesrequest)
+* **Output**: [ReplaceAllFirewallRulesOperationResponse](#replaceallfirewallrulesoperationresponse)
+
+## Function restorePoints (Microsoft.Synapse/workspaces/sqlPools@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools
+* **ApiVersion**: 2021-06-01
+* **Input**: [CreateSqlPoolRestorePointDefinition](#createsqlpoolrestorepointdefinition)
+* **Output**: [RestorePoint](#restorepoint)
+
+## Function resume (Microsoft.Synapse/workspaces/sqlPools@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools
+* **ApiVersion**: 2021-06-01
+* **Output**: [SqlPool](#sqlpool)
+
+## Function start (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01
+* **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
 
 ## AadAdminProperties
 ### Properties
@@ -527,6 +596,10 @@
 * **password**: [SecretBase](#secretbase) (Required): The password of data source access.
 * **targetName**: any (Required): The server name of data source access.
 * **userName**: any (Required): The user name of data source access.
+
+## CreateSqlPoolRestorePointDefinition
+### Properties
+* **restorePointLabel**: string (Required): The restore point label to apply
 
 ## CspWorkspaceAdminProperties
 ### Properties
@@ -810,6 +883,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
 * **storageType**: string (ReadOnly): The storage type of the geo backup policy.
 
+## GetSsisObjectMetadataRequest
+### Properties
+* **metadataPath**: string: Metadata path.
+
 ## IntegrationRuntime
 * **Discriminator**: type
 
@@ -845,6 +922,17 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## IntegrationRuntimeConnectionInfo
+### Properties
+* **hostServiceUri**: string (ReadOnly): The on-premises integration runtime host URL.
+* **identityCertThumbprint**: string (ReadOnly): The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
+* **isIdentityCertExprired**: bool (ReadOnly): Whether the identity certificate is expired.
+* **publicKey**: string (ReadOnly): The public key for encrypting a credential when transferring the credential to the integration runtime.
+* **serviceToken**: string (ReadOnly): The token generated in service. Callers use this token to authenticate to integration runtime.
+* **version**: string (ReadOnly): The integration runtime version.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## IntegrationRuntimeCustomerVirtualNetwork
 ### Properties
 * **subnetId**: string: The ID of subnet to which Azure-SSIS integration runtime will join.
@@ -868,6 +956,32 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **path**: string: The path to contain the staged data in the Blob storage.
 * **stagingLinkedService**: [EntityReference](#entityreference): The staging linked service reference.
 
+## IntegrationRuntimeMonitoringData
+### Properties
+* **name**: string: Integration runtime name.
+* **nodes**: [IntegrationRuntimeNodeMonitoringData](#integrationruntimenodemonitoringdata)[]: Integration runtime node monitoring data.
+
+## IntegrationRuntimeNodeIpAddress
+### Properties
+* **ipAddress**: string (ReadOnly): The IP address of self-hosted integration runtime node.
+
+## IntegrationRuntimeNodeMonitoringData
+### Properties
+* **availableMemoryInMB**: int (ReadOnly): Available memory (MB) on the integration runtime node.
+* **concurrentJobsLimit**: int (ReadOnly): Maximum concurrent jobs on the integration runtime node.
+* **concurrentJobsRunning**: int (ReadOnly): The number of jobs currently running on the integration runtime node.
+* **cpuUtilization**: int (ReadOnly): CPU percentage on the integration runtime node.
+* **maxConcurrentJobs**: int (ReadOnly): The maximum concurrent jobs in this integration runtime.
+* **nodeName**: string (ReadOnly): Name of the integration runtime node.
+* **receivedBytes**: int (ReadOnly): Received bytes on the integration runtime node.
+* **sentBytes**: int (ReadOnly): Sent bytes on the integration runtime node.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## IntegrationRuntimeRegenerateKeyParameters
+### Properties
+* **keyName**: 'authKey1' | 'authKey2' | string: The name of the authentication key to regenerate.
+
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
@@ -887,6 +1001,29 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: License type for bringing your own license scenario.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## IntegrationRuntimeStatus
+* **Discriminator**: type
+
+### Base Properties
+* **dataFactoryName**: string (ReadOnly): The workspace name which the integration runtime belong to.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
+
+### ManagedIntegrationRuntimeStatus
+#### Properties
+* **type**: 'Managed' (Required): Type of integration runtime.
+* **typeProperties**: [ManagedIntegrationRuntimeStatusTypeProperties](#managedintegrationruntimestatustypeproperties) (Required): Managed integration runtime status type properties.
+
+### SelfHostedIntegrationRuntimeStatus
+#### Properties
+* **type**: 'SelfHosted' (Required): Type of integration runtime.
+* **typeProperties**: [SelfHostedIntegrationRuntimeStatusTypeProperties](#selfhostedintegrationruntimestatustypeproperties) (Required): Self-hosted integration runtime status type properties.
+
+
+## IntegrationRuntimeStatusResponse
+### Properties
+* **name**: string (ReadOnly): The integration runtime name.
+* **properties**: [IntegrationRuntimeStatus](#integrationruntimestatus) (Required): Integration runtime properties.
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
@@ -934,6 +1071,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **componentName**: string (Required): The name of the 3rd party component.
 * **licenseKey**: [SecretBase](#secretbase): The license key to activate the component.
 
+## LinkedIntegrationRuntime
+### Properties
+* **createTime**: string (ReadOnly): The creating time of the linked integration runtime.
+* **dataFactoryLocation**: string (ReadOnly): The location of the workspace for which the linked integration runtime belong to.
+* **dataFactoryName**: string (ReadOnly): The name of the workspace for which the linked integration runtime belong to.
+* **name**: string (ReadOnly): The name of the linked integration runtime.
+* **subscriptionId**: string (ReadOnly): The subscription ID for which the linked integration runtime belong to.
+
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType
 
@@ -966,11 +1111,46 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state
 * **desiredState**: 'Disabled' | 'Enabled': Desired state
 
+## ManagedIntegrationRuntimeError
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error message.
+* **parameters**: string[] (ReadOnly): Managed integration runtime error parameters.
+* **time**: string (ReadOnly): The time when the error occurred.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ManagedIntegrationRuntimeManagedVirtualNetworkReference
 ### Properties
 * **id**: string: The id of the managed virtual network.
 * **referenceName**: string: The reference name of the managed virtual network
 * **type**: string: The type of the managed virtual network.
+
+## ManagedIntegrationRuntimeNode
+### Properties
+* **errors**: [ManagedIntegrationRuntimeError](#managedintegrationruntimeerror)[]: The errors that occurred on this integration runtime node.
+* **nodeId**: string (ReadOnly): The managed integration runtime node id.
+* **status**: 'Available' | 'Recycling' | 'Starting' | 'Unavailable' | string (ReadOnly): The managed integration runtime node status.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIntegrationRuntimeOperationResult
+### Properties
+* **activityId**: string (ReadOnly): The activity id for the operation request.
+* **errorCode**: string (ReadOnly): The error code.
+* **parameters**: string[] (ReadOnly): Managed integration runtime error parameters.
+* **result**: string (ReadOnly): The operation result.
+* **startTime**: string (ReadOnly): The start time of the operation.
+* **type**: string (ReadOnly): The operation type. Could be start or stop.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIntegrationRuntimeStatusTypeProperties
+### Properties
+* **createTime**: string (ReadOnly): The time at which the integration runtime was created, in ISO8601 format.
+* **lastOperation**: [ManagedIntegrationRuntimeOperationResult](#managedintegrationruntimeoperationresult) (ReadOnly): The last operation result that occurred on this integration runtime.
+* **nodes**: [ManagedIntegrationRuntimeNode](#managedintegrationruntimenode)[] (ReadOnly): The list of nodes for managed integration runtime.
+* **otherErrors**: [ManagedIntegrationRuntimeError](#managedintegrationruntimeerror)[] (ReadOnly): The errors that occurred on this integration runtime.
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
@@ -1034,6 +1214,19 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **lastAvailableBackupDate**: string (ReadOnly): The last available backup date of the database (ISO8601 format)
 * **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
 
+## ReplaceAllFirewallRulesOperationResponse
+### Properties
+* **operationId**: string: The operation ID
+
+## ReplaceAllIpFirewallRulesRequest
+### Properties
+* **ipFirewallRules**: [ReplaceAllIpFirewallRulesRequestIpFirewallRules](#replaceallipfirewallrulesrequestipfirewallrules): IP firewall rule properties
+
+## ReplaceAllIpFirewallRulesRequestIpFirewallRules
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [IpFirewallRuleProperties](#ipfirewallruleproperties)
+
 ## ReplicationLinkProperties
 ### Properties
 * **isTerminationAllowed**: bool (ReadOnly): Legacy value indicating whether termination is allowed.  Currently always returns true.
@@ -1057,6 +1250,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **elasticPoolName**: string (ReadOnly): The elastic pool name of the database
 * **maxSizeBytes**: string (ReadOnly): The max size in bytes of the database
 * **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
+
+## RestorePoint
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RestorePointProperties](#restorepointproperties): Resource properties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RestorePointProperties
 ### Properties
@@ -1091,6 +1292,59 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific Sql pool.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+
+## SelfHostedIntegrationRuntimeNode
+### Properties
+* **capabilities**: [SelfHostedIntegrationRuntimeNodeCapabilities](#selfhostedintegrationruntimenodecapabilities) (ReadOnly): The integration runtime capabilities dictionary
+* **concurrentJobsLimit**: int (ReadOnly): Maximum concurrent jobs on the integration runtime node.
+* **expiryTime**: string (ReadOnly): The time at which the integration runtime will expire in ISO8601 format.
+* **hostServiceUri**: string (ReadOnly): URI for the host machine of the integration runtime.
+* **isActiveDispatcher**: bool (ReadOnly): Indicates whether this node is the active dispatcher for integration runtime requests.
+* **lastConnectTime**: string (ReadOnly): The most recent time at which the integration runtime was connected in ISO8601 format.
+* **lastEndUpdateTime**: string (ReadOnly): The last time for the integration runtime node update end.
+* **lastStartTime**: string (ReadOnly): The time the node last started up.
+* **lastStartUpdateTime**: string (ReadOnly): The last time for the integration runtime node update start.
+* **lastStopTime**: string (ReadOnly): The integration runtime node last stop time.
+* **lastUpdateResult**: 'Fail' | 'None' | 'Succeed' | string (ReadOnly): The result of the last integration runtime node update.
+* **machineName**: string (ReadOnly): Machine name of the integration runtime node.
+* **maxConcurrentJobs**: int (ReadOnly): The maximum concurrent jobs in this integration runtime.
+* **nodeName**: string (ReadOnly): Name of the integration runtime node.
+* **registerTime**: string (ReadOnly): The time at which the integration runtime node was registered in ISO8601 format.
+* **status**: 'InitializeFailed' | 'Initializing' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Upgrading' | string (ReadOnly): Status of the integration runtime node.
+* **version**: string (ReadOnly): Version of the integration runtime node.
+* **versionStatus**: string (ReadOnly): Status of the integration runtime node version.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## SelfHostedIntegrationRuntimeNodeCapabilities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SelfHostedIntegrationRuntimeStatusTypeProperties
+### Properties
+* **autoUpdate**: 'Off' | 'On' | string (ReadOnly): Whether Self-hosted integration runtime auto update has been turned on.
+* **autoUpdateETA**: string (ReadOnly): The estimated time when the self-hosted integration runtime will be updated.
+* **capabilities**: [SelfHostedIntegrationRuntimeStatusTypePropertiesCapabilities](#selfhostedintegrationruntimestatustypepropertiescapabilities) (ReadOnly): Object with additional information about integration runtime capabilities.
+* **createTime**: string (ReadOnly): The time at which the integration runtime was created, in ISO8601 format.
+* **internalChannelEncryption**: 'NotEncrypted' | 'NotSet' | 'SslEncrypted' | string (ReadOnly): It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+* **latestVersion**: string (ReadOnly): The latest version on download center.
+* **links**: [LinkedIntegrationRuntime](#linkedintegrationruntime)[]: The list of linked integration runtimes that are created to share with this integration runtime.
+* **localTimeZoneOffset**: string (ReadOnly): The local time zone offset in hours.
+* **nodeCommunicationChannelEncryptionMode**: string (ReadOnly): The node communication Channel encryption mode
+* **nodes**: [SelfHostedIntegrationRuntimeNode](#selfhostedintegrationruntimenode)[]: The list of nodes for this integration runtime.
+* **pushedVersion**: string (ReadOnly): The version that the integration runtime is going to update to.
+* **scheduledUpdateDate**: string (ReadOnly): The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+* **serviceUrls**: string[] (ReadOnly): The URLs for the services used in integration runtime backend service.
+* **taskQueueId**: string (ReadOnly): The task queue id of the integration runtime.
+* **updateDelayOffset**: string (ReadOnly): The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+* **version**: string (ReadOnly): Version of the integration runtime.
+* **versionStatus**: string (ReadOnly): Status of the integration runtime version.
+
+## SelfHostedIntegrationRuntimeStatusTypePropertiesCapabilities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SelfHostedIntegrationRuntimeTypeProperties
 ### Properties
@@ -1233,6 +1487,16 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **filename**: string: The filename of the spark config properties file.
 * **time**: string (ReadOnly): The last update time of the spark config properties file.
 
+## SqlPool
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SqlPoolResourceProperties](#sqlpoolresourceproperties): SQL pool properties
+* **sku**: [Sku](#sku): SQL pool SKU
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SqlPoolBlobAuditingPolicyProperties
 ### Properties
 * **auditActionsAndGroups**: string[]: Specifies the Actions-Groups and Actions to audit.
@@ -1361,6 +1625,101 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ## SqlPoolVulnerabilityAssessmentRuleBaselineProperties
 ### Properties
 * **baselineResults**: [SqlPoolVulnerabilityAssessmentRuleBaselineItem](#sqlpoolvulnerabilityassessmentrulebaselineitem)[] (Required): The rule baseline result
+
+## SqlPoolVulnerabilityAssessmentScanExportProperties
+### Properties
+* **exportedReportLocation**: string (ReadOnly): Location of the exported report (e.g. https://myStorage.blob.core.windows.net/VaScans/scans/serverName/databaseName/scan_scanId.xlsx).
+
+## SqlPoolVulnerabilityAssessmentScansExport
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SqlPoolVulnerabilityAssessmentScanExportProperties](#sqlpoolvulnerabilityassessmentscanexportproperties): Resource properties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## SsisEnvironmentReference
+### Properties
+* **environmentFolderName**: string: Environment folder name.
+* **environmentName**: string: Environment name.
+* **id**: int: Environment reference id.
+* **referenceType**: string: Reference type
+
+## SsisObjectMetadata
+* **Discriminator**: type
+
+### Base Properties
+* **description**: string: Metadata description.
+* **id**: int: Metadata id.
+* **name**: string: Metadata name.
+
+### SsisEnvironment
+#### Properties
+* **folderId**: int: Folder id which contains environment.
+* **type**: 'Environment' (Required): Type of metadata.
+* **variables**: [SsisVariable](#ssisvariable)[]: Variable in environment
+
+### SsisFolder
+#### Properties
+* **type**: 'Folder' (Required): Type of metadata.
+
+### SsisPackage
+#### Properties
+* **folderId**: int: Folder id which contains package.
+* **parameters**: [SsisParameter](#ssisparameter)[]: Parameters in package
+* **projectId**: int: Project id which contains package.
+* **projectVersion**: int: Project version which contains package.
+* **type**: 'Package' (Required): Type of metadata.
+
+### SsisProject
+#### Properties
+* **environmentRefs**: [SsisEnvironmentReference](#ssisenvironmentreference)[]: Environment reference in project
+* **folderId**: int: Folder id which contains project.
+* **parameters**: [SsisParameter](#ssisparameter)[]: Parameters in project
+* **type**: 'Project' (Required): Type of metadata.
+* **version**: int: Project version.
+
+
+## SsisObjectMetadataListResponse
+### Properties
+* **nextLink**: string: The link to the next page of results, if any remaining results exist.
+* **value**: [SsisObjectMetadata](#ssisobjectmetadata)[]: List of SSIS object metadata.
+
+## SsisObjectMetadataStatusResponse
+### Properties
+* **error**: string: The operation error message.
+* **name**: string: The operation name.
+* **properties**: string: The operation properties.
+* **status**: string: The status of the operation.
+
+## SsisParameter
+### Properties
+* **dataType**: string: Parameter type.
+* **defaultValue**: string: Default value of parameter.
+* **description**: string: Parameter description.
+* **designDefaultValue**: string: Design default value of parameter.
+* **id**: int: Parameter id.
+* **name**: string: Parameter name.
+* **required**: bool: Whether parameter is required.
+* **sensitive**: bool: Whether parameter is sensitive.
+* **sensitiveDefaultValue**: string: Default sensitive value of parameter.
+* **valueSet**: bool: Parameter value set.
+* **valueType**: string: Parameter value type.
+* **variable**: string: Parameter reference variable.
+
+## SsisVariable
+### Properties
+* **dataType**: string: Variable type.
+* **description**: string: Variable description.
+* **id**: int: Variable id.
+* **name**: string: Variable name.
+* **sensitive**: bool: Whether variable is sensitive.
+* **sensitiveValue**: string: Variable sensitive value.
+* **value**: string: Variable value.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

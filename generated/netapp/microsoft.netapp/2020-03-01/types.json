@@ -989,5 +989,167 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceNameAvailability",
+    "properties": {
+      "isAvailable": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "<code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "<code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFilePathAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeRevert",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the snapshot"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizeRequest",
+    "properties": {
+      "remoteVolumeResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the remote volume"
+      }
+    }
   }
 ]

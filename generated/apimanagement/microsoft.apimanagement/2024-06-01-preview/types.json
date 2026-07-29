@@ -14145,6 +14145,57 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AuthorizationConfirmConsentCodeRequestContract",
+    "properties": {
+      "consentCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The consent code from the authorization server after authorizing and consenting."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationLoginRequestContract",
+    "properties": {
+      "postLoginRedirectUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The redirect URL after login has completed."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationLoginResponseContract",
+    "properties": {
+      "loginLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The login link"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLoginLinks",
+    "resourceType": "Microsoft.ApiManagement/service/authorizationProviders/authorizations",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1029"
+    },
+    "input": {
+      "$ref": "#/1028"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AuthorizationServerSecretsContract",
     "properties": {
       "clientSecret": {
@@ -14176,7 +14227,1185 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationServers",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1027"
+      "$ref": "#/1031"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1034"
+        },
+        "flags": 0,
+        "description": "Certificate properties details."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateContractProperties",
+    "properties": {
+      "subject": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subject attribute of the certificate."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Thumbprint of the certificate."
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      },
+      "keyVault": {
+        "type": {
+          "$ref": "#/1035"
+        },
+        "flags": 0,
+        "description": "KeyVault location details of the certificate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultContractProperties",
+    "properties": {
+      "lastStatus": {
+        "type": {
+          "$ref": "#/383"
+        },
+        "flags": 0,
+        "description": "Last time sync and refresh status of secret from key vault."
+      },
+      "secretIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires API Management service to be configured with aka.ms/apimmsi"
+      },
+      "identityClientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSecret",
+    "resourceType": "Microsoft.ApiManagement/service/certificates",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1033"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckRequest",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/1038"
+        },
+        "flags": 1,
+        "description": "Definitions about the connectivity check origin."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/1039"
+        },
+        "flags": 1,
+        "description": "The connectivity check operation destination."
+      },
+      "preferredIPVersion": {
+        "type": {
+          "$ref": "#/1041"
+        },
+        "flags": 0,
+        "description": "The IP version to be used. Only IPv4 is supported for now."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/1045"
+        },
+        "flags": 0,
+        "description": "The request's protocol. Specific protocol configuration can be available based on this selection. The specified destination address must be coherent with this value."
+      },
+      "protocolConfiguration": {
+        "type": {
+          "$ref": "#/1046"
+        },
+        "flags": 0,
+        "description": "Protocol-specific configuration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckRequestSource",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The API Management service region from where to start the connectivity check operation."
+      },
+      "instance": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The particular VMSS instance from which to fire the request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckRequestDestination",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Destination address. Can either be an IP address or a FQDN."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "Destination port."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IPv4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1040"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HTTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HTTPS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
+      },
+      {
+        "$ref": "#/1044"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckRequestProtocolConfiguration",
+    "properties": {
+      "HTTPConfiguration": {
+        "type": {
+          "$ref": "#/1047"
+        },
+        "flags": 0,
+        "description": "Configuration for HTTP or HTTPS requests."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckRequestProtocolConfigurationHttpConfiguration",
+    "properties": {
+      "method": {
+        "type": {
+          "$ref": "#/1050"
+        },
+        "flags": 0,
+        "description": "The HTTP method to be used."
+      },
+      "validStatusCodes": {
+        "type": {
+          "$ref": "#/1051"
+        },
+        "flags": 0,
+        "description": "List of HTTP status codes considered valid for the request response."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/1053"
+        },
+        "flags": 0,
+        "description": "List of headers to be included in the request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GET"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "POST"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1048"
+      },
+      {
+        "$ref": "#/1049"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpHeader",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Header name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Header value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1052"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityCheckResponse",
+    "properties": {
+      "hops": {
+        "type": {
+          "$ref": "#/1078"
+        },
+        "flags": 2,
+        "description": "List of hops between the source and the destination."
+      },
+      "connectionStatus": {
+        "type": {
+          "$ref": "#/1083"
+        },
+        "flags": 2,
+        "description": "The connection status."
+      },
+      "avgLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Average latency in milliseconds."
+      },
+      "minLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Minimum latency in milliseconds."
+      },
+      "maxLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Maximum latency in milliseconds."
+      },
+      "probesSent": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Total number of probes sent."
+      },
+      "probesFailed": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Number of failed probes."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityHop",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the hop."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the hop."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The IP address of the hop."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the resource corresponding to this hop."
+      },
+      "nextHopIds": {
+        "type": {
+          "$ref": "#/1056"
+        },
+        "flags": 2,
+        "description": "List of next hop identifiers."
+      },
+      "issues": {
+        "type": {
+          "$ref": "#/1077"
+        },
+        "flags": 2,
+        "description": "List of issues."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityIssue",
+    "properties": {
+      "origin": {
+        "type": {
+          "$ref": "#/1061"
+        },
+        "flags": 2,
+        "description": "The origin of the issue."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/1064"
+        },
+        "flags": 2,
+        "description": "The severity of the issue."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1074"
+        },
+        "flags": 2,
+        "description": "The type of issue."
+      },
+      "context": {
+        "type": {
+          "$ref": "#/1076"
+        },
+        "flags": 2,
+        "description": "Provides additional context on the issue."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1058"
+      },
+      {
+        "$ref": "#/1059"
+      },
+      {
+        "$ref": "#/1060"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1062"
+      },
+      {
+        "$ref": "#/1063"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AgentStopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GuestFirewall"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SocketBind"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NetworkSecurityRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserDefinedRoute"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PortThrottled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1065"
+      },
+      {
+        "$ref": "#/1066"
+      },
+      {
+        "$ref": "#/1067"
+      },
+      {
+        "$ref": "#/1068"
+      },
+      {
+        "$ref": "#/1069"
+      },
+      {
+        "$ref": "#/1070"
+      },
+      {
+        "$ref": "#/1071"
+      },
+      {
+        "$ref": "#/1072"
+      },
+      {
+        "$ref": "#/1073"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IssueContext",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1075"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1057"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1055"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1079"
+      },
+      {
+        "$ref": "#/1080"
+      },
+      {
+        "$ref": "#/1081"
+      },
+      {
+        "$ref": "#/1082"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connectivityCheck",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1054"
+    },
+    "input": {
+      "$ref": "#/1037"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceBackupRestoreParameters",
+    "properties": {
+      "storageAccount": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Azure storage account (used to place/retrieve the backup)."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the blob container (used to place/retrieve the backup)."
+      },
+      "backupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the backup file to create/retrieve."
+      },
+      "accessType": {
+        "type": {
+          "$ref": "#/1089"
+        },
+        "flags": 0,
+        "description": "The type of access to be used for the storage account."
+      },
+      "accessKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Storage account access key. Required only if `accessType` is set to `AccessKey`."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Client ID of user assigned managed identity. Required only if `accessType` is set to `UserAssignedManagedIdentity`."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssignedManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssignedManagedIdentity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1086"
+      },
+      {
+        "$ref": "#/1087"
+      },
+      {
+        "$ref": "#/1088"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 1,
+        "description": "Properties of the API Management service."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/431"
+        },
+        "flags": 1,
+        "description": "SKU properties of the API Management service."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 0,
+        "description": "Managed service identity of the Api Management service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ETag of the resource."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/1091"
+        },
+        "flags": 0,
+        "description": "A list of availability zones denoting where the resource needs to come from."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type for API Management resource is set to Microsoft.ApiManagement."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1092"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApimResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1090"
+    },
+    "input": {
+      "$ref": "#/1085"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1090"
+    },
+    "input": {
+      "$ref": "#/1085"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateToStv2Contract",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/1098"
+        },
+        "flags": 0,
+        "description": "Mode of Migration to stv2. Default is PreserveIp."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreserveIp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NewIP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1096"
+      },
+      {
+        "$ref": "#/1097"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToStv2",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1090"
+    },
+    "input": {
+      "$ref": "#/1095"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceGetSsoTokenResult",
+    "properties": {
+      "redirectUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Redirect URL to the Publisher Portal containing the SSO token."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getssotoken",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1100"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceApplyNetworkConfigurationParameters",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Location of the Api Management service to update for a multi-region service. For a service deployed in a single region, this parameter is not required."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applynetworkconfigurationupdates",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1090"
+    },
+    "input": {
+      "$ref": "#/1102"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1105"
+        },
+        "flags": 0,
+        "description": "Properties of the Operation Contract."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultContractProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Operation result identifier."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/1110"
+        },
+        "flags": 0,
+        "description": "Status of an async operation."
+      },
+      "started": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Last update time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      },
+      "resultInfo": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional result info."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1111"
+        },
+        "flags": 0,
+        "description": "Error Body Contract"
+      },
+      "actionLog": {
+        "type": {
+          "$ref": "#/1115"
+        },
+        "flags": 2,
+        "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1106"
+      },
+      {
+        "$ref": "#/1107"
+      },
+      {
+        "$ref": "#/1108"
+      },
+      {
+        "$ref": "#/1109"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorResponseBody",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service-defined error code. This code serves as a sub-status for the HTTP error code specified in the response."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable representation of the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/1113"
+        },
+        "flags": 0,
+        "description": "The list of invalid fields send in request, in case of validation error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorFieldContract",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property level error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable representation of property-level error."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1112"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultLogItemContract",
+    "properties": {
+      "objectType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of entity contract."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Action like create/update/delete."
+      },
+      "objectKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier of the entity being created/updated/deleted."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1114"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validatePolicies",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1104"
     }
   },
   {
@@ -14205,7 +15434,71 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1029"
+      "$ref": "#/1117"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayTokenRequestContract",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/1122"
+        },
+        "flags": 1,
+        "description": "The Key to be used to generate gateway token."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1120"
+      },
+      {
+        "$ref": "#/1121"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayTokenContract",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Shared Access Authentication token value for the Gateway."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateToken",
+    "resourceType": "Microsoft.ApiManagement/service/gateways",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1123"
+    },
+    "input": {
+      "$ref": "#/1119"
     }
   },
   {
@@ -14221,7 +15514,7 @@
       },
       "purposes": {
         "type": {
-          "$ref": "#/1034"
+          "$ref": "#/1128"
         },
         "flags": 1,
         "description": "Purposes of debug credential."
@@ -14243,7 +15536,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1032"
+        "$ref": "#/1126"
       },
       {
         "$ref": "#/2"
@@ -14253,7 +15546,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1033"
+      "$ref": "#/1127"
     }
   },
   {
@@ -14275,10 +15568,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1035"
+      "$ref": "#/1129"
     },
     "input": {
-      "$ref": "#/1031"
+      "$ref": "#/1125"
     }
   },
   {
@@ -14308,10 +15601,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1038"
+      "$ref": "#/1132"
     },
     "input": {
-      "$ref": "#/1037"
+      "$ref": "#/1131"
     }
   },
   {
@@ -14333,7 +15626,7 @@
     "resourceType": "Microsoft.ApiManagement/service/identityProviders",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1040"
+      "$ref": "#/1134"
     }
   },
   {
@@ -14355,7 +15648,105 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1136"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamedValueContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1139"
+        },
+        "flags": 0,
+        "description": "NamedValue entity contract properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamedValueContractProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/538"
+        },
+        "flags": 1,
+        "description": "Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/622"
+        },
+        "flags": 0,
+        "description": "Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value."
+      },
+      "keyVault": {
+        "type": {
+          "$ref": "#/1035"
+        },
+        "flags": 0,
+        "description": "KeyVault location details of the namedValue."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The provisioning state"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1140"
+        },
+        "flags": 0,
+        "description": "Optional tags that when provided can be used to filter the NamedValue list."
+      },
+      "secret": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Determines whether the value is a secret and should be encrypted or not. Default value is false."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    },
+    "maxLength": 32
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSecret",
+    "resourceType": "Microsoft.ApiManagement/service/namedValues",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1138"
     }
   },
   {
@@ -14364,7 +15755,7 @@
     "resourceType": "Microsoft.ApiManagement/service/openidConnectProviders",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1040"
+      "$ref": "#/1134"
     }
   },
   {
@@ -14373,7 +15764,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1047"
+          "$ref": "#/1145"
         },
         "flags": 0,
         "description": "A collection of resources."
@@ -14424,7 +15815,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1046"
+      "$ref": "#/1144"
     }
   },
   {
@@ -14433,7 +15824,7 @@
     "resourceType": "Microsoft.ApiManagement/service/policyFragments",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1045"
+      "$ref": "#/1143"
     }
   },
   {
@@ -14455,7 +15846,7 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1049"
+      "$ref": "#/1147"
     }
   },
   {
@@ -14484,7 +15875,7 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1051"
+      "$ref": "#/1149"
     }
   },
   {
@@ -14534,7 +15925,217 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1053"
+      "$ref": "#/1151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeployConfigurationParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1154"
+        },
+        "flags": 0,
+        "description": "Deploy Configuration Parameter contract properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeployConfigurationParameterProperties",
+    "properties": {
+      "branch": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Git branch from which the configuration is to be deployed to the configuration database."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "The value enforcing deleting subscriptions to products that are deleted in this update."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deploy",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1104"
+    },
+    "input": {
+      "$ref": "#/1153"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveConfigurationParameter",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1157"
+        },
+        "flags": 0,
+        "description": "Properties of the Save Configuration Parameters."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveConfigurationParameterProperties",
+    "properties": {
+      "branch": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Git branch in which to commit the current configuration snapshot."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "The value if true, the current configuration database is committed to the Git repository, even if the Git repository has newer changes that would be overwritten."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "save",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1104"
+    },
+    "input": {
+      "$ref": "#/1156"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1104"
+    },
+    "input": {
+      "$ref": "#/1153"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateSsoUrlResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Redirect Url containing the SSO URL value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSsoUrl",
+    "resourceType": "Microsoft.ApiManagement/service/users",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1160"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserTokenParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1163"
+        },
+        "flags": 0,
+        "description": "User Token Parameter contract properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserTokenParameterProperties",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/1166"
+        },
+        "flags": 1,
+        "description": "The Key to be used to generate token for user."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1164"
+      },
+      {
+        "$ref": "#/1165"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserTokenResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Shared Access Authorization token for the User."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "token",
+    "resourceType": "Microsoft.ApiManagement/service/users",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1167"
+    },
+    "input": {
+      "$ref": "#/1162"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSecret",
+    "resourceType": "Microsoft.ApiManagement/service/workspaces/certificates",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1033"
     }
   },
   {
@@ -14543,7 +16144,16 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/namedValues",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1136"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSecret",
+    "resourceType": "Microsoft.ApiManagement/service/workspaces/namedValues",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/1138"
     }
   },
   {
@@ -14552,7 +16162,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/policyFragments",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1045"
+      "$ref": "#/1143"
     }
   },
   {
@@ -14561,7 +16171,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/subscriptions",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/1051"
+      "$ref": "#/1149"
     }
   }
 ]

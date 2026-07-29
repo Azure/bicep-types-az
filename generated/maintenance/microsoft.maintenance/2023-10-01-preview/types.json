@@ -844,5 +844,27 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledEventsApproveResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Successfully Approved"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledge",
+    "resourceType": "Microsoft.Maintenance/scheduledevents",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/66"
+    }
   }
 ]

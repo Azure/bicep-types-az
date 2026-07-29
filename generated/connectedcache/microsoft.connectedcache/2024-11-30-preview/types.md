@@ -52,6 +52,46 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ConnectedCache/ispCustomers/ispCacheNodes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBgpCidrs (Microsoft.ConnectedCache/ispCustomers/ispCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/ispCustomers/ispCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeBgpCidrDetails](#mcccachenodebgpcidrdetails)
+
+## Function getCacheNodeAutoUpdateHistory (Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeAutoUpdateHistory](#mcccachenodeautoupdatehistory)
+
+## Function getCacheNodeAutoUpdateHistory (Microsoft.ConnectedCache/ispCustomers/ispCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/ispCustomers/ispCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeAutoUpdateHistory](#mcccachenodeautoupdatehistory)
+
+## Function getCacheNodeInstallDetails (Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeInstallDetails](#mcccachenodeinstalldetails)
+
+## Function getCacheNodeInstallDetails (Microsoft.ConnectedCache/ispCustomers/ispCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/ispCustomers/ispCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeInstallDetails](#mcccachenodeinstalldetails)
+
+## Function getCacheNodeMccIssueDetailsHistory (Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeIssueHistory](#mcccachenodeissuehistory)
+
+## Function getCacheNodeMccIssueDetailsHistory (Microsoft.ConnectedCache/ispCustomers/ispCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/ispCustomers/ispCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeIssueHistory](#mcccachenodeissuehistory)
+
+## Function getCacheNodeTlsCertificateHistory (Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes@2024-11-30-preview)
+* **Resource**: Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes
+* **ApiVersion**: 2024-11-30-preview
+* **Output**: [MccCacheNodeTlsCertificateHistory](#mcccachenodetlscertificatehistory)
+
 ## AdditionalCacheNodeProperties
 ### Properties
 * **aggregatedStatusCode**: int (ReadOnly): Cache node resource aggregated status code.
@@ -123,6 +163,10 @@
 * **signupStatusCode**: int (ReadOnly): Customer resource signup status as integer code.
 * **signupStatusText**: string (ReadOnly): Customer resource signup status as string text.
 
+## BgpCidrsConfiguration
+### Properties
+* **bgpCidrs**: string[] (ReadOnly): Mcc cache node Bgp Cidr details.
+
 ## BgpConfiguration
 ### Properties
 * **asnToIpAddressMapping**: string: Asn to ip address mapping
@@ -189,6 +233,17 @@
 * **workerConnectionsLastUpdatedDateTime**: string (ReadOnly): Cache node resource last updated Mcc container deployment worker connection count timestamp.
 * **xCid**: string (ReadOnly): Cache node resource Azure XCid.
 
+## CacheNodeInstallProperties
+### Properties
+* **cacheNodeId**: string: Mcc cache node resource Id.
+* **customerId**: string: Mcc customer resource Id.
+* **driveConfiguration**: [CacheNodeDriveConfiguration](#cachenodedriveconfiguration)[]: Cache node resource drive configurations.
+* **primaryAccountKey**: string {sensitive} (ReadOnly): Mcc primary account key. Internal to Mcc.
+* **proxyUrlConfiguration**: [ProxyUrlConfiguration](#proxyurlconfiguration): proxyUrl configuration of the cache node
+* **registrationKey**: string {sensitive} (ReadOnly): Mcc Iot Central temporary device registration key, used once.
+* **secondaryAccountKey**: string {sensitive} (ReadOnly): Mcc secondary account key. Internal to Mcc.
+* **tlsCertificateProvisioningKey**: string {sensitive} (ReadOnly): Mcc Tls certificate provisioning key.
+
 ## CacheNodeProperty
 ### Properties
 * **additionalCacheNodeProperties**: [AdditionalCacheNodeProperties](#additionalcachenodeproperties): Mcc cache node resource additional properties.
@@ -245,6 +300,22 @@
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
 
+## MccCacheNodeAutoUpdateHistory
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MccCacheNodeAutoUpdateHistoryProperties](#mcccachenodeautoupdatehistoryproperties): Mcc cache node resource auto update history properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## MccCacheNodeAutoUpdateHistoryProperties
+### Properties
+* **autoUpdateHistory**: [MccCacheNodeAutoUpdateInfo](#mcccachenodeautoupdateinfo)[]: Cache node resource auto update history information.
+* **cacheNodeId**: string (ReadOnly): Mcc cache node resource Id.
+* **customerId**: string (ReadOnly): Mcc customer resource Id.
+
 ## MccCacheNodeAutoUpdateInfo
 ### Properties
 * **autoUpdateLastAppliedStatus**: int (ReadOnly): Auto update last applied status.
@@ -265,6 +336,42 @@
 * **timeToGoLiveDateTime**: string (ReadOnly): Auto update time to go live date time.
 * **updatedRegistryDateTimeUtc**: string (ReadOnly): Auto update entity last updated datetime.
 
+## MccCacheNodeBgpCidrDetails
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [BgpCidrsConfiguration](#bgpcidrsconfiguration): Mcc cache node resource Bgp Cidr properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## MccCacheNodeInstallDetails
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CacheNodeInstallProperties](#cachenodeinstallproperties): Mcc cache node resource install script details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## MccCacheNodeIssueHistory
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MccCacheNodeIssueHistoryProperties](#mcccachenodeissuehistoryproperties): Mcc cache node resource issue history properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## MccCacheNodeIssueHistoryProperties
+### Properties
+* **cacheNodeId**: string (ReadOnly): Mcc cache node resource Id.
+* **customerId**: string (ReadOnly): Mcc customer resource Id.
+* **mccIssueHistory**: [MccIssue](#mccissue)[]: Cache node resource issue details history.
+
 ## MccCacheNodeTlsCertificate
 ### Properties
 * **actionRequired**: string (ReadOnly): Mcc cache node Tls certificate status.
@@ -274,6 +381,31 @@
 * **subject**: string (ReadOnly): Mcc cache node Tls certificate subject name.
 * **subjectAltName**: string (ReadOnly): Mcc cache node Tls certificate subject alternate name.
 * **thumbprint**: string (ReadOnly): Mcc cache node Tls certificate thumbprint.
+
+## MccCacheNodeTlsCertificateHistory
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MccCacheNodeTlsCertificateProperties](#mcccachenodetlscertificateproperties): Mcc cache node resource Tls certificate details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## MccCacheNodeTlsCertificateProperties
+### Properties
+* **cacheNodeId**: string (ReadOnly): Mcc cache node resource Id.
+* **customerId**: string (ReadOnly): Mcc customer resource Id.
+* **tlsCertificateHistory**: [MccCacheNodeTlsCertificate](#mcccachenodetlscertificate)[]: Cache node resource tls certificate history details.
+
+## MccIssue
+### Properties
+* **detailString**: string (ReadOnly): Mcc cache node issue detail string.
+* **helpLink**: string (ReadOnly): Mcc cache node issue related help link.
+* **issueEndDate**: string (ReadOnly): Mcc cache node issue end date.
+* **issueStartDate**: string (ReadOnly): Mcc cache node issue start date.
+* **mccIssueType**: string (ReadOnly): Mcc cache node issue type.
+* **toastString**: string (ReadOnly): Mcc cache node issues toastString.
 
 ## ProxyUrlConfiguration
 ### Properties
@@ -287,6 +419,31 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

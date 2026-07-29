@@ -173,6 +173,52 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): The virtual machine zones.
 
+## Function beginGetAccess (Microsoft.Compute/disks@2018-04-01)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2018-04-01
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function beginGetAccess (Microsoft.Compute/snapshots@2018-04-01)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2018-04-01
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function capture (Microsoft.Compute/virtualMachines@2018-04-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-04-01
+* **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
+* **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
+
+## Function getRequestRateByInterval (Microsoft.Compute/locations/logAnalytics@2018-04-01)
+* **Resource**: Microsoft.Compute/locations/logAnalytics
+* **ApiVersion**: 2018-04-01
+* **Input**: [RequestRateByIntervalInput](#requestratebyintervalinput)
+* **Output**: [LogAnalyticsOperationResult](#loganalyticsoperationresult)
+
+## Function getThrottledRequests (Microsoft.Compute/locations/logAnalytics@2018-04-01)
+* **Resource**: Microsoft.Compute/locations/logAnalytics
+* **ApiVersion**: 2018-04-01
+* **Input**: [ThrottledRequestsInput](#throttledrequestsinput)
+* **Output**: [LogAnalyticsOperationResult](#loganalyticsoperationresult)
+
+## Function runCommand (Microsoft.Compute/virtualMachines@2018-04-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-04-01
+* **Input**: [RunCommandInput](#runcommandinput)
+* **Output**: [RunCommandResult](#runcommandresult)
+
+## Function runCommand (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-04-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-04-01
+* **Input**: [RunCommandInput](#runcommandinput)
+* **Output**: [RunCommandResult](#runcommandresult)
+
+## AccessUri
+### Properties
+* **accessSAS**: string (ReadOnly): A SAS uri for accessing a disk.
+
 ## AdditionalUnattendContent
 ### Properties
 * **componentName**: 'Microsoft-Windows-Shell-Setup': The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
@@ -281,6 +327,11 @@
 * **enabled**: bool: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of the key encryption key
 
+## GrantAccessData
+### Properties
+* **access**: 'None' | 'Read' | string (Required)
+* **durationInSeconds**: int (Required): Time duration in seconds until the SAS access expires.
+
 ## HardwareProfile
 ### Properties
 * **vmSize**: 'Basic_A0' | 'Basic_A1' | 'Basic_A2' | 'Basic_A3' | 'Basic_A4' | 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A1_v2' | 'Standard_A2' | 'Standard_A2_v2' | 'Standard_A2m_v2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A4_v2' | 'Standard_A4m_v2' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A8_v2' | 'Standard_A8m_v2' | 'Standard_A9' | 'Standard_B1ms' | 'Standard_B1s' | 'Standard_B2ms' | 'Standard_B2s' | 'Standard_B4ms' | 'Standard_B8ms' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D15_v2' | 'Standard_D16_v3' | 'Standard_D16s_v3' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D2_v3' | 'Standard_D2s_v3' | 'Standard_D3' | 'Standard_D32_v3' | 'Standard_D32s_v3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D4_v3' | 'Standard_D4s_v3' | 'Standard_D5_v2' | 'Standard_D64_v3' | 'Standard_D64s_v3' | 'Standard_D8_v3' | 'Standard_D8s_v3' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS11_v2' | 'Standard_DS12' | 'Standard_DS12_v2' | 'Standard_DS13' | 'Standard_DS13-2_v2' | 'Standard_DS13-4_v2' | 'Standard_DS13_v2' | 'Standard_DS14' | 'Standard_DS14-4_v2' | 'Standard_DS14-8_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS1_v2' | 'Standard_DS2' | 'Standard_DS2_v2' | 'Standard_DS3' | 'Standard_DS3_v2' | 'Standard_DS4' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16_v3' | 'Standard_E16s_v3' | 'Standard_E2_v3' | 'Standard_E2s_v3' | 'Standard_E32-16_v3' | 'Standard_E32-8s_v3' | 'Standard_E32_v3' | 'Standard_E32s_v3' | 'Standard_E4_v3' | 'Standard_E4s_v3' | 'Standard_E64-16s_v3' | 'Standard_E64-32s_v3' | 'Standard_E64_v3' | 'Standard_E64s_v3' | 'Standard_E8_v3' | 'Standard_E8s_v3' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F16s_v2' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F2s_v2' | 'Standard_F32s_v2' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F4s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8' | 'Standard_F8s' | 'Standard_F8s_v2' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS4-4' | 'Standard_GS4-8' | 'Standard_GS5' | 'Standard_GS5-16' | 'Standard_GS5-8' | 'Standard_H16' | 'Standard_H16m' | 'Standard_H16mr' | 'Standard_H16r' | 'Standard_H8' | 'Standard_H8m' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_M128-32ms' | 'Standard_M128-64ms' | 'Standard_M128ms' | 'Standard_M128s' | 'Standard_M64-16ms' | 'Standard_M64-32ms' | 'Standard_M64ms' | 'Standard_M64s' | 'Standard_NC12' | 'Standard_NC12s_v2' | 'Standard_NC12s_v3' | 'Standard_NC24' | 'Standard_NC24r' | 'Standard_NC24rs_v2' | 'Standard_NC24rs_v3' | 'Standard_NC24s_v2' | 'Standard_NC24s_v3' | 'Standard_NC6' | 'Standard_NC6s_v2' | 'Standard_NC6s_v3' | 'Standard_ND12s' | 'Standard_ND24rs' | 'Standard_ND24s' | 'Standard_ND6s' | 'Standard_NV12' | 'Standard_NV24' | 'Standard_NV6' | string: Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region](https://docs.microsoft.com/rest/api/compute/virtualmachinesizes/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes)
@@ -369,6 +420,14 @@
 * **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
 * **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS.
 
+## LogAnalyticsOperationResult
+### Properties
+* **properties**: [LogAnalyticsOutput](#loganalyticsoutput) (ReadOnly): LogAnalyticsOutput
+
+## LogAnalyticsOutput
+### Properties
+* **output**: string (ReadOnly): Output file Uri path to blob container.
+
 ## MaintenanceRedeployStatus
 ### Properties
 * **isCustomerInitiatedMaintenanceAllowed**: bool: True, if customer is allowed to perform Maintenance.
@@ -443,6 +502,16 @@
 * **name**: string (Required): The plan ID.
 * **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
 * **publisher**: string (Required): The publisher ID.
+
+## RequestRateByIntervalInput
+### Properties
+* **blobContainerSasUri**: string (Required): SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+* **fromTime**: string (Required): From time of the query
+* **groupByOperationName**: bool: Group query result by Operation Name.
+* **groupByResourceName**: bool: Group query result by Resource Name.
+* **groupByThrottlePolicy**: bool: Group query result by Throttle Policy applied.
+* **intervalLength**: 'FiveMins' | 'SixtyMins' | 'ThirtyMins' | 'ThreeMins' (Required): Interval value in minutes used to create LogAnalytics call rate logs.
+* **toTime**: string (Required): To time of the query
 
 ## ResourceTags
 ### Properties
@@ -532,6 +601,21 @@
 * **progress**: [RollingUpgradeProgressInfo](#rollingupgradeprogressinfo) (ReadOnly): Information about the number of virtual machine instances in each upgrade state.
 * **runningStatus**: [RollingUpgradeRunningStatus](#rollingupgraderunningstatus) (ReadOnly): Information about the current running state of the overall upgrade.
 
+## RunCommandInput
+### Properties
+* **commandId**: string (Required): The run command id.
+* **parameters**: [RunCommandInputParameter](#runcommandinputparameter)[]: The run command parameters.
+* **script**: string[]: Optional. The script to be executed.  When this value is given, the given script will override the default script of the command.
+
+## RunCommandInputParameter
+### Properties
+* **name**: string (Required): The run command parameter name.
+* **value**: string (Required): The run command parameter value.
+
+## RunCommandResult
+### Properties
+* **value**: [InstanceViewStatus](#instanceviewstatus)[]: Run command operation response.
+
 ## Sku
 ### Properties
 * **capacity**: int: Specifies the number of virtual machines in the scale set.
@@ -566,6 +650,15 @@
 ### Properties
 * **id**: string: Resource Id
 
+## ThrottledRequestsInput
+### Properties
+* **blobContainerSasUri**: string (Required): SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+* **fromTime**: string (Required): From time of the query
+* **groupByOperationName**: bool: Group query result by Operation Name.
+* **groupByResourceName**: bool: Group query result by Resource Name.
+* **groupByThrottlePolicy**: bool: Group query result by Throttle Policy applied.
+* **toTime**: string (Required): To time of the query
+
 ## UpgradePolicy
 ### Properties
 * **automaticOSUpgrade**: bool: Whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
@@ -592,6 +685,20 @@
 * **extensionHandlers**: [VirtualMachineExtensionHandlerInstanceView](#virtualmachineextensionhandlerinstanceview)[]: The virtual machine extension handler instance view.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
 * **vmAgentVersion**: string: The VM Agent full version.
+
+## VirtualMachineCaptureParameters
+### Properties
+* **destinationContainerName**: string (Required): The destination container name.
+* **overwriteVhds**: bool (Required): Specifies whether to overwrite the destination virtual hard disk, in case of conflict.
+* **vhdPrefix**: string (Required): The captured virtual hard disk's name prefix.
+
+## VirtualMachineCaptureResult
+### Properties
+* **$schema**: string (ReadOnly): the schema of the captured virtual machine
+* **contentVersion**: string (ReadOnly): the version of the content
+* **id**: string: Resource Id
+* **parameters**: any (ReadOnly): parameters of the captured virtual machine
+* **resources**: any[] (ReadOnly): a list of resource items of the captured virtual machine
 
 ## VirtualMachineExtension
 ### Properties

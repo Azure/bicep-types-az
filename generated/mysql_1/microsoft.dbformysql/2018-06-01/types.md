@@ -70,6 +70,11 @@
 * **properties**: [WaitStatisticProperties](#waitstatisticproperties) (ReadOnly): The properties of a wait statistic.
 * **type**: 'Microsoft.DBforMySQL/servers/waitStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function resetQueryPerformanceInsightData (Microsoft.DBforMySQL/servers@2018-06-01)
+* **Resource**: Microsoft.DBforMySQL/servers
+* **ApiVersion**: 2018-06-01
+* **Output**: [QueryPerformanceInsightResetDataResult](#queryperformanceinsightresetdataresult)
+
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
@@ -90,6 +95,11 @@
 * **actionsRequired**: string (ReadOnly): The actions required for private link service connection.
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
+
+## QueryPerformanceInsightResetDataResult
+### Properties
+* **message**: string: operation message.
+* **status**: 'Failed' | 'Succeeded' | string: Indicates result of the operation.
 
 ## QueryStatisticProperties
 ### Properties

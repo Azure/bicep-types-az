@@ -1168,6 +1168,51 @@
   },
   {
     "$type": "ObjectType",
+    "name": "LinkNotificationHubParameters",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource ID of the notification hub"
+      },
+      "connectionString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Connection string for the notification hub"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedNotificationHub",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource ID of the notification hub"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkNotificationHub",
+    "resourceType": "Microsoft.Communication/communicationServices",
+    "apiVersion": "2023-03-31",
+    "output": {
+      "$ref": "#/99"
+    },
+    "input": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CommunicationServiceKeys",
     "properties": {
       "primaryKey": {
@@ -1206,7 +1251,51 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2023-03-31",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Communication/communicationServices",
+    "apiVersion": "2023-03-31",
+    "output": {
+      "$ref": "#/101"
+    },
+    "input": {
+      "$ref": "#/103"
     }
   }
 ]

@@ -4030,5 +4030,196 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetFileUploadURLParameters",
+    "properties": {
+      "blobName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The custom file name of the uploaded blob."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileUploadURLResponse",
+    "properties": {
+      "uploadUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL used for uploading the package."
+      },
+      "blobPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFileUploadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/335"
+    },
+    "input": {
+      "$ref": "#/334"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PackageCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "applicationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Application name to verify."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Version name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "fully qualified resource type which includes provider namespace."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Value indicating the availability of the name: true if the name is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/341"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a name. Required if nameAvailable == false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the name. Required if nameAvailable == false."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/340"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPackageNameAvailability",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/338"
+    },
+    "input": {
+      "$ref": "#/337"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadURLResponse",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The download URL."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Expiry date of the download URL."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVideoDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/343"
+    }
   }
 ]

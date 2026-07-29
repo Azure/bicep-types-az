@@ -155,5 +155,92 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PricesheetDownloadResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "A secure URL that can be used to download a an entity until the URL expires."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      },
+      "expiryTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time in UTC at which this download URL will expire."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Consumption/billingAccounts/invoices/pricesheet",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Consumption/billingAccounts/billingProfiles/pricesheet",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/11"
+    }
   }
 ]

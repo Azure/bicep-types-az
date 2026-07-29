@@ -7262,5 +7262,678 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigTemplateVersionWithUpdateType",
+    "properties": {
+      "updateType": {
+        "type": {
+          "$ref": "#/576"
+        },
+        "flags": 0,
+        "description": "Update type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/577"
+        },
+        "flags": 0,
+        "description": "Version to create"
+      },
+      "configTemplateVersion": {
+        "type": {
+          "$ref": "#/578"
+        },
+        "flags": 1,
+        "description": "Config Template Version"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Major"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/573"
+      },
+      {
+        "$ref": "#/574"
+      },
+      {
+        "$ref": "#/575"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigTemplateVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/500"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createVersion",
+    "resourceType": "Microsoft.Edge/configTemplates",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/578"
+    },
+    "input": {
+      "$ref": "#/572"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VersionParameter",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Version of the Resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveVersionResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Status for remove version response"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeVersion",
+    "resourceType": "Microsoft.Edge/configTemplates",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/581"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SchemaVersionWithUpdateType",
+    "properties": {
+      "updateType": {
+        "type": {
+          "$ref": "#/587"
+        },
+        "flags": 0,
+        "description": "Update type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/577"
+        },
+        "flags": 0,
+        "description": "Version to create"
+      },
+      "schemaVersion": {
+        "type": {
+          "$ref": "#/588"
+        },
+        "flags": 1,
+        "description": "Schema Version"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Major"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/584"
+      },
+      {
+        "$ref": "#/585"
+      },
+      {
+        "$ref": "#/586"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SchemaVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createVersion",
+    "resourceType": "Microsoft.Edge/schemas",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/588"
+    },
+    "input": {
+      "$ref": "#/583"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeVersion",
+    "resourceType": "Microsoft.Edge/schemas",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/581"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionTemplateVersionWithUpdateType",
+    "properties": {
+      "updateType": {
+        "type": {
+          "$ref": "#/595"
+        },
+        "flags": 0,
+        "description": "Update type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/577"
+        },
+        "flags": 0,
+        "description": "Version to create"
+      },
+      "solutionTemplateVersion": {
+        "type": {
+          "$ref": "#/596"
+        },
+        "flags": 1,
+        "description": "Solution Template Version"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Major"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/592"
+      },
+      {
+        "$ref": "#/593"
+      },
+      {
+        "$ref": "#/594"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionTemplateVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/524"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createVersion",
+    "resourceType": "Microsoft.Edge/solutionTemplates",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/596"
+    },
+    "input": {
+      "$ref": "#/591"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "extendedLocation": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The complex type of the extended location."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publishSolutionVersion",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/598"
+    },
+    "input": {
+      "$ref": "#/439"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionTemplateParameter",
+    "properties": {
+      "solutionTemplateVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Solution Template Version ARM Id"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 0,
+        "description": "Solution Instance Name"
+      },
+      "solutionDependencies": {
+        "type": {
+          "$ref": "#/603"
+        },
+        "flags": 0,
+        "description": "Solution Dependencies"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionDependencyParameter",
+    "properties": {
+      "solutionVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Solution Version Id"
+      },
+      "solutionTemplateId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Solution Template Id"
+      },
+      "solutionTemplateVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Solution Template Version"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 0,
+        "description": "Solution Instance Name"
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Target Id"
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/602"
+        },
+        "flags": 0,
+        "description": "Solution dependencies"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/601"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/601"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResolvedConfiguration",
+    "properties": {
+      "configuration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resolved Configuration as string"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolveConfiguration",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/604"
+    },
+    "input": {
+      "$ref": "#/600"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reviewSolutionVersion",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/598"
+    },
+    "input": {
+      "$ref": "#/600"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unstageSolutionVersion",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/598"
+    },
+    "input": {
+      "$ref": "#/439"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateExternalValidationStatusParameter",
+    "properties": {
+      "solutionVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Solution Version Id"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 0,
+        "description": "Error Details if any failure is there"
+      },
+      "externalValidationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "External validation id"
+      },
+      "validationStatus": {
+        "type": {
+          "$ref": "#/611"
+        },
+        "flags": 1,
+        "description": "Validation Status of external validation"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/609"
+      },
+      {
+        "$ref": "#/610"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateExternalValidationStatus",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2025-08-15-preview",
+    "output": {
+      "$ref": "#/598"
+    },
+    "input": {
+      "$ref": "#/608"
+    }
   }
 ]

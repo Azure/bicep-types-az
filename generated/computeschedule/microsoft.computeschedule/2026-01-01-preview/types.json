@@ -1099,5 +1099,1662 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOperationsRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The list of operation ids to cancel operations on"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOperationsResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 1,
+        "description": "An array of resource operations that were successfully cancelled"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperation",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the resource involved in the operation, eg ArmId"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource level error code if it exists"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource level error details if they exist"
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Details of the operation performed on a resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationDetails",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation identifier for the unique operation"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the resource involved in the operation, eg ArmId"
+      },
+      "opType": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Type of operation performed on the resources"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Subscription id attached to the request"
+      },
+      "deadline": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Deadline for the operation"
+      },
+      "deadlineType": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Type of deadline of the operation"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 2,
+        "description": "Current state of the operation"
+      },
+      "timezone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Timezone for the operation"
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Timezone for the operation"
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Operation level errors if they exist"
+      },
+      "fallbackOperationInfo": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "Fallback operation details if a fallback was performed"
+      },
+      "completedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time the operation was complete if errors are null"
+      },
+      "retryPolicy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Retry policy the user can pass"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deallocate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hibernate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitiateAt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompleteBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingScheduling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingExecution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Executing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationError",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Code for the error eg 404, 500"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Detailed message about the error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FallbackOperationInfo",
+    "properties": {
+      "lastOpType": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The last operation type that was performed as a fallback"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The status of the fallback operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "The error code if the fallback operation failed"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deallocate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hibernate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesCancelOperations",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/105"
+    },
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteCreateRequest",
+    "properties": {
+      "resourceConfigParameters": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 1,
+        "description": "resource creation payload"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayload",
+    "properties": {
+      "baseProfile": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Virtual machine profile object that contains VM properties that are common across all VMs in this batch  (if you want to create 100 VMs in this request, and they all have same vmSize, then include vmSize in baseProfile)"
+      },
+      "resourceOverrides": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "Virtual machine profile array that contains VM properties that needs to be overridden for each VM in the batch (if you want to create 100 VMs, they all need a distinct computerName property, you pass computerNames for each VM in batch in this array), service will merge baseProfile with VM specific overrides and create a merged VMProfile."
+      },
+      "resourceCount": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "Number of VMs to be created"
+      },
+      "resourcePrefix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "if resourceOverrides doesn't contain \"name\", service will create name based of prefix and ResourceCount e.g. resourceprefix-0,resourceprefix-1.."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayloadBaseProfile",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayloadResourceOverridesItem",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the create request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the start request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0,
+        "description": "The results from the start request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesExecuteCreate",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/142"
+    },
+    "input": {
+      "$ref": "#/136"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteDeallocateRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Resources",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "The resource ids used for the request"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeallocateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the deallocate request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the deallocate request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "The results from the deallocate request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesExecuteDeallocate",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/148"
+    },
+    "input": {
+      "$ref": "#/145"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteDeleteRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "CorrelationId item"
+      },
+      "forceDeletion": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Forced delete resource item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the delete request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the start request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "The results from the start request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesExecuteDelete",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/152"
+    },
+    "input": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteHibernateRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HibernateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the Hibernate request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the Hibernate request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "The results from the Hibernate request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesExecuteHibernate",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/156"
+    },
+    "input": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteStartRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the start request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the start request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "The results from the start request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesExecuteStart",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationErrorsRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 1,
+        "description": "The list of operation ids to query errors of"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationErrorsResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 1,
+        "description": "An array of operationids and their corresponding errors if any"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationErrorsResult",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operationId identifying a vm operation"
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The creation time of the error result"
+      },
+      "activationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The activation time of a vm operation"
+      },
+      "completedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The completion time of the operation if the operation was completed"
+      },
+      "operationErrors": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 0,
+        "description": "A list of errors associated with the operationid"
+      },
+      "requestErrorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Request level error code"
+      },
+      "requestErrorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Request level error details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationErrorDetails",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The error code of the operation"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The error details of the operation"
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of the error occurence"
+      },
+      "timeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of the error occurence"
+      },
+      "azureOperationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The compute operationid of the Start/Deallocate/Hibernate request"
+      },
+      "crpOperationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The compute operationid of the Start/Deallocate/Hibernate request"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/167"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesGetOperationErrors",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/165"
+    },
+    "input": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationStatusRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 1,
+        "description": "The list of operation ids to get the status of"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationStatusResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 1,
+        "description": "An array of resource operations based on their operation ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesGetOperationStatus",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/173"
+    },
+    "input": {
+      "$ref": "#/171"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubmitDeallocateRequest",
+    "properties": {
+      "schedule": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 1,
+        "description": "The schedule for the request"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Schedule",
+    "properties": {
+      "deadline": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The deadline for the operation"
+      },
+      "deadLine": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The deadline for the operation"
+      },
+      "timezone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timezone for the operation"
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timezone for the operation"
+      },
+      "deadlineType": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 1,
+        "description": "The deadlinetype of the operation, this can either be InitiateAt or CompleteBy"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitiateAt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompleteBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesSubmitDeallocate",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/148"
+    },
+    "input": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubmitHibernateRequest",
+    "properties": {
+      "schedule": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 1,
+        "description": "The schedule for the request"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesSubmitHibernate",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/156"
+    },
+    "input": {
+      "$ref": "#/183"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubmitStartRequest",
+    "properties": {
+      "schedule": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 1,
+        "description": "The schedule for the request"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "The resources for the request"
+      },
+      "correlationid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "CorrelationId item"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesSubmitStart",
+    "resourceType": "Microsoft.ComputeSchedule/locations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceAttachRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 1,
+        "description": "List of resources to be attached/patched"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledActionResource",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The name of the resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The compute RP resource id of the resource in the scheduled actions scope."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of resource"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The ARM Id of the resource.\n\"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}\""
+      },
+      "notificationSettings": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "The desired notification settings for the specified resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationResponse",
+    "properties": {
+      "totalResources": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The total number of resources operated on"
+      },
+      "resourcesStatuses": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 1,
+        "description": "The resource status of for each resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceStatus",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The arm identifier of the resource"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 3,
+        "description": "The state the resource is currently on"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Errors encountered while trying to perform"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "attachResources",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/187"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOccurrenceRequest",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelNextOccurrence",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceDetachRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 1,
+        "description": "List of resources to be detached"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachResources",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/201"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcePatchRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 1,
+        "description": "The list of resources we watch to patch"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "patchResources",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/204"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Occurrence",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerManualOccurrence",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions/occurrences",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelayRequest",
+    "properties": {
+      "delay": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The exact time to delay the operations to"
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 1,
+        "description": "The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delay",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions/occurrences",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/210"
+    }
   }
 ]

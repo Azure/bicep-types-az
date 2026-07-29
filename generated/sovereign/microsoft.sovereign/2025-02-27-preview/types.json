@@ -1350,5 +1350,349 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateLandingZoneConfigurationCopyRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the duplicate landing zone configuration resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateLandingZoneConfigurationCopyResponse",
+    "properties": {
+      "copiedLandingZoneConfigurationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The ID of the duplicate landing zone configuration resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createCopy",
+    "resourceType": "Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations",
+    "apiVersion": "2025-02-27-preview",
+    "output": {
+      "$ref": "#/116"
+    },
+    "input": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateLandingZoneRequest",
+    "properties": {
+      "infrastructureAsCodeOutputOptions": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 1,
+        "description": "The export options available for code generation."
+      },
+      "existingManagementSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Existing 'Management' subscription ID to be linked with this deployment when reusing instead of creating a new subscription."
+      },
+      "existingIdentitySubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Existing 'Identity' subscription ID to be linked with this deployment when reusing instead of creating a new subscription."
+      },
+      "existingConnectivitySubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Existing 'Connectivity' subscription ID to be linked with this deployment when reusing instead of creating a new subscription."
+      },
+      "subscriptionBillingScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The complete resource ID of the billing scope linked to the EA, MCA, or MPA account where you want to create the subscription."
+      },
+      "existingTopLevelMgParentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional parent for the management group hierarchy, serving as an intermediate root management group parent if specified. If left empty, the default will be to deploy under the tenant root management group."
+      },
+      "deploymentPrefix": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "The prefix that will be added to all resources created by this deployment. Use between 2 and 5 characters, consisting only of letters, digits, '-', '.', or '_'. No other special characters are supported."
+      },
+      "deploymentSuffix": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The optional suffix that will be appended to all resources created by this deployment, maximum 5 characters."
+      },
+      "topLevelMgDisplayName": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 1,
+        "description": "The display name assigned to the top management group of the landing zone deployment hierarchy. It is recommended to use unique names for each landing zone deployment."
+      },
+      "deploymentLocation": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "The Azure region where the landing zone will be deployed. All Azure regions are supported."
+      },
+      "organization": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the organization or agency for which the landing zone is being deployed. This is optional."
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The environment where the landing zone is being deployed, such as ppe, prod, test, etc."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bicep"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ARM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 5,
+    "pattern": "^([a-zA-Z0-9-]*)$"
+  },
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 5
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 90
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^([a-zA-Z0-9]+)$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateLandingZoneResponse",
+    "properties": {
+      "topLevelMgDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The parent management group name of the landing zone deployment."
+      },
+      "landingZoneConfigurationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Landing zone configuration resource."
+      },
+      "generatedCodeUrl": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "The url to access the generated code."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "The storage account name to access the generated code."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "The storage account container to access the generated code."
+      },
+      "blobName": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "The storage account blob name to access the generated code."
+      },
+      "generatedArmTemplate": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "The generated code content in JSON string format."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateLandingZone",
+    "resourceType": "Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations",
+    "apiVersion": "2025-02-27-preview",
+    "output": {
+      "$ref": "#/126"
+    },
+    "input": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAuthoringStatusRequest",
+    "properties": {
+      "authoringStatus": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The authoring status value to be updated. Possible values include: 'Authoring', 'ReadyForUse' and 'Disabled'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Authoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyForUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAuthoringStatusResponse",
+    "properties": {
+      "landingZoneConfigurationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the landing zone configuration resource."
+      },
+      "authoringStatus": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 1,
+        "description": "The authoring status value to be updated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Authoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyForUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAuthoringStatus",
+    "resourceType": "Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations",
+    "apiVersion": "2025-02-27-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/129"
+    }
   }
 ]

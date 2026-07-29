@@ -244,5 +244,98 @@
     },
     "readableScopes": 16,
     "writableScopes": 16
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisableSerialConsoleResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisableSerialConsoleResultProperties",
+    "properties": {
+      "disabled": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Whether or not Serial Console is disabled."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableConsole",
+    "resourceType": "Microsoft.SerialConsole/consoleServices",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableSerialConsoleResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableSerialConsoleResultProperties",
+    "properties": {
+      "disabled": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Whether or not Serial Console is disabled."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableConsole",
+    "resourceType": "Microsoft.SerialConsole/consoleServices",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SerialPortConnectResult",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connection string to the serial port of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.SerialConsole/serialPorts",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/30"
+    }
   }
 ]

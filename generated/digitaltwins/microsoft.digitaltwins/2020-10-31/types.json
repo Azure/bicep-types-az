@@ -491,5 +491,93 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "The type of resource, for instance Microsoft.DigitalTwins/digitalTwinsInstances."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DigitalTwins/digitalTwinsInstances"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Specifies a Boolean value that indicates if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Message providing the reason why the given name is invalid."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DigitalTwins/locations",
+    "apiVersion": "2020-10-31",
+    "output": {
+      "$ref": "#/46"
+    },
+    "input": {
+      "$ref": "#/44"
+    }
   }
 ]

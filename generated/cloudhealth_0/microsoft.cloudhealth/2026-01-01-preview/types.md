@@ -69,6 +69,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CloudHealth/healthmodels/signaldefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getHistory (Microsoft.CloudHealth/healthmodels/entities@2026-01-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-01-01-preview
+* **Input**: [EntityHistoryRequest](#entityhistoryrequest)
+* **Output**: [EntityHistoryResponse](#entityhistoryresponse)
+
+## Function getSignalHistory (Microsoft.CloudHealth/healthmodels/entities@2026-01-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-01-01-preview
+* **Input**: [SignalHistoryRequest](#signalhistoryrequest)
+* **Output**: [SignalHistoryResponse](#signalhistoryresponse)
+
 ## AlertConfiguration
 ### Properties
 * **actionGroupIds**: string[] {minLength: 1, maxLength: 5}: Optional list of action group resource IDs to be notified when the alert is triggered.
@@ -168,6 +180,16 @@
 * **x**: int (Required): X Coordinate
 * **y**: int (Required): Y Coordinate
 
+## EntityHistoryRequest
+### Properties
+* **endAt**: string: End time for the history query. Defaults to now if not specified.
+* **startAt**: string: Start time for the history query. Defaults to 24 hours ago if not specified.
+
+## EntityHistoryResponse
+### Properties
+* **entityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity
+* **history**: [HealthStateTransition](#healthstatetransition)[] (Required): List of health state transitions
+
 ## EntityProperties
 ### Properties
 * **alerts**: [EntityAlerts](#entityalerts): Alert configuration for this entity
@@ -207,6 +229,13 @@
 ## HealthModelProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
+
+## HealthStateTransition
+### Properties
+* **newState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): New health state after the transition
+* **occurredAt**: string (Required): Timestamp when the transition occurred
+* **previousState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): Previous health state before the transition
+* **reason**: string {maxLength: 4096}: Reason of the transition
 
 ## IconDefinition
 ### Properties
@@ -319,6 +348,25 @@
 * **azureResource**: [AzureResourceSignals](#azureresourcesignals): Azure Resource Signal Group
 * **dependencies**: [DependenciesSignalGroupV2](#dependenciessignalgroupv2): Settings for dependency signals to control how the health state of child entities influences the health state of the parent entity.
 * **external**: [ExternalSignalGroup](#externalsignalgroup) (ReadOnly): List of signals which have been externally submitted for this entity.
+
+## SignalHistoryDataPoint
+### Properties
+* **additionalContext**: string {maxLength: 4096}: Additional context as provided by the submitter
+* **healthState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): Health state at this point in time
+* **occurredAt**: string (Required): Timestamp of the data point
+* **value**: int: Signal value at this point in time
+
+## SignalHistoryRequest
+### Properties
+* **endAt**: string: End time for the history query. Defaults to now if not specified.
+* **signalName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the signal to get history for
+* **startAt**: string: Start time for the history query. Defaults to 24 hours ago if not specified.
+
+## SignalHistoryResponse
+### Properties
+* **entityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity
+* **history**: [SignalHistoryDataPoint](#signalhistorydatapoint)[] (Required): Signal history data points
+* **signalName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the signal
 
 ## SignalStatus
 ### Properties

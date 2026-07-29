@@ -72,6 +72,28 @@
 * **type**: 'Microsoft.ContainerInstance/ngroups' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The availability zones.
 
+## Function attach (Microsoft.ContainerInstance/containerGroups/containers@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [ContainerAttachResponse](#containerattachresponse)
+
+## Function connect (Microsoft.ContainerInstance/aiAgentsGroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/aiAgentsGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [AiAgentsGroupAccessToken](#aiagentsgroupaccesstoken)
+
+## Function exec (Microsoft.ContainerInstance/containerGroups/containers@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [ContainerExecRequest](#containerexecrequest)
+* **Output**: [ContainerExecResponse](#containerexecresponse)
+
+## AiAgentsGroupAccessToken
+### Properties
+* **accessToken**: string {sensitive} (Required): The access token used to authenticate against the endpoint.
+* **endpoint**: string (Required): The endpoint URL to use with the access token.
+* **notAfter**: string (Required): The UTC date and time at which the access token expires.
+
 ## AiAgentsGroupNetworkProfile
 ### Properties
 * **subnets**: [SubnetReference](#subnetreference)[]: The list of subnets associated with the AiAgentsGroup.
@@ -122,9 +144,29 @@
 * **name**: string (Required): The user-provided name of the container instance.
 * **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
+## ContainerAttachResponse
+### Properties
+* **password**: string {sensitive}: The password to the output stream from the attach. Send as an Authorization header value when connecting to the websocketUri.
+* **webSocketUri**: string: The uri for the output stream from the attach.
+
 ## ContainerExec
 ### Properties
 * **command**: string[]: The commands to execute within the container.
+
+## ContainerExecRequest
+### Properties
+* **command**: string: The command to be executed.
+* **terminalSize**: [ContainerExecRequestTerminalSize](#containerexecrequestterminalsize): The size of the terminal.
+
+## ContainerExecRequestTerminalSize
+### Properties
+* **cols**: int: The column size of the terminal
+* **rows**: int: The row size of the terminal
+
+## ContainerExecResponse
+### Properties
+* **password**: string {sensitive}: The password to start the exec command.
+* **webSocketUri**: string: The uri for the exec websocket.
 
 ## ContainerGroupDiagnostics
 ### Properties

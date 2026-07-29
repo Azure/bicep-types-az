@@ -40,10 +40,31 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/edgeActions/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addAttachment (Microsoft.Cdn/edgeActions@2025-09-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [EdgeActionAttachment](#edgeactionattachment)
+* **Output**: [EdgeActionAttachmentResponse](#edgeactionattachmentresponse)
+
+## Function deployVersionCode (Microsoft.Cdn/edgeActions/versions@2025-09-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions/versions
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [VersionCode](#versioncode)
+* **Output**: [EdgeActionVersionProperties](#edgeactionversionproperties)
+
+## Function getVersionCode (Microsoft.Cdn/edgeActions/versions@2025-09-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions/versions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: [VersionCode](#versioncode)
+
 ## EdgeActionAttachment
 ### Properties
 * **attachedResourceId**: string (Required): The attached resource Id
 * **id**: string (Required, ReadOnly): The edge action attachment id
+
+## EdgeActionAttachmentResponse
+### Properties
+* **edgeActionId**: string (Required): Non changing guid to identity edge action
 
 ## EdgeActionExecutionFilterProperties
 ### Properties
@@ -94,4 +115,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VersionCode
+### Properties
+* **content**: string (Required): The version code deployment content
+* **name**: string (Required): The version code name
 

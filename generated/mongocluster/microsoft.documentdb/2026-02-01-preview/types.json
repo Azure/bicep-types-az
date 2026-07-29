@@ -1804,11 +1804,95 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkMongoClusterNameAvailability",
+    "resourceType": "Microsoft.DocumentDB/locations",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/158"
+    },
+    "input": {
+      "$ref": "#/157"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListConnectionStringsResult",
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/166"
         },
         "flags": 2,
         "description": "An array that contains the connection strings for a mongo cluster."
@@ -1845,7 +1929,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/158"
+      "$ref": "#/165"
     }
   },
   {
@@ -1854,7 +1938,7 @@
     "resourceType": "Microsoft.DocumentDB/mongoClusters",
     "apiVersion": "2026-02-01-preview",
     "output": {
-      "$ref": "#/157"
+      "$ref": "#/164"
     }
   }
 ]

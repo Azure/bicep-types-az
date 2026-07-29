@@ -13,11 +13,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags for the Azure resource.
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkContainerHostMapping (Microsoft.DevSpaces/locations@2019-04-01)
+* **Resource**: Microsoft.DevSpaces/locations
+* **ApiVersion**: 2019-04-01
+* **Input**: [ContainerHostMapping](#containerhostmapping)
+* **Output**: [ContainerHostMapping](#containerhostmapping)
+
 ## Function listConnectionDetails (Microsoft.DevSpaces/controllers@2019-04-01)
 * **Resource**: Microsoft.DevSpaces/controllers
 * **ApiVersion**: 2019-04-01
 * **Input**: [ListConnectionDetailsParameters](#listconnectiondetailsparameters)
 * **Output**: [ControllerConnectionDetailsList](#controllerconnectiondetailslist)
+
+## ContainerHostMapping
+### Properties
+* **containerHostResourceId**: string: ARM ID of the Container Host resource
+* **mappedControllerResourceId**: string (ReadOnly): ARM ID of the mapped Controller resource
 
 ## ControllerConnectionDetails
 ### Properties

@@ -62,10 +62,37 @@
 * **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelDelete (Microsoft.Batch/batchAccounts/certificates@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts/certificates
+* **ApiVersion**: 2017-09-01
+* **Output**: [Certificate](#certificate)
+
+## Function checkNameAvailability (Microsoft.Batch/locations@2017-09-01)
+* **Resource**: Microsoft.Batch/locations
+* **ApiVersion**: 2017-09-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function disableAutoScale (Microsoft.Batch/batchAccounts/pools@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts/pools
+* **ApiVersion**: 2017-09-01
+* **Output**: [Pool](#pool)
+
 ## Function listKeys (Microsoft.Batch/batchAccounts@2017-09-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2017-09-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function regenerateKeys (Microsoft.Batch/batchAccounts@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-09-01
+* **Input**: [BatchAccountRegenerateKeyParameters](#batchaccountregeneratekeyparameters)
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function stopResize (Microsoft.Batch/batchAccounts/pools@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts/pools
+* **ApiVersion**: 2017-09-01
+* **Output**: [Pool](#pool)
 
 ## ApplicationPackage
 ### Properties
@@ -132,12 +159,40 @@
 * **primary**: string (ReadOnly): The primary key associated with the account.
 * **secondary**: string (ReadOnly): The secondary key associated with the account.
 
+## BatchAccountRegenerateKeyParameters
+### Properties
+* **keyName**: 'Primary' | 'Secondary' (Required): The type of account key to regenerate.
+
+## Certificate
+### Properties
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly): The ID of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [CertificateProperties](#certificateproperties): The properties associated with the certificate.
+* **type**: string (ReadOnly): The type of the resource.
+
 ## CertificateCreateOrUpdatePropertiesOrCertificateProperties
 ### Properties
 * **data**: string (Required, WriteOnly): The maximum size is 10KB.
 * **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): This is only returned when the certificate provisioningState is 'Failed'.
 * **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
 * **password**: string (WriteOnly): This is required if the certificate format is pfx and must be omitted if the certificate format is cer.
+* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource
+* **previousProvisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its previous state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Values are:
+
+ Succeeded - The certificate is available for use in pools.
+ Deleting - The user has requested that the certificate be deleted, but the delete operation has not yet completed. You may not reference the certificate when creating or updating pools.
+ Failed - The user requested that the certificate be deleted, but there are pools that still have references to the certificate, or it is still installed on one or more compute nodes. (The latter can occur if the certificate has been removed from the pool, but the node has not yet restarted. Nodes refresh their certificates only when they restart.) You may use the cancel certificate delete operation to cancel the delete, or the delete certificate operation to retry the delete.
+* **provisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its current state.
+* **publicData**: string (ReadOnly): The public key of the certificate.
+* **thumbprint**: string: This must match the thumbprint from the name.
+* **thumbprintAlgorithm**: string: This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+
+## CertificateProperties
+### Properties
+* **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): This is only returned when the certificate provisioningState is 'Failed'.
+* **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource
 * **previousProvisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its previous state.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Values are:
@@ -162,6 +217,17 @@
  remoteuser - The accounts under which users remotely access the node.
 
  You can specify more than one visibility in this collection. The default is all accounts.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability
+* **type**: 'Microsoft.Batch/batchAccounts' (Required): The resource type. Must be set to Microsoft.Batch/batchAccounts
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## CloudServiceConfiguration
 ### Properties
@@ -256,6 +322,14 @@
 ## OSDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Default value is none.
+
+## Pool
+### Properties
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly): The ID of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
+* **type**: string (ReadOnly): The type of the resource.
 
 ## PoolEndpointConfiguration
 ### Properties

@@ -540,5 +540,430 @@
     },
     "readableScopes": 0,
     "writableScopes": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateStoreNotificationsState",
+    "properties": {
+      "stopSellNotifications": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "newNotifications": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0
+      },
+      "approvalRequests": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StopSellNotifications",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer id"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer display name"
+      },
+      "isEntire": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets a value indicating whether entire offer is in stop sell or only few of its plans"
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets the notification message id"
+      },
+      "icon": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the icon url"
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Gets or sets removed plans notifications"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanNotificationDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the plan id"
+      },
+      "planDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the plan display name"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NewNotifications",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer id"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer display name"
+      },
+      "isFuturePlansEnabled": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets a value indicating whether future plans is enabled."
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets the notification message id"
+      },
+      "icon": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the icon url"
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets removed plans notifications"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestApprovalsDetails",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer id"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets offer display name"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets publisher id"
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets the notification message id"
+      },
+      "icon": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the icon url"
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Gets or sets removed plans notifications"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryNotificationsState",
+    "resourceType": "Microsoft.Marketplace/privateStores",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcknowledgeOfferNotificationProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Notification update request payload details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcknowledgeOfferNotificationDetails",
+    "properties": {
+      "acknowledge": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether acknowledge action flag is enabled"
+      },
+      "dismiss": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether dismiss action flag is enabled"
+      },
+      "removeOffer": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether remove offer action flag is enabled"
+      },
+      "addPlans": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets added plans"
+      },
+      "removePlans": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Gets or sets remove plans"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestApprovalProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The details to get the request plans statuses"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestDetails",
+    "properties": {
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer's publisher id"
+      },
+      "planIds": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Current plans list"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestApproval",
+    "properties": {
+      "uniqueOfferId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets unique offer id."
+      },
+      "plansDetails": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Gets or sets the plans details"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets e-tag field"
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets the notification message id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestApprovalPlansDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "query",
+    "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/59"
+    },
+    "input": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WithdrawProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Withdraw properties details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WithdrawDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Plan Id"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer's publisher id"
+      }
+    }
   }
 ]

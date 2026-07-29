@@ -106,6 +106,41 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/databaseInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getAvailabilityZoneDetails (Microsoft.Workloads/locations/sapVirtualInstanceMetadata@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/locations/sapVirtualInstanceMetadata
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [SAPAvailabilityZoneDetailsRequest](#sapavailabilityzonedetailsrequest)
+* **Output**: [SAPAvailabilityZoneDetailsResult](#sapavailabilityzonedetailsresult)
+
+## Function getDiskConfigurations (Microsoft.Workloads/locations/sapVirtualInstanceMetadata@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/locations/sapVirtualInstanceMetadata
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [SAPDiskConfigurationsRequest](#sapdiskconfigurationsrequest)
+* **Output**: [SAPDiskConfigurationsResult](#sapdiskconfigurationsresult)
+
+## Function getSapSupportedSku (Microsoft.Workloads/locations/sapVirtualInstanceMetadata@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/locations/sapVirtualInstanceMetadata
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [SAPSupportedSkusRequest](#sapsupportedskusrequest)
+* **Output**: [SAPSupportedResourceSkusResult](#sapsupportedresourceskusresult)
+
+## Function getSizingRecommendations (Microsoft.Workloads/locations/sapVirtualInstanceMetadata@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/locations/sapVirtualInstanceMetadata
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [SAPSizingRecommendationRequest](#sapsizingrecommendationrequest)
+* **Output**: [SAPSizingRecommendationResult](#sapsizingrecommendationresult)
+
+## Function start (Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/sapVirtualInstances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function stop (Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview)
+* **Resource**: Microsoft.Workloads/sapVirtualInstances
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [StopRequest](#stoprequest)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
 ## ApplicationServerConfiguration
 ### Properties
 * **instanceCount**: int (Required): The number of app server instances.
@@ -220,11 +255,24 @@
 * **message**: string (ReadOnly): Human-readable representation of the error.
 * **target**: string (ReadOnly): Target of the error.
 
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
 ## ErrorDefinition
 ### Properties
 * **code**: string (ReadOnly): Service specific error code which serves as the substatus for the HTTP error code.
 * **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
 * **message**: string (ReadOnly): Description of the error.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ErrorInnerError
 ### Properties
@@ -373,6 +421,17 @@
 * **nodeSku**: string (Required): VM SKU for node(s)
 * **osDisk**: [DiskInfo](#diskinfo) (Required): OS disk details
 * **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image used for creating the nodes
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## OSConfiguration
 * **Discriminator**: osType
@@ -546,6 +605,21 @@
 * **subnet**: string (ReadOnly): Application server Subnet.
 * **virtualMachineId**: string (ReadOnly): The virtual machine.
 
+## SAPAvailabilityZoneDetailsRequest
+### Properties
+* **appLocation**: string (Required): The geo-location where the SAP resources will be created.
+* **databaseType**: 'DB2' | 'HANA' | string (Required): The database type. Eg: HANA, DB2, etc
+* **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
+
+## SAPAvailabilityZoneDetailsResult
+### Properties
+* **availabilityZonePairs**: [SAPAvailabilityZonePair](#sapavailabilityzonepair)[]: Gets the list of availability zone pairs.
+
+## SAPAvailabilityZonePair
+### Properties
+* **zoneA**: int: The zone A.
+* **zoneB**: int: The zone B.
+
 ## SAPCentralServerProperties
 ### Properties
 * **enqueueReplicationServerProperties**: [EnqueueReplicationServerProperties](#enqueuereplicationserverproperties): Defines the SAP Enqueue Replication Server (ERS) properties.
@@ -601,6 +675,81 @@
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
 * **subnet**: string (ReadOnly): Database subnet.
 * **vmDetails**: [DatabaseVmDetails](#databasevmdetails)[] (ReadOnly): The list of virtual machines corresponding to the Database resource.
+
+## SAPDiskConfiguration
+### Properties
+* **diskCount**: int: The disk count.
+* **diskIopsReadWrite**: int: The disk Iops.
+* **diskMBpsReadWrite**: int: The disk provisioned throughput in MBps.
+* **diskSizeGB**: int: The disk size in GB.
+* **diskStorageType**: string: The disk storage type
+* **diskType**: string: The disk type.
+* **volume**: string: The volume name.
+
+## SAPDiskConfigurationsRequest
+### Properties
+* **appLocation**: string (Required): The geo-location where the SAP resources will be created.
+* **databaseType**: 'DB2' | 'HANA' | string (Required): The database type. Eg: HANA, DB2, etc
+* **dbVmSku**: string (Required): The VM SKU for database instance.
+* **deploymentType**: 'SingleServer' | 'ThreeTier' | string (Required): The deployment type. Eg: SingleServer/ThreeTier
+* **environment**: 'NonProd' | 'Prod' | string (Required): Defines the environment type - Production/Non Production.
+* **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
+
+## SAPDiskConfigurationsResult
+### Properties
+* **diskConfigurations**: [SAPDiskConfiguration](#sapdiskconfiguration)[]: Gets the list of Disk Configurations.
+
+## SAPSizingRecommendationRequest
+### Properties
+* **appLocation**: string (Required): The geo-location where the resource is to be created.
+* **databaseType**: 'DB2' | 'HANA' | string (Required): The database type.
+* **dbMemory**: int (Required): The database memory configuration.
+* **dbScaleMethod**: 'ScaleUp' | string: The DB scale method.
+* **deploymentType**: 'SingleServer' | 'ThreeTier' | string (Required): The deployment type. Eg: SingleServer/ThreeTier
+* **environment**: 'NonProd' | 'Prod' | string (Required): Defines the environment type - Production/Non Production.
+* **highAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | string: The high availability type.
+* **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
+* **saps**: int (Required): The SAP Application Performance Standard measurement.
+
+## SAPSizingRecommendationResult
+* **Discriminator**: deploymentType
+
+### Base Properties
+
+### SingleServerRecommendationResult
+#### Properties
+* **deploymentType**: 'SingleServer' (Required): The type of SAP deployment, single server or Three tier.
+* **vmSku**: string: The recommended VM SKU for single server.
+
+### ThreeTierRecommendationResult
+#### Properties
+* **applicationServerInstanceCount**: int: The application server instance count.
+* **applicationServerVmSku**: string: The application server VM SKU.
+* **centralServerInstanceCount**: int: The central server instance count.
+* **centralServerVmSku**: string: The central server VM SKU.
+* **databaseInstanceCount**: int: The database server instance count.
+* **dbVmSku**: string: The database VM SKU.
+* **deploymentType**: 'ThreeTier' (Required): The type of SAP deployment, single server or Three tier.
+
+
+## SAPSupportedResourceSkusResult
+### Properties
+* **supportedSkus**: [SAPSupportedSku](#sapsupportedsku)[]: Gets the list of SAP supported SKUs.
+
+## SAPSupportedSku
+### Properties
+* **isAppServerCertified**: bool: True if the Sku is certified for App server in the SAP system.
+* **isDatabaseCertified**: bool: True if the Sku is certified for Database server in the SAP system.
+* **vmSku**: string: The VM Sku.
+
+## SAPSupportedSkusRequest
+### Properties
+* **appLocation**: string (Required): The geo-location where the resource is to be created.
+* **databaseType**: 'DB2' | 'HANA' | string (Required): The database type. Eg: HANA, DB2, etc
+* **deploymentType**: 'SingleServer' | 'ThreeTier' | string (Required): The deployment type. Eg: SingleServer/ThreeTier
+* **environment**: 'NonProd' | 'Prod' | string (Required): Defines the environment type - Production/Non Production.
+* **highAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | string: The high availability type.
+* **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
 
 ## SAPVirtualInstanceError
 ### Properties
@@ -681,6 +830,10 @@
 ## SshPublicKey
 ### Properties
 * **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+
+## StopRequest
+### Properties
+* **hardStop**: bool: A boolean to specify if the SAP system should be hard-stopped.
 
 ## StorageConfiguration
 ### Properties

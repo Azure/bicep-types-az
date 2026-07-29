@@ -3383,5 +3383,698 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddDataAnnotationRequest",
+    "properties": {
+      "annotationDetails": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 1,
+        "description": "Annotation details as a dynamic key-value pair bag. Service-enforced limits: a maximum of 10 entries per annotation and a maximum value length of 256 characters. Requests exceeding these limits will be rejected with a 400 response."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Optional description of the annotation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddDataAnnotationRequestAnnotationDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataAnnotation",
+    "properties": {
+      "annotationId": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 2,
+        "description": "Auto-assigned identifier for the annotation"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Timestamp when the annotation was created"
+      },
+      "annotationDetails": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 1,
+        "description": "Annotation details as a dynamic key-value pair bag. Service-enforced limits: a maximum of 10 entries per annotation and a maximum value length of 256 characters. Requests exceeding these limits will be rejected with a 400 response."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Optional description of the annotation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataAnnotationDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addDataAnnotation",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/291"
+    },
+    "input": {
+      "$ref": "#/289"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDataAnnotationsRequest",
+    "properties": {
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start of UTC time range. Defaults to 24 hours ago if not specified."
+      },
+      "endAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End of UTC time range. Defaults to now if not specified."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 0,
+        "description": "Maximum number of annotations to return per page. Defaults to 100."
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDataAnnotationsResponse",
+    "properties": {
+      "entityName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity"
+      },
+      "annotations": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 1,
+        "description": "List of data annotations"
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDataAnnotations",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/296"
+    },
+    "input": {
+      "$ref": "#/294"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityHistoryRequest",
+    "properties": {
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time for the history query. Defaults to 24 hours ago if not specified."
+      },
+      "endAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time for the history query. Defaults to now if not specified."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 0,
+        "description": "Maximum number of health state transitions to return per page. Defaults to 1000."
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityHistoryResponse",
+    "properties": {
+      "entityName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity"
+      },
+      "history": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 1,
+        "description": "List of health state transitions"
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthStateTransition",
+    "properties": {
+      "previousState": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 1,
+        "description": "Previous health state before the transition"
+      },
+      "newState": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 1,
+        "description": "New health state after the transition"
+      },
+      "occurredAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Timestamp when the transition occurred"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Reason of the transition"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/304"
+      },
+      {
+        "$ref": "#/305"
+      },
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/302"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getHistory",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/301"
+    },
+    "input": {
+      "$ref": "#/299"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryRequest",
+    "properties": {
+      "signalName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the signal to get history for"
+      },
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time for the history query. Defaults to 24 hours ago if not specified."
+      },
+      "endAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time for the history query. Defaults to now if not specified."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 0,
+        "description": "Maximum number of data points to return per page. Defaults to 1000."
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryResponse",
+    "properties": {
+      "entityName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity"
+      },
+      "signalName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the signal"
+      },
+      "history": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 1,
+        "description": "Signal history data points"
+      },
+      "nextMarker": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "An opaque string value that identifies the portion of the result set to be returned with the next operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryDataPoint",
+    "properties": {
+      "occurredAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Timestamp of the data point"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Signal value at this point in time"
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 1,
+        "description": "Health state at this point in time"
+      },
+      "additionalContext": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Additional context as provided by the submitter"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/320"
+      },
+      {
+        "$ref": "#/321"
+      },
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/324"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSignalHistory",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/318"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetSignalRecommendationsResponse",
+    "properties": {
+      "recommendedSignals": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 1,
+        "description": "Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type. Each entry is a complete signal configuration (metric, aggregation, thresholds) ready to be added to a health model. Independent of `recommendedConfigurations` — not paired by index."
+      },
+      "recommendedConfigurations": {
+        "type": {
+          "$ref": "#/338"
+        },
+        "flags": 1,
+        "description": "Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point. Independent of `recommendedSignals` — not paired by index."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalConfiguration",
+    "properties": {
+      "signalId": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 1,
+        "description": "Unique identifier of the recommended signal configuration."
+      },
+      "metricNamespace": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "Metric namespace (e.g. 'microsoft.compute/virtualmachines')."
+      },
+      "metricName": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "Name of the metric (e.g. 'Percentage CPU')."
+      },
+      "aggregationType": {
+        "type": {
+          "$ref": "#/336"
+        },
+        "flags": 0,
+        "description": "Type of aggregation to apply to the metric."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Unit of the metric (e.g. Percent, Bytes, Count)."
+      },
+      "timeGrain": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Time range of the metric. ISO 8601 duration format (e.g. 'PT5M')."
+      },
+      "dimensionFilter": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "Optional dimension filter to apply to the metric."
+      },
+      "evaluationRules": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "Evaluation rules with recommended thresholds."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Average"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Maximum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Total"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/330"
+      },
+      {
+        "$ref": "#/331"
+      },
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/333"
+      },
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/329"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/329"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSignalRecommendations",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/328"
+    }
   }
 ]

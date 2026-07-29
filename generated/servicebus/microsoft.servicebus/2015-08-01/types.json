@@ -1610,6 +1610,50 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateKeysParameters",
+    "properties": {
+      "Policykey": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Key that needs to be regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/117"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
@@ -1620,11 +1664,35 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/117"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
       "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/117"
     }
   }
 ]

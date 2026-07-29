@@ -32,6 +32,12 @@
 * **ApiVersion**: 2021-02-01
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
+## Function regenerateKey (Microsoft.Maps/accounts@2021-02-01)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2021-02-01
+* **Input**: [MapsKeySpecification](#mapskeyspecification)
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## CreatorProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
@@ -49,6 +55,10 @@
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
 * **provisioningState**: string (ReadOnly): the state of the provisioning.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
+
+## MapsKeySpecification
+### Properties
+* **keyType**: 'primary' | 'secondary' | string (Required): Whether the operation refers to the primary or secondary key.
 
 ## Sku
 ### Properties

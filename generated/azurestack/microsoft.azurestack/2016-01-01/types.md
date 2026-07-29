@@ -23,6 +23,23 @@
 * **properties**: [ProductNestedProperties](#productnestedproperties) (ReadOnly): Properties of the product resource.
 * **type**: 'Microsoft.AzureStack/registrations/products' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getActivationKey (Microsoft.AzureStack/registrations@2016-01-01)
+* **Resource**: Microsoft.AzureStack/registrations
+* **ApiVersion**: 2016-01-01
+* **Output**: [ActivationKeyResult](#activationkeyresult)
+
+## Function getProduct (Microsoft.AzureStack/registrations/products@2016-01-01)
+* **Resource**: Microsoft.AzureStack/registrations/products
+* **ApiVersion**: 2016-01-01
+* **Input**: [DeviceConfiguration](#deviceconfiguration)
+* **Output**: [Product](#product)
+
+## Function getProducts (Microsoft.AzureStack/registrations/products@2016-01-01)
+* **Resource**: Microsoft.AzureStack/registrations/products
+* **ApiVersion**: 2016-01-01
+* **Input**: [DeviceConfiguration](#deviceconfiguration)
+* **Output**: [ProductList](#productlist)
+
 ## Function listDetails (Microsoft.AzureStack/registrations/products@2016-01-01)
 * **Resource**: Microsoft.AzureStack/registrations/products
 * **ApiVersion**: 2016-01-01
@@ -33,6 +50,16 @@
 * **ApiVersion**: 2016-01-01
 * **Input**: [DeviceConfiguration](#deviceconfiguration)
 * **Output**: [ProductList](#productlist)
+
+## Function uploadProductLog (Microsoft.AzureStack/registrations/products@2016-01-01)
+* **Resource**: Microsoft.AzureStack/registrations/products
+* **ApiVersion**: 2016-01-01
+* **Input**: [MarketplaceProductLogUpdate](#marketplaceproductlogupdate)
+* **Output**: [ProductLog](#productlog)
+
+## ActivationKeyResult
+### Properties
+* **activationKey**: string: Azure Stack activation key.
 
 ## Compatibility
 ### Properties
@@ -77,6 +104,13 @@
 * **small**: string: URI to small icon.
 * **wide**: string: URI to wide icon.
 
+## MarketplaceProductLogUpdate
+### Properties
+* **details**: string (ReadOnly): Error details related to operation.
+* **error**: string (ReadOnly): Error related to the operation.
+* **operation**: string (ReadOnly): Operation to log.
+* **status**: string (ReadOnly): Operation status to log.
+
 ## OsDiskImage
 ### Properties
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
@@ -98,6 +132,20 @@
 ### Properties
 * **nextLink**: string: URI to the next page.
 * **value**: [Product](#product)[]: List of products.
+
+## ProductLog
+### Properties
+* **details**: string (ReadOnly): Operation error details.
+* **endDate**: string (ReadOnly): Operation end datetime.
+* **error**: string (ReadOnly): Operation error data.
+* **id**: string (ReadOnly): Log ID.
+* **operation**: string (ReadOnly): Logged operation.
+* **productId**: string (ReadOnly): Logged product ID.
+* **registrationName**: string (ReadOnly): Logged registration name.
+* **resourceGroupName**: string (ReadOnly): Logged resource group name.
+* **startDate**: string (ReadOnly): Operation start datetime.
+* **status**: string (ReadOnly): Operation status.
+* **subscriptionId**: string (ReadOnly): Logged subscription ID.
 
 ## ProductNestedProperties
 ### Properties

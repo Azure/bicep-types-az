@@ -11629,5 +11629,1283 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineCordonParameters",
+    "properties": {
+      "evacuate": {
+        "type": {
+          "$ref": "#/893"
+        },
+        "flags": 0,
+        "description": "The indicator of whether to evacuate the node workload when the bare metal machine is cordoned."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/891"
+      },
+      {
+        "$ref": "#/892"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResult",
+    "properties": {
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end time of the operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/895"
+        },
+        "flags": 2,
+        "description": "If present, details of the operation error."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the async operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/900"
+        },
+        "flags": 2,
+        "description": "The operations list."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/901"
+        },
+        "flags": 2,
+        "description": "Percent of the operation that is complete."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/902"
+        },
+        "flags": 0,
+        "description": "The additional properties of the operation status result."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start time of the operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/896"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/899"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/895"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/898"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/897"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResultProperties",
+    "properties": {
+      "exitCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "For actions that run commands or scripts, the exit code of the script execution."
+      },
+      "outputHead": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "For actions that run commands or scripts, the leading bytes of the output of the script execution."
+      },
+      "resultRef": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "For actions that run commands or scripts, a reference to the location of the result."
+      },
+      "resultUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "For actions that run commands or scripts, the URL where the full output of the script output can be retrieved."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cordon",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/890"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachinePowerOffParameters",
+    "properties": {
+      "skipShutdown": {
+        "type": {
+          "$ref": "#/907"
+        },
+        "flags": 0,
+        "description": "The indicator of whether to skip the graceful OS shutdown and power off the bare metal machine immediately."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/905"
+      },
+      {
+        "$ref": "#/906"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/904"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineReimageParameters",
+    "properties": {
+      "safeguardMode": {
+        "type": {
+          "$ref": "#/912"
+        },
+        "flags": 0,
+        "description": "The safeguard mode to use for the reimage action, where None indicates to bypass safeguards and All indicates to utilize all safeguards. If not specified, the default is All."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/910"
+      },
+      {
+        "$ref": "#/911"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/909"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineReplaceParameters",
+    "properties": {
+      "bmcCredentials": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The credentials of the baseboard management controller on this bare metal machine. The password field is expected to be an Azure Key Vault key URL. Until the cluster is converted to utilize managed identity by setting the secret archive settings, the actual password value should be provided instead."
+      },
+      "bmcMacAddress": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The MAC address of the BMC device."
+      },
+      "bootMacAddress": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The MAC address of a NIC connected to the PXE network."
+      },
+      "machineName": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The OS-level hostname assigned to this machine."
+      },
+      "safeguardMode": {
+        "type": {
+          "$ref": "#/917"
+        },
+        "flags": 0,
+        "description": "The safeguard mode to use for the replace action, where None indicates to bypass safeguards and All indicates to utilize all safeguards."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The serial number of the bare metal machine."
+      },
+      "storagePolicy": {
+        "type": {
+          "$ref": "#/920"
+        },
+        "flags": 0,
+        "description": "The indicator of whether to bypass clearing storage while replacing a bare metal machine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/915"
+      },
+      {
+        "$ref": "#/916"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preserve"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DiscardAll"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/918"
+      },
+      {
+        "$ref": "#/919"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "replace",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/914"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineRunCommandParameters",
+    "properties": {
+      "arguments": {
+        "type": {
+          "$ref": "#/924"
+        },
+        "flags": 0,
+        "description": "The list of string arguments that will be passed to the script in order as separate arguments."
+      },
+      "limitTimeSeconds": {
+        "type": {
+          "$ref": "#/925"
+        },
+        "flags": 1,
+        "description": "The maximum time the script is allowed to run. If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252)."
+      },
+      "script": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The base64 encoded script to execute on the bare metal machine."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 60,
+    "maxValue": 14400
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/923"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineRunDataExtractsParameters",
+    "properties": {
+      "commands": {
+        "type": {
+          "$ref": "#/930"
+        },
+        "flags": 1,
+        "description": "The list of curated data extraction commands to be executed directly against the target machine."
+      },
+      "limitTimeSeconds": {
+        "type": {
+          "$ref": "#/925"
+        },
+        "flags": 1,
+        "description": "The maximum time the commands are allowed to run. If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineCommandSpecification",
+    "properties": {
+      "arguments": {
+        "type": {
+          "$ref": "#/929"
+        },
+        "flags": 0,
+        "description": "The list of string arguments that will be passed to the script in order as separate arguments."
+      },
+      "command": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The command to execute against the bare metal machine."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/928"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runDataExtracts",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/927"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runDataExtractsRestricted",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/927"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalMachineRunReadCommandsParameters",
+    "properties": {
+      "commands": {
+        "type": {
+          "$ref": "#/934"
+        },
+        "flags": 1,
+        "description": "The list of read-only commands to be executed directly against the target machine."
+      },
+      "limitTimeSeconds": {
+        "type": {
+          "$ref": "#/925"
+        },
+        "flags": 1,
+        "description": "The maximum time the commands are allowed to run. If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252)."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/928"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runReadCommands",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/933"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uncordon",
+    "resourceType": "Microsoft.NetworkCloud/bareMetalMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterManagerUpdateRelayPrivateEndpointConnectionParameters",
+    "properties": {
+      "connectionState": {
+        "type": {
+          "$ref": "#/941"
+        },
+        "flags": 1,
+        "description": "The state to set for the private endpoint connection."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description to associate with the private endpoint connection."
+      },
+      "privateEndpointResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of private endpoint to be permitted or denied connection to the relay namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/939"
+      },
+      {
+        "$ref": "#/940"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateRelayPrivateEndpointConnection",
+    "resourceType": "Microsoft.NetworkCloud/clusterManagers",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/938"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterContinueUpdateVersionParameters",
+    "properties": {
+      "machineGroupTargetingMode": {
+        "type": {
+          "$ref": "#/945"
+        },
+        "flags": 0,
+        "description": "The mode by which the cluster will target the next grouping of servers to continue the update."
+      },
+      "safeguardMode": {
+        "type": {
+          "$ref": "#/948"
+        },
+        "flags": 0,
+        "description": "Specifies how safeguards are applied during the continue update version operation. Use All to run all pre‑operation validation checks. Use None to bypass safeguards. If not specified, the default is All."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlphaByRack"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/944"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/946"
+      },
+      {
+        "$ref": "#/947"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "continueUpdateVersion",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/943"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterDeployParameters",
+    "properties": {
+      "skipValidationsForMachines": {
+        "type": {
+          "$ref": "#/951"
+        },
+        "flags": 0,
+        "description": "The names of bare metal machines in the cluster that should be skipped during environment validation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deploy",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/950"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterInspectParameters",
+    "properties": {
+      "additionalActions": {
+        "type": {
+          "$ref": "#/956"
+        },
+        "flags": 0,
+        "description": "Additional actions supplement the default non-disruptive cluster inspection. Additional actions may be disallowed if the cluster is in a deployed and running state."
+      },
+      "filterDevices": {
+        "type": {
+          "$ref": "#/957"
+        },
+        "flags": 0,
+        "description": "Indicates which devices are included in the inspection. By default, all devices that can be targeted will be included in the inspection."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResetHardware"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/954"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/955"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FilterDevices",
+    "properties": {
+      "bareMetalMachineNames": {
+        "type": {
+          "$ref": "#/958"
+        },
+        "flags": 0,
+        "description": "The list of bare metal machine names to include in the inspection."
+      },
+      "rackNames": {
+        "type": {
+          "$ref": "#/959"
+        },
+        "flags": 0,
+        "description": "The list of rack names to include in the inspection."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "inspect",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/953"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterRotateCredentialParameters",
+    "properties": {
+      "credentials": {
+        "type": {
+          "$ref": "#/962"
+        },
+        "flags": 1,
+        "description": "The list of credential names for the credentials to rotate."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateCredential",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/961"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterScanRuntimeParameters",
+    "properties": {
+      "scanActivity": {
+        "type": {
+          "$ref": "#/967"
+        },
+        "flags": 0,
+        "description": "The choice of if the scan operation should run the scan."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scan"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Skip"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/965"
+      },
+      {
+        "$ref": "#/966"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scanRuntime",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/964"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterUpdateVersionParameters",
+    "properties": {
+      "safeguardMode": {
+        "type": {
+          "$ref": "#/972"
+        },
+        "flags": 0,
+        "description": "Specifies how safeguards are applied during the update version operation. Use All to run all pre‑operation validation checks. Use None to bypass safeguards. If not specified, the default is All."
+      },
+      "targetClusterVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The version to be applied to the cluster during update."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/970"
+      },
+      {
+        "$ref": "#/971"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateVersion",
+    "resourceType": "Microsoft.NetworkCloud/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/969"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterRestartNodeParameters",
+    "properties": {
+      "nodeName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the node to restart."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restartNode",
+    "resourceType": "Microsoft.NetworkCloud/kubernetesClusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/974"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableRemoteVendorManagement",
+    "resourceType": "Microsoft.NetworkCloud/storageAppliances",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageApplianceEnableRemoteVendorManagementParameters",
+    "properties": {
+      "supportEndpoints": {
+        "type": {
+          "$ref": "#/978"
+        },
+        "flags": 0,
+        "description": "Field Deprecated. This field is not used and will be rejected if provided. The list of IPv4 subnets (in CIDR format), IPv6 subnets (in CIDR format), or hostnames that the storage appliance needs accessible in order to turn on the remote vendor management."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableRemoteVendorManagement",
+    "resourceType": "Microsoft.NetworkCloud/storageAppliances",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/977"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageApplianceRunReadCommandsParameters",
+    "properties": {
+      "commands": {
+        "type": {
+          "$ref": "#/983"
+        },
+        "flags": 1,
+        "description": "The list of read-only commands to be executed directly against the target storage appliance."
+      },
+      "limitTimeSeconds": {
+        "type": {
+          "$ref": "#/925"
+        },
+        "flags": 1,
+        "description": "The maximum time the commands are allowed to run."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageApplianceCommandSpecification",
+    "properties": {
+      "arguments": {
+        "type": {
+          "$ref": "#/982"
+        },
+        "flags": 0,
+        "description": "The list of strings that will be passed to the script in order as separate arguments."
+      },
+      "command": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The command to execute."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/981"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runReadCommands",
+    "resourceType": "Microsoft.NetworkCloud/storageAppliances",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/980"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineAssignRelayParameters",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resourceId of the Microsoft.HybridCompute machine resource to assign relay usage."
+      },
+      "relayType": {
+        "type": {
+          "$ref": "#/988"
+        },
+        "flags": 0,
+        "description": "The indicator of which relay type the machine should be assigned to use. Platform indicates the use of a platform-dedicated relay. Public indicates the use of the standard public relay for Arc services."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/986"
+      },
+      {
+        "$ref": "#/987"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "assignRelay",
+    "resourceType": "Microsoft.NetworkCloud/virtualMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/985"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachinePowerOffParameters",
+    "properties": {
+      "skipShutdown": {
+        "type": {
+          "$ref": "#/993"
+        },
+        "flags": 0,
+        "description": "The indicator of whether to skip the graceful OS shutdown and power off the virtual machine immediately."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/991"
+      },
+      {
+        "$ref": "#/992"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.NetworkCloud/virtualMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    },
+    "input": {
+      "$ref": "#/990"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.NetworkCloud/virtualMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.NetworkCloud/virtualMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.NetworkCloud/virtualMachines",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/894"
+    }
   }
 ]

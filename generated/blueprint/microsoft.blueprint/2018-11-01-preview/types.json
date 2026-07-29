@@ -1752,5 +1752,27 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WhoIsBlueprintContract",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "AAD object Id of the Azure Blueprints service principal in the tenant."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "whoIsBlueprint",
+    "resourceType": "Microsoft.Blueprint/blueprintAssignments",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/120"
+    }
   }
 ]

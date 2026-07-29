@@ -2383,5 +2383,964 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 0,
+        "description": "Available scope request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeRequestProperties",
+    "properties": {
+      "scopes": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionScopeProperties",
+    "properties": {
+      "scopes": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopeProperties",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "valid": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "availableScopes",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/216"
+    },
+    "input": {
+      "$ref": "#/213"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitProperties",
+    "properties": {
+      "quantities": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "List of the quantities in the new reservations to create."
+      },
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "split",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/224"
+    },
+    "input": {
+      "$ref": "#/221"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeProperties",
+    "properties": {
+      "sources": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "merge",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/229"
+    },
+    "input": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryRequest",
+    "properties": {
+      "destinationTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant id GUID that reservation order is to be transferred to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResponse",
+    "properties": {
+      "reservationOrder": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0,
+        "description": "Change directory result for reservation order or reservation"
+      },
+      "reservations": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier of the reservation order or reservation"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the reservation order or reservation"
+      },
+      "isSucceeded": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "True if change directory operation succeeded on this reservation order or reservation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error reason if operation failed. Null otherwise"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/233"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeDirectory",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/232"
+    },
+    "input": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateRefundRequest",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the reservation order being returned"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateRefundRequestProperties",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The scope of the refund, e.g. Reservation"
+      },
+      "reservationToReturn": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0,
+        "description": "Reservation to return"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToReturn",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the Reservation being returned"
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned. Must be greater than zero."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateRefundResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the reservation being returned"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundResponseProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Refund session identifier"
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned"
+      },
+      "billingRefundAmount": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "pricingRefundAmount": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "policyResult": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Refund policy result"
+      },
+      "billingInformation": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 0,
+        "description": "billing information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundPolicyResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "Refund policy result property"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundPolicyResultProperty",
+    "properties": {
+      "consumedRefundsTotal": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "maxRefundLimit": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "policyErrors": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "Refund Policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundPolicyError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InternalServerError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerTimeout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AuthorizationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadRequest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientCertificateThumbprintNotSet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidRequestContent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HttpMethodNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidRequestUri"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MissingTenantId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidTenantId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidReservationOrderId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidReservationId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservationIdNotInReservationOrder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservationOrderNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSubscriptionId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidAccessToken"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidLocationId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnauthenticatedRequestsThrottled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidHealthCheckType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Forbidden"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingScopeIdCannotBeChanged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppliedScopesNotAssociatedWithCommerceAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PatchValuesSameAsExisting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RoleAssignmentCreationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservationOrderCreationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservationOrderNotEnabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CapacityUpdateScopesFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnsupportedReservationTerm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservationOrderIdAlreadyExists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RiskCheckFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreateQuoteFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivateQuoteFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonsupportedAccountId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaymentInstrumentNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MissingAppliedScopesForSingle"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoValidReservationsToReRate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReRateOnlyAllowedForEA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationCannotBePerformedInCurrentState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSingleAppliedScopesCount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidFulfillmentRequestParameters"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupportedCountry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidRefundQuantity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PurchaseError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingCustomerInputError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingPaymentInstrumentSoftError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingPaymentInstrumentHardError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingTransientError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FulfillmentConfigurationError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FulfillmentOutOfStockError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FulfillmentTransientError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FulfillmentError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CalculatePriceFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppliedScopesSameAsExisting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SelfServiceRefundNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RefundLimitExceeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/257"
+      },
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/284"
+      },
+      {
+        "$ref": "#/285"
+      },
+      {
+        "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/291"
+      },
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/294"
+      },
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/243"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundBillingInformation",
+    "properties": {
+      "billingPlan": {
+        "type": {
+          "$ref": "#/307"
+        },
+        "flags": 0,
+        "description": "Represent the billing plans."
+      },
+      "completedTransactions": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The number of completed transactions in this reservation's payment"
+      },
+      "totalTransactions": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The number of total transactions in this reservation's payment"
+      },
+      "billingCurrencyTotalPaidAmount": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "billingCurrencyProratedAmount": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "billingCurrencyRemainingCommitmentAmount": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upfront"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monthly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/305"
+      },
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateRefund",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/239"
+    },
+    "input": {
+      "$ref": "#/236"
+    }
   }
 ]

@@ -2293,5 +2293,73 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlVmTroubleshooting",
+    "properties": {
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time in UTC timezone."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time in UTC timezone."
+      },
+      "troubleshootingScenario": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "SQL VM troubleshooting scenario."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Troubleshooting properties"
+      },
+      "virtualMachineResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Virtual machine resource id for response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnhealthyReplica"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "troubleshoot",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2022-08-01-preview",
+    "output": {
+      "$ref": "#/164"
+    },
+    "input": {
+      "$ref": "#/164"
+    }
   }
 ]

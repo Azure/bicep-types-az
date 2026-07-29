@@ -82,10 +82,40 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function flush (Microsoft.Cache/redis@2025-08-01-preview)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2025-08-01-preview
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function forceReboot (Microsoft.Cache/redis@2025-08-01-preview)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [RedisRebootParameters](#redisrebootparameters)
+* **Output**: [RedisForceRebootResponse](#redisforcerebootresponse)
+
 ## Function listKeys (Microsoft.Cache/redis@2025-08-01-preview)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2025-08-01-preview
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## Function regenerateKey (Microsoft.Cache/redis@2025-08-01-preview)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
+* **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -93,6 +123,17 @@
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## PrivateEndpoint
 ### Properties
@@ -203,6 +244,10 @@
 * **endIP**: string (Required): highest IP address included in the range
 * **startIP**: string (Required): lowest IP address included in the range
 
+## RedisForceRebootResponse
+### Properties
+* **message**: string (ReadOnly): Status message
+
 ## RedisInstanceDetails
 ### Properties
 * **isMaster**: bool (ReadOnly): Specifies whether the instance is a primary node.
@@ -224,6 +269,16 @@
 * **primaryHostName**: string (ReadOnly): The changing DNS name that resolves to the current geo-primary cache among the linked redis caches before or after the Geo Failover.
 * **provisioningState**: string (ReadOnly): Terminal state of the link between primary and secondary redis cache.
 * **serverRole**: 'Primary' | 'Secondary' (Required): Role of the linked server.
+
+## RedisRebootParameters
+### Properties
+* **ports**: int[]: A list of redis instances to reboot, specified by per-instance SSL ports or non-SSL ports.
+* **rebootType**: 'AllNodes' | 'PrimaryNode' | 'SecondaryNode' | string: Which Redis node(s) to reboot. Depending on this value data loss is possible.
+* **shardId**: int: If clustering is enabled, the ID of the shard to be rebooted.
+
+## RedisRegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' (Required): The Redis access key to regenerate.
 
 ## ScheduleEntries
 ### Properties

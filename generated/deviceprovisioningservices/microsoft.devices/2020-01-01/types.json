@@ -692,11 +692,181 @@
   },
   {
     "$type": "ObjectType",
+    "name": "VerificationCodeResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Request etag."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationCodeResponseProperties",
+    "properties": {
+      "verificationCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Verification code."
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate subject."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Code expiry."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate thumbprint."
+      },
+      "isVerified": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicate if the certificate is verified by owner of private key."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate created time."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate updated time."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateVerificationCode",
+    "resourceType": "Microsoft.Devices/provisioningServices/certificates",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationCodeRequest",
+    "properties": {
+      "certificate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "base-64 representation of X509 certificate .cer file or just .pem file content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "properties of a certificate"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verify",
+    "resourceType": "Microsoft.Devices/provisioningServices/certificates",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/60"
+    },
+    "input": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/63"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -722,7 +892,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices",
     "apiVersion": "2020-01-01",
     "output": {
-      "$ref": "#/56"
+      "$ref": "#/62"
     }
   },
   {

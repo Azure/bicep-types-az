@@ -144,6 +144,16 @@
 * **properties**: [WorkloadNetworkVMGroupProperties](#workloadnetworkvmgroupproperties): VM Group properties.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkQuotaAvailability (Microsoft.AVS/locations@2020-07-17-preview)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2020-07-17-preview
+* **Output**: [Quota](#quota)
+
+## Function checkTrialAvailability (Microsoft.AVS/locations@2020-07-17-preview)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2020-07-17-preview
+* **Output**: [Trial](#trial)
+
 ## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-07-17-preview)
 * **Resource**: Microsoft.AVS/privateClouds
 * **ApiVersion**: 2020-07-17-preview
@@ -238,6 +248,16 @@
 * **vcenterPassword**: string {sensitive}: Optionally, set the vCenter admin password when the private cloud is created
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
 
+## Quota
+### Properties
+* **hostsRemaining**: [QuotaHostsRemaining](#quotahostsremaining) (ReadOnly): Remaining hosts quota by sku type
+* **quotaEnabled**: 'Disabled' | 'Enabled' | string (ReadOnly): Host quota is active for current subscription
+
+## QuotaHostsRemaining
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
@@ -246,6 +266,11 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the SKU.
+
+## Trial
+### Properties
+* **availableHosts**: int (ReadOnly): Number of trial hosts available
+* **status**: 'TrialAvailable' | 'TrialDisabled' | 'TrialUsed' | string (ReadOnly): Trial status
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType

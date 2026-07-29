@@ -60,6 +60,42 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevHub/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.DevHub/iacProfiles@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/iacProfiles
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [ExportTemplateRequest](#exporttemplaterequest)
+* **Output**: [PrLinkResponse](#prlinkresponse)
+
+## Function generate (Microsoft.DevHub/templates/versions@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/templates/versions
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [DictionaryOfString](#dictionaryofstring)
+* **Output**: [GenerateVersionedTemplateResponse](#generateversionedtemplateresponse)
+
+## Function generatePreviewArtifacts (Microsoft.DevHub/locations@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/locations
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [ArtifactGenerationProperties](#artifactgenerationproperties)
+* **Output**: [DictionaryOfString](#dictionaryofstring)
+
+## Function getADOOAuthInfo (Microsoft.DevHub/locations/adooauth@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/locations/adooauth
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [AdooAuthCallRequest](#adooauthcallrequest)
+* **Output**: [AdooAuthInfoResponse](#adooauthinforesponse)
+
+## Function getGitHubOAuthInfo (Microsoft.DevHub/locations/githuboauth@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/locations/githuboauth
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [GitHubOAuthCallRequest](#githuboauthcallrequest)
+* **Output**: [GitHubOAuthInfoResponse](#githuboauthinforesponse)
+
+## Function scale (Microsoft.DevHub/iacProfiles@2025-03-01-preview)
+* **Resource**: Microsoft.DevHub/iacProfiles
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [ScaleTemplateRequest](#scaletemplaterequest)
+* **Output**: [PrLinkResponse](#prlinkresponse)
+
 ## ACR
 ### Properties
 * **acrRegistryName**: string: ACR registry
@@ -70,6 +106,15 @@
 ## AdooAuth
 ### Properties
 * **username**: string: user making request
+
+## AdooAuthCallRequest
+### Properties
+* **redirectUrl**: string: The URL the client will redirect to on successful authentication. If empty, no redirect will occur.
+
+## AdooAuthInfoResponse
+### Properties
+* **authURL**: string: URL used to authorize ADO app using Entra ID
+* **token**: string: OAuth token used to make calls to ADO APIs
 
 ## ADOProviderProfile
 ### Properties
@@ -130,6 +175,42 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DictionaryOfString
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DictionaryOfString
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ExportTemplateRequest
+### Properties
+* **instanceName**: string
+* **instanceStage**: string
+* **resourceGroupIds**: string[]
+* **siteId**: string
+* **templateName**: string: Template Name
+
+## GenerateVersionedTemplateResponse
+### Properties
+* **generatedFiles**: [GenerateVersionedTemplateResponseGeneratedFiles](#generateversionedtemplateresponsegeneratedfiles): files returned as a map<path string,content string>
+
+## GenerateVersionedTemplateResponseGeneratedFiles
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GitHubOAuthCallRequest
+### Properties
+* **redirectUrl**: string: The URL the client will redirect to on successful authentication. If empty, no redirect will occur.
+
+## GitHubOAuthInfoResponse
+### Properties
+* **authURL**: string: URL for authorizing the Developer Hub GitHub App
+* **token**: string: OAuth token used to make calls to GitHub
 
 ## GitHubProviderProfile
 ### Properties
@@ -216,11 +297,26 @@
 * **referenceParameter**: string: The Parameter to reference a value from.
 * **value**: string: The default value for this parameter.
 
+## PrLinkResponse
+### Properties
+* **prLink**: string: The link of the pull request.
+
 ## PullRequest
 ### Properties
 * **prStatus**: 'merged' | 'removed' | 'submitted' | 'unknown' | string (ReadOnly): The status of the Pull Request submitted against the users repository.
 * **prURL**: string (ReadOnly): The URL to the Pull Request submitted against the users repository.
 * **pullNumber**: int (ReadOnly): The number associated with the submitted pull request.
+
+## ScaleProperty
+### Properties
+* **numberOfStore**: int: Number of the store
+* **region**: string: The region of the store
+* **stage**: string: The stage of the store
+
+## ScaleTemplateRequest
+### Properties
+* **scaleRequirement**: [ScaleProperty](#scaleproperty)[]
+* **templateName**: string: Template Name
 
 ## StageProperties
 ### Properties

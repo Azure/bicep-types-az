@@ -864,5 +864,77 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecRequest",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The command to be executed."
+      },
+      "terminalSize": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The size of the terminal."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecRequestTerminalSize",
+    "properties": {
+      "rows": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The row size of the terminal"
+      },
+      "cols": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The column size of the terminal"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecResponse",
+    "properties": {
+      "webSocketUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri for the exec websocket."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password to start the exec command."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exec",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
+    "apiVersion": "2018-02-01-preview",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
   }
 ]

@@ -5461,16 +5461,345 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "ConfigurationGroupSchemaVersionUpdateState",
+    "properties": {
+      "versionState": {
+        "type": {
+          "$ref": "#/452"
+        },
+        "flags": 0,
+        "description": "The configuration group schema state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprecated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/446"
+      },
+      {
+        "$ref": "#/447"
+      },
+      {
+        "$ref": "#/448"
+      },
+      {
+        "$ref": "#/449"
+      },
+      {
+        "$ref": "#/450"
+      },
+      {
+        "$ref": "#/451"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateState",
+    "resourceType": "Microsoft.HybridNetwork/publishers/configurationGroupSchemas",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/445"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteRequestParameters",
+    "properties": {
+      "serviceEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The endpoint of service to call."
+      },
+      "requestMetadata": {
+        "type": {
+          "$ref": "#/455"
+        },
+        "flags": 1,
+        "description": "The request metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestMetadata",
+    "properties": {
+      "relativePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The relative path of the request."
+      },
+      "httpMethod": {
+        "type": {
+          "$ref": "#/462"
+        },
+        "flags": 1,
+        "description": "The http method of the request."
+      },
+      "serializedBody": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The serialized body of the request."
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The api version of the request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Post"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Put"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Get"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/456"
+      },
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/458"
+      },
+      {
+        "$ref": "#/459"
+      },
+      {
+        "$ref": "#/460"
+      },
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFunctionDefinitionVersionUpdateState",
+    "properties": {
+      "versionState": {
+        "type": {
+          "$ref": "#/470"
+        },
+        "flags": 0,
+        "description": "The network function definition version state. Only the 'Active' and 'Deprecated' states are allowed for updates. Other states are used for internal state transitioning."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprecated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/465"
+      },
+      {
+        "$ref": "#/466"
+      },
+      {
+        "$ref": "#/467"
+      },
+      {
+        "$ref": "#/468"
+      },
+      {
+        "$ref": "#/469"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateState",
+    "resourceType": "Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/463"
+    },
+    "input": {
+      "$ref": "#/463"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkServiceDesignVersionUpdateState",
+    "properties": {
+      "versionState": {
+        "type": {
+          "$ref": "#/479"
+        },
+        "flags": 0,
+        "description": "The network service design version state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprecated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
+      },
+      {
+        "$ref": "#/475"
+      },
+      {
+        "$ref": "#/476"
+      },
+      {
+        "$ref": "#/477"
+      },
+      {
+        "$ref": "#/478"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateState",
+    "resourceType": "Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/472"
+    },
+    "input": {
+      "$ref": "#/472"
+    }
+  },
+  {
     "$type": "DiscriminatedObjectType",
     "name": "ArtifactAccessCredential",
     "discriminator": "credentialType",
     "baseProperties": {},
     "elements": {
       "AzureContainerRegistryScopedToken": {
-        "$ref": "#/446"
+        "$ref": "#/482"
       },
       "AzureStorageAccountToken": {
-        "$ref": "#/449"
+        "$ref": "#/485"
       }
     }
   },
@@ -5501,7 +5830,7 @@
       },
       "repositories": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/483"
         },
         "flags": 0,
         "description": "The repositories that could be accessed using the current credential."
@@ -5515,7 +5844,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/448"
+          "$ref": "#/484"
         },
         "flags": 1,
         "description": "The credential type."
@@ -5545,7 +5874,7 @@
       },
       "containerCredentials": {
         "type": {
-          "$ref": "#/451"
+          "$ref": "#/487"
         },
         "flags": 0,
         "description": "The containers that could be accessed using the current credential."
@@ -5559,7 +5888,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/452"
+          "$ref": "#/488"
         },
         "flags": 1,
         "description": "The credential type."
@@ -5589,7 +5918,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/450"
+      "$ref": "#/486"
     }
   },
   {
@@ -5602,7 +5931,82 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/481"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactManifestUpdateState",
+    "properties": {
+      "artifactManifestState": {
+        "type": {
+          "$ref": "#/497"
+        },
+        "flags": 0,
+        "description": "The artifact manifest state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Uploading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Uploaded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/491"
+      },
+      {
+        "$ref": "#/492"
+      },
+      {
+        "$ref": "#/493"
+      },
+      {
+        "$ref": "#/494"
+      },
+      {
+        "$ref": "#/495"
+      },
+      {
+        "$ref": "#/496"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateState",
+    "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/490"
+    },
+    "input": {
+      "$ref": "#/490"
     }
   }
 ]

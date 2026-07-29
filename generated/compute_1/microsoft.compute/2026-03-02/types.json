@@ -3232,5 +3232,349 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrantAccessData",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 1,
+        "description": "The Access Level, accepted values include None, Read, Write."
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "Time duration in seconds until the SAS access expires."
+      },
+      "getSecureVMGuestStateSAS": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Set this flag to true to get additional SAS for VM guest state"
+      },
+      "fileFormat": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Used to specify the file format when making request for SAS on a VHDX file format snapshot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Write"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHDX"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUri",
+    "properties": {
+      "accessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a disk."
+      },
+      "securityDataAccessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a VM guest state."
+      },
+      "securityMetadataAccessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a VM metadata."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicyData",
+    "properties": {
+      "immutabilityDurationDays": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 1,
+        "description": "The immutability duration for the snapshot, in number of days."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 1,
+        "description": "The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Snapshot",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Snapshot resource properties."
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unused. Always Null."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 0,
+        "description": "The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot"
+      },
+      "extendedLocation": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The extended location where the snapshot will be created. Extended location cannot be changed."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateImmutabilityPolicy",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/245"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicyLockData",
+    "properties": {
+      "immutabilityDurationDays": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 1,
+        "description": "The immutability duration for the snapshot, in number of days."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 1,
+        "description": "The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateImmutabilityPolicyLock",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/252"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/234"
+    }
   }
 ]

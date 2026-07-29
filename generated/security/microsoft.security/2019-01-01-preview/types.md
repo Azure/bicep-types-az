@@ -89,6 +89,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Security/automations@2019-01-01-preview)
+* **Resource**: Microsoft.Security/automations
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [Automation](#automation)
+* **Output**: [AutomationValidationStatus](#automationvalidationstatus)
+
 ## AdditionalData
 * **Discriminator**: assessedResourceType
 
@@ -144,6 +150,17 @@
 * **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
 * **description**: string: Human readable description of the assessment status
 
+## Automation
+### Properties
+* **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
+* **id**: string (ReadOnly): Resource Id
+* **kind**: string: Kind of the resource
+* **location**: string: Location where the resource is stored
+* **name**: string (ReadOnly): Resource name
+* **properties**: [AutomationProperties](#automationproperties): Security automation data
+* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
+* **type**: string (ReadOnly): Resource type
+
 ## AutomationAction
 * **Discriminator**: actionType
 
@@ -196,6 +213,11 @@
 * **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith' | string: A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+
+## AutomationValidationStatus
+### Properties
+* **isValid**: bool: Indicates whether the model is valid or not.
+* **message**: string: The validation message.
 
 ## CommonResourceDetails
 * **Discriminator**: source
@@ -335,6 +357,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Tags
 ### Properties

@@ -26,6 +26,11 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2017-08-21-preview
+* **Output**: [VerificationCodeResponse](#verificationcoderesponse)
+
 ## Function listkeys (Microsoft.Devices/provisioningServices@2017-08-21-preview)
 * **Resource**: Microsoft.Devices/provisioningServices
 * **ApiVersion**: 2017-08-21-preview
@@ -36,6 +41,12 @@
 * **ApiVersion**: 2017-08-21-preview
 * **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
 
+## Function verify (Microsoft.Devices/provisioningServices/certificates@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2017-08-21-preview
+* **Input**: [VerificationCodeRequest](#verificationcoderequest)
+* **Output**: [CertificateResponse](#certificateresponse)
+
 ## CertificateProperties
 ### Properties
 * **created**: string (ReadOnly): The certificate's creation date and time.
@@ -44,6 +55,14 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## CertificateResponse
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificateProperties](#certificateproperties): The description of an X509 CA Certificate.
+* **type**: string (ReadOnly): The resource type.
 
 ## IotDpsPropertiesDescription
 ### Properties
@@ -86,4 +105,20 @@
 ### Properties
 * **nextLink**: string (ReadOnly)
 * **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
+
+## VerificationCodeRequest
+### Properties
+* **certificate**: string
+
+## VerificationCodeResponse
+### Properties
+* **created**: string: Certificate created time.
+* **etag**: string: Request etag.
+* **expiry**: string: Code expiry.
+* **isVerified**: bool: Indicate if the certificate is verified by owner of private key.
+* **name**: string: Name of certificate.
+* **subject**: string: Certificate subject.
+* **thumbprint**: string: Certificate thumbprint.
+* **updated**: string: Certificate updated time.
+* **verificationCode**: string: Verification code.
 

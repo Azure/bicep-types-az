@@ -2859,6 +2859,83 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateAccessKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/185"
+    },
+    "input": {
+      "$ref": "#/187"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverPropertiesProperties",
+    "properties": {
+      "IsSafeFailover": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
@@ -2878,11 +2955,35 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/185"
+    },
+    "input": {
+      "$ref": "#/187"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2021-06-01-preview",
     "output": {
       "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/185"
+    },
+    "input": {
+      "$ref": "#/187"
     }
   }
 ]

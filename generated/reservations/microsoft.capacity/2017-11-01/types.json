@@ -1132,5 +1132,110 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitProperties",
+    "properties": {
+      "quantities": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "List of the quantities in the new reservations to create."
+      },
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "split",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2017-11-01",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeProperties",
+    "properties": {
+      "sources": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "merge",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2017-11-01",
+    "output": {
+      "$ref": "#/127"
+    },
+    "input": {
+      "$ref": "#/124"
+    }
   }
 ]

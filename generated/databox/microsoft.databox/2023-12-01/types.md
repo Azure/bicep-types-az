@@ -15,10 +15,40 @@
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function availableSkus (Microsoft.DataBox/locations@2023-12-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2023-12-01
+* **Input**: [AvailableSkuRequest](#availableskurequest)
+* **Output**: [AvailableSkusResult](#availableskusresult)
+
+## Function bookShipmentPickUp (Microsoft.DataBox/jobs@2023-12-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2023-12-01
+* **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
+* **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2023-12-01)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2023-12-01
 * **Output**: [UnencryptedCredentialsList](#unencryptedcredentialslist)
+
+## Function regionConfiguration (Microsoft.DataBox/locations@2023-12-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2023-12-01
+* **Input**: [RegionConfigurationRequest](#regionconfigurationrequest)
+* **Output**: [RegionConfigurationResponse](#regionconfigurationresponse)
+
+## Function validateAddress (Microsoft.DataBox/locations@2023-12-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2023-12-01
+* **Input**: [ValidateAddress](#validateaddress)
+* **Output**: [AddressValidationOutput](#addressvalidationoutput)
+
+## Function validateInputs (Microsoft.DataBox/locations@2023-12-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2023-12-01
+* **Input**: [ValidationRequest](#validationrequest)
+* **Output**: [ValidationResponse](#validationresponse)
 
 ## AccountCredentialDetails
 ### Properties
@@ -32,10 +62,33 @@
 * **info**: any: Additional information of the type of error.
 * **type**: string: Type of error (e.g. CustomerIntervention, PolicyViolation, SecurityViolation).
 
+## AddressValidationOutput
+### Properties
+* **properties**: [AddressValidationProperties](#addressvalidationproperties) (ReadOnly): The address validation properties.
+
+## AddressValidationProperties
+### Properties
+* **alternateAddresses**: [ShippingAddress](#shippingaddress)[] (ReadOnly): List of alternate addresses.
+* **error**: [CloudError](#clouderror) (ReadOnly): Error code and message of validation response.
+* **validationStatus**: 'Ambiguous' | 'Invalid' | 'Valid' (ReadOnly): The address validation status.
+* **validationType**: 'ValidateAddress' | 'ValidateCreateOrderLimit' | 'ValidateDataTransferDetails' | 'ValidatePreferences' | 'ValidateSkuAvailability' | 'ValidateSubscriptionIsAllowedToCreateJob' (Required): Identifies the type of validation response.
+
 ## ApplianceNetworkConfiguration
 ### Properties
 * **macAddress**: string (ReadOnly): Mac Address.
 * **name**: string (ReadOnly): Name of the network.
+
+## AvailableSkuRequest
+### Properties
+* **country**: string (Required): ISO country code. Country for hardware shipment. For codes check: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+* **location**: string (Required): Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01
+* **skuNames**: ('DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy')[]: Sku Names to filter for available skus
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
+
+## AvailableSkusResult
+### Properties
+* **nextLink**: string: Link for the next set of skus.
+* **value**: [SkuInformation](#skuinformation)[] (ReadOnly): List of available skus.
 
 ## AzureFileFilterDetails
 ### Properties
@@ -245,6 +298,11 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **encodedValidationCertPubKey**: string (ReadOnly): The base 64 encoded public key to authenticate with the device
 * **networkConfigurations**: [ApplianceNetworkConfiguration](#appliancenetworkconfiguration)[] (ReadOnly): Network configuration of the appliance.
 
+## DatacenterAddressRequest
+### Properties
+* **skuName**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Sku Name for which the data center address requested.
+* **storageLocation**: string (Required): Storage location. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01
+
 ## DatacenterAddressResponse
 * **Discriminator**: datacenterAddressType
 
@@ -286,10 +344,27 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **accountDetails**: [DataAccountDetails](#dataaccountdetails) (Required): Account details of the data to be transferred
 * **logCollectionLevel**: 'Error' | 'Verbose': Level of the logs to be collected.
 
+## DataLocationToServiceLocationMap
+### Properties
+* **dataLocation**: string (ReadOnly): Location of the data.
+* **serviceLocation**: string (ReadOnly): Location of the service.
+
 ## DcAccessSecurityCode
 ### Properties
 * **forwardDCAccessCode**: string: Forward Dc access security code.
 * **reverseDCAccessCode**: string: Reverse Dc access security code.
+
+## DeviceCapabilityDetails
+### Properties
+* **hardwareEncryption**: 'Disabled' | 'Enabled' (ReadOnly): Hardware encryption support for a given sku for a given region.
+
+## DeviceCapabilityRequest
+### Properties
+* **skuName**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy': Type of the device.
+
+## DeviceCapabilityResponse
+### Properties
+* **deviceCapabilityDetails**: [DeviceCapabilityDetails](#devicecapabilitydetails)[] (ReadOnly): List of device capabilities available for a given region and a given sku
 
 ## DeviceErasureDetails
 ### Properties
@@ -501,6 +576,20 @@ possibility is that mitigation might happen by customer or service or by ops
 * **storageAccountAccessTierPreferences**: 'Archive'[]: Preferences related to the Access Tier of storage accounts.
 * **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku.
 
+## RegionConfigurationRequest
+### Properties
+* **datacenterAddressRequest**: [DatacenterAddressRequest](#datacenteraddressrequest): Request body to get the datacenter address for given sku.
+* **deviceCapabilityRequest**: [DeviceCapabilityRequest](#devicecapabilityrequest): Request body to get the device capabilities for a given sku.
+* **scheduleAvailabilityRequest**: [ScheduleAvailabilityRequest](#scheduleavailabilityrequest): Request body to get the availability for scheduling orders.
+* **transportAvailabilityRequest**: [TransportAvailabilityRequest](#transportavailabilityrequest): Request body to get the transport availability for given sku.
+
+## RegionConfigurationResponse
+### Properties
+* **datacenterAddressResponse**: [DatacenterAddressResponse](#datacenteraddressresponse) (ReadOnly): Datacenter address for given sku in a region.
+* **deviceCapabilityResponse**: [DeviceCapabilityResponse](#devicecapabilityresponse) (ReadOnly): Device capabilities available for a given sku in a region.
+* **scheduleAvailabilityResponse**: [ScheduleAvailabilityResponse](#scheduleavailabilityresponse) (ReadOnly): Schedule availability for given sku in a region.
+* **transportAvailabilityResponse**: [TransportAvailabilityResponse](#transportavailabilityresponse) (ReadOnly): Transport options available for given sku in a region.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Service Principal Id backing the Msi
@@ -525,6 +614,31 @@ possibility is that mitigation might happen by customer or service or by ops
 Read only field
 * **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address where customer wishes to receive the device.
 
+## ScheduleAvailabilityRequest
+* **Discriminator**: skuName
+
+### Base Properties
+* **country**: string: Country in which storage location should be supported.
+* **storageLocation**: string (Required): Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01
+
+### DataBoxScheduleAvailabilityRequest
+#### Properties
+* **skuName**: 'DataBox' (Required): Sku Name for which the order is to be scheduled.
+
+### DiskScheduleAvailabilityRequest
+#### Properties
+* **expectedDataSizeInTeraBytes**: int (Required): The expected size of the data, which needs to be transferred in this job, in terabytes.
+* **skuName**: 'DataBoxDisk' (Required): Sku Name for which the order is to be scheduled.
+
+### HeavyScheduleAvailabilityRequest
+#### Properties
+* **skuName**: 'DataBoxHeavy' (Required): Sku Name for which the order is to be scheduled.
+
+
+## ScheduleAvailabilityResponse
+### Properties
+* **availableDates**: string[] (ReadOnly): List of dates available to schedule
+
 ## ShareCredentialDetails
 ### Properties
 * **password**: string (ReadOnly): Password for the share.
@@ -532,6 +646,17 @@ Read only field
 * **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
 * **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
+
+## ShipmentPickUpRequest
+### Properties
+* **endTime**: string (Required): Maximum date before which the pick up should commence, this must be in local time of pick up area.
+* **shipmentLocation**: string (Required): Shipment Location in the pickup place. Eg.front desk
+* **startTime**: string (Required): Minimum date after which the pick up should commence, this must be in local time of pick up area.
+
+## ShipmentPickUpResponse
+### Properties
+* **confirmationNumber**: string (ReadOnly): Confirmation number for the pick up request.
+* **readyByTime**: string (ReadOnly): Time by which shipment should be ready for pick up, this is in local time of pick up area.
 
 ## ShippingAddress
 ### Properties
@@ -553,6 +678,34 @@ Read only field
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
 * **name**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
+
+## SkuCapacity
+### Properties
+* **maximum**: string (ReadOnly): Maximum capacity in TB.
+* **usable**: string (ReadOnly): Usable capacity in TB.
+
+## SkuCost
+### Properties
+* **meterId**: string (ReadOnly): Meter id of the Sku.
+* **meterType**: string (ReadOnly): The type of the meter.
+* **multiplier**: int (ReadOnly): Multiplier specifies the region specific value to be multiplied with 1$ guid. Eg: Our new regions will be using 1$ shipping guid with appropriate multiplier specific to region.
+
+## SkuInformation
+### Properties
+* **enabled**: bool (ReadOnly): The sku is enabled or not.
+* **properties**: [SkuProperties](#skuproperties) (ReadOnly): Properties of the sku.
+* **sku**: [Sku](#sku) (ReadOnly): The Sku.
+
+## SkuProperties
+### Properties
+* **apiVersions**: string[] (ReadOnly): Api versions that support this Sku.
+* **capacity**: [SkuCapacity](#skucapacity) (ReadOnly): Capacity of the Sku.
+* **costs**: [SkuCost](#skucost)[] (ReadOnly): Cost of the Sku.
+* **countriesWithinCommerceBoundary**: string[] (ReadOnly): List of all the Countries in the SKU specific commerce boundary
+* **dataLocationToServiceLocationMap**: [DataLocationToServiceLocationMap](#datalocationtoservicelocationmap)[] (ReadOnly): The map of data location to service location.
+* **disabledReason**: 'Country' | 'Feature' | 'NoSubscriptionInfo' | 'None' | 'OfferType' | 'Region' (ReadOnly): Reason why the Sku is disabled.
+* **disabledReasonMessage**: string (ReadOnly): Message for why the Sku is disabled.
+* **requiredFeature**: string (ReadOnly): Required feature to access the sku.
 
 ## SystemData
 ### Properties
@@ -590,6 +743,18 @@ Read only field
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
 * **filterFileDetails**: [FilterFileDetails](#filterfiledetails)[]: Details of the filter files to be used for data transfer.
 
+## TransportAvailabilityDetails
+### Properties
+* **shipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (ReadOnly): Transport Shipment Type supported for given region.
+
+## TransportAvailabilityRequest
+### Properties
+* **skuName**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy': Type of the device.
+
+## TransportAvailabilityResponse
+### Properties
+* **transportAvailabilityDetails**: [TransportAvailabilityDetails](#transportavailabilitydetails)[] (ReadOnly): List of transport availability details for given region
+
 ## TransportPreferences
 ### Properties
 * **isUpdated**: bool (ReadOnly): Read only property which indicates whether transport preferences has been updated or not after device is prepared.
@@ -613,4 +778,113 @@ Read only field
 ## UserAssignedProperties
 ### Properties
 * **resourceId**: string: Arm resource id for user assigned identity to be used to fetch MSI token.
+
+## ValidateAddress
+### Properties
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address of the customer.
+* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku.
+* **validationType**: 'ValidateAddress' | 'ValidateCreateOrderLimit' | 'ValidateDataTransferDetails' | 'ValidatePreferences' | 'ValidateSkuAvailability' | 'ValidateSubscriptionIsAllowedToCreateJob' (Required): Identifies the type of validation request.
+
+## ValidationInputRequest
+* **Discriminator**: validationType
+
+### Base Properties
+
+### ValidateAddress
+#### Properties
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address of the customer.
+* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku.
+* **validationType**: 'ValidateAddress' (Required): Identifies the type of validation request.
+
+### CreateOrderLimitForSubscriptionValidationRequest
+#### Properties
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **validationType**: 'ValidateCreateOrderLimit' (Required): Identifies the type of validation request.
+
+### DataTransferDetailsValidationRequest
+#### Properties
+* **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]: List of DataTransfer details to be used to export data from azure.
+* **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]: List of DataTransfer details to be used to import data to azure.
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
+* **validationType**: 'ValidateDataTransferDetails' (Required): Identifies the type of validation request.
+
+### PreferencesValidationRequest
+#### Properties
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **preference**: [Preferences](#preferences): Preference of transport and data center.
+* **validationType**: 'ValidatePreferences' (Required): Identifies the type of validation request.
+
+### SkuAvailabilityValidationRequest
+#### Properties
+* **country**: string (Required): ISO country code. Country for hardware shipment. For codes check: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+* **deviceType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **location**: string (Required): Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
+* **validationType**: 'ValidateSkuAvailability' (Required): Identifies the type of validation request.
+
+### SubscriptionIsAllowedToCreateJobValidationRequest
+#### Properties
+* **validationType**: 'ValidateSubscriptionIsAllowedToCreateJob' (Required): Identifies the type of validation request.
+
+
+## ValidationInputResponse
+* **Discriminator**: validationType
+
+### Base Properties
+* **error**: [CloudError](#clouderror) (ReadOnly): Error code and message of validation response.
+
+### AddressValidationProperties
+#### Properties
+* **alternateAddresses**: [ShippingAddress](#shippingaddress)[] (ReadOnly): List of alternate addresses.
+* **validationStatus**: 'Ambiguous' | 'Invalid' | 'Valid' (ReadOnly): The address validation status.
+* **validationType**: 'ValidateAddress' (Required): Identifies the type of validation response.
+
+### CreateOrderLimitForSubscriptionValidationResponseProperties
+#### Properties
+* **status**: 'Invalid' | 'Skipped' | 'Valid' (ReadOnly): Create order limit validation status.
+* **validationType**: 'ValidateCreateOrderLimit' (Required): Identifies the type of validation response.
+
+### DataTransferDetailsValidationResponseProperties
+#### Properties
+* **status**: 'Invalid' | 'Skipped' | 'Valid' (ReadOnly): Data transfer details validation status.
+* **validationType**: 'ValidateDataTransferDetails' (Required): Identifies the type of validation response.
+
+### PreferencesValidationResponseProperties
+#### Properties
+* **status**: 'Invalid' | 'Skipped' | 'Valid' (ReadOnly): Validation status of requested data center and transport.
+* **validationType**: 'ValidatePreferences' (Required): Identifies the type of validation response.
+
+### SkuAvailabilityValidationResponseProperties
+#### Properties
+* **status**: 'Invalid' | 'Skipped' | 'Valid' (ReadOnly): Sku availability validation status.
+* **validationType**: 'ValidateSkuAvailability' (Required): Identifies the type of validation response.
+
+### SubscriptionIsAllowedToCreateJobValidationResponseProperties
+#### Properties
+* **status**: 'Invalid' | 'Skipped' | 'Valid' (ReadOnly): Validation status of subscription permission to create job.
+* **validationType**: 'ValidateSubscriptionIsAllowedToCreateJob' (Required): Identifies the type of validation response.
+
+
+## ValidationRequest
+* **Discriminator**: validationCategory
+
+### Base Properties
+* **individualRequestDetails**: [ValidationInputRequest](#validationinputrequest)[] (Required): List of request details contain validationType and its request as key and value respectively.
+
+### CreateJobValidations
+#### Properties
+* **validationCategory**: 'JobCreationValidation' (Required): Identify the nature of validation.
+
+
+## ValidationResponse
+### Properties
+* **properties**: [ValidationResponseProperties](#validationresponseproperties) (ReadOnly): Properties of pre job creation validation response.
+
+## ValidationResponseProperties
+### Properties
+* **individualResponseDetails**: [ValidationInputResponse](#validationinputresponse)[] (ReadOnly): List of response details contain validationType and its response as key and value respectively.
+* **status**: 'AllValidToProceed' | 'CertainInputValidationsSkipped' | 'InputsRevisitRequired' (ReadOnly): Overall validation status.
 

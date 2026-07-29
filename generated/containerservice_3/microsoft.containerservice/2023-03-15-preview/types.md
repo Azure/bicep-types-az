@@ -43,6 +43,16 @@
 * **ApiVersion**: 2023-03-15-preview
 * **Output**: [FleetCredentialResults](#fleetcredentialresults)
 
+## Function start (Microsoft.ContainerService/fleets/updateRuns@2023-03-15-preview)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2023-03-15-preview
+* **Output**: [UpdateRun](#updaterun)
+
+## Function stop (Microsoft.ContainerService/fleets/updateRuns@2023-03-15-preview)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2023-03-15-preview
+* **Output**: [UpdateRun](#updaterun)
+
 ## ErrorAdditionalInfo
 ### Properties
 * **info**: any (ReadOnly): The additional info.
@@ -122,6 +132,15 @@ It must match a group name of an existing fleet member.
 * **members**: [MemberUpdateStatus](#memberupdatestatus)[] (ReadOnly): The list of member this UpdateGroup updates.
 * **name**: string (ReadOnly): The name of the UpdateGroup.
 * **status**: [UpdateStatus](#updatestatus) (ReadOnly): The status of the UpdateGroup.
+
+## UpdateRun
+### Properties
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [UpdateRunProperties](#updaterunproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## UpdateRunProperties
 ### Properties

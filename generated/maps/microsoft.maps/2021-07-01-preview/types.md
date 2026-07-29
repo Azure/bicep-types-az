@@ -33,6 +33,12 @@
 * **ApiVersion**: 2021-07-01-preview
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
+## Function regenerateKey (Microsoft.Maps/accounts@2021-07-01-preview)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2021-07-01-preview
+* **Input**: [MapsKeySpecification](#mapskeyspecification)
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
@@ -73,6 +79,10 @@
 * **linkedResources**: [LinkedResource](#linkedresource)[] {maxLength: 10}: Sets the resources to be used for Managed Identities based operations for the Map account resource.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
+
+## MapsKeySpecification
+### Properties
+* **keyType**: 'primary' | 'secondary' | string (Required): Whether the operation refers to the primary or secondary key.
 
 ## Sku
 ### Properties

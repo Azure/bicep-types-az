@@ -29838,6 +29838,697 @@
   },
   {
     "$type": "ObjectType",
+    "name": "QuotaUpdateParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2264"
+        },
+        "flags": 0,
+        "description": "The list for update quota."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Region of workspace quota to be updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBaseProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/2263"
+        },
+        "flags": 0,
+        "description": "An enum describing the unit of quota measurement."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2262"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2261"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotasResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2278"
+        },
+        "flags": 2,
+        "description": "The list of workspace quota update result."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/2268"
+        },
+        "flags": 2,
+        "description": "An enum describing the unit of quota measurement."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2277"
+        },
+        "flags": 2,
+        "description": "Status of update workspace quota."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2267"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaBelowClusterMinimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaExceedsSubscriptionLimit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidVMFamilyName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotSupportedForSku"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotEnabledForRegion"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2269"
+      },
+      {
+        "$ref": "#/2270"
+      },
+      {
+        "$ref": "#/2271"
+      },
+      {
+        "$ref": "#/2272"
+      },
+      {
+        "$ref": "#/2273"
+      },
+      {
+        "$ref": "#/2274"
+      },
+      {
+        "$ref": "#/2275"
+      },
+      {
+        "$ref": "#/2276"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2266"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateQuotas",
+    "resourceType": "Microsoft.MachineLearningServices/locations",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2265"
+    },
+    "input": {
+      "$ref": "#/2260"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Registry",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "[Required] Additional attributes of the entity."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Managed service identity (system assigned and/or user assigned identities)"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Sku details required for ARM contract for Autoscaling."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2281"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeRegions",
+    "resourceType": "Microsoft.MachineLearningServices/registries",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2280"
+    },
+    "input": {
+      "$ref": "#/2280"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseWorkspaceParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2284"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestProperties",
+    "properties": {
+      "applicationInsights": {
+        "type": {
+          "$ref": "#/2285"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing dependent application insights"
+      },
+      "containerRegistry": {
+        "type": {
+          "$ref": "#/2286"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing dependent container registry"
+      },
+      "dnsResolution": {
+        "type": {
+          "$ref": "#/2287"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing dns resolution"
+      },
+      "keyVault": {
+        "type": {
+          "$ref": "#/2288"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing dependent key vault"
+      },
+      "nsg": {
+        "type": {
+          "$ref": "#/2289"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing network security group"
+      },
+      "others": {
+        "type": {
+          "$ref": "#/2290"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing unclassified category of problems"
+      },
+      "requiredResourceProviders": {
+        "type": {
+          "$ref": "#/2291"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing the presence of required resource providers in the workspace."
+      },
+      "resourceLock": {
+        "type": {
+          "$ref": "#/2292"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing resource lock"
+      },
+      "storageAccount": {
+        "type": {
+          "$ref": "#/2293"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing dependent storage account"
+      },
+      "udr": {
+        "type": {
+          "$ref": "#/2294"
+        },
+        "flags": 0,
+        "description": "Setting for diagnosing user defined routing"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesApplicationInsights",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesContainerRegistry",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesDnsResolution",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesKeyVault",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesNsg",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesOthers",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesRequiredResourceProviders",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesResourceLock",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesStorageAccount",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseRequestPropertiesUdr",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseResponseResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2296"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseResponseResultValue",
+    "properties": {
+      "userDefinedRouteResults": {
+        "type": {
+          "$ref": "#/2302"
+        },
+        "flags": 0
+      },
+      "networkSecurityRuleResults": {
+        "type": {
+          "$ref": "#/2303"
+        },
+        "flags": 0
+      },
+      "resourceLockResults": {
+        "type": {
+          "$ref": "#/2304"
+        },
+        "flags": 0
+      },
+      "dnsResolutionResults": {
+        "type": {
+          "$ref": "#/2305"
+        },
+        "flags": 0
+      },
+      "storageAccountResults": {
+        "type": {
+          "$ref": "#/2306"
+        },
+        "flags": 0
+      },
+      "keyVaultResults": {
+        "type": {
+          "$ref": "#/2307"
+        },
+        "flags": 0
+      },
+      "containerRegistryResults": {
+        "type": {
+          "$ref": "#/2308"
+        },
+        "flags": 0
+      },
+      "applicationInsightsResults": {
+        "type": {
+          "$ref": "#/2309"
+        },
+        "flags": 0
+      },
+      "otherResults": {
+        "type": {
+          "$ref": "#/2310"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseResult",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Code for workspace setup error"
+      },
+      "level": {
+        "type": {
+          "$ref": "#/2301"
+        },
+        "flags": 2,
+        "description": "Level of workspace setup error"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Message of workspace setup error"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2298"
+      },
+      {
+        "$ref": "#/2299"
+      },
+      {
+        "$ref": "#/2300"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2297"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "diagnose",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2295"
+    },
+    "input": {
+      "$ref": "#/2283"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListWorkspaceKeysResult",
     "properties": {
       "appInsightsInstrumentationKey": {
@@ -29849,13 +30540,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/2261"
+          "$ref": "#/2313"
         },
         "flags": 0
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/2264"
+          "$ref": "#/2316"
         },
         "flags": 0
       },
@@ -29888,7 +30579,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/2263"
+          "$ref": "#/2315"
         },
         "flags": 0
       },
@@ -29922,7 +30613,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2262"
+      "$ref": "#/2314"
     }
   },
   {
@@ -29951,7 +30642,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2260"
+      "$ref": "#/2312"
     }
   },
   {
@@ -30014,7 +30705,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2266"
+      "$ref": "#/2318"
     }
   },
   {
@@ -30023,7 +30714,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2264"
+      "$ref": "#/2316"
     }
   },
   {
@@ -30045,7 +30736,16 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2269"
+      "$ref": "#/2321"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepareNotebook",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/133"
     }
   },
   {
@@ -30054,7 +30754,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2289"
+          "$ref": "#/2342"
         },
         "flags": 1,
         "description": "The EndpointModelProperties items on this page"
@@ -30074,20 +30774,20 @@
     "properties": {
       "capabilities": {
         "type": {
-          "$ref": "#/2273"
+          "$ref": "#/2326"
         },
         "flags": 0,
         "description": "The capabilities."
       },
       "deprecation": {
         "type": {
-          "$ref": "#/2274"
+          "$ref": "#/2327"
         },
         "flags": 0
       },
       "finetuneCapabilities": {
         "type": {
-          "$ref": "#/2275"
+          "$ref": "#/2328"
         },
         "flags": 0,
         "description": "The capabilities for finetune models."
@@ -30108,7 +30808,7 @@
       },
       "lifecycleStatus": {
         "type": {
-          "$ref": "#/2278"
+          "$ref": "#/2331"
         },
         "flags": 0,
         "description": "Model lifecycle status."
@@ -30129,7 +30829,7 @@
       },
       "skus": {
         "type": {
-          "$ref": "#/2288"
+          "$ref": "#/2341"
         },
         "flags": 0,
         "description": "The list of Model Sku."
@@ -30198,10 +30898,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2276"
+        "$ref": "#/2329"
       },
       {
-        "$ref": "#/2277"
+        "$ref": "#/2330"
       },
       {
         "$ref": "#/2"
@@ -30214,13 +30914,13 @@
     "properties": {
       "capacity": {
         "type": {
-          "$ref": "#/2280"
+          "$ref": "#/2333"
         },
         "flags": 0
       },
       "connectionIds": {
         "type": {
-          "$ref": "#/2281"
+          "$ref": "#/2334"
         },
         "flags": 0,
         "description": "The list of ARM id for the connection support this SKU."
@@ -30241,7 +30941,7 @@
       },
       "rateLimits": {
         "type": {
-          "$ref": "#/2287"
+          "$ref": "#/2340"
         },
         "flags": 0
       },
@@ -30300,7 +31000,7 @@
       },
       "rules": {
         "type": {
-          "$ref": "#/2286"
+          "$ref": "#/2339"
         },
         "flags": 0,
         "description": "The call rate limit for the model."
@@ -30332,7 +31032,7 @@
       },
       "matchPatterns": {
         "type": {
-          "$ref": "#/2285"
+          "$ref": "#/2338"
         },
         "flags": 0
       },
@@ -30371,31 +31071,31 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2284"
+      "$ref": "#/2337"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2283"
+      "$ref": "#/2336"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2282"
+      "$ref": "#/2335"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2279"
+      "$ref": "#/2332"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2272"
+      "$ref": "#/2325"
     }
   },
   {
@@ -30404,7 +31104,220 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2271"
+      "$ref": "#/2324"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedNetworkProvisionOptions",
+    "properties": {
+      "includeSpark": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provisionManagedNetwork",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/117"
+    },
+    "input": {
+      "$ref": "#/2344"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PendingUploadRequestDto",
+    "properties": {
+      "pendingUploadId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If PendingUploadId = null then random guid will be used."
+      },
+      "pendingUploadType": {
+        "type": {
+          "$ref": "#/2349"
+        },
+        "flags": 0,
+        "description": "Type of storage to use for the pending upload location"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TemporaryBlobReference"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2347"
+      },
+      {
+        "$ref": "#/2348"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PendingUploadResponseDto",
+    "properties": {
+      "blobReferenceForConsumption": {
+        "type": {
+          "$ref": "#/2351"
+        },
+        "flags": 0,
+        "description": "Container level read, write, list SAS"
+      },
+      "pendingUploadId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ID for this upload request"
+      },
+      "pendingUploadType": {
+        "type": {
+          "$ref": "#/2357"
+        },
+        "flags": 0,
+        "description": "Type of storage to use for the pending upload location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobReferenceForConsumptionDto",
+    "properties": {
+      "blobUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Blob URI path for client to upload data.\nExample: https://blob.windows.core.net/Container/Path"
+      },
+      "credential": {
+        "type": {
+          "$ref": "#/2352"
+        },
+        "flags": 0,
+        "description": "Credential info to access storage account"
+      },
+      "storageAccountArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Arm ID of the storage account to use"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "PendingUploadCredentialDto",
+    "discriminator": "credentialType",
+    "baseProperties": {},
+    "elements": {
+      "SAS": {
+        "$ref": "#/2353"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SASCredentialDto",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "Full SAS Uri, including the storage, container/blob path and SAS token"
+      },
+      "credentialType": {
+        "type": {
+          "$ref": "#/2354"
+        },
+        "flags": 1,
+        "description": "[Required] Credential type used to authentication with storage."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TemporaryBlobReference"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2355"
+      },
+      {
+        "$ref": "#/2356"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPendingUpload",
+    "resourceType": "Microsoft.MachineLearningServices/registries/codes/versions",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2350"
+    },
+    "input": {
+      "$ref": "#/2346"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPendingUpload",
+    "resourceType": "Microsoft.MachineLearningServices/registries/data/versions",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2350"
+    },
+    "input": {
+      "$ref": "#/2346"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPendingUpload",
+    "resourceType": "Microsoft.MachineLearningServices/registries/models/versions",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2350"
+    },
+    "input": {
+      "$ref": "#/2346"
     }
   },
   {
@@ -30417,19 +31330,322 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "DestinationAsset",
+    "properties": {
+      "destinationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Destination asset name"
+      },
+      "destinationVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Destination asset version"
+      },
+      "registryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Destination registry name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPendingUpload",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/codes/versions",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2350"
+    },
+    "input": {
+      "$ref": "#/2346"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/531"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineSizeListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2382"
+        },
+        "flags": 0,
+        "description": "The list of virtual machine sizes supported by AmlCompute."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineSize",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the virtual machine size."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The family name of the virtual machine size."
+      },
+      "vCPUs": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The number of vCPUs supported by the virtual machine size."
+      },
+      "gpus": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The number of gPUs supported by the virtual machine size."
+      },
+      "osVhdSizeMB": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The OS VHD disk size, in MB, allowed by the virtual machine size."
+      },
+      "maxResourceVolumeMB": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The resource volume size, in MB, allowed by the virtual machine size."
+      },
+      "memoryGB": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The amount of memory, in GB, supported by the virtual machine size."
+      },
+      "lowPriorityCapable": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Specifies if the virtual machine size supports low priority VMs."
+      },
+      "premiumIO": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Specifies if the virtual machine size supports premium IO."
+      },
+      "estimatedVMPrices": {
+        "type": {
+          "$ref": "#/2367"
+        },
+        "flags": 0,
+        "description": "The estimated price information for using a VM."
+      },
+      "supportedComputeTypes": {
+        "type": {
+          "$ref": "#/2381"
+        },
+        "flags": 0,
+        "description": "Specifies the compute types supported by the virtual machine size."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimatedVMPrices",
+    "properties": {
+      "billingCurrency": {
+        "type": {
+          "$ref": "#/2369"
+        },
+        "flags": 1,
+        "description": "Three lettered code specifying the currency of the VM price. Example: USD"
+      },
+      "unitOfMeasure": {
+        "type": {
+          "$ref": "#/2371"
+        },
+        "flags": 1,
+        "description": "The unit of time measurement for the specified VM price. Example: OneHour"
+      },
+      "values": {
+        "type": {
+          "$ref": "#/2380"
+        },
+        "flags": 1,
+        "description": "The list of estimated prices for using a VM of a particular OS type, tier, etc."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USD"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2368"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneHour"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2370"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimatedVMPrice",
+    "properties": {
+      "retailPrice": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "The price charged for using the VM."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/2375"
+        },
+        "flags": 1,
+        "description": "Operating system type used by the VM."
+      },
+      "vmTier": {
+        "type": {
+          "$ref": "#/2379"
+        },
+        "flags": 1,
+        "description": "The type of the VM."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2373"
+      },
+      {
+        "$ref": "#/2374"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LowPriority"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Spot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2376"
+      },
+      {
+        "$ref": "#/2377"
+      },
+      {
+        "$ref": "#/2378"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2372"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2366"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAllowedVmSizesForResize",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2365"
+    }
+  },
+  {
     "$type": "DiscriminatedObjectType",
     "name": "ComputeSecrets",
     "discriminator": "computeType",
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/2293"
+        "$ref": "#/2385"
       },
       "Databricks": {
-        "$ref": "#/2295"
+        "$ref": "#/2387"
       },
       "VirtualMachine": {
-        "$ref": "#/2297"
+        "$ref": "#/2389"
       }
     }
   },
@@ -30460,7 +31676,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2294"
+          "$ref": "#/2386"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -30484,7 +31700,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2296"
+          "$ref": "#/2388"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -30508,7 +31724,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2298"
+          "$ref": "#/2390"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -30525,7 +31741,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2292"
+      "$ref": "#/2384"
     }
   },
   {
@@ -30534,7 +31750,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/2309"
+          "$ref": "#/2401"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
@@ -30582,7 +31798,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/2308"
+          "$ref": "#/2400"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -30624,22 +31840,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2302"
+        "$ref": "#/2394"
       },
       {
-        "$ref": "#/2303"
+        "$ref": "#/2395"
       },
       {
-        "$ref": "#/2304"
+        "$ref": "#/2396"
       },
       {
-        "$ref": "#/2305"
+        "$ref": "#/2397"
       },
       {
-        "$ref": "#/2306"
+        "$ref": "#/2398"
       },
       {
-        "$ref": "#/2307"
+        "$ref": "#/2399"
       },
       {
         "$ref": "#/2"
@@ -30649,7 +31865,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2301"
+      "$ref": "#/2393"
     }
   },
   {
@@ -30658,7 +31874,26 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2300"
+      "$ref": "#/2392"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/686"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IdleShutdownSetting",
+    "properties": {
+      "idleTimeBeforeShutdown": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time is defined in ISO8601 format. Minimum is 15 min, maximum is 3 days."
+      }
     }
   },
   {
@@ -30707,7 +31942,91 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/connections",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2311"
+      "$ref": "#/2405"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RaiBlocklistItemBulkRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/968"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services RaiBlocklist Item."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2407"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RaiBlocklistItemPropertiesBasicResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/968"
+        },
+        "flags": 1,
+        "description": "RAI Custom Blocklist Item properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2409"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addRaiBlocklistItems",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2410"
+    },
+    "input": {
+      "$ref": "#/2408"
     }
   },
   {
@@ -30737,16 +32056,16 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/2315"
+        "$ref": "#/2414"
       },
       "Certificate": {
-        "$ref": "#/2317"
+        "$ref": "#/2416"
       },
       "Sas": {
-        "$ref": "#/2319"
+        "$ref": "#/2418"
       },
       "ServicePrincipal": {
-        "$ref": "#/2321"
+        "$ref": "#/2420"
       }
     }
   },
@@ -30763,7 +32082,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2316"
+          "$ref": "#/2415"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -30787,7 +32106,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2318"
+          "$ref": "#/2417"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -30811,7 +32130,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2320"
+          "$ref": "#/2419"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -30835,7 +32154,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2322"
+          "$ref": "#/2421"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -30852,10 +32171,10 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2314"
+      "$ref": "#/2413"
     },
     "input": {
-      "$ref": "#/2313"
+      "$ref": "#/2412"
     }
   },
   {
@@ -30864,7 +32183,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/2325"
+          "$ref": "#/2424"
         },
         "flags": 0,
         "description": "Dictionary of Keys for the endpoint."
@@ -30895,7 +32214,436 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/endpoints",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/2324"
+      "$ref": "#/2423"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateServiceAccountKeyContent",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2429"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2427"
+      },
+      {
+        "$ref": "#/2428"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/endpoints",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2424"
+    },
+    "input": {
+      "$ref": "#/2426"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeaturesetVersionBackfillRequest",
+    "properties": {
+      "dataAvailabilityStatus": {
+        "type": {
+          "$ref": "#/2437"
+        },
+        "flags": 0,
+        "description": "Specified the data availability status that you want to backfill"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies description"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies description"
+      },
+      "featureWindow": {
+        "type": {
+          "$ref": "#/2438"
+        },
+        "flags": 0,
+        "description": "Specifies the backfill feature window to be materialized"
+      },
+      "jobId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the jobId to retry the failed materialization"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2439"
+        },
+        "flags": 0,
+        "description": "Specifies the properties"
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/1182"
+        },
+        "flags": 0,
+        "description": "Specifies the compute resource settings"
+      },
+      "sparkConfiguration": {
+        "type": {
+          "$ref": "#/2440"
+        },
+        "flags": 0,
+        "description": "Specifies the spark compute settings"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2441"
+        },
+        "flags": 0,
+        "description": "Specifies the tags"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incomplete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2432"
+      },
+      {
+        "$ref": "#/2433"
+      },
+      {
+        "$ref": "#/2434"
+      },
+      {
+        "$ref": "#/2435"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2436"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureWindow",
+    "properties": {
+      "featureWindowEnd": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the feature window end time"
+      },
+      "featureWindowStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the feature window start time"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeaturesetVersionBackfillRequestProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeaturesetVersionBackfillRequestSparkConfiguration",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeaturesetVersionBackfillRequestTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeaturesetVersionBackfillResponse",
+    "properties": {
+      "jobIds": {
+        "type": {
+          "$ref": "#/2443"
+        },
+        "flags": 0,
+        "description": "List of jobs submitted as part of the backfill request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backfill",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/featuresets/versions",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2442"
+    },
+    "input": {
+      "$ref": "#/2431"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupStatus",
+    "properties": {
+      "actualCapacityInfo": {
+        "type": {
+          "$ref": "#/2446"
+        },
+        "flags": 0,
+        "description": "Gets or sets the actual capacity info for the group."
+      },
+      "endpointCount": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the actual number of endpoints in the group."
+      },
+      "requestedCapacity": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the request number of instances for the group."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActualCapacityInfo",
+    "properties": {
+      "total": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the total number of instances (scale units) regardless of provisioning state or whether current group payload version matches the target group payload."
+      },
+      "succeeded": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of instances (scale units) which have Succeeded provisioning state and target group payload."
+      },
+      "failed": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of instances (scale units) which have Failed provisioning state and have target group payload."
+      },
+      "outdatedSucceeded": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of instances (scale units) which have Succeeded provisioning state but do not have target group payload."
+      },
+      "outdatedFailed": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of instances (scale units) which have Failed provisioning state but do not have target group payload."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStatus",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/inferencePools/groups",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2445"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedNetworkSettingsBasicResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Managed Network settings for a machine learning workspace."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OutboundRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2451"
+        },
+        "flags": 1,
+        "description": "The OutboundRuleBasicResource items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OutboundRuleBasicResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 1,
+        "description": "Outbound Rule for the managed network of a machine learning workspace."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "batchOutboundRules",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/managedNetworks",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2449"
+    },
+    "input": {
+      "$ref": "#/2448"
     }
   },
   {
@@ -30908,12 +32656,176 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateEndpointKeysRequest",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/2457"
+        },
+        "flags": 1,
+        "description": "[Required] Specification for which type of key to generate. Primary or Secondary."
+      },
+      "keyValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The value the key is set to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2455"
+      },
+      {
+        "$ref": "#/2456"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointAuthToken",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "Access token for endpoint authentication."
+      },
+      "expiryTimeUtc": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Access token expiry time (UTC)."
+      },
+      "refreshAfterTimeUtc": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Refresh access token after time (UTC)."
+      },
+      "tokenType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Access token type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "token",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2458"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentLogsRequest",
+    "properties": {
+      "containerType": {
+        "type": {
+          "$ref": "#/2463"
+        },
+        "flags": 0,
+        "description": "The type of container to retrieve logs from."
+      },
+      "tail": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The maximum number of lines to tail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageInitializer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InferenceServer"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2461"
+      },
+      {
+        "$ref": "#/2462"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentLogs",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The retrieved online deployment logs."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLogs",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/2464"
+    },
+    "input": {
+      "$ref": "#/2460"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.MachineLearningServices/workspaces/serverlessEndpoints",
     "apiVersion": "2026-03-15-preview",
     "output": {
       "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/serverlessEndpoints",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/369"
+    },
+    "input": {
+      "$ref": "#/2454"
     }
   }
 ]

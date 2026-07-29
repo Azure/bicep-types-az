@@ -79,6 +79,33 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.StorageSync/locations@2022-06-01)
+* **Resource**: Microsoft.StorageSync/locations
+* **ApiVersion**: 2022-06-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function postbackup (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2022-06-01)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
+* **ApiVersion**: 2022-06-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [PostBackupResponse](#postbackupresponse)
+
+## BackupRequest
+### Properties
+* **azureFileShare**: string: Azure File Share.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (Required): The resource type. Must be set to Microsoft.StorageSync/storageSyncServices
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): Gets the reason that a Storage Sync Service name could not be used. The Reason element is only returned if NameAvailable is false.
+
 ## CloudEndpointChangeEnumerationActivity
 ### Properties
 * **deletesProgressPercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
@@ -165,6 +192,14 @@
 ### Properties
 * **errorCode**: int (ReadOnly): Error code (HResult)
 * **fileCount**: int {minValue: 0} (ReadOnly): Count of files with this error
+
+## PostBackupResponse
+### Properties
+* **backupMetadata**: [PostBackupResponseProperties](#postbackupresponseproperties): Post Backup Response Properties
+
+## PostBackupResponseProperties
+### Properties
+* **cloudEndpointName**: string (ReadOnly): cloud endpoint Name.
 
 ## PrivateEndpoint
 ### Properties

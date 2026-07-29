@@ -55,6 +55,30 @@
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties of the ServerKey Resource.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBForMySql/locations@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql/locations
+* **ApiVersion**: 2020-07-01-preview
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function updateConfigurations (Microsoft.DBForMySql/flexibleServers@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql/flexibleServers
+* **ApiVersion**: 2020-07-01-preview
+* **Input**: [ConfigurationListResult](#configurationlistresult)
+* **Output**: [ConfigurationListResult](#configurationlistresult)
+
+## Configuration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ConfigurationListResult
+### Properties
+* **nextLink**: string: The link used to get the next page of operations.
+* **value**: [Configuration](#configuration)[]: The list of server configurations.
+
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.
@@ -75,6 +99,11 @@
 ## DelegatedSubnetArguments
 ### Properties
 * **subnetArmResourceId**: string: delegated subnet arm resource id.
+
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): name of the subnet
+* **usage**: int (ReadOnly): Number of used delegated subnets
 
 ## FirewallRuleProperties
 ### Properties
@@ -153,4 +182,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkArmResourceId**: string: Virtual network resource id.
+
+## VirtualNetworkSubnetUsageResult
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly): A list of delegated subnet usage
 

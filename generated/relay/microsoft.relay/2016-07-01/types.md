@@ -63,6 +63,21 @@
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function AuthorizationRules (Microsoft.Relay/namespaces@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleListResult](#authorizationrulelistresult)
+
+## Function authorizationRules (Microsoft.Relay/namespaces/HybridConnections@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/HybridConnections
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleListResult](#authorizationrulelistresult)
+
+## Function authorizationRules (Microsoft.Relay/namespaces/WcfRelays@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/WcfRelays
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleListResult](#authorizationrulelistresult)
+
 ## Function listKeys (Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01)
 * **Resource**: Microsoft.Relay/namespaces/AuthorizationRules
 * **ApiVersion**: 2016-07-01
@@ -78,6 +93,31 @@
 * **ApiVersion**: 2016-07-01
 * **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
 
+## Function regenerateKeys (Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/AuthorizationRules
+* **ApiVersion**: 2016-07-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
+## Function regenerateKeys (Microsoft.Relay/namespaces/HybridConnections/authorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/HybridConnections/authorizationRules
+* **ApiVersion**: 2016-07-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
+## Function regenerateKeys (Microsoft.Relay/namespaces/WcfRelays/authorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/WcfRelays/authorizationRules
+* **ApiVersion**: 2016-07-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
+## AuthorizationRule
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
+* **type**: string (ReadOnly): Resource type
+
 ## AuthorizationRuleKeys
 ### Properties
 * **keyName**: string: A string that describes the authorization rule
@@ -85,6 +125,11 @@
 * **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token
 * **secondaryConnectionString**: string: SecondaryConnectionString of the created Namespace AuthorizationRule
 * **secondaryKey**: string: A base64-encoded 256-bit secondary key for signing and validating the SAS token
+
+## AuthorizationRuleListResult
+### Properties
+* **nextLink**: string: Link to the next set of results. Not empty if Value contains incomplete list of AuthorizationRules
+* **value**: [AuthorizationRule](#authorizationrule)[]: Result of the List AuthorizationRules operation.
 
 ## AuthorizationRuleProperties
 ### Properties
@@ -97,6 +142,10 @@
 * **requiresClientAuthorization**: bool: true if client authorization is needed for this HybridConnection; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 * **userMetadata**: string: usermetadata is a placeholder to store user-defined string data for the HybridConnection endpoint.e.g. it can be used to store  descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+
+## RegenerateKeysParameters
+### Properties
+* **policyKey**: 'PrimaryKey' | 'SecondaryKey' | string: Key that needs to be regenerated.
 
 ## RelayNamespaceProperties
 ### Properties

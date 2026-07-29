@@ -36,6 +36,34 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Scom/managedInstances/monitoredResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function linkLogAnalytics (Microsoft.Scom/managedInstances@2023-07-07-preview)
+* **Resource**: Microsoft.Scom/managedInstances
+* **ApiVersion**: 2023-07-07-preview
+* **Input**: [LogAnalyticsConfiguration](#loganalyticsconfiguration)
+* **Output**: [LogAnalyticsConfiguration](#loganalyticsconfiguration)
+
+## Function patchServers (Microsoft.Scom/managedInstances@2023-07-07-preview)
+* **Resource**: Microsoft.Scom/managedInstances
+* **ApiVersion**: 2023-07-07-preview
+* **Output**: [PatchServersResponseProperties](#patchserversresponseproperties)
+
+## Function setServerCount (Microsoft.Scom/managedInstances@2023-07-07-preview)
+* **Resource**: Microsoft.Scom/managedInstances
+* **ApiVersion**: 2023-07-07-preview
+* **Input**: [ScalingProperties](#scalingproperties)
+* **Output**: [SetServerCountResponseProperties](#setservercountresponseproperties)
+
+## Function unlinkLogAnalytics (Microsoft.Scom/managedInstances@2023-07-07-preview)
+* **Resource**: Microsoft.Scom/managedInstances
+* **ApiVersion**: 2023-07-07-preview
+* **Output**: [UnlinkLogAnalyticsResponseProperties](#unlinkloganalyticsresponseproperties)
+
+## Function updateLogAnalytics (Microsoft.Scom/managedInstances@2023-07-07-preview)
+* **Resource**: Microsoft.Scom/managedInstances
+* **ApiVersion**: 2023-07-07-preview
+* **Input**: [LogAnalyticsUpdateConfiguration](#loganalyticsupdateconfiguration)
+* **Output**: [LogAnalyticsUpdateConfiguration](#loganalyticsupdateconfiguration)
+
 ## AzureHybridBenefitProperties
 ### Properties
 * **scomLicenseType**: 'AzureHybridBenefit' | 'None' | string: SCOM license type. Maximize savings by using license you already own
@@ -74,6 +102,10 @@
 * **dataTypes**: ('Audit' | 'Event' | 'Performance' | 'State' | string)[]: The types of data to be ingested to Log Analytics workspace.
 * **importData**: bool: A one-time optional parameter to import data of last 7 days.
 * **workspaceId**: string: The resource ID of the Log Analytics workspace to be used.
+
+## LogAnalyticsUpdateConfiguration
+### Properties
+* **dataTypes**: ('Audit' | 'Event' | 'Performance' | 'State' | string)[]: The types of data to be ingested to Log Analytics workspace.
 
 ## ManagedGatewayProperties
 ### Properties
@@ -141,6 +173,18 @@
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **vNetSubnetId**: string: Virtual Network subnet id on which Aquila instance will be provisioned
 
+## PatchServersResponseProperties
+### Properties
+* **status**: string: Status of the patch operation
+
+## ScalingProperties
+### Properties
+* **serverCount**: int {minValue: 1, maxValue: 100}: Required management server count
+
+## SetServerCountResponseProperties
+### Properties
+* **serverCount**: int: Management server count
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -154,6 +198,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UnlinkLogAnalyticsResponseProperties
+### Properties
+* **status**: string: Status of the unlink operation
 
 ## UserIdentity
 ### Properties

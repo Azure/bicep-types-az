@@ -158,6 +158,65 @@
 * **properties**: [SandboxCustomImageProperties](#sandboxcustomimageproperties): A sandbox custom image.
 * **type**: 'Microsoft.Kusto/clusters/sandboxCustomImages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addPrincipals (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function attachedDatabaseConfigurationCheckNameAvailability (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [AttachedDatabaseConfigurationsCheckNameRequest](#attacheddatabaseconfigurationschecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [CheckNameRequest](#checknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/locations@2023-08-15)
+* **Resource**: Microsoft.Kusto/locations
+* **ApiVersion**: 2023-08-15
+* **Input**: [ClusterCheckNameRequest](#clusterchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DataConnectionCheckNameRequest](#dataconnectionchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkPrincipalAssignmentNameAvailability (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [ClusterPrincipalAssignmentCheckNameRequest](#clusterprincipalassignmentchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkPrincipalAssignmentNameAvailability (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DatabasePrincipalAssignmentCheckNameRequest](#databaseprincipalassignmentchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function dataConnectionValidation (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DataConnectionValidation](#dataconnectionvalidation)
+* **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
+
+## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Output**: [DiagnoseVirtualNetworkResult](#diagnosevirtualnetworkresult)
+
+## Function inviteFollower (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DatabaseInviteFollowerRequest](#databaseinvitefollowerrequest)
+* **Output**: [DatabaseInviteFollowerResult](#databaseinvitefollowerresult)
+
 ## Function listFollowerDatabases (Microsoft.Kusto/clusters@2023-08-15)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2023-08-15
@@ -172,6 +231,30 @@
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2023-08-15
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function managedPrivateEndpointsCheckNameAvailability (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [ManagedPrivateEndpointsCheckNameRequest](#managedprivateendpointschecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function removePrincipals (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function sandboxCustomImagesCheckNameAvailability (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [SandboxCustomImagesCheckNameRequest](#sandboxcustomimageschecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function scriptsCheckNameAvailability (Microsoft.Kusto/clusters/databases@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2023-08-15
+* **Input**: [ScriptCheckNameRequest](#scriptchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
 
 ## AcceptedAudiences
 ### Properties
@@ -188,11 +271,38 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Table level sharing specifications
 
+## AttachedDatabaseConfigurationsCheckNameRequest
+### Properties
+* **name**: string (Required): Attached database resource name.
+* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (Required): The type of resource, for instance Microsoft.Kusto/clusters/attachedDatabaseConfigurations.
+
 ## AzureSku
 ### Properties
 * **capacity**: int: The number of instances of the cluster.
 * **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_D16d_v5' | 'Standard_D32d_v4' | 'Standard_D32d_v5' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16ads_v5' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E16as_v5+3TB_PS' | 'Standard_E16as_v5+4TB_PS' | 'Standard_E16d_v4' | 'Standard_E16d_v5' | 'Standard_E16s_v4+3TB_PS' | 'Standard_E16s_v4+4TB_PS' | 'Standard_E16s_v5+3TB_PS' | 'Standard_E16s_v5+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E2ads_v5' | 'Standard_E2d_v4' | 'Standard_E2d_v5' | 'Standard_E4a_v4' | 'Standard_E4ads_v5' | 'Standard_E4d_v4' | 'Standard_E4d_v5' | 'Standard_E64i_v3' | 'Standard_E80ids_v4' | 'Standard_E8a_v4' | 'Standard_E8ads_v5' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_E8as_v5+1TB_PS' | 'Standard_E8as_v5+2TB_PS' | 'Standard_E8d_v4' | 'Standard_E8d_v5' | 'Standard_E8s_v4+1TB_PS' | 'Standard_E8s_v4+2TB_PS' | 'Standard_E8s_v5+1TB_PS' | 'Standard_E8s_v5+2TB_PS' | 'Standard_EC16ads_v5' | 'Standard_EC16as_v5+3TB_PS' | 'Standard_EC16as_v5+4TB_PS' | 'Standard_EC8ads_v5' | 'Standard_EC8as_v5+1TB_PS' | 'Standard_EC8as_v5+2TB_PS' | 'Standard_L16as_v3' | 'Standard_L16s' | 'Standard_L16s_v2' | 'Standard_L16s_v3' | 'Standard_L32as_v3' | 'Standard_L32s_v3' | 'Standard_L4s' | 'Standard_L8as_v3' | 'Standard_L8s' | 'Standard_L8s_v2' | 'Standard_L8s_v3' | string (Required): SKU name.
 * **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
+
+## CheckNameRequest
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' | 'Microsoft.Kusto/clusters/databases' (Required): The type of resource, for instance Microsoft.Kusto/clusters/databases.
+
+## CheckNameResult
+### Properties
+* **message**: string: Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated.
+* **name**: string: The name that was checked.
+* **nameAvailable**: bool: Specifies a Boolean value that indicates if the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: Message providing the reason why the given name is invalid.
+
+## ClusterCheckNameRequest
+### Properties
+* **name**: string (Required): Cluster name.
+* **type**: 'Microsoft.Kusto/clusters' (Required): The type of resource, Microsoft.Kusto/clusters.
+
+## ClusterPrincipalAssignmentCheckNameRequest
+### Properties
+* **name**: string (Required): Principal Assignment resource name.
+* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (Required): The type of resource, Microsoft.Kusto/clusters/principalAssignments.
 
 ## ClusterPrincipalProperties
 ### Properties
@@ -250,6 +360,15 @@
 * **retrievalStartDate**: string: Optional. If defined, the data connection retrieves Cosmos DB documents created or updated after the specified retrieval start date.
 * **tableName**: string (Required): The case-sensitive name of the existing target table in your cluster. Retrieved data is ingested into this table.
 
+## DatabaseInviteFollowerRequest
+### Properties
+* **inviteeEmail**: string (Required): The email of the invited user for which the follower invitation is generated.
+* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Table level sharing specifications
+
+## DatabaseInviteFollowerResult
+### Properties
+* **generatedInvitation**: string: The generated invitation token.
+
 ## DatabasePrincipal
 ### Properties
 * **appId**: string: Application id - relevant only for application principal type.
@@ -259,6 +378,15 @@
 * **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (Required): Database principal role.
 * **tenantName**: string (ReadOnly): The tenant name of the principal
 * **type**: 'App' | 'Group' | 'User' | string (Required): Database principal type.
+
+## DatabasePrincipalAssignmentCheckNameRequest
+### Properties
+* **name**: string (Required): Principal Assignment resource name.
+* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (Required): The type of resource, Microsoft.Kusto/clusters/databases/principalAssignments.
+
+## DatabasePrincipalListRequest
+### Properties
+* **value**: [DatabasePrincipal](#databaseprincipal)[]: The list of Kusto database principals.
 
 ## DatabasePrincipalListResult
 ### Properties
@@ -278,6 +406,58 @@
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
+
+## DataConnection
+* **Discriminator**: kind
+
+### Base Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): The name of the resource
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+### CosmosDbDataConnection
+#### Properties
+* **kind**: 'CosmosDb' (Required): Kind of the endpoint for the data connection
+* **properties**: [CosmosDbDataConnectionProperties](#cosmosdbdataconnectionproperties): The properties of the CosmosDb data connection.
+
+### EventGridDataConnection
+#### Properties
+* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): The properties of the Event Grid data connection.
+
+### EventHubDataConnection
+#### Properties
+* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): The Event Hub data connection properties to validate.
+
+### IotHubDataConnection
+#### Properties
+* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): The Iot Hub data connection properties.
+
+
+## DataConnectionCheckNameRequest
+### Properties
+* **name**: string (Required): Data Connection name.
+* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (Required): The type of resource, Microsoft.Kusto/clusters/databases/dataConnections.
+
+## DataConnectionValidation
+### Properties
+* **dataConnectionName**: string: The name of the data connection.
+* **properties**: [DataConnection](#dataconnection): The data connection properties to validate.
+
+## DataConnectionValidationListResult
+### Properties
+* **value**: [DataConnectionValidationResult](#dataconnectionvalidationresult)[]: The list of Kusto data connection validation errors.
+
+## DataConnectionValidationResult
+### Properties
+* **errorMessage**: string: A message which indicates a problem in data connection validation.
+
+## DiagnoseVirtualNetworkResult
+### Properties
+* **findings**: string[]: The list of network connectivity diagnostic finding
 
 ## EventGridConnectionProperties
 ### Properties
@@ -372,6 +552,11 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **requestMessage**: string: The user request message.
 
+## ManagedPrivateEndpointsCheckNameRequest
+### Properties
+* **name**: string (Required): Managed private endpoint resource name.
+* **type**: 'Microsoft.Kusto/clusters/managedPrivateEndpoints' (Required): The type of resource, for instance Microsoft.Kusto/clusters/managedPrivateEndpoints.
+
 ## MigrationClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The public data ingestion URL of the cluster.
@@ -447,6 +632,16 @@
 * **languageVersion**: string (Required): The version of the language.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **requirementsFileContent**: string: The requirements file content.
+
+## SandboxCustomImagesCheckNameRequest
+### Properties
+* **name**: string (Required): Sandbox custom image resource name.
+* **type**: 'Microsoft.Kusto/clusters/sandboxCustomImages' (Required): The type of resource, for instance Microsoft.Kusto/clusters/sandboxCustomImages.
+
+## ScriptCheckNameRequest
+### Properties
+* **name**: string (Required): Script name.
+* **type**: 'Microsoft.Kusto/clusters/databases/scripts' (Required): The type of resource, Microsoft.Kusto/clusters/databases/scripts.
 
 ## ScriptProperties
 ### Properties

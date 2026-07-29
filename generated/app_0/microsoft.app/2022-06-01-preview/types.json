@@ -6068,11 +6068,103 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ContainerAppAuthToken",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "Container App auth token resource specific properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerAppAuthTokenProperties",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "Auth token value."
+      },
+      "expires": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Token expiration date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAuthtoken",
+    "resourceType": "Microsoft.App/containerApps",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/375"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DaprSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/381"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -6102,7 +6194,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/376"
+      "$ref": "#/380"
     }
   },
   {
@@ -6111,7 +6203,192 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/375"
+      "$ref": "#/379"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentAuthToken",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/384"
+        },
+        "flags": 0,
+        "description": "Environment auth token resource specific properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentAuthTokenProperties",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "Auth token value."
+      },
+      "expires": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Token expiration date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAuthtoken",
+    "resourceType": "Microsoft.App/managedEnvironments",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/383"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.App/managedEnvironments",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/388"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.App/connectedEnvironments",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/388"
+    },
+    "input": {
+      "$ref": "#/387"
     }
   },
   {
@@ -6120,7 +6397,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/375"
+      "$ref": "#/379"
     }
   }
 ]

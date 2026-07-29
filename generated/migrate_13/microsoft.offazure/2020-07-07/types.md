@@ -83,6 +83,26 @@
 * **properties**: [VCenterProperties](#vcenterproperties): vCenter nested properties.
 * **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function healthSummary (Microsoft.OffAzure/HyperVSites@2020-07-07)
+* **Resource**: Microsoft.OffAzure/HyperVSites
+* **ApiVersion**: 2020-07-07
+* **Output**: [SiteHealthSummaryCollection](#sitehealthsummarycollection)
+
+## Function healthSummary (Microsoft.OffAzure/VMwareSites@2020-07-07)
+* **Resource**: Microsoft.OffAzure/VMwareSites
+* **ApiVersion**: 2020-07-07
+* **Output**: [SiteHealthSummaryCollection](#sitehealthsummarycollection)
+
+## Function summary (Microsoft.OffAzure/HyperVSites@2020-07-07)
+* **Resource**: Microsoft.OffAzure/HyperVSites
+* **ApiVersion**: 2020-07-07
+* **Output**: [HyperVSiteUsage](#hypervsiteusage)
+
+## Function summary (Microsoft.OffAzure/VMwareSites@2020-07-07)
+* **Resource**: Microsoft.OffAzure/VMwareSites
+* **ApiVersion**: 2020-07-07
+* **Output**: [VMwareSiteUsage](#vmwaresiteusage)
+
 ## HealthErrorDetails
 ### Properties
 * **code**: string (ReadOnly): Error name.
@@ -125,6 +145,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## HyperVSiteUsage
+### Properties
+* **clusterCount**: int: Number of clusters part of the site.
+* **hostCount**: int: Number of hosts part of the site.
+* **machineCount**: int: Number of machines discovered in the site.
+* **runAsAccountCount**: int: Number of run as accounts in the site.
+
 ## MasterSiteProperties
 ### Properties
 * **allowMultipleSites**: bool: Value indicating whether multiple sites per site type are allowed.
@@ -165,6 +192,25 @@
 * **keyVaultUri**: string: Key vault URI.
 * **lastHeartBeatUtc**: string (ReadOnly): Last heartbeat time of the agent in UTC.
 * **version**: string (ReadOnly): Version of the agent.
+
+## SiteHealthSummary
+### Properties
+* **affectedObjectsCount**: int: Count of affected objects.
+* **affectedResources**: string[]: Affected resources.
+* **affectedResourceType**: string (ReadOnly): Affected resource type.
+* **applianceName**: string (ReadOnly): Appliance name.
+* **errorCode**: string (ReadOnly): Error code.
+* **errorId**: int (ReadOnly): Error Id.
+* **errorMessage**: string (ReadOnly): Error message.
+* **hitCount**: int: Hit count of the error.
+* **remediationGuidance**: string (ReadOnly): Remediation guidance.
+* **severity**: string (ReadOnly): Severity of error.
+* **summaryMessage**: string (ReadOnly): Summary message.
+
+## SiteHealthSummaryCollection
+### Properties
+* **nextLink**: string (ReadOnly): Value of next link.
+* **value**: [SiteHealthSummary](#sitehealthsummary)[] (ReadOnly): List of SiteHealthSummary.
 
 ## SiteProperties
 ### Properties
@@ -208,4 +254,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VMwareSiteUsage
+### Properties
+* **machineCount**: int: Number of machines discovered in the site.
+* **runAsAccountCount**: int: Number of run as accounts in the site.
+* **vCenterCount**: int: Number of vCenters part of the site.
 

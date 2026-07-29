@@ -14,6 +14,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.VideoIndexer/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateAccessToken (Microsoft.VideoIndexer/accounts@2024-01-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2024-01-01
+* **Input**: [GenerateAccessTokenParameters](#generateaccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## Function generateRestrictedViewerAccessToken (Microsoft.VideoIndexer/accounts@2024-01-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2024-01-01
+* **Input**: [GenerateRestrictedViewerAccessTokenParameters](#generaterestrictedvieweraccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## AccessToken
+### Properties
+* **accessToken**: string {sensitive} (ReadOnly): The access token.
+
 ## AccountPropertiesForPutRequest
 ### Properties
 * **accountId**: string: The account's data-plane ID. This can be set only when connecting an existing classic account
@@ -22,6 +38,19 @@
 * **storageServices**: [StorageServicesForPutRequest](#storageservicesforputrequest): The storage services details
 * **tenantId**: string (ReadOnly): The account's tenant id
 * **totalSecondsIndexed**: int (ReadOnly): An integer representing the total seconds that have been indexed on the account
+
+## GenerateAccessTokenParameters
+### Properties
+* **permissionType**: 'Contributor' | 'Reader' | string (Required): The requested permission
+* **projectId**: string: The project ID
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **videoId**: string: The video ID
+
+## GenerateRestrictedViewerAccessTokenParameters
+### Properties
+* **projectId**: string: The project ID
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **videoId**: string: The video ID
 
 ## ManagedServiceIdentity
 ### Properties

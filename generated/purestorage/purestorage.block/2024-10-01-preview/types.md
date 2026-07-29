@@ -71,6 +71,37 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/avsVms/avsVmVolumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getAvsConnection (PureStorage.Block/storagePools@2024-10-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [AvsConnection](#avsconnection)
+
+## Function getAvsStatus (PureStorage.Block/storagePools@2024-10-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [AvsStatus](#avsstatus)
+
+## Function getHealthStatus (PureStorage.Block/storagePools@2024-10-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [HealthResponse](#healthresponse)
+
+## Function getResourceLimits (PureStorage.Block/reservations@2024-10-01-preview)
+* **Resource**: PureStorage.Block/reservations
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [LimitDetails](#limitdetails)
+
+## Alert
+### Properties
+* **level**: 'error' | 'info' | 'warning' | string (Required): Severity level
+* **message**: string (Required): A short description of the alert
+
+## AvsConnection
+### Properties
+* **serviceInitializationCompleted**: bool (Required): Indicates whether service initialization is complete
+* **serviceInitializationHandle**: [ServiceInitializationHandle](#serviceinitializationhandle): Explicit service account credentials
+* **serviceInitializationHandleEnc**: string: Encoded service account credentials alongside connection information
+
 ## AvsDiskDetails
 ### Properties
 * **avsStorageContainerResourceId**: string (Required): Azure resource ID of the AVS storage container containing this disk/volume
@@ -80,6 +111,12 @@
 * **diskId**: string (Required): VMware ID of the disk/volume
 * **diskName**: string (Required): VMware name of the disk/volume
 * **folder**: string (Required): Name of the top-level folder in the datastore that contains the disk/volume
+
+## AvsStatus
+### Properties
+* **avsEnabled**: bool (Required): If true, an AVS connection has been successfully completed
+* **currentConnectionStatus**: string (Required): Human-readable current AVS connection status
+* **sddcResourceId**: string: Azure resource ID of the AVS SDDC the pool is connected to
 
 ## AvsStorageContainerProperties
 ### Properties
@@ -114,6 +151,32 @@
 * **avsEnabled**: bool (Required): If true, an AVS SDDC is successfully connected to the storage pool
 * **sddcResourceId**: string: Azure resource ID of the AVS SDDC the storage pool is connected to
 
+## BandwidthUsage
+### Properties
+* **current**: int (Required): Number of bytes written and read per second (maximum value over the last 10 minutes)
+* **max**: int (Required): Maximum bandwidth value that can be provisioned for the storage pool
+* **provisioned**: int (Required): Bandwidth value currently provisioned for the storage pool, in MB/s
+
+## HealthDetails
+### Properties
+* **bandwidthUsage**: [BandwidthUsage](#bandwidthusage) (Required): Bandwidth usage metrics
+* **dataReductionRatio**: int (Required): Data reduction ratio achieved on this pool
+* **estimatedMaxCapacity**: int (Required): Estimated maximum capacity of the pool, in bytes, based on current usage and data reduction ratio
+* **iopsUsage**: [IopsUsage](#iopsusage) (Required): IOPS usage metrics
+* **space**: [Space](#space) (Required): Storage space usage
+* **usedCapacityPercentage**: int (Required): How full the pool is right now, in %, compared to the maximum size it can grow to; estimated based on current usage and data reduction ratio
+
+## HealthResponse
+### Properties
+* **alerts**: [Alert](#alert)[] (Required): List of health alerts
+* **health**: [HealthDetails](#healthdetails) (Required): Health metrics
+
+## IopsUsage
+### Properties
+* **current**: int (Required): Current number of IOPS (maximum value over the last 10 minutes)
+* **max**: int (Required): Maximum IOPS value that can be provisioned for the storage pool
+* **provisioned**: int (Required): IOPS value currently provisioned for the storage pool
+
 ## LiftrBaseAddress
 ### Properties
 * **addressLine1**: string (Required): Address line 1
@@ -143,6 +206,13 @@
 * **termId**: string: Term ID for the marketplace offer
 * **termUnit**: string: Term Unit for the marketplace offer
 
+## LimitDetails
+### Properties
+* **performancePolicy**: [PerformancePolicyLimits](#performancepolicylimits) (Required): internal
+* **protectionPolicy**: [ProtectionPolicyLimits](#protectionpolicylimits) (Required): internal
+* **storagePool**: [StoragePoolLimits](#storagepoollimits) (Required): Limits used for storage pool resources
+* **volume**: [VolumeLimits](#volumelimits) (Required): Limits used for volume resources
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
@@ -150,12 +220,32 @@
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## PerformancePolicyLimits
+### Properties
+* **bandwidthLimit**: [RangeLimits](#rangelimits) (Required): internal
+* **iopsLimit**: [RangeLimits](#rangelimits) (Required): internal
+
+## ProtectionPolicyLimits
+### Properties
+* **frequency**: [RangeLimits](#rangelimits) (Required): internal
+* **retention**: [RangeLimits](#rangelimits) (Required): internal
+
+## RangeLimits
+### Properties
+* **max**: int (Required): Maximum value of the property
+* **min**: int (Required): Minimum value of the property
+
 ## ReservationProperties
 ### Properties
 * **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
 * **reservationInternalId**: string (ReadOnly): Pure Storage's internal ID for the reservation
 * **user**: [UserDetails](#userdetails) (Required): User details
+
+## ServiceInitializationHandle
+### Properties
+* **sddcResourceId**: string: Azure resource ID of the AVS SDDC the pool is connecting to
+* **serviceAccountUsername**: string: Requested service account username
 
 ## SoftDeletion
 ### Properties
@@ -168,6 +258,12 @@
 * **snapshots**: int (Required): Space occupied by data unique to one or more snapshots, in bytes
 * **totalUsed**: int (Required): Total space occupied by customer data (i.e., being billed for), in bytes
 * **unique**: int (Required): Unique space occupied by customer data, in bytes; for a volume, this is the amount of storage that would be freed by deleting the volume, since snapshot and shared data would be kept
+
+## StoragePoolLimits
+### Properties
+* **physicalAvailabilityZones**: string[] (Required): List of physical availability zones in the region in which storage pools can be deployed; some Azure regions do not support the necessary resources in all availability zones
+* **provisionedBandwidthMbPerSec**: [RangeLimits](#rangelimits) (Required): Allowed provisioned bandwidth range for a storage pool, in MB/s
+* **provisionedIops**: [RangeLimits](#rangelimits) (Required): Allowed provisioned IOPS range for a storage pool, as a number of operations
 
 ## StoragePoolProperties
 ### Properties
@@ -223,6 +319,10 @@
 ### Properties
 * **subnetId**: string (Required): Azure resource ID of the Virtual Network subnet where the storage pool will be connected
 * **vnetId**: string (Required): Azure resource ID of the Virtual Network in which the subnet is located
+
+## VolumeLimits
+### Properties
+* **provisionedSize**: [RangeLimits](#rangelimits) (Required): Provisioned size limits for a volume, in bytes
 
 ## VolumeProperties
 ### Properties

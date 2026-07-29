@@ -1784,5 +1784,310 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentExecutionDetails",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String of the resource type."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String of the fully qualified resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String of the resource name."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 2,
+        "description": "The properties of the experiment execution details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentExecutionDetailsProperties",
+    "properties": {
+      "failureReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The reason why the execution failed."
+      },
+      "lastActionAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the last action date time."
+      },
+      "runInformation": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 2,
+        "description": "The information of the experiment run."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the execution."
+      },
+      "startedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the start date time."
+      },
+      "stoppedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the stop date time."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentExecutionDetailsPropertiesRunInformation",
+    "properties": {
+      "steps": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 2,
+        "description": "The steps of the experiment run."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StepStatus",
+    "properties": {
+      "stepName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the step."
+      },
+      "stepId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the step."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The value of the status of the step."
+      },
+      "branches": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 2,
+        "description": "The array of branches."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BranchStatus",
+    "properties": {
+      "branchName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the branch status."
+      },
+      "branchId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the branch status."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the branch."
+      },
+      "actions": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 2,
+        "description": "The array of actions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionStatus",
+    "properties": {
+      "actionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the action status."
+      },
+      "actionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the action status."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the action."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the start time of the action."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the end time of the action."
+      },
+      "targets": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "The array of targets."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentExecutionActionTargetDetailsProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the execution."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The target for the action."
+      },
+      "targetFailedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the failed date time."
+      },
+      "targetCompletedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String that represents the completed date time."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 2,
+        "description": "The error of the action."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentExecutionActionTargetDetailsError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/137"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExecutionDetails",
+    "resourceType": "Microsoft.Chaos/experiments/executions",
+    "apiVersion": "2024-03-22-preview",
+    "output": {
+      "$ref": "#/134"
+    }
   }
 ]

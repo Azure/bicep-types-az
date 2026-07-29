@@ -70,6 +70,27 @@
 * **properties**: [MachinesSummaryProperties](#machinessummaryproperties) (ReadOnly): Summarizes machines in the workspace.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateMap (Microsoft.OperationalInsights/workspaces/features@2015-11-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces/features
+* **ApiVersion**: 2015-11-01-preview
+* **Input**: [MapRequest](#maprequest)
+* **Output**: [MapResponse](#mapresponse)
+
+## Acceptor
+### Properties
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'rel:acceptor' | 'rel:connection' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [AcceptorProperties](#acceptorproperties): Properties for an acceptor relationship.
+* **type**: string (ReadOnly): Resource type.
+
+## AcceptorProperties
+### Properties
+* **destination**: [ProcessReference](#processreference) (Required): Accepting process.
+* **endTime**: string: Relationship end time.
+* **source**: [PortReference](#portreference) (Required): Port being accepted.
+* **startTime**: string: Relationship start time.
+
 ## AgentConfiguration
 ### Properties
 * **agentId**: string (Required): Health Service Agent unique identifier.
@@ -99,9 +120,35 @@
 * **name**: string: Virtual Machine Scale Set name
 * **resourceId**: string: Unique identifier of the resource.
 
+## ClientGroup
+### Properties
+* **etag**: string: Resource ETAG.
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ClientGroupProperties](#clientgroupproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
+
 ## ClientGroupProperties
 ### Properties
 * **clientsOf**: [ResourceReference](#resourcereference) (Required): Reference to the resource whose clients are represented by this group.
+
+## Connection
+### Properties
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'rel:acceptor' | 'rel:connection' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ConnectionProperties](#connectionproperties): Properties for a connection resource.
+* **type**: string (ReadOnly): Resource type.
+
+## ConnectionProperties
+### Properties
+* **destination**: [ResourceReference](#resourcereference) (Required): Destination resource of the relationship.
+* **endTime**: string: Relationship end time.
+* **failureState**: 'failed' | 'mixed' | 'ok': Specifies whether there are only successful, failed or a mixture of both connections represented by this resource.
+* **serverPort**: [PortReference](#portreference): Reference to the server port via which this connection has been established.
+* **source**: [ResourceReference](#resourcereference) (Required): Source resource of the relationship.
+* **startTime**: string: Relationship start time.
 
 ## HostingConfiguration
 * **Discriminator**: kind
@@ -147,6 +194,15 @@
 ## Ipv6NetworkInterface
 ### Properties
 * **ipAddress**: string (Required): IPv6 address.
+
+## Machine
+### Properties
+* **etag**: string: Resource ETAG.
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [MachineProperties](#machineproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
 
 ## MachineCountsByOperatingSystem
 ### Properties
@@ -213,6 +269,54 @@
 * **startTime**: string (Required): Summary interval start time.
 * **total**: int (Required): Total number of machines.
 
+## Map
+### Properties
+* **edges**: [MapEdges](#mapedges) (Required): The edges (relationships) of a map.
+* **nodes**: [MapNodes](#mapnodes) (Required): The nodes (entities) of a map.
+
+## MapEdges
+### Properties
+* **acceptors**: [Acceptor](#acceptor)[]: Processes accepting on a port.
+* **connections**: [Connection](#connection)[]: Network connections.
+
+## MapNodes
+### Properties
+* **clientGroups**: [ClientGroup](#clientgroup)[]: Client Group resources.
+* **machines**: [Machine](#machine)[]: Machine resources.
+* **ports**: [Port](#port)[]: Port resources.
+* **processes**: [Process](#process)[]: Process resources.
+
+## MapRequest
+* **Discriminator**: kind
+
+### Base Properties
+* **endTime**: string: Map interval end time.
+* **startTime**: string: Map interval start time.
+
+### MachineGroupMapRequest
+#### Properties
+* **filterProcesses**: bool: If true, only processes between specified machines will be included. Any connections in or out of those processes will be included.
+* **kind**: 'map:machine-group-dependency' (Required): The type of map to create.
+* **machineGroupId**: string (Required): URI of machine group resource for which to generate the map.
+
+### MachineListMapRequest
+#### Properties
+* **filterProcesses**: bool: If true, only processes between specified machines will be included. Any connections in or out of those processes will be included.
+* **kind**: 'map:machine-list-dependency' (Required): The type of map to create.
+* **machineIds**: string[] (Required): a list of URIs of machine resources for which to generate the map.
+
+### SingleMachineDependencyMapRequest
+#### Properties
+* **kind**: 'map:single-machine-dependency' (Required): The type of map to create.
+* **machineId**: string (Required): URI of machine resource for which to generate the map.
+
+
+## MapResponse
+### Properties
+* **endTime**: string (Required): Map interval end time.
+* **map**: [Map](#map) (Required): The generated map.
+* **startTime**: string (Required): Map interval start time.
+
 ## NetworkConfiguration
 ### Properties
 * **defaultIpv4Gateways**: string[]: Default IPv4 gateways.
@@ -227,6 +331,15 @@
 * **family**: 'aix' | 'linux' | 'solaris' | 'unknown' | 'windows' (Required): Windows, Linux, etc.
 * **fullName**: string (Required): Operating system full name.
 
+## Port
+### Properties
+* **etag**: string: Resource ETAG.
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [PortProperties](#portproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
+
 ## PortProperties
 ### Properties
 * **displayName**: string: Name to use for display purposes.
@@ -235,11 +348,28 @@
 * **monitoringState**: 'discovered' | 'monitored': Specifies whether the port is actively monitored or discovered.
 * **portNumber**: int: Port number.
 
+## PortReference
+### Properties
+* **id**: string (Required): Resource URI.
+* **kind**: 'ref:clientgroup' | 'ref:machine' | 'ref:machinewithhints' | 'ref:onmachine' | 'ref:port' | 'ref:process' | string (Required): Specifies the sub-class of the reference.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [PortReferenceProperties](#portreferenceproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type qualifier.
+
 ## PortReferenceProperties
 ### Properties
 * **ipAddress**: string (ReadOnly): IP address of the port.
 * **machine**: [MachineReference](#machinereference) (ReadOnly): Machine hosting the port.
 * **portNumber**: int: Port number.
+
+## Process
+### Properties
+* **etag**: string: Resource ETAG.
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProcessProperties](#processproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
 
 ## ProcessDetails
 ### Properties
@@ -290,6 +420,14 @@
 * **startTime**: string: UTC date and time when the process started
 * **timestamp**: string: UTC date and time when this process resource was updated in the system
 * **user**: [ProcessUser](#processuser): Information about the account under which the process is executing.
+
+## ProcessReference
+### Properties
+* **id**: string (Required): Resource URI.
+* **kind**: 'ref:clientgroup' | 'ref:machine' | 'ref:machinewithhints' | 'ref:onmachine' | 'ref:port' | 'ref:process' | string (Required): Specifies the sub-class of the reference.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProcessReferenceProperties](#processreferenceproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type qualifier.
 
 ## ProcessReferenceProperties
 ### Properties

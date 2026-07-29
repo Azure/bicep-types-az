@@ -435,5 +435,119 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateAccessTokenParameters",
+    "properties": {
+      "permissionType": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "The requested permission"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "The requested media type"
+      },
+      "videoId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The video ID"
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The project ID"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Contributor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reader"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Video"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Project"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessToken",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "The access token."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateAccessToken",
+    "resourceType": "Microsoft.VideoIndexer/accounts",
+    "apiVersion": "2021-10-27-preview",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/36"
+    }
   }
 ]

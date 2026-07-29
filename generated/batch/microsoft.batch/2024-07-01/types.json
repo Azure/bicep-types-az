@@ -5349,5 +5349,519 @@
     "output": {
       "$ref": "#/392"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/397"
+        },
+        "flags": 1,
+        "description": "The type of account key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/392"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 1,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Batch/batchAccounts"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/404"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/402"
+      },
+      {
+        "$ref": "#/403"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Batch/locations",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/401"
+    },
+    "input": {
+      "$ref": "#/399"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivateApplicationPackageParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The format of the application package binary file."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPackage",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "The properties associated with the Application Package."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/408"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPackageTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/407"
+    },
+    "input": {
+      "$ref": "#/406"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Certificate",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/411"
+        },
+        "flags": 0,
+        "description": "The properties associated with the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/415"
+        },
+        "flags": 2,
+        "description": "The provisioned state of the resource"
+      },
+      "provisioningStateTransitionTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the certificate entered its current state."
+      },
+      "previousProvisioningState": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 2,
+        "description": "The previous provisioned state of the resource"
+      },
+      "previousProvisioningStateTransitionTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the certificate entered its previous state."
+      },
+      "publicData": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The public key of the certificate."
+      },
+      "deleteCertificateError": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 2,
+        "description": "This is only returned when the certificate provisioningState is 'Failed'."
+      },
+      "thumbprintAlgorithm": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "This must match the first portion of the certificate name. Currently required to be 'SHA1'."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "This must match the thumbprint from the name."
+      },
+      "format": {
+        "type": {
+          "$ref": "#/422"
+        },
+        "flags": 0,
+        "description": "The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/416"
+      },
+      {
+        "$ref": "#/417"
+      },
+      {
+        "$ref": "#/418"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pfx"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cer"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/420"
+      },
+      {
+        "$ref": "#/421"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelDelete",
+    "resourceType": "Microsoft.Batch/batchAccounts/certificates",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/410"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Pool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "The properties associated with the pool."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0,
+        "description": "The type of identity used for the Batch Pool."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/426"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PoolTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableAutoScale",
+    "resourceType": "Microsoft.Batch/batchAccounts/pools",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/425"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopResize",
+    "resourceType": "Microsoft.Batch/batchAccounts/pools",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/425"
+    }
   }
 ]

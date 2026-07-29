@@ -188,6 +188,51 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function authorizeExternalReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: [SvmPeerCommandResponse](#svmpeercommandresponse)
+
+## Function checkFilePathAvailability (Microsoft.NetApp/locations@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [FilePathAvailabilityRequest](#filepathavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.NetApp/locations@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkQuotaAvailability (Microsoft.NetApp/locations@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function generateCredentials (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [BucketCredentialsExpiry](#bucketcredentialsexpiry)
+* **Output**: [BucketGenerateCredentials](#bucketgeneratecredentials)
+
+## Function getGroupIdListForLdapUser (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [GetGroupIdListForLdapUserRequest](#getgroupidlistforldapuserrequest)
+* **Output**: [GetGroupIdListForLdapUserResponse](#getgroupidlistforldapuserresponse)
+
+## Function getKeyVaultStatus (Microsoft.NetApp/netAppAccounts@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: [GetKeyVaultStatusResponse](#getkeyvaultstatusresponse)
+
+## Function getMetadata (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: [SubvolumeModel](#subvolumemodel)
+
 ## Function listQuotaReport (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-07-01-preview
@@ -197,6 +242,34 @@
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-07-01-preview
 * **Output**: [ListReplications](#listreplications)
+
+## Function peerExternalCluster (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [PeerClusterForVolumeMigrationRequest](#peerclusterforvolumemigrationrequest)
+* **Output**: [ClusterPeerCommandResponse](#clusterpeercommandresponse)
+
+## Function populateAvailabilityZone (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: [Volume](#volume)
+
+## Function queryNetworkSiblingSet (Microsoft.NetApp/locations@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [QueryNetworkSiblingSetRequest](#querynetworksiblingsetrequest)
+* **Output**: [NetworkSiblingSet](#networksiblingset)
+
+## Function splitCloneFromParent (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: [Volume](#volume)
+
+## Function updateNetworkSiblingSet (Microsoft.NetApp/locations@2025-07-01-preview)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: [UpdateNetworkSiblingSetRequest](#updatenetworksiblingsetrequest)
+* **Output**: [NetworkSiblingSet](#networksiblingset)
 
 ## AccountEncryption
 ### Properties
@@ -272,6 +345,16 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 
+## BucketCredentialsExpiry
+### Properties
+* **keyPairExpiryDays**: int {minValue: 1}: The number of days from now until the newly generated Access and Secret key pair will expire.
+
+## BucketGenerateCredentials
+### Properties
+* **accessKey**: string {sensitive} (ReadOnly): The Access Key that is required along with the Secret Key to access the bucket.
+* **keyPairExpiry**: string (ReadOnly): The bucket's Access and Secret key pair expiry date and time (in UTC).
+* **secretKey**: string {sensitive} (ReadOnly): The Secret Key that is required along with the Access Key to access the bucket.
+
 ## BucketProperties
 ### Properties
 * **fileSystemUser**: [FileSystemUser](#filesystemuser): File System user having access to volume data. For Unix, this is the user's uid and gid. For Windows, this is the user's username. Note that the Unix and Windows user details are mutually exclusive, meaning one or other must be supplied, but not both.
@@ -293,9 +376,19 @@
 * **fqdn**: string: The host part of the bucket URL, resolving to the bucket IP address and allowed by the server certificate.
 * **ipAddress**: string (ReadOnly): The bucket server's IPv4 address
 
+## CheckAvailabilityResponse
+### Properties
+* **isAvailable**: bool: <code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both.
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: <code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable.
+
 ## CifsUser
 ### Properties
 * **username**: string: The CIFS user's username
+
+## ClusterPeerCommandResponse
+### Properties
+* **peerAcceptCommand**: string: A command that needs to be run on the external ONTAP to accept cluster peering.  Will only be present if <code>clusterPeeringStatus</code> is <code>pending</code>
 
 ## DailySchedule
 ### Properties
@@ -335,16 +428,46 @@
 * **unixReadOnly**: bool: Read only access
 * **unixReadWrite**: bool: Read and write access
 
+## FilePathAvailabilityRequest
+### Properties
+* **availabilityZone**: string: The Azure Resource logical availability zone which is used within zone mapping lookup for the subscription and region. The lookup will retrieve the physical zone where volume is placed.
+* **name**: string (Required): File path to verify.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+
 ## FileSystemUser
 ### Properties
 * **cifsUser**: [CifsUser](#cifsuser): The effective CIFS username when accessing the volume data.
 * **nfsUser**: [NfsUser](#nfsuser): The effective NFS User ID and Group ID when accessing the volume data.
+
+## GetGroupIdListForLdapUserRequest
+### Properties
+* **username**: string {minLength: 1, maxLength: 255} (Required): username is required to fetch the group to which user is part of
+
+## GetGroupIdListForLdapUserResponse
+### Properties
+* **groupIdsForLdapUser**: string[]: Group Id list
+
+## GetKeyVaultStatusResponse
+### Properties
+* **properties**: [GetKeyVaultStatusResponseProperties](#getkeyvaultstatusresponseproperties): Represents the properties of the getKeyVaultStatus.
+
+## GetKeyVaultStatusResponseProperties
+### Properties
+* **keyName**: string: The name of the key that should be used for encryption.
+* **keyVaultPrivateEndpoints**: [KeyVaultPrivateEndpoint](#keyvaultprivateendpoint)[]: Pairs of virtual network ID and private endpoint ID. Every virtual network that has volumes encrypted with customer-managed keys needs its own key vault private endpoint.
+* **keyVaultResourceId**: string: Azure resource ID of the key vault/managed HSM that should be used for encryption.
+* **keyVaultUri**: string: The URI of the key vault/managed HSM that should be used for encryption.
 
 ## HourlySchedule
 ### Properties
 * **minute**: int: Indicates which minute snapshot should be taken
 * **snapshotsToKeep**: int: Hourly snapshot count to keep
 * **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
+
+## KeyVaultPrivateEndpoint
+### Properties
+* **privateEndpointId**: string: Identifier of the private endpoint to reach the Azure Key Vault
+* **virtualNetworkId**: string: Identifier for the virtual network id
 
 ## KeyVaultProperties
 ### Properties
@@ -408,10 +531,28 @@
 * **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
+## NetworkSiblingSet
+### Properties
+* **networkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string: Network features available to the volume, or current state of update.
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"}: Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **networkSiblingSetStateId**: string: Network sibling set state Id identifying the current state of the sibling set.
+* **nicInfoList**: [NicInfo](#nicinfo)[]: List of NIC information
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the status of the NetworkSiblingSet at the time the operation was called.
+* **subnetId**: string: The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
 ## NfsUser
 ### Properties
 * **groupId**: int: The NFS user's GID
 * **userId**: int: The NFS user's UID
+
+## NicInfo
+### Properties
+* **ipAddress**: string (ReadOnly): IP Address
+* **volumeResourceIds**: string[]: Volume resource Ids
+
+## PeerClusterForVolumeMigrationRequest
+### Properties
+* **peerIpAddresses**: string[] {minLength: 1} (Required): A list of IC-LIF IPs that can be used to connect to the On-prem cluster
 
 ## PlacementKeyValuePairs
 ### Properties
@@ -430,6 +571,17 @@
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 1TiB chunks (value must be multiple of 1099511627776).
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in MiB/s
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in MiB/s
+
+## QueryNetworkSiblingSetRequest
+### Properties
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
+## QuotaAvailabilityRequest
+### Properties
+* **name**: string (Required): Name of the resource to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
 
 ## QuotaItemProperties
 ### Properties
@@ -484,6 +636,12 @@
 * **replicationId**: string (ReadOnly): Id
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
 
+## ResourceNameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
+
 ## SnapshotPolicyProperties
 ### Properties
 * **dailySchedule**: [DailySchedule](#dailyschedule): Schedule for daily snapshots
@@ -499,12 +657,36 @@
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
 
+## SubvolumeModel
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [SubvolumeModelProperties](#subvolumemodelproperties): It represents the minimal properties of the subvolume.
+* **type**: string (ReadOnly): Resource type
+
+## SubvolumeModelProperties
+### Properties
+* **accessedTimeStamp**: string: Most recent access time and date
+* **bytesUsed**: int: Bytes used
+* **changedTimeStamp**: string: Most recent change time and date
+* **creationTimeStamp**: string: Creation time and date
+* **modifiedTimeStamp**: string: Most recent modification time and date
+* **parentPath**: string: Path to the parent subvolume
+* **path**: string: Path to the subvolume
+* **permissions**: string: Permissions of the subvolume
+* **provisioningState**: string: Azure lifecycle management
+* **size**: int: Size of subvolume
+
 ## SubvolumeProperties
 ### Properties
 * **parentPath**: string: parent path to the subvolume
 * **path**: string: Path to the subvolume
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **size**: int: Truncate subvolume to the provided size in bytes
+
+## SvmPeerCommandResponse
+### Properties
+* **svmPeeringCommand**: string: A command that needs to be run on the external ONTAP to accept svm peering.  Will only be present if <code>svmPeeringStatus</code> is <code>pending</code>
 
 ## SystemData
 ### Properties
@@ -550,10 +732,34 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UpdateNetworkSiblingSetRequest
+### Properties
+* **networkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string (Required): Network features available to the volume.
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **networkSiblingSetStateId**: string (Required): Network sibling set state Id identifying the current state of the sibling set.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
 ## UserAssignedIdentity
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## Volume
+### Properties
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **zones**: string[]: The availability zones.
 
 ## VolumeBackupProperties
 ### Properties

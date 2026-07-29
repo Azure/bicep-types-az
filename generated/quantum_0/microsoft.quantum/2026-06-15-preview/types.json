@@ -719,6 +719,87 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Quantum/locations",
+    "apiVersion": "2026-06-15-preview",
+    "output": {
+      "$ref": "#/62"
+    },
+    "input": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListKeysResult",
     "properties": {
       "apiKeyEnabled": {
@@ -730,14 +811,14 @@
       },
       "primaryKey": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "The quantum workspace primary api key."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "The quantum workspace secondary api key."
@@ -784,7 +865,7 @@
     "resourceType": "Microsoft.Quantum/workspaces",
     "apiVersion": "2026-06-15-preview",
     "output": {
-      "$ref": "#/61"
+      "$ref": "#/67"
     }
   }
 ]

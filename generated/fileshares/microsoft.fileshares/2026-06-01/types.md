@@ -46,6 +46,61 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.FileShares/fileShares/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.FileShares/locations@2026-06-01)
+* **Resource**: Microsoft.FileShares/locations
+* **ApiVersion**: 2026-06-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function getLimits (Microsoft.FileShares/locations@2026-06-01)
+* **Resource**: Microsoft.FileShares/locations
+* **ApiVersion**: 2026-06-01
+* **Output**: [FileShareLimitsResponse](#filesharelimitsresponse)
+
+## Function getProvisioningRecommendation (Microsoft.FileShares/locations@2026-06-01)
+* **Resource**: Microsoft.FileShares/locations
+* **ApiVersion**: 2026-06-01
+* **Input**: [FileShareProvisioningRecommendationRequest](#fileshareprovisioningrecommendationrequest)
+* **Output**: [FileShareProvisioningRecommendationResponse](#fileshareprovisioningrecommendationresponse)
+
+## Function getUsageData (Microsoft.FileShares/locations@2026-06-01)
+* **Resource**: Microsoft.FileShares/locations
+* **ApiVersion**: 2026-06-01
+* **Output**: [FileShareUsageDataResponse](#fileshareusagedataresponse)
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
+## FileShareLimits
+### Properties
+* **maxFileSharePrivateEndpointConnections**: int (Required): The maximum number of private endpoint connections allowed for a file share.
+* **maxFileShares**: int (Required): The maximum number of file shares that can be created.
+* **maxFileShareSnapshots**: int (Required): The maximum number of snapshots allowed per file share.
+* **maxFileShareSubnets**: int (Required): The maximum number of subnets that can be associated with a file share.
+* **maxProvisionedIOPerSec**: int (Required): The maximum provisioned IOPS (Input/Output Operations Per Second) for a file share.
+* **maxProvisionedStorageGiB**: int (Required): The maximum provisioned storage in GiB for a file share.
+* **maxProvisionedThroughputMiBPerSec**: int (Required): The maximum provisioned throughput in MiB/s for a file share.
+* **minProvisionedIOPerSec**: int (Required): The minimum provisioned IOPS (Input/Output Operations Per Second) for a file share.
+* **minProvisionedStorageGiB**: int (Required): The minimum provisioned storage in GiB for a file share.
+* **minProvisionedThroughputMiBPerSec**: int (Required): The minimum provisioned throughput in MiB/s for a file share.
+
+## FileShareLimitsOutput
+### Properties
+* **limits**: [FileShareLimits](#filesharelimits) (Required): The limits for the file share.
+* **provisioningConstants**: [FileShareProvisioningConstants](#fileshareprovisioningconstants) (Required): The provisioning constants for the file share.
+
+## FileShareLimitsResponse
+### Properties
+* **properties**: [FileShareLimitsOutput](#filesharelimitsoutput) (Required): The properties of the file share limits.
+
 ## FileShareProperties
 ### Properties
 * **hostName**: string (ReadOnly): The host name of the file share.
@@ -67,6 +122,33 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Gets or sets allow or disallow public network access to azure managed file share
 * **redundancy**: 'Local' | 'Zone' | string: The chosen redundancy level of the file share.
 
+## FileShareProvisioningConstants
+### Properties
+* **baseIOPerSec**: int (Required): Base IO per second.
+* **baseThroughputMiBPerSec**: int (Required): Base throughput in MiB per second.
+* **guardrailIOPerSecScalar**: int (Required): Guardrail scalar IO per second.
+* **guardrailThroughputScalar**: int (Required): Guardrail scalar throughput in MiB per second.
+* **scalarIOPerSec**: int (Required): Scalar IO per second.
+* **scalarThroughputMiBPerSec**: int (Required): Scalar throughput in MiB per second.
+
+## FileShareProvisioningRecommendationInput
+### Properties
+* **provisionedStorageGiB**: int (Required): The desired provisioned storage size of the share in GiB. Will be use to calculate the values of remaining provisioning parameters.
+
+## FileShareProvisioningRecommendationOutput
+### Properties
+* **availableRedundancyOptions**: ('Local' | 'Zone' | string)[] (Required): Redundancy options for the share.
+* **provisionedIOPerSec**: int (Required): The recommended value of provisioned IO / sec of the share.
+* **provisionedThroughputMiBPerSec**: int (Required): The recommended value of provisioned throughput / sec of the share.
+
+## FileShareProvisioningRecommendationRequest
+### Properties
+* **properties**: [FileShareProvisioningRecommendationInput](#fileshareprovisioningrecommendationinput) (Required): The properties of the file share provisioning recommendation input.
+
+## FileShareProvisioningRecommendationResponse
+### Properties
+* **properties**: [FileShareProvisioningRecommendationOutput](#fileshareprovisioningrecommendationoutput) (Required): The properties of the file share provisioning recommendation output.
+
 ## FileShareSnapshotProperties
 ### Properties
 * **initiatorId**: string: The initiator of the FileShareSnapshot. This is a user-defined value.
@@ -77,6 +159,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## FileShareUsageDataOutput
+### Properties
+* **liveShares**: [LiveSharesUsageData](#livesharesusagedata) (Required): File share usage data for active file shares.
+
+## FileShareUsageDataResponse
+### Properties
+* **properties**: [FileShareUsageDataOutput](#fileshareusagedataoutput) (Required): The properties of the file share usage data.
+
+## LiveSharesUsageData
+### Properties
+* **fileShareCount**: int (Required): The number of active file shares.
 
 ## NfsProtocolProperties
 ### Properties

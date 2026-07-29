@@ -131,6 +131,157 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function beginGetAccess (Microsoft.Compute/disks@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function beginGetAccess (Microsoft.Compute/snapshots@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function capture (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
+* **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
+
+## Function convertToManagedDisks (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function deallocate (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function delete (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function endGetAccess (Microsoft.Compute/disks@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function endGetAccess (Microsoft.Compute/snapshots@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function generalize (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function manualupgrade (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function powerOff (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function redeploy (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-04-30-preview
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-04-30-preview)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-04-30-preview
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## AccessUri
+### Properties
+* **properties**: [AccessUriOutput](#accessurioutput): Operation output data (raw JSON)
+
+## AccessUriOutput
+### Properties
+* **output**: [AccessUriRaw](#accessuriraw): Operation output data (raw JSON)
+
+## AccessUriRaw
+### Properties
+* **accessSAS**: string (ReadOnly): A SAS uri for accessing a disk.
+
 ## AdditionalUnattendContent
 ### Properties
 * **componentName**: 'Microsoft-Windows-Shell-Setup': The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
@@ -141,6 +292,20 @@
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
+## ApiError
+### Properties
+* **code**: string: The error code.
+* **details**: [ApiErrorBase](#apierrorbase)[]: The Api error details
+* **innererror**: [InnerError](#innererror): The Api inner error
+* **message**: string: The error message.
+* **target**: string: The target of the particular error.
+
+## ApiErrorBase
+### Properties
+* **code**: string: The error code.
+* **message**: string: The error message.
+* **target**: string: The target of the particular error.
 
 ## AvailabilitySetProperties
 ### Properties
@@ -215,6 +380,11 @@
 * **enabled**: bool: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of the key encryption key
 
+## GrantAccessData
+### Properties
+* **access**: 'None' | 'Read' (Required)
+* **durationInSeconds**: int (Required): Time duration in seconds until the SAS access expires.
+
 ## HardwareProfile
 ### Properties
 * **vmSize**: 'Basic_A0' | 'Basic_A1' | 'Basic_A2' | 'Basic_A3' | 'Basic_A4' | 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D15_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS11_v2' | 'Standard_DS12' | 'Standard_DS12_v2' | 'Standard_DS13' | 'Standard_DS13_v2' | 'Standard_DS14' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS1_v2' | 'Standard_DS2' | 'Standard_DS2_v2' | 'Standard_DS3' | 'Standard_DS3_v2' | 'Standard_DS4' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | string: Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](virtualmachines-list-sizes-availability-set.md) <br><br> [List all available virtual machine sizes in a region](virtualmachines-list-sizes-region.md) <br><br> [List all available virtual machine sizes for resizing](virtualmachines-list-sizes-for-resizing.md)
@@ -261,6 +431,11 @@
 ### Properties
 * **dataDisks**: [ImageDataDisk](#imagedatadisk)[]: Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 * **osDisk**: [ImageOSDisk](#imageosdisk) (Required): Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+
+## InnerError
+### Properties
+* **errordetail**: string: The internal error message or exception dump.
+* **exceptiontype**: string: The exception type.
 
 ## InstanceViewStatus
 ### Properties
@@ -312,6 +487,14 @@
 ## NetworkProfile
 ### Properties
 * **networkInterfaces**: [NetworkInterfaceReference](#networkinterfacereference)[]: Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+
+## OperationStatusResponse
+### Properties
+* **endTime**: string (ReadOnly): End time of the operation
+* **error**: [ApiError](#apierror) (ReadOnly): Api error
+* **name**: string (ReadOnly): Operation ID
+* **startTime**: string (ReadOnly): Start time of the operation
+* **status**: string (ReadOnly): Operation status
 
 ## OSDisk
 ### Properties
@@ -454,6 +637,21 @@
 * **extensionHandlers**: [VirtualMachineExtensionHandlerInstanceView](#virtualmachineextensionhandlerinstanceview)[]: The virtual machine extension handler instance view.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
 * **vmAgentVersion**: string: The VM Agent full version.
+
+## VirtualMachineCaptureParameters
+### Properties
+* **destinationContainerName**: string (Required): The destination container name.
+* **overwriteVhds**: bool (Required): Specifies whether to overwrite the destination virtual hard disk, in case of conflict.
+* **vhdPrefix**: string (Required): The captured virtual hard disk's name prefix.
+
+## VirtualMachineCaptureResult
+### Properties
+* **id**: string: Resource Id
+* **properties**: [VirtualMachineCaptureResultProperties](#virtualmachinecaptureresultproperties): Compute-specific operation properties, including output
+
+## VirtualMachineCaptureResultProperties
+### Properties
+* **output**: any: Operation output data (raw JSON)
 
 ## VirtualMachineExtension
 ### Properties
@@ -639,6 +837,14 @@
 * **dataDisks**: [VirtualMachineScaleSetDataDisk](#virtualmachinescalesetdatadisk)[]: The data disks.
 * **imageReference**: [ImageReference](#imagereference): The image reference.
 * **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): The OS disk.
+
+## VirtualMachineScaleSetVMInstanceIDs
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+
+## VirtualMachineScaleSetVMInstanceRequiredIDs
+### Properties
+* **instanceIds**: string[] (Required): The virtual machine scale set instance ids.
 
 ## VirtualMachineScaleSetVMInstanceView
 ### Properties

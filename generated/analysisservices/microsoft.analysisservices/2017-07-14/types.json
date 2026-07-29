@@ -464,5 +464,67 @@
     "output": {
       "$ref": "#/43"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServerNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name for checking availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type of azure analysis services."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServerNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Indicator of available of the server name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason of unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed message of the request unavailability."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AnalysisServices/locations",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/46"
+    }
   }
 ]

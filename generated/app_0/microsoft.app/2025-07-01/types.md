@@ -357,6 +357,28 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/sessionPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.App/connectedEnvironments@2025-07-01)
+* **Resource**: Microsoft.App/connectedEnvironments
+* **ApiVersion**: 2025-07-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.App/managedEnvironments@2025-07-01)
+* **Resource**: Microsoft.App/managedEnvironments
+* **ApiVersion**: 2025-07-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function getAuthtoken (Microsoft.App/containerApps@2025-07-01)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2025-07-01
+* **Output**: [ContainerAppAuthToken](#containerappauthtoken)
+
+## Function getAuthtoken (Microsoft.App/managedEnvironments@2025-07-01)
+* **Resource**: Microsoft.App/managedEnvironments
+* **ApiVersion**: 2025-07-01
+* **Output**: [EnvironmentAuthToken](#environmentauthtoken)
+
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2025-07-01)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2025-07-01
@@ -386,6 +408,27 @@
 * **Resource**: Microsoft.App/logicApps
 * **ApiVersion**: 2025-07-01
 * **Output**: [WorkflowEnvelope](#workflowenvelope)
+
+## Function start (Microsoft.App/containerApps@2025-07-01)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2025-07-01
+* **Output**: [ContainerApp](#containerapp)
+
+## Function start (Microsoft.App/jobs@2025-07-01)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2025-07-01
+* **Input**: [JobExecutionTemplate](#jobexecutiontemplate)
+* **Output**: [JobExecutionBase](#jobexecutionbase)
+
+## Function stop (Microsoft.App/containerApps@2025-07-01)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2025-07-01
+* **Output**: [ContainerApp](#containerapp)
+
+## Function stop (Microsoft.App/jobs@2025-07-01)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2025-07-01
+* **Output**: [ContainerAppJobExecutions](#containerappjobexecutions)
 
 ## AllowedAudiencesValidation
 ### Properties
@@ -522,6 +565,17 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **valid**: bool (ReadOnly): Is the certificate valid?.
 * **value**: any (WriteOnly): PFX or PEM blob
 
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
 ## ClientRegistration
 ### Properties
 * **clientId**: string: The Client ID of the app used for login.
@@ -565,6 +619,40 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **probes**: [ContainerAppProbe](#containerappprobe)[]: List of probes for the container.
 * **resources**: [ContainerResources](#containerresources): Container resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: Container volume mounts.
+
+## ContainerApp
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code.
+* **kind**: 'functionapp' | 'workflowapp' | string: Metadata to represent the container app kind, representing if a container app is workflowapp or functionapp.
+* **location**: string (Required): The geo-location where the resource lives
+* **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ContainerAppProperties](#containerappproperties): ContainerApp resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ContainerAppAuthToken
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ContainerAppAuthTokenProperties](#containerappauthtokenproperties): Container App auth token resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ContainerAppAuthTokenProperties
+### Properties
+* **expires**: string (ReadOnly): Token expiration date.
+* **token**: string {sensitive} (ReadOnly): Auth token value.
+
+## ContainerAppJobExecutions
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources.
+* **value**: [JobExecution](#jobexecution)[] (Required): Collection of resources.
 
 ## ContainerAppProbe
 ### Properties
@@ -839,6 +927,21 @@ eg: azure-servicebus, redis etc.
 * **containerAppAuthEncryptionSecretName**: string: The secret name which is referenced for EncryptionKey.
 * **containerAppAuthSigningSecretName**: string: The secret name which is referenced for SigningKey.
 
+## EnvironmentAuthToken
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [EnvironmentAuthTokenProperties](#environmentauthtokenproperties): Environment auth token resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## EnvironmentAuthTokenProperties
+### Properties
+* **expires**: string (ReadOnly): Token expiration date.
+* **token**: string {sensitive} (ReadOnly): Auth token value.
+
 ## EnvironmentVar
 ### Properties
 * **name**: string: Environment variable name.
@@ -1112,6 +1215,39 @@ configuration settings of the custom Open ID Connect provider.
 * **cronExpression**: string (Required): Cron formatted repeating schedule ("* * * * *") of a Cron Job.
 * **parallelism**: int: Number of parallel replicas of a job that can run at a given time.
 * **replicaCompletionCount**: int: Minimum number of successful replica completions before overall job completion.
+
+## JobExecution
+### Properties
+* **id**: string: Job execution Id.
+* **name**: string: Job execution Name.
+* **properties**: [JobExecutionProperties](#jobexecutionproperties): Container Apps Job execution specific properties.
+* **type**: string: Job execution type
+
+## JobExecutionBase
+### Properties
+* **id**: string: Job execution Id.
+* **name**: string: Job execution name.
+
+## JobExecutionContainer
+### Properties
+* **args**: string[]: Container start command arguments.
+* **command**: string[]: Container start command.
+* **env**: [EnvironmentVar](#environmentvar)[]: Container environment variables.
+* **image**: string: Container image tag.
+* **name**: string: Custom container name.
+* **resources**: [ContainerResources](#containerresources): Container resource requirements.
+
+## JobExecutionProperties
+### Properties
+* **endTime**: string: Job execution end time.
+* **startTime**: string: Job execution start time.
+* **status**: 'Degraded' | 'Failed' | 'Processing' | 'Running' | 'Stopped' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current running State of the job
+* **template**: [JobExecutionTemplate](#jobexecutiontemplate): Job's execution container.
+
+## JobExecutionTemplate
+### Properties
+* **containers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of container definitions for the Container Apps Job.
+* **initContainers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of specialized containers that run before job containers.
 
 ## JobProperties
 ### Properties
@@ -1539,6 +1675,21 @@ as they were at the creation time
  The default is <code>false</code>.
 * **tokenRefreshExtensionHours**: int: The number of hours after session token expiration that a session token can be used to
 call the token refresh API. The default is 72 hours.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

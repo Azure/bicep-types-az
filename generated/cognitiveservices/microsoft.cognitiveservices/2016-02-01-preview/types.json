@@ -398,5 +398,49 @@
     "output": {
       "$ref": "#/43"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "key name to generate (Key1|Key2)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.CognitiveServices/accounts",
+    "apiVersion": "2016-02-01-preview",
+    "output": {
+      "$ref": "#/43"
+    },
+    "input": {
+      "$ref": "#/45"
+    }
   }
 ]

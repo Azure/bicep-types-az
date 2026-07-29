@@ -74,6 +74,23 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function updateConfigurations (Microsoft.DBforMySQL/servers@2017-12-01)
+* **Resource**: Microsoft.DBforMySQL/servers
+* **ApiVersion**: 2017-12-01
+* **Input**: [ConfigurationListResult](#configurationlistresult)
+* **Output**: [ConfigurationListResult](#configurationlistresult)
+
+## Configuration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ConfigurationListResult
+### Properties
+* **value**: [Configuration](#configuration)[]: The list of server configurations.
+
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.

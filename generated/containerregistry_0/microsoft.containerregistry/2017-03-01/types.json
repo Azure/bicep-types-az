@@ -286,5 +286,49 @@
     "output": {
       "$ref": "#/16"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateCredentialParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 1,
+        "description": "Specifies name of the password which should be regenerated -- password or password2."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateCredential",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/23"
+    }
   }
 ]

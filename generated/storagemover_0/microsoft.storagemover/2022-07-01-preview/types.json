@@ -1466,5 +1466,36 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobRunResourceId",
+    "properties": {
+      "jobRunResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource id of the Job Run."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startJob",
+    "resourceType": "Microsoft.StorageMover/storageMovers/projects/jobDefinitions",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopJob",
+    "resourceType": "Microsoft.StorageMover/storageMovers/projects/jobDefinitions",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/99"
+    }
   }
 ]

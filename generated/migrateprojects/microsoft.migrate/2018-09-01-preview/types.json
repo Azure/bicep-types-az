@@ -944,5 +944,220 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegisterToolInput",
+    "properties": {
+      "tool": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tool to be registered."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerDiscovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloudamize"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Turbonomic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zerto"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CorentTech"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessmentV1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration_Replication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Carbonite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataMigrationAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseMigrationService"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationResult",
+    "properties": {
+      "isRegistered": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the tool is registered or not."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registerTool",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/101"
+    },
+    "input": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshSummaryInput",
+    "properties": {
+      "goal": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Gets or sets the goal for which summary needs to be refreshed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Servers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Databases"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshSummaryResult",
+    "properties": {
+      "isRefreshed": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the migrate project summary is refreshed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSummary",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/108"
+    },
+    "input": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionConfig",
+    "properties": {
+      "publisherSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the publisher sas uri for the solution."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConfig",
+    "resourceType": "Microsoft.Migrate/migrateProjects/solutions",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/110"
+    }
   }
 ]

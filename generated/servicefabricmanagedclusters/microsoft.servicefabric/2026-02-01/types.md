@@ -81,6 +81,16 @@
 * **tags**: [NodeTypeTags](#nodetypetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getazresiliencystatus (Microsoft.ServiceFabric/managedClusters@2026-02-01)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2026-02-01
+* **Output**: [ManagedAzResiliencyStatus](#managedazresiliencystatus)
+
+## Function getMaintenanceWindowStatus (Microsoft.ServiceFabric/managedClusters@2026-02-01)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2026-02-01
+* **Output**: [ManagedMaintenanceWindowStatus](#managedmaintenancewindowstatus)
+
 ## AdditionalNetworkInterfaceConfiguration
 ### Properties
 * **dscpConfiguration**: [SubResource](#subresource): Specifies the DSCP configuration to apply to the network interface.
@@ -259,6 +269,11 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
 * **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
 
+## ManagedAzResiliencyStatus
+### Properties
+* **baseResourceStatus**: [ResourceAzStatus](#resourceazstatus)[]: List of Managed VM Sizes for Service Fabric Managed Clusters.
+* **isClusterZoneResilient**: bool (ReadOnly): URL to get the next set of Managed VM Sizes if there are any.
+
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: List of add-on features to enable on the cluster.
@@ -318,6 +333,16 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## ManagedMaintenanceWindowStatus
+### Properties
+* **canApplyUpdates**: bool (ReadOnly): If updates can be applied.
+* **isRegionReady**: bool (ReadOnly): Indicates if the region is ready to configure maintenance windows.
+* **isWindowActive**: bool (ReadOnly): If maintenance window is active.
+* **isWindowEnabled**: bool (ReadOnly): If maintenance window is enabled on this cluster.
+* **lastWindowEndTimeUTC**: string (ReadOnly): Last window end time in UTC.
+* **lastWindowStartTimeUTC**: string (ReadOnly): Last window start time in UTC.
+* **lastWindowStatusUpdateAtUTC**: string (ReadOnly): Last window update time in UTC.
 
 ## NetworkSecurityRule
 ### Properties
@@ -449,6 +474,13 @@ should be split between the partition ‘Count’
 * **ipTags**: [IpTag](#iptag)[]: Specifies the list of IP tags associated with the public IP address.
 * **name**: string (Required): Name of the network interface.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6' | string: Specifies whether the IP configuration's public IP is IPv4 or IPv6. Default is IPv4.
+
+## ResourceAzStatus
+### Properties
+* **details**: string (ReadOnly): Zone resiliency status details for the resource.
+* **isZoneResilient**: bool (ReadOnly): VM Size name.
+* **resourceName**: string (ReadOnly): VM Size properties.
+* **resourceType**: string (ReadOnly): VM Size id.
 
 ## RollingUpgradeMonitoringPolicy
 ### Properties

@@ -4842,5 +4842,432 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecution",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerDnsAliasAcquisition",
+    "properties": {
+      "oldServerDnsAliasId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the server alias that will be acquired to point to this server instead."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDatabaseRestorePointDefinition",
+    "properties": {
+      "restorePointLabel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The restore point label to apply"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorePoint",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restorePoints",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/365"
+    },
+    "input": {
+      "$ref": "#/364"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveDefinition",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The target ID for the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportDatabaseDefinition",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Name of the import database."
+      },
+      "edition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Edition of the import database."
+      },
+      "serviceObjectiveName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Service level objective name of the import database."
+      },
+      "maxSizeBytes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Max size in bytes for the import database."
+      },
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage key type."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage key."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage Uri."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Administrator login name."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Administrator login password."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Authentication type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportOperationResultProperties",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Request Id."
+      },
+      "requestType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Request type."
+      },
+      "queuedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Queued time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last modified time."
+      },
+      "blobUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Blob Uri."
+      },
+      "serverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Server name."
+      },
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Database name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/369"
+    },
+    "input": {
+      "$ref": "#/368"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Database",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The name and tier of the SKU."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of database. This is metadata used for the Azure portal experience."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/373"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/372"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/372"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompleteDatabaseRestoreDefinition",
+    "properties": {
+      "lastBackupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The last backup name to apply"
+      }
+    }
   }
 ]

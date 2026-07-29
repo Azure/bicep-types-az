@@ -43,6 +43,65 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureDataTransfer/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function approveConnection (Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/pipelines
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
+## Function disable (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [Flow](#flow)
+
+## Function enable (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [Flow](#flow)
+
+## Function executeAction (Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/pipelines
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [Action](#action)
+* **Output**: [Pipeline](#pipeline)
+
+## Function generatePassphrase (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [Flow](#flow)
+
+## Function getDestinationEndpointPorts (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [GetDestinationEndpointPortsResult](#getdestinationendpointportsresult)
+
+## Function getDestinationEndpoints (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [GetDestinationEndpointsResult](#getdestinationendpointsresult)
+
+## Function getSourceAddresses (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [StreamSourceAddresses](#streamsourceaddresses)
+
+## Function getStreamConnectionString (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Output**: [GetStreamConnectionStringResult](#getstreamconnectionstringresult)
+
+## Function link (Microsoft.AzureDataTransfer/connections@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
+## Function link (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Flow](#flow)
+
 ## Function listFlows (Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview)
 * **Resource**: Microsoft.AzureDataTransfer/pipelines
 * **ApiVersion**: 2025-04-11-preview
@@ -65,6 +124,43 @@
 * **Input**: [Schema](#schema)
 * **Output**: [SchemasListResult](#schemaslistresult)
 
+## Function rejectConnection (Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/pipelines
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
+## Function setDestinationEndpointPorts (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [SetDestinationEndpointPorts](#setdestinationendpointports)
+* **Output**: [Flow](#flow)
+
+## Function setDestinationEndpoints (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [SetDestinationEndpoints](#setdestinationendpoints)
+* **Output**: [Flow](#flow)
+
+## Function setPassphrase (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [SetStreamPassphrase](#setstreampassphrase)
+* **Output**: [Flow](#flow)
+
+## Function setSourceAddresses (Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [SetSourceAddresses](#setsourceaddresses)
+* **Output**: [Flow](#flow)
+
+## Action
+### Properties
+* **actionType**: 'AllowUpdates' | 'ForceDisable' | 'Internal' | string (Required): Type of action to be executed
+* **justification**: string: Business justification for the action
+* **targets**: string[] (Required): Targets for the action
+* **targetType**: 'Connection' | 'FlowType' | 'Pipeline' | string (Required): Type of target to execute the action on
+
 ## ApiFlowOptions
 ### Properties
 * **apiMode**: 'Endpoint' | 'SDK' | string: Remote Calling Mode in the Azure Data Transfer API Flow, which describes how the API Flow will be invoked
@@ -74,6 +170,17 @@
 * **remoteCallingModeClientId**: string: Remote stub app registration Client ID. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
 * **remoteEndpoint**: string: Remote host to which communication needs to be made. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the remoteEndpointSettings.endpoint property instead.
 * **senderClientId**: string: Sender's app user assigned Manage Identity client ID. The property has reached end of life support starting version 2025-05-30-preview. Please create and use the authentication property instead.
+
+## Connection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConnectionProperties](#connectionproperties): Properties of connection
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ConnectionIdList
 ### Properties
@@ -145,6 +252,18 @@
 * **streamId**: string: The flow stream identifier
 * **streamLatency**: int: The latency of the stream in milliseconds
 * **streamProtocol**: 'RTP' | 'SRT' | 'UDP' | string: The protocol of the stream
+
+## GetDestinationEndpointPortsResult
+### Properties
+* **ports**: int[]: The destination endpoint port for the flow stream
+
+## GetDestinationEndpointsResult
+### Properties
+* **endpoints**: string[]: The destination endpoints for the flow stream
+
+## GetStreamConnectionStringResult
+### Properties
+* **connectionString**: string: The connection string for the specified streaming flow
 
 ## InternalMetadataProperties
 ### Properties
@@ -269,6 +388,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Pipeline
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PipelineProperties](#pipelineproperties): The set of configurable properties for the Pipeline resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## PipelineConnectionProperties
 ### Properties
 * **internalMetadata**: [InternalMetadataProperties](#internalmetadataproperties) (ReadOnly): Internal metadata of the connection inside pipeline.
@@ -309,6 +439,11 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ResourceBody
+### Properties
+* **id**: string (Required): ID of the resource.
+* **statusReason**: string: Reason for resource operation.
+
 ## Schema
 ### Properties
 * **connectionId**: string: Connection ID associated with this schema
@@ -331,6 +466,22 @@
 * **name**: string: Name of the connection
 * **subscriptionName**: string: Name of the subscription with the connection
 
+## SetDestinationEndpointPorts
+### Properties
+* **ports**: int[]: The specified flow destination endpoint ports
+
+## SetDestinationEndpoints
+### Properties
+* **endpoints**: string[]: The specified flow destination endpoints.
+
+## SetSourceAddresses
+### Properties
+* **values**: string[]: Source addresses
+
+## SetStreamPassphrase
+### Properties
+* **value**: string: The passphrase used for SRT streams (non-secret)
+
 ## StreamSourceAddresses
 ### Properties
 * **sourceAddresses**: string[]: A source IP address or CIDR range
@@ -348,6 +499,16 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

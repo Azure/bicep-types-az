@@ -462,6 +462,210 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OffAzure/vmwareSites/vcenters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function clientGroupMembers (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsClientGroupMembersRequest](#dependencymapservicemapextensionsclientgroupmembersrequest)
+* **Output**: any
+
+## Function clientGroupMembers (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsClientGroupMembersRequest](#dependencymapservicemapextensionsclientgroupmembersrequest)
+* **Output**: any
+
+## Function clientGroupMembers (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsClientGroupMembersRequest](#dependencymapservicemapextensionsclientgroupmembersrequest)
+* **Output**: any
+
+## Function computeErrorSummary (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function computeErrorSummary (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function computeErrorSummary (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function computeusage (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [ServerSiteUsageResponse](#serversiteusageresponse)
+
+## Function computeusage (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [VmwareSiteUsage](#vmwaresiteusage)
+
+## Function computeusage (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [HypervSiteUsage](#hypervsiteusage)
+
+## Function deleteImportedMachines (Microsoft.OffAzure/importSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/importSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: [SasUriResponse](#sasuriresponse)
+
+## Function errorSummary (Microsoft.OffAzure/masterSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ErrorSummaryRequest](#errorsummaryrequest)
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function errorSummary (Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ErrorSummaryRequest](#errorsummaryrequest)
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function errorSummary (Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/webAppSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ErrorSummaryRequest](#errorsummaryrequest)
+* **Output**: [SiteErrorSummary](#siteerrorsummary)
+
+## Function exportApplications (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function exportApplications (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function exportApplications (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function exportDependencies (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsExportDependenciesRequest](#dependencymapservicemapextensionsexportdependenciesrequest)
+* **Output**: any
+
+## Function exportDependencies (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsExportDependenciesRequest](#dependencymapservicemapextensionsexportdependenciesrequest)
+* **Output**: any
+
+## Function exportDependencies (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsExportDependenciesRequest](#dependencymapservicemapextensionsexportdependenciesrequest)
+* **Output**: any
+
+## Function exportInventory (Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/webAppSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportWebAppsRequest](#exportwebappsrequest)
+* **Output**: any
+
+## Function exportMachineErrors (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportMachineErrorsRequest](#exportmachineerrorsrequest)
+* **Output**: any
+
+## Function exportMachineErrors (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportMachineErrorsRequest](#exportmachineerrorsrequest)
+* **Output**: any
+
+## Function exportMachineErrors (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportMachineErrorsRequest](#exportmachineerrorsrequest)
+* **Output**: any
+
+## Function exportMachines (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportMachinesRequest](#exportmachinesrequest)
+* **Output**: any
+
+## Function exportSqlServerErrors (Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function exportSqlServers (Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportSqlServersRequest](#exportsqlserversrequest)
+* **Output**: any
+
+## Function exportUri (Microsoft.OffAzure/importSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/importSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [SasUriResponse](#sasuriresponse)
+* **Output**: [SasUriResponse](#sasuriresponse)
+
+## Function generateCoarseMap (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsScopeMapRequest](#dependencymapservicemapextensionsscopemaprequest)
+* **Output**: any
+
+## Function generateCoarseMap (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsScopeMapRequest](#dependencymapservicemapextensionsscopemaprequest)
+* **Output**: any
+
+## Function generateCoarseMap (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsScopeMapRequest](#dependencymapservicemapextensionsscopemaprequest)
+* **Output**: any
+
+## Function generateDetailedMap (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsSingleMachineDetailedMapRequest](#dependencymapservicemapextensionssinglemachinedetailedmaprequest)
+* **Output**: any
+
+## Function generateDetailedMap (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsSingleMachineDetailedMapRequest](#dependencymapservicemapextensionssinglemachinedetailedmaprequest)
+* **Output**: any
+
+## Function generateDetailedMap (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsSingleMachineDetailedMapRequest](#dependencymapservicemapextensionssinglemachinedetailedmaprequest)
+* **Output**: any
+
+## Function importUri (Microsoft.OffAzure/importSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/importSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [SasUriResponse](#sasuriresponse)
+* **Output**: [SasUriResponse](#sasuriresponse)
+
 ## Function listHealthSummary (Microsoft.OffAzure/serverSites@2023-10-01-preview)
 * **Resource**: Microsoft.OffAzure/serverSites
 * **ApiVersion**: 2023-10-01-preview
@@ -476,6 +680,130 @@
 * **Resource**: Microsoft.OffAzure/hypervSites
 * **ApiVersion**: 2023-10-01-preview
 * **Output**: [SiteHealthSummaryCollection](#sitehealthsummarycollection)
+
+## Function refresh (Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [SqlSiteRefreshBody](#sqlsiterefreshbody)
+* **Output**: any
+
+## Function refresh (Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/webAppSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ProxySiteRefreshBody](#proxysiterefreshbody)
+* **Output**: any
+
+## Function refreshSite (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: any
+
+## Function serverGroupMembers (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsServerGroupMembersRequest](#dependencymapservicemapextensionsservergroupmembersrequest)
+* **Output**: any
+
+## Function serverGroupMembers (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsServerGroupMembersRequest](#dependencymapservicemapextensionsservergroupmembersrequest)
+* **Output**: any
+
+## Function serverGroupMembers (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [DependencyMapServiceMapextensionsServerGroupMembersRequest](#dependencymapservicemapextensionsservergroupmembersrequest)
+* **Output**: any
+
+## Function start (Microsoft.OffAzure/vmwareSites/machines@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites/machines
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.OffAzure/vmwareSites/machines@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites/machines
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: any
+
+## Function summary (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [ServerSiteUsage](#serversiteusage)
+
+## Function summary (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [VmwareSiteUsage](#vmwaresiteusage)
+
+## Function summary (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [HypervSiteUsage](#hypervsiteusage)
+
+## Function summary (Microsoft.OffAzure/masterSites/sqlSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [SqlSiteUsage](#sqlsiteusage)
+
+## Function summary (Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/webAppSites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [WebAppSiteUsage](#webappsiteusage)
+
+## Function updateDependencyMapStatus (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [UpdateMachineDepMapStatus](#updatemachinedepmapstatus)
+* **Output**: any
+
+## Function updateDependencyMapStatus (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [UpdateMachineDepMapStatus](#updatemachinedepmapstatus)
+* **Output**: any
+
+## Function updateDependencyMapStatus (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [UpdateMachineDepMapStatus](#updatemachinedepmapstatus)
+* **Output**: any
+
+## Function updateProperties (Microsoft.OffAzure/serverSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/serverSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [MachineMetadataCollection](#machinemetadatacollection)
+* **Output**: any
+
+## Function updateProperties (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [MachineMetadataCollection](#machinemetadatacollection)
+* **Output**: any
+
+## Function updateProperties (Microsoft.OffAzure/hypervSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/hypervSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [MachineMetadataCollection](#machinemetadatacollection)
+* **Output**: any
+
+## Function updateProperties (Microsoft.OffAzure/masterSites/webAppSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/webAppSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [WebAppPropertiesCollection](#webapppropertiescollection)
+* **Output**: any
+
+## Function updateRunAsAccount (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [UpdateMachineRunAsAccount](#updatemachinerunasaccount)
+* **Output**: any
+
+## Function updateTags (Microsoft.OffAzure/vmwareSites@2023-10-01-preview)
+* **Resource**: Microsoft.OffAzure/vmwareSites
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [UpdateMachineTags](#updatemachinetags)
+* **Output**: any
 
 ## Application
 ### Properties
@@ -534,10 +862,62 @@ It is discovered by the agent from the list of credentials.
            
 It is discovered by the agent from the list of credentials.
 
+## DependencyMapMachineInput
+### Properties
+* **isDependencyMapToBeEnabled**: bool: Gets or sets a value indicating whether
+            dependency mapping is to
+be enabled or not.
+* **machineId**: string: Gets or sets the ARM id of the machine.
+
+## DependencyMapServiceMapextensionsClientGroupMembersRequest
+### Properties
+* **endTime**: string: end time
+* **filters**: [DependencyMapServiceMapextensionsDependencyMapRequestFilters](#dependencymapservicemapextensionsdependencymaprequestfilters): optional filters
+* **machineId**: string: id of machine
+* **processGroupName**: string: process group name
+* **processName**: string: name of process
+* **startTime**: string: start time
+
+## DependencyMapServiceMapextensionsDependencyMapRequestFilters
+### Properties
+* **machineIds**: string[]: array of machine ids
+* **processIds**: string[]: array of process Ids
+
+## DependencyMapServiceMapextensionsExportDependenciesRequest
+### Properties
+* **endTime**: string: end time
+* **startTime**: string: start time
+
+## DependencyMapServiceMapextensionsScopeMapRequest
+### Properties
+* **endTime**: string: end time
+* **filters**: [DependencyMapServiceMapextensionsDependencyMapRequestFilters](#dependencymapservicemapextensionsdependencymaprequestfilters): optional filters
+* **startTime**: string: start time
+
+## DependencyMapServiceMapextensionsServerGroupMembersRequest
+### Properties
+* **endTime**: string: end time
+* **filters**: [DependencyMapServiceMapextensionsDependencyMapRequestFilters](#dependencymapservicemapextensionsdependencymaprequestfilters): optional filters
+* **serverPort**: int: port of server
+* **startTime**: string: start time
+
+## DependencyMapServiceMapextensionsSingleMachineDetailedMapRequest
+### Properties
+* **endTime**: string: end time
+* **filters**: [DependencyMapServiceMapextensionsDependencyMapRequestFilters](#dependencymapservicemapextensionsdependencymaprequestfilters): optional filters
+* **machineId**: string: id of machine
+* **startTime**: string: start time
+
 ## DirectoryPath
 ### Properties
 * **physical**: string: Gets or sets the physical path of the directory on the web server.
 * **virtual**: string: Gets or sets the virtual path for the directory.
+
+## DiscoveryScopeErrorSummary
+### Properties
+* **affectedObjectsCount**: int (Required): Count of affected objects.
+* **affectedResourceType**: string (Required): Gets or sets the affected resource type.
+* **discoveryScope**: 'AppsAndRoles' | 'DependencyMap' | 'SQLServerConnectionInfo' | 'StaticData' | string (Required): Gets or sets the count of affected objects.
 
 ## DiscoverySiteDataSourceProperties
 ### Properties
@@ -578,6 +958,10 @@ It is discovered by the agent from the list of credentials.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ErrorSummaryRequest
+### Properties
+* **applianceName**: string: Gets or sets the Appliance Name.
+
 ## ExchangeServer
 ### Properties
 * **edition**: string (ReadOnly): Gets or sets Edition of the ExchangeServer.
@@ -585,6 +969,23 @@ It is discovered by the agent from the list of credentials.
 * **roles**: string (ReadOnly): Gets or sets Roles of the ExchangeServer.
 * **servicePack**: string (ReadOnly): Gets or sets ServicePack of the ExchangeServer.
 * **version**: string (ReadOnly): Gets or sets Version of the ExchangeServer.
+
+## ExportMachineErrorsRequest
+### Properties
+* **properties**: [RequestExportMachineErrorsProperties](#requestexportmachineerrorsproperties): Gets or sets the properties.
+
+## ExportMachinesRequest
+### Properties
+* **filter**: string: filter options.
+
+## ExportSqlServersRequest
+### Properties
+* **applianceName**: string: Gets or sets the Appliance Name.
+* **filter**: string: filter options.
+
+## ExportWebAppsRequest
+### Properties
+* **filter**: string: filter options.
 
 ## Feature
 ### Properties
@@ -762,6 +1163,13 @@ enabled for the VM.
 * **staticIpAddress**: string (ReadOnly): Static IP address.
 * **subnetName**: string (ReadOnly): Name of the VM subnet within the virtual network the NIC is attached to.
 
+## HypervSiteUsage
+### Properties
+* **clusterCount**: int: Gets or sets the number of clusters part of the site.
+* **hostCount**: int: Gets or sets the number of hosts part of the site.
+* **machineCount**: int: Gets or sets the number of machines discovered in the site.
+* **runAsAccountCount**: int: Gets or sets the number of run as accounts in the site.
+
 ## IisApplicationUnit
 ### Properties
 * **applicationPoolName**: string: Gets or sets the path of the directory.
@@ -887,6 +1295,21 @@ machine.
 * **startTime**: string (ReadOnly): Gets operation start time.
 * **status**: string (ReadOnly): Gets operation status.
 
+## MachineMetadata
+### Properties
+* **dependencyMapping**: string (Required): value representing state of dependency mapping (enabled/disabled).
+* **machineArmId**: string (Required): arm id of the machine.
+* **tags**: [MachineMetadataTags](#machinemetadatatags) (Required): machine tags
+
+## MachineMetadataCollection
+### Properties
+* **value**: [MachineMetadata](#machinemetadata)[] (Required): The list of Machine MetaData.
+
+## MachineMetadataTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## MachineSoftwareInventoryProperties
 ### Properties
 * **appsAndRoles**: [AppsAndRoles](#appsandroles) (ReadOnly): Apps And Roles of the machine entity.
@@ -967,9 +1390,22 @@ should contain the Site ARM name.
 * **supportEndDate**: string: support end date.
 * **supportStatus**: 'Extended' | 'Mainstream' | 'Unknown' | string: support status.
 
+## ProxySiteRefreshBody
+### Properties
+* **applianceName**: string: Gets or sets the appliance name of the agent in the site.
+
+## RequestExportMachineErrorsProperties
+### Properties
+* **discoveryScope**: 'AppsAndRoles' | 'DependencyMap' | 'SQLServerConnectionInfo' | 'StaticData' | string: Gets or sets the discovery scope.
+
 ## ResourceId
 ### Properties
 * **id**: string (ReadOnly): id name
+
+## RunAsAccountMachineInput
+### Properties
+* **machineId**: string: Gets or sets the ARM id of the machine.
+* **runAsAccountId**: string: run as AccountId
 
 ## RunAsAccountProperties
 ### Properties
@@ -979,6 +1415,12 @@ should contain the Site ARM name.
 * **displayName**: string (ReadOnly): Display name of the run as account.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
 * **updatedTimestamp**: string (ReadOnly): Timestamp marking last updated on the run as account.
+
+## SasUriResponse
+### Properties
+* **importType**: 'AzureMigrateCSV' | 'RVToolsXlsx' | string: Gets or sets the import type.
+* **jobArmId**: string: Gets or sets the job ARM ID.
+* **uri**: string: Gets or sets the SAS URI.
 
 ## ServerDisk
 ### Properties
@@ -1061,6 +1503,16 @@ machine.
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ServerSiteUsage
+### Properties
+* **runAsAccountCount**: int: Gets or sets the number of run as accounts in the site.
+* **serverCount**: int: Gets or sets the number of servers part of the site.
+
+## ServerSiteUsageResponse
+### Properties
+* **runAsAccounts**: int (Required): Gets or sets the number of run as accounts in the site.
+* **serverCount**: int (Required): Gets or sets the number of servers part of the site.
+
 ## SharePointServer
 ### Properties
 * **isEnterprise**: bool (ReadOnly): Gets or sets a value indicating whether the SharePointServer is Enterprise.
@@ -1081,6 +1533,12 @@ machine.
 * **agentDetails**: [SiteAgentProperties](#siteagentproperties): Gets or sets the on-premises agent details.
 * **applianceName**: string: Gets or sets the Appliance Name.
 * **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Gets or sets the service principal identity details used by agent for  communication              to the service.
+
+## SiteErrorSummary
+### Properties
+* **applianceName**: string (Required): Appliance Name.
+* **discoveryScopeErrorSummaries**: [DiscoveryScopeErrorSummary](#discoveryscopeerrorsummary) (Required): Gets the error message.
+* **nextLink**: string: The link to fetch more models.
 
 ## SiteHealthSummary
 ### Properties
@@ -1327,6 +1785,16 @@ which are in multiple subnets.
            
 to the appliance.
 
+## SqlSiteRefreshBody
+### Properties
+* **applianceName**: string: Gets or sets the appliance name of the agent in the site.
+
+## SqlSiteUsage
+### Properties
+* **databaseCount**: int: Gets or sets the number of databases discovered in the site.
+* **runAsAccountCount**: int: Gets or sets the number of run as accounts in the site.
+* **serverCount**: int: Gets or sets the number of servers discovered in the site.
+
 ## StaticDiscovery
 ### Properties
 * **discoveryScopeStatus**: 'Disabled' | 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryNotStarted' | 'DiscoveryPartiallySucceded' | 'DiscoverySucceeded' | 'DiscoverySucceededAtleastOnce' | 'RunAsAccountNotAssociated' | string (ReadOnly): Gets discovery scope status.
@@ -1349,6 +1817,16 @@ It is discovered by the agent from the list of credentials.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TagsMachineInput
+### Properties
+* **machineId**: string: Gets or sets the ARM id of the machine.
+* **tags**: [TagsMachineInputTags](#tagsmachineinputtags): run as AccountId
+
+## TagsMachineInputTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TomcatEngineUnit
 ### Properties
@@ -1450,6 +1928,18 @@ It is discovered by the agent from the list of credentials.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpdateMachineDepMapStatus
+### Properties
+* **machines**: [DependencyMapMachineInput](#dependencymapmachineinput)[]: Gets or sets the machine collection.
+
+## UpdateMachineRunAsAccount
+### Properties
+* **machines**: [RunAsAccountMachineInput](#runasaccountmachineinput)[]: Gets or sets the machine collection.
+
+## UpdateMachineTags
+### Properties
+* **machines**: [TagsMachineInput](#tagsmachineinput)[]: Gets or sets the machine collection.
 
 ## VcenterProperties
 ### Properties
@@ -1586,6 +2076,12 @@ machine.
 * **networkName**: string: Gets or sets Network Name.
 * **nicId**: string: Gets or sets the NIC Id.
 
+## VmwareSiteUsage
+### Properties
+* **machineCount**: int: Gets or sets the number of machines discovered in the site.
+* **runAsAccountCount**: int: Gets or sets the number of run as accounts in the site.
+* **vCenterCount**: int: Gets or sets the number of vCenters part of the site.
+
 ## WebAppDiscovery
 ### Properties
 * **discoveryScopeStatus**: 'Disabled' | 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryNotStarted' | 'DiscoveryPartiallySucceded' | 'DiscoverySucceeded' | 'DiscoverySucceededAtleastOnce' | 'RunAsAccountNotAssociated' | string: Gets or sets status of partner discovery.
@@ -1644,6 +2140,20 @@ discovery is done
 * **name**: string: Gets or sets Name of the framework.
 * **version**: string: Gets or sets Version of the framework.
 
+## WebAppProperties
+### Properties
+* **tags**: [WebAppPropertiesTags](#webapppropertiestags): Gets or sets Tags.
+* **webAppArmId**: string: Gets or sets the arm id of the web app.
+
+## WebAppPropertiesCollection
+### Properties
+* **webApps**: [WebAppProperties](#webappproperties)[]: Gets or sets the list of web app properties.
+
+## WebAppPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## WebAppSiteProperties
 ### Properties
 * **discoveryScenario**: 'DR' | 'Migrate' | string: Gets or sets the discovery scenario.
@@ -1652,6 +2162,12 @@ discovery is done
 * **siteAppliancePropertiesCollection**: [SiteApplianceProperties](#siteapplianceproperties)[]: Gets or sets the appliance details used by service to communicate
            
 to the appliance.
+
+## WebAppSiteUsage
+### Properties
+* **runAsAccountCount**: int: Gets or sets the number of run as accounts in the site.
+* **webApplicationCount**: int: Gets or sets the number of web applications discovered in the site.
+* **webServerCount**: int: Gets or sets the number of web servers discovered in the site.
 
 ## WebRoleImportDisk
 ### Properties

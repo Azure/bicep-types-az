@@ -352,5 +352,334 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageConfigurationInput",
+    "properties": {
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Fully qualified storage account Id. Example: \"/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageConfigurationResponse",
+    "properties": {
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified storage account Id. Example: \"/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}\""
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateStorageConfiguration",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementRecommenderInput",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The desired resource SKUs."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSize",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource's CRP virtual machine SKU size."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementRecommenderResponse",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The desired resource SKUs."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      },
+      "placementScores": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The spot placement scores."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlacementScore",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource's CRP virtual machine SKU size."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region."
+      },
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The availability region."
+      },
+      "score": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The placement score."
+      },
+      "isQuotaAvailable": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Whether the desired quota is available."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generate",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/38"
+    },
+    "input": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementScoresInput",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The desired resource SKUs."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementScoresResponse",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "The desired resource SKUs."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      },
+      "placementScores": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The spot placement scores."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generate",
+    "resourceType": "Microsoft.Compute/locations/placementScores",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/44"
+    }
   }
 ]

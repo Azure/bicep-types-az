@@ -654,5 +654,27 @@
     },
     "readableScopes": 4,
     "writableScopes": 4
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetDirectoryStatusResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription Status"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeTenantStatus",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/47"
+    }
   }
 ]

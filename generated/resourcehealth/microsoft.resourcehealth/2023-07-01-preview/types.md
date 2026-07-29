@@ -44,6 +44,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/metadata' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function fetchEventDetails (Microsoft.ResourceHealth/events@2023-07-01-preview)
+* **Resource**: Microsoft.ResourceHealth/events
+* **ApiVersion**: 2023-07-01-preview
+* **Output**: [Event](#event)
+
 ## Function listSecurityAdvisoryImpactedResources (Microsoft.ResourceHealth/events@2023-07-01-preview)
 * **Resource**: Microsoft.ResourceHealth/events
 * **ApiVersion**: 2023-07-01-preview
@@ -60,6 +65,14 @@
 * **id**: string: The impacted service id.
 * **name**: string: The impacted service name.
 * **regions**: [ImpactedRegion](#impactedregion)[]: The list of impacted regions for corresponding emerging issues.
+
+## Event
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [EventProperties](#eventproperties): Properties of event.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## EventImpactedResource
 ### Properties

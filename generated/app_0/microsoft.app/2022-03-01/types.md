@@ -106,6 +106,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.App/managedEnvironments@2022-03-01)
+* **Resource**: Microsoft.App/managedEnvironments
+* **ApiVersion**: 2022-03-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-03-01)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2022-03-01
@@ -240,6 +246,17 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
 * **valid**: bool (ReadOnly): Is the certificate valid?.
 * **value**: any (WriteOnly): PFX or PEM blob
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## ClientRegistration
 ### Properties

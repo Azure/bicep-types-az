@@ -1396,5 +1396,392 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name to check for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 1,
+        "description": "The resource type. Must be set to Microsoft.StorageSync/storageSyncServices"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a Storage Sync Service name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.StorageSync/locations",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/92"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequest",
+    "properties": {
+      "azureFileShare": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure File Share."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostBackupResponse",
+    "properties": {
+      "backupMetadata": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Post Backup Response Properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostBackupResponseProperties",
+    "properties": {
+      "cloudEndpointName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "cloud endpoint Name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "postbackup",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/99"
+    },
+    "input": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreRestoreRequest",
+    "properties": {
+      "partition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore partition."
+      },
+      "replicaGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore replica group."
+      },
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore request id."
+      },
+      "azureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure file share uri."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure status."
+      },
+      "sourceAzureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure source azure file share uri."
+      },
+      "backupMetadataPropertyBag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore backup metadata property bag."
+      },
+      "restoreFileSpec": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "Pre Restore restore file spec array."
+      },
+      "pauseWaitForSyncDrainTimePeriodInSeconds": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Pre Restore pause wait for sync drain time period in seconds."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreFileSpec",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Restore file spec path"
+      },
+      "isdir": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Restore file spec isdir"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostRestoreRequest",
+    "properties": {
+      "partition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore partition."
+      },
+      "replicaGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore replica group."
+      },
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore request id."
+      },
+      "azureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure file share uri."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure status."
+      },
+      "sourceAzureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure source azure file share uri."
+      },
+      "failedFileList": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure failed file list."
+      },
+      "restoreFileSpec": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Post Restore restore file spec array."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerChangeDetectionParameters",
+    "properties": {
+      "directoryPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Relative path to a directory Azure File share for which change detection is to be performed."
+      },
+      "changeDetectionMode": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Change Detection Mode. Applies to a directory specified in directoryPath parameter."
+      },
+      "paths": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "Array of relative paths on the Azure File share to be included in the change detection. Can be files and directories."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recursive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecallActionParameters",
+    "properties": {
+      "pattern": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern of the files."
+      },
+      "recallPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recall path."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRolloverRequest",
+    "properties": {
+      "serverCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Certificate Data"
+      }
+    }
   }
 ]

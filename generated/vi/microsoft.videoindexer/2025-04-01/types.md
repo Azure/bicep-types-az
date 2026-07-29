@@ -36,6 +36,34 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.VideoIndexer/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateAccessToken (Microsoft.VideoIndexer/accounts@2025-04-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2025-04-01
+* **Input**: [GenerateAccessTokenParameters](#generateaccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## Function generateExtensionAccessToken (Microsoft.VideoIndexer/accounts@2025-04-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2025-04-01
+* **Input**: [GenerateExtensionAccessTokenParameters](#generateextensionaccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## Function generateExtensionRestrictedViewerAccessToken (Microsoft.VideoIndexer/accounts@2025-04-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2025-04-01
+* **Input**: [GenerateExtensionRestrictedViewerAccessTokenParameters](#generateextensionrestrictedvieweraccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## Function generateRestrictedViewerAccessToken (Microsoft.VideoIndexer/accounts@2025-04-01)
+* **Resource**: Microsoft.VideoIndexer/accounts
+* **ApiVersion**: 2025-04-01
+* **Input**: [GenerateRestrictedViewerAccessTokenParameters](#generaterestrictedvieweraccesstokenparameters)
+* **Output**: [AccessToken](#accesstoken)
+
+## AccessToken
+### Properties
+* **accessToken**: string {sensitive} (ReadOnly): The access token.
+
 ## AccountPropertiesForPutRequest
 ### Properties
 * **accountId**: string: The account's data-plane ID. This can be set only when connecting an existing classic account
@@ -48,6 +76,34 @@
 * **tenantId**: string (ReadOnly): The account's tenant id
 * **totalMinutesIndexed**: int (ReadOnly): An integer representing the total minutes that have been indexed on the account
 * **totalSecondsIndexed**: int (ReadOnly): An integer representing the total seconds that have been indexed on the account
+
+## GenerateAccessTokenParameters
+### Properties
+* **permissionType**: 'Contributor' | 'Reader' | string (Required): The requested permission
+* **projectId**: string: The project ID
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **videoId**: string: The video ID
+
+## GenerateExtensionAccessTokenParameters
+### Properties
+* **extensionId**: string (Required): The extension's resource ID
+* **permissionType**: 'Contributor' | 'Reader' | string (Required): The requested permission
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **tokenLifetimeInSeconds**: int: Lifetime of the access token (in seconds). Default value: 3600 (1 hour), Max value: 43200 (12 hours). Setting this value is enabled for tokens in 'Video' scope.
+* **videoId**: string: The video ID
+
+## GenerateExtensionRestrictedViewerAccessTokenParameters
+### Properties
+* **extensionId**: string (Required): The extension's resource ID
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **tokenLifetimeInSeconds**: int: Lifetime of the access token (in seconds). Default value: 3600 (1 hour), Max value: 43200 (12 hours). Setting this value is enabled for tokens in 'Video' scope.
+* **videoId**: string: The video ID
+
+## GenerateRestrictedViewerAccessTokenParameters
+### Properties
+* **projectId**: string: The project ID
+* **scope**: 'Account' | 'Project' | 'Video' | string (Required): The requested media type
+* **videoId**: string: The video ID
 
 ## ManagedServiceIdentity
 ### Properties

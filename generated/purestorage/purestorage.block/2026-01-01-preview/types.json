@@ -1988,11 +1988,719 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ReservationBillingUsageReport",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Latest formatted billing report for this reservation"
+      },
+      "billingUsageProperties": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 1,
+        "description": "A list of detailed billing usage properties"
+      },
+      "overallStatusMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Overall status message of the billing usage report"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingUsageProperty",
+    "properties": {
+      "propertyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Unique identifier for the billing usage property"
+      },
+      "propertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the billing usage property"
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Current value of the billing usage property"
+      },
+      "previousValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Previous value of the billing usage property"
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "Severity level of the usage"
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status message for the billing usage against a property"
+      },
+      "subProperties": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "Optional list of sub-properties providing additional details"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "alert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBillingReport",
+    "resourceType": "PureStorage.Block/reservations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationBillingStatus",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Timestamp for the latest update of this billing status, in RFC 3339 format"
+      },
+      "totalUsedCapacityReported": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total used capacity as reported by associated storage pools. In bytes"
+      },
+      "lowDrrPoolCount": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "How many associated storage pools reported low data reduction ratio (DRR)"
+      },
+      "drrWeightedAverage": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Weighted average of the data-reduction ratio for all associated pools"
+      },
+      "totalNonReducibleReported": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The sum of total used capacity for all pools with low DRR, if the DRR penalty applies. In bytes"
+      },
+      "extraUsedCapacityNonReducible": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Extra capacity added because of low DRR storage pools; In bytes"
+      },
+      "extraUsedCapacityLowUsageRounding": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Extra capacity added when rounding up low-usage pools to 30TiB. In bytes"
+      },
+      "extraUsedCapacityNonReduciblePlanDiscount": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Extra capacity discounted due to plan forgiving some low-DRR usage. In bytes"
+      },
+      "totalUsedCapacityBilled": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total used capacity actually billed. In bytes"
+      },
+      "totalUsedCapacityIncludedPlan": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total used capacity included in plan. In bytes"
+      },
+      "totalUsedCapacityOverage": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total used capacity reported at on-demand price. In bytes"
+      },
+      "totalPerformanceReported": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The sum of all performance settings across the pools under this reservation. In MB per second"
+      },
+      "totalPerformanceIncludedPlan": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total performance amount included in plan. In bytes per second"
+      },
+      "totalPerformanceOverage": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Total performance amount reported at on-demand price. In MB per second"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBillingStatus",
+    "resourceType": "PureStorage.Block/reservations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LimitDetails",
+    "properties": {
+      "storagePool": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "Limits used for storage pool resources"
+      },
+      "volume": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "Limits used for volume resources"
+      },
+      "protectionPolicy": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 1,
+        "description": "internal"
+      },
+      "performancePolicy": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "internal"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StoragePoolLimits",
+    "properties": {
+      "provisionedBandwidthMbPerSec": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "Allowed provisioned bandwidth range for a storage pool, in MB/s"
+      },
+      "provisionedIops": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "Allowed provisioned IOPS range for a storage pool, as a number of operations"
+      },
+      "physicalAvailabilityZones": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 1,
+        "description": "List of physical availability zones in the region in which storage pools can be deployed; some Azure regions do not support the necessary resources in all availability zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RangeLimits",
+    "properties": {
+      "min": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Minimum value of the property"
+      },
+      "max": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Maximum value of the property"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeLimits",
+    "properties": {
+      "provisionedSize": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "Provisioned size limits for a volume, in bytes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProtectionPolicyLimits",
+    "properties": {
+      "frequency": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "internal"
+      },
+      "retention": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "internal"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PerformancePolicyLimits",
+    "properties": {
+      "iopsLimit": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "internal"
+      },
+      "bandwidthLimit": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "internal"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getResourceLimits",
+    "resourceType": "PureStorage.Block/reservations",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvsConnection",
+    "properties": {
+      "serviceInitializationCompleted": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Indicates whether service initialization is complete"
+      },
+      "serviceInitializationHandleEnc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Encoded service account credentials alongside connection information"
+      },
+      "serviceInitializationHandle": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Explicit service account credentials"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceInitializationHandle",
+    "properties": {
+      "sddcResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure resource ID of the AVS SDDC the pool is connecting to"
+      },
+      "serviceAccountUsername": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Requested service account username"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAvsConnection",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvsStatus",
+    "properties": {
+      "avsEnabled": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "If true, an AVS connection has been successfully completed"
+      },
+      "currentConnectionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Human-readable current AVS connection status"
+      },
+      "sddcResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure resource ID of the AVS SDDC the pool is connected to"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAvsStatus",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/152"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthResponse",
+    "properties": {
+      "health": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 1,
+        "description": "Health metrics"
+      },
+      "alerts": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1,
+        "description": "List of health alerts"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthDetails",
+    "properties": {
+      "usedCapacityPercentage": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "How full the pool is right now, in %, compared to the maximum size it can grow to; estimated based on current usage and data reduction ratio"
+      },
+      "bandwidthUsage": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "Bandwidth usage metrics"
+      },
+      "iopsUsage": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "IOPS usage metrics"
+      },
+      "space": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Storage space usage"
+      },
+      "dataReductionRatio": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Data reduction ratio achieved on this pool"
+      },
+      "estimatedMaxCapacity": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Estimated maximum capacity of the pool, in bytes, based on current usage and data reduction ratio"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BandwidthUsage",
+    "properties": {
+      "current": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Number of bytes written and read per second (maximum value over the last 10 minutes)"
+      },
+      "provisioned": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Bandwidth value currently provisioned for the storage pool, in MB/s"
+      },
+      "max": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Maximum bandwidth value that can be provisioned for the storage pool"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IopsUsage",
+    "properties": {
+      "current": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Current number of IOPS (maximum value over the last 10 minutes)"
+      },
+      "provisioned": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "IOPS value currently provisioned for the storage pool"
+      },
+      "max": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Maximum IOPS value that can be provisioned for the storage pool"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Alert",
+    "properties": {
+      "level": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "Severity level"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A short description of the alert"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "info"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getHealthStatus",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/154"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeGroupStatus",
+    "properties": {
+      "space": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Storage space usage for the volume group"
+      },
+      "connectedHostCount": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Number of hosts currently connected to the volume group"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStatus",
+    "resourceType": "PureStorage.Block/storagePools/volumeGroups",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/165"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ConnectionParametersResponse",
     "properties": {
       "iscsi": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/168"
         },
         "flags": 1,
         "description": "ISCSI connection parameters"
@@ -2005,7 +2713,7 @@
     "properties": {
       "endpoints": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/170"
         },
         "flags": 1,
         "description": "List of ISCSI endpoints for connection"
@@ -2042,7 +2750,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/131"
+      "$ref": "#/169"
     }
   },
   {
@@ -2051,7 +2759,7 @@
     "resourceType": "PureStorage.Block/storagePools/volumeGroups",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/129"
+      "$ref": "#/167"
     }
   }
 ]

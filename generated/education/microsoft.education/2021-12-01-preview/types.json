@@ -1012,5 +1012,71 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InviteCodeGenerateRequest",
+    "properties": {
+      "maxStudentCount": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "the total number of students that can be accepted to the lab."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Get lab response properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateInviteCode",
+    "resourceType": "Microsoft.Education/labs",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/73"
+    },
+    "input": {
+      "$ref": "#/72"
+    }
   }
 ]

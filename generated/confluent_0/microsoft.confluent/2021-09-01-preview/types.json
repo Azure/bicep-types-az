@@ -626,5 +626,80 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrganizationResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM id of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Organization resource properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Organization resource tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Location of Organization resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrganizationResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "orgvalidate",
+    "resourceType": "Microsoft.Confluent/validations",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/51"
+    },
+    "input": {
+      "$ref": "#/51"
+    }
   }
 ]

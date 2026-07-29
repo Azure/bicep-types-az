@@ -2932,11 +2932,206 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CreateAPIKeyModel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the API Key"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of the API Key"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "APIKeyRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of api key"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the api key"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0,
+        "description": "API Key Properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "APIKeyProperties",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "spec": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 0,
+        "description": "Specification of the API Key"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "APIKeySpecEntity",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the API Key"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the API Key"
+      },
+      "secret": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 4,
+        "description": "API Key Secret"
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 0,
+        "description": "Specification of the cluster"
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 0,
+        "description": "Specification of the cluster"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "APIKeyResourceEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the resource"
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The environment of the api key"
+      },
+      "related": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "API URL for accessing or modifying the api key resource object"
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "CRN reference to the referred resource"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of the owner which can be service or user account"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "APIKeyOwnerEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "API Key owner id"
+      },
+      "related": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "API URL for accessing or modifying the referred object"
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "CRN reference to the referred resource"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of the owner service or user account"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createAPIKey",
+    "resourceType": "Microsoft.Confluent/organizations/environments/clusters",
+    "apiVersion": "2025-08-18-preview",
+    "output": {
+      "$ref": "#/209"
+    },
+    "input": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListAccessRequestModel",
     "properties": {
       "searchFilters": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/216"
         },
         "flags": 0,
         "description": "Search filters for the request"
@@ -2957,7 +3152,7 @@
     "properties": {
       "data": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/222"
         },
         "flags": 0,
         "description": "List of regions supported by confluent"
@@ -2984,7 +3179,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "Region Properties"
@@ -3004,7 +3199,7 @@
       },
       "spec": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/220"
         },
         "flags": 0,
         "description": "Specification of the region"
@@ -3038,7 +3233,7 @@
       },
       "packages": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/221"
         },
         "flags": 0
       }
@@ -3053,7 +3248,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/211"
+      "$ref": "#/218"
     }
   },
   {
@@ -3062,10 +3257,266 @@
     "resourceType": "Microsoft.Confluent/organizations",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/217"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessInviteUserAccountModel",
+    "properties": {
+      "organizationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the organization"
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Email of the logged in user"
+      },
+      "upn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Upn of the logged in user"
+      },
+      "invitedUserDetails": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0,
+        "description": "Details of the user who is being invited"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessInvitedUserDetails",
+    "properties": {
+      "invitedEmail": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "UPN/Email of the user who is being invited"
+      },
+      "auth_type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Auth type of the user"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvitationRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of account"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the invitation"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Email of the user"
+      },
+      "auth_type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Auth type of the user"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the invitation"
+      },
+      "accepted_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Accepted date time of the invitation"
+      },
+      "expires_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiration date time of the invitation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataEntity",
+    "properties": {
+      "self": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Self lookup url"
+      },
+      "resource_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource name of the record"
+      },
+      "created_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Created Date Time"
+      },
+      "updated_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Updated Date time"
+      },
+      "deleted_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Deleted Date time"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createInvitation",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2025-08-18-preview",
+    "output": {
+      "$ref": "#/226"
+    },
+    "input": {
+      "$ref": "#/224"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessCreateRoleBindingRequestModel",
+    "properties": {
+      "principal": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The principal User or Group to bind the role to"
+      },
+      "role_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the role to bind to the principal"
+      },
+      "crn_pattern": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A CRN that specifies the scope and resource patterns necessary for the role to bind"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleBindingRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the role binding"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "principal": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The principal User or Group to bind the role to"
+      },
+      "role_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the role to bind to the principal"
+      },
+      "crn_pattern": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A CRN that specifies the scope and resource patterns necessary for the role to bind"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createRoleBinding",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2025-08-18-preview",
+    "output": {
+      "$ref": "#/230"
+    },
+    "input": {
+      "$ref": "#/229"
     }
   },
   {
@@ -3081,14 +3532,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "List of clusters"
@@ -3156,7 +3607,7 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/227"
         },
         "flags": 0,
         "description": "Metadata of the record"
@@ -3170,7 +3621,7 @@
       },
       "spec": {
         "type": {
-          "$ref": "#/221"
+          "$ref": "#/235"
         },
         "flags": 0,
         "description": "Specification of the cluster"
@@ -3181,47 +3632,6 @@
         },
         "flags": 0,
         "description": "Specification of the cluster"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MetadataEntity",
-    "properties": {
-      "self": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Self lookup url"
-      },
-      "resource_name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Resource name of the record"
-      },
-      "created_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Created Date Time"
-      },
-      "updated_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Updated Date time"
-      },
-      "deleted_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Deleted Date time"
       }
     }
   },
@@ -3294,21 +3704,21 @@
       },
       "environment": {
         "type": {
-          "$ref": "#/222"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "Specification of the cluster"
       },
       "network": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "Specification of the cluster"
       },
       "byok": {
         "type": {
-          "$ref": "#/224"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "Specification of the cluster"
@@ -3413,7 +3823,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/219"
+      "$ref": "#/234"
     }
   },
   {
@@ -3422,10 +3832,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/217"
+      "$ref": "#/232"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3441,14 +3851,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the  environment list"
       },
       "data": {
         "type": {
-          "$ref": "#/229"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "Environment list data"
@@ -3475,7 +3885,7 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/227"
         },
         "flags": 0,
         "description": "Metadata of the record"
@@ -3492,7 +3902,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/228"
+      "$ref": "#/242"
     }
   },
   {
@@ -3501,10 +3911,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/227"
+      "$ref": "#/241"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3520,14 +3930,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/246"
         },
         "flags": 0,
         "description": "Data of the invitations list"
@@ -3535,71 +3945,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "InvitationRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of account"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the invitation"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/220"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "email": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Email of the user"
-      },
-      "auth_type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Auth type of the user"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Status of the invitation"
-      },
-      "accepted_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Accepted date time of the invitation"
-      },
-      "expires_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Expiration date time of the invitation"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/232"
+      "$ref": "#/226"
     }
   },
   {
@@ -3608,10 +3956,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/231"
+      "$ref": "#/245"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3627,14 +3975,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/236"
+          "$ref": "#/249"
         },
         "flags": 0,
         "description": "List of role binding names"
@@ -3653,10 +4001,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/235"
+      "$ref": "#/248"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3672,14 +4020,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/252"
         },
         "flags": 0,
         "description": "List of role binding"
@@ -3687,57 +4035,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "RoleBindingRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The type of the resource."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the role binding"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/220"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "principal": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The principal User or Group to bind the role to"
-      },
-      "role_name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of the role to bind to the principal"
-      },
-      "crn_pattern": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "A CRN that specifies the scope and resource patterns necessary for the role to bind"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/239"
+      "$ref": "#/230"
     }
   },
   {
@@ -3746,10 +4046,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/238"
+      "$ref": "#/251"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3765,14 +4065,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/244"
+          "$ref": "#/256"
         },
         "flags": 0,
         "description": "Data of the service accounts list"
@@ -3799,7 +4099,7 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/227"
         },
         "flags": 0,
         "description": "Metadata of the record"
@@ -3823,7 +4123,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/243"
+      "$ref": "#/255"
     }
   },
   {
@@ -3832,10 +4132,10 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/242"
+      "$ref": "#/254"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
     }
   },
   {
@@ -3851,14 +4151,14 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Metadata of the list"
       },
       "data": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/260"
         },
         "flags": 0,
         "description": "Data of the users list"
@@ -3885,7 +4185,7 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/227"
         },
         "flags": 0,
         "description": "Metadata of the record"
@@ -3916,7 +4216,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/247"
+      "$ref": "#/259"
     }
   },
   {
@@ -3925,10 +4225,118 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2025-08-18-preview",
     "output": {
-      "$ref": "#/246"
+      "$ref": "#/258"
     },
     "input": {
-      "$ref": "#/208"
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrganizationResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Organization resource properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "orgvalidate",
+    "resourceType": "Microsoft.Confluent/validations",
+    "apiVersion": "2025-08-18-preview",
+    "output": {
+      "$ref": "#/262"
+    },
+    "input": {
+      "$ref": "#/262"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResponse",
+    "properties": {
+      "info": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 0,
+        "description": "Info from the response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResponseInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "orgvalidateV2",
+    "resourceType": "Microsoft.Confluent/validations",
+    "apiVersion": "2025-08-18-preview",
+    "output": {
+      "$ref": "#/265"
+    },
+    "input": {
+      "$ref": "#/262"
     }
   }
 ]

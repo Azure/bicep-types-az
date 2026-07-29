@@ -158,6 +158,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureResilienceManagement/usagePlans/enrollments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function recommendCapacity (Microsoft.AzureResilienceManagement/goalAssignments@2026-06-01-preview)
+* **Resource**: Microsoft.AzureResilienceManagement/goalAssignments
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [RecommendCapacityRequest](#recommendcapacityrequest)
+* **Output**: [RecommendCapacityResult](#recommendcapacityresult)
+
+## Function refreshGoalResources (Microsoft.AzureResilienceManagement/goalAssignments@2026-06-01-preview)
+* **Resource**: Microsoft.AzureResilienceManagement/goalAssignments
+* **ApiVersion**: 2026-06-01-preview
+* **Output**: [RefreshGoalResourcesResponse](#refreshgoalresourcesresponse)
+
+## Function updateGoalResources (Microsoft.AzureResilienceManagement/goalAssignments@2026-06-01-preview)
+* **Resource**: Microsoft.AzureResilienceManagement/goalAssignments
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [UpdateGoalResourceRequest](#updategoalresourcerequest)
+* **Output**: [UpdateGoalResourceResponse](#updategoalresourceresponse)
+
 ## AssetPropertiesOfDrill
 ### Properties
 * **region**: string (Required): Region where Drill's internal resources will be created.
@@ -361,6 +378,14 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
 
+## GoalResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [GoalResourceProperties](#goalresourceproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## GoalResourceProperties
 ### Properties
 * **disasterRecoveryAttestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Flag which depicts whether the Arm resource is manually attested for disaster recovery recommendation.
@@ -475,6 +500,30 @@
 * **evaluationDateTime**: string: The date and time when the high availability recommendations were last evaluated.
 * **notEnabledResourceCount**: int: Count of resources that do not have high availability enabled.
 * **notEvaluatedResourceCount**: int: Count of resources that have not been evaluated for high availability.
+
+## RecommendCapacityRequest
+### Properties
+* **resourceIds**: string[] {maxLength: 50} (Required): Azure resource IDs to evaluate for resiliency. Pass an empty array to automatically discover and evaluate non-resilient resources in the service group. Maximum 50 resources per request.
+
+## RecommendCapacityResourceResult
+### Properties
+* **capacityAssessment**: string: Human-readable assessment of this resource's resiliency posture. Contains actionable recommendations when available, or null when the AI advisor is unavailable.
+* **category**: 'RegionUnsupported' | 'SkuCapacityConstrained' | 'SkuIneligible' | 'Unsupported' | 'ZrEligible' | string: Resiliency eligibility classification for this resource. See ResiliencyEligibilityCategory for possible values.
+* **error**: string: Error message if the resource could not be evaluated (e.g., resource not found or access denied). Other fields may be empty when this is set.
+* **links**: string[]: Links to relevant Azure documentation for configuring resiliency.
+* **location**: string: Azure region where the resource is deployed (e.g., 'eastus', 'westeurope').
+* **resourceId**: string (Required): Fully qualified ARM resource ID of the evaluated resource.
+* **resourceType**: string: ARM resource type (e.g., 'Microsoft.Compute/virtualMachines', 'Microsoft.Storage/storageAccounts').
+* **skuName**: string: Current SKU or pricing tier of the resource (e.g., 'Standard_D4s_v3', 'Standard_LRS').
+* **steps**: string[]: Ordered list of actions to enable or improve resiliency for this resource.
+* **suggestedRegions**: string[]: Alternative Azure regions that support resiliency for this resource type. Populated when the current region does not support the required redundancy.
+* **suggestedSkus**: string[]: Alternative SKUs that support redundancy for this resource type in the current region. Populated when the current SKU is not eligible for resiliency.
+
+## RecommendCapacityResult
+### Properties
+* **agentError**: string: Error message from the AI advisor, if the advisory enrichment failed. The deterministic assessment results are still available even when this field is set.
+* **recommendations**: string[] (Required): High-level recommendations that apply across multiple resources (e.g., regional migration patterns, common SKU upgrades).
+* **resourceCapacities**: [RecommendCapacityResourceResult](#recommendcapacityresourceresult)[] (Required): Individual resiliency assessment for each evaluated resource.
 
 ## RecoveryGroup
 ### Properties
@@ -615,6 +664,11 @@
 * **selectedProtectionSolutionSetting**: [ResourceBaseProtectionSolutionSetting](#resourcebaseprotectionsolutionsetting): Resource protection solution settings of the protection solutions recovery orchestration resource is protected with.
 * **selectedProtectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string: A setting that indicates the protection solution selected.
 
+## RefreshGoalResourcesResponse
+### Properties
+* **lastRefreshTime**: string: Time when the refresh operation was last performed.
+* **resourceCount**: int: Total count of resources under the goal assignment after refresh.
+
 ## ResourceBaseProtectionSolutionSetting
 * **Discriminator**: protectionSolutionType
 
@@ -713,6 +767,14 @@
 * **lastModifiedTime**: string (Required): Last modified time of the unified resilience item.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **recommendations**: [RecommendationsData](#recommendationsdata) (Required): Computed and copied data of Azure recommendations.
+
+## UpdateGoalResourceRequest
+### Properties
+* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+
+## UpdateGoalResourceResponse
+### Properties
+* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
 
 ## UsagePlanProperties
 ### Properties

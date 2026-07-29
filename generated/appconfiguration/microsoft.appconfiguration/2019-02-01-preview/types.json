@@ -253,6 +253,31 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of the key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "RegenerateKey",
+    "resourceType": "Microsoft.AppConfiguration/configurationStores",
+    "apiVersion": "2019-02-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListKeyValueParameters",
     "properties": {
       "key": {
@@ -326,7 +351,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/24"
         },
         "flags": 2,
         "description": "A dictionary of tags that can help identify what a key-value may be applicable for."
@@ -347,10 +372,10 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2019-02-01-preview",
     "output": {
-      "$ref": "#/21"
+      "$ref": "#/23"
     },
     "input": {
-      "$ref": "#/20"
+      "$ref": "#/22"
     }
   }
 ]

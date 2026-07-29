@@ -5519,5 +5519,290 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceMigrateRequest",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 0,
+        "description": "Scope of the migrate resources operation."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/346"
+        },
+        "flags": 0,
+        "description": "List of asset resources to be migrated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resources"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/344"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceMigrateResponse",
+    "properties": {
+      "migrateResults": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 0,
+        "description": "List of migrate results containing result of each asset migrate operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateResult",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource Id of the asset resource."
+      },
+      "result": {
+        "type": {
+          "$ref": "#/351"
+        },
+        "flags": 2,
+        "description": "The result of the migrate operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/352"
+        },
+        "flags": 0,
+        "description": "The error if the migrate operation is not successful."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/350"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Error",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error code for classification of errors (ex: '400', '404', '500', etc.)."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Human-readable helpful error message to provide additional context for error (e.g.,: “Capability ID 'foo' does not exist”)."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/353"
+        },
+        "flags": 2,
+        "description": "Array of error details that describe the status of each error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/348"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.DeviceRegistry/namespaces",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/347"
+    },
+    "input": {
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceAssetExecuteActionRequest",
+    "properties": {
+      "managementActionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the management action to be executed."
+      },
+      "managementGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the management group under which the action is to be executed."
+      },
+      "payload": {
+        "type": {
+          "$ref": "#/357"
+        },
+        "flags": 0,
+        "description": "Payload required for executing the management action."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceAssetExecuteActionRequestPayload",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceAssetExecuteActionResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/363"
+        },
+        "flags": 3,
+        "description": "Status of the management action execution."
+      },
+      "managementActionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the management action that was executed."
+      },
+      "managementGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the management group under which the action was executed."
+      },
+      "assetResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource ID of the asset on which the management action was executed."
+      },
+      "response": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Response from the asset regarding the management action execution."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/352"
+        },
+        "flags": 0,
+        "description": "Error if the execute action operation is not successful."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/359"
+      },
+      {
+        "$ref": "#/360"
+      },
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeAction",
+    "resourceType": "Microsoft.DeviceRegistry/namespaces/assets",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/358"
+    },
+    "input": {
+      "$ref": "#/356"
+    }
   }
 ]

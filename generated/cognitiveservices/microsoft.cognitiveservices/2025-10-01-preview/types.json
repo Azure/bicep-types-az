@@ -9604,6 +9604,624 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/769"
+        },
+        "flags": 1,
+        "description": "key name to generate (Key1|Key2)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/767"
+      },
+      {
+        "$ref": "#/768"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.CognitiveServices/accounts",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/764"
+    },
+    "input": {
+      "$ref": "#/766"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckSkuAvailabilityParameter",
+    "properties": {
+      "skus": {
+        "type": {
+          "$ref": "#/772"
+        },
+        "flags": 1,
+        "description": "The SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The kind (type) of cognitive service account."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuAvailabilityListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/775"
+        },
+        "flags": 0,
+        "description": "Check SKU availability result list."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuAvailability",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The kind (type) of cognitive service account."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Type of the resource."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of SKU."
+      },
+      "skuAvailable": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Indicates the given SKU is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason why the SKU is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Additional error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/774"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkSkuAvailability",
+    "resourceType": "Microsoft.CognitiveServices/locations",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/773"
+    },
+    "input": {
+      "$ref": "#/771"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Deployment",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/436"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account deployment."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "The resource model definition representing SKU"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/778"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/777"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/777"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedNetworkSettingsBasicResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/782"
+        },
+        "flags": 0,
+        "description": "Managed Network settings for a cognitive services account."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedNetworkSettings",
+    "properties": {
+      "isolationMode": {
+        "type": {
+          "$ref": "#/786"
+        },
+        "flags": 0,
+        "description": "Isolation mode for the managed network of a cognitive services account."
+      },
+      "networkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "outboundRules": {
+        "type": {
+          "$ref": "#/787"
+        },
+        "flags": 0,
+        "description": "Dictionary of <OutboundRule>"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/534"
+        },
+        "flags": 0,
+        "description": "Status of the Provisioning for the managed network of a cognitive services account."
+      },
+      "firewallSku": {
+        "type": {
+          "$ref": "#/790"
+        },
+        "flags": 0,
+        "description": "Firewall Sku used for FQDN Rules"
+      },
+      "managedNetworkKind": {
+        "type": {
+          "$ref": "#/793"
+        },
+        "flags": 0,
+        "description": "The Kind of the managed network. Users can switch from V1 to V2 for granular access controls, but cannot switch back to V1 once V2 is enabled."
+      },
+      "firewallPublicIpAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Public IP address assigned to the Azure Firewall."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/800"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the managed network settings."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllowInternetOutbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllowOnlyApprovedOutbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/783"
+      },
+      {
+        "$ref": "#/784"
+      },
+      {
+        "$ref": "#/785"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedNetworkSettingsOutboundRules",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/507"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/788"
+      },
+      {
+        "$ref": "#/789"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "V1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "V2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/791"
+      },
+      {
+        "$ref": "#/792"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deferred"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/794"
+      },
+      {
+        "$ref": "#/795"
+      },
+      {
+        "$ref": "#/796"
+      },
+      {
+        "$ref": "#/797"
+      },
+      {
+        "$ref": "#/798"
+      },
+      {
+        "$ref": "#/799"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OutboundRuleListResult",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page constructed using the continuationToken.  If null, there are no additional pages."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/803"
+        },
+        "flags": 0,
+        "description": "The list of cognitive services accounts. Since this list may be incomplete, the nextLink field should be used to request the next list of cognitive services accounts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OutboundRuleBasicResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/507"
+        },
+        "flags": 1,
+        "description": "Outbound Rule for the managed network of a cognitive services account."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/802"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "batchOutboundRules",
+    "resourceType": "Microsoft.CognitiveServices/accounts/managedNetworks",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/801"
+    },
+    "input": {
+      "$ref": "#/781"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provision",
+    "resourceType": "Microsoft.CognitiveServices/accounts/managedNetworks",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/534"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityPerimeterConfiguration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/742"
+        },
+        "flags": 0,
+        "description": "NSP Configuration properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/806"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AgentReferenceResourceArmPaginatedResult",
     "properties": {
       "nextLink": {
@@ -9615,7 +10233,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/768"
+          "$ref": "#/810"
         },
         "flags": 0,
         "description": "An array of objects of type Agent Reference."
@@ -9666,7 +10284,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/767"
+      "$ref": "#/809"
     }
   },
   {
@@ -9675,7 +10293,107 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
     "apiVersion": "2025-10-01-preview",
     "output": {
-      "$ref": "#/766"
+      "$ref": "#/808"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RaiBlocklistItemBulkRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/691"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services RaiBlocklist Item."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/812"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RaiBlocklist",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/685"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services RaiBlocklist."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/815"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RaiBlocklistTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addRaiBlocklistItems",
+    "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/814"
+    },
+    "input": {
+      "$ref": "#/813"
     }
   }
 ]

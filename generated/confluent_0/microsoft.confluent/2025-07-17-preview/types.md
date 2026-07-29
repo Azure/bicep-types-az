@@ -70,6 +70,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Confluent/organizations/environments/clusters/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createAPIKey (Microsoft.Confluent/organizations/environments/clusters@2025-07-17-preview)
+* **Resource**: Microsoft.Confluent/organizations/environments/clusters
+* **ApiVersion**: 2025-07-17-preview
+* **Input**: [CreateAPIKeyModel](#createapikeymodel)
+* **Output**: [APIKeyRecord](#apikeyrecord)
+
+## Function createInvitation (Microsoft.Confluent/organizations/access@2025-07-17-preview)
+* **Resource**: Microsoft.Confluent/organizations/access
+* **ApiVersion**: 2025-07-17-preview
+* **Input**: [AccessInviteUserAccountModel](#accessinviteuseraccountmodel)
+* **Output**: [InvitationRecord](#invitationrecord)
+
+## Function createRoleBinding (Microsoft.Confluent/organizations/access@2025-07-17-preview)
+* **Resource**: Microsoft.Confluent/organizations/access
+* **ApiVersion**: 2025-07-17-preview
+* **Input**: [AccessCreateRoleBindingRequestModel](#accesscreaterolebindingrequestmodel)
+* **Output**: [RoleBindingRecord](#rolebindingrecord)
+
 ## Function listClusters (Microsoft.Confluent/organizations/access@2025-07-17-preview)
 * **Resource**: Microsoft.Confluent/organizations/access
 * **ApiVersion**: 2025-07-17-preview
@@ -118,6 +136,36 @@
 * **Input**: [ListAccessRequestModel](#listaccessrequestmodel)
 * **Output**: [AccessListUsersSuccessResponse](#accesslistuserssuccessresponse)
 
+## Function orgvalidate (Microsoft.Confluent/validations@2025-07-17-preview)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2025-07-17-preview
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [OrganizationResource](#organizationresource)
+
+## Function orgvalidateV2 (Microsoft.Confluent/validations@2025-07-17-preview)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2025-07-17-preview
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [ValidationResponse](#validationresponse)
+
+## AccessCreateRoleBindingRequestModel
+### Properties
+* **crn_pattern**: string: A CRN that specifies the scope and resource patterns necessary for the role to bind
+* **principal**: string: The principal User or Group to bind the role to
+* **role_name**: string: The name of the role to bind to the principal
+
+## AccessInvitedUserDetails
+### Properties
+* **auth_type**: string: Auth type of the user
+* **invitedEmail**: string: UPN/Email of the user who is being invited
+
+## AccessInviteUserAccountModel
+### Properties
+* **email**: string: Email of the logged in user
+* **invitedUserDetails**: [AccessInvitedUserDetails](#accessinviteduserdetails): Details of the user who is being invited
+* **organizationId**: string: Id of the organization
+* **upn**: string: Upn of the logged in user
+
 ## AccessListClusterSuccessResponse
 ### Properties
 * **data**: [ClusterRecord](#clusterrecord)[]: List of clusters
@@ -159,6 +207,40 @@
 * **data**: string[]: List of role binding names
 * **kind**: string: Type of response
 * **metadata**: [ConfluentListMetadata](#confluentlistmetadata): Metadata of the list
+
+## APIKeyOwnerEntity
+### Properties
+* **id**: string: API Key owner id
+* **kind**: string: Type of the owner service or user account
+* **related**: string: API URL for accessing or modifying the referred object
+* **resourceName**: string: CRN reference to the referred resource
+
+## APIKeyProperties
+### Properties
+* **metadata**: [SCMetadataEntity](#scmetadataentity): Metadata of the record
+* **spec**: [APIKeySpecEntity](#apikeyspecentity): Specification of the API Key
+
+## APIKeyRecord
+### Properties
+* **id**: string: Id of the api key
+* **kind**: string: Type of api key
+* **properties**: [APIKeyProperties](#apikeyproperties): API Key Properties
+
+## APIKeyResourceEntity
+### Properties
+* **environment**: string: The environment of the api key
+* **id**: string: Id of the resource
+* **kind**: string: Type of the owner which can be service or user account
+* **related**: string: API URL for accessing or modifying the api key resource object
+* **resourceName**: string: CRN reference to the referred resource
+
+## APIKeySpecEntity
+### Properties
+* **description**: string: The description of the API Key
+* **name**: string: The name of the API Key
+* **owner**: [APIKeyOwnerEntity](#apikeyownerentity): Specification of the cluster
+* **resource**: [APIKeyResourceEntity](#apikeyresourceentity): Specification of the cluster
+* **secret**: string {sensitive} (WriteOnly): API Key Secret
 
 ## ClusterByokEntity
 ### Properties
@@ -301,6 +383,11 @@
 * **synapseSqlUser**: string: Azure Synapse SQL login details
 
 
+## CreateAPIKeyModel
+### Properties
+* **description**: string: Description of the API Key
+* **name**: string: Name of the API Key
+
 ## EnvironmentProperties
 ### Properties
 * **metadata**: [SCMetadataEntity](#scmetadataentity): Metadata of the record
@@ -360,6 +447,16 @@
 * **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status
 * **termId**: string {maxLength: 50}: Offer Plan Term Id
 * **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
+
+## OrganizationResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [OrganizationResourceProperties](#organizationresourceproperties) (Required): Organization resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## OrganizationResourceProperties
 ### Properties
@@ -564,6 +661,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UserDetail
 ### Properties
 * **aadEmail**: string: AAD email address
@@ -580,4 +682,13 @@
 * **id**: string: Id of the user
 * **kind**: string: Type of account
 * **metadata**: [MetadataEntity](#metadataentity): Metadata of the record
+
+## ValidationResponse
+### Properties
+* **info**: [ValidationResponseInfo](#validationresponseinfo): Info from the response
+
+## ValidationResponseInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

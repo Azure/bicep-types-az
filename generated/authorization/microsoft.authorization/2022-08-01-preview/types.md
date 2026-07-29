@@ -44,6 +44,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleManagementAlerts/alertIncidents' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function refresh (Microsoft.Authorization/roleManagementAlerts@2022-08-01-preview)
+* **Resource**: Microsoft.Authorization/roleManagementAlerts
+* **ApiVersion**: 2022-08-01-preview
+* **Output**: [AlertOperationResult](#alertoperationresult)
+
 ## AlertConfiguration
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -148,6 +153,15 @@
 * **assigneeName**: string (ReadOnly): The assignee name.
 * **assigneeType**: string (ReadOnly): The assignee type.
 
+
+## AlertOperationResult
+### Properties
+* **createdDateTime**: string (ReadOnly): The created date of the alert operation.
+* **id**: string (ReadOnly): The id of the alert operation.
+* **lastActionDateTime**: string (ReadOnly): The last action date of the alert operation.
+* **resourceLocation**: string (ReadOnly): The location of the alert associated with the operation.
+* **status**: string (ReadOnly): The status of the alert operation.
+* **statusDetail**: string (ReadOnly): The status detail of the alert operation.
 
 ## AlertProperties
 ### Properties

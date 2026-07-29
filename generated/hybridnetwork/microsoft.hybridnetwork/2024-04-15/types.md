@@ -187,6 +187,30 @@
 * **ApiVersion**: 2024-04-15
 * **Output**: [ArtifactStorePrivateEndPointsListResult](#artifactstoreprivateendpointslistresult)
 
+## Function updateState (Microsoft.HybridNetwork/publishers/configurationGroupSchemas@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/configurationGroupSchemas
+* **ApiVersion**: 2024-04-15
+* **Input**: [ConfigurationGroupSchemaVersionUpdateState](#configurationgroupschemaversionupdatestate)
+* **Output**: [ConfigurationGroupSchemaVersionUpdateState](#configurationgroupschemaversionupdatestate)
+
+## Function updateState (Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions
+* **ApiVersion**: 2024-04-15
+* **Input**: [NetworkFunctionDefinitionVersionUpdateState](#networkfunctiondefinitionversionupdatestate)
+* **Output**: [NetworkFunctionDefinitionVersionUpdateState](#networkfunctiondefinitionversionupdatestate)
+
+## Function updateState (Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions
+* **ApiVersion**: 2024-04-15
+* **Input**: [NetworkServiceDesignVersionUpdateState](#networkservicedesignversionupdatestate)
+* **Output**: [NetworkServiceDesignVersionUpdateState](#networkservicedesignversionupdatestate)
+
+## Function updateState (Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests
+* **ApiVersion**: 2024-04-15
+* **Input**: [ArtifactManifestUpdateState](#artifactmanifestupdatestate)
+* **Output**: [ArtifactManifestUpdateState](#artifactmanifestupdatestate)
+
 ## ArmResourceDefinitionResourceElementTemplate
 ### Properties
 * **artifactProfile**: [NSDArtifactProfile](#nsdartifactprofile): Artifact profile properties.
@@ -229,6 +253,10 @@
 * **artifactManifestState**: 'Succeeded' | 'Unknown' | 'Uploaded' | 'Uploading' | 'Validating' | 'ValidationFailed' | string (ReadOnly): The artifact manifest state.
 * **artifacts**: [ManifestArtifactFormat](#manifestartifactformat)[]: The artifacts list.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Converging' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the ArtifactManifest resource.
+
+## ArtifactManifestUpdateState
+### Properties
+* **artifactManifestState**: 'Succeeded' | 'Unknown' | 'Uploaded' | 'Uploading' | 'Validating' | 'ValidationFailed' | string: The artifact manifest state.
 
 ## ArtifactStoreNetworkFabricControllerEndPoints
 ### Properties
@@ -383,6 +411,10 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Converging' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the Configuration group schema resource.
 * **schemaDefinition**: string: Name and value pairs that define the configuration value. It can be a well formed escaped JSON string.
 * **versionState**: 'Active' | 'Deprecated' | 'Preview' | 'Unknown' | 'Validating' | 'ValidationFailed' | string (ReadOnly): The configuration group schema version state.
+
+## ConfigurationGroupSchemaVersionUpdateState
+### Properties
+* **versionState**: 'Active' | 'Deprecated' | 'Preview' | 'Unknown' | 'Validating' | 'ValidationFailed' | string: The configuration group schema state.
 
 ## ConfigurationGroupValuePropertiesFormat
 * **Discriminator**: configurationType
@@ -550,6 +582,10 @@
 * **networkFunctionType**: 'VirtualNetworkFunction' (Required): The network function type.
 
 
+## NetworkFunctionDefinitionVersionUpdateState
+### Properties
+* **versionState**: 'Active' | 'Deprecated' | 'Preview' | 'Unknown' | 'Validating' | 'ValidationFailed' | string: The network function definition version state. Only the 'Active' and 'Deprecated' states are allowed for updates. Other states are used for internal state transitioning.
+
 ## NetworkFunctionPropertiesFormat
 * **Discriminator**: configurationType
 
@@ -600,6 +636,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [NfviDetails](#nfvidetails)
+
+## NetworkServiceDesignVersionUpdateState
+### Properties
+* **versionState**: 'Active' | 'Deprecated' | 'Preview' | 'Unknown' | 'Validating' | 'ValidationFailed' | string: The network service design version state.
 
 ## NfviDetails
 ### Properties

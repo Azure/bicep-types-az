@@ -6021,5 +6021,1079 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPSizingRecommendationRequest",
+    "properties": {
+      "appLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource is to be created."
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 1,
+        "description": "Defines the environment type - Production/Non Production."
+      },
+      "sapProduct": {
+        "type": {
+          "$ref": "#/457"
+        },
+        "flags": 1,
+        "description": "Defines the SAP Product type."
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/460"
+        },
+        "flags": 1,
+        "description": "The deployment type. Eg: SingleServer/ThreeTier"
+      },
+      "saps": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The SAP Application Performance Standard measurement."
+      },
+      "dbMemory": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The database memory configuration."
+      },
+      "databaseType": {
+        "type": {
+          "$ref": "#/463"
+        },
+        "flags": 1,
+        "description": "The database type."
+      },
+      "dbScaleMethod": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "The DB scale method."
+      },
+      "highAvailabilityType": {
+        "type": {
+          "$ref": "#/468"
+        },
+        "flags": 0,
+        "description": "The high availability type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonProd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prod"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/451"
+      },
+      {
+        "$ref": "#/452"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S4HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/454"
+      },
+      {
+        "$ref": "#/455"
+      },
+      {
+        "$ref": "#/456"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeTier"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/458"
+      },
+      {
+        "$ref": "#/459"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DB2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/462"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScaleUp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvailabilitySet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvailabilityZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/466"
+      },
+      {
+        "$ref": "#/467"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "SAPSizingRecommendationResult",
+    "discriminator": "deploymentType",
+    "baseProperties": {},
+    "elements": {
+      "SingleServer": {
+        "$ref": "#/470"
+      },
+      "ThreeTier": {
+        "$ref": "#/472"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SingleServerRecommendationResult",
+    "properties": {
+      "vmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recommended VM SKU for single server."
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/471"
+        },
+        "flags": 1,
+        "description": "The type of SAP deployment, single server or Three tier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleServer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreeTierRecommendationResult",
+    "properties": {
+      "dbVmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The database VM SKU."
+      },
+      "databaseInstanceCount": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The database server instance count."
+      },
+      "centralServerVmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The central server VM SKU."
+      },
+      "centralServerInstanceCount": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The central server instance count."
+      },
+      "applicationServerVmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The application server VM SKU."
+      },
+      "applicationServerInstanceCount": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The application server instance count."
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/473"
+        },
+        "flags": 1,
+        "description": "The type of SAP deployment, single server or Three tier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeTier"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSizingRecommendations",
+    "resourceType": "Microsoft.Workloads/locations/sapVirtualInstanceMetadata",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/469"
+    },
+    "input": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPSupportedSkusRequest",
+    "properties": {
+      "appLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource is to be created."
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/478"
+        },
+        "flags": 1,
+        "description": "Defines the environment type - Production/Non Production."
+      },
+      "sapProduct": {
+        "type": {
+          "$ref": "#/482"
+        },
+        "flags": 1,
+        "description": "Defines the SAP Product type."
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/485"
+        },
+        "flags": 1,
+        "description": "The deployment type. Eg: SingleServer/ThreeTier"
+      },
+      "databaseType": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 1,
+        "description": "The database type. Eg: HANA, DB2, etc"
+      },
+      "highAvailabilityType": {
+        "type": {
+          "$ref": "#/491"
+        },
+        "flags": 0,
+        "description": "The high availability type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonProd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prod"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/476"
+      },
+      {
+        "$ref": "#/477"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S4HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/480"
+      },
+      {
+        "$ref": "#/481"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeTier"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/483"
+      },
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DB2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvailabilitySet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvailabilityZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/489"
+      },
+      {
+        "$ref": "#/490"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPSupportedResourceSkusResult",
+    "properties": {
+      "supportedSkus": {
+        "type": {
+          "$ref": "#/494"
+        },
+        "flags": 0,
+        "description": "Gets the list of SAP supported SKUs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPSupportedSku",
+    "properties": {
+      "vmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The VM Sku."
+      },
+      "isAppServerCertified": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "True if the Sku is certified for App server in the SAP system."
+      },
+      "isDatabaseCertified": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "True if the Sku is certified for Database server in the SAP system."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/493"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSapSupportedSku",
+    "resourceType": "Microsoft.Workloads/locations/sapVirtualInstanceMetadata",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/492"
+    },
+    "input": {
+      "$ref": "#/475"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPDiskConfigurationsRequest",
+    "properties": {
+      "appLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the SAP resources will be created."
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 1,
+        "description": "Defines the environment type - Production/Non Production."
+      },
+      "sapProduct": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 1,
+        "description": "Defines the SAP Product type."
+      },
+      "databaseType": {
+        "type": {
+          "$ref": "#/506"
+        },
+        "flags": 1,
+        "description": "The database type. Eg: HANA, DB2, etc"
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/509"
+        },
+        "flags": 1,
+        "description": "The deployment type. Eg: SingleServer/ThreeTier"
+      },
+      "dbVmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The VM SKU for database instance."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonProd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prod"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/497"
+      },
+      {
+        "$ref": "#/498"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S4HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/500"
+      },
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DB2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeTier"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPDiskConfigurationsResult",
+    "properties": {
+      "diskConfigurations": {
+        "type": {
+          "$ref": "#/512"
+        },
+        "flags": 0,
+        "description": "Gets the list of Disk Configurations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPDiskConfiguration",
+    "properties": {
+      "volume": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The volume name."
+      },
+      "diskType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The disk type."
+      },
+      "diskCount": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The disk count."
+      },
+      "diskSizeGB": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The disk size in GB."
+      },
+      "diskIopsReadWrite": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The disk Iops."
+      },
+      "diskMBpsReadWrite": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The disk provisioned throughput in MBps."
+      },
+      "diskStorageType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The disk storage type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/511"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDiskConfigurations",
+    "resourceType": "Microsoft.Workloads/locations/sapVirtualInstanceMetadata",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/510"
+    },
+    "input": {
+      "$ref": "#/496"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPAvailabilityZoneDetailsRequest",
+    "properties": {
+      "appLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the SAP resources will be created."
+      },
+      "sapProduct": {
+        "type": {
+          "$ref": "#/518"
+        },
+        "flags": 1,
+        "description": "Defines the SAP Product type."
+      },
+      "databaseType": {
+        "type": {
+          "$ref": "#/521"
+        },
+        "flags": 1,
+        "description": "The database type. Eg: HANA, DB2, etc"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S4HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/515"
+      },
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HANA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DB2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/519"
+      },
+      {
+        "$ref": "#/520"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPAvailabilityZoneDetailsResult",
+    "properties": {
+      "availabilityZonePairs": {
+        "type": {
+          "$ref": "#/524"
+        },
+        "flags": 0,
+        "description": "Gets the list of availability zone pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPAvailabilityZonePair",
+    "properties": {
+      "zoneA": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The zone A."
+      },
+      "zoneB": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The zone B."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/523"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAvailabilityZoneDetails",
+    "resourceType": "Microsoft.Workloads/locations/sapVirtualInstanceMetadata",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/522"
+    },
+    "input": {
+      "$ref": "#/514"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/527"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/528"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/526"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/530"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/533"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/529"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/532"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/531"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Workloads/sapVirtualInstances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/526"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StopRequest",
+    "properties": {
+      "hardStop": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "A boolean to specify if the SAP system should be hard-stopped."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Workloads/sapVirtualInstances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/526"
+    },
+    "input": {
+      "$ref": "#/535"
+    }
   }
 ]

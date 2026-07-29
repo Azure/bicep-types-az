@@ -20,6 +20,11 @@
 * **ApiVersion**: 2023-05-01
 * **Output**: [HealthBotKeysResponse](#healthbotkeysresponse)
 
+## Function regenerateApiJwtSecret (Microsoft.HealthBot/healthBots@2023-05-01)
+* **Resource**: Microsoft.HealthBot/healthBots
+* **ApiVersion**: 2023-05-01
+* **Output**: [HealthBotKey](#healthbotkey)
+
 ## HealthBotKey
 ### Properties
 * **keyName**: string: The name of the key.

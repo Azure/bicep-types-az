@@ -49,6 +49,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createOrUpdateExternalUser (Microsoft.Elastic/monitors@2025-06-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2025-06-01
+* **Input**: [ExternalUserInfo](#externaluserinfo)
+* **Output**: [ExternalUserCreationResponse](#externalusercreationresponse)
+
+## Function getBillingInfo (Microsoft.Elastic/monitors@2025-06-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2025-06-01
+* **Output**: [BillingInfoResponse](#billinginforesponse)
+
+## Function getStatus (Microsoft.Elastic/monitors/openAIIntegrations@2025-06-01)
+* **Resource**: Microsoft.Elastic/monitors/openAIIntegrations
+* **ApiVersion**: 2025-06-01
+* **Output**: [OpenAIIntegrationStatusResponse](#openaiintegrationstatusresponse)
+
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2025-06-01)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2025-06-01
@@ -83,6 +99,22 @@
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2025-06-01
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
+
+## Function resubscribe (Microsoft.Elastic/monitors@2025-06-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2025-06-01
+* **Input**: [ResubscribeProperties](#resubscribeproperties)
+* **Output**: [ElasticMonitorResource](#elasticmonitorresource)
+
+## Function vmIngestionDetails (Microsoft.Elastic/monitors@2025-06-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2025-06-01
+* **Output**: [VMIngestionDetailsResponse](#vmingestiondetailsresponse)
+
+## BillingInfoResponse
+### Properties
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details
+* **partnerBillingEntity**: [PartnerBillingEntity](#partnerbillingentity): Partner Billing Entity details: Organization Info
 
 ## CompanyInfo
 ### Properties
@@ -137,6 +169,19 @@
 * **emailAddress**: string (ReadOnly): Email of the Elastic User Account.
 * **id**: string (ReadOnly): User Id of the elastic account of the User.
 
+## ElasticMonitorResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [IdentityProperties](#identityproperties): Identity properties of the monitor resource.
+* **kind**: string: The kind of the Elastic resource - observability, security, search etc.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MonitorProperties](#monitorproperties): Properties of the monitor resource.
+* **sku**: [ResourceSku](#resourcesku): SKU of the monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ElasticProperties
 ### Properties
 * **elasticCloudDeployment**: [ElasticCloudDeployment](#elasticclouddeployment): Details of the elastic cloud deployment.
@@ -163,6 +208,18 @@
 * **description**: string: Description of the elastic filter rule
 * **id**: string: Id of the elastic filter rule
 * **source**: string: IP of the elastic filter rule
+
+## ExternalUserCreationResponse
+### Properties
+* **created**: bool (ReadOnly): Shows if user is created or updated
+
+## ExternalUserInfo
+### Properties
+* **emailId**: string: Email id of the user to be created or updated
+* **fullName**: string: Full name of the user to be created or updated
+* **password**: string {sensitive}: Password of the user to be created or updated
+* **roles**: string[]: Roles to be assigned for  created or updated user
+* **userName**: string: Username of the user to be created or updated
 
 ## FilteringTag
 ### Properties
@@ -247,6 +304,20 @@
 * **openAIResourceEndpoint**: string: The API endpoint for Open AI resource
 * **openAIResourceId**: string: The resource name of Open AI resource
 
+## OpenAIIntegrationStatusResponse
+### Properties
+* **properties**: [OpenAIIntegrationStatusResponseProperties](#openaiintegrationstatusresponseproperties): Status of the OpenAI Integration
+
+## OpenAIIntegrationStatusResponseProperties
+### Properties
+* **status**: string: Status of the OpenAI Integration
+
+## PartnerBillingEntity
+### Properties
+* **id**: string: The Elastic Organization Id.
+* **name**: string: The Elastic Organization Name.
+* **partnerEntityUri**: string: Link to the elastic organization page
+
 ## PlanDetails
 ### Properties
 * **offerID**: string: Offer ID of the plan
@@ -264,6 +335,14 @@
 ### Properties
 * **name**: string (Required): The name of the SKU.
 
+## ResubscribeProperties
+### Properties
+* **organizationId**: string: Organization Id of the Elastic Organization that needs to be resubscribed
+* **planId**: string: Newly selected plan Id to create the new Marketplace subscription for Resubscribe
+* **resourceGroup**: string: Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe
+* **subscriptionId**: string: Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe
+* **term**: string: Newly selected term to create the new Marketplace subscription for Resubscribe
+
 ## SubscriptionList
 ### Properties
 * **monitoredSubscriptionList**: [MonitoredSubscription](#monitoredsubscription)[]: List of subscriptions and the state of the monitoring.
@@ -278,6 +357,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -301,6 +385,11 @@
 ### Properties
 * **nextLink**: string: The link to the next page of items
 * **value**: [VMResources](#vmresources)[] (Required): The VMResources items on this page
+
+## VMIngestionDetailsResponse
+### Properties
+* **cloudId**: string: The cloudId of given Elastic monitor resource.
+* **ingestionKey**: string {sensitive}: Ingestion details to install agent on given VM.
 
 ## VMResources
 ### Properties

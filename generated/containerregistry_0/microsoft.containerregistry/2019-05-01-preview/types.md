@@ -22,10 +22,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateCredentials (Microsoft.ContainerRegistry/registries@2019-05-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2019-05-01-preview
+* **Input**: [GenerateCredentialsParameters](#generatecredentialsparameters)
+* **Output**: [GenerateCredentialsResult](#generatecredentialsresult)
+
 ## ActiveDirectoryObject
 ### Properties
 * **objectId**: string: The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.
 * **tenantId**: string: The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.
+
+## GenerateCredentialsParameters
+### Properties
+* **expiry**: string: The expiry date of the generated credentials after which the credentials become invalid.
+* **name**: 'password1' | 'password2' | string: Specifies name of the password which should be regenerated if any -- password1 or password2.
+* **tokenId**: string: The resource ID of the token for which credentials have to be generated.
+
+## GenerateCredentialsResult
+### Properties
+* **passwords**: [TokenPassword](#tokenpassword)[]: The list of passwords for a container registry.
+* **username**: string: The username for a container registry.
 
 ## ScopeMapProperties
 ### Properties

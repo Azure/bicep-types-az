@@ -862,5 +862,86 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountStatus",
+    "properties": {
+      "scopesStatuses": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The list of scopes statuses."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopeStatuses",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The scope that the statuses refers to."
+      },
+      "statuses": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Scope stage statuses."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StageStatus",
+    "properties": {
+      "stage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The stage name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the stage."
+      },
+      "time": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the status."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "status",
+    "resourceType": "Microsoft.RecommendationsService/accounts",
+    "apiVersion": "2022-03-01-preview",
+    "output": {
+      "$ref": "#/67"
+    }
   }
 ]

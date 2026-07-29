@@ -55,6 +55,12 @@
 * **ApiVersion**: 2020-06-02
 * **Output**: [ConnectionSetting](#connectionsetting)
 
+## Function regeneratekeys (Microsoft.BotService/botServices/channels@2020-06-02)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2020-06-02
+* **Input**: [SiteInfo](#siteinfo)
+* **Output**: [BotChannel](#botchannel)
+
 ## AlexaChannelProperties
 ### Properties
 * **alexaSkillId**: string (Required): The Alexa skill Id
@@ -283,6 +289,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SiteInfo
+### Properties
+* **key**: 'key1' | 'key2' (Required): Determines which key is to be regenerated
+* **siteName**: string (Required): The site name
 
 ## Sku
 ### Properties

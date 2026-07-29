@@ -58,6 +58,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBillingInfo (Microsoft.Datadog/monitors@2025-01-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-01-07
+* **Output**: [BillingInfoResponse](#billinginforesponse)
+
+## Function getDefaultKey (Microsoft.Datadog/monitors@2025-01-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-01-07
+* **Output**: [DatadogApiKey](#datadogapikey)
+
 ## Function listApiKeys (Microsoft.Datadog/monitors@2025-01-07)
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2025-01-07
@@ -78,10 +88,26 @@
 * **ApiVersion**: 2025-01-07
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
 
+## Function refreshSetPasswordLink (Microsoft.Datadog/monitors@2025-01-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-01-07
+* **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
+
+## Function resubscribe (Microsoft.Datadog/monitors@2025-01-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-01-07
+* **Input**: [ResubscribeProperties](#resubscribeproperties)
+* **Output**: [DatadogMonitorResource](#datadogmonitorresource)
+
 ## AgentRules
 ### Properties
 * **enableAgentMonitoring**: bool: Flag specifying if agent monitoring should be enabled for the Monitor resource.
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+
+## BillingInfoResponse
+### Properties
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details
+* **partnerBillingEntity**: [PartnerBillingEntity](#partnerbillingentity): Partner Billing Entity details: Organization Info
 
 ## DatadogAgreementProperties
 ### Properties
@@ -134,6 +160,23 @@
 ### Properties
 * **transport**: string: The transport.
 
+## DatadogMonitorResource
+### Properties
+* **id**: string (ReadOnly): ARM id of the monitor resource.
+* **identity**: [IdentityProperties](#identityproperties)
+* **location**: string (Required)
+* **name**: string (ReadOnly): Name of the monitor resource.
+* **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
+* **sku**: [ResourceSku](#resourcesku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [DatadogMonitorResourceTags](#datadogmonitorresourcetags): Dictionary of <string>
+* **type**: string (ReadOnly): The type of the monitor resource.
+
+## DatadogMonitorResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DatadogMonitorResourceTags
 ### Properties
 ### Additional Properties
@@ -150,6 +193,10 @@
 * **linkingClientId**: string {sensitive} (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
 * **name**: string: Name of the Datadog organization.
 * **redirectUri**: string (WriteOnly): The redirect URI for linking.
+
+## DatadogSetPasswordLink
+### Properties
+* **setPasswordLink**: string
 
 ## DatadogSingleSignOnProperties
 ### Properties
@@ -186,6 +233,14 @@
 * **sendAadLogs**: bool: Flag specifying if AAD logs should be sent for the Monitor resource.
 * **sendResourceLogs**: bool: Flag specifying if Azure resource logs should be sent for the Monitor resource.
 * **sendSubscriptionLogs**: bool: Flag specifying if Azure subscription logs should be sent for the Monitor resource.
+
+## MarketplaceSaaSInfo
+### Properties
+* **billedAzureSubscriptionId**: string: The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into.
+* **marketplaceName**: string: Marketplace Subscription Details: SAAS Name
+* **marketplaceStatus**: string: Marketplace Subscription Details: SaaS Subscription Status
+* **marketplaceSubscriptionId**: string: Marketplace Subscription Id. This is a GUID-formatted string.
+* **subscribed**: bool: Flag specifying if the Marketplace status is subscribed or not.
 
 ## MetricRules
 ### Properties
@@ -230,9 +285,21 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
 * **userInfo**: [UserInfo](#userinfo): Includes name, email and optionally, phone number. User Information can't be null.
 
+## PartnerBillingEntity
+### Properties
+* **id**: string: The Datadog Organization Id.
+* **name**: string: The Datadog Organization Name.
+* **partnerEntityUri**: string: Link to the datadog organization page
+
 ## ResourceSku
 ### Properties
 * **name**: string (Required): Name of the SKU in {PlanId} format. For Terraform, the only allowed value is 'Linked'.
+
+## ResubscribeProperties
+### Properties
+* **azureSubscriptionId**: string: Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe
+* **resourceGroup**: string: Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe
+* **sku**: [ResourceSku](#resourcesku)
 
 ## SubscriptionList
 ### Properties

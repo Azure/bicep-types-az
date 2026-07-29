@@ -42,6 +42,11 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key value pairs.
 * **type**: 'Microsoft.AzureBridge.Admin/activations/products' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function download (Microsoft.AzureBridge.Admin/activations/products@2016-01-01)
+* **Resource**: Microsoft.AzureBridge.Admin/activations/products
+* **ApiVersion**: 2016-01-01
+* **Output**: [DownloadedProductResource](#downloadedproductresource)
+
 ## Activation
 ### Properties
 * **azureRegistrationResourceIdentifier**: string: Azure registration resource identifier.
@@ -86,6 +91,15 @@
 * **publisherIdentifier**: string: Publisher identifier.
 * **sku**: string: Product SKU.
 * **vmExtensionType**: string: Extension type of the VM.
+
+## DownloadedProductResource
+### Properties
+* **id**: string: URI of the resource.
+* **location**: string (ReadOnly): Location of the resource
+* **name**: string: Name of the resource.
+* **properties**: [DownloadedProduct](#downloadedproduct): Properties of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key value pairs.
+* **type**: string: Type of resource.
 
 ## ExtendedProductProperties
 ### Properties
@@ -142,6 +156,11 @@
 ## ProductProperties
 ### Properties
 * **version**: string: The version of the product
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -2052,11 +2052,97 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SearchService",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of the search service."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "The SKU of the search service, which determines price tier and capacity limits. This property is required when creating a new search service."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The identity of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.Search/searchServices",
+    "apiVersion": "2025-05-01",
+    "output": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListQueryKeysResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/184"
         },
         "flags": 2,
         "description": "The query keys for the Azure AI Search service."
@@ -2093,7 +2179,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/180"
+      "$ref": "#/183"
     }
   },
   {
@@ -2102,7 +2188,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/179"
+      "$ref": "#/182"
     }
   },
   {
@@ -2131,7 +2217,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/183"
+      "$ref": "#/186"
     }
   }
 ]

@@ -41,6 +41,34 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureDataTransfer/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function approveConnection (Microsoft.AzureDataTransfer/pipelines@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/pipelines
+* **ApiVersion**: 2024-01-25
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
+## Function disable (Microsoft.AzureDataTransfer/connections/flows@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2024-01-25
+* **Output**: [Flow](#flow)
+
+## Function enable (Microsoft.AzureDataTransfer/connections/flows@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2024-01-25
+* **Output**: [Flow](#flow)
+
+## Function link (Microsoft.AzureDataTransfer/connections/flows@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/connections/flows
+* **ApiVersion**: 2024-01-25
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Flow](#flow)
+
+## Function link (Microsoft.AzureDataTransfer/connections@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/connections
+* **ApiVersion**: 2024-01-25
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
 ## Function listPendingConnections (Microsoft.AzureDataTransfer/connections@2024-01-25)
 * **Resource**: Microsoft.AzureDataTransfer/connections
 * **ApiVersion**: 2024-01-25
@@ -56,6 +84,22 @@
 * **ApiVersion**: 2024-01-25
 * **Input**: [Schema](#schema)
 * **Output**: [SchemasListResult](#schemaslistresult)
+
+## Function rejectConnection (Microsoft.AzureDataTransfer/pipelines@2024-01-25)
+* **Resource**: Microsoft.AzureDataTransfer/pipelines
+* **ApiVersion**: 2024-01-25
+* **Input**: [ResourceBody](#resourcebody)
+* **Output**: [Connection](#connection)
+
+## Connection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConnectionProperties](#connectionproperties): Properties of connection
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ConnectionProperties
 ### Properties
@@ -77,6 +121,18 @@
 * **secondaryContacts**: string[]: The secondary contacts for this connection request
 * **status**: 'Accepted' | 'Approved' | 'InReview' | 'Rejected' | string (ReadOnly): Status of the connection
 * **statusReason**: string (ReadOnly): Reason for status
+
+## Flow
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed identity of the flow resource, if configured.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **plan**: [Plan](#plan): Plan for the resource.
+* **properties**: [FlowProperties](#flowproperties): Properties of flow
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## FlowProperties
 ### Properties
@@ -222,6 +278,11 @@
 * **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
 * **version**: string: The version of the desired product/artifact.
 
+## ResourceBody
+### Properties
+* **id**: string (Required): ID of the resource.
+* **statusReason**: string: Reason for resource operation.
+
 ## Schema
 ### Properties
 * **connectionId**: string: Connection ID associated with this schema
@@ -254,6 +315,16 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

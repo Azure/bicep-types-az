@@ -171,6 +171,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function failover (Microsoft.ServiceBus/namespaces@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces
+* **ApiVersion**: 2026-01-01
+* **Input**: [FailOver](#failover)
+* **Output**: [FailOver](#failover)
+
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2026-01-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2026-01-01
@@ -189,6 +195,24 @@
 ## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2026-01-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
 * **ApiVersion**: 2026-01-01
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2026-01-01
+* **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2026-01-01
+* **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2026-01-01
+* **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
 
 ## AccessKeys
@@ -247,6 +271,15 @@
 * **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
 * **requireInfrastructureEncryption**: bool: Enable Infrastructure Encryption (Double Encryption)
+
+## FailOver
+### Properties
+* **properties**: [FailOverProperties](#failoverproperties)
+
+## FailOverProperties
+### Properties
+* **force**: bool: If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss.
+* **primaryLocation**: string: Query parameter for the new primary location after failover.
 
 ## GeoDataReplicationProperties
 ### Properties
@@ -391,6 +424,11 @@
 ### Properties
 * **description**: string: Description of the issue
 * **issueType**: string: Type of Issue
+
+## RegenerateAccessKeyParameters
+### Properties
+* **key**: string: Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType
+* **keyType**: 'PrimaryKey' | 'SecondaryKey' (Required): The access key to regenerate.
 
 ## Ruleproperties
 ### Properties

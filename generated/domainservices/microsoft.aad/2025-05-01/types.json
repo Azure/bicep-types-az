@@ -1493,5 +1493,26 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnsuspendDomainServiceResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unsuspend",
+    "resourceType": "Microsoft.AAD/domainServices",
+    "apiVersion": "2025-05-01",
+    "output": {
+      "$ref": "#/103"
+    }
   }
 ]

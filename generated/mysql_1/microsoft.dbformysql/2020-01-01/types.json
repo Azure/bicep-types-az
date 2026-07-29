@@ -108,5 +108,31 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerUpgradeParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The properties that can be updated for a server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerUpgradeParametersProperties",
+    "properties": {
+      "targetServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Represents an server storage profile."
+      }
+    }
   }
 ]

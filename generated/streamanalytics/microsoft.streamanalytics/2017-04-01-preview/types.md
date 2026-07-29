@@ -53,6 +53,42 @@
 * **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function compileQuery (Microsoft.StreamAnalytics/locations@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/locations
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [CompileQuery](#compilequery)
+* **Output**: [QueryCompilationResult](#querycompilationresult)
+
+## Function retrieveDefaultDefinition (Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs/functions
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [FunctionRetrieveDefaultDefinitionParameters](#functionretrievedefaultdefinitionparameters)
+* **Output**: [Function](#function)
+
+## Function test (Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs/functions
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [Function](#function)
+* **Output**: [ResourceTestStatus](#resourceteststatus)
+
+## Function test (Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs/inputs
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [Input](#input)
+* **Output**: [ResourceTestStatus](#resourceteststatus)
+
+## Function test (Microsoft.StreamAnalytics/streamingjobs/outputs@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs/outputs
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [Output](#output)
+* **Output**: [ResourceTestStatus](#resourceteststatus)
+
+## Function testQuery (Microsoft.StreamAnalytics/locations@2017-04-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/locations
+* **ApiVersion**: 2017-04-01-preview
+* **Input**: [TestQuery](#testquery)
+* **Output**: [QueryTestingResult](#querytestingresult)
+
 ## AzureDataLakeStoreOutputDataSourceProperties
 ### Properties
 * **accountName**: string: The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
@@ -82,6 +118,11 @@
 * **numberOfParallelRequests**: int: The number of parallel requests that will be sent per partition of your job to the machine learning service. Default is 1.
 * **outputs**: [AzureMachineLearningServiceOutputColumn](#azuremachinelearningserviceoutputcolumn)[]: A list of outputs from the Azure Machine Learning web service endpoint execution.
 
+## AzureMachineLearningServiceFunctionBindingRetrievalProperties
+### Properties
+* **executeEndpoint**: string: The Request-Response execute endpoint of the Azure Machine Learning web service.
+* **udfType**: 'Scalar': The function type.
+
 ## AzureMachineLearningServiceInputColumn
 ### Properties
 * **dataType**: string: The (Azure Machine Learning supported) data type of the input column.
@@ -101,6 +142,11 @@
 * **endpoint**: string: The Request-Response execute endpoint of the Azure Machine Learning Studio. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
 * **inputs**: [AzureMachineLearningStudioInputs](#azuremachinelearningstudioinputs): The inputs for the Azure Machine Learning Studio endpoint.
 * **outputs**: [AzureMachineLearningStudioOutputColumn](#azuremachinelearningstudiooutputcolumn)[]: A list of outputs from the Azure Machine Learning Studio endpoint execution.
+
+## AzureMachineLearningStudioFunctionBindingRetrievalProperties
+### Properties
+* **executeEndpoint**: string: The Request-Response execute endpoint of the Azure Machine Learning Studio. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
+* **udfType**: 'Scalar': The function type.
 
 ## AzureMachineLearningStudioInputColumn
 ### Properties
@@ -191,6 +237,14 @@
 ### Properties
 * **id**: string: The resource id of cluster.
 
+## CompileQuery
+### Properties
+* **compatibilityLevel**: '1.0' | string: The query to compile.
+* **functions**: [QueryFunction](#queryfunction)[]: The functions for the query compilation.
+* **inputs**: [QueryInput](#queryinput)[]: The inputs for the query compilation.
+* **jobType**: 'Cloud' | 'Edge' | string (Required): Describes the type of the job. Valid values are `Cloud` and 'Edge'.
+* **query**: string (Required): The query to compile.
+
 ## Compression
 ### Properties
 * **type**: string (Required)
@@ -201,6 +255,11 @@
 * **dllPath**: string: The Csharp code containing a single function definition.
 * **method**: string: The Csharp code containing a single function definition.
 * **script**: string: The Csharp code containing a single function definition.
+
+## CSharpFunctionBindingRetrievalProperties
+### Properties
+* **script**: string: The CSharp code containing a single function definition.
+* **udfType**: 'Scalar': The function type.
 
 ## CsvSerializationProperties
 ### Properties
@@ -235,6 +294,24 @@
 * **database**: string: The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
 * **documentId**: string: The name of the field in output events used to specify the primary key which insert or update operations are based on.
 * **partitionKey**: string: The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
+
+## ErrorDetails
+### Properties
+* **code**: string: Error code.
+* **message**: string: Error message.
+* **target**: string: Error target.
+
+## ErrorError
+### Properties
+* **code**: string: Error code.
+* **details**: [ErrorDetails](#errordetails)[]: Error details.
+* **message**: string: Error message.
+* **target**: string: Error target.
+
+## ErrorResponse
+### Properties
+* **code**: string (ReadOnly): Error code associated with the error that occurred.
+* **message**: string (ReadOnly): Describes the error in detail.
 
 ## EventHubOutputDataSourceProperties
 ### Properties
@@ -325,6 +402,32 @@
 * **type**: 'Scalar' (Required): Indicates the type of function.
 
 
+## FunctionRetrieveDefaultDefinitionParameters
+* **Discriminator**: bindingType
+
+### Base Properties
+
+### AzureMachineLearningStudioFunctionRetrieveDefaultDefinitionParameters
+#### Properties
+* **bindingRetrievalProperties**: [AzureMachineLearningStudioFunctionBindingRetrievalProperties](#azuremachinelearningstudiofunctionbindingretrievalproperties): The binding retrieval properties associated with an Azure Machine learning Studio.
+* **bindingType**: 'Microsoft.MachineLearning/WebService' (Required): Indicates the function binding type.
+
+### AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters
+#### Properties
+* **bindingRetrievalProperties**: [AzureMachineLearningServiceFunctionBindingRetrievalProperties](#azuremachinelearningservicefunctionbindingretrievalproperties): The binding retrieval properties associated with an Azure Machine learning web service.
+* **bindingType**: 'Microsoft.MachineLearningServices' (Required): Indicates the function binding type.
+
+### CSharpFunctionRetrieveDefaultDefinitionParameters
+#### Properties
+* **bindingRetrievalProperties**: [CSharpFunctionBindingRetrievalProperties](#csharpfunctionbindingretrievalproperties): The binding retrieval properties associated with a CSharp function.
+* **bindingType**: 'Microsoft.StreamAnalytics/CLRUdf' (Required): Indicates the function binding type.
+
+### JavaScriptFunctionRetrieveDefaultDefinitionParameters
+#### Properties
+* **bindingRetrievalProperties**: [JavaScriptFunctionBindingRetrievalProperties](#javascriptfunctionbindingretrievalproperties): The binding retrieval properties associated with a JavaScript function.
+* **bindingType**: 'Microsoft.StreamAnalytics/JavascriptUdf' (Required): Indicates the function binding type.
+
+
 ## Identity
 ### Properties
 * **principalId**: string
@@ -370,6 +473,11 @@
 ## JavaScriptFunctionBindingProperties
 ### Properties
 * **script**: string: The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
+
+## JavaScriptFunctionBindingRetrievalProperties
+### Properties
+* **script**: string: The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'.
+* **udfType**: 'Scalar': The function type.
 
 ## JobStorageAccount
 ### Properties
@@ -480,6 +588,42 @@
 * **tokenUserDisplayName**: string: The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 * **tokenUserPrincipalName**: string: The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 
+## QueryCompilationError
+### Properties
+* **endColumn**: int (ReadOnly): Describes the error location in the original query. Not set if isGlobal is true.
+* **endLine**: int (ReadOnly): Describes the error location in the original query. Not set if isGlobal is true.
+* **isGlobal**: bool (ReadOnly): Whether the error is not for a specific part but for the entire query.
+* **message**: string (ReadOnly): The content of the error message.
+* **startColumn**: int (ReadOnly): Describes the error location in the original query. Not set if isGlobal is true.
+* **startLine**: int (ReadOnly): Describes the error location in the original query. Not set if isGlobal is true.
+
+## QueryCompilationResult
+### Properties
+* **errors**: [QueryCompilationError](#querycompilationerror)[] (ReadOnly): Error messages produced by the compiler.
+* **functions**: string[] (ReadOnly): All function names used by the query.
+* **inputs**: string[] (ReadOnly): All input names used by the query.
+* **outputs**: string[] (ReadOnly): All output names used by the query.
+* **warnings**: string[] (ReadOnly): Warning messages produced by the compiler.
+
+## QueryFunction
+### Properties
+* **bindingType**: string (Required): The type of the function binding.
+* **inputs**: [FunctionInput](#functioninput)[] (Required): The inputs for the function.
+* **name**: string (Required): The name of the function.
+* **output**: [FunctionOutput](#functionoutput) (Required): An output for the function.
+* **type**: string (Required): The type of the function.
+
+## QueryInput
+### Properties
+* **name**: string (Required): The name of the input.
+* **type**: string (Required): The type of the input, can be Stream or Reference.
+
+## QueryTestingResult
+### Properties
+* **error**: [ErrorError](#errorerror): Error definition properties.
+* **outputUri**: string (ReadOnly): The SAS URL to the outputs payload.
+* **status**: 'CompilerError' | 'RuntimeError' | 'Started' | 'Success' | 'Timeout' | 'UnknownError' | string (ReadOnly): The status of the query testing request.
+
 ## RawInputDatasourceProperties
 ### Properties
 * **payload**: string: The JSON serialized content of the input data. Either payload or payloadUri must be set, but not both.
@@ -509,6 +653,11 @@
 * **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input containing reference data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
+
+## ResourceTestStatus
+### Properties
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Describes the error that occurred.
+* **status**: string (ReadOnly): The status of the test operation.
 
 ## Serialization
 * **Discriminator**: type
@@ -581,6 +730,16 @@
 * **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 
+## StreamingJob
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [Identity](#identity): Describes the system-assigned managed identity assigned to this job that can be used to authenticate with inputs and outputs.
+* **location**: string: The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [StreamingJobProperties](#streamingjobproperties): The properties that are associated with a streaming job.  Required on PUT (CreateOrReplace) requests.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+
 ## StreamingJobProperties
 ### Properties
 * **cluster**: [ClusterInfo](#clusterinfo): The cluster which streaming jobs will run on.
@@ -642,6 +801,21 @@
 * **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
+
+## TestQuery
+### Properties
+* **diagnostics**: [TestQueryDiagnostics](#testquerydiagnostics): Diagnostics information related to query testing.
+* **streamingJob**: [StreamingJob](#streamingjob) (Required): Stream analytics job object which defines the input, output, and transformation for the query testing.
+
+## TestQueryDiagnostics
+### Properties
+* **path**: string: The path to the subdirectory.
+* **writeUri**: string (Required): The SAS URI to the container or directory.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

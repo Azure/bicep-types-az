@@ -36,6 +36,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Sovereign/landingZoneAccounts/landingZoneRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createCopy (Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations@2025-02-27-preview)
+* **Resource**: Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations
+* **ApiVersion**: 2025-02-27-preview
+* **Input**: [CreateLandingZoneConfigurationCopyRequest](#createlandingzoneconfigurationcopyrequest)
+* **Output**: [CreateLandingZoneConfigurationCopyResponse](#createlandingzoneconfigurationcopyresponse)
+
+## Function generateLandingZone (Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations@2025-02-27-preview)
+* **Resource**: Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations
+* **ApiVersion**: 2025-02-27-preview
+* **Input**: [GenerateLandingZoneRequest](#generatelandingzonerequest)
+* **Output**: [GenerateLandingZoneResponse](#generatelandingzoneresponse)
+
+## Function updateAuthoringStatus (Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations@2025-02-27-preview)
+* **Resource**: Microsoft.Sovereign/landingZoneAccounts/landingZoneConfigurations
+* **ApiVersion**: 2025-02-27-preview
+* **Input**: [UpdateAuthoringStatusRequest](#updateauthoringstatusrequest)
+* **Output**: [UpdateAuthoringStatusResponse](#updateauthoringstatusresponse)
+
+## CreateLandingZoneConfigurationCopyRequest
+### Properties
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,64}$"} (Required): The name of the duplicate landing zone configuration resource.
+
+## CreateLandingZoneConfigurationCopyResponse
+### Properties
+* **copiedLandingZoneConfigurationId**: string (Required): The ID of the duplicate landing zone configuration resource.
+
 ## CustomNamingConvention
 ### Properties
 * **formula**: string (Required): The custom naming formula for the resource type.
@@ -45,6 +71,31 @@
 ### Properties
 * **create**: bool (Required): This parameter determines whether the 'Decommissioned' management group will be created. If set to true, the group will be created; if set to false, it will not be created. The default value is false.
 * **policyInitiativesAssignmentProperties**: [PolicyInitiativeAssignmentProperties](#policyinitiativeassignmentproperties)[] (Required): Array of policy initiatives applied to the management group.
+
+## GenerateLandingZoneRequest
+### Properties
+* **deploymentLocation**: string {pattern: "^([a-zA-Z0-9]+)$"} (Required): The Azure region where the landing zone will be deployed. All Azure regions are supported.
+* **deploymentPrefix**: string {minLength: 2, maxLength: 5, pattern: "^([a-zA-Z0-9-]*)$"} (Required): The prefix that will be added to all resources created by this deployment. Use between 2 and 5 characters, consisting only of letters, digits, '-', '.', or '_'. No other special characters are supported.
+* **deploymentSuffix**: string {minLength: 2, maxLength: 5}: The optional suffix that will be appended to all resources created by this deployment, maximum 5 characters.
+* **environment**: string: The environment where the landing zone is being deployed, such as ppe, prod, test, etc.
+* **existingConnectivitySubscriptionId**: string: Existing 'Connectivity' subscription ID to be linked with this deployment when reusing instead of creating a new subscription.
+* **existingIdentitySubscriptionId**: string: Existing 'Identity' subscription ID to be linked with this deployment when reusing instead of creating a new subscription.
+* **existingManagementSubscriptionId**: string: Existing 'Management' subscription ID to be linked with this deployment when reusing instead of creating a new subscription.
+* **existingTopLevelMgParentId**: string: Optional parent for the management group hierarchy, serving as an intermediate root management group parent if specified. If left empty, the default will be to deploy under the tenant root management group.
+* **infrastructureAsCodeOutputOptions**: 'ARM' | 'Bicep' | string (Required): The export options available for code generation.
+* **organization**: string: The name of the organization or agency for which the landing zone is being deployed. This is optional.
+* **subscriptionBillingScope**: string: The complete resource ID of the billing scope linked to the EA, MCA, or MPA account where you want to create the subscription.
+* **topLevelMgDisplayName**: string {minLength: 1, maxLength: 90} (Required): The display name assigned to the top management group of the landing zone deployment hierarchy. It is recommended to use unique names for each landing zone deployment.
+
+## GenerateLandingZoneResponse
+### Properties
+* **blobName**: string {sensitive} (Required): The storage account blob name to access the generated code.
+* **containerName**: string {sensitive} (Required): The storage account container to access the generated code.
+* **generatedArmTemplate**: string {sensitive}: The generated code content in JSON string format.
+* **generatedCodeUrl**: string {sensitive} (Required): The url to access the generated code.
+* **landingZoneConfigurationName**: string (Required): The name of the Landing zone configuration resource.
+* **storageAccountName**: string {sensitive} (Required): The storage account name to access the generated code.
+* **topLevelMgDisplayName**: string (Required): The parent management group name of the landing zone deployment.
 
 ## LandingZoneAccountResourceProperties
 ### Properties
@@ -148,6 +199,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpdateAuthoringStatusRequest
+### Properties
+* **authoringStatus**: 'Authoring' | 'Disabled' | 'ReadyForUse' | string (Required): The authoring status value to be updated. Possible values include: 'Authoring', 'ReadyForUse' and 'Disabled'.
+
+## UpdateAuthoringStatusResponse
+### Properties
+* **authoringStatus**: 'Authoring' | 'Disabled' | 'ReadyForUse' | string (Required): The authoring status value to be updated.
+* **landingZoneConfigurationName**: string (Required): The name of the landing zone configuration resource.
 
 ## UserAssignedIdentities
 ### Properties

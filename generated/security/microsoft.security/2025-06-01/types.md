@@ -10,6 +10,24 @@
 * **properties**: [DefenderForStorageSettingProperties](#defenderforstoragesettingproperties): Defender for Storage resource properties.
 * **type**: 'Microsoft.Security/defenderForStorageSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelMalwareScan (Microsoft.Security/defenderForStorageSettings/malwareScans@2025-06-01)
+* **Resource**: Microsoft.Security/defenderForStorageSettings/malwareScans
+* **ApiVersion**: 2025-06-01
+* **Output**: [MalwareScan](#malwarescan)
+
+## Function startMalwareScan (Microsoft.Security/defenderForStorageSettings@2025-06-01)
+* **Resource**: Microsoft.Security/defenderForStorageSettings
+* **ApiVersion**: 2025-06-01
+* **Output**: [MalwareScan](#malwarescan)
+
+## BlobsScanSummary
+### Properties
+* **failedBlobsCount**: int: The number of failed blob scans.
+* **maliciousBlobsCount**: int: The number of malicious blobs that were detected during the scan.
+* **scannedBlobsInGB**: int: The number of gigabytes of data that were scanned.
+* **skippedBlobsCount**: int: The number of blobs that were skipped.
+* **totalBlobsScanned**: int: The total number of blobs that were scanned.
+
 ## DefenderForStorageSettingProperties
 ### Properties
 * **isEnabled**: bool: Indicates whether Defender for Storage is enabled on this storage account.
@@ -17,12 +35,25 @@
 * **overrideSubscriptionLevelSettings**: bool: Indicates whether the settings defined for this storage account should override the settings defined for the subscription.
 * **sensitiveDataDiscovery**: [SensitiveDataDiscoveryProperties](#sensitivedatadiscoveryproperties): Properties of Sensitive Data Discovery.
 
+## MalwareScan
+### Properties
+* **properties**: [MalwareScanProperties](#malwarescanproperties)
+
 ## MalwareScanningProperties
 ### Properties
 * **blobScanResultsOptions**: 'None' | 'blobIndexTags' | string: Optional. Write scan result on blobIndexTags by default.
 * **onUpload**: [OnUploadProperties](#onuploadproperties): Properties of On Upload malware scanning.
 * **operationStatus**: [OperationStatus](#operationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Malware Scanning enable/disable operation.
 * **scanResultsEventGridTopicResourceId**: string: Optional. Resource id of an Event Grid Topic to send scan results to.
+
+## MalwareScanProperties
+### Properties
+* **scanEndTime**: string: The time at which the scan has ended. Only available for a scan which has terminated.
+* **scanId**: string: The identifier of the scan.
+* **scanStartTime**: string: The time at which the scan had been initiated.
+* **scanStatus**: string: A status code of the scan operation.
+* **scanStatusMessage**: string: A description of the status of the scan.
+* **scanSummary**: [ScanSummary](#scansummary): A summary of the scan results.
 
 ## OnUploadFilters
 ### Properties
@@ -43,6 +74,11 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 ### Properties
 * **code**: string: The operation status code.
 * **message**: string: Additional information regarding the success/failure of the operation.
+
+## ScanSummary
+### Properties
+* **blobs**: [BlobsScanSummary](#blobsscansummary): A summary of the scan results of the blobs that were scanned.
+* **estimatedScanCostUSD**: int: The estimated cost of the scan. Only available for a scan which has terminated.
 
 ## SensitiveDataDiscoveryProperties
 ### Properties

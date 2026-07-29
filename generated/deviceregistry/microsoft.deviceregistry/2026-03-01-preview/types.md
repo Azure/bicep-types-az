@@ -171,6 +171,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries/schemas/schemaVersions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function migrate (Microsoft.DeviceRegistry/namespaces@2026-03-01-preview)
+* **Resource**: Microsoft.DeviceRegistry/namespaces
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [NamespaceMigrateRequest](#namespacemigraterequest)
+* **Output**: [NamespaceMigrateResponse](#namespacemigrateresponse)
+
+## Function revoke (Microsoft.DeviceRegistry/namespaces/devices@2026-03-01-preview)
+* **Resource**: Microsoft.DeviceRegistry/namespaces/devices
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [DeviceCredentialsRevokeRequest](#devicecredentialsrevokerequest)
+* **Output**: [DeviceCredentialsRevokeResponse](#devicecredentialsrevokeresponse)
+
 ## AssetEndpointProfileProperties
 ### Properties
 * **additionalConfiguration**: string: Stringified JSON that contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF).
@@ -322,6 +334,15 @@
 ### Properties
 * **resourceId**: string: Resource Id of the Policy.
 
+## DeviceCredentialsRevokeRequest
+### Properties
+* **disable**: bool: Indicates whether to disable the device(s) after revoking credentials. Prevents new credentials to be issued.
+
+## DeviceCredentialsRevokeResponse
+### Properties
+* **error**: [Error](#error): Error details.
+* **result**: string (Required): Indicates whether revocation succeeded or failed.
+
 ## DeviceMessagingEndpoint
 ### Properties
 * **address**: string (Required): The endpoint address to connect to.
@@ -377,6 +398,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DeviceMessagingEndpoint](#devicemessagingendpoint)
+
+## Error
+### Properties
+* **code**: string (ReadOnly): Error code for classification of errors (ex: '400', '404', '500', etc.).
+* **details**: [ErrorDetails](#errordetails)[] (ReadOnly): Array of error details that describe the status of each error.
+* **message**: string (ReadOnly): Human-readable helpful error message to provide additional context for error (e.g.,: “Capability ID 'foo' does not exist”).
 
 ## ErrorDetails
 ### Properties
@@ -483,6 +510,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InboundEndpoints](#inboundendpoints)
+
+## MigrateResult
+### Properties
+* **error**: [Error](#error): The error if the migrate operation is not successful.
+* **resourceId**: string: The resource Id of the asset resource.
+* **result**: 'Failed' | 'Succeeded' | string (ReadOnly): The result of the migrate operation.
 
 ## MqttDestinationConfiguration
 ### Properties
@@ -755,6 +788,15 @@
 * **schemaName**: string (Required, ReadOnly): The message schema name.
 * **schemaRegistryNamespace**: string (Required, ReadOnly): The message schema registry namespace.
 * **schemaVersion**: string (Required, ReadOnly): The message schema version.
+
+## NamespaceMigrateRequest
+### Properties
+* **resourceIds**: string[]: List of asset resources to be migrated.
+* **scope**: 'Resources' | string: Scope of the migrate resources operation.
+
+## NamespaceMigrateResponse
+### Properties
+* **migrateResults**: [MigrateResult](#migrateresult)[]: List of migrate results containing result of each asset migrate operation.
 
 ## NamespaceProperties
 ### Properties

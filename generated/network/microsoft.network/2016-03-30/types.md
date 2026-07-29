@@ -199,6 +199,12 @@
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reset (Microsoft.Network/virtualNetworkGateways@2016-03-30)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualNetworkGateway](#virtualnetworkgateway)
+* **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
+
 ## AddressSpace
 ### Properties
 * **addressPrefixes**: string[]: Gets or sets List of address blocks reserved for this virtual network in CIDR notation

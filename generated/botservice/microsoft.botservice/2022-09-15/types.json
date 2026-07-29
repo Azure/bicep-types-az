@@ -3415,6 +3415,239 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SiteInfo",
+    "properties": {
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Determines which key is to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the name of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the type of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratekeys",
+    "resourceType": "Microsoft.BotService/botServices/channels",
+    "apiVersion": "2022-09-15",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateEmailSignInUrlResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to sign in url"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateEmailSignInUrlResponseProperties",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Sign in url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createEmailSignInUrl",
+    "resourceType": "Microsoft.BotService/botServices",
+    "apiVersion": "2022-09-15",
+    "output": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ConnectionSetting",
     "properties": {
       "properties": {
@@ -3454,7 +3687,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "Contains resource tags defined as key/value pairs."
@@ -3468,7 +3701,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "Required. Gets or sets the Kind of the resource."
@@ -3482,7 +3715,7 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/210"
         },
         "flags": 2,
         "description": "Entity zones"
@@ -3521,19 +3754,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/187"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/188"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/206"
       },
       {
-        "$ref": "#/190"
+        "$ref": "#/207"
       },
       {
-        "$ref": "#/191"
+        "$ref": "#/208"
       },
       {
         "$ref": "#/2"
@@ -3552,7 +3785,7 @@
     "resourceType": "Microsoft.BotService/botServices/connections",
     "apiVersion": "2022-09-15",
     "output": {
-      "$ref": "#/185"
+      "$ref": "#/202"
     }
   }
 ]

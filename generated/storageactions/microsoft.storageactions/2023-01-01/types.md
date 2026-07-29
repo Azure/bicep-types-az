@@ -14,6 +14,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StorageActions/storageTasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function previewActions (Microsoft.StorageActions/locations@2023-01-01)
+* **Resource**: Microsoft.StorageActions/locations
+* **ApiVersion**: 2023-01-01
+* **Input**: [StorageTaskPreviewAction](#storagetaskpreviewaction)
+* **Output**: [StorageTaskPreviewAction](#storagetaskpreviewaction)
+
 ## ElseCondition
 ### Properties
 * **operations**: [StorageTaskOperation](#storagetaskoperation)[] (Required): List of operations to execute in the else block
@@ -46,6 +52,43 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageTaskPreviewAction
+### Properties
+* **properties**: [StorageTaskPreviewActionProperties](#storagetaskpreviewactionproperties) (Required): Properties of the storage task preview.
+
+## StorageTaskPreviewActionCondition
+### Properties
+* **elseBlockExists**: bool (Required): Specify whether the else block is present in the condition.
+* **if**: [StorageTaskPreviewActionIfCondition](#storagetaskpreviewactionifcondition) (Required): The condition to be tested for a match with container and blob properties.
+
+## StorageTaskPreviewActionIfCondition
+### Properties
+* **condition**: string: Storage task condition to bes tested for a match.
+
+## StorageTaskPreviewActionProperties
+### Properties
+* **action**: [StorageTaskPreviewActionCondition](#storagetaskpreviewactioncondition) (Required): Preview action to test
+* **blobs**: [StorageTaskPreviewBlobProperties](#storagetaskpreviewblobproperties)[] (Required): Properties of some sample blobs in the container to test for matches with the preview action.
+* **container**: [StorageTaskPreviewContainerProperties](#storagetaskpreviewcontainerproperties) (Required): Properties of a sample container to test for a match with the preview action.
+
+## StorageTaskPreviewBlobProperties
+### Properties
+* **matchedBlock**: 'Else' | 'If' | 'None' | string (ReadOnly): Represents the condition block name that matched blob properties.
+* **metadata**: [StorageTaskPreviewKeyValueProperties](#storagetaskpreviewkeyvalueproperties)[]: metadata key value pairs to be tested for a match against the provided condition.
+* **name**: string: Name of test blob
+* **properties**: [StorageTaskPreviewKeyValueProperties](#storagetaskpreviewkeyvalueproperties)[]: properties key value pairs to be tested for a match against the provided condition.
+* **tags**: [StorageTaskPreviewKeyValueProperties](#storagetaskpreviewkeyvalueproperties)[]: tags key value pairs to be tested for a match against the provided condition.
+
+## StorageTaskPreviewContainerProperties
+### Properties
+* **metadata**: [StorageTaskPreviewKeyValueProperties](#storagetaskpreviewkeyvalueproperties)[]: metadata key value pairs to be tested for a match against the provided condition.
+* **name**: string: Name of test container
+
+## StorageTaskPreviewKeyValueProperties
+### Properties
+* **key**: string: Represents the key property of the pair.
+* **value**: string: Represents the value property of the pair.
 
 ## StorageTaskProperties
 ### Properties

@@ -273,6 +273,29 @@
 * **tags**: [ScheduleTags](#scheduletags): Resource tags.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function evaluatePolicies (Microsoft.DevTestLab/labs/policysets@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/policysets
+* **ApiVersion**: 2018-09-15
+* **Input**: [EvaluatePoliciesRequest](#evaluatepoliciesrequest)
+* **Output**: [EvaluatePoliciesResponse](#evaluatepoliciesresponse)
+
+## Function generateArmTemplate (Microsoft.DevTestLab/labs/artifactsources/artifacts@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/artifactsources/artifacts
+* **ApiVersion**: 2018-09-15
+* **Input**: [GenerateArmTemplateRequest](#generatearmtemplaterequest)
+* **Output**: [ArmTemplateInfo](#armtemplateinfo)
+
+## Function generateUploadUri (Microsoft.DevTestLab/labs@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2018-09-15
+* **Input**: [GenerateUploadUriParameter](#generateuploaduriparameter)
+* **Output**: [GenerateUploadUriResponse](#generateuploaduriresponse)
+
+## Function getRdpFileContents (Microsoft.DevTestLab/labs/virtualmachines@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2018-09-15
+* **Output**: [RdpConnection](#rdpconnection)
+
 ## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2018-09-15)
 * **Resource**: Microsoft.DevTestLab/labs/schedules
 * **ApiVersion**: 2018-09-15
@@ -312,6 +335,21 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ArmTemplateInfo
+### Properties
+* **parameters**: [ArmTemplateInfoParameters](#armtemplateinfoparameters): The parameters of the ARM template.
+* **template**: [ArmTemplateInfoTemplate](#armtemplateinfotemplate): The template's contents.
+
+## ArmTemplateInfoParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ArmTemplateInfoTemplate
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ArmTemplateParameterProperties
 ### Properties
@@ -532,6 +570,21 @@
 * **resourceGroupId**: string (ReadOnly): The identifier of the resource group containing the environment's resources.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
+## EvaluatePoliciesProperties
+### Properties
+* **factData**: string: The fact data.
+* **factName**: string: The fact name.
+* **userObjectId**: string: The user for which policies will be evaluated
+* **valueOffset**: string: The value offset.
+
+## EvaluatePoliciesRequest
+### Properties
+* **policies**: [EvaluatePoliciesProperties](#evaluatepoliciesproperties)[]: Policies to evaluate.
+
+## EvaluatePoliciesResponse
+### Properties
+* **results**: [PolicySetResult](#policysetresult)[]: Results of evaluating a policy set.
+
 ## Event
 ### Properties
 * **eventName**: 'AutoShutdown' | 'Cost' | string: The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
@@ -568,6 +621,21 @@
 * **publisher**: string: The publisher of the gallery image.
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
+
+## GenerateArmTemplateRequest
+### Properties
+* **fileUploadOptions**: 'None' | 'UploadFilesAndGenerateSasTokens' | string: Options for uploading the files for the artifact. UploadFilesAndGenerateSasTokens is the default value.
+* **location**: string: The location of the virtual machine.
+* **parameters**: [ParameterInfo](#parameterinfo)[]: The parameters of the ARM template.
+* **virtualMachineName**: string: The resource name of the virtual machine.
+
+## GenerateUploadUriParameter
+### Properties
+* **blobName**: string: The blob name of the upload URI.
+
+## GenerateUploadUriResponse
+### Properties
+* **uploadUri**: string: The upload URI for the VHD.
 
 ## HourDetails
 ### Properties
@@ -807,6 +875,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
 * **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
+## ParameterInfo
+### Properties
+* **name**: string: The name of the artifact parameter.
+* **value**: string: The value of the artifact parameter.
+
 ## ParametersValueFileInfo
 ### Properties
 * **fileName**: string: File name.
@@ -833,15 +906,29 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
+## PolicySetResult
+### Properties
+* **hasError**: bool: A value indicating whether this policy set evaluation has discovered violations.
+* **policyViolations**: [PolicyViolation](#policyviolation)[]: The list of policy violations.
+
 ## PolicyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## PolicyViolation
+### Properties
+* **code**: string: The code of the policy violation.
+* **message**: string: The message of the policy violation.
+
 ## Port
 ### Properties
 * **backendPort**: int: Backend port of the target virtual machine.
 * **transportProtocol**: 'Tcp' | 'Udp' | string: Protocol type of the port.
+
+## RdpConnection
+### Properties
+* **contents**: string: The contents of the .rdp file
 
 ## Schedule
 ### Properties

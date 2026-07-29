@@ -131,6 +131,140 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerLicenses' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addDatabases (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [Databases](#databases)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function createAvailabilityGroup (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [AvailabilityGroupCreateUpdateConfiguration](#availabilitygroupcreateupdateconfiguration)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function createDistributedAvailabilityGroup (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [DistributedAvailabilityGroupCreateUpdateConfiguration](#distributedavailabilitygroupcreateupdateconfiguration)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function createManagedInstanceLink (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ManagedInstanceLinkCreateUpdateConfiguration](#managedinstancelinkcreateupdateconfiguration)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function failover (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function failoverMiLink (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [FailoverMiLinkResourceId](#failovermilinkresourceid)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function forceFailoverAllowDataLoss (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function getAllAvailabilityGroups (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [AvailabilityGroupRetrievalFilters](#availabilitygroupretrievalfilters)
+* **Output**: [ArcSqlServerAvailabilityGroupListResult](#arcsqlserveravailabilitygrouplistresult)
+
+## Function getBestPracticesAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceBpaRequest](#sqlserverinstancebparequest)
+* **Output**: [SqlServerInstanceBpaResponse](#sqlserverinstancebparesponse)
+
+## Function getDetailView (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function getJobs (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceJobsRequest](#sqlserverinstancejobsrequest)
+* **Output**: [SqlServerInstanceJobsResponse](#sqlserverinstancejobsresponse)
+
+## Function getJobsStatus (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceJobsStatusRequest](#sqlserverinstancejobsstatusrequest)
+* **Output**: [SqlServerInstanceJobsStatusResponse](#sqlserverinstancejobsstatusresponse)
+
+## Function getMigrationReadinessReport (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstanceMigrationReadinessReportResponse](#sqlserverinstancemigrationreadinessreportresponse)
+
+## Function getTargetRecommendationReports (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceTargetRecommendationReportsRequest](#sqlserverinstancetargetrecommendationreportsrequest)
+* **Output**: [SqlServerInstanceTargetRecommendationReportsResponse](#sqlserverinstancetargetrecommendationreportsresponse)
+
+## Function getTelemetry (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceTelemetryRequest](#sqlserverinstancetelemetryrequest)
+* **Output**: [SqlServerInstanceTelemetryResponse](#sqlserverinstancetelemetryresponse)
+
+## Function postUpgrade (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstance](#sqlserverinstance)
+
+## Function preUpgrade (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstance](#sqlserverinstance)
+
+## Function removeDatabases (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [Databases](#databases)
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function runBestPracticeAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstanceRunBestPracticesAssessmentResponse](#sqlserverinstancerunbestpracticesassessmentresponse)
+
+## Function runBestPracticesAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstanceRunBestPracticesAssessmentResponse](#sqlserverinstancerunbestpracticesassessmentresponse)
+
+## Function runManagedInstanceLinkAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceManagedInstanceLinkAssessmentRequest](#sqlserverinstancemanagedinstancelinkassessmentrequest)
+* **Output**: [SqlServerInstanceManagedInstanceLinkAssessmentResponse](#sqlserverinstancemanagedinstancelinkassessmentresponse)
+
+## Function runMigrationAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstanceRunMigrationAssessmentResponse](#sqlserverinstancerunmigrationassessmentresponse)
+
+## Function runMigrationReadinessAssessment (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [SqlServerInstanceRunMigrationReadinessAssessmentResponse](#sqlserverinstancerunmigrationreadinessassessmentresponse)
+
+## Function runTargetRecommendationJob (Microsoft.AzureArcData/sqlServerInstances@2026-03-01-preview)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [SqlServerInstanceRunTargetRecommendationJobRequest](#sqlserverinstanceruntargetrecommendationjobrequest)
+* **Output**: [SqlServerInstanceRunTargetRecommendationJobResponse](#sqlserverinstanceruntargetrecommendationjobresponse)
+
 ## ActiveDirectoryConnectorDNSDetails
 ### Properties
 * **domainName**: string: DNS domain name for which DNS lookups should be forwarded to the Active Directory DNS servers.
@@ -184,6 +318,11 @@
 * **keyName**: string: Unique attribute name.
 * **keyValue**: string: Attribute value.
 
+## ArcSqlServerAvailabilityGroupListResult
+### Properties
+* **nextLink**: string (ReadOnly): Link to retrieve next page of results.
+* **value**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)[] (ReadOnly): Array of Arc Sql Server Availability Groups.
+
 ## Authentication
 ### Properties
 * **mode**: 'Mixed' | 'Undefined' | 'Windows' | string: Mode of authentication in SqlServer.
@@ -213,6 +352,38 @@
 * **seedingModeDescription**: string (ReadOnly): Describes seeding mode.
 * **sessionTimeout**: int: The time-out period of availability group session replica, in seconds.
 
+## AvailabilityGroupCreateUpdateConfiguration
+### Properties
+* **automatedBackupPreference**: 'NONE' | 'PRIMARY' | 'SECONDARY' | 'SECONDARY_ONLY': Preferred replica for running automated backups.
+* **availabilityGroupName**: string: Name of the availability group.
+* **clusterType**: 'NONE' | 'WSFC': Set to WSFC when availability group is on a failover cluster instance on a Windows Server failover cluster. Set to NONE when availability group not using WSFC for cluster coordination.
+* **databases**: string[]: List of databases to include in the availability group.
+* **dbFailover**: 'OFF' | 'ON': Specifies whether the availability group supports failover for database health conditions.
+* **dtcSupport**: 'NONE' | 'PER_DB': Specifies whether DTC support has been enabled for this availability group.
+* **failureConditionLevel**: int: User-defined failure condition level under which an automatic failover must be triggered.
+* **healthCheckTimeout**: int: Wait time (in milliseconds) for the sp_server_diagnostics system stored procedure to return server-health information, before the server instance is assumed to be slow or not responding.
+* **listener**: [SqlAvailabilityGroupStaticIPListenerProperties](#sqlavailabilitygroupstaticiplistenerproperties): The listener for the sql server availability group
+* **replicas**: [AvailabilityGroupCreateUpdateReplicaConfiguration](#availabilitygroupcreateupdatereplicaconfiguration)[]: List of availability group replicas.
+* **requiredSynchronizedSecondariesToCommit**: int: The number of secondary replicas that must be in a synchronized state for a commit to complete.
+
+## AvailabilityGroupCreateUpdateReplicaConfiguration
+### Properties
+* **availabilityMode**: 'ASYNCHRONOUS_COMMIT' | 'SYNCHRONOUS_COMMIT' | string: Property that determines whether a given availability replica can run in synchronous-commit mode
+* **backupPriority**: int: Represents the user-specified priority for performing backups on this replica relative to the other replicas in the same availability group.
+* **certificateName**: string: Name of certificate to use for authentication. Required if any CERTIFICATE authentication modes are specified.
+* **endpointAuthenticationMode**: 'Certificate' | 'Certificate_Windows_Kerberos' | 'Certificate_Windows_NTLM' | 'Certificate_Windows_Negotiate' | 'Windows_Kerberos' | 'Windows_Kerberos_Certificate' | 'Windows_NTLM' | 'Windows_NTLM_Certificate' | 'Windows_Negotiate' | 'Windows_Negotiate_Certificate' | string: Permitted authentication modes for the mirroring endpoint.
+* **endpointConnectLogin**: string: The login which will connect to the mirroring endpoint
+* **endpointName**: string: Name of the database mirroring endpoint URL for the availability group replica
+* **endpointUrl**: string: Database mirroring endpoint URL of availability group replica
+* **failoverMode**: 'AUTOMATIC' | 'EXTERNAL' | 'MANUAL' | 'NONE' | string: Property to set the failover mode of the availability group replica
+* **primaryRoleAllowConnections**: 'ALL' | 'READ_WRITE': Whether the primary replica should allow all connections or only READ_WRITE connections (disallowing ReadOnly connections)
+* **primaryRoleReadOnlyRoutingList**: string[]: List of read only routing URLs.
+* **secondaryRoleAllowConnections**: 'ALL' | 'NO' | 'READ_ONLY': Whether the secondary replica should allow all connections, no connections, or only ReadOnly connections.
+* **secondaryRoleReadOnlyRoutingUrl**: string: Connectivity endpoint (URL) of the read only availability replica.
+* **seedingMode**: 'AUTOMATIC' | 'MANUAL': Specifies how the secondary replica will be initially seeded. AUTOMATIC enables direct seeding. This method will seed the secondary replica over the network. This method does not require you to backup and restore a copy of the primary database on the replica. MANUAL specifies manual seeding (default). This method requires you to create a backup of the database on the primary replica and manually restore that backup on the secondary replica.
+* **serverInstance**: string: the server instance hosting the replica.
+* **sessionTimeout**: int: The time-out period of availability group session replica, in seconds.
+
 ## AvailabilityGroupInfo
 ### Properties
 * **automatedBackupPreferenceDescription**: string (ReadOnly): Preferred location for performing backups on the availability databases in this availability group.
@@ -233,6 +404,11 @@
 * **synchronizationHealthDescription**: string (ReadOnly): Reflects a roll-up of the synchronization health of all availability replicas in the availability group.
 * **version**: int (ReadOnly): SQL Server availability group current version.
 
+## AvailabilityGroupRetrievalFilters
+### Properties
+* **availabilityGroupTypeFilter**: 'CONTAINED' | 'DEFAULT' | 'DISTRIBUTED' | string: Filter retrieval based on availability group type.
+* **replicationPartnerTypeFilter**: 'AzureSQLManagedInstance' | 'AzureSQLVM' | 'SQLServer' | 'Unknown'
+
 ## AvailabilityGroupState
 ### Properties
 * **availabilityGroupReplicaRole**: string (ReadOnly): Current Always On availability groups role of the availability group replica.
@@ -242,6 +418,16 @@
 * **operationalStateDescription**: string (ReadOnly): Current operational state of the availability group replica
 * **recoveryHealthDescription**: string (ReadOnly): Recovery health of the availability group replica.
 * **synchronizationHealthDescription**: string (ReadOnly): Reflects a rollup of the database synchronization state (synchronization_state) of all joined availability databases (also known as replicas) and the availability mode of the replica (synchronous-commit or asynchronous-commit mode). The rollup will reflect the least healthy accumulated state the databases on the replica.
+
+## BackgroundJob
+### Properties
+* **endTime**: string: The end time of the background job.
+* **executionState**: 'Running' | 'Waiting' | string: The execution state of the background job.
+* **lastExecutionStatus**: 'Completed' | 'Failed' | 'Faulted' | 'Postponed' | 'Rescheduled' | 'Succeeded' | string: The last execution status of the background job.
+* **lastExecutionTime**: string: The last execution time of the background job in ISO 8601 date-time format.
+* **nextExecutionTime**: string: The next execution time of the background job in ISO 8601 date-time format.
+* **startTime**: string: The start time of the background job.
+* **state**: 'Active' | 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'Faulted' | 'Inactive' | 'Suspended' | 'Terminated' | string: The state of the background job.
 
 ## BackupPolicy
 ### Properties
@@ -314,6 +500,10 @@
 * **targetResourceId**: string: Resource Id of the target SQL resource for this migration job.
 * **targetType**: 'AzureSqlDatabase' | 'AzureSqlManagedInstance' | 'AzureSqlVirtualMachine' | string: Type of target in Azure this database is being migrated to.
 
+## Databases
+### Properties
+* **values**: string[]: List of database names.
+
 ## DataControllerProperties
 ### Properties
 * **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Deprecated. Azure Arc Data Services data controller no longer expose any endpoint. All traffic are exposed through Kubernetes native API.
@@ -353,6 +543,25 @@
 * **redundancy**: string: Redundancy option.
 * **size**: string: Size of the managed disk - e.g. P30, P40.
 
+## DistributedAvailabilityGroupCreateUpdateAvailabilityGroupCertificateConfiguration
+### Properties
+* **certificateName**: string: Name of the certificate.
+
+## DistributedAvailabilityGroupCreateUpdateAvailabilityGroupConfiguration
+### Properties
+* **availabilityGroup**: string: The azure resource identifier for the availability group.
+* **availabilityMode**: 'ASYNCHRONOUS_COMMIT' | 'SYNCHRONOUS_COMMIT' | string: The availability mode of the availability group.
+* **certificateConfiguration**: [DistributedAvailabilityGroupCreateUpdateAvailabilityGroupCertificateConfiguration](#distributedavailabilitygroupcreateupdateavailabilitygroupcertificateconfiguration): The certificate configuration for the availability group.
+* **failoverMode**: 'AUTOMATIC' | 'EXTERNAL' | 'MANUAL' | 'NONE' | string: The failover mode of the availability group.
+* **listenerUrl**: string: The listener URL of the availability group.
+* **seedingMode**: 'AUTOMATIC' | 'MANUAL': The seeding mode of the availability group.
+
+## DistributedAvailabilityGroupCreateUpdateConfiguration
+### Properties
+* **availabilityGroupName**: string: Name of the availability group.
+* **primaryAvailabilityGroup**: [DistributedAvailabilityGroupCreateUpdateAvailabilityGroupConfiguration](#distributedavailabilitygroupcreateupdateavailabilitygroupconfiguration): The initial primary availability group for the distributed availability group.
+* **secondaryAvailabilityGroup**: [DistributedAvailabilityGroupCreateUpdateAvailabilityGroupConfiguration](#distributedavailabilitygroupcreateupdateavailabilitygroupconfiguration): The initial secondary availability group for the distributed availability group.
+
 ## EntraAuthentication
 ### Properties
 * **clientId**: string: The client Id of the Managed Identity to query Microsoft Graph API. An empty string must be used for the system assigned Managed Identity.
@@ -391,6 +600,11 @@
 * **sourceMI**: string: The name of the SQL managed instance with this failover group role.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## FailoverMiLinkResourceId
+### Properties
+* **force**: bool: Whether to perform a Force Failover as opposed to just a regular Failover.
+* **managedInstanceId**: string: Azure resource id for the sql managed instance.
 
 ## HostIPAddressInformation
 ### Properties
@@ -484,6 +698,12 @@
 * **primaryKey**: string {sensitive} (WriteOnly): Primary key of the workspace
 * **workspaceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Azure Log Analytics workspace ID
 
+## ManagedInstanceLinkCreateUpdateConfiguration
+### Properties
+* **availabilityGroup**: [AvailabilityGroupCreateUpdateConfiguration](#availabilitygroupcreateupdateconfiguration): The configuration for the SQL Server availability group resource.
+* **distributedAvailabilityGroup**: [DistributedAvailabilityGroupCreateUpdateConfiguration](#distributedavailabilitygroupcreateupdateconfiguration): The distributed availability group configuration for the MI link.
+* **miLinkConfiguration**: [MiLinkCreateUpdateConfiguration](#milinkcreateupdateconfiguration): The MI Link specific distributed availability group configuration.
+
 ## Migration
 ### Properties
 * **assessment**: [MigrationAssessment](#migrationassessment): Migration assessments related configuration.
@@ -512,6 +732,10 @@
 * **percentile**: int: Indicate the percentile value for the performance sample. Default is 95th percentile.
 * **strategy**: string: Minimize cost or Migrate to PaaS. - to evaluate based on the recommended strategy. Default is Migrate to PaaS
 * **targetLocation**: string: The target location for Azure SQL SKU for migration. Default is West US.
+
+## MiLinkCreateUpdateConfiguration
+### Properties
+* **instanceAvailabilityGroupName**: string: The name of the availability group to be created on the Managed Instance.
 
 ## Monitoring
 ### Properties
@@ -545,6 +769,12 @@
 ### Properties
 * **cronTrigger**: [CronTrigger](#crontrigger): The cron trigger configuration.
 * **enabled**: bool: Indicates whether scheduling is enabled.
+
+## SequencerAction
+### Properties
+* **actionId**: string: The unique identifier of the sequencer action.
+* **result**: 'Failed' | 'NotCompleted' | 'Skipped' | 'Succeeded' | 'TimedOut' | string: The result of the sequencer action.
+* **state**: 'Completed' | 'CreatingSuccessors' | 'ExecutingAction' | 'NotStarted' | 'WaitingPredecessors' | string: The state of the sequencer action.
 
 ## ServerAssessmentsItem
 ### Properties
@@ -764,6 +994,16 @@
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': The pricing tier for the instance.
 
+## SqlServerAvailabilityGroupResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SqlServerAvailabilityGroupResourceProperties](#sqlserveravailabilitygroupresourceproperties) (Required): Properties of Arc Sql Server availability group
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SqlServerAvailabilityGroupResourceProperties
 ### Properties
 * **availabilityGroupId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"} (ReadOnly): ID GUID of the availability group.
@@ -840,6 +1080,99 @@
 * **uniqueId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"} (ReadOnly): The unique ID of this license. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000).
 * **version**: 'SQL Server 2012' | 'SQL Server 2014' | 'SQL Server 2016' | string (Required): The SQL Server version the license covers.
 
+## SqlServerInstance
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties): null
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## SqlServerInstanceBpaColumn
+### Properties
+* **name**: string: The name of the result column.
+* **type**: 'bool' | 'datetime' | 'double' | 'guid' | 'int' | 'long' | 'string' | 'timespan' | string: The type of the result column.
+
+## SqlServerInstanceBpaRequest
+### Properties
+* **queryType**: 'Basic' | 'HistoricalTrends' | string: The type of query to run for summarizing the best practices assessment results. If not specified, the default is 'Basic'.
+* **reportId**: string: The GUID of the report to return best practices assessment results for. If not specified, summaries for all reports will be returned.
+* **reportType**: 'AssessmentDataPoint' | 'AssessmentSummary' | string: The report type that needs to be fetched. If not specified, the default is AssessmentSummary.
+* **skipToken**: string: The opaque token to use to skip to a specific page of the report. If not specified, the first page will be returned.
+
+## SqlServerInstanceBpaResponse
+### Properties
+* **columns**: [SqlServerInstanceBpaColumn](#sqlserverinstancebpacolumn)[] (Required): The SQL best practices assessment response columns.
+* **nextLink**: string: The link to the next page of the best practices assessment response for the SQL Server instance. Null, if no more pages are available.
+* **rows**: string[][] (Required): An array of results of the SQL best practices assessment response.
+
+## SqlServerInstanceJob
+### Properties
+* **backgroundJob**: [BackgroundJob](#backgroundjob): The background job details.
+* **id**: string: The unique identifier of the job.
+* **instanceName**: string: The name of the SQL Server instance.
+* **jobException**: string: The exception message if the job failed.
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string: The status of the job.
+* **sequencerActions**: [SequencerAction](#sequenceraction)[]: The list of sequencer actions.
+
+## SqlServerInstanceJobsRequest
+### Properties
+* **featureName**: string: The name of the feature to retrieve the jobs for.
+* **jobType**: string: The type of the job to retrieve the jobs for.
+
+## SqlServerInstanceJobsResponse
+### Properties
+* **jobs**: [SqlServerInstanceJob](#sqlserverinstancejob)[]: The list of jobs running on the SQL Server instance.
+
+## SqlServerInstanceJobsStatusRequest
+### Properties
+* **featureName**: string: The name of the feature to retrieve the job status for.
+* **jobType**: string: The type of the job to retrieve the status for.
+
+## SqlServerInstanceJobsStatusResponse
+### Properties
+* **jobsStatus**: [SqlServerInstanceJobStatus](#sqlserverinstancejobstatus)[]: The list of jobs status running on the SQL Server instance.
+
+## SqlServerInstanceJobStatus
+### Properties
+* **backgroundJob**: [BackgroundJob](#backgroundjob): The background job details.
+* **id**: string: The unique identifier of the job.
+* **instanceName**: string: The name of the SQL Server instance.
+* **jobException**: string: The exception message if the job failed.
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string: The status of the job.
+* **sequencerActions**: [SequencerAction](#sequenceraction)[]: The list of sequencer actions.
+
+## SqlServerInstanceManagedInstanceLinkAssessment
+### Properties
+* **additionalInformation**: string: Additional details about the check, including any recommended actions.
+* **category**: 'BoxToMiNetworkConnectivity' | 'Certificates' | 'DagCrossValidation' | 'ManagedInstance' | 'ManagedInstanceCrossValidation' | 'ManagedInstanceDatabase' | 'MiToBoxNetworkConnectivity' | 'SqlInstance' | 'SqlInstanceAg' | 'SqlInstanceDatabase' | string: Validation category for the MI Link prerequisites assessment.
+* **failingDbs**: string[]: List of names of databases that are failing the given assessment.
+* **information**: string: The information text about requirement.
+* **name**: string: The name of the requirement.
+* **status**: 'Failure' | 'Success' | 'Warning' | string: The status of the requirement.
+
+## SqlServerInstanceManagedInstanceLinkAssessmentRequest
+### Properties
+* **assessmentCategories**: ('BoxToMiNetworkConnectivity' | 'Certificates' | 'DagCrossValidation' | 'ManagedInstance' | 'ManagedInstanceCrossValidation' | 'ManagedInstanceDatabase' | 'MiToBoxNetworkConnectivity' | 'SqlInstance' | 'SqlInstanceAg' | 'SqlInstanceDatabase' | string)[]: An array of strings, where each value represents the category of the assessment to be run. If this field is not provided, all assessment categories will be run.
+* **availabilityGroupName**: string (Required): The name of the availability group to be used for the database replication.
+* **azureManagedInstanceResourceId**: string (Required): The Azure SQL Managed Instance resource ID to link with the SQL Server instance.
+* **azureManagedInstanceRole**: 'Primary' | 'Secondary' | string: The role of managed instance in a distributed availability group, can be Primary or Secondary.
+* **databaseNames**: string[] (Required): An array of strings, where each value represents the name of a database to be replicated to the Azure SQL Managed Instance.
+* **distributedAvailabilityGroupName**: string (Required): The name of the DAG to be used for the database replication. Also referred to as Link Name.
+* **sqlServerIpAddress**: string: The IP address of the SQL Server instance.
+
+## SqlServerInstanceManagedInstanceLinkAssessmentResponse
+### Properties
+* **assessments**: [SqlServerInstanceManagedInstanceLinkAssessment](#sqlserverinstancemanagedinstancelinkassessment)[]: The list of the results for MI Link assessment.
+
+## SqlServerInstanceMigrationReadinessReportResponse
+### Properties
+* **createdTime**: string (ReadOnly): The UTC timestamp in ISO 8601 format indicating when the migration readiness report was created.
+* **isCompressed**: bool (ReadOnly): Indicates whether the report field contains base64-encoded GZip-compressed JSON.
+* **report**: string (ReadOnly): The migration readiness report as a serialized JSON string. When isCompressed is true, the value is base64-encoded GZip-compressed and must be decoded and decompressed before parsing.
+
 ## SqlServerInstanceProperties
 ### Properties
 * **alwaysOnRole**: 'AvailabilityGroupReplica' | 'FailoverClusterInstance' | 'FailoverClusterNode' | 'None' | string (ReadOnly): The role of the SQL Server, based on availability.
@@ -883,6 +1216,93 @@
 * **version**: 'SQL Server 2012' | 'SQL Server 2014' | 'SQL Server 2016' | 'SQL Server 2017' | 'SQL Server 2019' | 'SQL Server 2022' | 'SQL Server 2025' | 'Unknown' | string: SQL Server version.
 * **vmId**: string (ReadOnly): The unique ID of the hybrid machine that this resource belongs to.
 
+## SqlServerInstanceRunBestPracticesAssessmentResponse
+### Properties
+* **backgroundJob**: [BackgroundJob](#backgroundjob): The background job details.
+* **id**: string: The unique identifier of the job.
+* **instanceName**: string: The name of the SQL Server instance.
+* **jobException**: string: The exception message if the job failed.
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string: The status of the job.
+* **sequencerActions**: [SequencerAction](#sequenceraction)[]: The list of sequencer actions.
+
+## SqlServerInstanceRunMigrationAssessmentResponse
+### Properties
+* **backgroundJob**: [BackgroundJob](#backgroundjob): The background job details.
+* **id**: string: The unique identifier of the job.
+* **instanceName**: string: The name of the SQL Server instance.
+* **jobException**: string: The exception message if the job failed.
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string: The status of the job.
+* **sequencerActions**: [SequencerAction](#sequenceraction)[]: The list of sequencer actions.
+
+## SqlServerInstanceRunMigrationReadinessAssessmentResponse
+### Properties
+* **backgroundJob**: [BackgroundJob](#backgroundjob): The background job details.
+* **id**: string: The unique identifier of the job.
+* **instanceName**: string: The name of the SQL Server instance.
+* **jobException**: string: The exception message if the job failed.
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string: The status of the job.
+* **sequencerActions**: [SequencerAction](#sequenceraction)[]: The list of sequencer actions.
+
+## SqlServerInstanceRunTargetRecommendationJobRequest
+### Properties
+* **includeFileLevelRequirements**: bool: Specifies whether to include file-level requirements in the target recommendation report.
+* **lookbackPeriodInDays**: int {minValue: 7, maxValue: 30}: The lookback period in days for performance data used in the target recommendation.
+* **percentile**: int {minValue: 1, maxValue: 100}: The percentile of performance data points used for aggregation (Range: 1-100).
+* **resourceUpdateMode**: 'SkipResourceUpdate' | 'UpdateAllTargetRecommendationDetails' | string: Controls whether the SQL Server instance resource is updated with the target recommendation details after the job completes.
+* **targetLocation**: string: The Azure region used for target SKU pricing and availability (e.g., 'westus', 'eastus2', 'westeurope').
+
+## SqlServerInstanceRunTargetRecommendationJobResponse
+### Properties
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly): Represents the current status of the target recommendation job.
+
+## SqlServerInstanceTargetRecommendationReport
+### Properties
+* **createdTime**: string (ReadOnly): The UTC timestamp in ISO 8601 format indicating when the target recommendation report was generated.
+* **reportId**: string (ReadOnly): The identifier of the target recommendation report.
+* **sections**: [SqlServerInstanceTargetRecommendationReportSection](#sqlserverinstancetargetrecommendationreportsection)[] (ReadOnly): Collection of sections included in the report.
+
+## SqlServerInstanceTargetRecommendationReportSection
+### Properties
+* **data**: string (ReadOnly): Serialized JSON representation of the section data. If isCompressed is true, the value contains base64-encoded GZip-compressed JSON.
+* **databaseName**: string (ReadOnly): The name of the database to which this section applies. An empty string indicates that the section contains instance-level data rather than database-level data.
+* **isCompressed**: bool (ReadOnly): Indicates whether the data field contains base64-encoded GZip-compressed JSON.
+* **type**: 'FileRequirementsPerDatabase' | 'RequirementsPerDatabase' | 'RequirementsPerInstance' | 'SqlDbTargetRecommendationPerDatabase' | 'SqlMiTargetRecommendationPerInstance' | 'SqlVmTargetRecommendationPerInstance' | string (ReadOnly): The type of this section. Requirements sections contain source server performance metrics, while recommendation sections contain suggested Azure target SKUs.
+
+## SqlServerInstanceTargetRecommendationReportsRequest
+### Properties
+* **databaseNames**: string[]: The list of database names to filter the report sections by. If not specified, sections for all databases are returned.
+* **reportOffset**: int {minValue: 0}: Zero-based offset indicating where to continue reading reports in the overall list of reports. Defaults to 0 if not provided. This value must be used together with the corresponding sectionOffset to resume pagination. The reportOffset advances only after all sections of the current report have been retrieved. To retrieve subsequent pages, use the nextReportOffset and nextSectionOffset values from the previous response.
+* **sectionOffset**: int {minValue: 0}: Zero-based offset indicating where to continue reading sections within the current report. Defaults to 0 if not provided. This value must be used together with the corresponding reportOffset to resume pagination. To retrieve subsequent pages, use the nextReportOffset and nextSectionOffset values from the previous response.
+* **sectionType**: 'FileRequirementsPerDatabase' | 'RequirementsPerDatabase' | 'RequirementsPerInstance' | 'SqlDbTargetRecommendationPerDatabase' | 'SqlMiTargetRecommendationPerInstance' | 'SqlVmTargetRecommendationPerInstance' | string: Filters the report to a specific section type. If not specified, all section types are returned. Section types are grouped into two categories: requirements sections contain performance and resource metrics collected from the source SQL Server, while recommendation sections contain suggested Azure target SKUs derived from those requirements.
+
+## SqlServerInstanceTargetRecommendationReportsResponse
+### Properties
+* **jobStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly): Represents the status of the latest target recommendation job. Report records are returned only when the job status is Succeeded.
+* **nextReportOffset**: int (ReadOnly): The report offset to use in the next request along with nextSectionOffset to continue retrieving data. This value remains the same until all sections of the current report have been retrieved. Present only when there is more data to retrieve. When both nextReportOffset and nextSectionOffset are absent, all data has been returned.
+* **nextSectionOffset**: int (ReadOnly): The section offset to use in the next request along with nextReportOffset to continue retrieving sections of the current report. Present only when there is more data to retrieve. When both nextReportOffset and nextSectionOffset are absent, all data has been returned.
+* **reports**: [SqlServerInstanceTargetRecommendationReport](#sqlserverinstancetargetrecommendationreport)[] (ReadOnly): A collection of target recommendation reports. Returned only when the job status is Succeeded.
+* **totalReportCount**: int (ReadOnly): The total number of target recommendation reports available for retrieval. Currently, only the latest report is returned, so this value is always 1.
+
+## SqlServerInstanceTelemetryColumn
+### Properties
+* **name**: string: The name of the telemetry column.
+* **type**: 'bool' | 'datetime' | 'double' | 'guid' | 'int' | 'long' | 'string' | 'timespan' | string: The type of the telemetry column.
+
+## SqlServerInstanceTelemetryRequest
+### Properties
+* **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Sum' | string: The aggregation type to use for the numerical columns in the dataset.
+* **databaseNames**: string[]: The list of database names to return telemetry for. If not specified, telemetry for all databases will be aggregated and returned.
+* **datasetName**: string (Required): The name of the telemetry dataset to retrieve.
+* **endTime**: string: The end time for the time range to fetch telemetry for. If not specified, the current time is used.
+* **interval**: string: The time granularity to fetch telemetry for. This is an ISO8601 duration. Examples: PT15M, PT1H, P1D
+* **startTime**: string: The start time for the time range to fetch telemetry for. If not specified, the current time minus 1 hour is used.
+
+## SqlServerInstanceTelemetryResponse
+### Properties
+* **columns**: [SqlServerInstanceTelemetryColumn](#sqlserverinstancetelemetrycolumn)[] (Required): The columns of the result telemetry table for the SQL Server instance.
+* **nextLink**: string (ReadOnly): The link to the next section of rows of the telemetry response for the SQL Server instance. Null if no more sections are available.
+* **rows**: string[][] (Required): A list of rows from the result telemetry table for the SQL Server instance.
+
 ## SqlServerLicenseProperties
 ### Properties
 * **activationState**: 'Activated' | 'Deactivated' | string (Required): The activation state of the license.
@@ -908,6 +1328,16 @@
 * **azureSqlDatabase**: [SkuRecommendationSummary](#skurecommendationsummary): The SKU recommendation summary.
 * **azureSqlManagedInstance**: [SkuRecommendationSummary](#skurecommendationsummary): The SKU recommendation summary.
 * **azureSqlVirtualMachine**: [SkuRecommendationSummary](#skurecommendationsummary): The SKU recommendation summary.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

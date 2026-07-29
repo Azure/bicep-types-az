@@ -4714,5 +4714,99 @@
     "output": {
       "$ref": "#/310"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GraphicalRunbookContent",
+    "properties": {
+      "rawContent": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 0,
+        "description": "Raw graphical Runbook content."
+      },
+      "graphRunbookJson": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Graphical Runbook content as JSON"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawGraphicalRunbookContent",
+    "properties": {
+      "schemaVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Schema version of the serializer."
+      },
+      "runbookDefinition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serialized Graphical runbook"
+      },
+      "runbookType": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "Runbook Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShellWorkflow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertGraphRunbookContent",
+    "resourceType": "Microsoft.Automation/automationAccounts",
+    "apiVersion": "2023-11-01",
+    "output": {
+      "$ref": "#/320"
+    },
+    "input": {
+      "$ref": "#/320"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridRunbookWorkerMoveParameters",
+    "properties": {
+      "hybridRunbookWorkerGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target hybrid runbook worker group."
+      }
+    }
   }
 ]

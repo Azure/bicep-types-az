@@ -340,6 +340,56 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/pools/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBuildDetails (Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [ImageDefinitionBuildDetails](#imagedefinitionbuilddetails)
+
+## Function getBuildDetails (Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [ImageDefinitionBuildDetails](#imagedefinitionbuilddetails)
+
+## Function getErrorDetails (Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [CatalogResourceValidationErrorDetails](#catalogresourcevalidationerrordetails)
+
+## Function getErrorDetails (Microsoft.DevCenter/devcenters/catalogs/imageDefinitions@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/imageDefinitions
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [CatalogResourceValidationErrorDetails](#catalogresourcevalidationerrordetails)
+
+## Function getErrorDetails (Microsoft.DevCenter/devcenters/catalogs/tasks@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/tasks
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [CatalogResourceValidationErrorDetails](#catalogresourcevalidationerrordetails)
+
+## Function getErrorDetails (Microsoft.DevCenter/projects/catalogs/environmentDefinitions@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs/environmentDefinitions
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [CatalogResourceValidationErrorDetails](#catalogresourcevalidationerrordetails)
+
+## Function getErrorDetails (Microsoft.DevCenter/projects/catalogs/imageDefinitions@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs/imageDefinitions
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [CatalogResourceValidationErrorDetails](#catalogresourcevalidationerrordetails)
+
+## Function getInheritedSettings (Microsoft.DevCenter/projects@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/projects
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [InheritedSettingsForProject](#inheritedsettingsforproject)
+
+## Function getSyncErrorDetails (Microsoft.DevCenter/devcenters/catalogs@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [SyncErrorDetails](#syncerrordetails)
+
+## Function getSyncErrorDetails (Microsoft.DevCenter/projects/catalogs@2025-10-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: [SyncErrorDetails](#syncerrordetails)
+
 ## Function listSkus (Microsoft.DevCenter/projects@2025-10-01-preview)
 * **Resource**: Microsoft.DevCenter/projects
 * **ApiVersion**: 2025-10-01-preview
@@ -382,6 +432,16 @@
 * **name**: string (ReadOnly): Name of the capability.
 * **value**: string (ReadOnly): Value of the capability.
 
+## CatalogConflictError
+### Properties
+* **name**: string (ReadOnly): Name of the conflicting catalog item.
+* **path**: string (ReadOnly): The path of the file that has a conflicting name.
+
+## CatalogErrorDetails
+### Properties
+* **code**: string: An identifier for the error.
+* **message**: string: A message describing the error.
+
 ## CatalogProperties
 ### Properties
 * **adoGit**: [GitCatalog](#gitcatalog): Properties for an Azure DevOps catalog type.
@@ -395,6 +455,15 @@
 * **syncState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The synchronization state of the catalog.
 * **syncType**: 'Manual' | 'Scheduled' | string: Indicates the type of sync that is configured for the catalog.
 * **tags**: [CatalogUpdatePropertiesTags](#catalogupdatepropertiestags): Resource tags.
+
+## CatalogResourceValidationErrorDetails
+### Properties
+* **errors**: [CatalogErrorDetails](#catalogerrordetails)[] (ReadOnly): Errors associated with resources synchronized from the catalog.
+
+## CatalogSyncError
+### Properties
+* **errorDetails**: [CatalogErrorDetails](#catalogerrordetails)[] (ReadOnly): Errors associated with the file.
+* **path**: string (ReadOnly): The path of the file the error is associated with.
 
 ## CatalogUpdatePropertiesTags
 ### Properties
@@ -592,6 +661,19 @@
 * **code**: string: An identifier for the error.
 * **message**: string: A message describing the error.
 
+## ImageDefinitionBuildDetails
+### Properties
+* **endTime**: string (ReadOnly): End time of the task group.
+* **errorDetails**: [ImageCreationErrorDetails](#imagecreationerrordetails) (ReadOnly): Details for image creation error. Populated when the image creation is not successful.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **imageReference**: [ImageReference](#imagereference) (ReadOnly): The specific image version used by the build.
+* **name**: string (ReadOnly): The name of the resource
+* **startTime**: string (ReadOnly): Start time of the task group.
+* **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | 'TimedOut' | 'ValidationFailed' | string (ReadOnly): The status of the build.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **taskGroups**: [ImageDefinitionBuildTaskGroup](#imagedefinitionbuildtaskgroup)[] (ReadOnly): The list of task groups executed during the image definition build.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ImageDefinitionBuildProperties
 ### Properties
 * **endTime**: string (ReadOnly): End time of the task group.
@@ -599,6 +681,30 @@
 * **imageReference**: [ImageReference](#imagereference) (ReadOnly): The specific image version used by the build.
 * **startTime**: string (ReadOnly): Start time of the task group.
 * **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | 'TimedOut' | 'ValidationFailed' | string (ReadOnly): The status of the build.
+
+## ImageDefinitionBuildTask
+### Properties
+* **displayName**: string: Display name to help differentiate multiple instances of the same task.
+* **endTime**: string (ReadOnly): End time of the task.
+* **id**: string (ReadOnly): ID of the task instance.
+* **logUri**: string (ReadOnly): The URI for retrieving logs for the task execution.
+* **name**: string: The name of the task.
+* **parameters**: [ImageDefinitionBuildTaskParametersItem](#imagedefinitionbuildtaskparametersitem)[]: Parameters for the task.
+* **startTime**: string (ReadOnly): Start time of the task.
+* **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | 'TimedOut' | 'ValidationFailed' | string (ReadOnly): The status of the task.
+
+## ImageDefinitionBuildTaskGroup
+### Properties
+* **endTime**: string (ReadOnly): End time of the task group.
+* **name**: string (ReadOnly): The name of the task group.
+* **startTime**: string (ReadOnly): Start time of the task group.
+* **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | 'TimedOut' | 'ValidationFailed' | string (ReadOnly): The status of the task group.
+* **tasks**: [ImageDefinitionBuildTask](#imagedefinitionbuildtask)[] (ReadOnly): The list of tasks executed during the task group.
+
+## ImageDefinitionBuildTaskParametersItem
+### Properties
+* **key**: string (Required): Key of the parameter.
+* **value**: string (Required): Value of the parameter.
 
 ## ImageDefinitionProperties
 ### Properties
@@ -646,6 +752,27 @@
 * **osDiskImageSizeInGb**: int (ReadOnly): The size of the OS disk image, in GB.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **publishedDate**: string (ReadOnly): The datetime that the backing image version was published.
+
+## InheritedProjectCatalogSettings
+### Properties
+* **catalogItemSyncEnableStatus**: 'Disabled' | 'Enabled' | string: Whether project catalogs associated with projects in this dev center can be configured to sync catalog items.
+* **defaultStatus**: 'AutoDeploy' | 'Disabled' | 'Enabled' | string: Indicates the default status of the feature.
+* **defaultValues**: [DefaultValue](#defaultvalue)[]: The default values of the feature.
+* **statusModifiable**: 'Modifiable' | 'NotModifiable' | string: Indicates whether the feature's status, Enabled or Disabled, is configurable at the Project scope.
+* **valuesModifiable**: 'Modifiable' | 'NotModifiable' | string: Indicates whether the feature values are configurable at the Project scope.
+
+## InheritedSettingsForProject
+### Properties
+* **azureAiServicesSettings**: [FeatureState](#featurestate) (ReadOnly): Azure AI project policy settings that will be enforced on this project.
+* **devBoxLimitsSettings**: [FeatureState](#featurestate) (ReadOnly): Dev box limits project policy settings that will be enforced on this project.
+* **devBoxScheduleDeleteSettings**: [FeatureState](#featurestate) (ReadOnly): Dev box schedule delete project policy settings that will be enforced on this project.
+* **devBoxTunnelSettings**: [FeatureState](#featurestate) (ReadOnly): Dev box tunnel project policy settings that will be enforced on this project.
+* **displayNameSettings**: [FeatureState](#featurestate) (ReadOnly): Display name project policy settings that will be enforced on this project.
+* **networkSettings**: [ProjectNetworkSettings](#projectnetworksettings) (ReadOnly): Network settings that will be enforced on this project.
+* **projectCatalogSettings**: [InheritedProjectCatalogSettings](#inheritedprojectcatalogsettings) (ReadOnly): Dev Center settings to be used when associating a project with a catalog.
+* **serverlessGpuSessionsSettings**: [FeatureState](#featurestate) (ReadOnly): Serverless GPU sessions project policy settings that will be enforced on this project.
+* **userCustomizationsSettings**: [FeatureState](#featurestate) (ReadOnly): User customizations project policy settings that will be enforced on this project.
+* **workspaceStorageSettings**: [FeatureState](#featurestate) (ReadOnly): Workspace storage project policy settings that will be enforced on this project.
 
 ## KeyEncryptionKeyIdentity
 ### Properties
@@ -750,6 +877,10 @@
 ### Additional Properties
 * **Additional Properties Type**: [UserRoleAssignment](#userroleassignment)
 
+## ProjectNetworkSettings
+### Properties
+* **microsoftHostedNetworkEnableStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether pools in this Dev Center can use Microsoft Hosted Networks. Defaults to Enabled if not set.
+
 ## ProjectPolicyProperties
 ### Properties
 * **configurationPolicies**: [ConfigurationPolicies](#configurationpolicies): Configuration Policies part of this project policy.
@@ -833,6 +964,12 @@
 ### Properties
 * **gracePeriodMinutes**: int: The specified time in minutes to wait before stopping a Dev Box if no connection is made.
 * **status**: 'Disabled' | 'Enabled' | string: Enables the feature to stop a started Dev Box when it has not been connected to, once the grace period has lapsed.
+
+## SyncErrorDetails
+### Properties
+* **conflicts**: [CatalogConflictError](#catalogconflicterror)[] (ReadOnly): Catalog items that have conflicting names.
+* **errors**: [CatalogSyncError](#catalogsyncerror)[] (ReadOnly): Errors that occured during synchronization.
+* **operationError**: [CatalogErrorDetails](#catalogerrordetails) (ReadOnly): Error information for the overall synchronization operation.
 
 ## SyncStats
 ### Properties

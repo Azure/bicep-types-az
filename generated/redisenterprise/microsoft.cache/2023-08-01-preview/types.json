@@ -1615,5 +1615,123 @@
     "output": {
       "$ref": "#/150"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 1,
+        "description": "Which access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/150"
+    },
+    "input": {
+      "$ref": "#/152"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportClusterParameters",
+    "properties": {
+      "sasUris": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 1,
+        "description": "SAS URIs for the target blobs to import from"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportClusterParameters",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "SAS URI for the target directory to export to"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceUnlinkParameters",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "The resource IDs of the database resources to be unlinked."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlushParameters",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
   }
 ]

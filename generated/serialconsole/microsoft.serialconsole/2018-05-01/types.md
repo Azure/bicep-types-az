@@ -10,6 +10,33 @@
 * **properties**: [SerialPortProperties](#serialportproperties): The properties of the serial port.
 * **type**: 'Microsoft.SerialConsole/serialPorts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function connect (Microsoft.SerialConsole/serialPorts@2018-05-01)
+* **Resource**: Microsoft.SerialConsole/serialPorts
+* **ApiVersion**: 2018-05-01
+* **Output**: [SerialPortConnectResult](#serialportconnectresult)
+
+## Function disableConsole (Microsoft.SerialConsole/consoleServices@2018-05-01)
+* **Resource**: Microsoft.SerialConsole/consoleServices
+* **ApiVersion**: 2018-05-01
+* **Output**: [DisableSerialConsoleResult](#disableserialconsoleresult)
+
+## Function enableConsole (Microsoft.SerialConsole/consoleServices@2018-05-01)
+* **Resource**: Microsoft.SerialConsole/consoleServices
+* **ApiVersion**: 2018-05-01
+* **Output**: [EnableSerialConsoleResult](#enableserialconsoleresult)
+
+## DisableSerialConsoleResult
+### Properties
+* **disabled**: bool: Whether or not Serial Console is disabled.
+
+## EnableSerialConsoleResult
+### Properties
+* **disabled**: bool: Whether or not Serial Console is disabled (enabled).
+
+## SerialPortConnectResult
+### Properties
+* **connectionString**: string: Connection string to the serial port of the resource.
+
 ## SerialPortProperties
 ### Properties
 * **state**: 'disabled' | 'enabled': Specifies whether the port is enabled for a serial console connection.

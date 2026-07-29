@@ -794,5 +794,81 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Result of the List Authorization Rules operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Properties supplied to create or update SharedAccessAuthorizationRule"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "AuthorizationRules",
+    "resourceType": "Microsoft.EventHub/namespaces",
+    "apiVersion": "2014-09-01",
+    "output": {
+      "$ref": "#/68"
+    }
   }
 ]

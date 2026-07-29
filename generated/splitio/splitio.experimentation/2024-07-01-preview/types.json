@@ -564,5 +564,54 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeTokenParameters",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The bearer token that is used for exchanging Split.IO data plane authentication token."
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The application ID URI of Split.IO data plane authentication application."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeTokenResult",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 3,
+        "description": "The bearer token that is used for Split.IO data plane authentication."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exchangeToken",
+    "resourceType": "SplitIO.Experimentation/experimentationWorkspaces/dataPlaneApplications",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/49"
+    },
+    "input": {
+      "$ref": "#/47"
+    }
   }
 ]

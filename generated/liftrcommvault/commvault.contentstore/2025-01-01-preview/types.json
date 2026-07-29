@@ -2133,5 +2133,277 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreProtectionItemRequest",
+    "properties": {
+      "inPlaceRestore": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 1,
+        "description": "Check whether inplace or out of place restore."
+      },
+      "restoreType": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "Type of Restore"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time to restore"
+      },
+      "vmDestinationInfo": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 1,
+        "description": "The vm destination details of the VM."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NONE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VIRTUAL_MACHINE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISK_ATTACH"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmDestinationInfo",
+    "properties": {
+      "vmInfoList": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 1,
+        "description": "List of information on VMs"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmInfo",
+    "properties": {
+      "sourceVmGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The GUID of VM to be restored."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The storage account to be used for restore."
+      },
+      "powerOnVmAfterRestore": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The identifier to check if VM needs to be powered on."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the VM."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource group of the VM."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region of the VM."
+      },
+      "networkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The network Id of the VM."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subnet Id of the VM."
+      },
+      "attachAndSwapOsDisk": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The identifier to check if to attach and swap disk of the VM."
+      },
+      "targetVmGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The GUID of target VM used in DISK ATTACH."
+      },
+      "vmtag": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "The vmTag of the VM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmTag",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of VM tag."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The value of VM tag."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/204"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/203"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreProtectionItemResponse",
+    "properties": {
+      "taskId": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 3,
+        "description": "The Commvault response for taskId"
+      },
+      "jobIds": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 3,
+        "description": "The jobIds returned from Commvault."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/207"
+    },
+    "input": {
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorePoints",
+    "properties": {
+      "restoreTimes": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 3,
+        "description": "The Commvault Protected Item Restore points"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRestorePoints",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/210"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/207"
+    },
+    "input": {
+      "$ref": "#/196"
+    }
   }
 ]

@@ -1246,11 +1246,47 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AccountInfoSecure",
+    "properties": {
+      "accountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Account Id of the account this environment is linked to"
+      },
+      "apiKey": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "API Key of the user account"
+      },
+      "regionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region in which the account is created"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAccountCredentials",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "MonitoredResourceListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/117"
         },
         "flags": 0,
         "description": "The items on this page"
@@ -1277,7 +1313,7 @@
       },
       "sendingMetrics": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/113"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending metrics to Dynatrace."
@@ -1291,7 +1327,7 @@
       },
       "sendingLogs": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/116"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending logs to Dynatrace."
@@ -1317,10 +1353,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/109"
+        "$ref": "#/111"
       },
       {
-        "$ref": "#/110"
+        "$ref": "#/112"
       },
       {
         "$ref": "#/0"
@@ -1339,10 +1375,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/112"
+        "$ref": "#/114"
       },
       {
-        "$ref": "#/113"
+        "$ref": "#/115"
       },
       {
         "$ref": "#/0"
@@ -1352,7 +1388,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/108"
+      "$ref": "#/110"
     }
   },
   {
@@ -1361,7 +1397,36 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/107"
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMExtensionPayload",
+    "properties": {
+      "ingestionKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Ingestion key of the environment"
+      },
+      "environmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the environment created"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVMHostPayload",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/119"
     }
   },
   {
@@ -1370,7 +1435,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "The items on this page"
@@ -1404,35 +1469,35 @@
       },
       "monitoringType": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "The monitoring mode of OneAgent"
       },
       "autoUpdateSetting": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "Update settings of OneAgent."
       },
       "updateStatus": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "The current update status of OneAgent."
       },
       "availabilityState": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/147"
         },
         "flags": 0,
         "description": "The availability state of OneAgent."
       },
       "logModule": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Tells whether log modules are enabled or not"
@@ -1465,10 +1530,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/119"
+        "$ref": "#/123"
       },
       {
-        "$ref": "#/120"
+        "$ref": "#/124"
       },
       {
         "$ref": "#/0"
@@ -1487,10 +1552,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/122"
+        "$ref": "#/126"
       },
       {
-        "$ref": "#/123"
+        "$ref": "#/127"
       },
       {
         "$ref": "#/0"
@@ -1537,18 +1602,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/125"
-      },
-      {
-        "$ref": "#/126"
-      },
-      {
-        "$ref": "#/127"
-      },
-      {
-        "$ref": "#/128"
-      },
-      {
         "$ref": "#/129"
       },
       {
@@ -1562,6 +1615,18 @@
       },
       {
         "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
       },
       {
         "$ref": "#/0"
@@ -1604,18 +1669,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/135"
-      },
-      {
-        "$ref": "#/136"
-      },
-      {
-        "$ref": "#/137"
-      },
-      {
-        "$ref": "#/138"
-      },
-      {
         "$ref": "#/139"
       },
       {
@@ -1626,6 +1679,18 @@
       },
       {
         "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
       },
       {
         "$ref": "#/0"
@@ -1644,10 +1709,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/144"
+        "$ref": "#/148"
       },
       {
-        "$ref": "#/145"
+        "$ref": "#/149"
       },
       {
         "$ref": "#/0"
@@ -1657,7 +1722,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/118"
+      "$ref": "#/122"
     }
   },
   {
@@ -1666,7 +1731,7 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/117"
+      "$ref": "#/121"
     }
   },
   {
@@ -1675,7 +1740,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "The items on this page"
@@ -1709,35 +1774,35 @@
       },
       "monitoringType": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "The monitoring mode of OneAgent"
       },
       "autoUpdateSetting": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "Update settings of OneAgent."
       },
       "updateStatus": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "The current update status of OneAgent."
       },
       "availabilityState": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "The availability state of OneAgent."
       },
       "logModule": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/182"
         },
         "flags": 0,
         "description": "Tells whether log modules are enabled or not"
@@ -1770,10 +1835,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/151"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/152"
+        "$ref": "#/156"
       },
       {
         "$ref": "#/0"
@@ -1792,10 +1857,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/158"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/159"
       },
       {
         "$ref": "#/0"
@@ -1842,18 +1907,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/157"
-      },
-      {
-        "$ref": "#/158"
-      },
-      {
-        "$ref": "#/159"
-      },
-      {
-        "$ref": "#/160"
-      },
-      {
         "$ref": "#/161"
       },
       {
@@ -1867,6 +1920,18 @@
       },
       {
         "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
       },
       {
         "$ref": "#/0"
@@ -1909,18 +1974,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/167"
-      },
-      {
-        "$ref": "#/168"
-      },
-      {
-        "$ref": "#/169"
-      },
-      {
-        "$ref": "#/170"
-      },
-      {
         "$ref": "#/171"
       },
       {
@@ -1931,6 +1984,18 @@
       },
       {
         "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
       },
       {
         "$ref": "#/0"
@@ -1949,10 +2014,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/176"
+        "$ref": "#/180"
       },
       {
-        "$ref": "#/177"
+        "$ref": "#/181"
       },
       {
         "$ref": "#/0"
@@ -1962,7 +2027,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/150"
+      "$ref": "#/154"
     }
   },
   {
@@ -1971,7 +2036,107 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/153"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SSODetailsRequest",
+    "properties": {
+      "userPrincipal": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "user principal id of the user"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SSODetailsResponse",
+    "properties": {
+      "isSsoEnabled": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Whether the SSO is enabled for this resource or not."
+      },
+      "metadataUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for Azure AD metadata"
+      },
+      "singleSignOnUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The login URL specific to this Dynatrace Environment"
+      },
+      "aadDomains": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "array of Aad(azure active directory) domains"
+      },
+      "adminUsers": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 0,
+        "description": "Array of admin user emails."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSSODetails",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/186"
+    },
+    "input": {
+      "$ref": "#/185"
     }
   },
   {
@@ -2007,7 +2172,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/196"
         },
         "flags": 0,
         "description": "List of environments for which user is an admin"
@@ -2051,7 +2216,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/183"
+      "$ref": "#/195"
     }
   },
   {
@@ -2060,10 +2225,10 @@
     "resourceType": "Dynatrace.Observability/monitors",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/182"
+      "$ref": "#/194"
     },
     "input": {
-      "$ref": "#/181"
+      "$ref": "#/193"
     }
   }
 ]

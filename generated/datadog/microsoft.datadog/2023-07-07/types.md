@@ -58,6 +58,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getDefaultKey (Microsoft.Datadog/monitors@2023-07-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2023-07-07
+* **Output**: [DatadogApiKey](#datadogapikey)
+
 ## Function listApiKeys (Microsoft.Datadog/monitors@2023-07-07)
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2023-07-07
@@ -77,6 +82,11 @@
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2023-07-07
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function refreshSetPasswordLink (Microsoft.Datadog/monitors@2023-07-07)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2023-07-07
+* **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
 
 ## DatadogAgreementProperties
 ### Properties
@@ -145,6 +155,10 @@
 * **linkingClientId**: string {sensitive} (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
 * **name**: string: Name of the Datadog organization.
 * **redirectUri**: string (WriteOnly): The redirect URI for linking.
+
+## DatadogSetPasswordLink
+### Properties
+* **setPasswordLink**: string
 
 ## DatadogSingleSignOnProperties
 ### Properties

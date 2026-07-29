@@ -11,6 +11,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EdgeZones/extendedZones' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function register (Microsoft.EdgeZones/extendedZones@2024-04-01-preview)
+* **Resource**: Microsoft.EdgeZones/extendedZones
+* **ApiVersion**: 2024-04-01-preview
+* **Output**: [ExtendedZone](#extendedzone)
+
+## Function unregister (Microsoft.EdgeZones/extendedZones@2024-04-01-preview)
+* **Resource**: Microsoft.EdgeZones/extendedZones
+* **ApiVersion**: 2024-04-01-preview
+* **Output**: [ExtendedZone](#extendedzone)
+
+## ExtendedZone
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ExtendedZoneProperties](#extendedzoneproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ExtendedZoneProperties
 ### Properties
 * **displayName**: string (Required, ReadOnly): Display name of the Azure Extended Zone.

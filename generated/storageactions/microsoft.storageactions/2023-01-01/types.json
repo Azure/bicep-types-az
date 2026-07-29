@@ -639,5 +639,230 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewAction",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 1,
+        "description": "Properties of the storage task preview."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewActionProperties",
+    "properties": {
+      "container": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 1,
+        "description": "Properties of a sample container to test for a match with the preview action."
+      },
+      "blobs": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 1,
+        "description": "Properties of some sample blobs in the container to test for matches with the preview action."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 1,
+        "description": "Preview action to test"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewContainerProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of test container"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "metadata key value pairs to be tested for a match against the provided condition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewKeyValueProperties",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents the key property of the pair."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents the value property of the pair."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewBlobProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of test blob"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "properties key value pairs to be tested for a match against the provided condition."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "metadata key value pairs to be tested for a match against the provided condition."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "tags key value pairs to be tested for a match against the provided condition."
+      },
+      "matchedBlock": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Represents the condition block name that matched blob properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "If"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Else"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewActionCondition",
+    "properties": {
+      "if": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 1,
+        "description": "The condition to be tested for a match with container and blob properties."
+      },
+      "elseBlockExists": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "Specify whether the else block is present in the condition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskPreviewActionIfCondition",
+    "properties": {
+      "condition": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Storage task condition to bes tested for a match."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "previewActions",
+    "resourceType": "Microsoft.StorageActions/locations",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/58"
+    },
+    "input": {
+      "$ref": "#/58"
+    }
   }
 ]

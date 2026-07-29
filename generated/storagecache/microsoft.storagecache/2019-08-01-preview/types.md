@@ -23,6 +23,21 @@
 * **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the storage target.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function flush (Microsoft.StorageCache/caches@2019-08-01-preview)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2019-08-01-preview
+* **Output**: any
+
+## Function start (Microsoft.StorageCache/caches@2019-08-01-preview)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2019-08-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.StorageCache/caches@2019-08-01-preview)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2019-08-01-preview
+* **Output**: any
+
 ## CacheHealth
 ### Properties
 * **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of cache health states.

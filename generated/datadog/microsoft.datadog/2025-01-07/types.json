@@ -1530,12 +1530,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-01-07",
+    "output": {
+      "$ref": "#/123"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatadogHostListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1562,21 +1571,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/131"
         },
         "flags": 0
       }
@@ -1607,13 +1616,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/132"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/133"
         },
         "flags": 0
       }
@@ -1662,7 +1671,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/127"
+      "$ref": "#/128"
     }
   },
   {
@@ -1671,7 +1680,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/126"
+      "$ref": "#/127"
     }
   },
   {
@@ -1680,7 +1689,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1717,7 +1726,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/136"
+      "$ref": "#/137"
     }
   },
   {
@@ -1726,7 +1735,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/135"
+      "$ref": "#/136"
     }
   },
   {
@@ -1735,7 +1744,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1793,7 +1802,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/140"
+      "$ref": "#/141"
     }
   },
   {
@@ -1802,7 +1811,237 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/139"
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogSetPasswordLink",
+    "properties": {
+      "setPasswordLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSetPasswordLink",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-01-07",
+    "output": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingInfoResponse",
+    "properties": {
+      "marketplaceSaasInfo": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription details"
+      },
+      "partnerBillingEntity": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 0,
+        "description": "Partner Billing Entity details: Organization Info"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfo",
+    "properties": {
+      "marketplaceSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
+      },
+      "marketplaceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SAAS Name"
+      },
+      "marketplaceStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SaaS Subscription Status"
+      },
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
+      },
+      "subscribed": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Flag specifying if the Marketplace status is subscribed or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PartnerBillingEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Datadog Organization Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Datadog Organization Name."
+      },
+      "partnerEntityUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link to the datadog organization page"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBillingInfo",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-01-07",
+    "output": {
+      "$ref": "#/146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResubscribeProperties",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "azureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogMonitorResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ARM id of the monitor resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the monitor resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the monitor resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Properties specific to the monitor resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatadogMonitorResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resubscribe",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-01-07",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/150"
     }
   }
 ]

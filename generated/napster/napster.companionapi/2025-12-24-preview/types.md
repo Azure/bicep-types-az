@@ -14,6 +14,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Napster.CompanionAPI/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function latestLinkedSaaS (Napster.CompanionAPI/organizations@2025-12-24-preview)
+* **Resource**: Napster.CompanionAPI/organizations
+* **ApiVersion**: 2025-12-24-preview
+* **Output**: [LatestLinkedSaaSResponse](#latestlinkedsaasresponse)
+
+## Function linkSaaS (Napster.CompanionAPI/organizations@2025-12-24-preview)
+* **Resource**: Napster.CompanionAPI/organizations
+* **ApiVersion**: 2025-12-24-preview
+* **Input**: [SaaSData](#saasdata)
+* **Output**: [OrganizationResource](#organizationresource)
+
+## LatestLinkedSaaSResponse
+### Properties
+* **isHiddenSaaS**: bool: Flag indicating if the SaaS resource is hidden
+* **saaSResourceId**: string: SaaS resource id
+
 ## LiftrBaseMarketplaceDetails
 ### Properties
 * **offerDetails**: [LiftrBaseOfferDetails](#liftrbaseofferdetails) (Required): Offer details for the marketplace that is selected by the user
@@ -61,9 +77,24 @@
 * **singleSignOnProperties**: [LiftrBaseSingleSignOnPropertiesV2](#liftrbasesinglesignonpropertiesv2): Single sign-on properties
 * **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): Details of the user.
 
+## OrganizationResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [OrganizationProperties](#organizationproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## PartnerProperties
 ### Properties
 * **application**: string {minLength: 2, maxLength: 40, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_\-.: ]*$"} (Required): Application name
+
+## SaaSData
+### Properties
+* **saaSResourceId**: string: SaaS resource id
 
 ## SystemData
 ### Properties
@@ -73,6 +104,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

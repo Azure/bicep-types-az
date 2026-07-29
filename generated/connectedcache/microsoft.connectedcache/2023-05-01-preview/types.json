@@ -2319,5 +2319,218 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeInstallDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource install script details."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CacheNodeInstallProperties",
+    "properties": {
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Mcc customer resource Id."
+      },
+      "cacheNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource Id."
+      },
+      "primaryAccountKey": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Mcc primary account key. Internal to Mcc."
+      },
+      "secondaryAccountKey": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Mcc secondary account key. Internal to Mcc."
+      },
+      "registrationKey": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Mcc Iot Central temporary device registration key, used once."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeInstallDetails",
+    "resourceType": "Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes",
+    "apiVersion": "2023-05-01-preview",
+    "output": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeBgpCidrDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource Bgp Cidr properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BgpCidrsConfiguration",
+    "properties": {
+      "bgpCidrs": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "Mcc cache node Bgp Cidr details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBgpCidrs",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2023-05-01-preview",
+    "output": {
+      "$ref": "#/123"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeInstallDetails",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2023-05-01-preview",
+    "output": {
+      "$ref": "#/119"
+    }
   }
 ]

@@ -142,6 +142,36 @@
 * **properties**: [WidgetType](#widgettype) (ReadOnly): Definition of WidgetType.
 * **type**: 'Microsoft.CustomerInsights/hubs/widgetTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getEnrichingKpis (Microsoft.CustomerInsights/hubs/profiles@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/profiles
+* **ApiVersion**: 2017-04-26
+* **Output**: [KpiDefinition](#kpidefinition)[]
+
+## Function getModelStatus (Microsoft.CustomerInsights/hubs/predictions@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/predictions
+* **ApiVersion**: 2017-04-26
+* **Output**: [PredictionModelStatus](#predictionmodelstatus)
+
+## Function getTrainingResults (Microsoft.CustomerInsights/hubs/predictions@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/predictions
+* **ApiVersion**: 2017-04-26
+* **Output**: [PredictionTrainingResults](#predictiontrainingresults)
+
+## Function regeneratePrimaryKey (Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/authorizationPolicies
+* **ApiVersion**: 2017-04-26
+* **Output**: [AuthorizationPolicy](#authorizationpolicy)
+
+## Function regenerateSecondaryKey (Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/authorizationPolicies
+* **ApiVersion**: 2017-04-26
+* **Output**: [AuthorizationPolicy](#authorizationpolicy)
+
+## Function suggestRelationshipLinks (Microsoft.CustomerInsights/hubs/interactions@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/interactions
+* **ApiVersion**: 2017-04-26
+* **Output**: [SuggestRelationshipLinksResponse](#suggestrelationshiplinksresponse)
+
 ## AssignmentPrincipal
 ### Properties
 * **principalId**: string (Required): The principal id being assigned to.
@@ -159,6 +189,19 @@
 * **policyName**: string (ReadOnly): Name of the policy.
 * **primaryKey**: string: Primary key associated with the policy.
 * **secondaryKey**: string: Secondary key associated with the policy.
+
+## CanonicalProfileDefinition
+### Properties
+* **canonicalProfileId**: int: Canonical profile ID.
+* **properties**: [CanonicalProfileDefinitionPropertiesItem](#canonicalprofiledefinitionpropertiesitem)[]: Properties of the canonical profile.
+
+## CanonicalProfileDefinitionPropertiesItem
+### Properties
+* **profileName**: string: Profile name.
+* **profilePropertyName**: string: Property name of profile.
+* **rank**: int: The rank.
+* **type**: 'Categorical' | 'DerivedCategorical' | 'DerivedNumeric' | 'Numeric' | string: Type of canonical property value.
+* **value**: string: Value of the canonical property.
 
 ## Connector
 ### Properties
@@ -490,6 +533,20 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## PredictionDistributionDefinition
+### Properties
+* **distributions**: [PredictionDistributionDefinitionDistributionsItem](#predictiondistributiondefinitiondistributionsitem)[]: Distributions of the prediction.
+* **totalNegatives**: int: Total negatives in the distribution.
+* **totalPositives**: int: Total positive in the distribution.
+
+## PredictionDistributionDefinitionDistributionsItem
+### Properties
+* **negatives**: int: Number of negatives.
+* **negativesAboveThreshold**: int: Number of negatives above threshold.
+* **positives**: int: Number of positives.
+* **positivesAboveThreshold**: int: Number of positives above threshold.
+* **scoreThreshold**: int: Score threshold.
+
 ## PredictionGradesItem
 ### Properties
 * **gradeName**: string: Name of the grade.
@@ -502,6 +559,20 @@
 * **reason**: string (Required): The reason of the link mapping.
 * **score**: string (Required): The score of the link mapping.
 
+## PredictionModelStatus
+### Properties
+* **message**: string (ReadOnly): The model status message.
+* **modelVersion**: string (ReadOnly): Version of the model.
+* **predictionGuidId**: string (ReadOnly): The prediction GUID ID.
+* **predictionName**: string (ReadOnly): The prediction name.
+* **signalsUsed**: int (ReadOnly): The signals used.
+* **status**: 'Active' | 'Deleted' | 'Discovering' | 'Evaluating' | 'EvaluatingFailed' | 'Failed' | 'Featuring' | 'FeaturingFailed' | 'HumanIntervention' | 'New' | 'PendingDiscovering' | 'PendingFeaturing' | 'PendingModelConfirmation' | 'PendingTraining' | 'Provisioning' | 'ProvisioningFailed' | 'Training' | 'TrainingFailed' | string (Required): Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
+* **tenantId**: string (ReadOnly): The hub name.
+* **testSetCount**: int (ReadOnly): Count of the test set.
+* **trainingAccuracy**: int (ReadOnly): The training accuracy.
+* **trainingSetCount**: int (ReadOnly): Count of the training set.
+* **validationSetCount**: int (ReadOnly): Count of the validation set.
+
 ## PredictionSystemGeneratedEntities
 ### Properties
 * **generatedInteractionTypes**: string[]: Generated interaction types.
@@ -512,6 +583,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PredictionTrainingResults
+### Properties
+* **canonicalProfiles**: [CanonicalProfileDefinition](#canonicalprofiledefinition)[] (ReadOnly): Canonical profiles.
+* **predictionDistribution**: [PredictionDistributionDefinition](#predictiondistributiondefinition) (ReadOnly): Prediction distribution.
+* **primaryProfileInstanceCount**: int (ReadOnly): Instance count of the primary profile.
+* **scoreName**: string (ReadOnly): Score name.
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## ProfileEnumValidValuesFormat
 ### Properties
@@ -618,6 +697,14 @@
 * **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
 * **relationshipFieldName**: string (Required): The field name on the Relationship metadata.
 
+## RelationshipsLookup
+### Properties
+* **existingRelationshipName**: string (ReadOnly): The name of existing Relationship.
+* **profileName**: string (ReadOnly): The relationship profile.
+* **profilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (ReadOnly): The property references for the profile type.
+* **relatedProfileName**: string (ReadOnly): The related profile.
+* **relatedProfilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (ReadOnly): The property references for the related profile type.
+
 ## RelationshipTypeFieldMapping
 ### Properties
 * **profileFieldName**: string (Required): Specifies the fieldName in profile.
@@ -686,6 +773,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SuggestRelationshipLinksResponse
+### Properties
+* **interactionName**: string (ReadOnly): The interaction name.
+* **suggestedRelationships**: [RelationshipsLookup](#relationshipslookup)[] (ReadOnly): Suggested relationships for the type.
 
 ## TypePropertiesMapping
 ### Properties

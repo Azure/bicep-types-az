@@ -1041,5 +1041,343 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsoUri",
+    "properties": {
+      "ssoUriValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI used to login to the supplemental portal."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSsoUri",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportedOptimizationTypesListResult",
+    "properties": {
+      "supportedOptimizationTypes": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 2,
+        "description": "Supported optimization types for a profile."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralWebDelivery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralMediaStreaming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VideoOnDemandMediaStreaming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LargeFileDownload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DynamicSiteAcceleration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSupportedOptimizationTypes",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsageListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 2,
+        "description": "List of resource usages."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to get the next set of custom domain objects if there are any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsage",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type for which the usage is provided."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unit of the usage. e.g. Count."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2,
+        "description": "Actual value of usage on the specified resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2,
+        "description": "Quota of the specified resource type."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Endpoint",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties required to create an endpoint."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PurgeParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 1,
+        "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateCustomDomainInput",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateCustomDomainOutput",
+    "properties": {
+      "customDomainValidated": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "Indicates whether the custom domain is valid or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the custom domain is not valid."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message describing why the custom domain is not valid."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCustomDomain",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/116"
+    },
+    "input": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-04-02",
+    "output": {
+      "$ref": "#/102"
+    }
   }
 ]

@@ -1894,5 +1894,246 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes the Resource type: Microsoft.RecoveryServices/Vaults"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name for which availability needs to be checked"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceCapabilities",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 0,
+        "description": "Capabilities information"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Describes the Resource type: Microsoft.RecoveryServices/Vaults"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CapabilitiesProperties",
+    "properties": {
+      "dnsZones": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DNSZone",
+    "properties": {
+      "subResource": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 0,
+        "description": "Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackup_secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSiteRecovery"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/164"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CapabilitiesResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "Capabilities properties in response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Describes the Resource type: Microsoft.RecoveryServices/Vaults"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CapabilitiesResponseProperties",
+    "properties": {
+      "dnsZones": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DNSZoneResponse",
+    "properties": {
+      "requiredZoneNames": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "The private link resource Private link DNS zone names."
+      },
+      "subResource": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackup_secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSiteRecovery"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/172"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capabilities",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/162"
+    }
   }
 ]

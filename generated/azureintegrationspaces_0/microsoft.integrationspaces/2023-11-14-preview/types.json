@@ -1170,14 +1170,14 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ListBusinessProcessDevelopmentArtifactsResponse",
+    "name": "GetOrDeleteBusinessProcessDevelopmentArtifactRequest",
     "properties": {
-      "value": {
+      "name": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The list of the business process development artifact."
+        "description": "The name of the business process development artifact."
       }
     }
   },
@@ -1429,6 +1429,31 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getBusinessProcessDevelopmentArtifact",
+    "resourceType": "Microsoft.IntegrationSpaces/spaces/applications",
+    "apiVersion": "2023-11-14-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListBusinessProcessDevelopmentArtifactsResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 1,
+        "description": "The list of the business process development artifact."
+      }
+    }
+  },
+  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/94"
@@ -1440,7 +1465,39 @@
     "resourceType": "Microsoft.IntegrationSpaces/spaces/applications",
     "apiVersion": "2023-11-14-preview",
     "output": {
-      "$ref": "#/93"
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveOrValidateBusinessProcessDevelopmentArtifactRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the business process development artifact."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "The properties of the business process development artifact."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "saveBusinessProcessDevelopmentArtifact",
+    "resourceType": "Microsoft.IntegrationSpaces/spaces/applications",
+    "apiVersion": "2023-11-14-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/112"
     }
   }
 ]

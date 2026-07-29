@@ -10,6 +10,17 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended): The deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportTemplate (Microsoft.Resources/deployments@2016-02-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2016-02-01
+* **Output**: [DeploymentExportResult](#deploymentexportresult)
+
+## Function validate (Microsoft.Resources/deployments@2016-02-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2016-02-01
+* **Input**: [Deployment](#deployment)
+* **Output**: [DeploymentValidateResult](#deploymentvalidateresult)
+
 ## AliasPathType
 ### Properties
 * **apiVersions**: string[]: The api versions.
@@ -37,6 +48,39 @@
 * **resourceName**: string: The dependency resource name.
 * **resourceType**: string: The dependency resource type.
 
+## Deployment
+### Properties
+* **properties**: [DeploymentProperties](#deploymentproperties): The deployment properties.
+
+## DeploymentExportResult
+### Properties
+* **template**: any: The template content.
+
+## DeploymentProperties
+### Properties
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
+* **mode**: 'Complete' | 'Incremental' (Required): The deployment mode.
+* **parameters**: any: Deployment parameters. It can be a JObject or a well formed JSON string. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): The parameters URI. Use only one of Parameters or ParametersLink.
+* **template**: any: The template content. It can be a JObject or a well formed JSON string. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): The template URI. Use only one of Template or TemplateLink.
+
+## DeploymentPropertiesExtended
+### Properties
+* **correlationId**: string: The correlation ID of the deployment.
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
+* **dependencies**: [Dependency](#dependency)[]: The list of deployment dependencies.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
+* **mode**: 'Complete' | 'Incremental': The deployment mode.
+* **outputs**: any: Key/value pairs that represent deployment output.
+* **parameters**: any: Deployment parameters. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): The URI referencing the parameters. Use only one of Parameters or ParametersLink.
+* **providers**: [Provider](#provider)[]: The list of resource providers needed for the deployment.
+* **provisioningState**: string: The state of the provisioning.
+* **template**: any: The template content. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): The URI referencing the template. Use only one of Template or TemplateLink.
+* **timestamp**: string: The timestamp of the template deployment.
+
 ## DeploymentPropertiesOrDeploymentPropertiesExtended
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
@@ -52,6 +96,11 @@
 * **template**: any: The template content. It can be a JObject or a well formed JSON string. Use only one of Template or TemplateLink.
 * **templateLink**: [TemplateLink](#templatelink): The template URI. Use only one of Template or TemplateLink.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
+
+## DeploymentValidateResult
+### Properties
+* **error**: [ResourceManagementErrorWithDetails](#resourcemanagementerrorwithdetails): Validation error.
+* **properties**: [DeploymentPropertiesExtended](#deploymentpropertiesextended): The template deployment properties.
 
 ## ErrorAdditionalInfo
 ### Properties
@@ -90,6 +139,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceManagementErrorWithDetails
+### Properties
+* **code**: string (Required): The error code returned from the server.
+* **details**: [ResourceManagementErrorWithDetails](#resourcemanagementerrorwithdetails)[]: Validation error.
+* **message**: string (Required): The error message returned from the server.
+* **target**: string: The target of the error.
 
 ## TemplateLink
 ### Properties

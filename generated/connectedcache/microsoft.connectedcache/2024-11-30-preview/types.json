@@ -2218,5 +2218,626 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeAutoUpdateHistory",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource auto update history properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeAutoUpdateHistoryProperties",
+    "properties": {
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc customer resource Id."
+      },
+      "cacheNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node resource Id."
+      },
+      "autoUpdateHistory": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Cache node resource auto update history information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeAutoUpdateHistory",
+    "resourceType": "Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeInstallDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource install script details."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CacheNodeInstallProperties",
+    "properties": {
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Mcc customer resource Id."
+      },
+      "cacheNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource Id."
+      },
+      "primaryAccountKey": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Mcc primary account key. Internal to Mcc."
+      },
+      "secondaryAccountKey": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Mcc secondary account key. Internal to Mcc."
+      },
+      "registrationKey": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Mcc Iot Central temporary device registration key, used once."
+      },
+      "tlsCertificateProvisioningKey": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Mcc Tls certificate provisioning key."
+      },
+      "driveConfiguration": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Cache node resource drive configurations."
+      },
+      "proxyUrlConfiguration": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "proxyUrl configuration of the cache node"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeInstallDetails",
+    "resourceType": "Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeIssueHistory",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource issue history properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeIssueHistoryProperties",
+    "properties": {
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc customer resource Id."
+      },
+      "cacheNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node resource Id."
+      },
+      "mccIssueHistory": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Cache node resource issue details history."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccIssue",
+    "properties": {
+      "mccIssueType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issue type."
+      },
+      "toastString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issues toastString."
+      },
+      "detailString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issue detail string."
+      },
+      "helpLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issue related help link."
+      },
+      "issueStartDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issue start date."
+      },
+      "issueEndDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node issue end date."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeMccIssueDetailsHistory",
+    "resourceType": "Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeTlsCertificateHistory",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource Tls certificate details."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeTlsCertificateProperties",
+    "properties": {
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc customer resource Id."
+      },
+      "cacheNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Mcc cache node resource Id."
+      },
+      "tlsCertificateHistory": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Cache node resource tls certificate history details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeTlsCertificateHistory",
+    "resourceType": "Microsoft.ConnectedCache/enterpriseMccCustomers/enterpriseMccCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MccCacheNodeBgpCidrDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "Mcc cache node resource Bgp Cidr properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BgpCidrsConfiguration",
+    "properties": {
+      "bgpCidrs": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 2,
+        "description": "Mcc cache node Bgp Cidr details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBgpCidrs",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeAutoUpdateHistory",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeInstallDetails",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCacheNodeMccIssueDetailsHistory",
+    "resourceType": "Microsoft.ConnectedCache/ispCustomers/ispCacheNodes",
+    "apiVersion": "2024-11-30-preview",
+    "output": {
+      "$ref": "#/109"
+    }
   }
 ]

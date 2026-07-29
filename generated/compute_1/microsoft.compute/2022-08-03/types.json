@@ -2848,5 +2848,79 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharingUpdate",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 1,
+        "description": "This property allows you to specify the operation type of gallery sharing update. Possible values are: **Add,** **Remove,** **Reset.**"
+      },
+      "groups": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "A list of sharing profile groups."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reset"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnableCommunity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/18"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "share",
+    "resourceType": "Microsoft.Compute/galleries",
+    "apiVersion": "2022-08-03",
+    "output": {
+      "$ref": "#/222"
+    },
+    "input": {
+      "$ref": "#/222"
+    }
   }
 ]

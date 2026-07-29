@@ -102,3 +102,5 @@ warning | Skipping DedicatedCloudNodes_CreateOrUpdate due to required header par
 warning | Skipping VirtualMachineTemplates_List due to required query parameter "resourcePoolName"
 warning | Skipping VirtualNetworks_List due to required query parameter "resourcePoolName"
 warning | Skipping VirtualMachines_CreateOrUpdate due to required header parameter "referer"
+warning | Skipping VirtualMachines_Start due to required header parameter "referer"
+warning | Skipping VirtualMachines_Stop due to required header parameter "referer"

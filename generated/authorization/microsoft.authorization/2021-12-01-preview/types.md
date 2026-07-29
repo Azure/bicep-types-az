@@ -92,6 +92,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateDownloadUri (Microsoft.Authorization/accessReviewHistoryDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewHistoryDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)
+
 ## AccessReviewActorIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The identity id

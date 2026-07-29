@@ -14,6 +14,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createNotifications (Microsoft.Insights/actionGroups@2024-10-01-preview)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [NotificationRequestBody](#notificationrequestbody)
+* **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
+
+## ActionDetail
+### Properties
+* **Detail**: string: The detail of the friendly error message
+* **MechanismType**: string: The mechanism type
+* **Name**: string: The name of the action
+* **SendTime**: string: The send time
+* **Status**: string: The status of the action
+* **SubState**: string: The substatus of the action
+
 ## ActionGroup
 ### Properties
 * **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
@@ -112,6 +127,11 @@
 * **emailAddress**: string (Required): The email address registered for the Azure mobile app.
 * **name**: string (Required): The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
 
+## MicrosoftCommonContext
+### Properties
+* **contextType**: string: The context id type
+* **notificationSource**: string: The source of the notification request
+
 ## MicrosoftCommonEmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
@@ -132,6 +152,22 @@
 * **name**: string (Required): The name of the voice receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the voice receiver.
 
+## NotificationRequestBody
+### Properties
+* **alertType**: string {maxLength: 30} (Required): The value of the supported alert type. Supported alert type values are: servicehealth, metricstaticthreshold, metricsdynamicthreshold, logalertv2, smartalert, webtestalert, logalertv1numresult, logalertv1metricmeasurement, resourcehealth, activitylog, actualcostbudget, forecastedbudget
+* **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+* **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]: The list of AutomationRunbook receivers that are part of this action group.
+* **azureAppPushReceivers**: [MicrosoftCommonAzureAppPushReceiver](#microsoftcommonazureapppushreceiver)[]: The list of AzureAppPush receivers that are part of this action group.
+* **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]: The list of azure function receivers that are part of this action group.
+* **emailReceivers**: [MicrosoftCommonEmailReceiver](#microsoftcommonemailreceiver)[]: The list of email receivers that are part of this action group.
+* **eventHubReceivers**: [EventHubReceiver](#eventhubreceiver)[]: The list of event hub receivers that are part of this action group.
+* **incidentReceivers**: [IncidentReceiver](#incidentreceiver)[]: The list of incident receivers that are part of this action group.
+* **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]: The list of ITSM receivers that are part of this action group.
+* **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]: The list of logic app receivers that are part of this action group.
+* **smsReceivers**: [MicrosoftCommonSmsReceiver](#microsoftcommonsmsreceiver)[]: The list of SMS receivers that are part of this action group.
+* **voiceReceivers**: [MicrosoftCommonVoiceReceiver](#microsoftcommonvoicereceiver)[]: The list of voice receivers that are part of this action group.
+* **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]: The list of webhook receivers that are part of this action group.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -140,6 +176,14 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TestNotificationDetailsResponse
+### Properties
+* **actionDetails**: [ActionDetail](#actiondetail)[]: The list of action detail
+* **completedTime**: string: The completed time
+* **context**: [MicrosoftCommonContext](#microsoftcommoncontext): The context info
+* **createdTime**: string: The created time
+* **state**: string (Required): The overall state
 
 ## TrackedResourceTags
 ### Properties

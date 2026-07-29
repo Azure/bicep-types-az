@@ -405,6 +405,125 @@
 * **ApiVersion**: 2023-03-15
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
 
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2023-03-15
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2023-03-15
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
+* **ApiVersion**: 2023-03-15
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
+* **ApiVersion**: 2023-03-15
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/tables@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables
+* **ApiVersion**: 2023-03-15
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2023-03-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
+* **ApiVersion**: 2023-03-15
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
 ## AccountKeyMetadata
 ### Properties
 * **generationTime**: string (ReadOnly): Generation time in UTC of the key in ISO-8601 format. If the value is missing from the object, it means that the last key regeneration was triggered before 2022-06-18.
@@ -441,6 +560,10 @@
 ## AutoUpgradePolicyResource
 ### Properties
 * **throughputPolicy**: [ThroughputPolicyResource](#throughputpolicyresource): Represents throughput policy which service must adhere to for auto-upgrade
+
+## BackupInformation
+### Properties
+* **continuousBackupInformation**: [ContinuousBackupInformation](#continuousbackupinformation) (ReadOnly): Information about the status of continuous backups.
 
 ## BackupPolicy
 * **Discriminator**: type
@@ -606,6 +729,14 @@
 * **systemKey**: bool (ReadOnly): Indicates if the container is using a system generated partition key
 * **version**: int {minValue: 1, maxValue: 2}: Indicates the version of the partition key definition
 
+## ContinuousBackupInformation
+### Properties
+* **latestRestorableTimestamp**: string: The latest restorable timestamp for a resource.
+
+## ContinuousBackupRestoreLocation
+### Properties
+* **location**: string: The name of the continuous backup restore location.
+
 ## CorsPolicy
 ### Properties
 * **allowedHeaders**: string: The request headers that the origin domain may specify on the CORS request.
@@ -727,6 +858,11 @@
 * **primaryMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-write key.
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
+
+## DatabaseAccountListReadOnlyKeysResult
+### Properties
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
 ## DatabaseRestoreResource
@@ -1243,10 +1379,38 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ThroughputPolicyResource
 ### Properties
 * **incrementPercent**: int: Represents the percentage by which throughput can increase every time throughput policy kicks in.
 * **isEnabled**: bool: Determines whether the ThroughputPolicy is active or not
+
+## ThroughputSettingsGetProperties
+### Properties
+* **resource**: [ThroughputSettingsGetPropertiesResource](#throughputsettingsgetpropertiesresource)
+
+## ThroughputSettingsGetPropertiesResource
+### Properties
+* **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
+* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
+* **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
+* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource): Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both.
+* **minimumThroughput**: string (ReadOnly): The minimum throughput of the resource
+* **offerReplacePending**: string (ReadOnly): The throughput replace is pending
+* **throughput**: int: Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both.
+
+## ThroughputSettingsGetResults
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [ThroughputSettingsGetProperties](#throughputsettingsgetproperties): The properties of an Azure Cosmos DB resource throughput
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
 
 ## ThroughputSettingsResourceOrThroughputSettingsGetPropertiesResource
 ### Properties

@@ -52,6 +52,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/provisioningServices/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2025-02-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: [VerificationCodeResponse](#verificationcoderesponse)
+
 ## Function listkeys (Microsoft.Devices/provisioningServices/keys@2025-02-01-preview)
 * **Resource**: Microsoft.Devices/provisioningServices/keys
 * **ApiVersion**: 2025-02-01-preview
@@ -62,6 +67,12 @@
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
 
+## Function verify (Microsoft.Devices/provisioningServices/certificates@2025-02-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [VerificationCodeRequest](#verificationcoderequest)
+* **Output**: [CertificateResponse](#certificateresponse)
+
 ## CertificateProperties
 ### Properties
 * **certificate**: any: base-64 representation of X509 certificate .cer file or just .pem file content.
@@ -71,6 +82,15 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## CertificateResponse
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CertificateProperties](#certificateproperties): properties of a certificate
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## DeviceRegistryNamespaceDescription
 ### Properties
@@ -188,4 +208,27 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## VerificationCodeRequest
+### Properties
+* **certificate**: string: base-64 representation of X509 certificate .cer file or just .pem file content.
+
+## VerificationCodeResponse
+### Properties
+* **etag**: string (ReadOnly): Request etag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): Name of certificate.
+* **properties**: [VerificationCodeResponseProperties](#verificationcoderesponseproperties)
+* **type**: string (ReadOnly): The resource type.
+
+## VerificationCodeResponseProperties
+### Properties
+* **certificate**: any: base-64 representation of X509 certificate .cer file or just .pem file content.
+* **created**: string: Certificate created time.
+* **expiry**: string: Code expiry.
+* **isVerified**: bool: Indicate if the certificate is verified by owner of private key.
+* **subject**: string: Certificate subject.
+* **thumbprint**: string: Certificate thumbprint.
+* **updated**: string: Certificate updated time.
+* **verificationCode**: string: Verification code.
 

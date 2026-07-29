@@ -1628,5 +1628,1177 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Deployment",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location to store the deployment data."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 1,
+        "description": "The deployment properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Deployment tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentProperties",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both."
+      },
+      "extensionConfigs": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 1,
+        "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
+      },
+      "debugSetting": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The debug setting of the deployment."
+      },
+      "onErrorDeployment": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The deployment on error behavior."
+      },
+      "expressionEvaluationOptions": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer."
+      },
+      "validationLevel": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The validation level of the deployment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentExtensionConfig",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesExtensionConfigs",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OnErrorDeployment",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
+      },
+      "deploymentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The deployment to be used on error case."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LastSuccessful"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpecificDeployment"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provider"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProviderNoRbac"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentValidateResult",
+    "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "The deployment validation error."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the deployment."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the deployment."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the deployment."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "The template deployment properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesExtended",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "Denotes the state of provisioning."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The correlation ID of the deployment."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The timestamp of the template deployment."
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The duration of the template deployment."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Key/value pairs that represent deployment output."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "The list of resource providers needed for the deployment."
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 2,
+        "description": "The list of deployment dependencies."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The URI referencing the template."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Deployment parameters."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The URI referencing the parameters."
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 2,
+        "description": "The extensions used in this deployment."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 2,
+        "description": "The deployment mode. Possible values are Incremental and Complete."
+      },
+      "debugSetting": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "The debug setting of the deployment."
+      },
+      "onErrorDeployment": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 2,
+        "description": "The deployment on error behavior."
+      },
+      "templateHash": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hash produced for the template."
+      },
+      "outputResources": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 2,
+        "description": "Array of provisioned resources."
+      },
+      "validatedResources": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 2,
+        "description": "Array of validated resources."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "The deployment error."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 2,
+        "description": "Contains diagnostic information collected during validation process."
+      },
+      "validationLevel": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "The validation level of the deployment"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OnErrorDeploymentExtended",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The state of the provisioning for the on error deployment."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
+      },
+      "deploymentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The deployment to be used on error case."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LastSuccessful"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpecificDeployment"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provider"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProviderNoRbac"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/140"
+    },
+    "input": {
+      "$ref": "#/123"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentExportResult",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The template content."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportTemplate",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopedDeploymentWhatIf",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location to store the deployment data."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 1,
+        "description": "The deployment properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentWhatIfProperties",
+    "properties": {
+      "whatIfSettings": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Optional What-If operation settings."
+      },
+      "template": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 0,
+        "description": "Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both."
+      },
+      "extensionConfigs": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0,
+        "description": "The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 1,
+        "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
+      },
+      "debugSetting": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The debug setting of the deployment."
+      },
+      "onErrorDeployment": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The deployment on error behavior."
+      },
+      "expressionEvaluationOptions": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer."
+      },
+      "validationLevel": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "The validation level of the deployment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentWhatIfSettings",
+    "properties": {
+      "resultFormat": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "The format of the What-If results"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceIdOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullResourcePayloads"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentExtensionConfig",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesExtensionConfigs",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provider"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProviderNoRbac"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WhatIfOperationResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the What-If operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "What-If operation properties."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Error when What-If operation fails."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WhatIfOperationProperties",
+    "properties": {
+      "changes": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 0,
+        "description": "List of resource changes predicted by What-If operation."
+      },
+      "potentialChanges": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 0,
+        "description": "List of resource changes predicted by What-If operation."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 2,
+        "description": "List of resource diagnostics detected by What-If operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WhatIfChange",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource ID"
+      },
+      "deploymentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the Deployment responsible for this change."
+      },
+      "symbolicName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The symbolic name of the resource responsible for this change."
+      },
+      "identifiers": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "A subset of properties that uniquely identify a Bicep extensible resource because it lacks a resource id like an Azure resource has."
+      },
+      "changeType": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 1,
+        "description": "Type of change that will be made to the resource when the deployment is executed."
+      },
+      "unsupportedReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The explanation about why the resource is unsupported by What-If."
+      },
+      "before": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The snapshot of the resource before the deployment is executed."
+      },
+      "after": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The predicted snapshot of the resource after the deployment is executed."
+      },
+      "delta": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0,
+        "description": "The predicted changes to resource properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ignore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoChange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Modify"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unsupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WhatIfPropertyChange",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The path of the property."
+      },
+      "propertyChangeType": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 1,
+        "description": "The type of property change."
+      },
+      "before": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The value of the property before the deployment is executed."
+      },
+      "after": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The value of the property after the deployment is executed."
+      },
+      "children": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Nested property changes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Modify"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Array"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoEffect"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/193"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/193"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "whatIf",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/191"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
   }
 ]

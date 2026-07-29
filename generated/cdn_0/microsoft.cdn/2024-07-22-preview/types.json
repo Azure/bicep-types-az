@@ -744,5 +744,89 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EdgeActionAttachmentResponse",
+    "properties": {
+      "edgeActionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Non changing guid to identify edge action"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addAttachment",
+    "resourceType": "Microsoft.Cdn/edgeActions",
+    "apiVersion": "2024-07-22-preview",
+    "output": {
+      "$ref": "#/62"
+    },
+    "input": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteAttachment",
+    "resourceType": "Microsoft.Cdn/edgeActions",
+    "apiVersion": "2024-07-22-preview",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VersionCode",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The version code deployment content"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The version code name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deployVersionCode",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2024-07-22-preview",
+    "output": {
+      "$ref": "#/43"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVersionCode",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2024-07-22-preview",
+    "output": {
+      "$ref": "#/66"
+    },
+    "input": {
+      "$ref": "#/64"
+    }
   }
 ]

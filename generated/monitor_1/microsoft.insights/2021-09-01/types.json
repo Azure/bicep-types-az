@@ -1549,5 +1549,305 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotificationRequestBody",
+    "properties": {
+      "alertType": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "The value of the supported alert type. Supported alert type values are: servicehealth, metricstaticthreshold, metricsdynamicthreshold, logalertv2, smartalert, webtestalert, logalertv1numresult, logalertv1metricmeasurement, resourcehealth, activitylog, actualcostbudget, forecastedbudget"
+      },
+      "emailReceivers": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "The list of email receivers that are part of this action group."
+      },
+      "smsReceivers": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The list of SMS receivers that are part of this action group."
+      },
+      "webhookReceivers": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "The list of webhook receivers that are part of this action group."
+      },
+      "itsmReceivers": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The list of ITSM receivers that are part of this action group."
+      },
+      "azureAppPushReceivers": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "The list of AzureAppPush receivers that are part of this action group."
+      },
+      "automationRunbookReceivers": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "The list of AutomationRunbook receivers that are part of this action group."
+      },
+      "voiceReceivers": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "The list of voice receivers that are part of this action group."
+      },
+      "logicAppReceivers": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "The list of logic app receivers that are part of this action group."
+      },
+      "azureFunctionReceivers": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "The list of azure function receivers that are part of this action group."
+      },
+      "armRoleReceivers": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported."
+      },
+      "eventHubReceivers": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The list of event hub receivers that are part of this action group."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 30
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestNotificationDetailsResponse",
+    "properties": {
+      "context": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "The context info"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The overall state"
+      },
+      "completedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The completed time"
+      },
+      "createdTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The created time"
+      },
+      "actionDetails": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The list of action detail"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Context",
+    "properties": {
+      "notificationSource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source of the notification request"
+      },
+      "contextType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The context id type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionDetail",
+    "properties": {
+      "MechanismType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The mechanism type"
+      },
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the action"
+      },
+      "Status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the action"
+      },
+      "SubState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The substatus of the action"
+      },
+      "SendTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The send time"
+      },
+      "Detail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detail of the friendly error message"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createNotifications",
+    "resourceType": "Microsoft.Insights/actionGroups",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/119"
+    },
+    "input": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableRequest",
+    "properties": {
+      "receiverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the receiver to resubscribe."
+      }
+    }
   }
 ]

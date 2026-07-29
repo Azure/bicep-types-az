@@ -57,6 +57,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DatabaseFleetManager/fleets/tiers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disable (Microsoft.DatabaseFleetManager/fleets/tiers@2025-02-01-preview)
+* **Resource**: Microsoft.DatabaseFleetManager/fleets/tiers
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: [FleetTier](#fleettier)
+
 ## DatabaseIdentity
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Client Id of the database identity.
@@ -103,6 +108,14 @@
 * **capacityMax**: int: Maximum number of vCores database fleet manager is allowed to provision in the fleetspace.
 * **mainPrincipal**: [MainPrincipal](#mainprincipal): Main Microsoft Entra ID principal that has admin access to all databases in the fleetspace.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Fleetspace state.
+
+## FleetTier
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [FleetTierProperties](#fleettierproperties): A Fleet tier properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## FleetTierProperties
 ### Properties

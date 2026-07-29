@@ -13,16 +13,36 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getKeys (Microsoft.FluidRelay/fluidRelayServers@2021-03-12-preview)
+* **Resource**: Microsoft.FluidRelay/fluidRelayServers
+* **ApiVersion**: 2021-03-12-preview
+* **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
+
+## Function regenerateKey (Microsoft.FluidRelay/fluidRelayServers@2021-03-12-preview)
+* **Resource**: Microsoft.FluidRelay/fluidRelayServers
+* **ApiVersion**: 2021-03-12-preview
+* **Input**: [RegenerateKeyRequest](#regeneratekeyrequest)
+* **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
+
 ## FluidRelayEndpoints
 ### Properties
 * **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
 * **storageEndpoints**: string[] (ReadOnly): The Fluid Relay storage endpoints.
+
+## FluidRelayServerKeys
+### Properties
+* **key1**: string (ReadOnly): The primary key for this server
+* **key2**: string (ReadOnly): The secondary key for this server
 
 ## FluidRelayServerProperties
 ### Properties
 * **fluidRelayEndpoints**: [FluidRelayEndpoints](#fluidrelayendpoints) (ReadOnly): The Fluid Relay Service endpoints for this server.
 * **frsTenantId**: string (ReadOnly): The Fluid tenantId for this server
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string: Provision states for FluidRelay RP
+
+## RegenerateKeyRequest
+### Properties
+* **keyName**: 'key1' | 'key2' (Required): The key to regenerate.
 
 ## SystemData
 ### Properties

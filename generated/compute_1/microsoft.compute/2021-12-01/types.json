@@ -2282,5 +2282,116 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrantAccessData",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 1
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Time duration in seconds until the SAS access expires."
+      },
+      "getSecureVMGuestStateSAS": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Set this flag to true to get additional SAS for VM guest state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Write"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUri",
+    "properties": {
+      "accessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a disk."
+      },
+      "securityDataAccessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a VM guest state."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/165"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/165"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/165"
+    }
   }
 ]

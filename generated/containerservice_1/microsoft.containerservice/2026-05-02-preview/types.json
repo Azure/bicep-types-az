@@ -13624,32 +13624,151 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RunCommandRequest",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The command to run."
+      },
+      "context": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A base64 encoded zip file containing the files required by the command."
+      },
+      "clusterToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "AuthToken issued for AKS AAD Server App."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The command id."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1018"
+        },
+        "flags": 0,
+        "description": "Properties of command result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommandResultProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "provisioning State"
+      },
+      "exitCode": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The exit code of the command"
+      },
+      "startedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the command started."
+      },
+      "finishedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the command finished."
+      },
+      "logs": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The command output."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "An explanation of why provisioningState is set to failed (if so)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1017"
+    },
+    "input": {
+      "$ref": "#/1016"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolvePrivateLinkServiceId",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/352"
+    },
+    "input": {
+      "$ref": "#/352"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PoolBootstrapData",
     "properties": {
       "azure": {
         "type": {
-          "$ref": "#/1017"
+          "$ref": "#/1022"
         },
         "flags": 2,
         "description": "Azure environment and cluster identity information."
       },
       "components": {
         "type": {
-          "$ref": "#/1020"
+          "$ref": "#/1025"
         },
         "flags": 2,
         "description": "Component versions for the node runtime."
       },
       "networking": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1026"
         },
         "flags": 2,
         "description": "Network configuration for the node."
       },
       "node": {
         "type": {
-          "$ref": "#/1022"
+          "$ref": "#/1027"
         },
         "flags": 2,
         "description": "Node-level configuration for kubelet, labels, and taints."
@@ -13669,7 +13788,7 @@
       },
       "targetCluster": {
         "type": {
-          "$ref": "#/1018"
+          "$ref": "#/1023"
         },
         "flags": 2,
         "description": "Target cluster identity."
@@ -13683,7 +13802,7 @@
       },
       "bootstrapToken": {
         "type": {
-          "$ref": "#/1019"
+          "$ref": "#/1024"
         },
         "flags": 2,
         "description": "Bootstrap token for node enrollment. Do not cache or log."
@@ -13776,21 +13895,21 @@
       },
       "labels": {
         "type": {
-          "$ref": "#/1023"
+          "$ref": "#/1028"
         },
         "flags": 2,
         "description": "Node labels to apply during registration."
       },
       "taints": {
         "type": {
-          "$ref": "#/1024"
+          "$ref": "#/1029"
         },
         "flags": 2,
         "description": "Node taints in the format 'key=value:effect'."
       },
       "kubelet": {
         "type": {
-          "$ref": "#/1025"
+          "$ref": "#/1030"
         },
         "flags": 2,
         "description": "Kubelet configuration."
@@ -13837,7 +13956,7 @@
     "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/1016"
+      "$ref": "#/1021"
     },
     "input": {
       "$ref": "#/155"

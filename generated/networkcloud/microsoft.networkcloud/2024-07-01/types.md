@@ -263,6 +263,124 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function continueUpdateVersion (Microsoft.NetworkCloud/clusters@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/clusters
+* **ApiVersion**: 2024-07-01
+* **Input**: [ClusterContinueUpdateVersionParameters](#clustercontinueupdateversionparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function cordon (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachineCordonParameters](#baremetalmachinecordonparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function deploy (Microsoft.NetworkCloud/clusters@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/clusters
+* **ApiVersion**: 2024-07-01
+* **Input**: [ClusterDeployParameters](#clusterdeployparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function disableRemoteVendorManagement (Microsoft.NetworkCloud/storageAppliances@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/storageAppliances
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function enableRemoteVendorManagement (Microsoft.NetworkCloud/storageAppliances@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/storageAppliances
+* **ApiVersion**: 2024-07-01
+* **Input**: [StorageApplianceEnableRemoteVendorManagementParameters](#storageapplianceenableremotevendormanagementparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function powerOff (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachinePowerOffParameters](#baremetalmachinepoweroffparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function powerOff (Microsoft.NetworkCloud/virtualMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/virtualMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [VirtualMachinePowerOffParameters](#virtualmachinepoweroffparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function reimage (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function reimage (Microsoft.NetworkCloud/virtualMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/virtualMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function replace (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachineReplaceParameters](#baremetalmachinereplaceparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function restart (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function restart (Microsoft.NetworkCloud/virtualMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/virtualMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function restartNode (Microsoft.NetworkCloud/kubernetesClusters@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/kubernetesClusters
+* **ApiVersion**: 2024-07-01
+* **Input**: [KubernetesClusterRestartNodeParameters](#kubernetesclusterrestartnodeparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function runCommand (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachineRunCommandParameters](#baremetalmachineruncommandparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function runDataExtracts (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachineRunDataExtractsParameters](#baremetalmachinerundataextractsparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function runReadCommands (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Input**: [BareMetalMachineRunReadCommandsParameters](#baremetalmachinerunreadcommandsparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function scanRuntime (Microsoft.NetworkCloud/clusters@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/clusters
+* **ApiVersion**: 2024-07-01
+* **Input**: [ClusterScanRuntimeParameters](#clusterscanruntimeparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function start (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function start (Microsoft.NetworkCloud/virtualMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/virtualMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function uncordon (Microsoft.NetworkCloud/bareMetalMachines@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/bareMetalMachines
+* **ApiVersion**: 2024-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function updateVersion (Microsoft.NetworkCloud/clusters@2024-07-01)
+* **Resource**: Microsoft.NetworkCloud/clusters
+* **ApiVersion**: 2024-07-01
+* **Input**: [ClusterUpdateVersionParameters](#clusterupdateversionparameters)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
 ## AadConfiguration
 ### Properties
 * **adminGroupObjectIds**: string[] {minLength: 1} (Required): The list of Azure Active Directory group object IDs that will have an administrative role on the Kubernetes cluster.
@@ -316,6 +434,11 @@
 * **availabilityLifecycle**: 'GenerallyAvailable' | 'Preview' | string (ReadOnly): The version lifecycle indicator.
 * **version**: string (ReadOnly): The version available for upgrading.
 
+## BareMetalMachineCommandSpecification
+### Properties
+* **arguments**: string[]: The list of string arguments that will be passed to the script in order as separate arguments.
+* **command**: string (Required): The command to execute against the bare metal machine.
+
 ## BareMetalMachineConfigurationData
 ### Properties
 * **bmcConnectionString**: string (ReadOnly): The connection string for the baseboard management controller including IP address and protocol.
@@ -327,6 +450,10 @@
 If not provided, the machine name will be generated programmatically.
 * **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot the physical machine is in the rack based on the BOM configuration.
 * **serialNumber**: string {maxLength: 64} (Required): The serial number of the machine. Hardware suppliers may use an alternate value. For example, service tag.
+
+## BareMetalMachineCordonParameters
+### Properties
+* **evacuate**: 'False' | 'True' | string: The indicator of whether to evacuate the node workload when the bare metal machine is cordoned.
 
 ## BareMetalMachineKeySetProperties
 ### Properties
@@ -341,6 +468,10 @@ If not provided, the machine name will be generated programmatically.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the bare metal machine key set.
 * **userList**: [KeySetUser](#keysetuser)[] (Required): The unique list of permitted users.
 * **userListStatus**: [KeySetUserStatus](#keysetuserstatus)[] (ReadOnly): The status evaluation of each user.
+
+## BareMetalMachinePowerOffParameters
+### Properties
+* **skipShutdown**: 'False' | 'True' | string: The indicator of whether to skip the graceful OS shutdown and power off the bare metal machine immediately.
 
 ## BareMetalMachineProperties
 ### Properties
@@ -376,6 +507,33 @@ If not provided, the machine name will be generated programmatically.
 * **serialNumber**: string {minLength: 1, maxLength: 64} (Required): The serial number of the bare metal machine.
 * **serviceTag**: string (ReadOnly): The discovered value of the machine's service tag.
 * **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of the resource IDs for the VirtualMachines that are hosted on this bare metal machine.
+
+## BareMetalMachineReplaceParameters
+### Properties
+* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials): The credentials of the baseboard management controller on this bare metal machine.
+* **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"}: The MAC address of the BMC device.
+* **bootMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"}: The MAC address of a NIC connected to the PXE network.
+* **machineName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"}: The OS-level hostname assigned to this machine.
+* **serialNumber**: string {minLength: 1, maxLength: 64}: The serial number of the bare metal machine.
+
+## BareMetalMachineRunCommandParameters
+### Properties
+* **arguments**: string[]: The list of string arguments that will be passed to the script in order as separate arguments.
+* **limitTimeSeconds**: int {minValue: 60, maxValue: 14400} (Required): The maximum time the script is allowed to run.
+If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252).
+* **script**: string (Required): The base64 encoded script to execute on the bare metal machine.
+
+## BareMetalMachineRunDataExtractsParameters
+### Properties
+* **commands**: [BareMetalMachineCommandSpecification](#baremetalmachinecommandspecification)[] {minLength: 1} (Required): The list of curated data extraction commands to be executed directly against the target machine.
+* **limitTimeSeconds**: int {minValue: 60, maxValue: 14400} (Required): The maximum time the commands are allowed to run.
+If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252).
+
+## BareMetalMachineRunReadCommandsParameters
+### Properties
+* **commands**: [BareMetalMachineCommandSpecification](#baremetalmachinecommandspecification)[] {minLength: 1} (Required): The list of read-only commands to be executed directly against the target machine.
+* **limitTimeSeconds**: int {minValue: 60, maxValue: 14400} (Required): The maximum time the commands are allowed to run.
+If the execution time exceeds the maximum, the script will be stopped, any output produced until then will be captured, and the exit code matching a timeout will be returned (252).
 
 ## BgpAdvertisement
 ### Properties
@@ -442,6 +600,14 @@ If not provided, the machine name will be generated programmatically.
 * **totalHostStorageGB**: int: The total machine or host-based storage in GB supported by this cluster for workload use. Measured in gibibytes.
 * **totalMemoryGB**: int: The total memory supported by this cluster for workload use. Measured in gibibytes.
 
+## ClusterContinueUpdateVersionParameters
+### Properties
+* **machineGroupTargetingMode**: 'AlphaByRack' | string: The mode by which the cluster will target the next grouping of servers to continue the update.
+
+## ClusterDeployParameters
+### Properties
+* **skipValidationsForMachines**: string[]: The names of bare metal machines in the cluster that should be skipped during environment validation.
+
 ## ClusterManagerProperties
 ### Properties
 * **analyticsWorkspaceId**: string: The resource ID of the Log Analytics workspace that is used for the logs collection.
@@ -495,6 +661,10 @@ cluster, or an empty list in a single-rack cluster.
 * **updateStrategy**: [ClusterUpdateStrategy](#clusterupdatestrategy): The strategy for updating the cluster.
 * **workloadResourceIds**: string[] (ReadOnly): The list of workload resource IDs that are hosted within this cluster.
 
+## ClusterScanRuntimeParameters
+### Properties
+* **scanActivity**: 'Scan' | 'Skip' | string: The choice of if the scan operation should run the scan.
+
 ## ClusterSecretArchive
 ### Properties
 * **keyVaultId**: string (Required): The resource ID of the key vault to archive the secrets of the cluster.
@@ -508,6 +678,10 @@ Limited by the maximum number of machines in the increment. Defaults to the whol
 * **thresholdType**: 'CountSuccess' | 'PercentSuccess' | string (Required): Selection of how the threshold should be evaluated.
 * **thresholdValue**: int {minValue: 0} (Required): The numeric threshold value.
 * **waitTimeMinutes**: int {minValue: 0, maxValue: 60}: The time to wait between the increments of update defined by the strategy.
+
+## ClusterUpdateVersionParameters
+### Properties
+* **targetClusterVersion**: string (Required): The version to be applied to the cluster during update.
 
 ## CommandOutputSettings
 ### Properties
@@ -541,6 +715,19 @@ Limited by the maximum number of machines in the increment. Defaults to the whol
 ### Properties
 * **domainName**: string (Required): The domain name of the dependency.
 * **port**: int {minValue: 1, maxValue: 65535}: The port of this endpoint.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ExtendedLocation
 ### Properties
@@ -667,6 +854,10 @@ Limited by the maximum number of machines in the increment. Defaults to the whol
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration) (Required): The configuration of the Kubernetes cluster networking, including the attachment of networks that span the cluster.
 * **nodes**: [KubernetesClusterNode](#kubernetesclusternode)[] (ReadOnly): The details of the nodes in this cluster.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the Kubernetes cluster resource.
+
+## KubernetesClusterRestartNodeParameters
+### Properties
+* **nodeName**: string (Required): The name of the node to restart.
 
 ## KubernetesLabel
 ### Properties
@@ -823,6 +1014,26 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **macAddress**: string (ReadOnly): The MAC address associated with this NIC.
 * **name**: string (ReadOnly): The name of the NIC/interface.
 
+## OperationStatusResult
+### Properties
+* **endTime**: string (ReadOnly): The end time of the operation.
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): If present, details of the operation error.
+* **id**: string (ReadOnly): Fully qualified ID for the async operation.
+* **name**: string (ReadOnly): Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[] (ReadOnly): The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100} (ReadOnly): Percent of the operation that is complete.
+* **properties**: [OperationStatusResultProperties](#operationstatusresultproperties): The additional properties of the operation status result.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string (ReadOnly): The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## OperationStatusResultProperties
+### Properties
+* **exitCode**: string (ReadOnly): For actions that run commands or scripts, the exit code of the script execution.
+* **outputHead**: string (ReadOnly): For actions that run commands or scripts, the leading bytes of the output of the script execution.
+* **resultRef**: string (ReadOnly): For actions that run commands or scripts, a reference to the location of the result.
+* **resultUrl**: string (ReadOnly): For actions that run commands or scripts, the URL where the full output of the script output can be retrieved.
+
 ## OsDisk
 ### Properties
 * **createOption**: 'Ephemeral' | string: The strategy for creating the OS disk.
@@ -917,6 +1128,10 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot that storage appliance is in the rack based on the BOM configuration.
 * **serialNumber**: string (Required): The serial number of the appliance.
 * **storageApplianceName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"}: The user-provided name for the storage appliance that will be created from this specification.
+
+## StorageApplianceEnableRemoteVendorManagementParameters
+### Properties
+* **supportEndpoints**: string[]: Field Deprecated. This field is not used and will be rejected if provided. The list of IPv4 subnets (in CIDR format), IPv6 subnets (in CIDR format), or hostnames that the storage appliance needs accessible in order to turn on the remote vendor management.
 
 ## StorageApplianceProperties
 ### Properties
@@ -1099,6 +1314,10 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **resourceId**: string (Required): The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
 * **schedulingExecution**: 'Hard' | 'Soft' | string (Required): The indicator of whether the hint is a hard or soft requirement during scheduling.
 * **scope**: 'Machine' | 'Rack' | string (Required): The scope for the virtual machine affinity or anti-affinity placement hint. It should always be "Machine" in the case of node affinity.
+
+## VirtualMachinePowerOffParameters
+### Properties
+* **skipShutdown**: 'False' | 'True' | string: The indicator of whether to skip the graceful OS shutdown and power off the virtual machine immediately.
 
 ## VirtualMachineProperties
 ### Properties

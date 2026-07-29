@@ -1343,5 +1343,24 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteResourcesDetails",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "List of resource IDs to delete."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
   }
 ]

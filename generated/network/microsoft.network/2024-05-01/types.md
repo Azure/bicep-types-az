@@ -1475,6 +1475,215 @@
 * **properties**: [VpnSiteLinkProperties](#vpnsitelinkproperties) (ReadOnly): Properties of the VPN site link.
 * **type**: 'Microsoft.Network/vpnSites/vpnSiteLinks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function advertisedRoutes (Microsoft.Network/virtualHubs/bgpConnections@2024-05-01)
+* **Resource**: Microsoft.Network/virtualHubs/bgpConnections
+* **ApiVersion**: 2024-05-01
+* **Output**: [PeerRouteList](#peerroutelist)
+
+## Function availableProvidersList (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [AvailableProvidersListParameters](#availableproviderslistparameters)
+* **Output**: [AvailableProvidersList](#availableproviderslist)
+
+## Function azureReachabilityReport (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [AzureReachabilityReportParameters](#azurereachabilityreportparameters)
+* **Output**: [AzureReachabilityReport](#azurereachabilityreport)
+
+## Function backendhealth (Microsoft.Network/applicationGateways@2024-05-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [ApplicationGatewayBackendHealth](#applicationgatewaybackendhealth)
+
+## Function checkPrivateLinkServiceVisibility (Microsoft.Network/locations@2024-05-01)
+* **Resource**: Microsoft.Network/locations
+* **ApiVersion**: 2024-05-01
+* **Input**: [CheckPrivateLinkServiceVisibilityRequest](#checkprivatelinkservicevisibilityrequest)
+* **Output**: [PrivateLinkServiceVisibility](#privatelinkservicevisibility)
+
+## Function commit (Microsoft.Network/networkManagers@2024-05-01)
+* **Resource**: Microsoft.Network/networkManagers
+* **ApiVersion**: 2024-05-01
+* **Input**: [NetworkManagerCommit](#networkmanagercommit)
+* **Output**: [NetworkManagerCommit](#networkmanagercommit)
+
+## Function configureFlowLog (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [FlowLogInformation](#flowloginformation)
+* **Output**: [FlowLogInformation](#flowloginformation)
+
+## Function connectivityCheck (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [ConnectivityParameters](#connectivityparameters)
+* **Output**: [ConnectivityInformation](#connectivityinformation)
+
+## Function createShareableLinks (Microsoft.Network/bastionHosts@2024-05-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-05-01
+* **Input**: [BastionShareableLinkListRequest](#bastionshareablelinklistrequest)
+* **Output**: [BastionShareableLinkListResult](#bastionshareablelinklistresult)
+
+## Function ddosProtectionStatus (Microsoft.Network/virtualNetworks@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworks
+* **ApiVersion**: 2024-05-01
+* **Output**: [VirtualNetworkDdosProtectionStatusResult](#virtualnetworkddosprotectionstatusresult)
+
+## Function ddosProtectionStatus (Microsoft.Network/publicIPAddresses@2024-05-01)
+* **Resource**: Microsoft.Network/publicIPAddresses
+* **ApiVersion**: 2024-05-01
+* **Output**: [PublicIpDdosProtectionStatusResult](#publicipddosprotectionstatusresult)
+
+## Function disconnectActiveSessions (Microsoft.Network/bastionHosts@2024-05-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-05-01
+* **Input**: [SessionIds](#sessionids)
+* **Output**: [BastionSessionDeleteResult](#bastionsessiondeleteresult)
+
+## Function effectiveNetworkSecurityGroups (Microsoft.Network/networkInterfaces@2024-05-01)
+* **Resource**: Microsoft.Network/networkInterfaces
+* **ApiVersion**: 2024-05-01
+* **Output**: [EffectiveNetworkSecurityGroupListResult](#effectivenetworksecuritygrouplistresult)
+
+## Function effectiveRoutes (Microsoft.Network/virtualHubs@2024-05-01)
+* **Resource**: Microsoft.Network/virtualHubs
+* **ApiVersion**: 2024-05-01
+* **Input**: [EffectiveRoutesParameters](#effectiveroutesparameters)
+* **Output**: [VirtualHubEffectiveRouteList](#virtualhubeffectiveroutelist)
+
+## Function effectiveRouteTable (Microsoft.Network/networkInterfaces@2024-05-01)
+* **Resource**: Microsoft.Network/networkInterfaces
+* **ApiVersion**: 2024-05-01
+* **Output**: [EffectiveRouteListResult](#effectiveroutelistresult)
+
+## Function generateLoa (Microsoft.Network/expressRoutePorts@2024-05-01)
+* **Resource**: Microsoft.Network/expressRoutePorts
+* **ApiVersion**: 2024-05-01
+* **Input**: [GenerateExpressRoutePortsLOARequest](#generateexpressrouteportsloarequest)
+* **Output**: [GenerateExpressRoutePortsLOAResult](#generateexpressrouteportsloaresult)
+
+## Function generatevpnclientpackage (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnClientParameters](#vpnclientparameters)
+* **Output**: string
+
+## Function GenerateVpnProfile (Microsoft.Network/virtualWans@2024-05-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2024-05-01
+* **Input**: [VirtualWanVpnProfileParameters](#virtualwanvpnprofileparameters)
+* **Output**: [VpnProfileResponse](#vpnprofileresponse)
+
+## Function generatevpnprofile (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnClientParameters](#vpnclientparameters)
+* **Output**: string
+
+## Function generatevpnprofile (Microsoft.Network/p2svpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [P2SVpnProfileParameters](#p2svpnprofileparameters)
+* **Output**: [VpnProfileResponse](#vpnprofileresponse)
+
+## Function getActiveSessions (Microsoft.Network/bastionHosts@2024-05-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-05-01
+* **Output**: [BastionActiveSessionListResult](#bastionactivesessionlistresult)
+
+## Function getBackendHealthOnDemand (Microsoft.Network/applicationGateways@2024-05-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [ApplicationGatewayOnDemandProbe](#applicationgatewayondemandprobe)
+* **Output**: [ApplicationGatewayBackendHealthOnDemand](#applicationgatewaybackendhealthondemand)
+
+## Function getBgpPeerStatus (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [BgpPeerStatusListResult](#bgppeerstatuslistresult)
+
+## Function getikesas (Microsoft.Network/connections@2024-05-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2024-05-01
+* **Output**: string
+
+## Function getikesas (Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections
+* **ApiVersion**: 2024-05-01
+* **Output**: string
+
+## Function getLearnedRoutes (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [GatewayRouteListResult](#gatewayroutelistresult)
+
+## Function getP2sVpnConnectionHealth (Microsoft.Network/p2svpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [P2SVpnGateway](#p2svpngateway)
+
+## Function getP2sVpnConnectionHealthDetailed (Microsoft.Network/p2svpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [P2SVpnConnectionHealthRequest](#p2svpnconnectionhealthrequest)
+* **Output**: [P2SVpnConnectionHealth](#p2svpnconnectionhealth)
+
+## Function getPoolUsage (Microsoft.Network/networkManagers/ipamPools@2024-05-01)
+* **Resource**: Microsoft.Network/networkManagers/ipamPools
+* **ApiVersion**: 2024-05-01
+* **Output**: [PoolUsage](#poolusage)
+
+## Function getShareableLinks (Microsoft.Network/bastionHosts@2024-05-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-05-01
+* **Input**: [BastionShareableLinkListRequest](#bastionshareablelinklistrequest)
+* **Output**: [BastionShareableLinkListResult](#bastionshareablelinklistresult)
+
+## Function getVpnClientConnectionHealth (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [VpnClientConnectionHealthDetailListResult](#vpnclientconnectionhealthdetaillistresult)
+
+## Function getvpnclientipsecparameters (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+
+## Function getvpnprofilepackageurl (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: string
+
+## Function health (Microsoft.Network/loadBalancers/loadBalancingRules@2024-05-01)
+* **Resource**: Microsoft.Network/loadBalancers/loadBalancingRules
+* **ApiVersion**: 2024-05-01
+* **Output**: [LoadBalancerHealthPerRule](#loadbalancerhealthperrule)
+
+## Function inboundRoutes (Microsoft.Network/virtualHubs@2024-05-01)
+* **Resource**: Microsoft.Network/virtualHubs
+* **ApiVersion**: 2024-05-01
+* **Input**: [GetInboundRoutesParameters](#getinboundroutesparameters)
+* **Output**: [EffectiveRouteMapRouteList](#effectiveroutemaproutelist)
+
+## Function ipFlowVerify (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [VerificationIPFlowParameters](#verificationipflowparameters)
+* **Output**: [VerificationIPFlowResult](#verificationipflowresult)
+
+## Function learnedIPPrefixes (Microsoft.Network/azureFirewalls@2024-05-01)
+* **Resource**: Microsoft.Network/azureFirewalls
+* **ApiVersion**: 2024-05-01
+* **Output**: [IPPrefixesList](#ipprefixeslist)
+
+## Function learnedRoutes (Microsoft.Network/virtualHubs/bgpConnections@2024-05-01)
+* **Resource**: Microsoft.Network/virtualHubs/bgpConnections
+* **ApiVersion**: 2024-05-01
+* **Output**: [PeerRouteList](#peerroutelist)
+
 ## Function listActiveConnectivityConfigurations (Microsoft.Network/networkManagers@2024-05-01)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2024-05-01
@@ -1526,6 +1735,173 @@
 * **Resource**: Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections/sharedKeys
 * **ApiVersion**: 2024-05-01
 * **Output**: [ConnectionSharedKeyResult](#connectionsharedkeyresult)
+
+## Function migrateToIpBased (Microsoft.Network/loadBalancers@2024-05-01)
+* **Resource**: Microsoft.Network/loadBalancers
+* **ApiVersion**: 2024-05-01
+* **Input**: [MigrateLoadBalancerToIpBasedRequest](#migrateloadbalancertoipbasedrequest)
+* **Output**: [MigratedPools](#migratedpools)
+
+## Function networkConfigurationDiagnostic (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [NetworkConfigurationDiagnosticParameters](#networkconfigurationdiagnosticparameters)
+* **Output**: [NetworkConfigurationDiagnosticResponse](#networkconfigurationdiagnosticresponse)
+
+## Function nextHop (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [NextHopParameters](#nexthopparameters)
+* **Output**: [NextHopResult](#nexthopresult)
+
+## Function outboundRoutes (Microsoft.Network/virtualHubs@2024-05-01)
+* **Resource**: Microsoft.Network/virtualHubs
+* **ApiVersion**: 2024-05-01
+* **Input**: [GetOutboundRoutesParameters](#getoutboundroutesparameters)
+* **Output**: [EffectiveRouteMapRouteList](#effectiveroutemaproutelist)
+
+## Function query (Microsoft.Network/networkWatchers/connectionMonitors@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2024-05-01
+* **Output**: [ConnectionMonitorQueryResult](#connectionmonitorqueryresult)
+
+## Function queryFlowLogStatus (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [FlowLogStatusParameters](#flowlogstatusparameters)
+* **Output**: [FlowLogInformation](#flowloginformation)
+
+## Function queryInboundNatRulePortMapping (Microsoft.Network/loadBalancers/backendAddressPools@2024-05-01)
+* **Resource**: Microsoft.Network/loadBalancers/backendAddressPools
+* **ApiVersion**: 2024-05-01
+* **Input**: [QueryInboundNatRulePortMappingRequest](#queryinboundnatruleportmappingrequest)
+* **Output**: [BackendAddressInboundNatRulePortMappings](#backendaddressinboundnatruleportmappings)
+
+## Function queryStatus (Microsoft.Network/networkWatchers/packetCaptures@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2024-05-01
+* **Output**: [PacketCaptureQueryStatusResult](#packetcapturequerystatusresult)
+
+## Function queryTroubleshootResult (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [QueryTroubleshootingParameters](#querytroubleshootingparameters)
+* **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function reset (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
+
+## Function reset (Microsoft.Network/vpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [VpnGateway](#vpngateway)
+
+## Function reset (Microsoft.Network/p2svpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: [P2SVpnGateway](#p2svpngateway)
+
+## Function restart (Microsoft.Network/networkVirtualAppliances@2024-05-01)
+* **Resource**: Microsoft.Network/networkVirtualAppliances
+* **ApiVersion**: 2024-05-01
+* **Input**: [NetworkVirtualApplianceInstanceIds](#networkvirtualapplianceinstanceids)
+* **Output**: [NetworkVirtualApplianceInstanceIds](#networkvirtualapplianceinstanceids)
+
+## Function securityGroupView (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
+* **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
+
+## Function setvpnclientipsecparameters (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+* **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+
+## Function startPacketCapture (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnPacketCaptureStartParameters](#vpnpacketcapturestartparameters)
+* **Output**: string
+
+## Function startPacketCapture (Microsoft.Network/connections@2024-05-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnPacketCaptureStartParameters](#vpnpacketcapturestartparameters)
+* **Output**: string
+
+## Function startpacketcapture (Microsoft.Network/vpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnGatewayPacketCaptureStartParameters](#vpngatewaypacketcapturestartparameters)
+* **Output**: string
+
+## Function startpacketcapture (Microsoft.Network/vpnGateways/vpnConnections@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways/vpnConnections
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnConnectionPacketCaptureStartParameters](#vpnconnectionpacketcapturestartparameters)
+* **Output**: string
+
+## Function stopPacketCapture (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnPacketCaptureStopParameters](#vpnpacketcapturestopparameters)
+* **Output**: string
+
+## Function stopPacketCapture (Microsoft.Network/connections@2024-05-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnPacketCaptureStopParameters](#vpnpacketcapturestopparameters)
+* **Output**: string
+
+## Function stoppacketcapture (Microsoft.Network/vpnGateways@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnGatewayPacketCaptureStopParameters](#vpngatewaypacketcapturestopparameters)
+* **Output**: string
+
+## Function stoppacketcapture (Microsoft.Network/vpnGateways/vpnConnections@2024-05-01)
+* **Resource**: Microsoft.Network/vpnGateways/vpnConnections
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnConnectionPacketCaptureStopParameters](#vpnconnectionpacketcapturestopparameters)
+* **Output**: string
+
+## Function stopSiteFailoverTest (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Input**: [ExpressRouteFailoverStopApiParameters](#expressroutefailoverstopapiparameters)
+* **Output**: string
+
+## Function supportedvpndevices (Microsoft.Network/virtualNetworkGateways@2024-05-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-05-01
+* **Output**: string
+
+## Function topology (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [TopologyParameters](#topologyparameters)
+* **Output**: [Topology](#topology)
+
+## Function troubleshoot (Microsoft.Network/networkWatchers@2024-05-01)
+* **Resource**: Microsoft.Network/networkWatchers
+* **ApiVersion**: 2024-05-01
+* **Input**: [TroubleshootingParameters](#troubleshootingparameters)
+* **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2024-05-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2024-05-01
+* **Input**: [VpnDeviceScriptParameters](#vpndevicescriptparameters)
+* **Output**: string
+
+## Function vpnServerConfigurations (Microsoft.Network/virtualWans@2024-05-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2024-05-01
+* **Output**: [VpnServerConfigurationsResponse](#vpnserverconfigurationsresponse)
 
 ## AadAuthenticationParameters
 ### Properties
@@ -1670,6 +2046,32 @@
 * **backendAddresses**: [ApplicationGatewayBackendAddress](#applicationgatewaybackendaddress)[]: Backend addresses.
 * **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[] (ReadOnly): Collection of references to IPs defined in network interfaces.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the backend address pool resource.
+
+## ApplicationGatewayBackendHealth
+### Properties
+* **backendAddressPools**: [ApplicationGatewayBackendHealthPool](#applicationgatewaybackendhealthpool)[]: A list of ApplicationGatewayBackendHealthPool resources.
+
+## ApplicationGatewayBackendHealthHttpSettings
+### Properties
+* **backendHttpSettings**: [ApplicationGatewayBackendHttpSettings](#applicationgatewaybackendhttpsettings): Reference to an ApplicationGatewayBackendHttpSettings resource.
+* **servers**: [ApplicationGatewayBackendHealthServer](#applicationgatewaybackendhealthserver)[]: List of ApplicationGatewayBackendHealthServer resources.
+
+## ApplicationGatewayBackendHealthOnDemand
+### Properties
+* **backendAddressPool**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool): Reference to an ApplicationGatewayBackendAddressPool resource.
+* **backendHealthHttpSettings**: [ApplicationGatewayBackendHealthHttpSettings](#applicationgatewaybackendhealthhttpsettings): Application gateway BackendHealthHttp settings.
+
+## ApplicationGatewayBackendHealthPool
+### Properties
+* **backendAddressPool**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool): Reference to an ApplicationGatewayBackendAddressPool resource.
+* **backendHttpSettingsCollection**: [ApplicationGatewayBackendHealthHttpSettings](#applicationgatewaybackendhealthhttpsettings)[]: List of ApplicationGatewayBackendHealthHttpSettings resources.
+
+## ApplicationGatewayBackendHealthServer
+### Properties
+* **address**: string: IP address or FQDN of backend server.
+* **health**: 'Down' | 'Draining' | 'Partial' | 'Unknown' | 'Up' | string: Health of backend server.
+* **healthProbeLog**: string: Health Probe Log.
+* **ipConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration): Reference to IP configuration of backend server.
 
 ## ApplicationGatewayBackendHttpSettings
 ### Properties
@@ -1865,6 +2267,17 @@
 ### Properties
 * **backendAddressPool**: [SubResource](#subresource): Backend address pool resource of the application gateway.
 * **weightPerServer**: int {minValue: 1, maxValue: 100}: Weight per server. Range between 1 and 100.
+
+## ApplicationGatewayOnDemandProbe
+### Properties
+* **backendAddressPool**: [SubResource](#subresource): Reference to backend pool of application gateway to which probe request will be sent.
+* **backendHttpSettings**: [SubResource](#subresource): Reference to backend http setting of application gateway to be used for test probe.
+* **host**: string: Host name to send the probe to.
+* **match**: [ApplicationGatewayProbeHealthResponseMatch](#applicationgatewayprobehealthresponsematch): Criterion for classifying a healthy probe response.
+* **path**: string: Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
+* **pickHostNameFromBackendHttpSettings**: bool: Whether the host header should be picked from the backend http settings. Default value is false.
+* **protocol**: 'Http' | 'Https' | 'Tcp' | 'Tls' | string: The protocol used for the probe.
+* **timeout**: int: The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
 
 ## ApplicationGatewayPathRule
 ### Properties
@@ -2224,6 +2637,34 @@
 * **connectionResourceUri**: string (ReadOnly): The reference to the ExpressRoute connection resource using the authorization.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the authorization resource.
 
+## AvailableProvidersList
+### Properties
+* **countries**: [AvailableProvidersListCountry](#availableproviderslistcountry)[] (Required): List of available countries.
+
+## AvailableProvidersListCity
+### Properties
+* **cityName**: string: The city or town name.
+* **providers**: string[]: A list of Internet service providers.
+
+## AvailableProvidersListCountry
+### Properties
+* **countryName**: string: The country name.
+* **providers**: string[]: A list of Internet service providers.
+* **states**: [AvailableProvidersListState](#availableprovidersliststate)[]: List of available states in the country.
+
+## AvailableProvidersListParameters
+### Properties
+* **azureLocations**: string[]: A list of Azure regions.
+* **city**: string: The city or town for available providers list.
+* **country**: string: The country for available providers list.
+* **state**: string: The state for available providers list.
+
+## AvailableProvidersListState
+### Properties
+* **cities**: [AvailableProvidersListCity](#availableproviderslistcity)[]: List of available cities or towns in the state.
+* **providers**: string[]: A list of Internet service providers.
+* **stateName**: string: The state name.
+
 ## AzureFirewallAdditionalProperties
 ### Properties
 ### Additional Properties
@@ -2370,6 +2811,41 @@
 * **name**: 'AZFW_Hub' | 'AZFW_VNet' | string: Name of an Azure Firewall SKU.
 * **tier**: 'Basic' | 'Premium' | 'Standard' | string: Tier of an Azure Firewall.
 
+## AzureReachabilityReport
+### Properties
+* **aggregationLevel**: string (Required): The aggregation level of Azure reachability report. Can be Country, State or City.
+* **providerLocation**: [AzureReachabilityReportLocation](#azurereachabilityreportlocation) (Required): Parameters that define a geographic location.
+* **reachabilityReport**: [AzureReachabilityReportItem](#azurereachabilityreportitem)[] (Required): List of Azure reachability report items.
+
+## AzureReachabilityReportItem
+### Properties
+* **azureLocation**: string: The Azure region.
+* **latencies**: [AzureReachabilityReportLatencyInfo](#azurereachabilityreportlatencyinfo)[]: List of latency details for each of the time series.
+* **provider**: string: The Internet service provider.
+
+## AzureReachabilityReportLatencyInfo
+### Properties
+* **score**: int {minValue: 1, maxValue: 100}: The relative latency score between 1 and 100, higher values indicating a faster connection.
+* **timeStamp**: string: The time stamp.
+
+## AzureReachabilityReportLocation
+### Properties
+* **city**: string: The name of the city or town.
+* **country**: string (Required): The name of the country.
+* **state**: string: The name of the state.
+
+## AzureReachabilityReportParameters
+### Properties
+* **azureLocations**: string[]: Optional Azure regions to scope the query to.
+* **endTime**: string (Required): The end time for the Azure reachability report.
+* **providerLocation**: [AzureReachabilityReportLocation](#azurereachabilityreportlocation) (Required): Parameters that define a geographic location.
+* **providers**: string[]: List of Internet service providers.
+* **startTime**: string (Required): The start time for the Azure reachability report.
+
+## BackendAddressInboundNatRulePortMappings
+### Properties
+* **inboundNatRulePortMappings**: [InboundNatRulePortMapping](#inboundnatruleportmapping)[]: Collection of inbound NAT rule port mappings.
+
 ## BackendAddressPool
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -2392,6 +2868,25 @@
 * **syncMode**: 'Automatic' | 'Manual' | string: Backend address synchronous mode for the backend pool
 * **tunnelInterfaces**: [GatewayLoadBalancerTunnelInterface](#gatewayloadbalancertunnelinterface)[]: An array of gateway load balancer tunnel interfaces.
 * **virtualNetwork**: [SubResource](#subresource): A reference to a virtual network.
+
+## BastionActiveSession
+### Properties
+* **protocol**: 'RDP' | 'SSH' | string (ReadOnly): The protocol used to connect to the target.
+* **resourceType**: string (ReadOnly): The type of the resource.
+* **sessionDurationInMins**: int (ReadOnly): Duration in mins the session has been active.
+* **sessionId**: string (ReadOnly): A unique id for the session.
+* **startTime**: any (ReadOnly): The time when the session started.
+* **targetHostName**: string (ReadOnly): The host name of the target.
+* **targetIpAddress**: string (ReadOnly): The IP Address of the target.
+* **targetResourceGroup**: string (ReadOnly): The resource group of the target.
+* **targetResourceId**: string (ReadOnly): The resource id of the target.
+* **targetSubscriptionId**: string (ReadOnly): The subscription id for the target virtual machine.
+* **userName**: string (ReadOnly): The user name who is active on this session.
+
+## BastionActiveSessionListResult
+### Properties
+* **nextLink**: string: The URL to get the next set of results.
+* **value**: [BastionActiveSession](#bastionactivesession)[]: List of active sessions on the bastion.
 
 ## BastionHostIPConfiguration
 ### Properties
@@ -2429,6 +2924,33 @@
 ### Properties
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules for Developer Bastion Host.
 
+## BastionSessionDeleteResult
+### Properties
+* **nextLink**: string: The URL to get the next set of results.
+* **value**: [BastionSessionState](#bastionsessionstate)[]: List of sessions with their corresponding state.
+
+## BastionSessionState
+### Properties
+* **message**: string (ReadOnly): Used for extra information.
+* **sessionId**: string (ReadOnly): A unique id for the session.
+* **state**: string (ReadOnly): The state of the session. Disconnected/Failed/NotFound.
+
+## BastionShareableLink
+### Properties
+* **bsl**: string (ReadOnly): The unique Bastion Shareable Link to the virtual machine.
+* **createdAt**: string (ReadOnly): The time when the link was created.
+* **message**: string (ReadOnly): Optional field indicating the warning or error message related to the vm in case of partial failure.
+* **vm**: [VM](#vm) (Required): Reference of the virtual machine resource.
+
+## BastionShareableLinkListRequest
+### Properties
+* **vms**: [BastionShareableLink](#bastionshareablelink)[]: List of VM references.
+
+## BastionShareableLinkListResult
+### Properties
+* **nextLink**: string: The URL to get the next set of results.
+* **value**: [BastionShareableLink](#bastionshareablelink)[]: List of Bastion Shareable Links for the request.
+
 ## BgpConnectionProperties
 ### Properties
 * **connectionState**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string (ReadOnly): The current state of the VirtualHub to Peer.
@@ -2436,6 +2958,21 @@
 * **peerAsn**: int {minValue: 0, maxValue: 4294967295}: Peer ASN.
 * **peerIp**: string: Peer IP.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## BgpPeerStatus
+### Properties
+* **asn**: int {minValue: 0, maxValue: 4294967295} (ReadOnly): The autonomous system number of the remote BGP peer.
+* **connectedDuration**: string (ReadOnly): For how long the peering has been up.
+* **localAddress**: string (ReadOnly): The virtual network gateway's local address.
+* **messagesReceived**: int (ReadOnly): The number of BGP messages received.
+* **messagesSent**: int (ReadOnly): The number of BGP messages sent.
+* **neighbor**: string (ReadOnly): The remote BGP peer.
+* **routesReceived**: int (ReadOnly): The number of routes learned from this peer.
+* **state**: 'Connected' | 'Connecting' | 'Idle' | 'Stopped' | 'Unknown' | string (ReadOnly): The BGP peer state.
+
+## BgpPeerStatusListResult
+### Properties
+* **value**: [BgpPeerStatus](#bgppeerstatus)[]: List of BGP peers.
 
 ## BgpSettings
 ### Properties
@@ -2449,6 +2986,10 @@
 * **allow**: bool: Flag to control breakout of o365 allow category.
 * **default**: bool: Flag to control breakout of o365 default category.
 * **optimize**: bool: Flag to control breakout of o365 optimize category.
+
+## CheckPrivateLinkServiceVisibilityRequest
+### Properties
+* **privateLinkServiceAlias**: string: The alias of the private link service.
 
 ## CommonTrackedResourceTags
 ### Properties
@@ -2545,6 +3086,11 @@
 * **testConfigurations**: [ConnectionMonitorTestConfiguration](#connectionmonitortestconfiguration)[]: List of connection monitor test configurations.
 * **testGroups**: [ConnectionMonitorTestGroup](#connectionmonitortestgroup)[]: List of connection monitor test groups.
 
+## ConnectionMonitorQueryResult
+### Properties
+* **sourceStatus**: 'Active' | 'Inactive' | 'Unknown' | string: Status of connection monitor source.
+* **states**: [ConnectionStateSnapshot](#connectionstatesnapshot)[]: Information about connection states.
+
 ## ConnectionMonitorSource
 ### Properties
 * **port**: int {minValue: 0, maxValue: 65535}: The source port used by connection monitor.
@@ -2596,6 +3142,19 @@
 * **properties**: [SharedKeyProperties](#sharedkeyproperties): Properties of the shared key.
 * **type**: string (ReadOnly): Resource type.
 
+## ConnectionStateSnapshot
+### Properties
+* **avgLatencyInMs**: int {minValue: 0, maxValue: 4294967295}: Average latency in ms.
+* **connectionState**: 'Reachable' | 'Unknown' | 'Unreachable' | string: The connection state.
+* **endTime**: string: The end time of the connection snapshot.
+* **evaluationState**: 'Completed' | 'InProgress' | 'NotStarted' | string: Connectivity analysis evaluation state.
+* **hops**: [ConnectivityHop](#connectivityhop)[] (ReadOnly): List of hops between the source and the destination.
+* **maxLatencyInMs**: int {minValue: 0, maxValue: 4294967295}: Maximum latency in ms.
+* **minLatencyInMs**: int {minValue: 0, maxValue: 4294967295}: Minimum latency in ms.
+* **probesFailed**: int {minValue: 0, maxValue: 4294967295}: The number of failed probes.
+* **probesSent**: int {minValue: 0, maxValue: 4294967295}: The number of sent probes.
+* **startTime**: string: The start time of the connection snapshot.
+
 ## ConnectivityConfigurationProperties
 ### Properties
 * **appliesToGroups**: [ConnectivityGroupItem](#connectivitygroupitem)[] (Required): Groups for configuration
@@ -2607,12 +3166,60 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the connectivity configuration resource.
 * **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
 
+## ConnectivityDestination
+### Properties
+* **address**: string: The IP address or URI the resource to which a connection attempt will be made.
+* **port**: int {minValue: 0, maxValue: 65535}: Port on which check connectivity will be performed.
+* **resourceId**: string: The ID of the resource to which a connection attempt will be made.
+
 ## ConnectivityGroupItem
 ### Properties
 * **groupConnectivity**: 'DirectlyConnected' | 'None' | string (Required): Group connectivity type.
 * **isGlobal**: 'False' | 'True' | string: Flag if global is supported.
 * **networkGroupId**: string (Required): Network group Id.
 * **useHubGateway**: 'False' | 'True' | string: Flag if need to use hub gateway.
+
+## ConnectivityHop
+### Properties
+* **address**: string (ReadOnly): The IP address of the hop.
+* **id**: string (ReadOnly): The ID of the hop.
+* **issues**: [ConnectivityIssue](#connectivityissue)[] (ReadOnly): List of issues.
+* **links**: [HopLink](#hoplink)[] (ReadOnly): List of hop links.
+* **nextHopIds**: string[] (ReadOnly): List of next hop identifiers.
+* **previousHopIds**: string[] (ReadOnly): List of previous hop identifiers.
+* **previousLinks**: [HopLink](#hoplink)[] (ReadOnly): List of previous hop links.
+* **resourceId**: string (ReadOnly): The ID of the resource corresponding to this hop.
+* **type**: string (ReadOnly): The type of the hop.
+
+## ConnectivityInformation
+### Properties
+* **avgLatencyInMs**: int (ReadOnly): Average latency in milliseconds.
+* **connectionStatus**: 'Connected' | 'Degraded' | 'Disconnected' | 'Unknown' | string (ReadOnly): The connection status.
+* **hops**: [ConnectivityHop](#connectivityhop)[] (ReadOnly): List of hops between the source and the destination.
+* **maxLatencyInMs**: int (ReadOnly): Maximum latency in milliseconds.
+* **minLatencyInMs**: int (ReadOnly): Minimum latency in milliseconds.
+* **probesFailed**: int (ReadOnly): Number of failed probes.
+* **probesSent**: int (ReadOnly): Total number of probes sent.
+
+## ConnectivityIssue
+### Properties
+* **context**: [IssueContext](#issuecontext)[] (ReadOnly): Provides additional context on the issue.
+* **origin**: 'Inbound' | 'Local' | 'Outbound' | string (ReadOnly): The origin of the issue.
+* **severity**: 'Error' | 'Warning' | string (ReadOnly): The severity of the issue.
+* **type**: 'AgentStopped' | 'DnsResolution' | 'GuestFirewall' | 'NetworkSecurityRule' | 'Platform' | 'PortThrottled' | 'SocketBind' | 'Unknown' | 'UserDefinedRoute' | string (ReadOnly): The type of issue.
+
+## ConnectivityParameters
+### Properties
+* **destination**: [ConnectivityDestination](#connectivitydestination) (Required): The destination of connection.
+* **preferredIPVersion**: 'IPv4' | 'IPv6' | string: Preferred IP version of the connection.
+* **protocol**: 'Http' | 'Https' | 'Icmp' | 'Tcp' | string: Network protocol.
+* **protocolConfiguration**: [ProtocolConfiguration](#protocolconfiguration): Configuration of the protocol.
+* **source**: [ConnectivitySource](#connectivitysource) (Required): The source of the connection.
+
+## ConnectivitySource
+### Properties
+* **port**: int {minValue: 0, maxValue: 65535}: The source port from which a connectivity check will be performed.
+* **resourceId**: string (Required): The ID of the resource from which a connectivity check will be initiated.
 
 ## Container
 ### Properties
@@ -2800,6 +3407,79 @@
 * **configurationGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
 * **id**: string: Connectivity configuration ID.
 * **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties): Properties of a network manager connectivity configuration
+
+## EffectiveNetworkSecurityGroup
+### Properties
+* **association**: [EffectiveNetworkSecurityGroupAssociation](#effectivenetworksecuritygroupassociation): Associated resources.
+* **effectiveSecurityRules**: [EffectiveNetworkSecurityRule](#effectivenetworksecurityrule)[]: A collection of effective security rules.
+* **networkSecurityGroup**: [SubResource](#subresource): The ID of network security group that is applied.
+* **tagMap**: string: Mapping of tags to list of IP Addresses included within the tag.
+
+## EffectiveNetworkSecurityGroupAssociation
+### Properties
+* **networkInterface**: [SubResource](#subresource): The ID of the network interface if assigned.
+* **networkManager**: [SubResource](#subresource): The ID of the Azure network manager if assigned.
+* **subnet**: [SubResource](#subresource): The ID of the subnet if assigned.
+
+## EffectiveNetworkSecurityGroupListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URL to get the next set of results.
+* **value**: [EffectiveNetworkSecurityGroup](#effectivenetworksecuritygroup)[]: A list of effective network security groups.
+
+## EffectiveNetworkSecurityRule
+### Properties
+* **access**: 'Allow' | 'Deny' | string: Whether network traffic is allowed or denied.
+* **destinationAddressPrefix**: string: The destination address prefix.
+* **destinationAddressPrefixes**: string[]: The destination address prefixes. Expected values include CIDR IP ranges, Default Tags (VirtualNetwork, AzureLoadBalancer, Internet), System Tags, and the asterisk (*).
+* **destinationPortRange**: string: The destination port or range.
+* **destinationPortRanges**: string[]: The destination port ranges. Expected values include a single integer between 0 and 65535, a range using '-' as separator (e.g. 100-400), or an asterisk (*).
+* **direction**: 'Inbound' | 'Outbound' | string: The direction of the rule.
+* **expandedDestinationAddressPrefix**: string[]: Expanded destination address prefix.
+* **expandedSourceAddressPrefix**: string[]: The expanded source address prefix.
+* **name**: string: The name of the security rule specified by the user (if created by the user).
+* **priority**: int: The priority of the rule.
+* **protocol**: 'All' | 'Tcp' | 'Udp' | string: The network protocol this rule applies to.
+* **sourceAddressPrefix**: string: The source address prefix.
+* **sourceAddressPrefixes**: string[]: The source address prefixes. Expected values include CIDR IP ranges, Default Tags (VirtualNetwork, AzureLoadBalancer, Internet), System Tags, and the asterisk (*).
+* **sourcePortRange**: string: The source port or range.
+* **sourcePortRanges**: string[]: The source port ranges. Expected values include a single integer between 0 and 65535, a range using '-' as separator (e.g. 100-400), or an asterisk (*).
+
+## EffectiveRoute
+### Properties
+* **addressPrefix**: string[]: The address prefixes of the effective routes in CIDR notation.
+* **disableBgpRoutePropagation**: bool: If true, on-premises routes are not propagated to the network interfaces in the subnet.
+* **name**: string: The name of the user defined route. This is optional.
+* **nextHopIpAddress**: string[]: The IP address of the next hop of the effective route.
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string: The type of Azure hop the packet should be sent to.
+* **source**: 'Default' | 'Unknown' | 'User' | 'VirtualNetworkGateway' | string: Who created the route.
+* **state**: 'Active' | 'Invalid' | string: The value of effective route.
+
+## EffectiveRouteListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URL to get the next set of results.
+* **value**: [EffectiveRoute](#effectiveroute)[]: A list of effective routes.
+
+## EffectiveRouteMapRoute
+### Properties
+* **asPath**: string: The ASPath of this route.
+* **bgpCommunities**: string: BGP communities of the route.
+* **prefix**: string: The address prefix of the route.
+
+## EffectiveRouteMapRouteList
+### Properties
+* **value**: [EffectiveRouteMapRoute](#effectiveroutemaproute)[]: The list of Effective RouteMap Routes configured on the connection resource.
+
+## EffectiveRoutesParameters
+### Properties
+* **resourceId**: string: The resource whose effective routes are being requested.
+* **virtualWanResourceType**: string: The type of the specified resource like RouteTable, ExpressRouteConnection, HubVirtualNetworkConnection, VpnConnection and P2SConnection.
+
+## EvaluatedNetworkSecurityGroup
+### Properties
+* **appliedTo**: string: Resource ID of nic or subnet to which network security group is applied.
+* **matchedRule**: [MatchedRule](#matchedrule): Matched network security rule.
+* **networkSecurityGroupId**: string: Network security group ID.
+* **rulesEvaluationResult**: [NetworkSecurityRulesEvaluationResult](#networksecurityrulesevaluationresult)[] (ReadOnly): List of network security rules evaluation results.
 
 ## ExceptionEntry
 ### Properties
@@ -3006,6 +3686,12 @@
 * **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: The provisioning state of the circuit in the connectivity provider system.
 * **sTag**: int (ReadOnly): The identifier of the circuit traffic.
 
+## ExpressRouteFailoverStopApiParameters
+### Properties
+* **details**: [FailoverConnectionDetails](#failoverconnectiondetails)[]: List of all the failover connections for this peering location
+* **peeringLocation**: string: Peering location of the test
+* **wasSimulationSuccessful**: bool: Whether the failover simulation was successful or not
+
 ## ExpressRouteGatewayProperties
 ### Properties
 * **allowNonVirtualWanTraffic**: bool: Configures this gateway to accept traffic from non Virtual WAN networks.
@@ -3098,6 +3784,12 @@
 ### Properties
 * **name**: string: The name of the extended location.
 * **type**: 'EdgeZone' | string: The type of the extended location.
+
+## FailoverConnectionDetails
+### Properties
+* **failoverConnectionName**: string: Name of the failover connection
+* **failoverLocation**: string: Location of the failover connection
+* **isVerified**: bool: Whether the customer was able to establish connectivity through this failover connection or not
 
 ## FilterItems
 ### Properties
@@ -3318,6 +4010,21 @@
 * **type**: 'JSON' | string: The file type of flow log.
 * **version**: int: The version (revision) of the flow log.
 
+## FlowLogInformation
+### Properties
+* **flowAnalyticsConfiguration**: [TrafficAnalyticsProperties](#trafficanalyticsproperties): Parameters that define the configuration of traffic analytics.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): FlowLog resource Managed Identity
+* **properties**: [FlowLogProperties](#flowlogproperties) (Required): Properties of the flow log.
+* **targetResourceId**: string (Required): The ID of the resource to configure for flow log and traffic analytics (optional) .
+
+## FlowLogProperties
+### Properties
+* **enabled**: bool (Required): Flag to enable/disable flow logging.
+* **enabledFilteringCriteria**: string: Optional field to filter network traffic logs based on SrcIP, SrcPort, DstIP, DstPort, Protocol, Encryption, Direction and Action. If not specified, all network traffic will be logged.
+* **format**: [FlowLogFormatParameters](#flowlogformatparameters): Parameters that define the flow log format.
+* **retentionPolicy**: [RetentionPolicyParameters](#retentionpolicyparameters): Parameters that define the retention policy for flow log.
+* **storageId**: string (Required): ID of the storage account which is used to store the flow log.
+
 ## FlowLogPropertiesFormat
 ### Properties
 * **enabled**: bool: Flag to enable/disable flow logging.
@@ -3329,6 +4036,10 @@
 * **storageId**: string (Required): ID of the storage account which is used to store the flow log.
 * **targetResourceGuid**: string (ReadOnly): Guid of network security group to which flow log will be applied.
 * **targetResourceId**: string (Required): ID of network security group to which flow log will be applied.
+
+## FlowLogStatusParameters
+### Properties
+* **targetResourceId**: string (Required): The target resource where getting the flow log and traffic analytics (optional) status.
 
 ## FrontendIPConfiguration
 ### Properties
@@ -3366,6 +4077,38 @@
 * **protocol**: 'Native' | 'None' | 'VXLAN' | string: Protocol of gateway load balancer tunnel interface.
 * **type**: 'External' | 'Internal' | 'None' | string: Traffic type of gateway load balancer tunnel interface.
 
+## GatewayRoute
+### Properties
+* **asPath**: string (ReadOnly): The route's AS path sequence.
+* **localAddress**: string (ReadOnly): The gateway's local address.
+* **network**: string (ReadOnly): The route's network prefix.
+* **nextHop**: string (ReadOnly): The route's next hop.
+* **origin**: string (ReadOnly): The source this route was learned from.
+* **sourcePeer**: string (ReadOnly): The peer this route was learned from.
+* **weight**: int (ReadOnly): The route's weight.
+
+## GatewayRouteListResult
+### Properties
+* **value**: [GatewayRoute](#gatewayroute)[]: List of gateway routes.
+
+## GenerateExpressRoutePortsLOARequest
+### Properties
+* **customerName**: string (Required): The customer name.
+
+## GenerateExpressRoutePortsLOAResult
+### Properties
+* **encodedContent**: string: The content as a base64 encoded string.
+
+## GetInboundRoutesParameters
+### Properties
+* **connectionType**: string: The type of the specified connection resource like ExpressRouteConnection, HubVirtualNetworkConnection, VpnConnection and P2SConnection.
+* **resourceUri**: string: The connection resource whose inbound routes are being requested.
+
+## GetOutboundRoutesParameters
+### Properties
+* **connectionType**: string: The type of the specified connection resource like ExpressRouteConnection, HubVirtualNetworkConnection, VpnConnection and P2SConnection.
+* **resourceUri**: string: The connection resource whose outbound routes are being requested.
+
 ## GroupByUserSession
 ### Properties
 * **groupByVariables**: [GroupByVariable](#groupbyvariable)[] (Required): List of group by clause variables.
@@ -3379,6 +4122,32 @@
 * **ignoreCase**: bool: Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
 * **negate**: bool: Setting this value as truth will force to check the negation of the condition given by the user in the pattern field.
 * **pattern**: string: The pattern, either fixed string or regular expression, that evaluates if a header value should be selected for rewrite.
+
+## HopLink
+### Properties
+* **context**: [HopLinkContext](#hoplinkcontext) (ReadOnly): Provides additional context on links.
+* **issues**: [ConnectivityIssue](#connectivityissue)[] (ReadOnly): List of issues.
+* **linkType**: string (ReadOnly): Link type.
+* **nextHopId**: string (ReadOnly): The ID of the next hop.
+* **properties**: [HopLinkProperties](#hoplinkproperties): Hop link properties.
+* **resourceId**: string (ReadOnly): Resource ID.
+
+## HopLinkContext
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HopLinkProperties
+### Properties
+* **roundTripTimeAvg**: int {minValue: 0, maxValue: 4294967295} (ReadOnly): Average roundtrip time in milliseconds.
+* **roundTripTimeMax**: int {minValue: 0, maxValue: 4294967295} (ReadOnly): Maximum roundtrip time in milliseconds.
+* **roundTripTimeMin**: int {minValue: 0, maxValue: 4294967295} (ReadOnly): Minimum roundtrip time in milliseconds.
+
+## HttpConfiguration
+### Properties
+* **headers**: [HttpHeader](#httpheader)[]: List of HTTP headers.
+* **method**: 'Get' | string: HTTP method.
+* **validStatusCodes**: int[]: Valid status codes.
 
 ## HttpHeader
 ### Properties
@@ -3468,6 +4237,13 @@
 * **name**: string: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
 * **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat): Properties of load balancer inbound NAT rule.
 * **type**: string (ReadOnly): Type of the resource.
+
+## InboundNatRulePortMapping
+### Properties
+* **backendPort**: int (ReadOnly): Backend port.
+* **frontendPort**: int (ReadOnly): Frontend port.
+* **inboundNatRuleName**: string (ReadOnly): Name of inbound NAT rule.
+* **protocol**: 'All' | 'Tcp' | 'Udp' | string (ReadOnly): The reference to the transport protocol used by the inbound NAT rule.
 
 ## InboundNatRulePropertiesFormat
 ### Properties
@@ -3587,6 +4363,10 @@
 * **ipAddresses**: string[]: IpAddresses/IpAddressPrefixes in the IpGroups resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the IpGroups resource.
 
+## IPPrefixesList
+### Properties
+* **ipPrefixes**: string[]: IP Prefix value.
+
 ## IPRule
 ### Properties
 * **addressPrefix**: string: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
@@ -3628,6 +4408,11 @@
 * **secondaryPeerAddressPrefix**: string: The secondary address prefix.
 * **state**: 'Disabled' | 'Enabled' | string: The state of peering.
 
+## IssueContext
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## LoadBalancerBackendAddress
 ### Properties
 * **name**: string: Name of the backend address.
@@ -3642,6 +4427,19 @@
 * **networkInterfaceIPConfiguration**: [SubResource](#subresource) (ReadOnly): Reference to IP address defined in network interfaces.
 * **subnet**: [SubResource](#subresource): Reference to an existing subnet.
 * **virtualNetwork**: [SubResource](#subresource): Reference to an existing virtual network.
+
+## LoadBalancerHealthPerRule
+### Properties
+* **down**: int: Number of backend instances associated to the LB rule that are considered unhealthy.
+* **loadBalancerBackendAddresses**: [LoadBalancerHealthPerRulePerBackendAddress](#loadbalancerhealthperruleperbackendaddress)[]: Information about the health per rule of the backend addresses.
+* **up**: int: Number of backend instances associated to the LB rule that are considered healthy.
+
+## LoadBalancerHealthPerRulePerBackendAddress
+### Properties
+* **ipAddress**: string: The IP address belonging to the backend address.
+* **networkInterfaceIPConfigurationId**: string: Resource ID of the Network Interface IP Configuration.
+* **reason**: string: The explanation of the State
+* **state**: string: The current health of the backend instances that is associated to the LB rule.
 
 ## LoadBalancerPropertiesFormat
 ### Properties
@@ -3747,10 +4545,23 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'Regex' | string (Required): The operator to be matched.
 * **transforms**: ('HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms.
 
+## MatchedRule
+### Properties
+* **action**: string: The network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'.
+* **ruleName**: string: Name of the matched network security rule.
+
 ## MatchVariable
 ### Properties
 * **selector**: string: The selector of match variable.
 * **variableName**: 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestCookies' | 'RequestHeaders' | 'RequestMethod' | 'RequestUri' | string (Required): Match Variable.
+
+## MigratedPools
+### Properties
+* **migratedPools**: string[]: A list of pools migrated from Nic based to IP based pool
+
+## MigrateLoadBalancerToIpBasedRequest
+### Properties
+* **pools**: string[]: A list of pool names that should be migrated from Nic based to IP based pool
 
 ## NatGateway
 ### Properties
@@ -3783,6 +4594,29 @@
 * **frontendPort**: int: Frontend port.
 * **inboundNatRuleName**: string: Name of inbound NAT rule.
 
+## NetworkConfigurationDiagnosticParameters
+### Properties
+* **profiles**: [NetworkConfigurationDiagnosticProfile](#networkconfigurationdiagnosticprofile)[] (Required): List of network configuration diagnostic profiles.
+* **targetResourceId**: string (Required): The ID of the target resource to perform network configuration diagnostic. Valid options are VM, NetworkInterface, VMSS/NetworkInterface and Application Gateway.
+* **verbosityLevel**: 'Full' | 'Minimum' | 'Normal' | string: Verbosity level.
+
+## NetworkConfigurationDiagnosticProfile
+### Properties
+* **destination**: string (Required): Traffic destination. Accepted values are: '*', IP Address/CIDR, Service Tag.
+* **destinationPort**: string (Required): Traffic destination port. Accepted values are '*' and a single port in the range (0 - 65535).
+* **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the traffic.
+* **protocol**: string (Required): Protocol to be verified on. Accepted values are '*', TCP, UDP.
+* **source**: string (Required): Traffic source. Accepted values are '*', IP Address/CIDR, Service Tag.
+
+## NetworkConfigurationDiagnosticResponse
+### Properties
+* **results**: [NetworkConfigurationDiagnosticResult](#networkconfigurationdiagnosticresult)[] (ReadOnly): List of network configuration diagnostic results.
+
+## NetworkConfigurationDiagnosticResult
+### Properties
+* **networkSecurityGroupResult**: [NetworkSecurityGroupResult](#networksecuritygroupresult): Network security group result.
+* **profile**: [NetworkConfigurationDiagnosticProfile](#networkconfigurationdiagnosticprofile): Network configuration diagnostic profile.
+
 ## NetworkGroupProperties
 ### Properties
 * **description**: string: A description of the network group.
@@ -3800,6 +4634,11 @@
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat): Properties of the network interface.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
+
+## NetworkInterfaceAssociation
+### Properties
+* **id**: string (ReadOnly): Network interface ID.
+* **securityRules**: [SecurityRule](#securityrule)[]: Collection of custom security rules.
 
 ## NetworkInterfaceDnsSettings
 ### Properties
@@ -3879,6 +4718,13 @@
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network interface tap configuration resource.
 * **virtualNetworkTap**: [VirtualNetworkTap](#virtualnetworktap): The reference to the Virtual Network Tap resource.
+
+## NetworkManagerCommit
+### Properties
+* **commitId**: string (ReadOnly): Commit Id.
+* **commitType**: 'Connectivity' | 'Routing' | 'SecurityAdmin' | 'SecurityUser' | string (Required): Commit Type.
+* **configurationIds**: string[]: List of configuration ids.
+* **targetLocations**: string[] (Required): List of target locations.
 
 ## NetworkManagerConnectionProperties
 ### Properties
@@ -3972,6 +4818,20 @@
 * **securityRules**: [SecurityRule](#securityrule)[]: A collection of security rules of the network security group.
 * **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
 
+## NetworkSecurityGroupResult
+### Properties
+* **evaluatedNetworkSecurityGroups**: [EvaluatedNetworkSecurityGroup](#evaluatednetworksecuritygroup)[] (ReadOnly): List of results network security groups diagnostic.
+* **securityRuleAccessResult**: 'Allow' | 'Deny' | string: The network traffic is allowed or denied.
+
+## NetworkSecurityRulesEvaluationResult
+### Properties
+* **destinationMatched**: bool: Value indicating whether destination is matched.
+* **destinationPortMatched**: bool: Value indicating whether destination port is matched.
+* **name**: string: Name of the network security rule.
+* **protocolMatched**: bool: Value indicating whether protocol is matched.
+* **sourceMatched**: bool: Value indicating whether source is matched.
+* **sourcePortMatched**: bool: Value indicating whether source port is matched.
+
 ## NetworkVirtualApplianceConnectionProperties
 ### Properties
 * **asn**: int {minValue: 0, maxValue: 4294967295}: Network Virtual Appliance ASN.
@@ -3981,6 +4841,10 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NetworkVirtualApplianceConnection resource.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): The Routing Configuration indicating the associated and propagated route tables on this connection.
 * **tunnelIdentifier**: int {minValue: 0, maxValue: 4294967295}: Unique identifier for the connection.
+
+## NetworkVirtualApplianceInstanceIds
+### Properties
+* **instanceIds**: string[]: The network virtual appliance instance ids. Omitting the network virtual appliance instance ids will result in the operation being performed on all virtual machines belonging to the network virtual appliance.
 
 ## NetworkVirtualAppliancePropertiesFormat
 ### Properties
@@ -4022,6 +4886,19 @@
 ## NetworkWatcherPropertiesFormat
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network watcher resource.
+
+## NextHopParameters
+### Properties
+* **destinationIPAddress**: string (Required): The destination IP address.
+* **sourceIPAddress**: string (Required): The source IP address.
+* **targetNicResourceId**: string: The NIC ID. (If VM has multiple NICs and IP forwarding is enabled on any of the nics, then this parameter must be specified. Otherwise optional).
+* **targetResourceId**: string (Required): The resource identifier of the target resource against which the action is to be performed.
+
+## NextHopResult
+### Properties
+* **nextHopIpAddress**: string: Next hop IP Address.
+* **nextHopType**: 'HyperNetGateway' | 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string: Next hop type.
+* **routeTableId**: string: The resource identifier for the route table associated with the route being returned. If the route being returned does not correspond to any user created routes then this field will be the string 'System Route'.
 
 ## O365BreakOutCategoryPolicies
 ### Properties
@@ -4083,6 +4960,15 @@
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): The Routing Configuration indicating the associated and propagated route tables on this connection.
 * **vpnClientAddressPool**: [AddressSpace](#addressspace): The reference to the address space resource which represents Address space for P2S VpnClient.
 
+## P2SVpnConnectionHealth
+### Properties
+* **sasUrl**: string: Returned sas url of the blob to which the p2s vpn connection detailed health will be written.
+
+## P2SVpnConnectionHealthRequest
+### Properties
+* **outputBlobSasUrl**: string: The sas-url to download the P2S Vpn connection health detail.
+* **vpnUserNamesFilter**: string[]: The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+
 ## P2SVpnGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4103,6 +4989,10 @@
 * **vpnClientConnectionHealth**: [VpnClientConnectionHealth](#vpnclientconnectionhealth) (ReadOnly): All P2S VPN clients' connection health status.
 * **vpnGatewayScaleUnit**: int: The scale unit for this p2s vpn gateway.
 * **vpnServerConfiguration**: [SubResource](#subresource): The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+
+## P2SVpnProfileParameters
+### Properties
+* **authenticationMethod**: 'EAPMSCHAPv2' | 'EAPTLS' | string: VPN client authentication method.
 
 ## PacketCaptureFilter
 ### Properties
@@ -4130,6 +5020,15 @@
 * **targetType**: 'AzureVM' | 'AzureVMSS': Target type of the resource provided.
 * **timeLimitInSeconds**: int {minValue: 0, maxValue: 18000}: Maximum duration of the capture session in seconds.
 * **totalBytesPerSession**: int {minValue: 0, maxValue: 4294967295}: Maximum size of the capture output.
+
+## PacketCaptureQueryStatusResult
+### Properties
+* **captureStartTime**: string: The start time of the packet capture session.
+* **id**: string: The ID of the packet capture resource.
+* **name**: string: The name of the packet capture resource.
+* **packetCaptureError**: ('AgentStopped' | 'CaptureFailed' | 'InternalError' | 'LocalFileFailed' | 'StorageFailed' | string)[]: List of errors of packet capture session.
+* **packetCaptureStatus**: 'Error' | 'NotStarted' | 'Running' | 'Stopped' | 'Unknown' | string: The status of the packet capture session.
+* **stopReason**: string: The reason the current packet capture session was stopped.
 
 ## PacketCaptureSettings
 ### Properties
@@ -4174,6 +5073,26 @@
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource): Reference to Express Route Circuit Private Peering Resource of the peered circuit.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the peer express route circuit connection resource.
 
+## PeerRoute
+### Properties
+* **asPath**: string (ReadOnly): The route's AS path sequence.
+* **localAddress**: string (ReadOnly): The peer's local address.
+* **network**: string (ReadOnly): The route's network prefix.
+* **nextHop**: string (ReadOnly): The route's next hop.
+* **origin**: string (ReadOnly): The source this route was learned from.
+* **sourcePeer**: string (ReadOnly): The peer this route was learned from.
+* **weight**: int (ReadOnly): The route's weight.
+
+## PeerRouteList
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [PeerRoute](#peerroute)[]
+
+## PeerRouteList
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [PeerRoute](#peerroute)[]
+
 ## PolicySettings
 ### Properties
 * **customBlockResponseBody**: string {maxLength: 32768, pattern: "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$"}: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
@@ -4210,6 +5129,18 @@
 ### Properties
 * **nextLink**: string: The link used to get the next page of operations.
 * **value**: [PoolAssociation](#poolassociation)[]
+
+## PoolUsage
+### Properties
+* **addressPrefixes**: string[] (ReadOnly): List of IP address prefixes of the resource.
+* **allocatedAddressPrefixes**: string[] (ReadOnly): List of assigned IP address prefixes.
+* **availableAddressPrefixes**: string[] (ReadOnly): List of available IP address prefixes.
+* **childPools**: [ResourceBasics](#resourcebasics)[] (ReadOnly): List of IpamPool that are children of this IpamPool.
+* **numberOfAllocatedIPAddresses**: string (ReadOnly): Total number of assigned IP addresses in the IpamPool.
+* **numberOfAvailableIPAddresses**: string (ReadOnly): Total number of available IP addresses in the IpamPool.
+* **numberOfReservedIPAddresses**: string (ReadOnly): Total number of reserved IP addresses in the IpamPool.
+* **reservedAddressPrefixes**: string[] (ReadOnly): List of reserved IP address prefixes. These IP addresses could be reclaimed if not assigned in the given time.
+* **totalNumberOfIPAddresses**: string (ReadOnly): Total number of IP addresses managed in the IpamPool.
 
 ## PrivateDnsZoneConfig
 ### Properties
@@ -4350,6 +5281,10 @@
 ### Properties
 * **subscriptions**: string[]: The list of subscriptions.
 
+## PrivateLinkServiceVisibility
+### Properties
+* **visible**: bool: Private Link Service Visibility (True/False).
+
 ## Probe
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4374,6 +5309,10 @@
 ### Properties
 * **ids**: [SubResource](#subresource)[]: The list of resource ids of all the RouteTables.
 * **labels**: string[]: The list of labels.
+
+## ProtocolConfiguration
+### Properties
+* **HTTPConfiguration**: [HttpConfiguration](#httpconfiguration): HTTP configuration of the connectivity check.
 
 ## PublicIPAddress
 ### Properties
@@ -4419,6 +5358,13 @@
 * **name**: 'Basic' | 'Standard' | string: Name of a public IP address SKU.
 * **tier**: 'Global' | 'Regional' | string: Tier of a public IP address SKU.
 
+## PublicIpDdosProtectionStatusResult
+### Properties
+* **ddosProtectionPlanId**: string: DDoS protection plan Resource Id of a if IP address is protected through a plan.
+* **isWorkloadProtected**: 'False' | 'True' | string: Value indicating whether the IP address is DDoS workload protected or not.
+* **publicIpAddress**: string: IP Address of the Public IP Resource
+* **publicIpAddressId**: string: Public IP ARM resource ID
+
 ## PublicIPPrefixPropertiesFormat
 ### Properties
 * **customIPPrefix**: [SubResource](#subresource): The customIpPrefix that this prefix is associated with.
@@ -4456,6 +5402,11 @@
 * **end**: int: Qos Port Range end.
 * **start**: int: Qos Port Range start.
 
+## QueryInboundNatRulePortMappingRequest
+### Properties
+* **ipAddress**: string: IP address set in load balancer backend address.
+* **ipConfiguration**: [SubResource](#subresource): NetworkInterfaceIPConfiguration set in load balancer backend address.
+
 ## QueryRequestOptions
 ### Properties
 * **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -4464,6 +5415,10 @@
 ### Properties
 * **matchingRecordsCount**: int: Number of total records matching the query.
 * **signatures**: [SingleQueryResult](#singlequeryresult)[]: Array containing the results of the query
+
+## QueryTroubleshootingParameters
+### Properties
+* **targetResourceId**: string (Required): The target resource ID to query the troubleshooting result.
 
 ## RadiusServer
 ### Properties
@@ -4501,6 +5456,11 @@
 ### Properties
 * **id**: string: The PublicIPAddress Reference.
 
+## ResourceBasics
+### Properties
+* **addressPrefixes**: string[]: List of IP address prefixes of the resource.
+* **resourceId**: string: ResourceId of the Azure resource.
+
 ## ResourceNavigationLink
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4514,6 +5474,16 @@
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource navigation link resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -4970,6 +5940,19 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
 
+## SecurityGroupNetworkInterface
+### Properties
+* **id**: string: ID of the network interface.
+* **securityRuleAssociations**: [SecurityRuleAssociations](#securityruleassociations): All security rules associated with the network interface.
+
+## SecurityGroupViewParameters
+### Properties
+* **targetResourceId**: string (Required): ID of the target VM.
+
+## SecurityGroupViewResult
+### Properties
+* **networkInterfaces**: [SecurityGroupNetworkInterface](#securitygroupnetworkinterface)[]: List of network interfaces on the specified VM.
+
 ## SecurityPartnerProviderPropertiesFormat
 ### Properties
 * **connectionStatus**: 'Connected' | 'NotConnected' | 'PartiallyConnected' | 'Unknown' | string (ReadOnly): The connection status with the Security Partner Provider.
@@ -4984,6 +5967,13 @@
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat): Properties of the security rule.
 * **type**: string: The type of the resource.
+
+## SecurityRuleAssociations
+### Properties
+* **defaultSecurityRules**: [SecurityRule](#securityrule)[]: Collection of default security rules of the network security group.
+* **effectiveSecurityRules**: [EffectiveNetworkSecurityRule](#effectivenetworksecurityrule)[]: Collection of effective security rules.
+* **networkInterfaceAssociation**: [NetworkInterfaceAssociation](#networkinterfaceassociation): Network interface and it's custom security rules.
+* **subnetAssociation**: [SubnetAssociation](#subnetassociation): Subnet and it's custom security rules.
 
 ## SecurityRulePropertiesFormat
 ### Properties
@@ -5097,6 +6087,10 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the service endpoint resource.
 * **service**: string: The type of the endpoint service.
 
+## SessionIds
+### Properties
+* **sessionIds**: string[]: List of session IDs.
+
 ## SharedKeyProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the SharedKey resource.
@@ -5171,6 +6165,11 @@
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
 * **type**: string: Resource type.
 
+## SubnetAssociation
+### Properties
+* **id**: string (ReadOnly): Subnet ID.
+* **securityRules**: [SecurityRule](#securityrule)[]: Collection of custom security rules.
+
 ## SubnetPropertiesFormat
 ### Properties
 * **addressPrefix**: string: The address prefix for the subnet.
@@ -5213,6 +6212,32 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## Topology
+### Properties
+* **createdDateTime**: string (ReadOnly): The datetime when the topology was initially created for the resource group.
+* **id**: string (ReadOnly): GUID representing the operation id.
+* **lastModified**: string (ReadOnly): The datetime when the topology was last modified.
+* **resources**: [TopologyResource](#topologyresource)[]: A list of topology resources.
+
+## TopologyAssociation
+### Properties
+* **associationType**: 'Associated' | 'Contains' | string: The association type of the child resource to the parent resource.
+* **name**: string: The name of the resource that is associated with the parent resource.
+* **resourceId**: string: The ID of the resource that is associated with the parent resource.
+
+## TopologyParameters
+### Properties
+* **targetResourceGroupName**: string: The name of the target resource group to perform topology on.
+* **targetSubnet**: [SubResource](#subresource): The reference to the Subnet resource.
+* **targetVirtualNetwork**: [SubResource](#subresource): The reference to the Virtual Network resource.
+
+## TopologyResource
+### Properties
+* **associations**: [TopologyAssociation](#topologyassociation)[]: Holds the associations the resource has with other resources in the resource group.
+* **id**: string: ID of the resource.
+* **location**: string: Resource location.
+* **name**: string: Name of the resource.
+
 ## TrafficAnalyticsConfigurationProperties
 ### Properties
 * **enabled**: bool: Flag to enable/disable traffic analytics.
@@ -5230,6 +6255,38 @@
 * **localAddressRanges**: string[] (Required): A collection of local address spaces in CIDR format.
 * **remoteAddressRanges**: string[] (Required): A collection of remote address spaces in CIDR format.
 
+## TroubleshootingDetails
+### Properties
+* **detail**: string: Details on troubleshooting results.
+* **id**: string: The id of the get troubleshoot operation.
+* **reasonType**: string: Reason type of failure.
+* **recommendedActions**: [TroubleshootingRecommendedActions](#troubleshootingrecommendedactions)[]: List of recommended actions.
+* **summary**: string: A summary of troubleshooting.
+
+## TroubleshootingParameters
+### Properties
+* **properties**: [TroubleshootingProperties](#troubleshootingproperties) (Required): Properties of the troubleshooting resource.
+* **targetResourceId**: string (Required): The target resource to troubleshoot.
+
+## TroubleshootingProperties
+### Properties
+* **storageId**: string (Required): The ID for the storage account to save the troubleshoot result.
+* **storagePath**: string (Required): The path to the blob to save the troubleshoot result in.
+
+## TroubleshootingRecommendedActions
+### Properties
+* **actionId**: string: ID of the recommended action.
+* **actionText**: string: Description of recommended actions.
+* **actionUri**: string: The uri linking to a documentation for the recommended troubleshooting actions.
+* **actionUriText**: string: The information from the URI for the recommended troubleshooting actions.
+
+## TroubleshootingResult
+### Properties
+* **code**: string: The result code of the troubleshooting.
+* **endTime**: string: The end time of the troubleshooting.
+* **results**: [TroubleshootingDetails](#troubleshootingdetails)[]: Information from troubleshooting.
+* **startTime**: string: The start time of the troubleshooting.
+
 ## TunnelConnectionHealth
 ### Properties
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string (ReadOnly): Virtual Network Gateway connection status.
@@ -5237,6 +6294,22 @@
 * **ingressBytesTransferred**: int (ReadOnly): The Ingress Bytes Transferred in this connection.
 * **lastConnectionEstablishedUtcTime**: string (ReadOnly): The time at which connection was established in Utc format.
 * **tunnel**: string (ReadOnly): Tunnel name.
+
+## VerificationIPFlowParameters
+### Properties
+* **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the packet represented as a 5-tuple.
+* **localIPAddress**: string (Required): The local IP address. Acceptable values are valid IPv4 addresses.
+* **localPort**: string (Required): The local port. Acceptable values are a single integer in the range (0-65535). Support for * for the source port, which depends on the direction.
+* **protocol**: 'TCP' | 'UDP' | string (Required): Protocol to be verified on.
+* **remoteIPAddress**: string (Required): The remote IP address. Acceptable values are valid IPv4 addresses.
+* **remotePort**: string (Required): The remote port. Acceptable values are a single integer in the range (0-65535). Support for * for the source port, which depends on the direction.
+* **targetNicResourceId**: string: The NIC ID. (If VM has multiple NICs and IP forwarding is enabled on any of them, then this parameter must be specified. Otherwise optional).
+* **targetResourceId**: string (Required): The ID of the target resource to perform next-hop on.
+
+## VerificationIPFlowResult
+### Properties
+* **access**: 'Allow' | 'Deny' | string: Indicates whether the traffic is allowed or denied.
+* **ruleName**: string: Name of the rule. If input is not matched against any security rule, it is not displayed.
 
 ## VerifierWorkspaceProperties
 ### Properties
@@ -5285,6 +6358,18 @@
 * **bundledScaleUnit**: string: Virtual Appliance Scale Unit.
 * **marketPlaceVersion**: string: Virtual Appliance Version.
 * **vendor**: string: Virtual Appliance Vendor.
+
+## VirtualHubEffectiveRoute
+### Properties
+* **addressPrefixes**: string[]: The list of address prefixes.
+* **asPath**: string: The ASPath of this route.
+* **nextHops**: string[]: The list of next hops.
+* **nextHopType**: string: The type of the next hop.
+* **routeOrigin**: string: The origin of this route.
+
+## VirtualHubEffectiveRouteList
+### Properties
+* **value**: [VirtualHubEffectiveRoute](#virtualhubeffectiveroute)[]: The list of effective routes configured on the virtual hub or the specified resource.
 
 ## VirtualHubId
 ### Properties
@@ -5348,6 +6433,11 @@
 ### Properties
 * **regionalCommunity**: string (ReadOnly): The BGP community associated with the region of the virtual network.
 * **virtualNetworkCommunity**: string (Required): The BGP community associated with the virtual network.
+
+## VirtualNetworkDdosProtectionStatusResult
+### Properties
+* **nextLink**: string: The URL to get the next set of results.
+* **value**: [PublicIpDdosProtectionStatusResult](#publicipddosprotectionstatusresult)[]: The Ddos Protection Status Result for each public ip under a virtual network.
 
 ## VirtualNetworkEncryption
 ### Properties
@@ -5591,6 +6681,19 @@
 * **virtualHubs**: [SubResource](#subresource)[] (ReadOnly): List of VirtualHubs in the VirtualWAN.
 * **vpnSites**: [SubResource](#subresource)[] (ReadOnly): List of VpnSites in the VirtualWAN.
 
+## VirtualWanVpnProfileParameters
+### Properties
+* **authenticationMethod**: 'EAPMSCHAPv2' | 'EAPTLS' | string: VPN client authentication method.
+* **vpnServerConfigurationResourceId**: string: VpnServerConfiguration partial resource uri with which VirtualWan is associated to.
+
+## VM
+### Properties
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
 ## VnetRoute
 ### Properties
 * **bgpConnections**: [SubResource](#subresource)[] (ReadOnly): The list of references to HubBgpConnection objects.
@@ -5633,6 +6736,43 @@
 * **totalIngressBytesTransferred**: int (ReadOnly): Total of the Ingress Bytes Transferred in this P2S Vpn connection.
 * **vpnClientConnectionsCount**: int: The total of p2s vpn clients connected at this time to this P2SVpnGateway.
 
+## VpnClientConnectionHealthDetail
+### Properties
+* **egressBytesTransferred**: int (ReadOnly): The egress bytes per second.
+* **egressPacketsTransferred**: int (ReadOnly): The egress packets per second.
+* **ingressBytesTransferred**: int (ReadOnly): The ingress bytes per second.
+* **ingressPacketsTransferred**: int (ReadOnly): The ingress packets per second.
+* **maxBandwidth**: int (ReadOnly): The max band width.
+* **maxPacketsPerSecond**: int (ReadOnly): The max packets transferred per second.
+* **privateIpAddress**: string (ReadOnly): The assigned private Ip of a connected vpn client.
+* **publicIpAddress**: string (ReadOnly): The public Ip of a connected vpn client.
+* **vpnConnectionDuration**: int (ReadOnly): The duration time of a connected vpn client.
+* **vpnConnectionId**: string (ReadOnly): The vpn client Id.
+* **vpnConnectionTime**: string (ReadOnly): The start time of a connected vpn client.
+* **vpnUserName**: string (ReadOnly): The user name of a connected vpn client.
+
+## VpnClientConnectionHealthDetailListResult
+### Properties
+* **value**: [VpnClientConnectionHealthDetail](#vpnclientconnectionhealthdetail)[]: List of vpn client connection health.
+
+## VpnClientIPsecParameters
+### Properties
+* **dhGroup**: 'DHGroup1' | 'DHGroup14' | 'DHGroup2' | 'DHGroup2048' | 'DHGroup24' | 'ECP256' | 'ECP384' | 'None' | string (Required): The DH Group used in IKE Phase 1 for initial SA.
+* **ikeEncryption**: 'AES128' | 'AES192' | 'AES256' | 'DES' | 'DES3' | 'GCMAES128' | 'GCMAES256' | string (Required): The IKE encryption algorithm (IKE phase 2).
+* **ikeIntegrity**: 'GCMAES128' | 'GCMAES256' | 'MD5' | 'SHA1' | 'SHA256' | 'SHA384' | string (Required): The IKE integrity algorithm (IKE phase 2).
+* **ipsecEncryption**: 'AES128' | 'AES192' | 'AES256' | 'DES' | 'DES3' | 'GCMAES128' | 'GCMAES192' | 'GCMAES256' | 'None' | string (Required): The IPSec encryption algorithm (IKE phase 1).
+* **ipsecIntegrity**: 'GCMAES128' | 'GCMAES192' | 'GCMAES256' | 'MD5' | 'SHA1' | 'SHA256' | string (Required): The IPSec integrity algorithm (IKE phase 1).
+* **pfsGroup**: 'ECP256' | 'ECP384' | 'None' | 'PFS1' | 'PFS14' | 'PFS2' | 'PFS2048' | 'PFS24' | 'PFSMM' | string (Required): The Pfs Group used in IKE Phase 2 for new child SA.
+* **saDataSizeKilobytes**: int (Required): The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for P2S client..
+* **saLifeTimeSeconds**: int (Required): The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for P2S client.
+
+## VpnClientParameters
+### Properties
+* **authenticationMethod**: 'EAPMSCHAPv2' | 'EAPTLS' | string: VPN client authentication method.
+* **clientRootCertificates**: string[]: A list of client root certificates public certificate data encoded as Base-64 strings. Optional parameter for external radius based authentication with EAPTLS.
+* **processorArchitecture**: 'Amd64' | 'X86' | string: VPN client Processor Architecture.
+* **radiusServerAuthCertificate**: string: The public certificate data for the radius server authentication certificate as a Base-64 encoded string. Required only if external radius authentication has been configured with EAPTLS authentication.
+
 ## VpnClientRevokedCertificate
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -5664,6 +6804,16 @@
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [VpnConnectionProperties](#vpnconnectionproperties): Properties of the VPN connection.
 
+## VpnConnectionPacketCaptureStartParameters
+### Properties
+* **filterData**: string: Start Packet capture parameters on vpn connection.
+* **linkConnectionNames**: string[]: List of site link connection names.
+
+## VpnConnectionPacketCaptureStopParameters
+### Properties
+* **linkConnectionNames**: string[]: List of site link connection names.
+* **sasUrl**: string: SAS url for packet capture on vpn connection.
+
 ## VpnConnectionProperties
 ### Properties
 * **connectionBandwidth**: int: Expected bandwidth in MBPS.
@@ -5685,6 +6835,22 @@
 * **usePolicyBasedTrafficSelectors**: bool: Enable policy-based traffic selectors.
 * **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2' | string: Connection protocol used for this connection.
 * **vpnLinkConnections**: [VpnSiteLinkConnection](#vpnsitelinkconnection)[]: List of all vpn site link connections to the gateway.
+
+## VpnDeviceScriptParameters
+### Properties
+* **deviceFamily**: string: The device family for the vpn device.
+* **firmwareVersion**: string: The firmware version for the vpn device.
+* **vendor**: string: The vendor for the vpn device.
+
+## VpnGateway
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [VpnGatewayProperties](#vpngatewayproperties): Properties of the VPN gateway.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## VpnGatewayIpConfiguration
 ### Properties
@@ -5710,6 +6876,14 @@
 * **mode**: 'EgressSnat' | 'IngressSnat' | string: The Source NAT direction of a VPN NAT.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NAT Rule resource.
 * **type**: 'Dynamic' | 'Static' | string: The type of NAT rule for VPN NAT.
+
+## VpnGatewayPacketCaptureStartParameters
+### Properties
+* **filterData**: string: Start Packet capture parameters on vpn gateway.
+
+## VpnGatewayPacketCaptureStopParameters
+### Properties
+* **sasUrl**: string: SAS url for packet capture on vpn gateway.
 
 ## VpnGatewayProperties
 ### Properties
@@ -5737,6 +6911,18 @@
 ### Properties
 * **addressSpace**: string: Address space for Vpn NatRule mapping.
 * **portRange**: string: Port range for Vpn NatRule mapping.
+
+## VpnPacketCaptureStartParameters
+### Properties
+* **filterData**: string: Start Packet capture parameters.
+
+## VpnPacketCaptureStopParameters
+### Properties
+* **sasUrl**: string: SAS url for packet capture on virtual network gateway.
+
+## VpnProfileResponse
+### Properties
+* **profileUrl**: string: URL to the VPN profile.
 
 ## VpnServerConfigRadiusClientRootCertificate
 ### Properties
@@ -5788,6 +6974,10 @@
 * **vpnClientRevokedCertificates**: [VpnServerConfigVpnClientRevokedCertificate](#vpnserverconfigvpnclientrevokedcertificate)[]: VPN client revoked certificate of VpnServerConfiguration.
 * **vpnClientRootCertificates**: [VpnServerConfigVpnClientRootCertificate](#vpnserverconfigvpnclientrootcertificate)[]: VPN client root certificate of VpnServerConfiguration.
 * **vpnProtocols**: ('IkeV2' | 'OpenVPN' | string)[]: VPN protocols for the VpnServerConfiguration.
+
+## VpnServerConfigurationsResponse
+### Properties
+* **vpnServerConfigurationResourceIds**: string[]: List of VpnServerConfigurations associated with VirtualWan.
 
 ## VpnServerConfigVpnClientRevokedCertificate
 ### Properties

@@ -118,6 +118,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisRuns' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function commit (Microsoft.Network/networkManagers@2024-01-01-preview)
+* **Resource**: Microsoft.Network/networkManagers
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [NetworkManagerCommit](#networkmanagercommit)
+* **Output**: [NetworkManagerCommit](#networkmanagercommit)
+
+## Function getPoolUsage (Microsoft.Network/networkManagers/ipamPools@2024-01-01-preview)
+* **Resource**: Microsoft.Network/networkManagers/ipamPools
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [PoolUsage](#poolusage)
+
 ## Function listAssociatedResources (Microsoft.Network/networkManagers/ipamPools@2024-01-01-preview)
 * **Resource**: Microsoft.Network/networkManagers/ipamPools
 * **ApiVersion**: 2024-01-01-preview
@@ -210,6 +221,13 @@
 * **sourceIps**: string[] (Required): List of source IP addresses of the traffic..
 * **sourcePorts**: string[] (Required): The source ports of the traffic.
 
+## NetworkManagerCommit
+### Properties
+* **commitId**: string (ReadOnly): Commit Id.
+* **commitType**: 'Connectivity' | 'SecurityAdmin' | string (Required): Commit Type.
+* **configurationIds**: string[]: List of configuration ids.
+* **targetLocations**: string[] (Required): List of target locations.
+
 ## NetworkManagerDeploymentStatus
 ### Properties
 * **commitTime**: string: Commit Time.
@@ -265,6 +283,18 @@
 * **nextLink**: string: The link used to get the next page of operations.
 * **value**: [PoolAssociation](#poolassociation)[]
 
+## PoolUsage
+### Properties
+* **addressPrefixes**: string[] (ReadOnly): List of IP address prefixes of the resource.
+* **allocatedAddressPrefixes**: string[] (ReadOnly): List of assigned IP address prefixes.
+* **availableAddressPrefixes**: string[] (ReadOnly): List of available IP address prefixes.
+* **childPools**: [ResourceBasics](#resourcebasics)[] (ReadOnly): List of IpamPool that are children of this IpamPool.
+* **numberOfAllocatedIPAddresses**: string (ReadOnly): Total number of assigned IP addresses in the IpamPool.
+* **numberOfAvailableIPAddresses**: string (ReadOnly): Total number of available IP addresses in the IpamPool.
+* **numberOfReservedIPAddresses**: string (ReadOnly): Total number of reserved IP addresses in the IpamPool.
+* **reservedAddressPrefixes**: string[] (ReadOnly): List of reserved IP address prefixes. These IP addresses could be reclaimed if not assigned in the given time.
+* **totalNumberOfIPAddresses**: string (ReadOnly): Total number of IP addresses managed in the IpamPool.
+
 ## ReachabilityAnalysisIntentProperties
 ### Properties
 * **description**: string
@@ -281,6 +311,11 @@
 * **intentContent**: [IntentContent](#intentcontent) (ReadOnly): Intent information.
 * **intentId**: string (Required): Id of the intent resource to run analysis on.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning states of a resource.
+
+## ResourceBasics
+### Properties
+* **addressPrefixes**: string[]: List of IP address prefixes of the resource.
+* **resourceId**: string: ResourceId of the Azure resource.
 
 ## ResourceTags
 ### Properties

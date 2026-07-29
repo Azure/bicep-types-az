@@ -1139,5 +1139,160 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatus",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique Operation Status Identifier."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Status of the operation."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start Time when the operation was initially executed."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "An error from the Azure Bare Metal Infrastructure service."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Requesting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Executing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Server-defined set of error codes."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable representation of the error."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2023-08-04-preview",
+    "output": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceState",
+    "properties": {
+      "forceState": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "Whether to force restart by shutting all processes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inactive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2023-08-04-preview",
+    "output": {
+      "$ref": "#/110"
+    },
+    "input": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "shutdown",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2023-08-04-preview",
+    "output": {
+      "$ref": "#/110"
+    }
   }
 ]

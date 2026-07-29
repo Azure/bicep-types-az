@@ -3225,5 +3225,333 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Discount",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Discount properties"
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Managed service identity (system assigned and/or user assigned identities)"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The resource model definition representing SKU"
+      },
+      "plan": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "Plan for the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.BillingBenefits/discounts",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity name"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 0,
+        "description": "Role assignment entity properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntityProperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Principal Id"
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role definition id"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Scope of the role assignment entity"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "elevate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/253"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateValidateRequest",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name"
+      },
+      "appliedScopeType": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "Type of the Applied Scope."
+      },
+      "appliedScopeProperties": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Properties specific to applied scope type. Not required if not applicable."
+      },
+      "renew": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Setting this to true will automatically purchase a new benefit on the expiration date time."
+      },
+      "renewProperties": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Single"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/257"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidateResponse",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 0
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Url to get the next page."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidResponseProperty",
+    "properties": {
+      "valid": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Indicates if the provided input was valid"
+      },
+      "reasonCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason code if the provided input was invalid"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason if the provided input was invalid"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/264"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/263"
+    },
+    "input": {
+      "$ref": "#/256"
+    }
   }
 ]

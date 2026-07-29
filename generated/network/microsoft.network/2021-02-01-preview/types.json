@@ -4940,5 +4940,32 @@
     "input": {
       "$ref": "#/383"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Network/networkSecurityPerimeters/resourceAssociations",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/400"
+    },
+    "input": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Network/networkSecurityPerimeters/profiles/accessRules",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/400"
+    },
+    "input": {
+      "$ref": "#/400"
+    }
   }
 ]

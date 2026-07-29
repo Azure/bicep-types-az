@@ -20,6 +20,23 @@
 * **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties): Properties of the resource
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Support/supportTickets@2019-05-01-preview)
+* **Resource**: Microsoft.Support/supportTickets
+* **ApiVersion**: 2019-05-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate
+* **type**: 'Microsoft.Support/communications' | 'Microsoft.Support/supportTickets' (Required): The type of resource
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
+
 ## CommunicationDetailsProperties
 ### Properties
 * **body**: string (Required): Body of the communication

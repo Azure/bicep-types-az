@@ -2359,11 +2359,113 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ResourceBody",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ID of the resource."
+      },
+      "statusReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for resource operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Connection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of connection"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "link",
+    "resourceType": "Microsoft.AzureDataTransfer/connections",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/200"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PendingConnectionListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/246"
         },
         "flags": 1,
         "description": "The items on this page"
@@ -2397,7 +2499,7 @@
       },
       "direction": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "Direction of data movement"
@@ -2411,14 +2513,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/212"
         },
         "flags": 2,
         "description": "Status of the connection"
       },
       "forceDisabledStatus": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/216"
         },
         "flags": 2,
         "description": "Force disablement status of the current connection"
@@ -2432,7 +2534,7 @@
       },
       "linkStatus": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/219"
         },
         "flags": 2,
         "description": "Link status of the current connection"
@@ -2446,7 +2548,7 @@
       },
       "flowTypes": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/235"
         },
         "flags": 0,
         "description": "The flow types being requested for this connection. This FlowType property has reached end of life support starting version 2025-05-30-preview. Please create a FlowProfile resource instead."
@@ -2495,42 +2597,42 @@
       },
       "secondaryContacts": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "The secondary contacts for this connection request"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/241"
         },
         "flags": 2,
         "description": "Provisioning state of the connection"
       },
       "policies": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/242"
         },
         "flags": 0,
         "description": "The policies for this connection. The policies property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
       },
       "schemas": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "The schemas for this connection. The schemas property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
       },
       "schemaUris": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/244"
         },
         "flags": 0,
         "description": "The schema URIs for this connection. The schemaUris property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
       },
       "tags": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/245"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2584,10 +2686,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/201"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/206"
       },
       {
         "$ref": "#/2"
@@ -2614,16 +2716,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/204"
+        "$ref": "#/208"
       },
       {
-        "$ref": "#/205"
+        "$ref": "#/209"
       },
       {
-        "$ref": "#/206"
+        "$ref": "#/210"
       },
       {
-        "$ref": "#/207"
+        "$ref": "#/211"
       },
       {
         "$ref": "#/2"
@@ -2642,10 +2744,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/209"
+        "$ref": "#/213"
       },
       {
-        "$ref": "#/210"
+        "$ref": "#/214"
       },
       {
         "$ref": "#/2"
@@ -2655,7 +2757,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/211"
+      "$ref": "#/215"
     }
   },
   {
@@ -2670,10 +2772,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/213"
+        "$ref": "#/217"
       },
       {
-        "$ref": "#/214"
+        "$ref": "#/218"
       },
       {
         "$ref": "#/2"
@@ -2740,18 +2842,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/216"
-      },
-      {
-        "$ref": "#/217"
-      },
-      {
-        "$ref": "#/218"
-      },
-      {
-        "$ref": "#/219"
-      },
-      {
         "$ref": "#/220"
       },
       {
@@ -2782,6 +2872,18 @@
         "$ref": "#/229"
       },
       {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -2789,7 +2891,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/230"
+      "$ref": "#/234"
     }
   },
   {
@@ -2818,16 +2920,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/233"
+        "$ref": "#/237"
       },
       {
-        "$ref": "#/234"
+        "$ref": "#/238"
       },
       {
-        "$ref": "#/235"
+        "$ref": "#/239"
       },
       {
-        "$ref": "#/236"
+        "$ref": "#/240"
       },
       {
         "$ref": "#/2"
@@ -2863,7 +2965,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/200"
+      "$ref": "#/204"
     }
   },
   {
@@ -2872,7 +2974,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections",
     "apiVersion": "2025-05-21",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/203"
     }
   },
   {
@@ -2881,7 +2983,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/291"
         },
         "flags": 1,
         "description": "The items on this page"
@@ -2936,7 +3038,7 @@
       },
       "linkStatus": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/252"
         },
         "flags": 2,
         "description": "Link status of the current flow"
@@ -2950,14 +3052,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/255"
         },
         "flags": 0,
         "description": "Status of the current flow"
       },
       "forceDisabledStatus": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/259"
         },
         "flags": 2,
         "description": "Force disablement status of the current flow"
@@ -2999,28 +3101,28 @@
       },
       "flowType": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/274"
         },
         "flags": 0,
         "description": "The flow type for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
       },
       "dataType": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/277"
         },
         "flags": 0,
         "description": "Type of data to transfer via the flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/282"
         },
         "flags": 2,
         "description": "Provisioning state of the flow"
       },
       "policies": {
         "type": {
-          "$ref": "#/279"
+          "$ref": "#/283"
         },
         "flags": 0,
         "description": "The policies for this flow. The property has reached end of life support starting version 2025-05-30-preview. Please create and use a FlowProfile resource instead."
@@ -3062,7 +3164,7 @@
       },
       "streamProtocol": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/287"
         },
         "flags": 0,
         "description": "The protocol of the stream"
@@ -3090,14 +3192,14 @@
       },
       "destinationEndpoints": {
         "type": {
-          "$ref": "#/284"
+          "$ref": "#/288"
         },
         "flags": 0,
         "description": "The destination endpoints of the stream"
       },
       "destinationEndpointPorts": {
         "type": {
-          "$ref": "#/285"
+          "$ref": "#/289"
         },
         "flags": 0,
         "description": "The destination endpoint ports of the stream"
@@ -3118,7 +3220,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/290"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3172,10 +3274,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/246"
+        "$ref": "#/250"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/251"
       },
       {
         "$ref": "#/2"
@@ -3194,10 +3296,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/249"
+        "$ref": "#/253"
       },
       {
-        "$ref": "#/250"
+        "$ref": "#/254"
       },
       {
         "$ref": "#/2"
@@ -3216,10 +3318,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/252"
+        "$ref": "#/256"
       },
       {
-        "$ref": "#/253"
+        "$ref": "#/257"
       },
       {
         "$ref": "#/2"
@@ -3229,7 +3331,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/254"
+      "$ref": "#/258"
     }
   },
   {
@@ -3292,18 +3394,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/256"
-      },
-      {
-        "$ref": "#/257"
-      },
-      {
-        "$ref": "#/258"
-      },
-      {
-        "$ref": "#/259"
-      },
-      {
         "$ref": "#/260"
       },
       {
@@ -3334,6 +3424,18 @@
         "$ref": "#/269"
       },
       {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -3350,10 +3452,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/271"
+        "$ref": "#/275"
       },
       {
-        "$ref": "#/272"
+        "$ref": "#/276"
       },
       {
         "$ref": "#/2"
@@ -3380,16 +3482,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/274"
+        "$ref": "#/278"
       },
       {
-        "$ref": "#/275"
+        "$ref": "#/279"
       },
       {
-        "$ref": "#/276"
+        "$ref": "#/280"
       },
       {
-        "$ref": "#/277"
+        "$ref": "#/281"
       },
       {
         "$ref": "#/2"
@@ -3418,13 +3520,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/280"
+        "$ref": "#/284"
       },
       {
-        "$ref": "#/281"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/286"
       },
       {
         "$ref": "#/2"
@@ -3454,7 +3556,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/245"
+      "$ref": "#/249"
     }
   },
   {
@@ -3463,7 +3565,211 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections",
     "apiVersion": "2025-05-21",
     "output": {
-      "$ref": "#/244"
+      "$ref": "#/248"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approveConnection",
+    "resourceType": "Microsoft.AzureDataTransfer/pipelines",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/200"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Action",
+    "properties": {
+      "actionType": {
+        "type": {
+          "$ref": "#/298"
+        },
+        "flags": 1,
+        "description": "Type of action to be executed"
+      },
+      "targetType": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 1,
+        "description": "Type of target to execute the action on"
+      },
+      "targets": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 1,
+        "description": "Targets for the action"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Business justification for the action"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllowUpdates"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForceDisable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pipeline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FlowType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Pipeline",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The set of configurable properties for the Pipeline resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeAction",
+    "resourceType": "Microsoft.AzureDataTransfer/pipelines",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/304"
+    },
+    "input": {
+      "$ref": "#/294"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rejectConnection",
+    "resourceType": "Microsoft.AzureDataTransfer/pipelines",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/200"
+    },
+    "input": {
+      "$ref": "#/199"
     }
   },
   {
@@ -3472,7 +3778,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/309"
         },
         "flags": 0,
         "description": "Connection ID to target"
@@ -3491,7 +3797,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/315"
         },
         "flags": 0,
         "description": "List flows by pipeline result by connection"
@@ -3511,7 +3817,7 @@
       },
       "flows": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/314"
         },
         "flags": 0,
         "description": "List of flows associated with the connection."
@@ -3545,7 +3851,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/313"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3598,13 +3904,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/293"
+      "$ref": "#/312"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/292"
+      "$ref": "#/311"
     }
   },
   {
@@ -3613,10 +3919,10 @@
     "resourceType": "Microsoft.AzureDataTransfer/pipelines",
     "apiVersion": "2025-05-21",
     "output": {
-      "$ref": "#/291"
+      "$ref": "#/310"
     },
     "input": {
-      "$ref": "#/289"
+      "$ref": "#/308"
     }
   },
   {
@@ -3625,7 +3931,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/318"
         },
         "flags": 0,
         "description": "Schemas array."
@@ -3644,10 +3950,254 @@
     "resourceType": "Microsoft.AzureDataTransfer/pipelines",
     "apiVersion": "2025-05-21",
     "output": {
-      "$ref": "#/298"
+      "$ref": "#/317"
     },
     "input": {
       "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatePassphrase",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDestinationEndpointPortsResult",
+    "properties": {
+      "ports": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "The destination endpoint port for the flow stream"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDestinationEndpointPorts",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDestinationEndpointsResult",
+    "properties": {
+      "endpoints": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 0,
+        "description": "The destination endpoints for the flow stream"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDestinationEndpoints",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/326"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSourceAddresses",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetStreamConnectionStringResult",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The connection string for the specified streaming flow"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStreamConnectionString",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "link",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetDestinationEndpointPorts",
+    "properties": {
+      "ports": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 0,
+        "description": "The specified flow destination endpoint ports"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDestinationEndpointPorts",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/333"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetDestinationEndpoints",
+    "properties": {
+      "endpoints": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 0,
+        "description": "The specified flow destination endpoints."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDestinationEndpoints",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/336"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetStreamPassphrase",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The passphrase used for SRT streams (non-secret)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setPassphrase",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/339"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetSourceAddresses",
+    "properties": {
+      "values": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 0,
+        "description": "Source addresses"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setSourceAddresses",
+    "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
+    "apiVersion": "2025-05-21",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/341"
     }
   }
 ]

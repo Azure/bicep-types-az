@@ -737,5 +737,67 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckCapacityNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Name for checking availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type of PowerBI dedicated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckCapacityNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Indicator of availability of the capacity name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason of unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed message of the request unavailability."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.PowerBIDedicated/locations",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
   }
 ]

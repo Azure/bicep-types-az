@@ -37,6 +37,11 @@
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getCallbackConfig (Microsoft.ContainerRegistry/registries/webhooks@2017-10-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2017-10-01
+* **Output**: [CallbackConfig](#callbackconfig)
+
 ## Function listCredentials (Microsoft.ContainerRegistry/registries@2017-10-01)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2017-10-01
@@ -47,9 +52,36 @@
 * **ApiVersion**: 2017-10-01
 * **Output**: [EventListResult](#eventlistresult)
 
+## Function ping (Microsoft.ContainerRegistry/registries/webhooks@2017-10-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2017-10-01
+* **Output**: [EventInfo](#eventinfo)
+
+## Function regenerateCredential (Microsoft.ContainerRegistry/registries@2017-10-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2017-10-01
+* **Input**: [RegenerateCredentialParameters](#regeneratecredentialparameters)
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
+## Function updatePolicies (Microsoft.ContainerRegistry/registries@2017-10-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2017-10-01
+* **Input**: [RegistryPolicies](#registrypolicies)
+* **Output**: [RegistryPolicies](#registrypolicies)
+
 ## Actor
 ### Properties
 * **name**: string: The subject or username associated with the request context that generated the event.
+
+## CallbackConfig
+### Properties
+* **customHeaders**: [CallbackConfigCustomHeaders](#callbackconfigcustomheaders): Custom headers that will be added to the webhook notifications.
+* **serviceUri**: string (Required): The service URI for the webhook to post notifications.
+
+## CallbackConfigCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Event
 ### Properties
@@ -66,6 +98,10 @@
 * **source**: [Source](#source): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
 * **target**: [Target](#target): The target of the event.
 * **timestamp**: string: The time at which the event occurred.
+
+## EventInfo
+### Properties
+* **id**: string: The event ID.
 
 ## EventListResult
 ### Properties
@@ -109,6 +145,14 @@
 * **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The virtual network rules.
 
+## QuarantinePolicy
+### Properties
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+
+## RegenerateCredentialParameters
+### Properties
+* **name**: 'password' | 'password2' (Required): Specifies name of the password which should be regenerated -- password or password2.
+
 ## RegistryListCredentialsResult
 ### Properties
 * **passwords**: [RegistryPassword](#registrypassword)[]: The list of passwords for a container registry.
@@ -118,6 +162,11 @@
 ### Properties
 * **name**: 'password' | 'password2': The password name.
 * **value**: string: The password value.
+
+## RegistryPolicies
+### Properties
+* **quarantinePolicy**: [QuarantinePolicy](#quarantinepolicy): An object that represents quarantine policy for a container registry.
+* **trustPolicy**: [TrustPolicy](#trustpolicy): An object that represents content trust policy for a container registry.
 
 ## RegistryProperties
 ### Properties
@@ -183,6 +232,11 @@
 * **tag**: string: The tag name.
 * **url**: string: The direct URL to the content.
 * **version**: string: The version of the artifact.
+
+## TrustPolicy
+### Properties
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+* **type**: 'Notary' | string: The type of trust policy.
 
 ## VirtualNetworkRule
 ### Properties

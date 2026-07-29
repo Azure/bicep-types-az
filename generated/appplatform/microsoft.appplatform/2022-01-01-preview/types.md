@@ -272,10 +272,81 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppPlatform/locations@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/locations
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [TestKeys](#testkeys)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/buildServices/builds/results@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/buildServices/builds/results
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [BuildResultLog](#buildresultlog)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/apps/deployments@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [LogFileUrlResponse](#logfileurlresponse)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/buildServices@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/buildServices
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/apps@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
 ## Function listTestKeys (Microsoft.AppPlatform/Spring@2022-01-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2022-01-01-preview
 * **Output**: [TestKeys](#testkeys)
+
+## Function regenerateTestKey (Microsoft.AppPlatform/Spring@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
+* **Output**: [TestKeys](#testkeys)
+
+## Function setActiveDeployments (Microsoft.AppPlatform/Spring/apps@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [ActiveDeploymentCollection](#activedeploymentcollection)
+* **Output**: [AppResource](#appresource)
+
+## Function validate (Microsoft.AppPlatform/Spring/configurationServices@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/configurationServices
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [ConfigurationServiceSettings](#configurationservicesettings)
+* **Output**: [ConfigurationServiceSettingsValidateResult](#configurationservicesettingsvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/gateways@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/gateways
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apiPortals@2022-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apiPortals
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## ActiveDeploymentCollection
+### Properties
+* **activeDeploymentNames**: string[]: Collection of Deployment name.
 
 ## AddonProfile
 ### Properties
@@ -316,6 +387,16 @@
 ## ApplicationInsightsAgentVersions
 ### Properties
 * **java**: string (ReadOnly): Indicates the version of application insight java agent
+
+## AppResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
+* **identity**: [ManagedIdentityProperties](#managedidentityproperties): The Managed Identity type of the app resource
+* **location**: string: The GEO location of the application, always the same with its parent resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [AppResourceProperties](#appresourceproperties): Properties of the App resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource.
 
 ## AppResourceProperties
 ### Properties
@@ -401,6 +482,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## BuildResultLog
+### Properties
+* **blobUrl**: string: The public download URL of this build result log
 
 ## BuildResultProperties
 ### Properties
@@ -499,6 +584,11 @@
 ### Properties
 * **repositories**: [ConfigurationServiceGitRepository](#configurationservicegitrepository)[]: Repositories of Application Configuration Service git property.
 
+## ConfigurationServiceGitPropertyValidateResult
+### Properties
+* **gitReposValidationResult**: [ValidationMessages](#validationmessages)[]: The detail validation results
+* **isValid**: bool: Indicate if the configuration service settings are valid
+
 ## ConfigurationServiceGitRepository
 ### Properties
 * **hostKey**: string: Public sshKey of git repository.
@@ -535,6 +625,10 @@
 ### Properties
 * **gitProperty**: [ConfigurationServiceGitProperty](#configurationservicegitproperty): Property of git environment.
 
+## ConfigurationServiceSettingsValidateResult
+### Properties
+* **gitPropertyValidationResult**: [ConfigurationServiceGitPropertyValidateResult](#configurationservicegitpropertyvalidateresult): Validation result for configuration service settings
+
 ## ContainerProbeSettings
 ### Properties
 * **disableProbe**: bool: Indicates whether disable the liveness and readiness probe
@@ -552,6 +646,15 @@
 * **appName**: string (ReadOnly): The app name of domain.
 * **certName**: string: The bound certificate name of domain.
 * **thumbprint**: string: The thumbprint of bound certificate.
+
+## CustomDomainValidatePayload
+### Properties
+* **name**: string (Required): Name to be validated
+
+## CustomDomainValidateResult
+### Properties
+* **isValid**: bool: Indicates if domain name is valid.
+* **message**: string: Message of why domain name is invalid.
 
 ## CustomPersistentDiskProperties
 * **Discriminator**: type
@@ -709,6 +812,10 @@
 * **loadTrustStore**: bool: Indicate whether the certificate will be loaded into default trust store, only work for Java runtime.
 * **resourceId**: string (Required): Resource Id of loaded certificate
 
+## LogFileUrlResponse
+### Properties
+* **url**: string (Required): URL of the log file
+
 ## ManagedIdentityProperties
 ### Properties
 * **principalId**: string: Principal Id
@@ -723,6 +830,17 @@
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
+
+## NameAvailability
+### Properties
+* **message**: string: Message why the name is not available
+* **nameAvailable**: bool: Indicates whether the name is available
+* **reason**: string: Reason why the name is not available
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): Name to be checked
+* **type**: string (Required): Type of the resource to check name availability
 
 ## NetworkProfile
 ### Properties
@@ -744,6 +862,10 @@
 * **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
 * **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
+## RegenerateTestKeyRequestPayload
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): Type of the test key
+
 ## RequiredTraffic
 ### Properties
 * **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
@@ -756,6 +878,11 @@
 ### Properties
 * **cpu**: string: Required CPU. 1 core can be represented by 1 or 1000m. This should be 500m or 1 for Basic tier, and {500m, 1, 2, 3, 4} for Standard tier.
 * **memory**: string: Required memory. 1 GB can be represented by 1Gi or 1024Mi. This should be {512Mi, 1Gi, 2Gi} for Basic tier, and {512Mi, 1Gi, 2Gi, ..., 8Gi} for Standard tier.
+
+## ResourceUploadDefinition
+### Properties
+* **relativePath**: string: Source relative path
+* **uploadUrl**: string: Upload URL
 
 ## ServiceRegistryInstance
 ### Properties
@@ -882,4 +1009,9 @@ the relative path to the target module/project.
 * **runtimeVersion**: string: Runtime version of the source file
 * **type**: 'Source' (Required): Type of the source uploaded
 
+
+## ValidationMessages
+### Properties
+* **messages**: string[]: Detailed validation messages.
+* **name**: string: The name of the configuration service git repository.
 

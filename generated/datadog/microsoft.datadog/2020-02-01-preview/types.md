@@ -44,6 +44,11 @@
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getDefaultKey (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [DatadogApiKey](#datadogapikey)
+
 ## Function listApiKeys (Microsoft.Datadog/monitors@2020-02-01-preview)
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2020-02-01-preview
@@ -63,6 +68,11 @@
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2020-02-01-preview
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function refreshSetPasswordLink (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
 
 ## DatadogAgreementProperties
 ### Properties
@@ -130,6 +140,10 @@
 * **linkingClientId**: string {sensitive} (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
 * **name**: string (ReadOnly): Name of the Datadog organization.
 * **redirectUri**: string (WriteOnly): The redirect uri for linking.
+
+## DatadogSetPasswordLink
+### Properties
+* **setPasswordLink**: string
 
 ## DatadogSingleSignOnProperties
 ### Properties

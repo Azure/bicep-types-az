@@ -37,9 +37,72 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/locations/placementScores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generate (Microsoft.Compute/locations/diagnostics@2024-06-01-preview)
+* **Resource**: Microsoft.Compute/locations/diagnostics
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [SpotPlacementRecommenderInput](#spotplacementrecommenderinput)
+* **Output**: [SpotPlacementRecommenderResponse](#spotplacementrecommenderresponse)
+
+## Function generate (Microsoft.Compute/locations/placementScores@2024-06-01-preview)
+* **Resource**: Microsoft.Compute/locations/placementScores
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [SpotPlacementScoresInput](#spotplacementscoresinput)
+* **Output**: [SpotPlacementScoresResponse](#spotplacementscoresresponse)
+
+## Function validateStorageConfiguration (Microsoft.Compute/locations/diagnostics@2024-06-01-preview)
+* **Resource**: Microsoft.Compute/locations/diagnostics
+* **ApiVersion**: 2024-06-01-preview
+* **Output**: [StorageConfigurationResponse](#storageconfigurationresponse)
+
 ## DiagnosticProperties
 ### Properties
 * **supportedResourceTypes**: string[]: Describes what are the supported resource types for a diagnostic.
+
+## PlacementScore
+### Properties
+* **availabilityZone**: string: The availability region.
+* **isQuotaAvailable**: bool: Whether the desired quota is available.
+* **region**: string: The region.
+* **score**: string: The placement score.
+* **sku**: string: The resource's CRP virtual machine SKU size.
+
+## ResourceSize
+### Properties
+* **sku**: string: The resource's CRP virtual machine SKU size.
+
+## SpotPlacementRecommenderInput
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired resource SKUs.
+
+## SpotPlacementRecommenderResponse
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired resource SKUs.
+* **placementScores**: [PlacementScore](#placementscore)[]: The spot placement scores.
+
+## SpotPlacementScoresInput
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired resource SKUs.
+
+## SpotPlacementScoresResponse
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired resource SKUs.
+* **placementScores**: [PlacementScore](#placementscore)[]: The spot placement scores.
+
+## StorageConfigurationResponse
+### Properties
+* **storageAccountId**: string: Fully qualified storage account Id. Example: "/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}"
 
 ## SystemData
 ### Properties

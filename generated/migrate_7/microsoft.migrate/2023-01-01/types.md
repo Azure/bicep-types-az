@@ -48,6 +48,45 @@
 * **properties**: [SolutionProperties](#solutionproperties): Gets or sets the properties of the solution.
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cleanupData (Microsoft.Migrate/migrateProjects/solutions@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects/solutions
+* **ApiVersion**: 2023-01-01
+* **Output**: any
+
+## Function getConfig (Microsoft.Migrate/migrateProjects/solutions@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects/solutions
+* **ApiVersion**: 2023-01-01
+* **Output**: [SolutionConfig](#solutionconfig)
+
+## Function refreshSummary (Microsoft.Migrate/migrateProjects@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2023-01-01
+* **Input**: [RefreshSummaryInput](#refreshsummaryinput)
+* **Output**: [RefreshSummaryResult](#refreshsummaryresult)
+
+## Function registerTool (Microsoft.Migrate/migrateProjects@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2023-01-01
+* **Input**: [RegisterToolInput](#registertoolinput)
+* **Output**: [RegistrationResult](#registrationresult)
+
+## Function registrationDetails (Microsoft.Migrate/migrateProjects@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2023-01-01
+* **Input**: [RegistrationDetailsInput](#registrationdetailsinput)
+* **Output**: [RegistrationDetailsResponse](#registrationdetailsresponse)
+
+## Function validate (Microsoft.Migrate/migrateProjects/privateEndpointConnectionProxies@2023-01-01)
+* **Resource**: Microsoft.Migrate/migrateProjects/privateEndpointConnectionProxies
+* **ApiVersion**: 2023-01-01
+* **Input**: [PrivateEndpointConnectionProxy](#privateendpointconnectionproxy)
+* **Output**: [PrivateEndpointConnectionProxy](#privateendpointconnectionproxy)
+
+## AadAppDetails
+### Properties
+* **applicationId**: string
+* **tenantId**: string
+
 ## GroupConnectivityInformation
 ### Properties
 * **customerVisibleFqdns**: string[]
@@ -97,6 +136,15 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets the properties of the object.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state.
 
+## PrivateEndpointConnectionProxy
+### Properties
+* **eTag**: string
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProxyProperties](#privateendpointconnectionproxyproperties): Properties of a private endpoint connection proxy.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly)
+
 ## PrivateEndpointConnectionProxyProperties
 ### Properties
 * **remotePrivateEndpoint**: [PrivateEndpointDetails](#privateendpointdetails) (ReadOnly): Defines Private endpoint additional details.
@@ -142,9 +190,39 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## RefreshSummaryInput
+### Properties
+* **goal**: 'DataCenter' | 'Databases' | 'DesktopVirtualization' | 'Servers' | 'WebApplications' | string: Gets or sets the goal for which summary needs to be refreshed.
+
+## RefreshSummaryResult
+### Properties
+* **isRefreshed**: bool: Gets or sets a value indicating whether the migrate project summary is refreshed.
+
+## RegisterToolInput
+### Properties
+* **tool**: 'AppServiceMigrationAssistant' | 'Carbonite' | 'CloudSphere' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'Device42' | 'Flexera' | 'JetStream' | 'Lakeside' | 'Modernization' | 'Movere' | 'RackWare' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerDiscovery_Import' | 'ServerMigration' | 'ServerMigration_DataReplication' | 'ServerMigration_Replication' | 'Turbonomic' | 'UnifyCloud' | 'Unknown' | 'Zerto' | string: Gets or sets the tool to be registered.
+
+## RegistrationDetailsInput
+### Properties
+* **applicationDetails**: [AadAppDetails](#aadappdetails)
+* **tool**: 'AppServiceMigrationAssistant' | 'Carbonite' | 'CloudSphere' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'Device42' | 'Flexera' | 'JetStream' | 'Lakeside' | 'Modernization' | 'Movere' | 'RackWare' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerDiscovery_Import' | 'ServerMigration' | 'ServerMigration_DataReplication' | 'ServerMigration_Replication' | 'Turbonomic' | 'UnifyCloud' | 'Unknown' | 'Zerto' | string: Gets or sets the tool to be registered.
+
+## RegistrationDetailsResponse
+### Properties
+* **oneTimeKey**: string
+* **serviceEndpoint**: string
+
+## RegistrationResult
+### Properties
+* **isRegistered**: bool: Gets or sets a value indicating whether the tool is registered or not.
+
 ## ResourceId
 ### Properties
 * **id**: string (ReadOnly)
+
+## SolutionConfig
+### Properties
+* **publisherSasUri**: string: Gets or sets the publisher sas uri for the solution.
 
 ## SolutionDetails
 ### Properties

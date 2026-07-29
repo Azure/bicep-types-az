@@ -4814,5 +4814,585 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEnrichingKpis",
+    "resourceType": "Microsoft.CustomerInsights/hubs/profiles",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/356"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SuggestRelationshipLinksResponse",
+    "properties": {
+      "interactionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The interaction name."
+      },
+      "suggestedRelationships": {
+        "type": {
+          "$ref": "#/362"
+        },
+        "flags": 2,
+        "description": "Suggested relationships for the type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipsLookup",
+    "properties": {
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relationship profile."
+      },
+      "profilePropertyReferences": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 2,
+        "description": "The property references for the profile type."
+      },
+      "relatedProfileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The related profile."
+      },
+      "relatedProfilePropertyReferences": {
+        "type": {
+          "$ref": "#/361"
+        },
+        "flags": 2,
+        "description": "The property references for the related profile type."
+      },
+      "existingRelationshipName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of existing Relationship."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/359"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suggestRelationshipLinks",
+    "resourceType": "Microsoft.CustomerInsights/hubs/interactions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/358"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionTrainingResults",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "scoreName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Score name."
+      },
+      "predictionDistribution": {
+        "type": {
+          "$ref": "#/367"
+        },
+        "flags": 2,
+        "description": "Prediction distribution."
+      },
+      "canonicalProfiles": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 2,
+        "description": "Canonical profiles."
+      },
+      "primaryProfileInstanceCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Instance count of the primary profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDistributionDefinition",
+    "properties": {
+      "totalPositives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Total positive in the distribution."
+      },
+      "totalNegatives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Total negatives in the distribution."
+      },
+      "distributions": {
+        "type": {
+          "$ref": "#/369"
+        },
+        "flags": 0,
+        "description": "Distributions of the prediction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDistributionDefinitionDistributionsItem",
+    "properties": {
+      "scoreThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Score threshold."
+      },
+      "positives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of positives."
+      },
+      "negatives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of negatives."
+      },
+      "positivesAboveThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of positives above threshold."
+      },
+      "negativesAboveThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of negatives above threshold."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/368"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanonicalProfileDefinition",
+    "properties": {
+      "canonicalProfileId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Canonical profile ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "Properties of the canonical profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanonicalProfileDefinitionPropertiesItem",
+    "properties": {
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Profile name."
+      },
+      "profilePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property name of profile."
+      },
+      "rank": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The rank."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "Type of canonical property value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Value of the canonical property."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Numeric"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Categorical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DerivedCategorical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DerivedNumeric"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/371"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/370"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getTrainingResults",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/366"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionModelStatus",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "predictionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The prediction name."
+      },
+      "predictionGuidId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The prediction GUID ID."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 1,
+        "description": "Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The model status message."
+      },
+      "trainingSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the training set."
+      },
+      "testSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the test set."
+      },
+      "validationSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the validation set."
+      },
+      "trainingAccuracy": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The training accuracy."
+      },
+      "signalsUsed": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The signals used."
+      },
+      "modelVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Version of the model."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingDiscovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingFeaturing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Featuring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeaturingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingTraining"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Training"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrainingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Evaluating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EvaluatingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingModelConfirmation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
+      },
+      {
+        "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
+      },
+      {
+        "$ref": "#/391"
+      },
+      {
+        "$ref": "#/392"
+      },
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getModelStatus",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/380"
+    }
   }
 ]

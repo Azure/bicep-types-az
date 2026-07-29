@@ -59,6 +59,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBillingInfo (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Output**: [BillingInfoResponse](#billinginforesponse)
+
+## Function getDefaultApplicationKey (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Output**: [DatadogApplicationKey](#datadogapplicationkey)
+
+## Function getDefaultKey (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Output**: [DatadogApiKey](#datadogapikey)
+
+## Function latestLinkedSaaS (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Output**: [LatestLinkedSaaSResponse](#latestlinkedsaasresponse)
+
+## Function linkSaaS (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Input**: [SaaSData](#saasdata)
+* **Output**: [DatadogMonitorResource](#datadogmonitorresource)
+
 ## Function listApiKeys (Microsoft.Datadog/monitors@2025-12-26-preview)
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2025-12-26-preview
@@ -79,10 +105,32 @@
 * **ApiVersion**: 2025-12-26-preview
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
 
+## Function manageSreAgentConnectors (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Input**: [SreAgentConnectorRequest](#sreagentconnectorrequest)
+* **Output**: [SreAgentConfigurationListResponse](#sreagentconfigurationlistresponse)
+
+## Function refreshSetPasswordLink (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
+
+## Function resubscribe (Microsoft.Datadog/monitors@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-12-26-preview
+* **Input**: [ResubscribeProperties](#resubscribeproperties)
+* **Output**: [DatadogMonitorResource](#datadogmonitorresource)
+
 ## AgentRules
 ### Properties
 * **enableAgentMonitoring**: bool: Flag specifying if agent monitoring should be enabled for the Monitor resource.
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+
+## BillingInfoResponse
+### Properties
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details
+* **partnerBillingEntity**: [PartnerBillingEntity](#partnerbillingentity): Partner Billing Entity details: Organization Info
 
 ## DatadogAgreementProperties
 ### Properties
@@ -106,6 +154,12 @@
 ### Properties
 * **nextLink**: string: The link to the next page of items
 * **value**: [DatadogApiKey](#datadogapikey)[] (Required): The DatadogApiKey items on this page
+
+## DatadogApplicationKey
+### Properties
+* **createdBy**: string: The user that created the Application key.
+* **key**: string (Required, ReadOnly): The value of the Application key.
+* **name**: string: The name of the Application key.
 
 ## DatadogHost
 ### Properties
@@ -135,6 +189,18 @@
 ### Properties
 * **transport**: string: The transport.
 
+## DatadogMonitorResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [IdentityProperties](#identityproperties)
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
+* **sku**: [ResourceSku](#resourcesku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## DatadogOrganizationProperties
 ### Properties
 * **apiKey**: string {sensitive} (WriteOnly): Api key associated to the Datadog organization.
@@ -147,6 +213,10 @@
 * **name**: string: Name of the Datadog organization.
 * **redirectUri**: string (WriteOnly): The redirect URI for linking.
 * **resourceCollection**: bool: The configuration which describes the state of resource collection. This collects configuration information for all resources in a subscription.
+
+## DatadogSetPasswordLink
+### Properties
+* **setPasswordLink**: string
 
 ## DatadogSingleSignOnProperties
 ### Properties
@@ -166,6 +236,11 @@
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned' | 'UserAssigned' | string: Specifies the identity type of the Datadog Monitor. At this time the only allowed value is 'SystemAssigned'.
+
+## LatestLinkedSaaSResponse
+### Properties
+* **isHiddenSaaS**: bool: Flag indicating if the SaaS resource is hidden
+* **saaSResourceId**: string: SaaS resource id
 
 ## LinkedResource
 ### Properties
@@ -188,6 +263,15 @@
 ### Properties
 * **offerId**: string: The offer ID (e.g., "dd_liftr_v3_decoupled").
 * **publisherId**: string: The publisher ID (e.g., "datadog1591740804488").
+
+## MarketplaceSaaSInfo
+### Properties
+* **billedAzureSubscriptionId**: string: The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into.
+* **marketplaceName**: string: Marketplace Subscription Details: SAAS Name
+* **marketplaceStatus**: string: Marketplace Subscription Details: SaaS Subscription Status
+* **marketplaceSubscriptionId**: string: Marketplace Subscription Id. This is a GUID-formatted string.
+* **offerId**: string: Offer Id of the Marketplace offer
+* **subscribed**: bool: Flag specifying if the Marketplace status is subscribed or not.
 
 ## MetricRules
 ### Properties
@@ -237,9 +321,21 @@ For earlier API versions, defaults to the legacy offer.
 * **sreAgentConfiguration**: [SreAgentConfiguration](#sreagentconfiguration)[] (WriteOnly): SRE Agent configuration to connect to MCP server of Datadog for given organization.
 * **userInfo**: [UserInfo](#userinfo): Includes name, email and optionally, phone number. User Information can't be null.
 
+## PartnerBillingEntity
+### Properties
+* **id**: string: The Datadog Organization Id.
+* **name**: string: The Datadog Organization Name.
+* **partnerEntityUri**: string: Link to the datadog organization page
+
 ## ResourceSku
 ### Properties
 * **name**: string (Required): Name of the SKU in {PlanId} format. For Terraform, the only allowed value is 'Linked'.
+
+## ResubscribeProperties
+### Properties
+* **azureSubscriptionId**: string: Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe
+* **resourceGroup**: string: Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe
+* **sku**: [ResourceSku](#resourcesku)
 
 ## SaaSData
 ### Properties
@@ -248,6 +344,16 @@ For earlier API versions, defaults to the legacy offer.
 ## SreAgentConfiguration
 ### Properties
 * **mcpConnectorResourceId**: string (Required): The ARM resource ID of the MCP connector integrated with SRE Agent resource.
+
+## SreAgentConfigurationListResponse
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [SreAgentConfiguration](#sreagentconfiguration)[] (Required): The SreAgentConfiguration items on this page
+
+## SreAgentConnectorRequest
+### Properties
+* **action**: 'Add' | 'Remove' | string (Required): Add/Remove action.
+* **mcpConnectorResourceIdList**: [SreAgentConfiguration](#sreagentconfiguration)[] (Required): The list of ARM resource ID of the MCP connector integrated with SRE Agent resource.
 
 ## SubscriptionList
 ### Properties
@@ -262,6 +368,11 @@ For earlier API versions, defaults to the legacy offer.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

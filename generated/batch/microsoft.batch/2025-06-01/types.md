@@ -104,10 +104,38 @@
 * **tags**: [PrivateLinkResourceTags](#privatelinkresourcetags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.Batch/batchAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.Batch/batchAccounts/applications/versions@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts/applications/versions
+* **ApiVersion**: 2025-06-01
+* **Input**: [ActivateApplicationPackageParameters](#activateapplicationpackageparameters)
+* **Output**: [ApplicationPackage](#applicationpackage)
+
+## Function checkNameAvailability (Microsoft.Batch/locations@2025-06-01)
+* **Resource**: Microsoft.Batch/locations
+* **ApiVersion**: 2025-06-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function disableAutoScale (Microsoft.Batch/batchAccounts/pools@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts/pools
+* **ApiVersion**: 2025-06-01
+* **Output**: [Pool](#pool)
+
 ## Function listKeys (Microsoft.Batch/batchAccounts@2025-06-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2025-06-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function regenerateKeys (Microsoft.Batch/batchAccounts@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2025-06-01
+* **Input**: [BatchAccountRegenerateKeyParameters](#batchaccountregeneratekeyparameters)
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function stopResize (Microsoft.Batch/batchAccounts/pools@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts/pools
+* **ApiVersion**: 2025-06-01
+* **Output**: [Pool](#pool)
 
 ## AccessRule
 ### Properties
@@ -128,6 +156,20 @@
 ### Properties
 * **id**: string: The fully qualified Azure resource ID of the subscription e.g. ('/subscriptions/00000000-0000-0000-0000-000000000000')
 
+## ActivateApplicationPackageParameters
+### Properties
+* **format**: string (Required): The format of the application package binary file.
+
+## ApplicationPackage
+### Properties
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ApplicationPackageProperties](#applicationpackageproperties): The properties associated with the Application Package.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ApplicationPackageTags](#applicationpackagetags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ApplicationPackageProperties
 ### Properties
 * **format**: string (ReadOnly): The format of the application package, if the package is active.
@@ -140,6 +182,11 @@
 ### Properties
 * **id**: string (Required): The ID of the application package to install. This must be inside the same batch account as the pool. This can either be a reference to a specific version or the default version if one exists.
 * **version**: string: If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+
+## ApplicationPackageTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ApplicationPackageTags
 ### Properties
@@ -254,6 +301,10 @@
 * **primary**: string (ReadOnly): The primary key associated with the account.
 * **secondary**: string (ReadOnly): The secondary key associated with the account.
 
+## BatchAccountRegenerateKeyParameters
+### Properties
+* **keyName**: 'Primary' | 'Secondary' (Required): The type of account key to regenerate.
+
 ## BatchPoolIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned' (Required): The type of identity used for the Batch Pool.
@@ -263,6 +314,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability
+* **type**: 'Microsoft.Batch/batchAccounts' (Required): The resource type.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## CifsMountConfiguration
 ### Properties
@@ -492,6 +554,17 @@ The KeyVault has soft-delete and purge protection enabled
 * **managedDisk**: [ManagedDisk](#manageddisk): The managed disk parameters.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 
+## Pool
+### Properties
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [BatchPoolIdentity](#batchpoolidentity): The type of identity used for the Batch Pool.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PoolTags](#pooltags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## PoolEndpointConfiguration
 ### Properties
 * **inboundNatPools**: [InboundNatPool](#inboundnatpool)[] (Required): The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
@@ -522,6 +595,11 @@ The KeyVault has soft-delete and purge protection enabled
 * **upgradePolicy**: [UpgradePolicy](#upgradepolicy): Describes an upgrade policy - automatic, manual, or rolling.
 * **userAccounts**: [UserAccount](#useraccount)[]: The list of user accounts to be created on each node in the pool.
 * **vmSize**: string: For information about available VM sizes, see Sizes for Virtual Machines in Azure (https://learn.microsoft.com/azure/virtual-machines/sizes/overview). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+
+## PoolTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## PoolTags
 ### Properties
