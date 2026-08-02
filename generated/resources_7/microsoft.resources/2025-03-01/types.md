@@ -12,6 +12,23 @@
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportTemplate (Microsoft.Resources/deployments@2025-03-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2025-03-01
+* **Output**: [DeploymentExportResult](#deploymentexportresult)
+
+## Function validate (Microsoft.Resources/deployments@2025-03-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2025-03-01
+* **Input**: [Deployment](#deployment)
+* **Output**: [DeploymentValidateResult](#deploymentvalidateresult)
+
+## Function whatIf (Microsoft.Resources/deployments@2025-03-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2025-03-01
+* **Input**: [ScopedDeploymentWhatIf](#scopeddeploymentwhatif)
+* **Output**: [WhatIfOperationResult](#whatifoperationresult)
+
 ## Alias
 ### Properties
 * **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly): The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
@@ -61,6 +78,12 @@
 * **resourceName**: string: The dependency resource name.
 * **resourceType**: string: The dependency resource type.
 
+## Deployment
+### Properties
+* **location**: string: The location to store the deployment data.
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required): The deployment properties.
+* **tags**: [DeploymentTags](#deploymenttags): Deployment tags
+
 ## DeploymentDiagnosticsDefinition
 ### Properties
 * **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
@@ -68,6 +91,20 @@
 * **level**: 'Error' | 'Info' | 'Warning' | string (Required, ReadOnly): Denotes the additional response level.
 * **message**: string (Required, ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
+
+## DeploymentExportResult
+### Properties
+* **template**: any: The template content.
+
+## DeploymentExtensionConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
+
+## DeploymentExtensionConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfigItem](#deploymentextensionconfigitem)
 
 ## DeploymentExtensionConfig
 ### Properties
@@ -97,6 +134,52 @@
 ### Properties
 * **reference**: [KeyVaultParameterReference](#keyvaultparameterreference): Azure Key Vault parameter reference.
 * **value**: any: Input value to the parameter .
+
+## DeploymentProperties
+### Properties
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
+* **expressionEvaluationOptions**: [ExpressionEvaluationOptions](#expressionevaluationoptions): Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
+* **extensionConfigs**: [DeploymentPropertiesExtensionConfigs](#deploymentpropertiesextensionconfigs): The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template.
+* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): The deployment on error behavior.
+* **parameters**: [DeploymentPropertiesParameters](#deploymentpropertiesparameters): Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+* **parametersLink**: [ParametersLink](#parameterslink): The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
+* **template**: any: The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+* **templateLink**: [TemplateLink](#templatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
+* **validationLevel**: 'Provider' | 'ProviderNoRbac' | 'Template' | string: The validation level of the deployment
+
+## DeploymentPropertiesExtended
+### Properties
+* **correlationId**: string (ReadOnly): The correlation ID of the deployment.
+* **debugSetting**: [DebugSetting](#debugsetting) (ReadOnly): The debug setting of the deployment.
+* **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
+* **diagnostics**: [DeploymentDiagnosticsDefinition](#deploymentdiagnosticsdefinition)[] (ReadOnly): Contains diagnostic information collected during validation process.
+* **duration**: string (ReadOnly): The duration of the template deployment.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
+* **extensions**: [DeploymentExtensionDefinition](#deploymentextensiondefinition)[] (ReadOnly): The extensions used in this deployment.
+* **mode**: 'Complete' | 'Incremental' (ReadOnly): The deployment mode. Possible values are Incremental and Complete.
+* **onErrorDeployment**: [OnErrorDeploymentExtended](#onerrordeploymentextended) (ReadOnly): The deployment on error behavior.
+* **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
+* **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
+* **parameters**: any (ReadOnly): Deployment parameters.
+* **parametersLink**: [ParametersLink](#parameterslink) (ReadOnly): The URI referencing the parameters.
+* **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Denotes the state of provisioning.
+* **templateHash**: string (ReadOnly): The hash produced for the template.
+* **templateLink**: [TemplateLink](#templatelink) (ReadOnly): The URI referencing the template.
+* **timestamp**: string (ReadOnly): The timestamp of the template deployment.
+* **validatedResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of validated resources.
+* **validationLevel**: 'Provider' | 'ProviderNoRbac' | 'Template' | string: The validation level of the deployment
+
+## DeploymentPropertiesExtensionConfigs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfig](#deploymentextensionconfig)
+
+## DeploymentPropertiesExtensionConfigs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentExtensionConfig](#deploymentextensionconfig)
 
 ## DeploymentPropertiesExtensionConfigs
 ### Properties
@@ -134,10 +217,51 @@
 ### Additional Properties
 * **Additional Properties Type**: [DeploymentParameter](#deploymentparameter)
 
+## DeploymentPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentParameter](#deploymentparameter)
+
+## DeploymentPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentParameter](#deploymentparameter)
+
 ## DeploymentTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DeploymentTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DeploymentValidateResult
+### Properties
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment validation error.
+* **id**: string (ReadOnly): The ID of the deployment.
+* **name**: string (ReadOnly): The name of the deployment.
+* **properties**: [DeploymentPropertiesExtended](#deploymentpropertiesextended): The template deployment properties.
+* **type**: string (ReadOnly): The type of the deployment.
+
+## DeploymentWhatIfProperties
+### Properties
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
+* **expressionEvaluationOptions**: [ExpressionEvaluationOptions](#expressionevaluationoptions): Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
+* **extensionConfigs**: [DeploymentPropertiesExtensionConfigs](#deploymentpropertiesextensionconfigs): The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template.
+* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): The deployment on error behavior.
+* **parameters**: [DeploymentPropertiesParameters](#deploymentpropertiesparameters): Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+* **parametersLink**: [ParametersLink](#parameterslink): The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
+* **template**: any: The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+* **templateLink**: [TemplateLink](#templatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
+* **validationLevel**: 'Provider' | 'ProviderNoRbac' | 'Template' | string: The validation level of the deployment
+* **whatIfSettings**: [DeploymentWhatIfSettings](#deploymentwhatifsettings): Optional What-If operation settings.
+
+## DeploymentWhatIfSettings
+### Properties
+* **resultFormat**: 'FullResourcePayloads' | 'ResourceIdOnly': The format of the What-If results
 
 ## ErrorAdditionalInfo
 ### Properties
@@ -165,6 +289,17 @@
 ## KeyVaultReference
 ### Properties
 * **id**: string (Required): Azure Key Vault resource id.
+
+## OnErrorDeployment
+### Properties
+* **deploymentName**: string: The deployment to be used on error case.
+* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+
+## OnErrorDeploymentExtended
+### Properties
+* **deploymentName**: string: The deployment to be used on error case.
+* **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
+* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
 
 ## OnErrorDeploymentOrOnErrorDeploymentExtended
 ### Properties
@@ -218,6 +353,11 @@
 * **identifiers**: any (ReadOnly): The extensible resource identifiers.
 * **resourceType**: string (ReadOnly): The resource type.
 
+## ScopedDeploymentWhatIf
+### Properties
+* **location**: string (Required): The location to store the deployment data.
+* **properties**: [DeploymentWhatIfProperties](#deploymentwhatifproperties) (Required): The deployment properties.
+
 ## TemplateLink
 ### Properties
 * **contentVersion**: string: If included, must match the ContentVersion in the template.
@@ -225,6 +365,38 @@
 * **queryString**: string: The query string (for example, a SAS token) to be used with the templateLink URI.
 * **relativePath**: string: The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
 * **uri**: string: The URI of the template to deploy. Use either the uri or id property, but not both.
+
+## WhatIfChange
+### Properties
+* **after**: any: The predicted snapshot of the resource after the deployment is executed.
+* **before**: any: The snapshot of the resource before the deployment is executed.
+* **changeType**: 'Create' | 'Delete' | 'Deploy' | 'Ignore' | 'Modify' | 'NoChange' | 'Unsupported' (Required): Type of change that will be made to the resource when the deployment is executed.
+* **delta**: [WhatIfPropertyChange](#whatifpropertychange)[]: The predicted changes to resource properties.
+* **deploymentId**: string: The resource id of the Deployment responsible for this change.
+* **identifiers**: any: A subset of properties that uniquely identify a Bicep extensible resource because it lacks a resource id like an Azure resource has.
+* **resourceId**: string: Resource ID
+* **symbolicName**: string: The symbolic name of the resource responsible for this change.
+* **unsupportedReason**: string: The explanation about why the resource is unsupported by What-If.
+
+## WhatIfOperationProperties
+### Properties
+* **changes**: [WhatIfChange](#whatifchange)[]: List of resource changes predicted by What-If operation.
+* **diagnostics**: [DeploymentDiagnosticsDefinition](#deploymentdiagnosticsdefinition)[] (ReadOnly): List of resource diagnostics detected by What-If operation.
+* **potentialChanges**: [WhatIfChange](#whatifchange)[]: List of resource changes predicted by What-If operation.
+
+## WhatIfOperationResult
+### Properties
+* **error**: [ErrorResponse](#errorresponse): Error when What-If operation fails.
+* **properties**: [WhatIfOperationProperties](#whatifoperationproperties): What-If operation properties.
+* **status**: string: Status of the What-If operation.
+
+## WhatIfPropertyChange
+### Properties
+* **after**: any: The value of the property after the deployment is executed.
+* **before**: any: The value of the property before the deployment is executed.
+* **children**: [WhatIfPropertyChange](#whatifpropertychange)[]: Nested property changes.
+* **path**: string (Required): The path of the property.
+* **propertyChangeType**: 'Array' | 'Create' | 'Delete' | 'Modify' | 'NoEffect' (Required): The type of property change.
 
 ## ZoneMapping
 ### Properties

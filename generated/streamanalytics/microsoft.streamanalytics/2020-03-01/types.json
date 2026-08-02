@@ -3984,11 +3984,271 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StartStreamingJobParameters",
+    "properties": {
+      "outputStartMode": {
+        "type": {
+          "$ref": "#/264"
+        },
+        "flags": 0,
+        "description": "Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time."
+      },
+      "outputStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JobStartTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LastOutputEventTime"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleStreamingJobParameters",
+    "properties": {
+      "streamingUnits": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Specifies the number of streaming units that the streaming job will scale to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTestStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of the test operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 2,
+        "description": "Describes the error that occurred."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorResponse",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code associated with the error that occurred."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Describes the error in detail."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/inputs",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/266"
+    },
+    "input": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/outputs",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/266"
+    },
+    "input": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/266"
+    },
+    "input": {
+      "$ref": "#/183"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FunctionRetrieveDefaultDefinitionParameters",
+    "discriminator": "bindingType",
+    "baseProperties": {},
+    "elements": {
+      "Microsoft.MachineLearning/WebService": {
+        "$ref": "#/272"
+      },
+      "Microsoft.StreamAnalytics/JavascriptUdf": {
+        "$ref": "#/276"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningWebServiceFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with an Azure Machine learning web service."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningWebServiceFunctionBindingRetrievalProperties",
+    "properties": {
+      "executeEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs"
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.MachineLearning/WebService"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with a JavaScript function."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionBindingRetrievalProperties",
+    "properties": {
+      "script": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'."
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StreamAnalytics/JavascriptUdf"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveDefaultDefinition",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/183"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ClusterJobListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/294"
         },
         "flags": 2,
         "description": "A list of streaming jobs."
@@ -4022,7 +4282,7 @@
       },
       "jobState": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/293"
         },
         "flags": 2,
         "description": "The current execution state of the streaming job."
@@ -4073,34 +4333,34 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/262"
+        "$ref": "#/283"
       },
       {
-        "$ref": "#/263"
+        "$ref": "#/284"
       },
       {
-        "$ref": "#/264"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/265"
+        "$ref": "#/286"
       },
       {
-        "$ref": "#/266"
+        "$ref": "#/287"
       },
       {
-        "$ref": "#/267"
+        "$ref": "#/288"
       },
       {
-        "$ref": "#/268"
+        "$ref": "#/289"
       },
       {
-        "$ref": "#/269"
+        "$ref": "#/290"
       },
       {
-        "$ref": "#/270"
+        "$ref": "#/291"
       },
       {
-        "$ref": "#/271"
+        "$ref": "#/292"
       },
       {
         "$ref": "#/0"
@@ -4110,7 +4370,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/261"
+      "$ref": "#/282"
     }
   },
   {
@@ -4119,7 +4379,7 @@
     "resourceType": "Microsoft.StreamAnalytics/clusters",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/260"
+      "$ref": "#/281"
     }
   }
 ]

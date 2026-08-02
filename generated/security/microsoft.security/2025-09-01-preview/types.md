@@ -46,6 +46,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/privateLinks/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelMalwareScan (Microsoft.Security/defenderForStorageSettings/malwareScans@2025-09-01-preview)
+* **Resource**: Microsoft.Security/defenderForStorageSettings/malwareScans
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: [MalwareScan](#malwarescan)
+
+## Function startMalwareScan (Microsoft.Security/defenderForStorageSettings@2025-09-01-preview)
+* **Resource**: Microsoft.Security/defenderForStorageSettings
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: [MalwareScan](#malwarescan)
+
+## BlobsScanSummary
+### Properties
+* **failedBlobsCount**: int: The number of failed blob scans.
+* **maliciousBlobsCount**: int: The number of malicious blobs that were detected during the scan.
+* **scannedBlobsInGB**: int: The number of gigabytes of data that were scanned.
+* **skippedBlobsCount**: int: The number of blobs that were skipped.
+* **totalBlobsScanned**: int: The total number of blobs that were scanned.
+
 ## CommonOperationStatus
 ### Properties
 * **code**: string: The operation status code.
@@ -58,6 +76,18 @@
 * **overrideSubscriptionLevelSettings**: bool: Indicates whether the settings defined for this storage account should override the settings defined for the subscription.
 * **sensitiveDataDiscovery**: [SensitiveDataDiscoveryProperties](#sensitivedatadiscoveryproperties): Properties of Sensitive Data Discovery.
 
+## FilesScanSummary
+### Properties
+* **failedFilesCount**: int: The number of failed file scans.
+* **maliciousFilesCount**: int: The number of malicious files that were detected during the scan.
+* **scannedFilesInGB**: int: The number of gigabytes of data that were scanned.
+* **skippedFilesCount**: int: The number of files that were skipped.
+* **totalFilesScanned**: int: The total number of files that were scanned.
+
+## MalwareScan
+### Properties
+* **properties**: [MalwareScanProperties](#malwarescanproperties)
+
 ## MalwareScanningProperties
 ### Properties
 * **automatedResponse**: 'BlobSoftDelete' | 'None' | string: Optional. Specifies the automated response action to take when malware is detected.
@@ -65,6 +95,15 @@
 * **onUpload**: [OnUploadProperties](#onuploadproperties): Properties of On Upload malware scanning.
 * **operationStatus**: [CommonOperationStatus](#commonoperationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Malware Scanning enable/disable operation.
 * **scanResultsEventGridTopicResourceId**: string: Optional. Resource id of an Event Grid Topic to send scan results to.
+
+## MalwareScanProperties
+### Properties
+* **scanEndTime**: string: The time at which the scan has ended. Only available for a scan which has terminated.
+* **scanId**: string: The identifier of the scan.
+* **scanStartTime**: string: The time at which the scan had been initiated.
+* **scanStatus**: string: A status code of the scan operation.
+* **scanStatusMessage**: string: A description of the status of the scan.
+* **scanSummary**: [ScanSummary](#scansummary): A summary of the scan results.
 
 ## OnUploadFilters
 ### Properties
@@ -125,6 +164,12 @@ Exclude a single container: Add a trailing slash `/` after the container name to
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## ScanSummary
+### Properties
+* **blobs**: [BlobsScanSummary](#blobsscansummary): A summary of the scan results of the blobs that were scanned.
+* **estimatedScanCostUSD**: int: The estimated cost of the scan. Only available for a scan which has terminated.
+* **files**: [FilesScanSummary](#filesscansummary): A summary of the scan results of the files that were scanned.
 
 ## SensitiveDataDiscoveryProperties
 ### Properties

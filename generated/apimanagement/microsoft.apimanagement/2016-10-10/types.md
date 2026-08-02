@@ -256,6 +256,75 @@
 * **state**: 'Active' | 'Blocked': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applynetworkconfigurationupdates (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function backup (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function deploy (Microsoft.ApiManagement/service/tenant@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2016-10-10
+* **Input**: [DeployConfigurationParameters](#deployconfigurationparameters)
+* **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function generateSsoUrl (Microsoft.ApiManagement/service/users@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/users
+* **ApiVersion**: 2016-10-10
+* **Output**: [GenerateSsoUrlResult](#generatessourlresult)
+
+## Function getssotoken (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Output**: [ApiManagementServiceGetSsoTokenResult](#apimanagementservicegetssotokenresult)
+
+## Function managedeployments (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceManageDeploymentsParameters](#apimanagementservicemanagedeploymentsparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function restore (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function save (Microsoft.ApiManagement/service/tenant@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2016-10-10
+* **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
+* **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function token (Microsoft.ApiManagement/service/users@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/users
+* **ApiVersion**: 2016-10-10
+* **Input**: [UserTokenParameters](#usertokenparameters)
+* **Output**: [UserTokenResult](#usertokenresult)
+
+## Function updatehostname (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceUpdateHostnameParameters](#apimanagementserviceupdatehostnameparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function uploadcertificate (Microsoft.ApiManagement/service@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceUploadCertificateParameters](#apimanagementserviceuploadcertificateparameters)
+* **Output**: [CertificateInformation](#certificateinformation)
+
+## Function validate (Microsoft.ApiManagement/service/tenant@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2016-10-10
+* **Input**: [DeployConfigurationParameters](#deployconfigurationparameters)
+* **Output**: [OperationResultContract](#operationresultcontract)
+
 ## AdditionalRegion
 ### Properties
 * **location**: string (Required): The location name of the additional region among Azure Data center regions.
@@ -263,6 +332,26 @@
 * **skuUnitCount**: int {maxValue: 10}: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
 * **staticIPs**: string[] (ReadOnly): Static IP addresses of the location's virtual machines.
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration for the location.
+
+## ApiManagementServiceBackupRestoreParameters
+### Properties
+* **accessKey**: string (Required): Azure Cloud Storage account (used to place/retrieve the backup) access key.
+* **backupName**: string (Required): The name of the backup file to create.
+* **containerName**: string (Required): Azure Cloud Storage blob container name used to place/retrieve the backup.
+* **storageAccount**: string (Required): Azure Cloud Storage account (used to place/retrieve the backup) name.
+
+## ApiManagementServiceGetSsoTokenResult
+### Properties
+* **redirect_uri**: string: Redirect URL containing the SSO token.
+
+## ApiManagementServiceManageDeploymentsParameters
+### Properties
+* **additionalLocations**: [AdditionalRegion](#additionalregion)[]: Additional data center locations for the API Management service.
+* **location**: string (Required): Location of the API Management service Azure data center.
+* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): SKU type of the API Management service.
+* **skuUnitCount**: int: SKU Unit count of the API Management service. Default value is 1.
+* **vpnConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration.
+* **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified.
 
 ## ApiManagementServiceProperties
 ### Properties
@@ -288,10 +377,32 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ApiManagementServiceResource
+### Properties
+* **etag**: string (ReadOnly): ETag of the resource.
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string: Resource name.
+* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of the API Management service.
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type for API Management resource is set to Microsoft.ApiManagement.
+
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
 * **name**: 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku.
+
+## ApiManagementServiceUpdateHostnameParameters
+### Properties
+* **delete**: ('Management' | 'Portal' | 'Proxy' | 'Scm')[]: Hostnames types to delete.
+* **update**: [HostnameConfiguration](#hostnameconfiguration)[]: Hostnames to create or update.
+
+## ApiManagementServiceUploadCertificateParameters
+### Properties
+* **certificate**: string (Required): Base64 Encoded certificate.
+* **certificate_password**: string (Required): Certificate password.
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type.
 
 ## AuthenticationSettingsContract
 ### Properties
@@ -318,6 +429,27 @@
 * **subject**: string (Required): Subject of the certificate.
 * **thumbprint**: string (Required): Thumbprint of the certificate.
 
+## DeployConfigurationParameters
+### Properties
+* **branch**: string (Required): The name of the Git branch from which the configuration is to be deployed to the configuration database.
+* **force**: bool: The value enforcing deleting subscriptions to products that are deleted in this update.
+
+## ErrorBodyContract
+### Properties
+* **code**: string: Service-defined error code. This code serves as a sub-status for the HTTP error code specified in the response.
+* **details**: [ErrorFieldContract](#errorfieldcontract)[]: The list of invalid fields send in request, in case of validation error.
+* **message**: string: Human-readable representation of the error.
+
+## ErrorFieldContract
+### Properties
+* **code**: string: Property level error code.
+* **message**: string: Human-readable representation of property-level error.
+* **target**: string: Property name.
+
+## GenerateSsoUrlResult
+### Properties
+* **value**: string: Redirect Url containing the SSO URL value.
+
 ## HostnameConfiguration
 ### Properties
 * **certificate**: [CertificateInformation](#certificateinformation) (Required): Certificate information.
@@ -333,6 +465,15 @@
 ### Properties
 * **authorizationServerId**: string: OAuth authorization server identifier.
 * **scope**: string: operations scope.
+
+## OperationResultContract
+### Properties
+* **error**: [ErrorBodyContract](#errorbodycontract): Error Body contract.
+* **id**: string: Operation result identifier.
+* **resultInfo**: string: Optional result info.
+* **started**: string: Start time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **status**: 'Failed' | 'InProgress' | 'Started' | 'Succeeded': Status of an async operation.
+* **updated**: string: Last update time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
 ## ParameterContract
 ### Properties
@@ -360,11 +501,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ResultContract
 ### Properties
 * **description**: string: Operation response description.
 * **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation response representations.
 * **statusCode**: int {minValue: 100, maxValue: 599} (Required): Operation response HTTP status code.
+
+## SaveConfigurationParameter
+### Properties
+* **branch**: string (Required): The name of the Git branch in which to commit the current configuration snapshot.
+* **force**: bool: The value if true, the current configuration database is committed to the Git repository, even if the Git repository has newer changes that would be overwritten.
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
@@ -380,6 +531,15 @@
 ### Properties
 * **id**: string: Identifier value within provider.
 * **provider**: string: Identity provider name.
+
+## UserTokenParameters
+### Properties
+* **expiry**: string (Required): The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **keyType**: 'primary' | 'secondary' (Required): The Key to be used to generate token for user.
+
+## UserTokenResult
+### Properties
+* **value**: string: Shared Access Authorization token for the User.
 
 ## VirtualNetworkConfiguration
 ### Properties

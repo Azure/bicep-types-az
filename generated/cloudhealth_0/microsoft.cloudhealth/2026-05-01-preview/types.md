@@ -69,6 +69,45 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CloudHealth/healthmodels/signaldefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addDataAnnotation (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [AddDataAnnotationRequest](#adddataannotationrequest)
+* **Output**: [DataAnnotation](#dataannotation)
+
+## Function getDataAnnotations (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [GetDataAnnotationsRequest](#getdataannotationsrequest)
+* **Output**: [GetDataAnnotationsResponse](#getdataannotationsresponse)
+
+## Function getHistory (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [EntityHistoryRequest](#entityhistoryrequest)
+* **Output**: [EntityHistoryResponse](#entityhistoryresponse)
+
+## Function getSignalHistory (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [SignalHistoryRequest](#signalhistoryrequest)
+* **Output**: [SignalHistoryResponse](#signalhistoryresponse)
+
+## Function getSignalRecommendations (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [GetSignalRecommendationsResponse](#getsignalrecommendationsresponse)
+
+## AddDataAnnotationRequest
+### Properties
+* **annotationDetails**: [AddDataAnnotationRequestAnnotationDetails](#adddataannotationrequestannotationdetails) (Required): Annotation details as a dynamic key-value pair bag. Service-enforced limits: a maximum of 10 entries per annotation and a maximum value length of 256 characters. Requests exceeding these limits will be rejected with a 400 response.
+* **description**: string {maxLength: 4096}: Optional description of the annotation
+
+## AddDataAnnotationRequestAnnotationDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string {maxLength: 256}
+
 ## AlertConfiguration
 ### Properties
 * **actionGroupIds**: string[] {minLength: 1, maxLength: 5}: Optional list of action group resource IDs to be notified when the alert is triggered.
@@ -139,6 +178,18 @@
 * **resourceHealth**: [AzureResourceHealthSignal](#azureresourcehealthsignal): Optional configuration for automatically adding a signal based on the resource's availability state in Azure Resource Health.
 * **signals**: [AzureResourceSignal](#azureresourcesignal)[] {maxLength: 50}: Signals assigned to this group.
 
+## DataAnnotation
+### Properties
+* **annotationDetails**: [DataAnnotationDetails](#dataannotationdetails) (Required): Annotation details as a dynamic key-value pair bag. Service-enforced limits: a maximum of 10 entries per annotation and a maximum value length of 256 characters. Requests exceeding these limits will be rejected with a 400 response.
+* **annotationId**: string {maxLength: 256} (ReadOnly): Auto-assigned identifier for the annotation
+* **createdAt**: string (ReadOnly): Timestamp when the annotation was created
+* **description**: string {maxLength: 4096}: Optional description of the annotation
+
+## DataAnnotationDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string {maxLength: 256}
+
 ## DependenciesSignalGroupV2
 ### Properties
 * **aggregationType**: 'MaxNotHealthy' | 'MinHealthy' | 'WorstOf' | string (Required): Aggregation type for child dependencies.
@@ -190,6 +241,19 @@
 * **x**: int (Required): X Coordinate
 * **y**: int (Required): Y Coordinate
 
+## EntityHistoryRequest
+### Properties
+* **endAt**: string: End time for the history query. Defaults to now if not specified.
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt.
+* **startAt**: string: Start time for the history query. Defaults to 24 hours ago if not specified.
+* **top**: int {minValue: 1, maxValue: 1000}: Maximum number of health state transitions to return per page. Defaults to 1000.
+
+## EntityHistoryResponse
+### Properties
+* **entityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity
+* **history**: [HealthStateTransition](#healthstatetransition)[] (Required): List of health state transitions
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation.
+
 ## EntityProperties
 ### Properties
 * **alerts**: [EntityAlerts](#entityalerts): Alert configuration for this entity
@@ -226,9 +290,34 @@
 ### Properties
 * **signals**: [ExternalSignal](#externalsignal)[] (ReadOnly): Signals assigned to this signal group.
 
+## GetDataAnnotationsRequest
+### Properties
+* **endAt**: string: End of UTC time range. Defaults to now if not specified.
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt.
+* **startAt**: string: Start of UTC time range. Defaults to 24 hours ago if not specified.
+* **top**: int {minValue: 1, maxValue: 100}: Maximum number of annotations to return per page. Defaults to 100.
+
+## GetDataAnnotationsResponse
+### Properties
+* **annotations**: [DataAnnotation](#dataannotation)[] (Required): List of data annotations
+* **entityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation.
+
+## GetSignalRecommendationsResponse
+### Properties
+* **recommendedConfigurations**: [SignalConfiguration](#signalconfiguration)[] (Required): Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point. Independent of `recommendedSignals` — not paired by index.
+* **recommendedSignals**: [SignalConfiguration](#signalconfiguration)[] (Required): Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type. Each entry is a complete signal configuration (metric, aggregation, thresholds) ready to be added to a health model. Independent of `recommendedConfigurations` — not paired by index.
+
 ## HealthModelProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
+
+## HealthStateTransition
+### Properties
+* **newState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): New health state after the transition
+* **occurredAt**: string (Required): Timestamp when the transition occurred
+* **previousState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): Previous health state before the transition
+* **reason**: string {maxLength: 4096}: Reason of the transition
 
 ## IconDefinition
 ### Properties
@@ -294,6 +383,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string {maxLength: 4096}
 
+## SignalConfiguration
+### Properties
+* **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'None' | 'Total' | string: Type of aggregation to apply to the metric.
+* **dimensionFilter**: string {minLength: 1, maxLength: 256}: Optional dimension filter to apply to the metric.
+* **evaluationRules**: [EvaluationRule](#evaluationrule): Evaluation rules with recommended thresholds.
+* **metricName**: string {minLength: 1, maxLength: 256}: Name of the metric (e.g. 'Percentage CPU').
+* **metricNamespace**: string {minLength: 1, maxLength: 256}: Metric namespace (e.g. 'microsoft.compute/virtualmachines').
+* **signalId**: string {minLength: 1, maxLength: 256} (Required): Unique identifier of the recommended signal configuration.
+* **timeGrain**: string {minLength: 1, maxLength: 100}: Time range of the metric. ISO 8601 duration format (e.g. 'PT5M').
+* **unit**: string {minLength: 1, maxLength: 100}: Unit of the metric (e.g. Percent, Bytes, Count).
+
 ## SignalDefinitionProperties
 * **Discriminator**: signalKind
 
@@ -340,6 +440,28 @@
 * **azureResource**: [AzureResourceSignals](#azureresourcesignals): Azure Resource Signal Group
 * **dependencies**: [DependenciesSignalGroupV2](#dependenciessignalgroupv2): Settings for dependency signals to control how the health state of child entities influences the health state of the parent entity.
 * **external**: [ExternalSignalGroup](#externalsignalgroup) (ReadOnly): List of signals which have been externally submitted for this entity.
+
+## SignalHistoryDataPoint
+### Properties
+* **additionalContext**: string {maxLength: 4096}: Additional context as provided by the submitter
+* **healthState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): Health state at this point in time
+* **occurredAt**: string (Required): Timestamp of the data point
+* **value**: int: Signal value at this point in time
+
+## SignalHistoryRequest
+### Properties
+* **endAt**: string: End time for the history query. Defaults to now if not specified.
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation. Must not be combined with startAt or endAt.
+* **signalName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the signal to get history for
+* **startAt**: string: Start time for the history query. Defaults to 24 hours ago if not specified.
+* **top**: int {minValue: 1, maxValue: 1000}: Maximum number of data points to return per page. Defaults to 1000.
+
+## SignalHistoryResponse
+### Properties
+* **entityName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity
+* **history**: [SignalHistoryDataPoint](#signalhistorydatapoint)[] (Required): Signal history data points
+* **nextMarker**: string {maxLength: 4096}: An opaque string value that identifies the portion of the result set to be returned with the next operation.
+* **signalName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the signal
 
 ## SignalStatus
 ### Properties

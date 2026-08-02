@@ -730,5 +730,176 @@
     "output": {
       "$ref": "#/19"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisRegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "The Redis access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/19"
+    },
+    "input": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisRebootParameters",
+    "properties": {
+      "rebootType": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
+      },
+      "shardId": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "If clustering is enabled, the ID of the shard to be rebooted."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllNodes"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisForceRebootResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status message"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceReboot",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportRDBParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "File format."
+      },
+      "files": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 1,
+        "description": "files to import."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportRDBParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "File format."
+      },
+      "prefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Prefix to use for exported files."
+      },
+      "container": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container name to export to."
+      }
+    }
   }
 ]

@@ -48,6 +48,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkFilePathAvailability (Microsoft.NetApp/locations@2019-08-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2019-08-01
+* **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
+* **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
+## Function checkNameAvailability (Microsoft.NetApp/locations@2019-08-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2019-08-01
+* **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
+* **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
 ## AccountProperties
 ### Properties
 * **activeDirectories**: [ActiveDirectory](#activedirectory)[]: Active Directories
@@ -100,6 +112,18 @@
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string: Id
 * **replicationSchedule**: string (Required): Schedule
+
+## ResourceNameAvailability
+### Properties
+* **isAvailable**: bool: <code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both.
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: <code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable.
+
+## ResourceNameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
 
 ## ResourceTags
 ### Properties

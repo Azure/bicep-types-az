@@ -1,0 +1,34 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The time in UTC when the download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The URL to the ZIP file. This Zip file will consists of multiple CSV files"
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.CostManagement/pricesheets",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  }
+]

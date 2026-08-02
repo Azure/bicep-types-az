@@ -84,9 +84,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Communication/emailServices/domains/suppressionLists/suppressionListAddresses' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function linkNotificationHub (Microsoft.Communication/communicationServices@2026-03-18)
+* **Resource**: Microsoft.Communication/communicationServices
+* **ApiVersion**: 2026-03-18
+* **Input**: [LinkNotificationHubParameters](#linknotificationhubparameters)
+* **Output**: [LinkedNotificationHub](#linkednotificationhub)
+
 ## Function listKeys (Microsoft.Communication/communicationServices@2026-03-18)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2026-03-18
+* **Output**: [CommunicationServiceKeys](#communicationservicekeys)
+
+## Function regenerateKey (Microsoft.Communication/communicationServices@2026-03-18)
+* **Resource**: Microsoft.Communication/communicationServices
+* **ApiVersion**: 2026-03-18
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
 
 ## CommunicationServiceKeys
@@ -147,6 +159,15 @@
 * **dataLocation**: string (Required): The location where the email service stores its data at rest.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
+## LinkedNotificationHub
+### Properties
+* **resourceId**: string: The resource ID of the notification hub
+
+## LinkNotificationHubParameters
+### Properties
+* **connectionString**: string (Required): Connection string for the notification hub
+* **resourceId**: string (Required): The resource ID of the notification hub
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
@@ -158,6 +179,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary': The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive).
 
 ## SenderUsernameProperties
 ### Properties

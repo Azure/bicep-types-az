@@ -44,10 +44,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceLinker/locations/dryruns' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateConfigurations (Microsoft.ServiceLinker/locations/connectors@2023-04-01-preview)
+* **Resource**: Microsoft.ServiceLinker/locations/connectors
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [ConfigurationInfo](#configurationinfo)
+* **Output**: [ConfigurationResult](#configurationresult)
+
+## Function generateConfigurations (Microsoft.ServiceLinker/linkers@2023-04-01-preview)
+* **Resource**: Microsoft.ServiceLinker/linkers
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [ConfigurationInfo](#configurationinfo)
+* **Output**: [ConfigurationResult](#configurationresult)
+
 ## Function listConfigurations (Microsoft.ServiceLinker/linkers@2023-04-01-preview)
 * **Resource**: Microsoft.ServiceLinker/linkers
 * **ApiVersion**: 2023-04-01-preview
 * **Output**: [ConfigurationResult](#configurationresult)
+
+## Function validate (Microsoft.ServiceLinker/locations/connectors@2023-04-01-preview)
+* **Resource**: Microsoft.ServiceLinker/locations/connectors
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: [ValidateOperationResult](#validateoperationresult)
+
+## Function validateLinker (Microsoft.ServiceLinker/linkers@2023-04-01-preview)
+* **Resource**: Microsoft.ServiceLinker/linkers
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: [ValidateOperationResult](#validateoperationresult)
 
 ## AuthInfoBase
 * **Discriminator**: authType
@@ -326,6 +348,31 @@
 * **endpoint**: string: The endpoint of service.
 * **type**: 'SelfHostedServer' (Required): The target service type.
 
+
+## ValidateOperationResult
+### Properties
+* **properties**: [ValidateResult](#validateresult): The validation result detail.
+* **resourceId**: string: Validated Linker id.
+* **status**: string: Validation operation status.
+
+## ValidateResult
+### Properties
+* **authType**: 'accessKey' | 'easyAuthMicrosoftEntraID' | 'secret' | 'servicePrincipalCertificate' | 'servicePrincipalSecret' | 'systemAssignedIdentity' | 'userAccount' | 'userAssignedIdentity' | string: The authentication type.
+* **isConnectionAvailable**: bool: A boolean value indicating whether the connection is available or not
+* **linkerName**: string: The linker name.
+* **reportEndTimeUtc**: string: The end time of the validation report.
+* **reportStartTimeUtc**: string: The start time of the validation report.
+* **sourceId**: string: The resource id of the Linker source application.
+* **targetId**: string: The resource Id of target service.
+* **validationDetail**: [ValidationResultItem](#validationresultitem)[]: The detail of validation result
+
+## ValidationResultItem
+### Properties
+* **description**: string: The display name of validation item
+* **errorCode**: string: The error code of validation result
+* **errorMessage**: string: The error message of validation result
+* **name**: string: The validation item name.
+* **result**: 'failure' | 'success' | 'warning' | string: The result of validation
 
 ## VNetSolution
 ### Properties

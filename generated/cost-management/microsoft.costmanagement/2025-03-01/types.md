@@ -118,6 +118,35 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function download (Microsoft.CostManagement/pricesheets@2025-03-01)
+* **Resource**: Microsoft.CostManagement/pricesheets
+* **ApiVersion**: 2025-03-01
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function forecast (Microsoft.CostManagement/externalSubscriptions@2025-03-01)
+* **Resource**: Microsoft.CostManagement/externalSubscriptions
+* **ApiVersion**: 2025-03-01
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [ForecastResult](#forecastresult)
+
+## Function forecast (Microsoft.CostManagement/externalBillingAccounts@2025-03-01)
+* **Resource**: Microsoft.CostManagement/externalBillingAccounts
+* **ApiVersion**: 2025-03-01
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [ForecastResult](#forecastresult)
+
+## Function query (Microsoft.CostManagement/externalSubscriptions@2025-03-01)
+* **Resource**: Microsoft.CostManagement/externalSubscriptions
+* **ApiVersion**: 2025-03-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Function query (Microsoft.CostManagement/externalBillingAccounts@2025-03-01)
+* **Resource**: Microsoft.CostManagement/externalBillingAccounts
+* **ApiVersion**: 2025-03-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## AlertProperties
 ### Properties
 * **closeTime**: string: dateTime in which alert was closed
@@ -298,6 +327,16 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 * **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Status of the rule
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
 
+## CostManagementResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CostManagementResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## CurrentSpend
 ### Properties
 * **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
@@ -417,10 +456,80 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 * **name**: 'LookBackPeriod' | 'ReservationScope' | 'ResourceType' | string: The name of the filter. This is currently only supported for Export Definition type of ReservationRecommendations. Supported names are ['ReservationScope', 'LookBackPeriod', 'ResourceType']
 * **value**: string: Value to filter by. Currently values supported per name are, for 'ReservationScope' supported values are ['Single', 'Shared'], for 'LookBackPeriod' supported values are ['Last7Days', 'Last30Days', 'Last60Days'] and for 'ResourceType' supported values are ['VirtualMachines', 'SQLDatabases', 'PostgreSQL', 'ManagedDisk', 'MySQL', 'RedHat', 'MariaDB', 'RedisCache', 'CosmosDB', 'SqlDataWarehouse', 'SUSELinux', 'AppService', 'BlockBlob', 'AzureDataExplorer', 'VMwareCloudSimple'].
 
+## ForecastAggregation
+### Properties
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
+* **name**: 'Cost' | 'CostUSD' | 'PreTaxCost' | 'PreTaxCostUSD' | string (Required): The name of the column to aggregate.
+
+## ForecastColumn
+### Properties
+* **name**: string: The name of column.
+* **type**: string: The type of column.
+
+## ForecastComparisonExpression
+### Properties
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
+
+## ForecastDataset
+### Properties
+* **aggregation**: [ForecastDatasetAggregation](#forecastdatasetaggregation) (Required): Dictionary of aggregation expression to use in the forecast. The key of each item in the dictionary is the alias for the aggregated column. forecast can have up to 2 aggregation clauses.
+* **configuration**: [ForecastDatasetConfiguration](#forecastdatasetconfiguration): Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [ForecastFilter](#forecastfilter): Has filter expression to use in the forecast.
+* **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the forecast.
+
+## ForecastDatasetAggregation
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ForecastAggregation](#forecastaggregation)
+
+## ForecastDatasetConfiguration
+### Properties
+* **columns**: string[]: Array of column names to be included in the forecast. Any valid forecast column name is allowed. If not provided, then forecast includes all columns.
+
+## ForecastDefinition
+### Properties
+* **dataset**: [ForecastDataset](#forecastdataset) (Required): Has definition for data in this forecast.
+* **includeActualCost**: bool: A boolean determining if actualCost will be included.
+* **includeFreshPartialCost**: bool: A boolean determining if FreshPartialCost will be included.
+* **timeframe**: 'Custom' | string (Required): The time frame for pulling data for the forecast. If custom, then a specific time period must be provided.
+* **timePeriod**: [ForecastTimePeriod](#forecasttimeperiod): Has time period for pulling data for the forecast.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the forecast.
+
+## ForecastFilter
+### Properties
+* **and**: [ForecastFilter](#forecastfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
+* **dimensions**: [ForecastComparisonExpression](#forecastcomparisonexpression): Has comparison expression for a dimension
+* **or**: [ForecastFilter](#forecastfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
+* **tags**: [ForecastComparisonExpression](#forecastcomparisonexpression): Has comparison expression for a tag
+
+## ForecastProperties
+### Properties
+* **columns**: [ForecastColumn](#forecastcolumn)[]: Array of columns
+* **nextLink**: string: The link (url) to the next page of results.
+* **rows**: any[][]: Array of rows
+
+## ForecastResult
+### Properties
+* **eTag**: string (ReadOnly): ETag of the resource.
+* **id**: string (ReadOnly): Resource Id.
+* **location**: string (ReadOnly): Location of the resource.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ForecastProperties](#forecastproperties): Forecast properties
+* **sku**: string (ReadOnly): SKU of the resource.
+* **tags**: [CostManagementResourceTags](#costmanagementresourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
 ## ForecastSpend
 ### Properties
 * **amount**: int (ReadOnly): The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
 * **unit**: string (ReadOnly): The unit of measure for the budget amount.
+
+## ForecastTimePeriod
+### Properties
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 
 ## KpiProperties
 ### Properties
@@ -477,10 +586,89 @@ Supported for CategoryType(s): Cost.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
 * **to**: string[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
 
+## OperationStatus
+### Properties
+* **properties**: [ReportURL](#reporturl): The properties of the resource generated.
+* **status**: 'Completed' | 'Failed' | 'Running' | string: The status of the long running operation.
+
 ## PivotProperties
 ### Properties
 * **name**: string: Data field to show in view.
 * **type**: 'Dimension' | 'TagKey' | string: Data type to show in view.
+
+## QueryAggregation
+### Properties
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
+* **name**: string (Required): The name of the column to aggregate.
+
+## QueryColumn
+### Properties
+* **name**: string: The name of column.
+* **type**: string: The type of column.
+
+## QueryComparisonExpression
+### Properties
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
+
+## QueryDataset
+### Properties
+* **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
+* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [QueryFilter](#queryfilter): The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter.
+* **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the query.
+* **grouping**: [QueryGrouping](#querygrouping)[] {maxLength: 2}: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
+
+## QueryDatasetAggregation
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [QueryAggregation](#queryaggregation)
+
+## QueryDatasetConfiguration
+### Properties
+* **columns**: string[]: Array of column names to be included in the query. Any valid query column name is allowed. If not provided, then query includes all columns.
+
+## QueryDefinition
+### Properties
+* **dataset**: [QueryDataset](#querydataset) (Required): Has definition for data in this query.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheCurrentMonth' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod): Has time period for pulling data for the query.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'FocusCost' | 'PriceSheet' | 'ReservationDetails' | 'ReservationRecommendations' | 'ReservationTransactions' | 'Usage' | string (Required): The type of the query.
+
+## QueryFilter
+### Properties
+* **and**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
+* **dimensions**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a dimension
+* **or**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
+* **tags**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a tag
+
+## QueryGrouping
+### Properties
+* **name**: string (Required): The name of the column to group.
+* **type**: 'Dimension' | 'TagKey' | string (Required): Has type of the column to group.
+
+## QueryProperties
+### Properties
+* **columns**: [QueryColumn](#querycolumn)[]: Array of columns
+* **nextLink**: string: The link (url) to the next page of results.
+* **rows**: any[][]: Array of rows
+
+## QueryResult
+### Properties
+* **eTag**: string (ReadOnly): ETag of the resource.
+* **id**: string (ReadOnly): Resource Id.
+* **location**: string (ReadOnly): Location of the resource.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [QueryProperties](#queryproperties): Query properties
+* **sku**: string (ReadOnly): SKU of the resource.
+* **tags**: [CostManagementResourceTags](#costmanagementresourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## QueryTimePeriod
+### Properties
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 
 ## ReportConfigAggregation
 ### Properties
@@ -540,6 +728,11 @@ Supported for CategoryType(s): Cost.
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ReportURL
+### Properties
+* **reportUrl**: 'InstanceFlexibilityGroup' | 'InstanceFlexibilityRatio' | 'InstanceId' | 'Kind' | 'ReservationId' | 'ReservationOrderId' | 'ReservedHours' | 'SkuName' | 'TotalReservedQuantity' | 'UsageDate' | 'UsedHours' | string: The CSV file from the reportUrl blob link consists of reservation usage data with the following schema at daily granularity
+* **validUntil**: string: The time at which report URL becomes invalid.
 
 ## ScheduledActionProperties
 ### Properties

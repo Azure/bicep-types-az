@@ -896,5 +896,180 @@
     "input": {
       "$ref": "#/52"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProducts",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2016-01-01",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProduct",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2016-01-01",
+    "output": {
+      "$ref": "#/57"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceProductLogUpdate",
+    "properties": {
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation to log."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status to log."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error related to the operation."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error details related to operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLog",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Log ID."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged product ID."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged subscription ID."
+      },
+      "registrationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged registration name."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged resource group name."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged operation."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation start datetime."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation end datetime."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error data."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadProductLog",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2016-01-01",
+    "output": {
+      "$ref": "#/63"
+    },
+    "input": {
+      "$ref": "#/62"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivationKeyResult",
+    "properties": {
+      "activationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Stack activation key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getActivationKey",
+    "resourceType": "Microsoft.AzureStack/registrations",
+    "apiVersion": "2016-01-01",
+    "output": {
+      "$ref": "#/65"
+    }
   }
 ]

@@ -3793,6 +3793,123 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Trial",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 2,
+        "description": "Trial status"
+      },
+      "availableHosts": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Number of trial hosts available"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialAvailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialUsed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialDisabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/302"
+      },
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/304"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkTrialAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/301"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Quota",
+    "properties": {
+      "hostsRemaining": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 2,
+        "description": "Remaining hosts quota by sku type"
+      },
+      "quotaEnabled": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 2,
+        "description": "Host quota is active for current subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaHostsRemaining",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
       "nsxtUsername": {
@@ -3831,7 +3948,95 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2021-06-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/313"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Output"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/318"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScriptExecution",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 0,
+        "description": "The properties of a script execution resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExecutionLogs",
+    "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/321"
+    },
+    "input": {
+      "$ref": "#/320"
     }
   }
 ]

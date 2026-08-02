@@ -1622,5 +1622,233 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "name of the PostgreSQL server."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "type of the server"
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2022-03-08-preview",
+    "output": {
+      "$ref": "#/128"
+    },
+    "input": {
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageParameter",
+    "properties": {
+      "virtualNetworkArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Virtual network resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageResult",
+    "properties": {
+      "delegatedSubnetsUsage": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "location of the delegated subnet usage"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "subscriptionId of the delegated subnet usage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedSubnetUsage",
+    "properties": {
+      "subnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the delegated subnet for which IP addresses are in use"
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Number of IP addresses used by the delegated subnet"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/135"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkVirtualNetworkSubnetUsage",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2022-03-08-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/133"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Indicates whether to restart the server with failover."
+      },
+      "failoverMode": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0,
+        "description": "Failover mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedSwitchover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedSwitchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   }
 ]

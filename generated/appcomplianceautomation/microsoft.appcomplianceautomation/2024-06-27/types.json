@@ -2369,5 +2369,973 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/207"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportFixResult",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 2,
+        "description": "Indicates whether the fix action is Succeeded or Failed."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If the report fix action failed, to indicate the detailed failed reason."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fix",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/213"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopingQuestions",
+    "properties": {
+      "questions": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "List of scoping questions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopingQuestion",
+    "properties": {
+      "questionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Question id."
+      },
+      "superiorQuestionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Superior question id."
+      },
+      "inputType": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 3,
+        "description": "Input type of the question answer."
+      },
+      "optionIds": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 3,
+        "description": "Option id list."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 3,
+        "description": "The rule of the question."
+      },
+      "showSubQuestionsValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The answer value to show the sub questions."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Text"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Email"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultilineText"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Number"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Boolean"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Telephone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YesNoNa"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Date"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YearPicker"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleSelection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleSelectDropdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiSelectCheckbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiSelectDropdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiSelectDropdownCustom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Group"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upload"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CharLength"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Urls"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Domains"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USPrivacyShield"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublicSOX"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreditCardPCI"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidGuid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublisherVerification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DynamicDropdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreventNonEnglishChar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidEmail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/241"
+      },
+      {
+        "$ref": "#/242"
+      },
+      {
+        "$ref": "#/243"
+      },
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/254"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/219"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getScopingQuestions",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncCertRecordRequest",
+    "properties": {
+      "certRecord": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "certification record to be synchronized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncCertRecordResponse",
+    "properties": {
+      "certRecord": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "certification record synchronized."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncCertRecord",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/259"
+    },
+    "input": {
+      "$ref": "#/258"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportVerificationResult",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/264"
+        },
+        "flags": 2,
+        "description": "Indicates whether the report verification action is Succeeded or Failed."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If the report verification action failed, to indicate the detailed failed reason."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verify",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/261"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvidenceFileDownloadRequest",
+    "properties": {
+      "reportCreatorTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant id."
+      },
+      "offerGuid": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The offerGuid which mapping to the reports."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvidenceFileDownloadResponse",
+    "properties": {
+      "evidenceFile": {
+        "type": {
+          "$ref": "#/268"
+        },
+        "flags": 2,
+        "description": "The uri of evidence file"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvidenceFileDownloadResponseEvidenceFile",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The url of evidence file"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports/evidences",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/267"
+    },
+    "input": {
+      "$ref": "#/266"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotDownloadRequest",
+    "properties": {
+      "reportCreatorTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant id."
+      },
+      "downloadType": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 1,
+        "description": "Indicates the download type."
+      },
+      "offerGuid": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The offerGuid which mapping to the reports."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompliancePdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceDetailedPdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceList"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponse",
+    "properties": {
+      "resourceList": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 2,
+        "description": "Resource list of the report"
+      },
+      "complianceReport": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 2,
+        "description": "List of the compliance result"
+      },
+      "compliancePdfReport": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 2,
+        "description": "Compliance pdf report"
+      },
+      "complianceDetailedPdfReport": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 2,
+        "description": "The detailed compliance pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceItem",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The subscription Id of this resource."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource group name of this resource."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type of this resource. e.g. \"Microsoft.SignalRService/SignalR\""
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/277"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComplianceReportItem",
+    "properties": {
+      "categoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The category name."
+      },
+      "controlFamilyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control family name."
+      },
+      "controlId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control Id - e.g. \"1\"."
+      },
+      "controlName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control name."
+      },
+      "controlStatus": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 2,
+        "description": "Control status."
+      },
+      "responsibilityTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The title of the customer responsibility."
+      },
+      "responsibilityDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The description of the customer responsibility."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Id of the resource."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource.  e.g. \"Microsoft.SignalRService/SignalR\""
+      },
+      "resourceOrigin": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 2,
+        "description": "Resource origin."
+      },
+      "resourceStatus": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 2,
+        "description": "Resource status."
+      },
+      "resourceStatusChangeDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status change date for the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Passed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingApproval"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Azure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AWS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/285"
+      },
+      {
+        "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/279"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseCompliancePdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The uri of compliance pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseComplianceDetailedPdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The uri of detailed compliance pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports/snapshots",
+    "apiVersion": "2024-06-27",
+    "output": {
+      "$ref": "#/276"
+    },
+    "input": {
+      "$ref": "#/270"
+    }
   }
 ]

@@ -2288,5 +2288,40 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationRejectBody",
+    "properties": {
+      "reasonForRejection": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Reason for rejecting recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotARisk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RiskAccepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   }
 ]

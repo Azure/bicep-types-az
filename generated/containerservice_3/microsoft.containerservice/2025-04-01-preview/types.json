@@ -2348,5 +2348,180 @@
     "output": {
       "$ref": "#/175"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The ARM resource id of the generated UpdateRun. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}'."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateUpdateRun",
+    "resourceType": "Microsoft.ContainerService/fleets/autoUpgradeProfiles",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkipProperties",
+    "properties": {
+      "targets": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "The targets to skip."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkipTarget",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1,
+        "description": "The skip target type."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The skip target's name. \nTo skip a member/group/stage, use the member/group/stage's name;\nTp skip an after stage wait, use the parent stage's name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Member"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Group"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AfterStageWait"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateRun",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "skip",
+    "resourceType": "Microsoft.ContainerService/fleets/updateRuns",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerService/fleets/updateRuns",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/189"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerService/fleets/updateRuns",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/189"
+    }
   }
 ]

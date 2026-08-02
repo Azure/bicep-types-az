@@ -10,6 +10,12 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended): Gets or sets the deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Resources/deployments@2015-11-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2015-11-01
+* **Input**: [Deployment](#deployment)
+* **Output**: [DeploymentValidateResult](#deploymentvalidateresult)
+
 ## BasicDependency
 ### Properties
 * **id**: string: Gets or sets the ID of the dependency.
@@ -22,6 +28,33 @@
 * **id**: string: Gets or sets the ID of the dependency.
 * **resourceName**: string: Gets or sets the dependency resource name.
 * **resourceType**: string: Gets or sets the dependency resource type.
+
+## Deployment
+### Properties
+* **properties**: [DeploymentProperties](#deploymentproperties): Gets or sets the deployment properties.
+
+## DeploymentProperties
+### Properties
+* **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode.
+* **parameters**: any: Deployment parameters. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): Gets or sets the URI referencing the parameters. Use only one of Parameters or ParametersLink.
+* **template**: any: Gets or sets the template content. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): Gets or sets the URI referencing the template. Use only one of Template or TemplateLink.
+
+## DeploymentPropertiesExtended
+### Properties
+* **correlationId**: string: Gets or sets the correlation ID of the deployment.
+* **dependencies**: [Dependency](#dependency)[]: Gets the list of deployment dependencies.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
+* **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode.
+* **outputs**: any: Gets or sets key/value pairs that represent deployment output.
+* **parameters**: any: Deployment parameters. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): Gets or sets the URI referencing the parameters. Use only one of Parameters or ParametersLink.
+* **providers**: [Provider](#provider)[]: Gets the list of resource providers needed for the deployment.
+* **provisioningState**: string: Gets or sets the state of the provisioning.
+* **template**: any: Gets or sets the template content. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): Gets or sets the URI referencing the template. Use only one of Template or TemplateLink.
+* **timestamp**: string: Gets or sets the timestamp of the template deployment.
 
 ## DeploymentPropertiesOrDeploymentPropertiesExtended
 ### Properties
@@ -37,6 +70,11 @@
 * **template**: any: Gets or sets the template content. Use only one of Template or TemplateLink.
 * **templateLink**: [TemplateLink](#templatelink): Gets or sets the URI referencing the template. Use only one of Template or TemplateLink.
 * **timestamp**: string (ReadOnly): Gets or sets the timestamp of the template deployment.
+
+## DeploymentValidateResult
+### Properties
+* **error**: [ResourceManagementErrorWithDetails](#resourcemanagementerrorwithdetails): Gets or sets validation error.
+* **properties**: [DeploymentPropertiesExtended](#deploymentpropertiesextended): Gets or sets the template deployment properties.
 
 ## ErrorAdditionalInfo
 ### Properties
@@ -74,6 +112,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceManagementError
+### Properties
+* **code**: string (Required): Gets or sets the error code returned from the server.
+* **message**: string (Required): Gets or sets the error message returned from the server.
+* **target**: string: Gets or sets the target of the error.
+
+## ResourceManagementErrorWithDetails
+### Properties
+* **code**: string (Required): Gets or sets the error code returned from the server.
+* **details**: [ResourceManagementError](#resourcemanagementerror)[]: Gets or sets validation error.
+* **message**: string (Required): Gets or sets the error message returned from the server.
+* **target**: string: Gets or sets the target of the error.
 
 ## TemplateLink
 ### Properties

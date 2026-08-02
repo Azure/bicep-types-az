@@ -31,6 +31,11 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function unsuspend (Microsoft.AAD/domainServices@2025-06-01)
+* **Resource**: Microsoft.AAD/domainServices
+* **ApiVersion**: 2025-06-01
+* **Output**: [UnsuspendDomainServiceResponse](#unsuspenddomainserviceresponse)
+
 ## ConfigDiagnostics
 ### Properties
 * **lastExecuted**: string: Last domain configuration diagnostics DateTime
@@ -186,4 +191,8 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## UnsuspendDomainServiceResponse
+### Properties
+* **message**: string
 

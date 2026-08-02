@@ -1574,6 +1574,381 @@
     "writableScopes": 0
   },
   {
+    "$type": "DiscriminatedObjectType",
+    "name": "RunRequest",
+    "discriminator": "type",
+    "baseProperties": {
+      "isArchiveEnabled": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The value that indicates whether archiving is enabled for the run or not."
+      }
+    },
+    "elements": {
+      "DockerBuildRequest": {
+        "$ref": "#/120"
+      },
+      "EncodedTaskRunRequest": {
+        "$ref": "#/124"
+      },
+      "FileTaskRunRequest": {
+        "$ref": "#/127"
+      },
+      "TaskRunRequest": {
+        "$ref": "#/130"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DockerBuildRequest",
+    "properties": {
+      "imageNames": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "The fully qualified image names including the repository and tag."
+      },
+      "isPushEnabled": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The value of this property indicates whether the image built should be pushed to the registry or not."
+      },
+      "noCache": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The value of this property indicates whether the image cache is enabled or not."
+      },
+      "dockerFilePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Docker file path relative to the source location."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the target build stage for the docker build."
+      },
+      "arguments": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The collection of override arguments to be used when executing the run."
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Run timeout in seconds."
+      },
+      "platform": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "The platform properties against which the run has to happen."
+      },
+      "agentConfiguration": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The machine configuration of the run agent."
+      },
+      "sourceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.\r\nIf it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API."
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties that describes a set of credentials that will be used when this run is invoked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "The type of the run request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DockerBuildRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncodedTaskRunRequest",
+    "properties": {
+      "encodedTaskContent": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Base64 encoded value of the template/definition file content."
+      },
+      "encodedValuesContent": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Base64 encoded value of the parameters/values file content."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "The collection of overridable values that can be passed when running a task."
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Run timeout in seconds."
+      },
+      "platform": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "The platform properties against which the run has to happen."
+      },
+      "agentConfiguration": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The machine configuration of the run agent."
+      },
+      "sourceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.\r\nIf it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API."
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties that describes a set of credentials that will be used when this run is invoked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 1,
+        "description": "The type of the run request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EncodedTaskRunRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileTaskRunRequest",
+    "properties": {
+      "taskFilePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The template/definition file path relative to the source."
+      },
+      "valuesFilePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The values/parameters file path relative to the source."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "The collection of overridable values that can be passed when running a task."
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Run timeout in seconds."
+      },
+      "platform": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "The platform properties against which the run has to happen."
+      },
+      "agentConfiguration": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The machine configuration of the run agent."
+      },
+      "sourceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.\r\nIf it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API."
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties that describes a set of credentials that will be used when this run is invoked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "The type of the run request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileTaskRunRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskRunRequest",
+    "properties": {
+      "taskName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of task against which run has to be queued."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The collection of overridable values that can be passed when running a task."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 1,
+        "description": "The type of the run request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TaskRunRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Run",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "The properties of a run."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scheduleRun",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2018-09-01",
+    "output": {
+      "$ref": "#/133"
+    },
+    "input": {
+      "$ref": "#/119"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SourceUploadDefinition",
     "properties": {
@@ -1599,7 +1974,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2018-09-01",
     "output": {
-      "$ref": "#/119"
+      "$ref": "#/135"
     }
   },
   {
@@ -1621,7 +1996,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/runs",
     "apiVersion": "2018-09-01",
     "output": {
-      "$ref": "#/121"
+      "$ref": "#/137"
     }
   },
   {
@@ -1665,7 +2040,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -1686,7 +2061,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2018-09-01",
     "output": {
-      "$ref": "#/123"
+      "$ref": "#/139"
     }
   }
 ]

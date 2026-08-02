@@ -3761,12 +3761,133 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateAccessKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2026-07-01-preview",
+    "output": {
+      "$ref": "#/250"
+    },
+    "input": {
+      "$ref": "#/252"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailOver",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailOverProperties",
+    "properties": {
+      "primaryLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Query parameter for the new primary location after failover."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.ServiceBus/namespaces",
+    "apiVersion": "2026-07-01-preview",
+    "output": {
+      "$ref": "#/257"
+    },
+    "input": {
+      "$ref": "#/257"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
       "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceFailoverProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProperties",
+    "properties": {
+      "IsSafeFailover": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
     }
   },
   {
@@ -3780,11 +3901,35 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2026-07-01-preview",
+    "output": {
+      "$ref": "#/250"
+    },
+    "input": {
+      "$ref": "#/252"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
       "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2026-07-01-preview",
+    "output": {
+      "$ref": "#/250"
+    },
+    "input": {
+      "$ref": "#/252"
     }
   }
 ]

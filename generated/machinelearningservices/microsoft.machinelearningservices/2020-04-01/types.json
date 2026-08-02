@@ -2167,19 +2167,254 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "prepareNotebook",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2020-04-01",
+    "output": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaUpdateParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "The list for update quota."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBaseProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "An enum describing the unit of quota measurement."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotasResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "The list of workspace quota update result."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "An enum describing the unit of quota measurement."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Status of update workspace quota."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaBelowClusterMinimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaExceedsSubscriptionLimit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidVMFamilyName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotSupportedForSku"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotEnabledForRegion"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateQuotas",
+    "resourceType": "Microsoft.MachineLearningServices/locations",
+    "apiVersion": "2020-04-01",
+    "output": {
+      "$ref": "#/146"
+    },
+    "input": {
+      "$ref": "#/141"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AmlComputeNodesInformation",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/170"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/178"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2227,7 +2462,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/169"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -2269,22 +2504,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/142"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/143"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/144"
+        "$ref": "#/165"
       },
       {
-        "$ref": "#/145"
+        "$ref": "#/166"
       },
       {
-        "$ref": "#/146"
+        "$ref": "#/167"
       },
       {
-        "$ref": "#/147"
+        "$ref": "#/168"
       },
       {
         "$ref": "#/0"
@@ -2294,7 +2529,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/141"
+      "$ref": "#/162"
     }
   },
   {
@@ -2329,25 +2564,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/150"
+        "$ref": "#/171"
       },
       {
-        "$ref": "#/151"
+        "$ref": "#/172"
       },
       {
-        "$ref": "#/152"
+        "$ref": "#/173"
       },
       {
-        "$ref": "#/153"
+        "$ref": "#/174"
       },
       {
-        "$ref": "#/154"
+        "$ref": "#/175"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/176"
       },
       {
-        "$ref": "#/156"
+        "$ref": "#/177"
       },
       {
         "$ref": "#/0"
@@ -2360,7 +2595,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/140"
+      "$ref": "#/161"
     }
   },
   {
@@ -2370,13 +2605,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/160"
+        "$ref": "#/181"
       },
       "Databricks": {
-        "$ref": "#/162"
+        "$ref": "#/183"
       },
       "VirtualMachine": {
-        "$ref": "#/164"
+        "$ref": "#/185"
       }
     }
   },
@@ -2407,7 +2642,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/182"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2431,7 +2666,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/184"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2455,7 +2690,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/186"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2472,7 +2707,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/180"
     }
   }
 ]

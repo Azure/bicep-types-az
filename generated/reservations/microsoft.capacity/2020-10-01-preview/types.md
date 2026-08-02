@@ -26,10 +26,48 @@
 * **sku**: [SkuName](#skuname) (ReadOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function availableScopes (Microsoft.Capacity/reservationOrders/reservations@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [AvailableScopeRequest](#availablescoperequest)
+* **Output**: [AvailableScopeProperties](#availablescopeproperties)
+
+## Function merge (Microsoft.Capacity/reservationOrders@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [MergeRequest](#mergerequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function split (Microsoft.Capacity/reservationOrders@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [SplitRequest](#splitrequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
+## AvailableScopeProperties
+### Properties
+* **properties**: [SubscriptionScopeProperties](#subscriptionscopeproperties)
+
+## AvailableScopeRequest
+### Properties
+* **properties**: [AvailableScopeRequestProperties](#availablescoperequestproperties): Available scope request properties
+
+## AvailableScopeRequestProperties
+### Properties
+* **scopes**: string[]
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
 * **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' | string
+
+## MergeProperties
+### Properties
+* **sources**: string[]: Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## MergeRequest
+### Properties
+* **properties**: [MergeProperties](#mergeproperties)
 
 ## PaymentDetail
 ### Properties
@@ -156,7 +194,25 @@
 * **splitDestinations**: string[]: List of destination Resource Id that are created due to split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 * **splitSource**: string: Resource Id of the Reservation from which this is split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
+## ScopeProperties
+### Properties
+* **scope**: string
+* **valid**: bool
+
 ## SkuName
 ### Properties
 * **name**: string
+
+## SplitProperties
+### Properties
+* **quantities**: int[]: List of the quantities in the new reservations to create.
+* **reservationId**: string: Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## SplitRequest
+### Properties
+* **properties**: [SplitProperties](#splitproperties)
+
+## SubscriptionScopeProperties
+### Properties
+* **scopes**: [ScopeProperties](#scopeproperties)[]
 

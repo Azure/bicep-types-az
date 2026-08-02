@@ -716,11 +716,1515 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ComponentPolicyStatesQueryResults",
+    "properties": {
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "@odata.count": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "OData entity count; represents the number of policy state records returned."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Query results."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentPolicyState",
+    "properties": {
+      "@odata.id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "OData entity ID; always set to null since component policy state records do not have an entity ID."
+      },
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Timestamp for the component policy state record."
+      },
+      "componentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Component Id."
+      },
+      "componentType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Component type."
+      },
+      "componentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Component name."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy assignment ID."
+      },
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy definition ID."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subscription ID."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource group name."
+      },
+      "policyAssignmentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy assignment name."
+      },
+      "policyAssignmentOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy assignment owner."
+      },
+      "policyAssignmentParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy assignment parameters."
+      },
+      "policyAssignmentScope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy assignment scope."
+      },
+      "policyDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy definition name."
+      },
+      "policyDefinitionAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy definition action, i.e. effect."
+      },
+      "policyDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy definition category."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy set definition ID, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy set definition name, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy set definition owner, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy set definition category, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Policy set definition parameters, if the policy assignment is for a policy set."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Reference ID for the policy definition inside the policy set, if the policy assignment is for a policy set."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Compliance state of the resource."
+      },
+      "policyEvaluationDetails": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Policy evaluation details. This is only included in the response if the request contains $expand=PolicyEvaluationDetails."
+      },
+      "policyDefinitionGroupNames": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Policy definition group names."
+      },
+      "policyDefinitionVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy definition version."
+      },
+      "policySetDefinitionVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy set definition version."
+      },
+      "policyAssignmentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy assignment version."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentPolicyEvaluationDetails",
+    "properties": {
+      "evaluatedExpressions": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Details of the evaluated expressions."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Additional textual reason for the evaluation outcome."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentExpressionEvaluationDetails",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Evaluation result."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Expression evaluated."
+      },
+      "expressionKind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The kind of expression that was evaluated."
+      },
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Property path if the expression is a field or an alias."
+      },
+      "expressionValue": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Value of the expression."
+      },
+      "targetValue": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Target value to be compared with the expression value."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operator to compare the expression value and the target value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryResults",
+    "resourceType": "Microsoft.PolicyInsights/componentPolicyStates",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyEventsQueryResults",
+    "properties": {
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "@odata.count": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "OData entity count; represents the number of policy event records returned."
+      },
+      "@odata.nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Odata next link; URL to get the next set of results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Query results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyEvent",
+    "properties": {
+      "@odata.id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData entity ID; always set to null since policy event records do not have an entity ID."
+      },
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp for the policy event record."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment ID."
+      },
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition ID."
+      },
+      "effectiveParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Effective parameters for the policy assignment."
+      },
+      "isCompliant": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Flag which states whether the resource is compliant against the policy assignment it was evaluated against."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription ID."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name."
+      },
+      "resourceTags": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "List of resource tags."
+      },
+      "policyAssignmentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment name."
+      },
+      "policyAssignmentOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment owner."
+      },
+      "policyAssignmentParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment parameters."
+      },
+      "policyAssignmentScope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment scope."
+      },
+      "policyDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition name."
+      },
+      "policyDefinitionAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition action, i.e. effect."
+      },
+      "policyDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition category."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition ID, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition name, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition owner, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition category, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition parameters, if the policy assignment is for a policy set."
+      },
+      "managementGroupIds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Comma separated list of management group IDs, which represent the hierarchy of the management groups the resource is under."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reference ID for the policy definition inside the policy set, if the policy assignment is for a policy set."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Compliance state of the resource."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant ID for the policy event record."
+      },
+      "principalOid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Principal object ID for the user who initiated the resource operation that triggered the policy event."
+      },
+      "components": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "Components events records populated only when URL contains $expand=components clause."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentEventDetails",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component Id."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component type."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component name."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp for component policy event record."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant ID for the policy event record."
+      },
+      "principalOid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Principal object ID for the user who initiated the resource component operation that triggered the policy event."
+      },
+      "policyDefinitionAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition action, i.e. effect."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryResults",
+    "resourceType": "Microsoft.PolicyInsights/policyEvents",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyStatesQueryResults",
+    "properties": {
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "@odata.count": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "OData entity count; represents the number of policy state records returned."
+      },
+      "@odata.nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Odata next link; URL to get the next set of results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Query results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyState",
+    "properties": {
+      "@odata.id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData entity ID; always set to null since policy state records do not have an entity ID."
+      },
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp for the policy state record."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment ID."
+      },
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition ID."
+      },
+      "effectiveParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Effective parameters for the policy assignment."
+      },
+      "isCompliant": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Flag which states whether the resource is compliant against the policy assignment it was evaluated against. This property is deprecated; please use ComplianceState instead."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription ID."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name."
+      },
+      "resourceTags": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "List of resource tags."
+      },
+      "policyAssignmentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment name."
+      },
+      "policyAssignmentOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment owner."
+      },
+      "policyAssignmentParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment parameters."
+      },
+      "policyAssignmentScope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment scope."
+      },
+      "policyDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition name."
+      },
+      "policyDefinitionAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition action, i.e. effect."
+      },
+      "policyDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition category."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition ID, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition name, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition owner, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition category, if the policy assignment is for a policy set."
+      },
+      "policySetDefinitionParameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition parameters, if the policy assignment is for a policy set."
+      },
+      "managementGroupIds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Comma separated list of management group IDs, which represent the hierarchy of the management groups the resource is under."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reference ID for the policy definition inside the policy set, if the policy assignment is for a policy set."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Compliance state of the resource."
+      },
+      "policyEvaluationDetails": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Policy evaluation details."
+      },
+      "policyDefinitionGroupNames": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Policy definition group names."
+      },
+      "components": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Components state compliance records populated only when URL contains $expand=components clause."
+      },
+      "policyDefinitionVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy definition version."
+      },
+      "policySetDefinitionVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy set definition version."
+      },
+      "policyAssignmentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Evaluated policy assignment version."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyEvaluationDetails",
+    "properties": {
+      "evaluatedExpressions": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Details of the evaluated expressions."
+      },
+      "ifNotExistsDetails": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Evaluation details of IfNotExists effect."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpressionEvaluationDetails",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Evaluation result."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Expression evaluated."
+      },
+      "expressionKind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The kind of expression that was evaluated."
+      },
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Property path if the expression is a field or an alias."
+      },
+      "expressionValue": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Value of the expression."
+      },
+      "targetValue": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Target value to be compared with the expression value."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Operator to compare the expression value and the target value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/62"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IfNotExistsEvaluationDetails",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the last evaluated resource for IfNotExists effect."
+      },
+      "totalResources": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Total number of resources to which the existence condition is applicable."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentStateDetails",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component Id."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component type."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component name."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component compliance evaluation timestamp."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Component compliance state."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryResults",
+    "resourceType": "Microsoft.PolicyInsights/policyStates",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SummarizeResults",
+    "properties": {
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "@odata.count": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "OData entity count; represents the number of summaries returned; always set to 1."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Summarize action results."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Summary",
+    "properties": {
+      "@odata.id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData entity ID; always set to null since summaries do not have an entity ID."
+      },
+      "@odata.context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OData context string; used by OData clients to resolve type information based on metadata."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Compliance summary for all policy assignments."
+      },
+      "policyAssignments": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Policy assignments summary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SummaryResults",
+    "properties": {
+      "queryResultsUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP POST URI for queryResults action on Microsoft.PolicyInsights to retrieve raw results for the compliance summary. This property will not be available by default in future API versions, but could be queried explicitly."
+      },
+      "nonCompliantResources": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Number of non-compliant resources."
+      },
+      "nonCompliantPolicies": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Number of non-compliant policies."
+      },
+      "resourceDetails": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The resources summary at this level."
+      },
+      "policyDetails": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The policy artifact summary at this level. For query scope level, it represents policy assignment summary. For policy assignment level, it represents policy definitions summary."
+      },
+      "policyGroupDetails": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The policy definition group summary at this level."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComplianceDetail",
+    "properties": {
+      "complianceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The compliance state."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Summarized count value for this compliance state."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyAssignmentSummary",
+    "properties": {
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy assignment ID."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy set definition ID, if the policy assignment is for a policy set."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Compliance summary for the policy assignment."
+      },
+      "policyDefinitions": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Policy definitions summary."
+      },
+      "policyGroups": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Policy definition group summary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyDefinitionSummary",
+    "properties": {
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition ID."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy definition reference ID."
+      },
+      "policyDefinitionGroupNames": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "Policy definition group names."
+      },
+      "effect": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy effect, i.e. policy definition action."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Compliance summary for the policy definition."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyGroupSummary",
+    "properties": {
+      "policyGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Policy group name."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Compliance summary for the policy definition group."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summarize",
+    "resourceType": "Microsoft.PolicyInsights/policyStates",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Remediation",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Properties for the remediation."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.PolicyInsights/remediations",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RemediationDeploymentsListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/95"
         },
         "flags": 3,
         "description": "The RemediationDeployment items on this page"
@@ -768,7 +2272,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/91"
         },
         "flags": 2,
         "description": "Error encountered while remediated the resource."
@@ -816,14 +2320,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/92"
         },
         "flags": 2,
         "description": "Internal error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/94"
         },
         "flags": 2,
         "description": "Additional scenario specific error details."
@@ -833,7 +2337,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/45"
+      "$ref": "#/91"
     }
   },
   {
@@ -859,13 +2363,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/47"
+      "$ref": "#/93"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/44"
+      "$ref": "#/90"
     }
   },
   {
@@ -874,7 +2378,7 @@
     "resourceType": "Microsoft.PolicyInsights/remediations",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/43"
+      "$ref": "#/89"
     }
   }
 ]

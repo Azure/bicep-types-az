@@ -9991,5 +9991,4469 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplyRecoveryPointInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/418"
+        },
+        "flags": 0,
+        "description": "The input properties to apply recovery point."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplyRecoveryPointInputProperties",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point Id."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 0,
+        "description": "Provider specific input for applying recovery point."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ApplyRecoveryPointProviderSpecificInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/420"
+      },
+      "HyperVReplicaAzure": {
+        "$ref": "#/422"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/424"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "A2AApplyRecoveryPointInput",
+    "properties": {
+      "instanceType": {
+        "type": {
+          "$ref": "#/421"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaAzureApplyRecoveryPointInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The vault location where the recovery Vm resides."
+      },
+      "primaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary kek certificate pfx."
+      },
+      "secondaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secondary kek certificate pfx."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageAzureV2ApplyRecoveryPointInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The vault location where the recovery Vm resides."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/425"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMageAzureV2"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReplicationProtectedItem",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/427"
+        },
+        "flags": 0,
+        "description": "The custom data."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReplicationProtectedItemProperties",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name."
+      },
+      "protectedItemType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of protected item type."
+      },
+      "protectableItemId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protected item ARM Id."
+      },
+      "recoveryServicesProviderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery provider ARM Id."
+      },
+      "primaryFabricFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The friendly name of the primary fabric."
+      },
+      "recoveryFabricFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The friendly name of recovery fabric."
+      },
+      "recoveryFabricId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Arm Id of recovery fabric."
+      },
+      "primaryProtectionContainerFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of primary protection container friendly name."
+      },
+      "recoveryProtectionContainerFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of recovery container friendly name."
+      },
+      "protectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection status."
+      },
+      "protectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description."
+      },
+      "activeLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Current active location of the PE."
+      },
+      "testFailoverState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Test failover state."
+      },
+      "testFailoverStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Test failover state description."
+      },
+      "allowedOperations": {
+        "type": {
+          "$ref": "#/428"
+        },
+        "flags": 0,
+        "description": "The allowed operations on the Replication protected item."
+      },
+      "replicationHealth": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration."
+      },
+      "failoverHealth": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The consolidated failover health for the VM."
+      },
+      "replicationHealthErrors": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 0,
+        "description": "List of replication health errors."
+      },
+      "failoverHealthErrors": {
+        "type": {
+          "$ref": "#/430"
+        },
+        "flags": 0,
+        "description": "List of failover health errors."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of Policy governing this PE."
+      },
+      "policyFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of Policy governing this PE."
+      },
+      "lastSuccessfulFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last successful failover time."
+      },
+      "lastSuccessfulTestFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last successful test failover time."
+      },
+      "currentScenario": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The current scenario."
+      },
+      "failoverRecoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point ARM Id to which the Vm was failed over."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/431"
+        },
+        "flags": 0,
+        "description": "The Replication provider custom settings."
+      },
+      "recoveryContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery container Id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ReplicationProviderSpecificSettings",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/432"
+      },
+      "HyperVReplica2012": {
+        "$ref": "#/437"
+      },
+      "HyperVReplica2012R2": {
+        "$ref": "#/441"
+      },
+      "HyperVReplicaAzure": {
+        "$ref": "#/445"
+      },
+      "HyperVReplicaBaseReplicationDetails": {
+        "$ref": "#/449"
+      },
+      "InMage": {
+        "$ref": "#/453"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/460"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "A2AReplicationDetails",
+    "properties": {
+      "fabricObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fabric specific object Id of the virtual machine."
+      },
+      "multiVmGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group Id."
+      },
+      "multiVmGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group name."
+      },
+      "managementId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The management Id."
+      },
+      "protectedDisks": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 0,
+        "description": "The list of protected disks."
+      },
+      "protectedManagedDisks": {
+        "type": {
+          "$ref": "#/434"
+        },
+        "flags": 0,
+        "description": "The list of protected managed disks."
+      },
+      "primaryFabricLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Primary fabric location."
+      },
+      "recoveryFabricLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery fabric location."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of operating system."
+      },
+      "recoveryAzureVMSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The size of recovery virtual machine."
+      },
+      "recoveryAzureVMName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of recovery virtual machine."
+      },
+      "recoveryAzureResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery resource group."
+      },
+      "recoveryCloudService": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery cloud service."
+      },
+      "recoveryAvailabilitySet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery availability set."
+      },
+      "selectedRecoveryAzureNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery virtual network."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/435"
+        },
+        "flags": 0,
+        "description": "The virtual machine nic details."
+      },
+      "vmSyncedConfigDetails": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The synced configuration details."
+      },
+      "monitoringPercentageCompletion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property."
+      },
+      "monitoringJobType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property."
+      },
+      "lastHeartbeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last heartbeat received from the source server."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The agent version."
+      },
+      "isReplicationAgentUpdateRequired": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A value indicating whether replication agent update is required."
+      },
+      "recoveryFabricObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery fabric object Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "lifecycleId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the \"same\" protected item even though other internal Ids/ARM Id might be changing."
+      },
+      "testFailoverRecoveryFabricObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The test failover fabric object Id."
+      },
+      "rpoInSeconds": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The last RPO value in seconds."
+      },
+      "lastRpoCalculatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time (in UTC) when the last RPO value was calculated by Protection Service."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/436"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaReplicationDetails",
+    "properties": {
+      "lastReplicatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last replication time."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/438"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "initialReplicationDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Initial replication details."
+      },
+      "vMDiskDetails": {
+        "type": {
+          "$ref": "#/439"
+        },
+        "flags": 0,
+        "description": "VM disk details."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/440"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplica2012"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaBlueReplicationDetails",
+    "properties": {
+      "lastReplicatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last replication time."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/442"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "initialReplicationDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Initial replication details."
+      },
+      "vMDiskDetails": {
+        "type": {
+          "$ref": "#/443"
+        },
+        "flags": 0,
+        "description": "VM disk details."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/444"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplica2012R2"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaAzureReplicationDetails",
+    "properties": {
+      "azureVMDiskDetails": {
+        "type": {
+          "$ref": "#/446"
+        },
+        "flags": 0,
+        "description": "Azure VM Disk details."
+      },
+      "recoveryAzureVMName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recovery Azure given name."
+      },
+      "recoveryAzureVMSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Recovery Azure VM size."
+      },
+      "recoveryAzureStorageAccount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery Azure storage account."
+      },
+      "recoveryAzureLogStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection."
+      },
+      "lastReplicatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last replication time."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "initialReplicationDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Initial replication details."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/447"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "selectedRecoveryAzureNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The selected recovery azure network Id."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The encryption info."
+      },
+      "oSDetails": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The operating system info."
+      },
+      "sourceVmRAMSizeInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The RAM size of the VM on the primary side."
+      },
+      "sourceVmCPUCount": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The CPU count of the VM on the primary side."
+      },
+      "enableRDPOnTargetOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The selected option to enable RDP\\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum."
+      },
+      "recoveryAzureResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target resource group Id."
+      },
+      "recoveryAvailabilitySetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery availability set Id."
+      },
+      "useManagedDisks": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether managed disks should be used during failover."
+      },
+      "licenseType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "License Type of the VM to be used."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/448"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaBaseReplicationDetails",
+    "properties": {
+      "lastReplicatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last replication time."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/450"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "initialReplicationDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Initial replication details."
+      },
+      "vMDiskDetails": {
+        "type": {
+          "$ref": "#/451"
+        },
+        "flags": 0,
+        "description": "VM disk details."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/452"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaBaseReplicationDetails"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageReplicationDetails",
+    "properties": {
+      "activeSiteType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always."
+      },
+      "sourceVmCPUCount": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The CPU count of the VM on the primary side."
+      },
+      "sourceVmRAMSizeInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The RAM size of the VM on the primary side."
+      },
+      "osDetails": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The OS details."
+      },
+      "protectionStage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection stage."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "resyncDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The resync details of the machine"
+      },
+      "retentionWindowStart": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The retention window start time."
+      },
+      "retentionWindowEnd": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The retention window end time."
+      },
+      "compressedDataRateInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The compressed data change rate in MB."
+      },
+      "uncompressedDataRateInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The uncompressed data change rate in MB."
+      },
+      "rpoInSeconds": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The RPO in seconds."
+      },
+      "protectedDisks": {
+        "type": {
+          "$ref": "#/454"
+        },
+        "flags": 0,
+        "description": "The list of protected disks."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source IP address."
+      },
+      "lastHeartbeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last heartbeat received from the source server."
+      },
+      "processServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The process server Id."
+      },
+      "masterTargetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The master target Id."
+      },
+      "consistencyPoints": {
+        "type": {
+          "$ref": "#/455"
+        },
+        "flags": 0,
+        "description": "The collection of Consistency points."
+      },
+      "diskResized": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether any disk is resized for this VM."
+      },
+      "rebootAfterUpdateStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the source server requires a restart after update."
+      },
+      "multiVmGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group Id, if any."
+      },
+      "multiVmGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group name, if any."
+      },
+      "multiVmSyncStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the multi vm sync is enabled or disabled."
+      },
+      "agentDetails": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "The agent details."
+      },
+      "vCenterInfrastructureId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The vCenter infrastructure Id."
+      },
+      "infrastructureVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The infrastructure VM Id."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "discoveryType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating the discovery type of the machine."
+      },
+      "azureStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null."
+      },
+      "datastores": {
+        "type": {
+          "$ref": "#/457"
+        },
+        "flags": 0,
+        "description": "The data stores of the on-premise machine Value can be list of strings that contain data store names"
+      },
+      "validationErrors": {
+        "type": {
+          "$ref": "#/458"
+        },
+        "flags": 0,
+        "description": "The validation errors of the on-premise machine Value can be list of validation errors"
+      },
+      "lastRpoCalculatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last RPO calculated time."
+      },
+      "lastUpdateReceivedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last update time received from on-prem components."
+      },
+      "replicaId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The replica id of the protected item."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS Version of the protected item."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/459"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageReplicationDetailsConsistencyPoints",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageAzureV2ReplicationDetails",
+    "properties": {
+      "infrastructureVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The infrastructure VM Id."
+      },
+      "vCenterInfrastructureId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The vCenter infrastructure Id."
+      },
+      "protectionStage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection stage."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "resyncProgressPercentage": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The resync progress percentage."
+      },
+      "rpoInSeconds": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The RPO in seconds."
+      },
+      "compressedDataRateInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The compressed data change rate in MB."
+      },
+      "uncompressedDataRateInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The uncompressed data change rate in MB."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source IP address."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The agent version."
+      },
+      "isAgentUpdateRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether installed agent needs to be updated."
+      },
+      "isRebootAfterUpdateRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the source server requires a restart after update."
+      },
+      "lastHeartbeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last heartbeat received from the source server."
+      },
+      "processServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The process server Id."
+      },
+      "multiVmGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group Id."
+      },
+      "multiVmGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The multi vm group name."
+      },
+      "multiVmSyncStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether multi vm sync is enabled or disabled."
+      },
+      "protectedDisks": {
+        "type": {
+          "$ref": "#/461"
+        },
+        "flags": 0,
+        "description": "The list of protected disks."
+      },
+      "diskResized": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether any disk is resized for this VM."
+      },
+      "masterTargetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The master target Id."
+      },
+      "sourceVmCPUCount": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The CPU count of the VM on the primary side."
+      },
+      "sourceVmRAMSizeInMB": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The RAM size of the VM on the primary side."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the OS on the VM."
+      },
+      "vhdName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS disk VHD name."
+      },
+      "osDiskId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the disk containing the OS."
+      },
+      "azureVMDiskDetails": {
+        "type": {
+          "$ref": "#/462"
+        },
+        "flags": 0,
+        "description": "Azure VM Disk details."
+      },
+      "recoveryAzureVMName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recovery Azure given name."
+      },
+      "recoveryAzureVMSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Recovery Azure VM size."
+      },
+      "recoveryAzureStorageAccount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery Azure storage account."
+      },
+      "recoveryAzureLogStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/463"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "selectedRecoveryAzureNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The selected recovery azure network Id."
+      },
+      "discoveryType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating the discovery type of the machine. Value can be vCenter or physical."
+      },
+      "enableRDPOnTargetOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The selected option to enable RDP\\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum."
+      },
+      "datastores": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "The data stores of the on-premise machine. Value can be list of strings that contain data store names."
+      },
+      "targetVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM."
+      },
+      "recoveryAzureResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target resource group Id."
+      },
+      "recoveryAvailabilitySetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery availability set Id."
+      },
+      "useManagedDisks": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether managed disks should be used during failover."
+      },
+      "licenseType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "License Type of the VM to be used."
+      },
+      "validationErrors": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "The validation errors of the on-premise machine Value can be list of validation errors."
+      },
+      "lastRpoCalculatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last RPO calculated time."
+      },
+      "lastUpdateReceivedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last update time received from on-prem components."
+      },
+      "replicaId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The replica id of the protected item."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS Version of the protected item."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/466"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMageAzureV2"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applyRecoveryPoint",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/417"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "repairReplication",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateMobilityServiceRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/470"
+        },
+        "flags": 0,
+        "description": "The properties of the update mobility service request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateMobilityServiceRequestProperties",
+    "properties": {
+      "runAsAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CS run as account Id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateMobilityService",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/469"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReverseReplicationInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/473"
+        },
+        "flags": 0,
+        "description": "Reverse replication properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReverseReplicationInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Failover direction."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/474"
+        },
+        "flags": 0,
+        "description": "Provider specific reverse replication input."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ReverseReplicationProviderSpecificInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/475"
+      },
+      "HyperVReplicaAzure": {
+        "$ref": "#/478"
+      },
+      "InMage": {
+        "$ref": "#/480"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/483"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "A2AReprotectInput",
+    "properties": {
+      "recoveryContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery container Id."
+      },
+      "vmDisks": {
+        "type": {
+          "$ref": "#/476"
+        },
+        "flags": 0,
+        "description": "The list of vm disk details."
+      },
+      "recoveryResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery resource group Id. Valid for V2 scenarios."
+      },
+      "recoveryCloudServiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery cloud service Id. Valid for V1 scenarios."
+      },
+      "recoveryAvailabilitySetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery availability set."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Policy Id."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaAzureReprotectInput",
+    "properties": {
+      "hvHostVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Hyper-V host Vm Id."
+      },
+      "vmName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Vm Name."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type associated with vm."
+      },
+      "vHDId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS disk VHD id associated with vm."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The storage account name."
+      },
+      "logStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The storage account to be used for logging during replication."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/479"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageReprotectInput",
+    "properties": {
+      "masterTargetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Master Target Id."
+      },
+      "processServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Process Server Id."
+      },
+      "retentionDrive": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The retention drive to use on the MT."
+      },
+      "runAsAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CS account Id."
+      },
+      "datastoreName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target data store name."
+      },
+      "diskExclusionInput": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The enable disk exclusion input."
+      },
+      "profileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Policy Id."
+      },
+      "disksToInclude": {
+        "type": {
+          "$ref": "#/481"
+        },
+        "flags": 0,
+        "description": "The disks to include list."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/482"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageAzureV2ReprotectInput",
+    "properties": {
+      "masterTargetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Master target Id."
+      },
+      "processServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Process Server Id."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The storage account id."
+      },
+      "runAsAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CS account Id."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Policy Id."
+      },
+      "logStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The storage account to be used for logging during replication."
+      },
+      "disksToInclude": {
+        "type": {
+          "$ref": "#/484"
+        },
+        "flags": 0,
+        "description": "The disks to include list."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/485"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMageAzureV2"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reProtect",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/472"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverCommit",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestFailoverCleanupInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/489"
+        },
+        "flags": 1,
+        "description": "Test failover cleanup input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestFailoverCleanupInputProperties",
+    "properties": {
+      "comments": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Test failover cleanup comments."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testFailoverCleanup",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/488"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/492"
+        },
+        "flags": 0,
+        "description": "Planned failover input properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Failover direction."
+      },
+      "networkType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Network type to be used for test failover."
+      },
+      "networkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the network to be used for test failover"
+      },
+      "skipTestFailoverCleanup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the test failover cleanup is to be skipped."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 0,
+        "description": "Provider specific settings"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ProviderSpecificFailoverInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/494"
+      },
+      "HyperVReplicaAzure": {
+        "$ref": "#/496"
+      },
+      "HyperVReplicaAzureFailback": {
+        "$ref": "#/498"
+      },
+      "InMage": {
+        "$ref": "#/500"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/506"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "A2AFailoverProviderInput",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point id to be passed to failover to a particular recovery point. In case of latest recovery point, null should be passed."
+      },
+      "cloudServiceCreationOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether to use recovery cloud service for TFO or not."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaAzureFailoverProviderInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the vault."
+      },
+      "primaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Primary kek certificate pfx."
+      },
+      "secondaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Secondary kek certificate pfx."
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point id to be passed to failover to a particular recovery point. In case of latest recovery point, null should be passed."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/497"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaAzureFailbackProviderInput",
+    "properties": {
+      "dataSyncOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Data sync option."
+      },
+      "recoveryVmCreationOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ALR options to create alternate recovery."
+      },
+      "providerIdForAlternateRecovery": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Provider ID for alternate location"
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzureFailback"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageFailoverProviderInput",
+    "properties": {
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 0,
+        "description": "The recovery point type. Values from LatestTime, LatestTag or Custom. In the case of custom, the recovery point provided by RecoveryPointId will be used. In the other two cases, recovery point id will be ignored."
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point id to be passed to failover to a particular recovery point. In case of latest recovery point, null should be passed."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/505"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestTag"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/503"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageAzureV2FailoverProviderInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the vault."
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery point id to be passed to failover to a particular recovery point. In case of latest recovery point, null should be passed."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/507"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMageAzureV2"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/491"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnplannedFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/510"
+        },
+        "flags": 0,
+        "description": "Planned failover input properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnplannedFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Failover direction."
+      },
+      "sourceSiteOperations": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source site operations status"
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 0,
+        "description": "Provider specific settings"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unplannedFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/509"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlannedFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/513"
+        },
+        "flags": 0,
+        "description": "Planned failover input properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlannedFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Failover direction."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 0,
+        "description": "Provider specific settings"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "plannedFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/426"
+    },
+    "input": {
+      "$ref": "#/512"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/516"
+        },
+        "flags": 0,
+        "description": "Renew certificate input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateInputProperties",
+    "properties": {
+      "renewCertificateType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Renew certificate type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Fabric",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/518"
+        },
+        "flags": 0,
+        "description": "Fabric related data."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FabricProperties",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly name of the fabric."
+      },
+      "encryptionDetails": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Encryption details for the fabric."
+      },
+      "rolloverEncryptionDetails": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Rollover encryption details for the fabric."
+      },
+      "internalIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Dra Registration Id."
+      },
+      "bcdrState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BCDR state of the fabric."
+      },
+      "customDetails": {
+        "type": {
+          "$ref": "#/519"
+        },
+        "flags": 0,
+        "description": "Fabric specific settings."
+      },
+      "healthErrorDetails": {
+        "type": {
+          "$ref": "#/534"
+        },
+        "flags": 0,
+        "description": "Fabric health error details."
+      },
+      "health": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health of fabric."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FabricSpecificDetails",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "Azure": {
+        "$ref": "#/520"
+      },
+      "HyperVSite": {
+        "$ref": "#/523"
+      },
+      "VMM": {
+        "$ref": "#/525"
+      },
+      "VMware": {
+        "$ref": "#/527"
+      },
+      "VMwareV2": {
+        "$ref": "#/532"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFabricSpecificDetails",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Location for the Azure fabric."
+      },
+      "containerIds": {
+        "type": {
+          "$ref": "#/521"
+        },
+        "flags": 0,
+        "description": "The container Ids for the Azure fabric."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/522"
+        },
+        "flags": 1,
+        "description": "Gets the class type. Overridden in derived classes."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Azure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVSiteDetails",
+    "properties": {
+      "instanceType": {
+        "type": {
+          "$ref": "#/524"
+        },
+        "flags": 1,
+        "description": "Gets the class type. Overridden in derived classes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVSite"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmmDetails",
+    "properties": {
+      "instanceType": {
+        "type": {
+          "$ref": "#/526"
+        },
+        "flags": 1,
+        "description": "Gets the class type. Overridden in derived classes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMM"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMwareDetails",
+    "properties": {
+      "processServers": {
+        "type": {
+          "$ref": "#/528"
+        },
+        "flags": 0,
+        "description": "The list of Process Servers associated with the fabric."
+      },
+      "masterTargetServers": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 0,
+        "description": "The list of Master Target servers associated with the fabric."
+      },
+      "runAsAccounts": {
+        "type": {
+          "$ref": "#/530"
+        },
+        "flags": 0,
+        "description": "The list of run as accounts created on the server."
+      },
+      "replicationPairCount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The number of replication pairs configured in this CS."
+      },
+      "processServerCount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The number of process servers."
+      },
+      "agentCount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The number of source and target servers configured to talk to this CS."
+      },
+      "protectedServers": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The number of protected servers."
+      },
+      "systemLoad": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The percentage of the system load."
+      },
+      "systemLoadStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The system load status."
+      },
+      "cpuLoad": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The percentage of the CPU load."
+      },
+      "cpuLoadStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CPU load status."
+      },
+      "totalMemoryInBytes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The total memory."
+      },
+      "availableMemoryInBytes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The available memory."
+      },
+      "memoryUsageStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The memory usage status."
+      },
+      "totalSpaceInBytes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The total space."
+      },
+      "availableSpaceInBytes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The available space."
+      },
+      "spaceUsageStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The space usage status."
+      },
+      "webLoad": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The web load."
+      },
+      "webLoadStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The web load status."
+      },
+      "databaseServerLoad": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The database server load."
+      },
+      "databaseServerLoadStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The database server load status."
+      },
+      "csServiceStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CS service status."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The IP address."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The agent Version."
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The host name."
+      },
+      "lastHeartbeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last heartbeat received from CS server."
+      },
+      "versionStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version status"
+      },
+      "sslCertExpiryDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "CS SSL cert expiry date."
+      },
+      "sslCertExpiryRemainingDays": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "CS SSL cert expiry date."
+      },
+      "psTemplateVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "PS template version."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/531"
+        },
+        "flags": 1,
+        "description": "Gets the class type. Overridden in derived classes."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMware"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMwareV2FabricSpecificDetails",
+    "properties": {
+      "srsServiceEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The endpoint for making requests to the SRS Service."
+      },
+      "rcmServiceEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The endpoint for making requests to the RCM Service."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/533"
+        },
+        "flags": 1,
+        "description": "Gets the class type. Overridden in derived classes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareV2"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "renewCertificate",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/517"
+    },
+    "input": {
+      "$ref": "#/515"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProcessServerRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/537"
+        },
+        "flags": 0,
+        "description": "The properties of the PS Failover request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProcessServerRequestProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The container identifier."
+      },
+      "sourceProcessServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source process server."
+      },
+      "targetProcessServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The new process server."
+      },
+      "vmsToMigrate": {
+        "type": {
+          "$ref": "#/538"
+        },
+        "flags": 0,
+        "description": "The VMS to migrate."
+      },
+      "updateType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value for failover type. It can be systemlevel/serverlevel"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reassociateGateway",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/517"
+    },
+    "input": {
+      "$ref": "#/536"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkConsistency",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/517"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryServicesProvider",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "Provider properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshProvider",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/541"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlan",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/544"
+        },
+        "flags": 0,
+        "description": "The custom details."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanProperties",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The friendly name."
+      },
+      "primaryFabricId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary fabric Id."
+      },
+      "primaryFabricFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary fabric friendly name."
+      },
+      "recoveryFabricId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery fabric Id."
+      },
+      "recoveryFabricFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery fabric friendly name."
+      },
+      "failoverDeploymentModel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The failover deployment model."
+      },
+      "replicationProviders": {
+        "type": {
+          "$ref": "#/545"
+        },
+        "flags": 0,
+        "description": "The list of replication providers."
+      },
+      "allowedOperations": {
+        "type": {
+          "$ref": "#/546"
+        },
+        "flags": 0,
+        "description": "The list of allowed operations."
+      },
+      "lastPlannedFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the last planned failover."
+      },
+      "lastUnplannedFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the last unplanned failover."
+      },
+      "lastTestFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the last test failover."
+      },
+      "currentScenario": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The current scenario details."
+      },
+      "currentScenarioStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery plan status."
+      },
+      "currentScenarioStatusDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery plan status description."
+      },
+      "groups": {
+        "type": {
+          "$ref": "#/547"
+        },
+        "flags": 0,
+        "description": "The recovery plan groups."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reProtect",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverCommit",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanTestFailoverCleanupInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/551"
+        },
+        "flags": 1,
+        "description": "The recovery plan test failover cleanup input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanTestFailoverCleanupInputProperties",
+    "properties": {
+      "comments": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The test failover cleanup comments."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testFailoverCleanup",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    },
+    "input": {
+      "$ref": "#/550"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanTestFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/554"
+        },
+        "flags": 1,
+        "description": "The recovery plan test failover input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanTestFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/557"
+        },
+        "flags": 1,
+        "description": "The failover direction."
+      },
+      "networkType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The network type to be used for test failover."
+      },
+      "networkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Id of the network to be used for test failover."
+      },
+      "skipTestFailoverCleanup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the test failover cleanup is to be skipped."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/593"
+        },
+        "flags": 0,
+        "description": "The provider specific properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryToRecovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RecoveryToPrimary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/556"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RecoveryPlanProviderSpecificFailoverInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/559"
+      },
+      "HyperVReplicaAzure": {
+        "$ref": "#/566"
+      },
+      "HyperVReplicaAzureFailback": {
+        "$ref": "#/572"
+      },
+      "InMage": {
+        "$ref": "#/580"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/586"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanA2AFailoverInput",
+    "properties": {
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/564"
+        },
+        "flags": 1,
+        "description": "The recovery point type."
+      },
+      "cloudServiceCreationOption": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether to use recovery cloud service for TFO or not."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/565"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Latest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestApplicationConsistent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestCrashConsistent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestProcessed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanHyperVReplicaAzureFailoverInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The vault location."
+      },
+      "primaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary KEK certificate PFX."
+      },
+      "secondaryKekCertificatePfx": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secondary KEK certificate PFX."
+      },
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/570"
+        },
+        "flags": 0,
+        "description": "The recovery point type."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/571"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Latest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestApplicationConsistent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestProcessed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/567"
+      },
+      {
+        "$ref": "#/568"
+      },
+      {
+        "$ref": "#/569"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzure"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanHyperVReplicaAzureFailbackInput",
+    "properties": {
+      "dataSyncOption": {
+        "type": {
+          "$ref": "#/575"
+        },
+        "flags": 1,
+        "description": "The data sync option."
+      },
+      "recoveryVmCreationOption": {
+        "type": {
+          "$ref": "#/578"
+        },
+        "flags": 1,
+        "description": "The ALR option."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/579"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForDownTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForSynchronization"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/573"
+      },
+      {
+        "$ref": "#/574"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreateVmIfNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoAction"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/576"
+      },
+      {
+        "$ref": "#/577"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVReplicaAzureFailback"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanInMageFailoverInput",
+    "properties": {
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/584"
+        },
+        "flags": 1,
+        "description": "The recovery point type."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/585"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestTag"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/581"
+      },
+      {
+        "$ref": "#/582"
+      },
+      {
+        "$ref": "#/583"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanInMageAzureV2FailoverInput",
+    "properties": {
+      "vaultLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The vault location."
+      },
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/591"
+        },
+        "flags": 1,
+        "description": "The recovery point type."
+      },
+      "useMultiVmSyncPoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/592"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Latest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestApplicationConsistent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestCrashConsistent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestProcessed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/587"
+      },
+      {
+        "$ref": "#/588"
+      },
+      {
+        "$ref": "#/589"
+      },
+      {
+        "$ref": "#/590"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMageAzureV2"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/558"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    },
+    "input": {
+      "$ref": "#/553"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanUnplannedFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/596"
+        },
+        "flags": 1,
+        "description": "The recovery plan unplanned failover input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanUnplannedFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/599"
+        },
+        "flags": 1,
+        "description": "The failover direction."
+      },
+      "sourceSiteOperations": {
+        "type": {
+          "$ref": "#/602"
+        },
+        "flags": 1,
+        "description": "A value indicating whether source site operations are required."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/603"
+        },
+        "flags": 0,
+        "description": "The provider specific properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryToRecovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RecoveryToPrimary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/597"
+      },
+      {
+        "$ref": "#/598"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/600"
+      },
+      {
+        "$ref": "#/601"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/558"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unplannedFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    },
+    "input": {
+      "$ref": "#/595"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanPlannedFailoverInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/606"
+        },
+        "flags": 1,
+        "description": "The recovery plan planned failover input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPlanPlannedFailoverInputProperties",
+    "properties": {
+      "failoverDirection": {
+        "type": {
+          "$ref": "#/609"
+        },
+        "flags": 1,
+        "description": "The failover direction."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/610"
+        },
+        "flags": 0,
+        "description": "The provider specific properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryToRecovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RecoveryToPrimary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/607"
+      },
+      {
+        "$ref": "#/608"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/558"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "plannedFailover",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/543"
+    },
+    "input": {
+      "$ref": "#/605"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SwitchProtectionInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/613"
+        },
+        "flags": 0,
+        "description": "Switch protection properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SwitchProtectionInputProperties",
+    "properties": {
+      "replicationProtectedItemName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique replication protected item name."
+      },
+      "providerSpecificDetails": {
+        "type": {
+          "$ref": "#/614"
+        },
+        "flags": 0,
+        "description": "Provider specific switch protection input."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "SwitchProtectionProviderSpecificInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "A2A": {
+        "$ref": "#/615"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "A2ASwitchProtectionInput",
+    "properties": {
+      "recoveryContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery container Id."
+      },
+      "vmDisks": {
+        "type": {
+          "$ref": "#/616"
+        },
+        "flags": 0,
+        "description": "The list of vm disk details."
+      },
+      "vmManagedDisks": {
+        "type": {
+          "$ref": "#/617"
+        },
+        "flags": 0,
+        "description": "The list of vm managed disk details."
+      },
+      "recoveryResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery resource group Id. Valid for V2 scenarios."
+      },
+      "recoveryCloudServiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery cloud service Id. Valid for V1 scenarios."
+      },
+      "recoveryAvailabilitySetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recovery availability set."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Policy Id."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/618"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "A2A"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProtectionContainer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 0,
+        "description": "The custom data."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProtectionContainerProperties",
+    "properties": {
+      "fabricFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fabric friendly name."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name."
+      },
+      "fabricType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fabric type."
+      },
+      "protectedItemCount": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Number of protected PEs"
+      },
+      "pairingStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The pairing status of this cloud."
+      },
+      "role": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The role of this cloud."
+      },
+      "fabricSpecificDetails": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "Fabric specific details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "switchprotection",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/619"
+    },
+    "input": {
+      "$ref": "#/612"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoverProtectableItemRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/623"
+        },
+        "flags": 0,
+        "description": "The properties of a discover protectable item request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoverProtectableItemRequestProperties",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The friendly name of the physical machine."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The IP address of the physical machine to be discovered."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type on the physical machine."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discoverProtectableItem",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/619"
+    },
+    "input": {
+      "$ref": "#/622"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResumeJobParams",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/626"
+        },
+        "flags": 0,
+        "description": "Resume job properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResumeJobParamsProperties",
+    "properties": {
+      "comments": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resume job comments."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Job",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "The custom data."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the Job. ARM expects the terminal status to be one of (1) Succeeded, (2) Failed or (3) Canceled. All other values imply that the operation is still running / being applied."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/388"
+        },
+        "flags": 0,
+        "description": "The error."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/627"
+    },
+    "input": {
+      "$ref": "#/625"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/627"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
+    "apiVersion": "2016-08-10",
+    "output": {
+      "$ref": "#/627"
+    }
   }
 ]

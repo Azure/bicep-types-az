@@ -30,6 +30,18 @@
 * **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy properties.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Authorization/roleAssignmentScheduleRequests@2024-02-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2024-02-01-preview
+* **Input**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+* **Output**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+
+## Function validate (Microsoft.Authorization/roleEligibilityScheduleRequests@2024-02-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2024-02-01-preview
+* **Input**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+* **Output**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+
 ## ApprovalSettings
 ### Properties
 * **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage' | string: The type of rule
@@ -109,6 +121,13 @@
 * **id**: string: The id of the principal made changes
 * **type**: string: Type of principal such as user , group etc
 
+## RoleAssignmentScheduleRequest
+### Properties
+* **id**: string (ReadOnly): The role assignment schedule request ID.
+* **name**: string (ReadOnly): The role assignment schedule request name.
+* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties.
+* **type**: string (ReadOnly): The role assignment schedule request type.
+
 ## RoleAssignmentScheduleRequestProperties
 ### Properties
 * **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
@@ -145,6 +164,13 @@
 ### Properties
 * **ticketNumber**: string: Ticket number for the role assignment
 * **ticketSystem**: string: Ticket system name for the role assignment
+
+## RoleEligibilityScheduleRequest
+### Properties
+* **id**: string (ReadOnly): The role eligibility schedule request ID.
+* **name**: string (ReadOnly): The role eligibility schedule request name.
+* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
+* **type**: string (ReadOnly): The role eligibility schedule request type.
 
 ## RoleEligibilityScheduleRequestProperties
 ### Properties

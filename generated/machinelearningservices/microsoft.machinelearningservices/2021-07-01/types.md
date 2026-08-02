@@ -55,6 +55,12 @@
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function diagnose (Microsoft.MachineLearningServices/workspaces@2021-07-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-07-01
+* **Input**: [DiagnoseWorkspaceParameters](#diagnoseworkspaceparameters)
+* **Output**: [DiagnoseResponseResult](#diagnoseresponseresult)
+
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces@2021-07-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2021-07-01
@@ -84,6 +90,17 @@
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2021-07-01
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
+
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2021-07-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-07-01
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2021-07-01)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2021-07-01
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -303,6 +320,89 @@
 ### Properties
 * **dataLakeStoreAccountName**: string: DataLake Store Account Name
 
+## DiagnoseRequestProperties
+### Properties
+* **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
+* **containerRegistry**: [DiagnoseRequestPropertiesContainerRegistry](#diagnoserequestpropertiescontainerregistry): Setting for diagnosing dependent container registry
+* **dnsResolution**: [DiagnoseRequestPropertiesDnsResolution](#diagnoserequestpropertiesdnsresolution): Setting for diagnosing dns resolution
+* **keyVault**: [DiagnoseRequestPropertiesKeyVault](#diagnoserequestpropertieskeyvault): Setting for diagnosing dependent key vault
+* **nsg**: [DiagnoseRequestPropertiesNsg](#diagnoserequestpropertiesnsg): Setting for diagnosing network security group
+* **others**: [DiagnoseRequestPropertiesOthers](#diagnoserequestpropertiesothers): Setting for diagnosing unclassified category of problems
+* **resourceLock**: [DiagnoseRequestPropertiesResourceLock](#diagnoserequestpropertiesresourcelock): Setting for diagnosing resource lock
+* **storageAccount**: [DiagnoseRequestPropertiesStorageAccount](#diagnoserequestpropertiesstorageaccount): Setting for diagnosing dependent storage account
+* **udr**: [DiagnoseRequestPropertiesUdr](#diagnoserequestpropertiesudr): Setting for diagnosing user defined routing
+
+## DiagnoseRequestPropertiesApplicationInsights
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesContainerRegistry
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesDnsResolution
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesKeyVault
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesNsg
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesOthers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesResourceLock
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesStorageAccount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesUdr
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseResponseResult
+### Properties
+* **value**: [DiagnoseResponseResultValue](#diagnoseresponseresultvalue)
+
+## DiagnoseResponseResultValue
+### Properties
+* **applicationInsightsResults**: [DiagnoseResult](#diagnoseresult)[]
+* **containerRegistryResults**: [DiagnoseResult](#diagnoseresult)[]
+* **dnsResolutionResults**: [DiagnoseResult](#diagnoseresult)[]
+* **keyVaultResults**: [DiagnoseResult](#diagnoseresult)[]
+* **networkSecurityRuleResults**: [DiagnoseResult](#diagnoseresult)[]
+* **otherResults**: [DiagnoseResult](#diagnoseresult)[]
+* **resourceLockResults**: [DiagnoseResult](#diagnoseresult)[]
+* **storageAccountResults**: [DiagnoseResult](#diagnoseresult)[]
+* **userDefinedRouteResults**: [DiagnoseResult](#diagnoseresult)[]
+
+## DiagnoseResult
+### Properties
+* **code**: string (ReadOnly): Code for workspace setup error
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Level of workspace setup error
+* **message**: string (ReadOnly): Message of workspace setup error
+
+## DiagnoseWorkspaceParameters
+### Properties
+* **value**: [DiagnoseRequestProperties](#diagnoserequestproperties): Value of Parameters
+
 ## EncryptionProperty
 ### Properties
 * **identity**: [IdentityForCmk](#identityforcmk): The identity that will be used to access the key vault for encryption at rest.
@@ -486,6 +586,18 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **location**: string: Region of workspace quota to be updated.
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
+
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
@@ -575,6 +687,19 @@
 * **publicIpAddress**: string (ReadOnly): Public IP address
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
+
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
 
 ## UserAccountCredentials
 ### Properties

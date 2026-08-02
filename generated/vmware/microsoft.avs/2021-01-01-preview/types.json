@@ -2757,6 +2757,123 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Trial",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 2,
+        "description": "Trial status"
+      },
+      "availableHosts": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Number of trial hosts available"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialAvailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialUsed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialDisabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkTrialAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2021-01-01-preview",
+    "output": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Quota",
+    "properties": {
+      "hostsRemaining": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 2,
+        "description": "Remaining hosts quota by sku type"
+      },
+      "quotaEnabled": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 2,
+        "description": "Host quota is active for current subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaHostsRemaining",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2021-01-01-preview",
+    "output": {
+      "$ref": "#/224"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
       "nsxtUsername": {
@@ -2795,7 +2912,7 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2021-01-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/230"
     }
   }
 ]

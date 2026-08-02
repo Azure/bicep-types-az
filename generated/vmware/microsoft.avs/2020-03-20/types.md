@@ -44,6 +44,16 @@
 * **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site resource
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkQuotaAvailability (Microsoft.AVS/locations@2020-03-20)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2020-03-20
+* **Output**: [Quota](#quota)
+
+## Function checkTrialAvailability (Microsoft.AVS/locations@2020-03-20)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2020-03-20
+* **Output**: [Trial](#trial)
+
 ## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-03-20)
 * **Resource**: Microsoft.AVS/privateClouds
 * **ApiVersion**: 2020-03-20
@@ -124,6 +134,16 @@
 * **vcenterPassword**: string {sensitive}: Optionally, set the vCenter admin password when the private cloud is created
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
 
+## Quota
+### Properties
+* **hostsRemaining**: [QuotaHostsRemaining](#quotahostsremaining) (ReadOnly): Remaining hosts quota by sku type
+* **quotaEnabled**: 'Disabled' | 'Enabled' | string (ReadOnly): Host quota is active for current subscription
+
+## QuotaHostsRemaining
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the SKU.
@@ -132,4 +152,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Trial
+### Properties
+* **availableHosts**: int (ReadOnly): Number of trial hosts available
+* **status**: 'TrialAvailable' | 'TrialDisabled' | 'TrialUsed' | string (ReadOnly): Trial status
 

@@ -93,10 +93,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/locations/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2025-08-01-preview)
+* **Resource**: Microsoft.AppConfiguration/locations
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2025-08-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2025-08-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
+
+## Function reconcile (Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations@2025-08-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2025-08-01-preview
+* **Output**: [NetworkSecurityPerimeterConfiguration](#networksecurityperimeterconfiguration)
+
+## Function regenerateKey (Microsoft.AppConfiguration/configurationStores@2025-08-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [ApiKey](#apikey)
 
 ## AccessRule
 ### Properties
@@ -134,6 +151,11 @@
 ## AzureFrontDoorProperties
 ### Properties
 * **resourceId**: string: Resource ID of an Azure Front Door profile
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+* **type**: 'Microsoft.AppConfiguration/configurationStores' | string (Required): The resource type to check for name availability.
 
 ## ConfigurationStoreProperties
 ### Properties
@@ -214,11 +236,25 @@ A locked key-value may not be modified until it is unlocked.
 ### Properties
 * **id**: string: Resource identifier of a Managed-On-Behalf-Of broker resource
 
+## NameAvailabilityStatus
+### Properties
+* **message**: string (ReadOnly): If any, the error message that provides more detail for the reason that the name is not available.
+* **nameAvailable**: bool (ReadOnly): The value indicating whether the resource name is available.
+* **reason**: string (ReadOnly): If any, the reason that the name is not available.
+
 ## NetworkSecurityPerimeter
 ### Properties
 * **id**: string: Fully qualified Azure resource ID of the NSP resource
 * **location**: string: Location of the network security perimeter
 * **perimeterGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Universal unique ID (UUID) of the network security perimeter
+
+## NetworkSecurityPerimeterConfiguration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): Network security configuration properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## NetworkSecurityPerimeterConfigurationProperties
 ### Properties
@@ -277,6 +313,10 @@ A locked key-value may not be modified until it is unlocked.
 * **severity**: 'Error' | 'Warning' | string (ReadOnly): Severity of the issue.
 * **suggestedAccessRules**: [AccessRule](#accessrule)[] (ReadOnly): Access rules that can be added to the network security profile (NSP) to remediate the issue.
 * **suggestedResourceIds**: string[] (ReadOnly): Fully qualified resource IDs of suggested resources that can be associated to the network security perimeter (NSP) to remediate the issue.
+
+## RegenerateKeyParameters
+### Properties
+* **id**: string: The id of the key to regenerate.
 
 ## ReplicaProperties
 ### Properties

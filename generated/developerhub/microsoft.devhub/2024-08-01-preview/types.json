@@ -1626,5 +1626,247 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthCallRequest",
+    "properties": {
+      "redirectUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL the client will redirect to on successful authentication. If empty, no redirect will occur."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthInfoResponse",
+    "properties": {
+      "authURL": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL for authorizing the Developer Hub GitHub App"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OAuth token used to make calls to GitHub"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGitHubOAuthInfo",
+    "resourceType": "Microsoft.DevHub/locations/githuboauth",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/117"
+    },
+    "input": {
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GeneratePreviewArtifactsResponse",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatePreviewArtifacts",
+    "resourceType": "Microsoft.DevHub/locations",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/119"
+    },
+    "input": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdooAuthCallRequest",
+    "properties": {
+      "redirectUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL the client will redirect to on successful authentication. If empty, no redirect will occur."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdooAuthInfoResponse",
+    "properties": {
+      "authURL": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL used to authorize ADO app using Entra ID"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OAuth token used to make calls to ADO APIs"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getADOOAuthInfo",
+    "resourceType": "Microsoft.DevHub/locations/adooauth",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportTemplateRequest",
+    "properties": {
+      "templateName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Template Name"
+      },
+      "resourceGroupIds": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0
+      },
+      "siteId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "instanceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "instanceStage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrLinkResponse",
+    "properties": {
+      "prLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link of the pull request."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.DevHub/iacProfiles",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/126"
+    },
+    "input": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleTemplateRequest",
+    "properties": {
+      "templateName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Template Name"
+      },
+      "scaleRequirement": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleProperty",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region of the store"
+      },
+      "stage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The stage of the store"
+      },
+      "numberOfStore": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Number of the store"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scale",
+    "resourceType": "Microsoft.DevHub/iacProfiles",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/126"
+    },
+    "input": {
+      "$ref": "#/128"
+    }
   }
 ]

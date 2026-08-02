@@ -11,6 +11,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.PolicyInsights/remediations@2021-10-01)
+* **Resource**: Microsoft.PolicyInsights/remediations
+* **ApiVersion**: 2021-10-01
+* **Output**: [Remediation](#remediation)
+
 ## Function listDeployments (Microsoft.PolicyInsights/remediations@2021-10-01)
 * **Resource**: Microsoft.PolicyInsights/remediations
 * **ApiVersion**: 2021-10-01
@@ -23,6 +28,14 @@
 * **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
 * **message**: string (ReadOnly): Description of the error.
 * **target**: string (ReadOnly): The target of the error.
+
+## Remediation
+### Properties
+* **id**: string (ReadOnly): The ID of the remediation.
+* **name**: string (ReadOnly): The name of the remediation.
+* **properties**: [RemediationProperties](#remediationproperties): Properties for the remediation.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the remediation.
 
 ## RemediationDeployment
 ### Properties

@@ -26,6 +26,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cutoverMigration (Microsoft.DBforMySQL/flexibleServers@2024-02-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-02-01-preview
+* **Output**: [Server](#server)
+
+## Function detachVNet (Microsoft.DBforMySQL/flexibleServers@2024-02-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-02-01-preview
+* **Input**: [ServerDetachVNetParameter](#serverdetachvnetparameter)
+* **Output**: [Server](#server)
+
+## Function validateEstimateHighAvailability (Microsoft.DBforMySQL/flexibleServers@2024-02-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-02-01-preview
+* **Input**: [HighAvailabilityValidationEstimation](#highavailabilityvalidationestimation)
+* **Output**: [HighAvailabilityValidationEstimation](#highavailabilityvalidationestimation)
+
 ## AdvancedThreatProtectionProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
@@ -52,6 +69,12 @@
 * **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
 * **standbyAvailabilityZone**: string: Availability zone of the standby server.
 * **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | string (ReadOnly): The state of server high availability.
+
+## HighAvailabilityValidationEstimation
+### Properties
+* **estimatedDowntime**: int (ReadOnly): Estimated seconds of downtime for the deployment.
+* **expectedStandbyAvailabilityZone**: string: Expected Availability zone of the standby server.
+* **scheduledStandbyAvailabilityZone**: string (ReadOnly): Scheduled Availability zone of the standby server.
 
 ## ImportSourceProperties
 ### Properties
@@ -115,6 +138,22 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
+## Server
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [MySQLServerIdentity](#mysqlserveridentity): The cmk identity for the server.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [MySQLServerSku](#mysqlserversku): The SKU (pricing tier) of the server.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ServerDetachVNetParameter
+### Properties
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration.
+
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -155,6 +194,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

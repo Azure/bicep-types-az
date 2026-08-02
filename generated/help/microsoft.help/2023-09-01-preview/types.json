@@ -2004,5 +2004,27 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestartTroubleshooterResponse",
+    "properties": {
+      "troubleshooterResourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Updated TroubleshooterResource Name ."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Help/troubleshooters",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/158"
+    }
   }
 ]

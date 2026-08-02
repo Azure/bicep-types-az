@@ -1321,6 +1321,197 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateCostResponse",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "ISO 4217 currency code, e.g. \"USD\"."
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 3,
+        "description": "Ranked list of GPU SKU pricing plans. Feasible plans first, ordered by `totalHourlyPrice` ascending; infeasible plans last."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateCostPlan",
+    "properties": {
+      "vmSize": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Azure VM SKU, e.g. \"Standard_ND96isr_H100_v5\". Matches the value accepted by `ModelDeploymentProperties.vmSize`."
+      },
+      "quantization": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resolved quantization on this SKU."
+      },
+      "vmsPerReplica": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 3,
+        "description": "Number of VMs required to host one replica on this SKU."
+      },
+      "maxAvailableReplicas": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 3,
+        "description": "Maximum number of replicas the caller's subscription can deploy on this SKU today, computed from the available GPU quota in the target region."
+      },
+      "servingPerformanceEstimation": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 2,
+        "description": "Estimated relative inference performance of a single model replica on this SKU. Omitted when an estimate is unavailable."
+      },
+      "vmHourlyPrice": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 3,
+        "description": "On-demand hourly price for a single VM of this SKU, in `currency`."
+      },
+      "totalHourlyPrice": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 2,
+        "description": "Projected hourly cost for one replica (`vmsPerReplica` VMs), in `currency`."
+      },
+      "priceAsOf": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "UTC timestamp of the price snapshot used for this plan."
+      },
+      "feasible": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 3,
+        "description": "Whether the caller can actually deploy this plan today (region availability, GPU quota, model fit, etc.). This field gates the mutually exclusive properties on this model:\n- When `feasible` is `true`: `totalHourlyPrice` is set and `infeasibilityReason` is omitted.\n- When `feasible` is `false`: `infeasibilityReason` is set and `totalHourlyPrice` is omitted."
+      },
+      "infeasibilityReason": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 2,
+        "description": "Reason explaining why the plan is not deployable. This is a per-plan annotation, not an ARM error envelope."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServingPerformanceEstimation",
+    "properties": {
+      "relativeLatencyScore": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 3,
+        "description": "Relative inference latency score in `[0, 1]`. Higher is better (`1` matches the best-performing SKU's latency for this model). Note: this is a normalized score, not a raw latency ratio -- a larger value indicates lower latency."
+      },
+      "relativeThroughputScore": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 3,
+        "description": "Relative inference throughput score in `[0, 1]`. Higher is better (`1` matches the best-performing SKU's throughput for this model)."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InfeasibilityReason",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 3,
+        "description": "Machine-readable reason code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Human-readable message accompanying `code`."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientQuota"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegionUnavailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InefficientDeployment"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateCost",
+    "resourceType": "Microsoft.ContainerService/locations/aiModels",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/104"
+    },
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NamespaceAccessInfo",
     "properties": {
@@ -1360,7 +1551,7 @@
     "resourceType": "Microsoft.ContainerService/aiManagers/namespaces",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/103"
+      "$ref": "#/115"
     }
   },
   {
@@ -1370,6 +1561,15 @@
     "apiVersion": "2026-05-02-preview",
     "output": {
       "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateKeys",
+    "resourceType": "Microsoft.ContainerService/aiManagers/namespaces",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/115"
     }
   }
 ]

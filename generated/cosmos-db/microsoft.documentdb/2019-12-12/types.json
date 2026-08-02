@@ -4089,6 +4089,97 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegionForOnlineOffline",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cosmos DB region, with spaces between words and each word capitalized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountListReadOnlyKeysResult",
+    "properties": {
+      "primaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the primary read-only key."
+      },
+      "secondaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the secondary read-only key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readonlykeys",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountRegenerateKeyParameters",
+    "properties": {
+      "keyKind": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primaryReadonly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondaryReadonly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "NotebookWorkspaceConnectionInfoResult",
     "properties": {
       "authToken": {
@@ -4113,7 +4204,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2019-12-12",
     "output": {
-      "$ref": "#/267"
+      "$ref": "#/276"
     }
   }
 ]

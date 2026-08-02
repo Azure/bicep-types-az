@@ -846,12 +846,68 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateKeysParameters",
+    "properties": {
+      "policykey": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Key that needs to be regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.EventHub/namespaces/AuthorizationRules",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/70"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
       "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/70"
     }
   }
 ]

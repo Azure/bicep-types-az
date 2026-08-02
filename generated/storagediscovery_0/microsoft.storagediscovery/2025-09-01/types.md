@@ -24,9 +24,43 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateReport (Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports@2025-09-01)
+* **Resource**: Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports
+* **ApiVersion**: 2025-09-01
+* **Input**: [GetReportContent](#getreportcontent)
+* **Output**: [GetReportResult](#getreportresult)
+
+## Function report (Microsoft.StorageDiscovery/storageDiscoveryWorkspaces@2025-09-01)
+* **Resource**: Microsoft.StorageDiscovery/storageDiscoveryWorkspaces
+* **ApiVersion**: 2025-09-01
+* **Input**: [GetReportContent](#getreportcontent)
+* **Output**: [GetReportResult](#getreportresult)
+
+## GetReportContent
+### Properties
+* **queries**: string[] (Required): The queries to execute against Storage Discovery data.
+Format: Base64-encoded JSON object with structure:
+{"queries":[{"name":"queryName","query":"KQL query"}]}
+For query syntax and available tables, see: https://aka.ms/storageDiscoveryQuery
+
+## GetReportResult
+### Properties
+* **results**: [ReportResultSet](#reportresultset)[] (Required): One or more result sets, in the same order as the queries in the request body
+
 ## ReportProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
+
+## ReportResultColumn
+### Properties
+* **name**: string (Required): Name of the column
+* **type**: string (Required): ADX type of the column
+
+## ReportResultSet
+### Properties
+* **columns**: [ReportResultColumn](#reportresultcolumn)[]: Array of columns object, present only if the query succeeded
+* **errorCode**: string: Provides an error about the query, present only if the query fails
+* **rows**: string[][]: Array of all rows from ADX, present only if the query succeeded
 
 ## StorageDiscoveryScope
 ### Properties

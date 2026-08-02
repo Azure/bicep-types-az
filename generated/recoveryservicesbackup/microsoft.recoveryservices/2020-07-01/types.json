@@ -1,0 +1,167 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "PrepareDataMoveRequest",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "ARM Id of target vault"
+      },
+      "targetRegion": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Target Region"
+      },
+      "dataMoveLevel": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "DataMove Level"
+      },
+      "sourceContainerArmIds": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Source Container ArmIds\r\nThis needs to be populated only if DataMoveLevel is set to container"
+      },
+      "ignoreMoved": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Ignore the artifacts which are already moved."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Vault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2"
+      },
+      {
+        "$ref": "#/3"
+      },
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerDataMoveRequest",
+    "properties": {
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "ARM Id of source vault"
+      },
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Source Region"
+      },
+      "dataMoveLevel": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "DataMove Level"
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Correlation Id"
+      },
+      "sourceContainerArmIds": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Source Container ArmIds"
+      },
+      "pauseGC": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Pause GC"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Vault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  }
+]

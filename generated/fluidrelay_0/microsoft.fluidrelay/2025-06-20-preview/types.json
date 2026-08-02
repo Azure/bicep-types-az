@@ -1159,6 +1159,38 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegenerateKeyRequest",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "The key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "FluidRelayServerKeys",
     "properties": {
       "key1": {
@@ -1179,11 +1211,23 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.FluidRelay/fluidRelayServers",
+    "apiVersion": "2025-06-20-preview",
+    "output": {
+      "$ref": "#/97"
+    },
+    "input": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.FluidRelay/fluidRelayServers",
     "apiVersion": "2025-06-20-preview",
     "output": {
-      "$ref": "#/93"
+      "$ref": "#/97"
     }
   }
 ]

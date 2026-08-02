@@ -16,6 +16,11 @@
 * **ApiVersion**: 2022-01-01-preview
 * **Output**: [SourceConfigurationResult](#sourceconfigurationresult)
 
+## Function validateLinker (Microsoft.ServiceLinker/linkers@2022-01-01-preview)
+* **Resource**: Microsoft.ServiceLinker/linkers
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: [ValidateResult](#validateresult)
+
 ## AuthInfoBase
 * **Discriminator**: authType
 
@@ -138,6 +143,25 @@
 * **endpoint**: string: The endpoint of service.
 * **type**: 'ConfluentSchemaRegistry' (Required): The target service type.
 
+
+## ValidateResult
+### Properties
+* **authType**: 'secret' | 'servicePrincipalCertificate' | 'servicePrincipalSecret' | 'systemAssignedIdentity' | 'userAssignedIdentity' | string: The authentication type.
+* **isConnectionAvailable**: bool: A boolean value indicating whether the connection is available or not
+* **linkerName**: string: The linker name.
+* **reportEndTimeUtc**: string: The end time of the validation report.
+* **reportStartTimeUtc**: string: The start time of the validation report.
+* **sourceId**: string: The resource id of the linker source application.
+* **targetId**: string: The resource Id of target service.
+* **validationDetail**: [ValidationResultItem](#validationresultitem)[]: The detail of validation result
+
+## ValidationResultItem
+### Properties
+* **description**: string: The display name of validation item
+* **errorCode**: string: The error code of validation result
+* **errorMessage**: string: The error message of validation result
+* **name**: string: The validation item name.
+* **result**: 'failed' | 'success' | 'warning' | string: The result of validation
 
 ## VNetSolution
 ### Properties

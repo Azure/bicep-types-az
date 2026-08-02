@@ -684,5 +684,54 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerFilesExport",
+    "properties": {
+      "restoreRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region where the exported ledger files will eventually be restored to."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "SAS URI used to access the Fileshare for exporting ledger files."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerFilesExportResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Response body stating if the ledger files are being exported."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "filesExport",
+    "resourceType": "Microsoft.ConfidentialLedger/ledgers",
+    "apiVersion": "2026-05-22-preview",
+    "output": {
+      "$ref": "#/63"
+    },
+    "input": {
+      "$ref": "#/61"
+    }
   }
 ]

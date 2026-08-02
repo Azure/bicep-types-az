@@ -3481,5 +3481,226 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfo",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0,
+        "description": "The extended info properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoProperties",
+    "properties": {
+      "encryptionKeyThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The digital signature of encrypted certificate."
+      },
+      "encryptionKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public part of the encryption certificate. Client uses this to encrypt any secret."
+      },
+      "resourceKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Resource ID of the Resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExtendedInformation",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 1,
+        "description": "The Base 64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "authenticationType": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The base64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateResponse",
+    "properties": {
+      "authType": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 0,
+        "description": "Specifies authentication type."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource ID of the Data Box Edge/Gateway device."
+      },
+      "aadAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant authority."
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant ID."
+      },
+      "servicePrincipalClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal client ID."
+      },
+      "servicePrincipalObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal object ID."
+      },
+      "azureManagementEndpointAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The azure management endpoint audience."
+      },
+      "aadAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Identifier of the target resource that is the recipient of the requested token."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/276"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
   }
 ]

@@ -256,5 +256,57 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OldAgreementTerms",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sign",
+    "resourceType": "Microsoft.MarketplaceOrdering/agreements/offers/plans",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.MarketplaceOrdering/agreements/offers/plans",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/16"
+    }
   }
 ]

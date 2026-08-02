@@ -1091,5 +1091,80 @@
     "output": {
       "$ref": "#/83"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMIngestionDetailsResponse",
+    "properties": {
+      "cloudId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cloudId of given Elastic monitor resource."
+      },
+      "ingestionKey": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Ingestion details to install agent on given VM."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vmIngestionDetails",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2020-07-01-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMCollectionUpdate",
+    "properties": {
+      "vmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM id of the VM resource."
+      },
+      "operationName": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Operation to be performed for given VM."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   }
 ]

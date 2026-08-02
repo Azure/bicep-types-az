@@ -13,6 +13,23 @@
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.PowerBIDedicated/locations@2017-10-01)
+* **Resource**: Microsoft.PowerBIDedicated/locations
+* **ApiVersion**: 2017-10-01
+* **Input**: [CheckCapacityNameAvailabilityParameters](#checkcapacitynameavailabilityparameters)
+* **Output**: [CheckCapacityNameAvailabilityResult](#checkcapacitynameavailabilityresult)
+
+## CheckCapacityNameAvailabilityParameters
+### Properties
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"}: Name for checking availability.
+* **type**: string: The resource type of PowerBI dedicated.
+
+## CheckCapacityNameAvailabilityResult
+### Properties
+* **message**: string: The detailed message of the request unavailability.
+* **nameAvailable**: bool: Indicator of availability of the capacity name.
+* **reason**: string: The reason of unavailability.
+
 ## DedicatedCapacityAdministrators
 ### Properties
 * **members**: string[]: An array of administrator user identities.

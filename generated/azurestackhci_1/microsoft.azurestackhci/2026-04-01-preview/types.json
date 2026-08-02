@@ -8465,5 +8465,155 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PowerOffVirtualMachineOptions",
+    "properties": {
+      "skipShutdown": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Indicates whether to perform an immediate shut down. When set to true, the VM is forcefully shut down. If not specified, the default value is false, and the operation attempts a graceful shut down of the VM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/655"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/656"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/654"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/654"
+    },
+    "input": {
+      "$ref": "#/653"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualHardDiskUploadRequest",
+    "properties": {
+      "azureManagedDiskUploadUrl": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "The Azure managed disk SAS URL to upload the virtual hard disk to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualHardDiskUploadResponse",
+    "properties": {
+      "virtualHardDiskId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Resource ID for a Virtual Hard Disk."
+      },
+      "uploadStatus": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 0,
+        "description": "The upload status of the virtual hard disk"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upload",
+    "resourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/659"
+    },
+    "input": {
+      "$ref": "#/658"
+    }
   }
 ]

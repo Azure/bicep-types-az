@@ -251,6 +251,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function powerOff (Microsoft.AzureStackHCI/virtualMachineInstances@2026-04-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [PowerOffVirtualMachineOptions](#poweroffvirtualmachineoptions)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function upload (Microsoft.AzureStackHCI/virtualHardDisks@2026-04-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualHardDisks
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [VirtualHardDiskUploadRequest](#virtualharddiskuploadrequest)
+* **Output**: [VirtualHardDiskUploadResponse](#virtualharddiskuploadresponse)
+
 ## AttestationStatusProperties
 ### Properties
 * **attestationCertValidated**: 'Invalid' | 'Unknown' | 'Valid' | string (ReadOnly): The status of whether attestation certificate is validated.
@@ -687,6 +699,22 @@
 * **operationId**: string: The ID of the operation performed on the network security group
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The status of the operation performed on the network security group [Succeeded, Failed, InProgress]
 
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## PowerOffVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Indicates whether to perform an immediate shut down. When set to true, the VM is forcefully shut down. If not specified, the default value is false, and the operation attempts a graceful shut down of the VM.
+
 ## Probe
 ### Properties
 * **name**: string {pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,62}[a-zA-Z0-9]$"} (Required): name of the load balancer health probe
@@ -937,6 +965,15 @@
 ### Properties
 * **operationId**: string: The ID of the operation performed on the virtual hard disk
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The status of the operation performed on the virtual hard disk [Succeeded, Failed, InProgress]
+
+## VirtualHardDiskUploadRequest
+### Properties
+* **azureManagedDiskUploadUrl**: string {sensitive} (Required): The Azure managed disk SAS URL to upload the virtual hard disk to.
+
+## VirtualHardDiskUploadResponse
+### Properties
+* **uploadStatus**: [VirtualHardDiskUploadStatus](#virtualharddiskuploadstatus): The upload status of the virtual hard disk
+* **virtualHardDiskId**: string: The Azure Resource ID for a Virtual Hard Disk.
 
 ## VirtualHardDiskUploadStatus
 ### Properties

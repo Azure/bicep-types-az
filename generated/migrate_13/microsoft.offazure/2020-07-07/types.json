@@ -1312,5 +1312,217 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteHealthSummaryCollection",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "List of SiteHealthSummary."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Value of next link."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteHealthSummary",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Appliance name."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message."
+      },
+      "summaryMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Summary message."
+      },
+      "errorId": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Error Id."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "affectedObjectsCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Count of affected objects."
+      },
+      "hitCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Hit count of the error."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Severity of error."
+      },
+      "remediationGuidance": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Remediation guidance."
+      },
+      "affectedResourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Affected resource type."
+      },
+      "affectedResources": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Affected resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "healthSummary",
+    "resourceType": "Microsoft.OffAzure/HyperVSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVSiteUsage",
+    "properties": {
+      "machineCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of machines discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of run as accounts in the site."
+      },
+      "hostCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of hosts part of the site."
+      },
+      "clusterCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of clusters part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/HyperVSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "healthSummary",
+    "resourceType": "Microsoft.OffAzure/VMwareSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMwareSiteUsage",
+    "properties": {
+      "machineCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of machines discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of run as accounts in the site."
+      },
+      "vCenterCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of vCenters part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/VMwareSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/85"
+    }
   }
 ]

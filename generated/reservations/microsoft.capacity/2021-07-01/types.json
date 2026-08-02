@@ -2289,5 +2289,285 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Available scope request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeRequestProperties",
+    "properties": {
+      "scopes": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableScopeProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionScopeProperties",
+    "properties": {
+      "scopes": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopeProperties",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "valid": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/213"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "availableScopes",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/211"
+    },
+    "input": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SplitProperties",
+    "properties": {
+      "quantities": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "List of the quantities in the new reservations to create."
+      },
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "split",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/219"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeProperties",
+    "properties": {
+      "sources": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "merge",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/224"
+    },
+    "input": {
+      "$ref": "#/221"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryRequest",
+    "properties": {
+      "destinationTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant id GUID that reservation order is to be transferred to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResponse",
+    "properties": {
+      "reservationOrder": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "Change directory result for reservation order or reservation"
+      },
+      "reservations": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier of the reservation order or reservation"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the reservation order or reservation"
+      },
+      "isSucceeded": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "True if change directory operation succeeded on this reservation order or reservation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error reason if operation failed. Null otherwise"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeDirectory",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/226"
+    }
   }
 ]

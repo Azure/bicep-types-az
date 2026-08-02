@@ -8861,11 +8861,92 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/556"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/554"
+      },
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.App/connectedEnvironments",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/553"
+    },
+    "input": {
+      "$ref": "#/552"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DaprSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/554"
+          "$ref": "#/560"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -8895,7 +8976,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/553"
+      "$ref": "#/559"
     }
   },
   {
@@ -8904,7 +8985,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/552"
+      "$ref": "#/558"
     }
   },
   {
@@ -8927,14 +9008,14 @@
       },
       "customDomainVerificationTest": {
         "type": {
-          "$ref": "#/560"
+          "$ref": "#/566"
         },
         "flags": 2,
         "description": "DNS verification test result."
       },
       "customDomainVerificationFailureInfo": {
         "type": {
-          "$ref": "#/561"
+          "$ref": "#/567"
         },
         "flags": 2,
         "description": "Raw failure information if DNS verification fails."
@@ -8962,35 +9043,35 @@
       },
       "cNameRecords": {
         "type": {
-          "$ref": "#/564"
+          "$ref": "#/570"
         },
         "flags": 0,
         "description": "CName records visible for this hostname."
       },
       "txtRecords": {
         "type": {
-          "$ref": "#/565"
+          "$ref": "#/571"
         },
         "flags": 0,
         "description": "TXT records visible for this hostname."
       },
       "aRecords": {
         "type": {
-          "$ref": "#/566"
+          "$ref": "#/572"
         },
         "flags": 0,
         "description": "A records visible for this hostname."
       },
       "alternateCNameRecords": {
         "type": {
-          "$ref": "#/567"
+          "$ref": "#/573"
         },
         "flags": 0,
         "description": "Alternate CName records visible for this hostname."
       },
       "alternateTxtRecords": {
         "type": {
-          "$ref": "#/568"
+          "$ref": "#/574"
         },
         "flags": 0,
         "description": "Alternate TXT records visible for this hostname."
@@ -9013,13 +9094,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/557"
+        "$ref": "#/563"
       },
       {
-        "$ref": "#/558"
+        "$ref": "#/564"
       },
       {
-        "$ref": "#/559"
+        "$ref": "#/565"
       }
     ]
   },
@@ -9050,7 +9131,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/563"
+          "$ref": "#/569"
         },
         "flags": 0,
         "description": "Details or the error"
@@ -9087,7 +9168,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/562"
+      "$ref": "#/568"
     }
   },
   {
@@ -9126,7 +9207,7 @@
     "resourceType": "Microsoft.App/containerApps",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/556"
+      "$ref": "#/562"
     }
   },
   {
@@ -9135,7 +9216,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/572"
+          "$ref": "#/578"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -9179,7 +9260,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/571"
+      "$ref": "#/577"
     }
   },
   {
@@ -9188,7 +9269,491 @@
     "resourceType": "Microsoft.App/containerApps",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/570"
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerAppAuthToken",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "Container App auth token resource specific properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/582"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerAppAuthTokenProperties",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "Auth token value."
+      },
+      "expires": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Token expiration date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAuthtoken",
+    "resourceType": "Microsoft.App/containerApps",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerApp",
+    "properties": {
+      "extendedLocation": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "The complex type of the extended location."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code."
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0,
+        "description": "ContainerApp resource specific properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/585"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.App/containerApps",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/584"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/containerApps",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/584"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecutionTemplate",
+    "properties": {
+      "containers": {
+        "type": {
+          "$ref": "#/593"
+        },
+        "flags": 0,
+        "description": "List of container definitions for the Container Apps Job."
+      },
+      "initContainers": {
+        "type": {
+          "$ref": "#/594"
+        },
+        "flags": 0,
+        "description": "List of specialized containers that run before job containers."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecutionContainer",
+    "properties": {
+      "image": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Container image tag."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom container name."
+      },
+      "command": {
+        "type": {
+          "$ref": "#/590"
+        },
+        "flags": 0,
+        "description": "Container start command."
+      },
+      "args": {
+        "type": {
+          "$ref": "#/591"
+        },
+        "flags": 0,
+        "description": "Container start command arguments."
+      },
+      "env": {
+        "type": {
+          "$ref": "#/592"
+        },
+        "flags": 0,
+        "description": "Container environment variables."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 0,
+        "description": "Container resource requirements."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/278"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/589"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/589"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecutionBase",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution name."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution Id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.App/jobs",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/595"
+    },
+    "input": {
+      "$ref": "#/588"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerAppJobExecutions",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/608"
+        },
+        "flags": 1,
+        "description": "Collection of resources."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Link to next page of resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecution",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution Name."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution Id."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution type"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/599"
+        },
+        "flags": 0,
+        "description": "Container Apps Job execution specific properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecutionProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/607"
+        },
+        "flags": 2,
+        "description": "Current running State of the job"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Job execution end time."
+      },
+      "template": {
+        "type": {
+          "$ref": "#/588"
+        },
+        "flags": 0,
+        "description": "Job's execution container."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Processing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/600"
+      },
+      {
+        "$ref": "#/601"
+      },
+      {
+        "$ref": "#/602"
+      },
+      {
+        "$ref": "#/603"
+      },
+      {
+        "$ref": "#/604"
+      },
+      {
+        "$ref": "#/605"
+      },
+      {
+        "$ref": "#/606"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/598"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/597"
     }
   },
   {
@@ -9197,7 +9762,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/575"
+          "$ref": "#/611"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -9216,7 +9781,111 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/574"
+      "$ref": "#/610"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentAuthToken",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/614"
+        },
+        "flags": 0,
+        "description": "Environment auth token resource specific properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/615"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentAuthTokenProperties",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "Auth token value."
+      },
+      "expires": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Token expiration date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAuthtoken",
+    "resourceType": "Microsoft.App/managedEnvironments",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.App/managedEnvironments",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/553"
+    },
+    "input": {
+      "$ref": "#/552"
     }
   },
   {
@@ -9225,7 +9894,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/552"
+      "$ref": "#/558"
     }
   }
 ]

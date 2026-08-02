@@ -154,6 +154,29 @@
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Volume group properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkFilePathAvailability (Microsoft.NetApp/locations@2022-09-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2022-09-01
+* **Input**: [FilePathAvailabilityRequest](#filepathavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.NetApp/locations@2022-09-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2022-09-01
+* **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkQuotaAvailability (Microsoft.NetApp/locations@2022-09-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2022-09-01
+* **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function getMetadata (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2022-09-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes
+* **ApiVersion**: 2022-09-01
+* **Output**: [SubvolumeModel](#subvolumemodel)
+
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2022-09-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2022-09-01
@@ -221,6 +244,12 @@
 * **useExistingSnapshot**: bool: Manual backup an already existing snapshot. This will always be false for scheduled backups and true/false for manual backups
 * **volumeName**: string (ReadOnly): Volume name
 
+## CheckAvailabilityResponse
+### Properties
+* **isAvailable**: bool: <code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both.
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: <code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable.
+
 ## DailySchedule
 ### Properties
 * **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
@@ -250,6 +279,11 @@
 * **ruleIndex**: int: Order index
 * **unixReadOnly**: bool: Read only access
 * **unixReadWrite**: bool: Read and write access
+
+## FilePathAvailabilityRequest
+### Properties
+* **name**: string (Required): File path to verify.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 
 ## HourlySchedule
 ### Properties
@@ -314,6 +348,12 @@
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in MiB/s
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in MiB/s
 
+## QuotaAvailabilityRequest
+### Properties
+* **name**: string (Required): Name of the resource to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
+
 ## Replication
 ### Properties
 * **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
@@ -328,6 +368,12 @@
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string: Id
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
+
+## ResourceNameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
 
 ## ResourceTags
 ### Properties
@@ -353,6 +399,26 @@
 ### Properties
 * **current**: int (ReadOnly): The current quota value.
 * **default**: int (ReadOnly): The default quota value.
+
+## SubvolumeModel
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [SubvolumeModelProperties](#subvolumemodelproperties): It represents the minimal properties of the subvolume.
+* **type**: string (ReadOnly): Resource type
+
+## SubvolumeModelProperties
+### Properties
+* **accessedTimeStamp**: string: Most recent access time and date
+* **bytesUsed**: int: Bytes used
+* **changedTimeStamp**: string: Most recent change time and date
+* **creationTimeStamp**: string: Creation time and date
+* **modifiedTimeStamp**: string: Most recent modification time and date
+* **parentPath**: string: Path to the parent subvolume
+* **path**: string: Path to the subvolume
+* **permissions**: string: Permissions of the subvolume
+* **provisioningState**: string: Azure lifecycle management
+* **size**: int: Size of subvolume
 
 ## SubvolumeProperties
 ### Properties

@@ -46,6 +46,22 @@
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): Gets or sets properties of the Namespace AuthorizationRules.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function AuthorizationRules (Microsoft.NotificationHubs/namespaces@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces
+* **ApiVersion**: 2014-09-01
+* **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
+
+## Function AuthorizationRules (Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2014-09-01
+* **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
+
+## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces
+* **ApiVersion**: 2014-09-01
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResource](#checkavailabilityresource)
+
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
 * **ApiVersion**: 2014-09-01
@@ -55,6 +71,11 @@
 * **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
 * **ApiVersion**: 2014-09-01
 * **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function pnsCredentials (Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2014-09-01
+* **Output**: [NotificationHubResource](#notificationhubresource)
 
 ## AdmCredential
 ### Properties
@@ -86,6 +107,32 @@
 * **baiduApiKey**: string: Get or Set Baidu Api Key.
 * **baiduEndPoint**: string: Get or Set Baidu Endpoint.
 * **baiduSecretKey**: string: Get or Set Baidu Secret Key
+
+## CheckAvailabilityParameters
+### Properties
+* **isAvailiable**: bool: Gets or sets true if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false.
+* **location**: string: Gets or sets location.
+* **name**: string (Required): Gets or sets name
+* **tags**: [CheckAvailabilityParametersTags](#checkavailabilityparameterstags): Gets or sets tags.
+
+## CheckAvailabilityParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CheckAvailabilityResource
+### Properties
+* **id**: string: Gets or sets the id
+* **isAvailiable**: bool: Gets or sets true if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false.
+* **location**: string: Gets or sets datacenter location
+* **name**: string: Gets or sets name
+* **tags**: [CheckAvailabilityResourceTags](#checkavailabilityresourcetags): Gets or sets tags
+* **type**: string: Gets or sets resource type
+
+## CheckAvailabilityResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GcmCredential
 ### Properties
@@ -142,10 +189,29 @@
 * **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
 * **wnsCredential**: [WnsCredential](#wnscredential): The WnsCredential of the created NotificationHub
 
+## NotificationHubResource
+### Properties
+* **id**: string: Gets or sets the id of the created NotificationHub.
+* **location**: string: Gets or sets datacenter location of the NotificationHub.
+* **name**: string: Gets or sets name of the NotificationHub.
+* **properties**: [NotificationHubProperties](#notificationhubproperties): Gets or sets properties of the NotificationHub.
+* **tags**: [NotificationHubResourceTags](#notificationhubresourcetags): Gets or sets tags of the NotificationHub.
+* **type**: string: Gets or sets resource type of the NotificationHub.
+
+## NotificationHubResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ResourceListKeys
 ### Properties
 * **primaryConnectionString**: string: Gets or sets the primaryConnectionString of the created Namespace AuthorizationRule.
 * **secondaryConnectionString**: string: Gets or sets the secondaryConnectionString of the created Namespace AuthorizationRule
+
+## SharedAccessAuthorizationRuleListResult
+### Properties
+* **nextLink**: string: Gets or sets link to the next set of results. Not empty if Value contains incomplete list of AuthorizationRules
+* **value**: [SharedAccessAuthorizationRuleResource](#sharedaccessauthorizationruleresource)[]: Gets or sets result of the List AuthorizationRules operation.
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
@@ -158,6 +224,20 @@
 * **revision**: int: The revision number for the rule.
 * **rights**: ('Listen' | 'Manage' | 'Send')[]: The rights associated with the rule.
 * **secondaryKey**: string: The secondary key that was used.
+
+## SharedAccessAuthorizationRuleResource
+### Properties
+* **id**: string: Gets or sets the id of the created Namespace AuthorizationRules.
+* **location**: string: Gets or sets datacenter location of the Namespace AuthorizationRules.
+* **name**: string: Gets or sets name of the Namespace AuthorizationRules.
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): Gets or sets properties of the Namespace.
+* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Gets or sets tags of the Namespace AuthorizationRules.
+* **type**: string: Gets or sets resource type of the Namespace AuthorizationRules.
+
+## SharedAccessAuthorizationRuleResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WnsCredential
 ### Properties

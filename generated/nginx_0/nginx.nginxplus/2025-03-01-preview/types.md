@@ -60,14 +60,63 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Nginx.NginxPlus/nginxDeployments/wafPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function analyze (Nginx.NginxPlus/nginxDeployments/configurations@2025-03-01-preview)
+* **Resource**: Nginx.NginxPlus/nginxDeployments/configurations
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [AnalysisCreate](#analysiscreate)
+* **Output**: [AnalysisResult](#analysisresult)
+
 ## Function listDefaultWafPolicies (Nginx.NginxPlus/nginxDeployments@2025-03-01-preview)
 * **Resource**: Nginx.NginxPlus/nginxDeployments
 * **ApiVersion**: 2025-03-01-preview
 * **Output**: [NginxDeploymentDefaultWafPolicyListResponse](#nginxdeploymentdefaultwafpolicylistresponse)
 
+## AnalysisCreate
+### Properties
+* **config**: [AnalysisCreateConfig](#analysiscreateconfig) (Required)
+
+## AnalysisCreateConfig
+### Properties
+* **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]
+* **package**: [NginxConfigurationPackage](#nginxconfigurationpackage): Nginx Configuration Package
+* **protectedFiles**: [NginxConfigurationProtectedFileRequest](#nginxconfigurationprotectedfilerequest)[]
+* **rootFile**: string: The root file of the NGINX config file(s). It must match one of the files' filepath.
+
+## AnalysisDiagnostic
+### Properties
+* **description**: string (Required)
+* **directive**: string (Required)
+* **file**: string (Required): the filepath of the most relevant config file
+* **id**: string: Unique identifier for the error
+* **line**: int (Required)
+* **message**: string (Required)
+* **rule**: string (Required)
+
+## AnalysisResult
+### Properties
+* **data**: [AnalysisResultData](#analysisresultdata)
+* **status**: string (Required): The status of the analysis.
+
+## AnalysisResultData
+### Properties
+* **diagnostics**: [DiagnosticItem](#diagnosticitem)[]
+* **errors**: [AnalysisDiagnostic](#analysisdiagnostic)[]
+
 ## AutoUpgradeProfile
 ### Properties
 * **upgradeChannel**: string (Required): Channel used for autoupgrade.
+
+## DiagnosticItem
+### Properties
+* **category**: string: Category of warning like Best-practices, Recommendation, Security etc.
+* **description**: string (Required)
+* **directive**: string (Required)
+* **file**: string (Required): The filepath of the most relevant config file.
+* **id**: string: Unique identifier for the diagnostic.
+* **level**: 'Info' | 'Warning' | string (Required): Warning or Info
+* **line**: int (Required)
+* **message**: string (Required)
+* **rule**: string (Required)
 
 ## IdentityProperties
 ### Properties
@@ -106,6 +155,12 @@
 ### Properties
 * **data**: string
 * **protectedFiles**: string[]
+
+## NginxConfigurationProtectedFileRequest
+### Properties
+* **content**: string {sensitive}: The content of the protected file. This value is a PUT only value. If you perform a GET request on this value, it will be empty because it is a protected file.
+* **contentHash**: string: The hash of the content of the file. This value is used to determine if the file has changed.
+* **virtualPath**: string: The virtual path of the protected file.
 
 ## NginxConfigurationProtectedFileRequestOrNginxConfigurationProtectedFileResponse
 ### Properties

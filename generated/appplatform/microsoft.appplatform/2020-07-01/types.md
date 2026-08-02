@@ -86,10 +86,43 @@
 * **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Properties of the Monitoring Setting resource
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppPlatform/locations@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/locations
+* **ApiVersion**: 2020-07-01
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-07-01
+* **Output**: [TestKeys](#testkeys)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2020-07-01
+* **Output**: [LogFileUrlResponse](#logfileurlresponse)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/apps@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2020-07-01
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
 ## Function listTestKeys (Microsoft.AppPlatform/Spring@2020-07-01)
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2020-07-01
 * **Output**: [TestKeys](#testkeys)
+
+## Function regenerateTestKey (Microsoft.AppPlatform/Spring@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-07-01
+* **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
+* **Output**: [TestKeys](#testkeys)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2020-07-01
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
 
 ## AppResourceProperties
 ### Properties
@@ -168,6 +201,15 @@
 * **certName**: string: The bound certificate name of domain.
 * **thumbprint**: string: The thumbprint of bound certificate.
 
+## CustomDomainValidatePayload
+### Properties
+* **name**: string (Required): Name to be validated
+
+## CustomDomainValidateResult
+### Properties
+* **isValid**: bool: Indicates if domain name is valid.
+* **message**: string: Message of why domain name is invalid.
+
 ## DeploymentInstance
 ### Properties
 * **discoveryStatus**: string (ReadOnly): Discovery status of the deployment instance
@@ -220,6 +262,10 @@
 * **uri**: string (Required): URI of the repository
 * **username**: string: Username of git repository basic auth.
 
+## LogFileUrlResponse
+### Properties
+* **url**: string (Required): URL of the log file
+
 ## ManagedIdentityProperties
 ### Properties
 * **principalId**: string: Principal Id
@@ -232,6 +278,17 @@
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality
+
+## NameAvailability
+### Properties
+* **message**: string: Message why the name is not available
+* **nameAvailable**: bool: Indicates whether the name is available
+* **reason**: string: Reason why the name is not available
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): Name to be checked
+* **type**: string (Required): Type of the resource to check name availability
 
 ## NetworkProfile
 ### Properties
@@ -253,6 +310,10 @@
 * **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
 * **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
+## RegenerateTestKeyRequestPayload
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): Type of the test key
+
 ## RequiredTraffic
 ### Properties
 * **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
@@ -260,6 +321,11 @@
 * **ips**: string[] (ReadOnly): The ip list of required traffic
 * **port**: int (ReadOnly): The port of required traffic
 * **protocol**: string (ReadOnly): The protocol of required traffic
+
+## ResourceUploadDefinition
+### Properties
+* **relativePath**: string: Source relative path
+* **uploadUrl**: string: Upload URL
 
 ## Sku
 ### Properties

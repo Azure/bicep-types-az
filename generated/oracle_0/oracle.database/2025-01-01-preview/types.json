@@ -8439,6 +8439,419 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AutonomousDatabase",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/601"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeDisasterRecoveryConfiguration",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/600"
+    },
+    "input": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeerDbDetails",
+    "properties": {
+      "peerDbId": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+      },
+      "peerDbOcid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Ocid of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+      },
+      "peerDbLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the Disaster Recovery peer database."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/600"
+    },
+    "input": {
+      "$ref": "#/603"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateAutonomousDatabaseWalletDetails",
+    "properties": {
+      "generateType": {
+        "type": {
+          "$ref": "#/608"
+        },
+        "flags": 0,
+        "description": "The type of wallet to generate."
+      },
+      "isRegional": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "True when requesting regional connection strings in PDB connect info, applicable to cross-region DG only."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The password to encrypt the keys inside the wallet"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Single"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/606"
+      },
+      {
+        "$ref": "#/607"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutonomousDatabaseWalletFile",
+    "properties": {
+      "walletFiles": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The base64 encoded wallet files"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateWallet",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/609"
+    },
+    "input": {
+      "$ref": "#/605"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreAutonomousDatabaseDetails",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time to restore the database to."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/600"
+    },
+    "input": {
+      "$ref": "#/611"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "shrink",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/600"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "switchover",
+    "resourceType": "Oracle.Database/autonomousDatabases",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/600"
+    },
+    "input": {
+      "$ref": "#/603"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudExadataInfrastructure",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/616"
+        },
+        "flags": 1,
+        "description": "CloudExadataInfrastructure zones"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/617"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addStorageCapacity",
+    "resourceType": "Oracle.Database/cloudExadataInfrastructures",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddRemoveDbNode",
+    "properties": {
+      "dbServers": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 1,
+        "description": "Db servers ocids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudVmCluster",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/276"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/622"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addVms",
+    "resourceType": "Oracle.Database/cloudVmClusters",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/621"
+    },
+    "input": {
+      "$ref": "#/619"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PrivateIpAddressesFilter",
     "properties": {
       "subnetId": {
@@ -8501,7 +8914,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/601"
+      "$ref": "#/625"
     }
   },
   {
@@ -8510,10 +8923,142 @@
     "resourceType": "Oracle.Database/cloudVmClusters",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/602"
+      "$ref": "#/626"
     },
     "input": {
-      "$ref": "#/600"
+      "$ref": "#/624"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeVms",
+    "resourceType": "Oracle.Database/cloudVmClusters",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/621"
+    },
+    "input": {
+      "$ref": "#/619"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveVirtualMachineFromExadbVmClusterDetails",
+    "properties": {
+      "dbNodes": {
+        "type": {
+          "$ref": "#/631"
+        },
+        "flags": 1,
+        "description": "The list of ExaCS DB nodes for the Exadata VM cluster on Exascale Infrastructure to be removed."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DbNodeDetails",
+    "properties": {
+      "dbNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Exascale DbNode Azure Resource ID"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/630"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExadbVmCluster",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/633"
+        },
+        "flags": 0,
+        "description": "The availability zones."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/634"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeVms",
+    "resourceType": "Oracle.Database/exadbVmClusters",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/632"
+    },
+    "input": {
+      "$ref": "#/629"
     }
   },
   {
@@ -8542,7 +9087,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/604"
+      "$ref": "#/636"
     }
   },
   {
@@ -8571,7 +9116,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/606"
+      "$ref": "#/638"
     }
   },
   {
@@ -8670,7 +9215,170 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/608"
+      "$ref": "#/640"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DbNodeAction",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/647"
+        },
+        "flags": 1,
+        "description": "Db action"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stop"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftReset"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reset"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/643"
+      },
+      {
+        "$ref": "#/644"
+      },
+      {
+        "$ref": "#/645"
+      },
+      {
+        "$ref": "#/646"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DbNode",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/567"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "action",
+    "resourceType": "Oracle.Database/cloudVmClusters/dbNodes",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/648"
+    },
+    "input": {
+      "$ref": "#/642"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DbActionResponse",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/655"
+        },
+        "flags": 2,
+        "description": "ExascaleDbNode provisioning state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/651"
+      },
+      {
+        "$ref": "#/652"
+      },
+      {
+        "$ref": "#/653"
+      },
+      {
+        "$ref": "#/654"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "action",
+    "resourceType": "Oracle.Database/exadbVmClusters/dbNodes",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/650"
+    },
+    "input": {
+      "$ref": "#/642"
     }
   }
 ]

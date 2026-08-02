@@ -307,5 +307,95 @@
     "output": {
       "$ref": "#/19"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisRegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "Which Redis access key to reset."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/19"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedisRebootParameters",
+    "properties": {
+      "rebootType": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
+      },
+      "shardId": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "If clustering is enabled, the ID of the shared be rebooted."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllNodes"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      }
+    ]
   }
 ]

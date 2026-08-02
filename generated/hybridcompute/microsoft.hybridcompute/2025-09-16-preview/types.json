@@ -5031,5 +5031,979 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineAssessPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
+      },
+      "assessmentActivityId": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result."
+      },
+      "rebootPending": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 2,
+        "description": "The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred."
+      },
+      "availablePatchCountByClassification": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 0,
+        "description": "Summarization of patches available for installation on the machine by classification."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "lastModifiedDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation finished."
+      },
+      "startedBy": {
+        "type": {
+          "$ref": "#/363"
+        },
+        "flags": 2,
+        "description": "Indicates if operation was triggered by user or by platform."
+      },
+      "patchServiceUsed": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 2,
+        "description": "Specifies the patch service used for the operation."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/373"
+        },
+        "flags": 2,
+        "description": "The operating system type of the machine."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/354"
+      },
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/357"
+      },
+      {
+        "$ref": "#/358"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailablePatchCountByClassification",
+    "properties": {
+      "security": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of security patches available for installation."
+      },
+      "critical": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of critical patches available for installation."
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of definition patches available for installation."
+      },
+      "updateRollup": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of update Rollup patches available for installation."
+      },
+      "featurePack": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of feature pack patches available for installation."
+      },
+      "servicePack": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of service pack patches available for installation."
+      },
+      "tools": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of tools patches available for installation."
+      },
+      "updates": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of updates category patches available for installation."
+      },
+      "other": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Number of other patches available for installation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU_WSUS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YUM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "APT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zypper"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/364"
+      },
+      {
+        "$ref": "#/365"
+      },
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/369"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "assessPatches",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2025-09-16-preview",
+    "output": {
+      "$ref": "#/353"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineInstallPatchesParameters",
+    "properties": {
+      "maximumDuration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the maximum amount of time that the operation will run. It must be an ISO 8601-compliant duration string such as PT4H (4 hours)"
+      },
+      "rebootSetting": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 1,
+        "description": "Defines when it is acceptable to reboot a VM during a software update operation."
+      },
+      "windowsParameters": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Windows VM, as directly received by the API"
+      },
+      "linuxParameters": {
+        "type": {
+          "$ref": "#/395"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Linux VM, as directly received by the API"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IfRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Never"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Always"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/377"
+      },
+      {
+        "$ref": "#/378"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WindowsParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/390"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Windows."
+      },
+      "kbNumbersToInclude": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "Kbs to include in the patch operation"
+      },
+      "kbNumbersToExclude": {
+        "type": {
+          "$ref": "#/392"
+        },
+        "flags": 0,
+        "description": "Kbs to exclude in the patch operation"
+      },
+      "excludeKbsRequiringReboot": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Filters out Kbs that don't have an InstallationRebootBehavior of 'NeverReboots' when this is set to true."
+      },
+      "maxPatchPublishDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "This is used to install patches that were published on or before this given max published date."
+      },
+      "patchNameMasksToInclude": {
+        "type": {
+          "$ref": "#/393"
+        },
+        "flags": 0,
+        "description": "This is used to include patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+      },
+      "patchNameMasksToExclude": {
+        "type": {
+          "$ref": "#/394"
+        },
+        "flags": 0,
+        "description": "This is used to exclude patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateRollUp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeaturePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServicePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Definition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updates"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/389"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinuxParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Linux."
+      },
+      "packageNameMasksToInclude": {
+        "type": {
+          "$ref": "#/401"
+        },
+        "flags": 0,
+        "description": "packages to include in the patch operation. Format: packageName_packageVersion"
+      },
+      "packageNameMasksToExclude": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 0,
+        "description": "packages to exclude in the patch operation. Format: packageName_packageVersion"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/399"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineInstallPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/409"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Failed\", \"Succeeded\", \"Unknown\" or \"CompletedWithWarnings.\""
+      },
+      "installationActivityId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result."
+      },
+      "rebootStatus": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 2,
+        "description": "The reboot state of the VM following completion of the operation."
+      },
+      "maintenanceWindowExceeded": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 2,
+        "description": "Whether the operation ran out of time before it completed all its intended actions."
+      },
+      "excludedPatchCount": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The number of patches that were not installed due to the user blocking their installation."
+      },
+      "notSelectedPatchCount": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The number of patches that were detected as available for install, but did not meet the operation's criteria."
+      },
+      "pendingPatchCount": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The number of patches that were identified as meeting the installation criteria, but were not able to be installed. Typically this happens when maintenanceWindowExceeded == true."
+      },
+      "installedPatchCount": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The number of patches successfully installed."
+      },
+      "failedPatchCount": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The number of patches that could not be installed due to some issue. See errors for details."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "lastModifiedDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation finished."
+      },
+      "startedBy": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 2,
+        "description": "Indicates if operation was triggered by user or by platform."
+      },
+      "patchServiceUsed": {
+        "type": {
+          "$ref": "#/426"
+        },
+        "flags": 2,
+        "description": "Specifies the patch service used for the operation."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 2,
+        "description": "The operating system type of the machine."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/406"
+      },
+      {
+        "$ref": "#/407"
+      },
+      {
+        "$ref": "#/408"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotNeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/410"
+      },
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/417"
+      },
+      {
+        "$ref": "#/418"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU_WSUS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YUM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "APT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zypper"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/420"
+      },
+      {
+        "$ref": "#/421"
+      },
+      {
+        "$ref": "#/422"
+      },
+      {
+        "$ref": "#/423"
+      },
+      {
+        "$ref": "#/424"
+      },
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/427"
+      },
+      {
+        "$ref": "#/428"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installPatches",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2025-09-16-preview",
+    "output": {
+      "$ref": "#/403"
+    },
+    "input": {
+      "$ref": "#/375"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetupExtensionRequest",
+    "properties": {
+      "extensions": {
+        "type": {
+          "$ref": "#/432"
+        },
+        "flags": 0,
+        "description": "The list of extensions"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2025-09-16-preview",
+    "output": {
+      "$ref": "#/431"
+    },
+    "input": {
+      "$ref": "#/431"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionUpgrade",
+    "properties": {
+      "extensionTargets": {
+        "type": {
+          "$ref": "#/436"
+        },
+        "flags": 0,
+        "description": "Describes the Extension Target Properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionTargetProperties",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Properties for the specified Extension to Upgrade."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionUpgradeExtensionTargets",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/435"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityPerimeterConfigurationReconcileResult",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URL of the resource used to check the status of the asynchronous operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2025-09-16-preview",
+    "output": {
+      "$ref": "#/437"
+    }
   }
 ]

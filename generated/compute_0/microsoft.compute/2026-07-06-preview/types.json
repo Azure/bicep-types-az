@@ -6254,5 +6254,1792 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceAttachRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/505"
+        },
+        "flags": 1,
+        "description": "List of resources to be attached/patched"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledActionResourceInput",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The ARM Id of the resource.\n\"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}\""
+      },
+      "notificationSettings": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 0,
+        "description": "The desired notification settings for the specified resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/469"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/503"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationResponse",
+    "properties": {
+      "totalResources": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "The total number of resources operated on"
+      },
+      "resourcesStatuses": {
+        "type": {
+          "$ref": "#/511"
+        },
+        "flags": 1,
+        "description": "The resource status of for each resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceStatus",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The arm identifier of the resource"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/510"
+        },
+        "flags": 3,
+        "description": "The state the resource is currently on"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/489"
+        },
+        "flags": 0,
+        "description": "Errors encountered while trying to perform"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/509"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/507"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "attachResources",
+    "resourceType": "Microsoft.Compute/scheduledActions",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/502"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOccurrenceRequest",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/514"
+        },
+        "flags": 1,
+        "description": "The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelNextOccurrence",
+    "resourceType": "Microsoft.Compute/scheduledActions",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/513"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceDetachRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/517"
+        },
+        "flags": 1,
+        "description": "List of resources to be detached"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachResources",
+    "resourceType": "Microsoft.Compute/scheduledActions",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/516"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcePatchRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/520"
+        },
+        "flags": 1,
+        "description": "The list of resources we watch to patch"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/503"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "patchResources",
+    "resourceType": "Microsoft.Compute/scheduledActions",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/519"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Occurrence",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/486"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/306"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerManualOccurrence",
+    "resourceType": "Microsoft.Compute/scheduledActions",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcknowledgeBulkOperationErrorsRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/525"
+        },
+        "flags": 1,
+        "description": "The set of operation ids to acknowledge."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcknowledgeBulkOperationErrorsResponse",
+    "properties": {
+      "acknowledged": {
+        "type": {
+          "$ref": "#/527"
+        },
+        "flags": 1,
+        "description": "The set of operation ids that were newly acknowledged"
+      },
+      "notFound": {
+        "type": {
+          "$ref": "#/528"
+        },
+        "flags": 1,
+        "description": "The set of operation ids that were not found in the completed operations store"
+      },
+      "skipped": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 1,
+        "description": "The set of operation ids that were skipped because they were already acknowledged, not failed, or belong to a different scope"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeBulkOperationErrors",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/526"
+    },
+    "input": {
+      "$ref": "#/524"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOperationsRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/532"
+        },
+        "flags": 1,
+        "description": "The list of operation ids to cancel operations on"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOperationsResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/570"
+        },
+        "flags": 1,
+        "description": "An array of resource operations that were successfully cancelled"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperation",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the resource involved in the operation, for example Azure resource ID"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource level error code if it exists"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource level error details if they exist"
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/535"
+        },
+        "flags": 0,
+        "description": "Details of the operation performed on a resource"
+      },
+      "virtualMachineInfo": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 0,
+        "description": "Information about the virtual machine"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationDetails",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation identifier for the unique operation"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the resource involved in the operation, for example Azure resource ID"
+      },
+      "opType": {
+        "type": {
+          "$ref": "#/543"
+        },
+        "flags": 0,
+        "description": "Type of operation performed on the resources"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Subscription id attached to the request"
+      },
+      "deadline": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Deadline for the operation"
+      },
+      "deadlineType": {
+        "type": {
+          "$ref": "#/547"
+        },
+        "flags": 0,
+        "description": "Type of deadline of the operation"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/557"
+        },
+        "flags": 2,
+        "description": "Current state of the operation"
+      },
+      "timezone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Timezone for the operation"
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/558"
+        },
+        "flags": 0,
+        "description": "Operation level errors if they exist"
+      },
+      "fallbackOperationInfo": {
+        "type": {
+          "$ref": "#/559"
+        },
+        "flags": 0,
+        "description": "Fallback operation details if a fallback was performed"
+      },
+      "completedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time the operation was complete if errors are null"
+      },
+      "retryPolicy": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "Retry policy the user can pass"
+      },
+      "resourceNotificationDetails": {
+        "type": {
+          "$ref": "#/568"
+        },
+        "flags": 0,
+        "description": "Resource notification details."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deallocate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hibernate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GetInstanceView"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/536"
+      },
+      {
+        "$ref": "#/537"
+      },
+      {
+        "$ref": "#/538"
+      },
+      {
+        "$ref": "#/539"
+      },
+      {
+        "$ref": "#/540"
+      },
+      {
+        "$ref": "#/541"
+      },
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitiateAt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompleteBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/544"
+      },
+      {
+        "$ref": "#/545"
+      },
+      {
+        "$ref": "#/546"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingScheduling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingExecution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Executing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/548"
+      },
+      {
+        "$ref": "#/549"
+      },
+      {
+        "$ref": "#/550"
+      },
+      {
+        "$ref": "#/551"
+      },
+      {
+        "$ref": "#/552"
+      },
+      {
+        "$ref": "#/553"
+      },
+      {
+        "$ref": "#/554"
+      },
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationError",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Code for the error eg 404, 500"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Detailed message about the error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FallbackOperationInfo",
+    "properties": {
+      "lastOpType": {
+        "type": {
+          "$ref": "#/567"
+        },
+        "flags": 1,
+        "description": "The last operation type that was performed as a fallback"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The status of the fallback operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/558"
+        },
+        "flags": 0,
+        "description": "The error code if the fallback operation failed"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deallocate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hibernate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GetInstanceView"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      },
+      {
+        "$ref": "#/564"
+      },
+      {
+        "$ref": "#/565"
+      },
+      {
+        "$ref": "#/566"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceNotificationDetails",
+    "properties": {
+      "resourceContext": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource context for notification tracking"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineInfo",
+    "properties": {
+      "vmSize": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the VM size, eg Standard_D2ads_v5"
+      },
+      "zone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The zone identifier"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkCancel",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/533"
+    },
+    "input": {
+      "$ref": "#/531"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteCreateRequest",
+    "properties": {
+      "resourceConfigParameters": {
+        "type": {
+          "$ref": "#/573"
+        },
+        "flags": 1,
+        "description": "resource creation payload"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayload",
+    "properties": {
+      "baseProfile": {
+        "type": {
+          "$ref": "#/574"
+        },
+        "flags": 0,
+        "description": "Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch"
+      },
+      "resourceOverrides": {
+        "type": {
+          "$ref": "#/576"
+        },
+        "flags": 0,
+        "description": "Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch"
+      },
+      "resourceCount": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Number of VMs to be created"
+      },
+      "resourcePrefix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If resourceOverrides doesn't contain \"name\", the service will create a name based on the prefix and ResourceCount, e.g., resourceprefix-0, resourceprefix-1.."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayloadBaseProfile",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionPayloadResourceOverridesItem",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/575"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the create request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the create request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/578"
+        },
+        "flags": 0,
+        "description": "The results from the create request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkCreate",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/577"
+    },
+    "input": {
+      "$ref": "#/572"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteDeallocateRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "The resources for the request"
+      },
+      "resourcesWithContext": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Resources",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/582"
+        },
+        "flags": 1,
+        "description": "The resource ids used for the request"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcesWithContext",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/585"
+        },
+        "flags": 1,
+        "description": "The resource ids used for the request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceWithContext",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource ids used for the request"
+      },
+      "resourceContext": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The operational context of the resourceId"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/584"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeallocateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the deallocate request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the deallocate request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/587"
+        },
+        "flags": 0,
+        "description": "The results from the deallocate request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkDeallocate",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/586"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteDeleteRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "The resources for the request"
+      },
+      "resourcesWithContext": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
+      },
+      "forceDeletion": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Forced delete resource item"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the delete request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the delete request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/591"
+        },
+        "flags": 0,
+        "description": "The results from the delete request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkDelete",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/590"
+    },
+    "input": {
+      "$ref": "#/589"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationStatusRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/594"
+        },
+        "flags": 1,
+        "description": "The list of operation ids to get the status of"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetOperationStatusResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/596"
+        },
+        "flags": 1,
+        "description": "An array of resource operations based on their operation ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkGetOperationStatus",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/595"
+    },
+    "input": {
+      "$ref": "#/593"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteHibernateRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "The resources for the request"
+      },
+      "resourcesWithContext": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HibernateResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the Hibernate request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the Hibernate request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/600"
+        },
+        "flags": 0,
+        "description": "The results from the Hibernate request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkHibernate",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/599"
+    },
+    "input": {
+      "$ref": "#/598"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteReimageRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "The resources for the request"
+      },
+      "resourcesWithContext": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
+      },
+      "reimageParameters": {
+        "type": {
+          "$ref": "#/603"
+        },
+        "flags": 0,
+        "description": "Reimage parameters including base profile and per-resource overrides"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReimagePayload",
+    "properties": {
+      "baseProfile": {
+        "type": {
+          "$ref": "#/604"
+        },
+        "flags": 0,
+        "description": "Common reimage profile applied to all resources unless overridden"
+      },
+      "resourceOverrides": {
+        "type": {
+          "$ref": "#/607"
+        },
+        "flags": 0,
+        "description": "Per-resource reimage overrides"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineReimageParameters",
+    "properties": {
+      "tempDisk": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      },
+      "exactVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies in decimal number, the version the OS disk should be reimaged to. If exact version is not provided, the OS disk is reimaged to the existing version of OS Disk."
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/605"
+        },
+        "flags": 0,
+        "description": "Specifies information required for reimaging the non-ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfileProvisioningData",
+    "properties": {
+      "adminPassword": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\\W_]) <br><br> **Disallowed values:** \"abc@123\", \"P@$$w0rd\", \"P@ssw0rd\", \"P@ssword123\", \"Pa$$word\", \"pass@word1\", \"Password!\", \"Password1\", \"Password22\", \"iloveyou!\" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)"
+      },
+      "customData": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. **Note: Do not pass any secrets or passwords in customData property.** This property cannot be updated after the VM is created. The property customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/). If using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReimageResourceOverride",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure resource ID of the virtual machine for this override"
+      },
+      "profile": {
+        "type": {
+          "$ref": "#/604"
+        },
+        "flags": 1,
+        "description": "Per-resource reimage profile override"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/606"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReimageResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the reimage request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the reimage request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/609"
+        },
+        "flags": 0,
+        "description": "The results from the reimage request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkReimage",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/608"
+    },
+    "input": {
+      "$ref": "#/602"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteStartRequest",
+    "properties": {
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "The resources for the request"
+      },
+      "resourcesWithContext": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartResourceOperationResponse",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description of the operation response"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of resources used in the start request eg virtual machines"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The location of the start request eg westus"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/613"
+        },
+        "flags": 0,
+        "description": "The results from the start request if no errors exist"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/534"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkStart",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/612"
+    },
+    "input": {
+      "$ref": "#/611"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteVdiCreateRequest",
+    "properties": {
+      "resourceConfigParameters": {
+        "type": {
+          "$ref": "#/616"
+        },
+        "flags": 1,
+        "description": "resource creation payload"
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The execution parameters for the request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionVdiPayload",
+    "properties": {
+      "baseProfile": {
+        "type": {
+          "$ref": "#/617"
+        },
+        "flags": 0,
+        "description": "Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch"
+      },
+      "resourceOverrides": {
+        "type": {
+          "$ref": "#/619"
+        },
+        "flags": 0,
+        "description": "Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch"
+      },
+      "resourceCount": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Number of VMs to be created"
+      },
+      "resourcePrefix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If resourceOverrides doesn't contain \"name\", the service will create a name based on the prefix and ResourceCount, e.g., resourceprefix-0, resourceprefix-1.."
+      },
+      "flexProperties": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 1,
+        "description": "Flex properties used for VDI resource creation scenarios"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionVdiPayloadBaseProfile",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProvisionVdiPayloadResourceOverridesItem",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/618"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlexProperties",
+    "properties": {
+      "vmSizeProfiles": {
+        "type": {
+          "$ref": "#/621"
+        },
+        "flags": 1,
+        "description": "The list of VM size profiles to use for flex creation"
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/624"
+        },
+        "flags": 1,
+        "description": "The operating system type for the VMs"
+      },
+      "priorityProfile": {
+        "type": {
+          "$ref": "#/331"
+        },
+        "flags": 1,
+        "description": "The priority profile for VM allocation"
+      },
+      "zoneAllocationPolicy": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 0,
+        "description": "The zone allocation policy for distributing VMs across availability zones"
+      },
+      "minCapacity": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The minimum number of VMs that must be successfully created for the request to proceed. If fewer than this number can be allocated, the entire request is automatically rejected."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/342"
+    },
+    "minLength": 1,
+    "maxLength": 5
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/622"
+      },
+      {
+        "$ref": "#/623"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "virtualMachinesBulkVdiFlexCreate",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/577"
+    },
+    "input": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Compute/scheduledActions/occurrences",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/513"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelayRequest",
+    "properties": {
+      "delay": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The exact time to delay the operations to"
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/628"
+        },
+        "flags": 1,
+        "description": "The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delay",
+    "resourceType": "Microsoft.Compute/scheduledActions/occurrences",
+    "apiVersion": "2026-07-06-preview",
+    "output": {
+      "$ref": "#/506"
+    },
+    "input": {
+      "$ref": "#/627"
+    }
   }
 ]

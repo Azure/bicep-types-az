@@ -4890,6 +4890,126 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Trial",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/407"
+        },
+        "flags": 2,
+        "description": "Trial status"
+      },
+      "availableHosts": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Number of trial hosts available"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialAvailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialUsed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialDisabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/406"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkTrialAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/403"
+    },
+    "input": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Quota",
+    "properties": {
+      "hostsRemaining": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 2,
+        "description": "Remaining hosts quota by sku type"
+      },
+      "quotaEnabled": {
+        "type": {
+          "$ref": "#/413"
+        },
+        "flags": 2,
+        "description": "Host quota is active for current subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaHostsRemaining",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/409"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
       "nsxtUsername": {
@@ -4928,7 +5048,7 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/403"
+      "$ref": "#/415"
     }
   },
   {
@@ -4937,7 +5057,7 @@
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "Zone and associated hosts info"
@@ -4950,7 +5070,7 @@
     "properties": {
       "hosts": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/419"
         },
         "flags": 2,
         "description": "List of hosts belonging to the availability zone in a cluster"
@@ -4973,7 +5093,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/406"
+      "$ref": "#/418"
     }
   },
   {
@@ -4982,7 +5102,95 @@
     "resourceType": "Microsoft.AVS/privateClouds/clusters",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/417"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Output"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/422"
+      },
+      {
+        "$ref": "#/423"
+      },
+      {
+        "$ref": "#/424"
+      },
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/426"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScriptExecution",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "The properties of a script execution resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExecutionLogs",
+    "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/428"
+    },
+    "input": {
+      "$ref": "#/427"
     }
   }
 ]

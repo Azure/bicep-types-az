@@ -39,6 +39,42 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Nginx.NginxPlus/nginxDeployments/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function analyze (Nginx.NginxPlus/nginxDeployments/configurations@2023-09-01)
+* **Resource**: Nginx.NginxPlus/nginxDeployments/configurations
+* **ApiVersion**: 2023-09-01
+* **Input**: [AnalysisCreate](#analysiscreate)
+* **Output**: [AnalysisResult](#analysisresult)
+
+## AnalysisCreate
+### Properties
+* **config**: [AnalysisCreateConfig](#analysiscreateconfig) (Required)
+
+## AnalysisCreateConfig
+### Properties
+* **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]
+* **package**: [NginxConfigurationPackage](#nginxconfigurationpackage)
+* **protectedFiles**: [NginxConfigurationFile](#nginxconfigurationfile)[]
+* **rootFile**: string: The root file of the NGINX config file(s). It must match one of the files' filepath.
+
+## AnalysisError
+### Properties
+* **description**: string (Required)
+* **directive**: string (Required)
+* **file**: string (Required): the filepath of the most relevant config file
+* **id**: string: Unique identifier for the error
+* **line**: int (Required)
+* **message**: string (Required)
+* **rule**: string (Required)
+
+## AnalysisResult
+### Properties
+* **data**: [AnalysisResultData](#analysisresultdata)
+* **status**: string (Required): The status of the analysis.
+
+## AnalysisResultData
+### Properties
+* **errors**: [AnalysisError](#analysiserror)[]
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly)

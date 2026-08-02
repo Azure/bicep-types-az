@@ -77,10 +77,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Support/supportTickets@2024-04-01)
+* **Resource**: Microsoft.Support/supportTickets
+* **ApiVersion**: 2024-04-01
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## ChatTranscriptDetailsProperties
 ### Properties
 * **messages**: [MessageProperties](#messageproperties)[]: List of chat transcript communication resources.
 * **startTime**: string (ReadOnly): Time in UTC (ISO 8601 format) when the chat began.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Support/communications' | 'Microsoft.Support/supportTickets' (Required): The type of resource.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
 
 ## CommunicationDetailsProperties
 ### Properties

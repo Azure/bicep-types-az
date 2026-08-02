@@ -301,6 +301,263 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/routePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function armConfigurationDiff (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ArmConfigurationDiffResponse](#armconfigurationdiffresponse)
+
+## Function commitBatchStatus (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [CommitBatchStatusRequest](#commitbatchstatusrequest)
+* **Output**: [CommitBatchStatusResponse](#commitbatchstatusresponse)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/routePolicies@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function deprovision (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function discardCommitBatch (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [DiscardCommitBatchRequest](#discardcommitbatchrequest)
+* **Output**: [DiscardCommitBatchResponse](#discardcommitbatchresponse)
+
+## Function getTopology (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function lockFabric (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [NetworkFabricLockRequest](#networkfabriclockrequest)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function provision (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function reboot (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [RebootProperties](#rebootproperties)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function refreshConfiguration (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function refreshConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function resync (Microsoft.ManagedNetworkFabric/accessControlLists@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function resync (Microsoft.ManagedNetworkFabric/networkTapRules@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function resync (Microsoft.ManagedNetworkFabric/networkTaps@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTaps
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function runRoCommand (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [DeviceRoCommand](#devicerocommand)
+* **Output**: [CommonPostActionResponseForDeviceROCommandsOperationStatusResult](#commonpostactionresponsefordevicerocommandsoperationstatusresult)
+
+## Function runRwCommand (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [DeviceRwCommand](#devicerwcommand)
+* **Output**: [CommonPostActionResponseForDeviceRWCommands](#commonpostactionresponsefordevicerwcommands)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/accessControlLists@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateDeviceAdministrativeState](#updatedeviceadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkMonitors@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkMonitors
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkTapRules@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkTaps@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTaps
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/routePolicies@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [ExternalNetworkBfdAdministrativeStateRequest](#externalnetworkbfdadministrativestaterequest)
+* **Output**: [ExternalNetworkBfdAdministrativeStateResponse](#externalnetworkbfdadministrativestateresponse)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [InternalNetworkBfdAdministrativeStateRequest](#internalnetworkbfdadministrativestaterequest)
+* **Output**: [InternalNetworkBfdAdministrativeStateResponse](#internalnetworkbfdadministrativestateresponse)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [NniBfdAdministrativeStateRequest](#nnibfdadministrativestaterequest)
+* **Output**: [NniBfdAdministrativeStateResponse](#nnibfdadministrativestateresponse)
+
+## Function updateBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [InternalNetworkBgpAdministrativeStateRequest](#internalnetworkbgpadministrativestaterequest)
+* **Output**: [InternalNetworkBgpAdministrativeStateResponse](#internalnetworkbgpadministrativestateresponse)
+
+## Function updateInfraManagementBfdConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateWorkloadManagementBfdConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function upgrade (Microsoft.ManagedNetworkFabric/networkDevices@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpdateVersion](#updateversion)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function upgrade (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [UpgradeNetworkFabricProperties](#upgradenetworkfabricproperties)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/accessControlLists@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Input**: [ValidateConfigurationProperties](#validateconfigurationproperties)
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/networkTapRules@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/routePolicies@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function viewDeviceConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2024-06-15-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2024-06-15-preview
+* **Output**: [ViewDeviceConfigurationResponse](#viewdeviceconfigurationresponse)
+
 ## AccessControlListAction
 ### Properties
 * **counterName**: string {minLength: 1}: Name of the counter block to get match count information.
@@ -376,6 +633,11 @@
 * **ipv4Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of IPv4 Route prefixes.
 * **ipv6Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of Ipv6Routes prefixes.
 
+## ArmConfigurationDiffResponse
+### Properties
+* **configurationDiffUrl**: string: Storage URL to the diff file.
+* **error**: [ErrorDetail](#errordetail): The error object.
+
 ## BfdConfiguration
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the BfdConfiguration. Example: Enabled | Disabled.
@@ -423,11 +685,61 @@
 * **size**: int: Burst size.
 * **unit**: 'Bytes' | 'GBytes' | 'KBytes' | 'MBytes' | string: Burst size unit.
 
+## CommitBatchDetails
+### Properties
+* **failedDevices**: string[]: List of devices for which the commit operation failed.
+
+## CommitBatchStatusRequest
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier. If not provided, the latest commit batch status will be returned.
+
+## CommitBatchStatusResponse
+### Properties
+* **commitBatchDetails**: [CommitBatchDetails](#commitbatchdetails): Commit Batch Details.
+* **commitBatchId**: string: Commit Batch Identifier.
+* **commitBatchState**: 'Failed' | 'Processing' | 'Succeeded' | string (ReadOnly): Commit Batch State.
+* **error**: [ErrorDetail](#errordetail): The error object.
+
 ## CommonDynamicMatchConfiguration
 ### Properties
 * **ipGroups**: [IpGroupProperties](#ipgroupproperties)[]: List of IP Groups.
 * **portGroups**: [PortGroupProperties](#portgroupproperties)[]: List of the port groups.
 * **vlanGroups**: [VlanGroupProperties](#vlangroupproperties)[]: List of vlan groups.
+
+## CommonPostActionResponseForDeviceROCommands
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **deviceConfigurationPreview**: string: Device RO command Response limited to 4000 characters.
+* **outputUrl**: string: Predefined link containing Device RO Command output.
+
+## CommonPostActionResponseForDeviceROCommandsOperationStatusResult
+### Properties
+* **endTime**: string (ReadOnly): The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **id**: string (ReadOnly): Fully qualified ID for the async operation.
+* **name**: string (ReadOnly): Name of the async operation.
+* **properties**: [CommonPostActionResponseForDeviceROCommands](#commonpostactionresponsefordevicerocommands): The additional properties of the operation status result.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string (ReadOnly): The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## CommonPostActionResponseForDeviceRWCommands
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **outputUrl**: string: Predefined link containing Device Rw Command output.
+
+## CommonPostActionResponseForDeviceUpdate
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **failedDevices**: string[]: List of ARM Resource IDs for which the given action failed to apply.
+* **successfulDevices**: string[]: List of ARM Resource IDs for which the given action applied successfully.
+
+## CommonPostActionResponseForStateUpdate
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
 
 ## ConditionalDefaultRouteProperties
 ### Properties
@@ -462,6 +774,36 @@
 * **interfaceType**: string: Interface type.
 * **supportedConnectorTypes**: [SupportedConnectorProperties](#supportedconnectorproperties)[]: List of supported connector types.
 
+## DeviceRoCommand
+### Properties
+* **command**: string: Specify the command.
+
+## DeviceRwCommand
+### Properties
+* **command**: string: Specify the command.
+
+## DiscardCommitBatchRequest
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier. If not provided, the latest commit batch status will be returned.
+
+## DiscardCommitBatchResponse
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier.
+* **error**: [ErrorDetail](#errordetail): The error object.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
 ## ExportRoutePolicy
 ### Properties
 * **exportIpv4RoutePolicyId**: string: ARM resource ID of RoutePolicy.
@@ -476,6 +818,17 @@
 ### Properties
 * **expressRouteAuthorizationKey**: string {sensitive} (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
 * **expressRouteCircuitId**: string (Required): The express route circuit Azure resource ID, must be of type Microsoft.Network/expressRouteCircuits/circuitName. The ExpressRoute Circuit is a mandatory attribute.
+
+## ExternalNetworkBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: Administrative state.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type that helps to know which bfd we are updating.
+
+## ExternalNetworkBfdAdministrativeStateResponse
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: Administrative state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type that helps to know which bfd we are updating.
 
 ## ExternalNetworkBmpProperties
 ### Properties
@@ -563,6 +916,27 @@
 ### Properties
 * **importIpv4RoutePolicyId**: string: Import IPv4 Route Policy Id.
 * **importIpv6RoutePolicyId**: string: Import IPv6 Route Policy Id.
+
+## InternalNetworkBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: BFD Administrative state.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+* **routeType**: 'Bgp' | 'Static' | string: Route Type that helps to know which bfd we are updating.
+
+## InternalNetworkBfdAdministrativeStateResponse
+### Properties
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **neighborAddressAdministrativeStatus**: [NeighborAddressBfdAdministrativeStatus](#neighboraddressbfdadministrativestatus)[] {minLength: 1}: NeighborAddress administrative status
+
+## InternalNetworkBgpAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string: BGP Administrative state.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
+## InternalNetworkBgpAdministrativeStateResponse
+### Properties
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **neighborAddressAdministrativeStatus**: [NeighborAddressBgpAdministrativeStatus](#neighboraddressbgpadministrativestatus)[] {minLength: 1}: NeighborAddress administrative status
 
 ## InternalNetworkBmpProperties
 ### Properties
@@ -773,6 +1147,18 @@
 * **bgpAdministrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): BGP Administrative State for each Neighbor Address. Example: Enabled | Disabled.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 
+## NeighborAddressBfdAdministrativeStatus
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: BFD Administrative state.
+* **error**: string: Error message.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
+## NeighborAddressBgpAdministrativeStatus
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string: BGP Administrative state.
+* **error**: string: Error message.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
 ## NeighborGroupDestination
 ### Properties
 * **ipv4Addresses**: string[] {maxLength: 16}: Array of IPv4 Addresses.
@@ -829,6 +1215,11 @@
 * **tenantInternetGatewayIds**: string[] (ReadOnly): List of tenant InternetGateway resource IDs
 * **workloadExpressRouteConnections**: [ExpressRouteConnectionInformation](#expressrouteconnectioninformation)[]: As part of an update, the workload ExpressRoute CircuitID should be provided to create and Provision a NFC. This Express route is dedicated for Workload services. (This is a Mandatory attribute).
 * **workloadServices**: [ControllerServices](#controllerservices) (ReadOnly): WorkloadServices IP ranges.
+
+## NetworkFabricLockRequest
+### Properties
+* **action**: 'Lock' | 'Unlock' | string: Action to be performed on the lock
+* **lockType**: 'Administrative' | 'Configuration' | string: Type of lock to be applied
 
 ## NetworkFabricProperties
 ### Properties
@@ -984,6 +1375,17 @@
 * **staticRouteConfiguration**: [NniStaticRouteConfiguration](#nnistaticrouteconfiguration): Static Route Configuration.
 * **useOptionB**: 'False' | 'True' | string (Required): Based on this option layer3 parameters are mandatory. Example: True/False
 
+## NniBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: State. Select either enable or disable.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type. Choose either Static or OptionA.
+
+## NniBfdAdministrativeStateResponse
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: State. Select either enable or disable.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type. Choose either Static or OptionA.
+
 ## NniBmpProperties
 ### Properties
 * **configurationState**: 'Disabled' | 'Enabled' | string (Required): BGP Monitoring Protocol (BMP) Configuration State.
@@ -1039,6 +1441,10 @@
 * **idleTimeExpiry**: int: Idle Time Expiry in seconds, default is 60.
 * **maximumRoutes**: int: Maximum routes allowed.
 * **threshold**: int: Limit at which route prefixes a warning is generate.
+
+## RebootProperties
+### Properties
+* **rebootType**: 'GracefulRebootWithZTP' | 'GracefulRebootWithoutZTP' | 'UngracefulRebootWithZTP' | 'UngracefulRebootWithoutZTP' | string: Type of reboot to be performed. Example: GracefulRebootWithZTP
 
 ## RoutePolicyProperties
 ### Properties
@@ -1249,6 +1655,25 @@
 * **uniqueRdConfigurationState**: 'Disabled' | 'Enabled' | string: Unique Route Distinguisher configuration state. Default is Enabled.
 * **uniqueRds**: string[] (ReadOnly): List of Unique Route Distinguisher addresses.
 
+## UpdateAdministrativeState
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+* **state**: 'Disable' | 'Enable' | 'UnderMaintenance' | string: Administrative state.
+
+## UpdateDeviceAdministrativeState
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+* **state**: 'Disable' | 'Enable' | 'GracefulQuarantine' | 'Quarantine' | 'RMA' | 'Resync' | 'UnderMaintenance' | 'UngracefulQuarantine' | 'UngracefulRMA' | string: Administrative state.
+
+## UpdateVersion
+### Properties
+* **version**: string: Specify the version.
+
+## UpgradeNetworkFabricProperties
+### Properties
+* **action**: 'Complete' | 'Start' | string: Action to be performed while upgrading the fabric.
+* **version**: string: Specify the version.
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -1258,6 +1683,21 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## ValidateConfigurationProperties
+### Properties
+* **validateAction**: 'Cabling' | 'Configuration' | 'Connectivity' | string: Validate action that to be performed
+
+## ValidateConfigurationResponse
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **url**: string: URL for the details of the response.
+
+## ViewDeviceConfigurationResponse
+### Properties
+* **deviceConfigurationUrl**: string: Storage URL to the device configuration file.
+* **error**: [ErrorDetail](#errordetail): The error object.
 
 ## VlanGroupProperties
 ### Properties

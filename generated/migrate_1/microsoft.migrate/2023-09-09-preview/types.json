@@ -47117,5 +47117,343 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "assessmentReportUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/aksAssessments",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5261"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompareSummary",
+    "properties": {
+      "azurePaasCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The azure PaaS cost."
+      },
+      "azureIaasCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The azure IaaS cost."
+      },
+      "azureAvsCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The AVS cost."
+      },
+      "onPremisesPaasCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS cost."
+      },
+      "onPremisesIaasCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS cost."
+      },
+      "onPremisesAvsCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises AVS cost."
+      },
+      "onPremisesPaasDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS decommissioned cost."
+      },
+      "onPremisesIaasDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS decommissioned cost."
+      },
+      "onPremisesAvsDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The on premises AVS decommissioned cost."
+      },
+      "futureCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "Future state cost which includes Azure cost and Arc enabled on-premises cost based on the final migration percentage."
+      },
+      "azureArcEnabledOnPremisesCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The Azure arc enabled on-premises cost."
+      },
+      "futureAzureArcEnabledOnPremisesCostDetails": {
+        "type": {
+          "$ref": "#/1715"
+        },
+        "flags": 2,
+        "description": "The final azure arc enabled on-premises cost based on the final migration percentage."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "compareSummary",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/businessCases",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5263"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportDownloadUrl",
+    "properties": {
+      "businessCaseReportUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getReportDownloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/businessCases",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5265"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGroupBody",
+    "properties": {
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "For optimistic concurrency control."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5268"
+        },
+        "flags": 0,
+        "description": "Properties of the group."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupBodyProperties",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/5271"
+        },
+        "flags": 0,
+        "description": "Whether to add or remove the machines."
+      },
+      "machines": {
+        "type": {
+          "$ref": "#/5272"
+        },
+        "flags": 0,
+        "description": "List of machine names that are part of this group."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5269"
+      },
+      {
+        "$ref": "#/5270"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Group",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateMachines",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5273"
+    },
+    "input": {
+      "$ref": "#/5267"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups/assessments",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5261"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups/avsAssessments",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5261"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups/sqlAssessments",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5261"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups/webAppAssessments",
+    "apiVersion": "2023-09-09-preview",
+    "output": {
+      "$ref": "#/5261"
+    },
+    "input": {
+      "$ref": "#/5260"
+    }
   }
 ]

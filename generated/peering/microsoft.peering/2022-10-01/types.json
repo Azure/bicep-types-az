@@ -2176,5 +2176,48 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeeringRegisteredPrefix",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The properties that define a registered prefix."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Peering/peerings/registeredPrefixes",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/190"
+    }
   }
 ]

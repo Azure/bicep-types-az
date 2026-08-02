@@ -12,6 +12,12 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exec (Microsoft.ContainerInstance/containerGroups/containers@2018-09-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2018-09-01
+* **Input**: [ContainerExecRequest](#containerexecrequest)
+* **Output**: [ContainerExecResponse](#containerexecresponse)
+
 ## AzureFileVolume
 ### Properties
 * **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
@@ -27,6 +33,21 @@
 ## ContainerExec
 ### Properties
 * **command**: string[]: The commands to execute within the container.
+
+## ContainerExecRequest
+### Properties
+* **command**: string: The command to be executed.
+* **terminalSize**: [ContainerExecRequestTerminalSize](#containerexecrequestterminalsize): The size of the terminal.
+
+## ContainerExecRequestTerminalSize
+### Properties
+* **cols**: int: The column size of the terminal
+* **rows**: int: The row size of the terminal
+
+## ContainerExecResponse
+### Properties
+* **password**: string: The password to start the exec command.
+* **webSocketUri**: string: The uri for the exec websocket.
 
 ## ContainerGroupDiagnostics
 ### Properties

@@ -5874,5 +5874,782 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureParameters",
+    "properties": {
+      "vhdPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The captured virtual hard disk's name prefix."
+      },
+      "destinationContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination container name."
+      },
+      "overwriteVhds": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Specifies whether to overwrite the destination virtual hard disk, in case of conflict."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Compute-specific operation properties, including output"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResultProperties",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capture",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/463"
+    },
+    "input": {
+      "$ref": "#/462"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertToManagedDisks",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generalize",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInput",
+    "properties": {
+      "commandId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command id."
+      },
+      "script": {
+        "type": {
+          "$ref": "#/476"
+        },
+        "flags": 0,
+        "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/478"
+        },
+        "flags": 0,
+        "description": "The run command parameters."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInputParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/477"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/480"
+        },
+        "flags": 0,
+        "description": "Compute-specific operation properties, including output"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResultProperties",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/479"
+    },
+    "input": {
+      "$ref": "#/475"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/483"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/486"
+        },
+        "flags": 1,
+        "description": "The virtual machine scale set instance ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delete",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/485"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manualupgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/485"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "osRollingUpgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/466"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestRateByIntervalInput",
+    "properties": {
+      "intervalLength": {
+        "type": {
+          "$ref": "#/510"
+        },
+        "flags": 1,
+        "description": "Interval value in minutes used to create LogAnalytics call rate logs."
+      },
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FiveMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThirtyMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SixtyMins"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/506"
+      },
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/509"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/512"
+        },
+        "flags": 2,
+        "description": "LogAnalyticsOutput"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOutput",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Output file Uri path to blob container."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRequestRateByInterval",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/511"
+    },
+    "input": {
+      "$ref": "#/505"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottledRequestsInput",
+    "properties": {
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getThrottledRequests",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/511"
+    },
+    "input": {
+      "$ref": "#/514"
+    }
   }
 ]

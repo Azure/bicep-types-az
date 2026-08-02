@@ -252,6 +252,18 @@
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function diagnose (Microsoft.MachineLearningServices/workspaces@2022-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-05-01
+* **Input**: [DiagnoseWorkspaceParameters](#diagnoseworkspaceparameters)
+* **Output**: [DiagnoseResponseResult](#diagnoseresponseresult)
+
+## Function getLogs (Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2022-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments
+* **ApiVersion**: 2022-05-01
+* **Input**: [DeploymentLogsRequest](#deploymentlogsrequest)
+* **Output**: [DeploymentLogs](#deploymentlogs)
+
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces@2022-05-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-05-01
@@ -296,6 +308,22 @@
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-05-01
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
+
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2022-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-05-01
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2022-05-01
+* **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2022-05-01)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2022-05-01
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
 
 ## AccountKeyDatastoreSecrets
 ### Properties
@@ -880,6 +908,98 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **dataType**: 'uri_folder' (Required): [Required] Specifies the type of data.
 
 
+## DeploymentLogs
+### Properties
+* **content**: string: The retrieved online deployment logs.
+
+## DeploymentLogsRequest
+### Properties
+* **containerType**: 'InferenceServer' | 'StorageInitializer' | string: The type of container to retrieve logs from.
+* **tail**: int: The maximum number of lines to tail.
+
+## DiagnoseRequestProperties
+### Properties
+* **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
+* **containerRegistry**: [DiagnoseRequestPropertiesContainerRegistry](#diagnoserequestpropertiescontainerregistry): Setting for diagnosing dependent container registry
+* **dnsResolution**: [DiagnoseRequestPropertiesDnsResolution](#diagnoserequestpropertiesdnsresolution): Setting for diagnosing dns resolution
+* **keyVault**: [DiagnoseRequestPropertiesKeyVault](#diagnoserequestpropertieskeyvault): Setting for diagnosing dependent key vault
+* **nsg**: [DiagnoseRequestPropertiesNsg](#diagnoserequestpropertiesnsg): Setting for diagnosing network security group
+* **others**: [DiagnoseRequestPropertiesOthers](#diagnoserequestpropertiesothers): Setting for diagnosing unclassified category of problems
+* **resourceLock**: [DiagnoseRequestPropertiesResourceLock](#diagnoserequestpropertiesresourcelock): Setting for diagnosing resource lock
+* **storageAccount**: [DiagnoseRequestPropertiesStorageAccount](#diagnoserequestpropertiesstorageaccount): Setting for diagnosing dependent storage account
+* **udr**: [DiagnoseRequestPropertiesUdr](#diagnoserequestpropertiesudr): Setting for diagnosing user defined routing
+
+## DiagnoseRequestPropertiesApplicationInsights
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesContainerRegistry
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesDnsResolution
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesKeyVault
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesNsg
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesOthers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesResourceLock
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesStorageAccount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesUdr
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseResponseResult
+### Properties
+* **value**: [DiagnoseResponseResultValue](#diagnoseresponseresultvalue)
+
+## DiagnoseResponseResultValue
+### Properties
+* **applicationInsightsResults**: [DiagnoseResult](#diagnoseresult)[]
+* **containerRegistryResults**: [DiagnoseResult](#diagnoseresult)[]
+* **dnsResolutionResults**: [DiagnoseResult](#diagnoseresult)[]
+* **keyVaultResults**: [DiagnoseResult](#diagnoseresult)[]
+* **networkSecurityRuleResults**: [DiagnoseResult](#diagnoseresult)[]
+* **otherResults**: [DiagnoseResult](#diagnoseresult)[]
+* **resourceLockResults**: [DiagnoseResult](#diagnoseresult)[]
+* **storageAccountResults**: [DiagnoseResult](#diagnoseresult)[]
+* **userDefinedRouteResults**: [DiagnoseResult](#diagnoseresult)[]
+
+## DiagnoseResult
+### Properties
+* **code**: string (ReadOnly): Code for workspace setup error
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Level of workspace setup error
+* **message**: string (ReadOnly): Message of workspace setup error
+
+## DiagnoseWorkspaceParameters
+### Properties
+* **value**: [DiagnoseRequestProperties](#diagnoserequestproperties): Value of Parameters
+
 ## DistributionConfiguration
 * **Discriminator**: distributionType
 
@@ -941,6 +1061,13 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
+
+## EndpointAuthToken
+### Properties
+* **accessToken**: string: Access token for endpoint authentication.
+* **expiryTimeUtc**: int: Access token expiry time (UTC).
+* **refreshAfterTimeUtc**: int: Refresh access token after time (UTC).
+* **tokenType**: string: Access token type.
 
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
@@ -1498,6 +1625,18 @@ Defaults to 5000ms.
 * **successThreshold**: int: The number of successful probes before returning a healthy status.
 * **timeout**: string: The probe timeout in ISO 8601 format.
 
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **location**: string: Region of workspace quota to be updated.
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
+
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
@@ -1814,6 +1953,19 @@ Defaults to 5000ms.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
 
 ## UserAccountCredentials
 ### Properties

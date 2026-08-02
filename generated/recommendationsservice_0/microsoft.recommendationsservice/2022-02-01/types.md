@@ -39,6 +39,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecommendationsService/accounts/serviceEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function status (Microsoft.RecommendationsService/accounts@2022-02-01)
+* **Resource**: Microsoft.RecommendationsService/accounts
+* **ApiVersion**: 2022-02-01
+* **Output**: [AccountStatus](#accountstatus)
+
 ## AccountResourceProperties
 ### Properties
 * **configuration**: 'Capacity' | 'Free' | string: Account configuration. This can only be set at RecommendationsService Account creation.
@@ -46,6 +51,10 @@
 * **endpointAuthentications**: [EndpointAuthentication](#endpointauthentication)[]: The list of service endpoints authentication details.
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **reportsConnectionString**: string: Connection string to write Accounts reports to.
+
+## AccountStatus
+### Properties
+* **scopesStatuses**: [ScopeStatuses](#scopestatuses)[]: The list of scopes statuses.
 
 ## CorsRule
 ### Properties
@@ -73,12 +82,23 @@
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **size**: 'Large' | 'Medium' | 'Small' | string: Modeling size controls the maximum supported input data size.
 
+## ScopeStatuses
+### Properties
+* **scope**: string: The scope that the statuses refers to.
+* **statuses**: [StageStatus](#stagestatus)[]: Scope stage statuses.
+
 ## ServiceEndpointResourceProperties
 ### Properties
 * **pairedLocation**: string (ReadOnly): The paired location that will be used by this ServiceEndpoint.
 * **preAllocatedCapacity**: int {minValue: 0}: ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity.
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **url**: string (ReadOnly): The URL where the ServiceEndpoint API is accessible at.
+
+## StageStatus
+### Properties
+* **stage**: string: The stage name.
+* **status**: string: The status of the stage.
+* **time**: string: The time of the status.
 
 ## SystemData
 ### Properties

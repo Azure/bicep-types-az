@@ -3840,5 +3840,901 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTestStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of the test operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "Describes the error that occurred."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorResponse",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code associated with the error that occurred."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Describes the error in detail."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FunctionRetrieveDefaultDefinitionParameters",
+    "discriminator": "bindingType",
+    "baseProperties": {},
+    "elements": {
+      "Microsoft.MachineLearning/WebService": {
+        "$ref": "#/246"
+      },
+      "Microsoft.MachineLearningServices": {
+        "$ref": "#/250"
+      },
+      "Microsoft.StreamAnalytics/CLRUdf": {
+        "$ref": "#/254"
+      },
+      "Microsoft.StreamAnalytics/JavascriptUdf": {
+        "$ref": "#/258"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningStudioFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with an Azure Machine learning Studio."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningStudioFunctionBindingRetrievalProperties",
+    "properties": {
+      "executeEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Request-Response execute endpoint of the Azure Machine Learning Studio. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs"
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.MachineLearning/WebService"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with an Azure Machine learning web service."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningServiceFunctionBindingRetrievalProperties",
+    "properties": {
+      "executeEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Request-Response execute endpoint of the Azure Machine Learning web service."
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.MachineLearningServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CSharpFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with a CSharp function."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CSharpFunctionBindingRetrievalProperties",
+    "properties": {
+      "script": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The CSharp code containing a single function definition."
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StreamAnalytics/CLRUdf"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with a JavaScript function."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionBindingRetrievalProperties",
+    "properties": {
+      "script": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'."
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StreamAnalytics/JavascriptUdf"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveDefaultDefinition",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/223"
+    },
+    "input": {
+      "$ref": "#/245"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/inputs",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/outputs",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/242"
+    },
+    "input": {
+      "$ref": "#/221"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartStreamingJobParameters",
+    "properties": {
+      "outputStartMode": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0,
+        "description": "Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time."
+      },
+      "outputStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JobStartTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LastOutputEventTime"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestQuery",
+    "properties": {
+      "diagnostics": {
+        "type": {
+          "$ref": "#/271"
+        },
+        "flags": 0,
+        "description": "Diagnostics information related to query testing."
+      },
+      "streamingJob": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 1,
+        "description": "Stream analytics job object which defines the input, output, and transformation for the query testing."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestQueryDiagnostics",
+    "properties": {
+      "writeUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The SAS URI to the container or directory."
+      },
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The path to the subdirectory."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StreamingJob",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 0,
+        "description": "The properties that are associated with a streaming job.  Required on PUT (CreateOrReplace) requests."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 0,
+        "description": "Describes the system-assigned managed identity assigned to this job that can be used to authenticate with inputs and outputs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryTestingResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 2,
+        "description": "The status of the query testing request."
+      },
+      "outputUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SAS URL to the outputs payload."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "Error definition properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompilerError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RuntimeError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timeout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnknownError"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0,
+        "description": "Error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error code."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error target."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testQuery",
+    "resourceType": "Microsoft.StreamAnalytics/locations",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/274"
+    },
+    "input": {
+      "$ref": "#/270"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompileQuery",
+    "properties": {
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The query to compile."
+      },
+      "inputs": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 0,
+        "description": "The inputs for the query compilation."
+      },
+      "functions": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0,
+        "description": "The functions for the query compilation."
+      },
+      "jobType": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 1,
+        "description": "Describes the type of the job. Valid values are `Cloud` and 'Edge'."
+      },
+      "compatibilityLevel": {
+        "type": {
+          "$ref": "#/296"
+        },
+        "flags": 0,
+        "description": "The query to compile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the input."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The type of the input, can be Stream or Reference."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/287"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryFunction",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the function."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The type of the function."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The type of the function binding."
+      },
+      "inputs": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 1,
+        "description": "The inputs for the function."
+      },
+      "output": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "An output for the function."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/289"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Edge"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "1.0"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryCompilationResult",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 2,
+        "description": "Error messages produced by the compiler."
+      },
+      "warnings": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 2,
+        "description": "Warning messages produced by the compiler."
+      },
+      "inputs": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 2,
+        "description": "All input names used by the query."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 2,
+        "description": "All output names used by the query."
+      },
+      "functions": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 2,
+        "description": "All function names used by the query."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryCompilationError",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The content of the error message."
+      },
+      "startLine": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Describes the error location in the original query. Not set if isGlobal is true."
+      },
+      "startColumn": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Describes the error location in the original query. Not set if isGlobal is true."
+      },
+      "endLine": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Describes the error location in the original query. Not set if isGlobal is true."
+      },
+      "endColumn": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Describes the error location in the original query. Not set if isGlobal is true."
+      },
+      "isGlobal": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Whether the error is not for a specific part but for the entire query."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/298"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "compileQuery",
+    "resourceType": "Microsoft.StreamAnalytics/locations",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/297"
+    },
+    "input": {
+      "$ref": "#/286"
+    }
   }
 ]

@@ -1856,5 +1856,372 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HighAvailabilityValidationEstimation",
+    "properties": {
+      "estimatedDowntime": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Estimated seconds of downtime for the deployment."
+      },
+      "scheduledStandbyAvailabilityZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Scheduled Availability zone of the standby server."
+      },
+      "expectedStandbyAvailabilityZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expected Availability zone of the standby server."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateEstimateHighAvailability",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/144"
+    },
+    "input": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerRestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
+      },
+      "maxFailoverSeconds": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The maximum allowed failover time in seconds."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerGtidSetParameter",
+    "properties": {
+      "gtidSet": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Gtid set of server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerDetachVNetParameter",
+    "properties": {
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Server",
+    "properties": {
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The cmk identity for the server."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The SKU (pricing tier) of the server."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Properties of the server."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachVNet",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/155"
+    },
+    "input": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cutoverMigration",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageParameter",
+    "properties": {
+      "virtualNetworkResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Virtual network resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageResult",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The location name."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The subscription id."
+      },
+      "delegatedSubnetsUsage": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "A list of delegated subnet usage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedSubnetUsage",
+    "properties": {
+      "subnetName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "name of the subnet"
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Number of used delegated subnets"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/161"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkVirtualNetworkSubnetUsage",
+    "resourceType": "Microsoft.DBforMySQL/locations",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "Indicates whether the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for name being unavailable."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforMySQL/locations",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/165"
+    },
+    "input": {
+      "$ref": "#/164"
+    }
   }
 ]

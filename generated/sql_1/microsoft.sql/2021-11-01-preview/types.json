@@ -16733,5 +16733,1589 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDatabaseDefinition",
+    "properties": {
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/1251"
+        },
+        "flags": 5,
+        "description": "Storage key type."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage key."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage Uri."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Administrator login name."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 5,
+        "description": "Administrator login password."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Authentication type."
+      },
+      "networkIsolation": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 4,
+        "description": "Optional resource information to enable network isolation for request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedAccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccessKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1249"
+      },
+      {
+        "$ref": "#/1250"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1253"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportOperationResultProperties",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Request Id."
+      },
+      "requestType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Request type."
+      },
+      "queuedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Queued time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last modified time."
+      },
+      "blobUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Blob Uri."
+      },
+      "serverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Server name."
+      },
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Database name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/1255"
+        },
+        "flags": 2,
+        "description": "Gets the status of private endpoints associated with this request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionRequestStatus",
+    "properties": {
+      "privateLinkServiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource id for which the private endpoint is created."
+      },
+      "privateEndpointConnectionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The connection name for the private endpoint."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status of this private endpoint connection."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1254"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1252"
+    },
+    "input": {
+      "$ref": "#/1248"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExistingDatabaseDefinition",
+    "properties": {
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/1260"
+        },
+        "flags": 5,
+        "description": "Storage key type."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage key."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage Uri."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Administrator login name."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 5,
+        "description": "Administrator login password."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Authentication type."
+      },
+      "networkIsolation": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 4,
+        "description": "Optional resource information to enable network isolation for request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedAccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccessKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1258"
+      },
+      {
+        "$ref": "#/1259"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1252"
+    },
+    "input": {
+      "$ref": "#/1257"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveDefinition",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The target ID for the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Database",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "The database SKU.\r\n\r\nThe list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:\r\n\r\n```azurecli\r\naz sql db list-editions -l <location> -o table\r\n````\r\n\r\n```powershell\r\nGet-AzSqlServerServiceObjective -Location <location>\r\n````"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of database. This is metadata used for the Azure portal experience."
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource that manages the database."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "The Azure Active Directory identity of the database."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1264"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1263"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1263"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDatabaseRestorePointDefinition",
+    "properties": {
+      "restorePointLabel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The restore point label to apply"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorePoint",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1195"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restorePoints",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1268"
+    },
+    "input": {
+      "$ref": "#/1267"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseVulnerabilityAssessmentScansExport",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1271"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseVulnerabilityAssessmentScanExportProperties",
+    "properties": {
+      "exportedReportLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the exported report (e.g. https://myStorage.blob.core.windows.net/VaScans/scans/serverName/databaseName/scan_scanId.xlsx)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1270"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeletedServer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1030"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recover",
+    "resourceType": "Microsoft.Sql/locations/deletedServers",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1273"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverGroup",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1276"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverGroupTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/failoverGroups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1275"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/servers/failoverGroups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1275"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InstanceFailoverGroup",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1279"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1279"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExecution",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1282"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LedgerDigestUploads",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/servers/databases/ledgerDigestUploads",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1284"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CopyLongTermRetentionBackupParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1287"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CopyLongTermRetentionBackupParametersProperties",
+    "properties": {
+      "targetSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The subscription that owns the target server"
+      },
+      "targetResourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The resource group that owns the target server"
+      },
+      "targetServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The resource Id of the target server that owns the database"
+      },
+      "targetServerFullyQualifiedDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The fully qualified domain name of the target server"
+      },
+      "targetDatabaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The name of the database owns the copied backup."
+      },
+      "targetBackupStorageRedundancy": {
+        "type": {
+          "$ref": "#/1292"
+        },
+        "flags": 4,
+        "description": "The storage redundancy type of the copied backup"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Geo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1288"
+      },
+      {
+        "$ref": "#/1289"
+      },
+      {
+        "$ref": "#/1290"
+      },
+      {
+        "$ref": "#/1291"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LongTermRetentionBackupOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1294"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LongTermRetentionOperationResultProperties",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Request Id."
+      },
+      "operationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation type."
+      },
+      "fromBackupResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source backup resource id"
+      },
+      "toBackupResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target backup resource id"
+      },
+      "targetBackupStorageRedundancy": {
+        "type": {
+          "$ref": "#/1299"
+        },
+        "flags": 2,
+        "description": "The storage redundancy type of the copied backup"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Progress message"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Geo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1295"
+      },
+      {
+        "$ref": "#/1296"
+      },
+      {
+        "$ref": "#/1297"
+      },
+      {
+        "$ref": "#/1298"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "copy",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1293"
+    },
+    "input": {
+      "$ref": "#/1286"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateLongTermRetentionBackupParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1302"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateLongTermRetentionBackupParametersProperties",
+    "properties": {
+      "requestedBackupStorageRedundancy": {
+        "type": {
+          "$ref": "#/1307"
+        },
+        "flags": 4,
+        "description": "The storage redundancy type of the copied backup"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Geo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1303"
+      },
+      {
+        "$ref": "#/1304"
+      },
+      {
+        "$ref": "#/1305"
+      },
+      {
+        "$ref": "#/1306"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "update",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1293"
+    },
+    "input": {
+      "$ref": "#/1301"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompleteDatabaseRestoreDefinition",
+    "properties": {
+      "lastBackupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The last backup name to apply"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1270"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TdeCertificate",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1312"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TdeCertificateProperties",
+    "properties": {
+      "privateBlob": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The base64 encoded certificate private blob."
+      },
+      "certPassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The certificate password."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedServerDnsAliasAcquisition",
+    "properties": {
+      "oldManagedServerDnsAliasResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of the managed server DNS alias that will be acquired to point to this managed server instead."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedServerDnsAlias",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/599"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acquire",
+    "resourceType": "Microsoft.Sql/managedInstances/dnsAliases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1314"
+    },
+    "input": {
+      "$ref": "#/1313"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReplicationLink",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1153"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1316"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1316"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerDnsAliasAcquisition",
+    "properties": {
+      "oldServerDnsAliasId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the server alias that will be acquired to point to this server instead."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerDnsAlias",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/684"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acquire",
+    "resourceType": "Microsoft.Sql/servers/dnsAliases",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1320"
+    },
+    "input": {
+      "$ref": "#/1319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportNewDatabaseDefinition",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Name of the import database."
+      },
+      "edition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Edition of the import database."
+      },
+      "serviceObjectiveName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Service level objective name of the import database."
+      },
+      "maxSizeBytes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Max size in bytes for the import database."
+      },
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/1325"
+        },
+        "flags": 5,
+        "description": "Storage key type."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage key."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Storage Uri."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Administrator login name."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 5,
+        "description": "Administrator login password."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Authentication type."
+      },
+      "networkIsolation": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 4,
+        "description": "Optional resource information to enable network isolation for request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedAccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccessKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1323"
+      },
+      {
+        "$ref": "#/1324"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Sql/servers",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1252"
+    },
+    "input": {
+      "$ref": "#/1322"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncAgentKeyProperties",
+    "properties": {
+      "syncAgentKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Key of sync agent."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateKey",
+    "resourceType": "Microsoft.Sql/servers/syncAgents",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1327"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateManagedInstanceDnsServersOperation",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1330"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DnsRefreshConfigurationProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/1333"
+        },
+        "flags": 2,
+        "description": "The status of the DNS refresh operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1331"
+      },
+      {
+        "$ref": "#/1332"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateManagedInstanceDnsServers",
+    "resourceType": "Microsoft.Sql/virtualClusters",
+    "apiVersion": "2021-11-01-preview",
+    "output": {
+      "$ref": "#/1329"
+    }
   }
 ]

@@ -43,6 +43,17 @@
 * **properties**: [CreateOrUpdateVirtualNetworkRulePropertiesOrVirtualNetworkRuleProperties](#createorupdatevirtualnetworkrulepropertiesorvirtualnetworkruleproperties) (Required): The virtual network rule properties to use when creating a new virtual network rule.
 * **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DataLakeStore/locations@2016-11-01)
+* **Resource**: Microsoft.DataLakeStore/locations
+* **ApiVersion**: 2016-11-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityInformation](#nameavailabilityinformation)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The Data Lake Store name to check availability for.
+* **type**: 'Microsoft.DataLakeStore/accounts' | string (Required): The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeStore/accounts
+
 ## CreateDataLakeStoreAccountParametersTags
 ### Properties
 ### Additional Properties
@@ -119,4 +130,10 @@
 * **encryptionKeyName**: string (Required): The name of the user managed encryption key.
 * **encryptionKeyVersion**: string (Required): The version of the user managed encryption key.
 * **keyVaultResourceId**: string (Required): The resource identifier for the user managed Key Vault being used to encrypt.
+
+## NameAvailabilityInformation
+### Properties
+* **message**: string (ReadOnly): The message describing why the Data Lake Store account name is not available, if nameAvailable is false.
+* **nameAvailable**: bool (ReadOnly): The Boolean value of true or false to indicate whether the Data Lake Store account name is available or not.
+* **reason**: string (ReadOnly): The reason why the Data Lake Store account name is not available, if nameAvailable is false.
 

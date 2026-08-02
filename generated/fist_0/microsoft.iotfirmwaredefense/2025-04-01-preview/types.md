@@ -47,6 +47,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IoTFirmwareDefense/workspaces/usageMetrics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateUploadUrl (Microsoft.IoTFirmwareDefense/workspaces@2025-04-01-preview)
+* **Resource**: Microsoft.IoTFirmwareDefense/workspaces
+* **ApiVersion**: 2025-04-01-preview
+* **Input**: [GenerateUploadUrlRequest](#generateuploadurlrequest)
+* **Output**: [UrlToken](#urltoken)
+
 ## FirmwareProperties
 ### Properties
 * **description**: string: User-specified description of the firmware.
@@ -58,6 +64,10 @@
 * **statusMessages**: [StatusMessage](#statusmessage)[]: A list of errors or other messages generated during firmware analysis
 * **vendor**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-_. ,'\"~=(){}:]*$"}: Firmware vendor.
 * **version**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-_. ,'\"~=(){}:]*$"}: Firmware version.
+
+## GenerateUploadUrlRequest
+### Properties
+* **firmwareId**: string: A unique ID for the firmware to be uploaded.
 
 ## Sku
 ### Properties
@@ -142,6 +152,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UrlToken
+### Properties
+* **url**: string (ReadOnly): SAS URL for creating or accessing a blob file.
 
 ## UsageMetricProperties
 ### Properties

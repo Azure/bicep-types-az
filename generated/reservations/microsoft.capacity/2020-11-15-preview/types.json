@@ -1,0 +1,92 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryRequest",
+    "properties": {
+      "destinationTenantId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Tenant id GUID that reservation order is to be transferred to"
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResponse",
+    "properties": {
+      "reservationOrder": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "Change directory result for reservation order or reservation"
+      },
+      "reservations": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeDirectoryResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Identifier of the reservation order or reservation"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Name of the reservation order or reservation"
+      },
+      "isSucceeded": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "True if change directory operation succeeded on this reservation order or reservation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Error reason if operation failed. Null otherwise"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeDirectory",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2020-11-15-preview",
+    "output": {
+      "$ref": "#/2"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

@@ -308,5 +308,144 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MalwareScan",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MalwareScanProperties",
+    "properties": {
+      "scanId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the scan."
+      },
+      "scanStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A status code of the scan operation."
+      },
+      "scanStatusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the status of the scan."
+      },
+      "scanStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time at which the scan had been initiated."
+      },
+      "scanEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time at which the scan has ended. Only available for a scan which has terminated."
+      },
+      "scanSummary": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "A summary of the scan results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScanSummary",
+    "properties": {
+      "blobs": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "A summary of the scan results of the blobs that were scanned."
+      },
+      "estimatedScanCostUSD": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The estimated cost of the scan. Only available for a scan which has terminated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobsScanSummary",
+    "properties": {
+      "totalBlobsScanned": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The total number of blobs that were scanned."
+      },
+      "maliciousBlobsCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of malicious blobs that were detected during the scan."
+      },
+      "skippedBlobsCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of blobs that were skipped."
+      },
+      "failedBlobsCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of failed blob scans."
+      },
+      "scannedBlobsInGB": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of gigabytes of data that were scanned."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startMalwareScan",
+    "resourceType": "Microsoft.Security/defenderForStorageSettings",
+    "apiVersion": "2025-07-01-preview",
+    "output": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelMalwareScan",
+    "resourceType": "Microsoft.Security/defenderForStorageSettings/malwareScans",
+    "apiVersion": "2025-07-01-preview",
+    "output": {
+      "$ref": "#/24"
+    }
   }
 ]

@@ -6685,11 +6685,92 @@
   },
   {
     "$type": "ObjectType",
+    "name": "GraphicalRunbookContent",
+    "properties": {
+      "rawContent": {
+        "type": {
+          "$ref": "#/430"
+        },
+        "flags": 0,
+        "description": "Raw graphical Runbook content."
+      },
+      "graphRunbookJson": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Graphical Runbook content as JSON"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawGraphicalRunbookContent",
+    "properties": {
+      "schemaVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Schema version of the serializer."
+      },
+      "runbookDefinition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serialized Graphical runbook"
+      },
+      "runbookType": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 0,
+        "description": "Runbook Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShellWorkflow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/431"
+      },
+      {
+        "$ref": "#/432"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertGraphRunbookContent",
+    "resourceType": "Microsoft.Automation/automationAccounts",
+    "apiVersion": "2024-10-23",
+    "output": {
+      "$ref": "#/429"
+    },
+    "input": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "KeyListResult",
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/437"
+          "$ref": "#/443"
         },
         "flags": 0,
         "description": "Lists the automation keys."
@@ -6702,14 +6783,14 @@
     "properties": {
       "KeyName": {
         "type": {
-          "$ref": "#/433"
+          "$ref": "#/439"
         },
         "flags": 2,
         "description": "Automation key name."
       },
       "Permissions": {
         "type": {
-          "$ref": "#/436"
+          "$ref": "#/442"
         },
         "flags": 2,
         "description": "Automation key permissions."
@@ -6735,10 +6816,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/431"
+        "$ref": "#/437"
       },
       {
-        "$ref": "#/432"
+        "$ref": "#/438"
       },
       {
         "$ref": "#/0"
@@ -6757,10 +6838,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/434"
+        "$ref": "#/440"
       },
       {
-        "$ref": "#/435"
+        "$ref": "#/441"
       },
       {
         "$ref": "#/0"
@@ -6770,7 +6851,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/430"
+      "$ref": "#/436"
     }
   },
   {
@@ -6779,7 +6860,20 @@
     "resourceType": "Microsoft.Automation/automationAccounts",
     "apiVersion": "2024-10-23",
     "output": {
-      "$ref": "#/429"
+      "$ref": "#/435"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridRunbookWorkerMoveParameters",
+    "properties": {
+      "hybridRunbookWorkerGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target hybrid runbook worker group."
+      }
     }
   }
 ]

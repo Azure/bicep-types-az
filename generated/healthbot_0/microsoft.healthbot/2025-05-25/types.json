@@ -496,5 +496,14 @@
     "output": {
       "$ref": "#/35"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateApiJwtSecret",
+    "resourceType": "Microsoft.HealthBot/healthBots",
+    "apiVersion": "2025-05-25",
+    "output": {
+      "$ref": "#/36"
+    }
   }
 ]

@@ -105,6 +105,27 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function failover (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2024-01-01)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2024-01-01
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function forceFailoverAllowDataLoss (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2024-01-01)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2024-01-01
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function getDetailView (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2024-01-01)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2024-01-01
+* **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
+
+## Function getTelemetry (Microsoft.AzureArcData/sqlServerInstances@2024-01-01)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances
+* **ApiVersion**: 2024-01-01
+* **Input**: [SqlServerInstanceTelemetryRequest](#sqlserverinstancetelemetryrequest)
+* **Output**: [SqlServerInstanceTelemetryResponse](#sqlserverinstancetelemetryresponse)
+
 ## ActiveDirectoryConnectorDNSDetails
 ### Properties
 * **domainName**: string: DNS domain name for which DNS lookups should be forwarded to the Active Directory DNS servers.
@@ -421,6 +442,16 @@
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': The pricing tier for the instance.
 
+## SqlServerAvailabilityGroupResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SqlServerAvailabilityGroupResourceProperties](#sqlserveravailabilitygroupresourceproperties) (Required): Properties of Arc Sql Server availability group
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SqlServerAvailabilityGroupResourceProperties
 ### Properties
 * **availabilityGroupId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"} (ReadOnly): ID GUID of the availability group.
@@ -507,6 +538,26 @@
 * **vCore**: string (ReadOnly): The number of logical processors used by the SQL Server instance.
 * **version**: 'SQL Server 2012' | 'SQL Server 2014' | 'SQL Server 2016' | 'SQL Server 2017' | 'SQL Server 2019' | 'SQL Server 2022' | 'Unknown' | string: SQL Server version.
 
+## SqlServerInstanceTelemetryColumn
+### Properties
+* **name**: string: The name of the telemetry column.
+* **type**: 'bool' | 'datetime' | 'double' | 'guid' | 'int' | 'long' | 'string' | 'timespan' | string: The type of the telemetry column.
+
+## SqlServerInstanceTelemetryRequest
+### Properties
+* **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Sum' | string: The aggregation type to use for the numerical columns in the dataset.
+* **databaseNames**: string[]: The list of database names to return telemetry for. If not specified, telemetry for all databases will be aggregated and returned.
+* **datasetName**: string (Required): The name of the telemetry dataset to retrieve.
+* **endTime**: string: The end time for the time range to fetch telemetry for. If not specified, the current time is used.
+* **interval**: string: The time granularity to fetch telemetry for. This is an ISO8601 duration. Examples: PT15M, PT1H, P1D
+* **startTime**: string: The start time for the time range to fetch telemetry for. If not specified, the current time minus 1 hour is used.
+
+## SqlServerInstanceTelemetryResponse
+### Properties
+* **columns**: [SqlServerInstanceTelemetryColumn](#sqlserverinstancetelemetrycolumn)[] (Required): The columns of the result telemetry table for the SQL Server instance.
+* **nextLink**: string (ReadOnly): The link to the next section of rows of the telemetry response for the SQL Server instance. Null if no more sections are available.
+* **rows**: string[][] (Required): A list of rows from the result telemetry table for the SQL Server instance.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -515,6 +566,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

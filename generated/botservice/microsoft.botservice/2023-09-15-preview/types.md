@@ -73,6 +73,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BotService/botServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createEmailSignInUrl (Microsoft.BotService/botServices@2023-09-15-preview)
+* **Resource**: Microsoft.BotService/botServices
+* **ApiVersion**: 2023-09-15-preview
+* **Output**: [CreateEmailSignInUrlResponse](#createemailsigninurlresponse)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2023-09-15-preview)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2023-09-15-preview
@@ -83,12 +88,42 @@
 * **ApiVersion**: 2023-09-15-preview
 * **Output**: [ConnectionSetting](#connectionsetting)
 
+## Function reconcile (Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations@2023-09-15-preview)
+* **Resource**: Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2023-09-15-preview
+* **Output**: [NetworkSecurityPerimeterConfiguration](#networksecurityperimeterconfiguration)
+
+## Function regeneratekeys (Microsoft.BotService/botServices/channels@2023-09-15-preview)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2023-09-15-preview
+* **Input**: [SiteInfo](#siteinfo)
+* **Output**: [BotChannel](#botchannel)
+
 ## AlexaChannelProperties
 ### Properties
 * **alexaSkillId**: string (Required): The Alexa skill Id
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
 * **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+
+## BotChannel
+### Properties
+* **etag**: string: Entity Tag.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [Channel](#channel): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BotChannelTags](#botchanneltags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **zones**: string[] (ReadOnly): Entity zones
+
+## BotChannelTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BotChannelTags
 ### Properties
@@ -307,6 +342,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CreateEmailSignInUrlResponse
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **location**: string: Specifies the location of the resource.
+* **properties**: [CreateEmailSignInUrlResponseProperties](#createemailsigninurlresponseproperties): The set of properties specific to sign in url
+
+## CreateEmailSignInUrlResponseProperties
+### Properties
+* **url**: string: Sign in url.
 
 ## DirectLineChannelProperties
 ### Properties
@@ -529,6 +574,11 @@
 * **siteName**: string (Required): Site name
 * **tenantId**: string: Tenant Id
 * **trustedOrigins**: string[]: List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+
+## SiteInfo
+### Properties
+* **key**: 'key1' | 'key2' (Required): Determines which key is to be regenerated
+* **siteName**: string (Required): The site name
 
 ## Sku
 ### Properties

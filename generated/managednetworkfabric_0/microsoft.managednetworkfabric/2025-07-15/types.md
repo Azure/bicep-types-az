@@ -335,6 +335,350 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/routePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function armConfigurationDiff (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [ArmConfigurationDiffOperationResponse](#armconfigurationdiffoperationresponse)
+
+## Function commitBatchStatus (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [CommitBatchStatusRequest](#commitbatchstatusrequest)
+* **Output**: [CommitBatchStatusOperationResponse](#commitbatchstatusoperationresponse)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [CommitConfigurationRequest](#commitconfigurationrequest)
+* **Output**: [CommitConfigurationResponse](#commitconfigurationresponse)
+
+## Function commitConfiguration (Microsoft.ManagedNetworkFabric/routePolicies@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2025-07-15
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function deprovision (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function discardCommitBatch (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [DiscardCommitBatchRequest](#discardcommitbatchrequest)
+* **Output**: [DiscardCommitBatchOperationResponse](#discardcommitbatchoperationresponse)
+
+## Function getTopology (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [GetTopologyResponse](#gettopologyresponse)
+
+## Function lockFabric (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [NetworkFabricLockRequest](#networkfabriclockrequest)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function provision (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function reboot (Microsoft.ManagedNetworkFabric/networkBootstrapDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkBootstrapDeviceRebootResponse](#networkbootstrapdevicerebootresponse)
+
+## Function reboot (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [RebootProperties](#rebootproperties)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function refreshConfiguration (Microsoft.ManagedNetworkFabric/networkBootstrapDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkBootstrapDeviceRefreshConfigurationResponse](#networkbootstrapdevicerefreshconfigurationresponse)
+
+## Function refreshConfiguration (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkDeviceRefreshConfigurationResponse](#networkdevicerefreshconfigurationresponse)
+
+## Function refreshConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function resync (Microsoft.ManagedNetworkFabric/accessControlLists@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2025-07-15
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function resync (Microsoft.ManagedNetworkFabric/neighborGroups@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/neighborGroups
+* **ApiVersion**: 2025-07-15
+* **Output**: [NeighborGroupResyncResponse](#neighborgroupresyncresponse)
+
+## Function resync (Microsoft.ManagedNetworkFabric/networkTapRules@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkTapRuleResyncResponse](#networktapruleresyncresponse)
+
+## Function resync (Microsoft.ManagedNetworkFabric/networkTaps@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTaps
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkTapResyncResponse](#networktapresyncresponse)
+
+## Function resyncCertificates (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkFabricResyncCertificatesResponse](#networkfabricresynccertificatesresponse)
+
+## Function resyncCertificates (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkFabricResyncCertificatesResponse](#networkfabricresynccertificatesresponse)
+
+## Function resyncPasswords (Microsoft.ManagedNetworkFabric/networkBootstrapDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkBootstrapDeviceResyncPasswordsResponse](#networkbootstrapdeviceresyncpasswordsresponse)
+
+## Function resyncPasswords (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkDeviceResyncPasswordsResponse](#networkdeviceresyncpasswordsresponse)
+
+## Function resyncPasswords (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkFabricResyncPasswordsResponse](#networkfabricresyncpasswordsresponse)
+
+## Function rotateCertificates (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkFabricRotateCertificatesResponse](#networkfabricrotatecertificatesresponse)
+
+## Function rotatePasswords (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [NetworkFabricRotatePasswordsResponse](#networkfabricrotatepasswordsresponse)
+
+## Function runRoCommand (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [DeviceRoCommand](#devicerocommand)
+* **Output**: [CommonPostActionResponseForDeviceROCommandsOperationStatusResult](#commonpostactionresponsefordevicerocommandsoperationstatusresult)
+
+## Function runRwCommand (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [DeviceRwCommand](#devicerwcommand)
+* **Output**: [NetworkDeviceRunRwCommandResponse](#networkdevicerunrwcommandresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/accessControlLists@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkBootstrapDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateDeviceAdministrativeState](#updatedeviceadministrativestate)
+* **Output**: [NetworkBootstrapDeviceUpdateAdministrativeStateResponse](#networkbootstrapdeviceupdateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateDeviceAdministrativeState](#updatedeviceadministrativestate)
+* **Output**: [NetworkDeviceUpdateAdministrativeStateResponse](#networkdeviceupdateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkMonitors@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkMonitors
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForDeviceUpdate](#commonpostactionresponsefordeviceupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkTapRules@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkTaps@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTaps
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/routePolicies@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkBootstrapDevices/networkBootstrapInterfaces@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices/networkBootstrapInterfaces
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [CommonPostActionResponseForStateUpdate](#commonpostactionresponseforstateupdate)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [ExternalNetworkUpdateBfdAdministrativeStateRequest](#externalnetworkupdatebfdadministrativestaterequest)
+* **Output**: [ExternalNetworkUpdateBfdAdministrativeStateResponse](#externalnetworkupdatebfdadministrativestateresponse)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [InternalNetworkUpdateBfdAdministrativeStateRequest](#internalnetworkupdatebfdadministrativestaterequest)
+* **Output**: [InternalNetworkUpdateBfdAdministrativeStateResponse](#internalnetworkupdatebfdadministrativestateresponse)
+
+## Function updateBfdAdministrativeState (Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects
+* **ApiVersion**: 2025-07-15
+* **Input**: [NniUpdateBfdAdministrativeStateRequest](#nniupdatebfdadministrativestaterequest)
+* **Output**: [NniUpdateBfdAdministrativeStateResponse](#nniupdatebfdadministrativestateresponse)
+
+## Function updateBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [InternalNetworkUpdateBgpAdministrativeStateRequest](#internalnetworkupdatebgpadministrativestaterequest)
+* **Output**: [InternalNetworkUpdateBgpAdministrativeStateResponse](#internalnetworkupdatebgpadministrativestateresponse)
+
+## Function updateInfraManagementBfdConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateNpbStaticRouteBfdAdministrativeState (Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateStaticRouteBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateStaticRouteBfdAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function updateWorkloadManagementBfdConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: [UpdateAdministrativeStateResponse](#updateadministrativestateresponse)
+
+## Function upgrade (Microsoft.ManagedNetworkFabric/networkBootstrapDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkBootstrapDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpdateVersion](#updateversion)
+* **Output**: [NetworkBootstrapDeviceUpgradeResponse](#networkbootstrapdeviceupgraderesponse)
+
+## Function upgrade (Microsoft.ManagedNetworkFabric/networkDevices@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2025-07-15
+* **Input**: [NetworkDeviceUpgradeRequest](#networkdeviceupgraderequest)
+* **Output**: [NetworkDeviceUpgradeResponse](#networkdeviceupgraderesponse)
+
+## Function upgrade (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [UpgradeNetworkFabricProperties](#upgradenetworkfabricproperties)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/accessControlLists@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/accessControlLists
+* **ApiVersion**: 2025-07-15
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2025-07-15
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Input**: [ValidateConfigurationProperties](#validateconfigurationproperties)
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/networkTapRules@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkTapRules
+* **ApiVersion**: 2025-07-15
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function validateConfiguration (Microsoft.ManagedNetworkFabric/routePolicies@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/routePolicies
+* **ApiVersion**: 2025-07-15
+* **Output**: [ValidateConfigurationResponse](#validateconfigurationresponse)
+
+## Function viewDeviceConfiguration (Microsoft.ManagedNetworkFabric/networkFabrics@2025-07-15)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2025-07-15
+* **Output**: [ViewDeviceConfigurationOperationResponse](#viewdeviceconfigurationoperationresponse)
+
 ## AccessControlListAction
 ### Properties
 * **counterName**: string {minLength: 1}: Name of the counter block to get match count information.
@@ -412,6 +756,23 @@
 * **ipv4Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of IPv4 Route prefixes.
 * **ipv6Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of Ipv6Routes prefixes.
 
+## ArmConfigurationDiffOperationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [ArmConfigurationDiffResponseProperties](#armconfigurationdiffresponseproperties): Arm Configuration Diff Response Properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## ArmConfigurationDiffResponseProperties
+### Properties
+* **configurationDiffUrl**: string: Storage URL to the diff file.
+
 ## AuthorizedTransceiverProperties
 ### Properties
 * **key**: string: Key that must be configured on the fabric.
@@ -484,11 +845,85 @@
 * **lastRotationTime**: string (ReadOnly): The date and time when the certificate was last changed.
 * **synchronizationStatus**: 'InSync' | 'OutOfSync' | 'Synchronizing' | string (ReadOnly): Whether the device has been configured with the latest version of the certificate.
 
+## CommitBatchDetails
+### Properties
+* **failedDevices**: string[]: List of devices for which the commit operation failed.
+
+## CommitBatchStatusOperationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [CommitBatchStatusResponseProperties](#commitbatchstatusresponseproperties): Commit Batch Status Response Properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## CommitBatchStatusRequest
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier. If not provided, the latest commit batch status will be returned.
+
+## CommitBatchStatusResponseProperties
+### Properties
+* **commitBatchDetails**: [CommitBatchDetails](#commitbatchdetails): Commit Batch Details.
+* **commitBatchId**: string: Commit Batch Identifier.
+* **commitBatchState**: 'Failed' | 'Processing' | 'Succeeded' | string (ReadOnly): Commit Batch State.
+
+## CommitConfigurationRequest
+### Properties
+* **commitPolicy**: 'StageCEConfiguration' | string: Commit configuration Policy. Supported policy is StageCEConfiguration, which indicates to prepare the configuration for the CE device type.
+* **commitStage**: 'Continue' | 'Rollback' | 'Start' | string: Commit stage Action to be performed.
+* **devices**: string[]: List of ARM resource IDs of devices to be included in the commit operation. Either CE1 or CE2 is allowed.
+
+## CommitConfigurationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
 ## CommonDynamicMatchConfiguration
 ### Properties
 * **ipGroups**: [IpGroupProperties](#ipgroupproperties)[]: List of IP Groups.
 * **portGroups**: [PortGroupProperties](#portgroupproperties)[]: List of the port groups.
 * **vlanGroups**: [VlanGroupProperties](#vlangroupproperties)[]: List of vlan groups.
+
+## CommonPostActionResponseForDeviceROCommands
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **deviceConfigurationPreview**: string: Device RO command Response limited to 4000 characters.
+* **outputUrl**: string: Predefined link containing Device RO Command output.
+
+## CommonPostActionResponseForDeviceROCommandsOperationStatusResult
+### Properties
+* **endTime**: string (ReadOnly): The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **id**: string (ReadOnly): Fully qualified ID for the async operation.
+* **name**: string (ReadOnly): Name of the async operation.
+* **properties**: [CommonPostActionResponseForDeviceROCommands](#commonpostactionresponsefordevicerocommands): The additional properties of the operation status result.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string (ReadOnly): The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## CommonPostActionResponseForDeviceUpdate
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **failedDevices**: string[]: List of ARM Resource IDs for which the given action failed to apply.
+* **successfulDevices**: string[]: List of ARM Resource IDs for which the given action applied successfully.
+
+## CommonPostActionResponseForStateUpdate
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
 
 ## ConditionalDefaultRouteProperties
 ### Properties
@@ -569,6 +1004,49 @@
 * **interfaceType**: string: Interface type.
 * **supportedConnectorTypes**: [SupportedConnectorProperties](#supportedconnectorproperties)[]: List of supported connector types.
 
+## DeviceRoCommand
+### Properties
+* **command**: string: Specify the command.
+
+## DeviceRwCommand
+### Properties
+* **command**: string: Specify the command.
+* **commandUrl**: string: Specify the commands file URL.
+
+## DiscardCommitBatchOperationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [DiscardCommitBatchResponseProperties](#discardcommitbatchresponseproperties): Discard commit batch response properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## DiscardCommitBatchRequest
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier. If not provided, the latest commit batch status will be returned.
+
+## DiscardCommitBatchResponseProperties
+### Properties
+* **commitBatchId**: string: Commit Batch Identifier.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
 ## ExportRoutePolicy
 ### Properties
 * **exportIpv4RoutePolicyId**: string: ARM resource ID of RoutePolicy.
@@ -629,6 +1107,29 @@
 * **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv4 Routes.
 * **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv6 Routes.
 
+## ExternalNetworkUpdateBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: Administrative state.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type that helps to know which bfd we are updating.
+
+## ExternalNetworkUpdateBfdAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [ExternalNetworkUpdateBfdAdministrativeStateResponseProperties](#externalnetworkupdatebfdadministrativestateresponseproperties): Response properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## ExternalNetworkUpdateBfdAdministrativeStateResponseProperties
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: Administrative state.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type that helps to know which bfd we are updating.
+
 ## FabricLockProperties
 ### Properties
 * **lockState**: 'Disabled' | 'Enabled' | string: NetworkFabric Lock State.
@@ -638,6 +1139,23 @@
 ### Properties
 * **featureFlagName**: string: Feature flag name.
 * **featureFlagValue**: string: Feature flag value.
+
+## GetTopologyResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [GetTopologyResponseProperties](#gettopologyresponseproperties): Properties of the GetTopology Response.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## GetTopologyResponseProperties
+### Properties
+* **url**: string: Topology JSON string.
 
 ## GlobalAccessControlListActionProperties
 ### Properties
@@ -700,6 +1218,51 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **staticRouteConfiguration**: [StaticRouteConfiguration](#staticrouteconfiguration): Static Route Configuration properties.
 * **vlanId**: int {minValue: 100, maxValue: 4094} (Required): Vlan identifier. Example: 1001.
+
+## InternalNetworkUpdateBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: BFD Administrative state.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+* **routeType**: 'Bgp' | 'Static' | string: Route Type that helps to know which bfd we are updating.
+
+## InternalNetworkUpdateBfdAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [InternalNetworkUpdateBfdAdministrativeStateResponseProperties](#internalnetworkupdatebfdadministrativestateresponseproperties): Internal Network BFD Administrative State response properties
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## InternalNetworkUpdateBfdAdministrativeStateResponseProperties
+### Properties
+* **neighborAddressAdministrativeStatus**: [NeighborAddressBfdAdministrativeStatus](#neighboraddressbfdadministrativestatus)[]: NeighborAddress administrative status
+
+## InternalNetworkUpdateBgpAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string: BGP Administrative state.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
+## InternalNetworkUpdateBgpAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [InternalNetworkUpdateBgpAdministrativeStateResponseProperties](#internalnetworkupdatebgpadministrativestateresponseproperties): Internal Network BGP Administrative State response properties
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## InternalNetworkUpdateBgpAdministrativeStateResponseProperties
+### Properties
+* **neighborAddressAdministrativeStatus**: [NeighborAddressBgpAdministrativeStatus](#neighboraddressbgpadministrativestatus)[]: NeighborAddress administrative status
 
 ## InternetGatewayProperties
 ### Properties
@@ -885,6 +1448,18 @@
 * **bgpAdministrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): BGP Administrative State for each Neighbor Address. Example: Enabled | Disabled.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 
+## NeighborAddressBfdAdministrativeStatus
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: BFD Administrative state.
+* **error**: string: Error message.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
+## NeighborAddressBgpAdministrativeStatus
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string: BGP Administrative state.
+* **error**: string: Error message.
+* **neighborAddress**: string: NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address.
+
 ## NeighborGroupDestination
 ### Properties
 * **ipv4Addresses**: string[] {maxLength: 16}: Array of IPv4 Addresses.
@@ -900,6 +1475,18 @@
 * **networkTapIds**: string[] (ReadOnly): List of NetworkTap IDs where neighbor group is associated.
 * **networkTapRuleIds**: string[] (ReadOnly): List of Network Tap Rule IDs where neighbor group is associated.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## NeighborGroupResyncResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## NetworkBootstrapDeviceProperties
 ### Properties
@@ -917,6 +1504,66 @@
 * **secondaryManagementIpv6Address**: string (ReadOnly): Secondary Management IPv6 Address.
 * **serialNumber**: string {minLength: 1}: Serial number of the device. Format of serial Number - Make;Model;HardwareRevisionId;SerialNumber.
 * **version**: string (ReadOnly): Current version of the device as defined in SKU.
+
+## NetworkBootstrapDeviceRebootResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkBootstrapDeviceRefreshConfigurationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkBootstrapDeviceResyncPasswordsResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkBootstrapDeviceUpdateAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkBootstrapDeviceUpgradeResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## NetworkBootstrapInterfaceProperties
 ### Properties
@@ -954,6 +1601,48 @@
 * **serialNumber**: string {minLength: 1} (Required): Serial number of the device. Format of serial Number - Make;Model;HardwareRevisionId;SerialNumber.
 * **version**: string (ReadOnly): Current version of the device as defined in SKU.
 
+## NetworkDeviceRefreshConfigurationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkDeviceResyncPasswordsResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkDeviceRunRwCommandResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [NetworkDeviceRwCommandResponseProperties](#networkdevicerwcommandresponseproperties): Network Device Run Rw Command Response properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkDeviceRwCommandResponseProperties
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **outputUrl**: string: Predefined link containing Device Rw Command output.
+
 ## NetworkDeviceSkuProperties
 ### Properties
 * **interfaces**: [DeviceInterfaceProperties](#deviceinterfaceproperties)[]: List of network device interfaces.
@@ -962,6 +1651,35 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **supportedRoleTypes**: ('CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string)[]: Available roles for the network device.
 * **supportedVersions**: [SupportedVersionProperties](#supportedversionproperties)[]: List of supported version details of network device.
+
+## NetworkDeviceUpdateAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkDeviceUpgradeRequest
+### Properties
+* **rwDeviceConfigUrl**: string: URL to the file containing Read-write configuration to be applied on the device during upgrade.
+* **version**: string {minLength: 1} (Required): Version to which the device needs to be upgraded.
+
+## NetworkDeviceUpgradeResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## NetworkFabricControllerProperties
 ### Properties
@@ -979,6 +1697,11 @@
 * **tenantInternetGatewayIds**: string[] (ReadOnly): List of tenant InternetGateway resource IDs
 * **workloadExpressRouteConnections**: [ExpressRouteConnectionInformation](#expressrouteconnectioninformation)[]: As part of an update, the workload ExpressRoute CircuitID should be provided to create and Provision a NFC. This Express route is dedicated for Workload services. (This is a Mandatory attribute).
 * **workloadServices**: [ControllerServices](#controllerservices) (ReadOnly): WorkloadServices IP ranges.
+
+## NetworkFabricLockRequest
+### Properties
+* **action**: 'Lock' | 'Unlock' | string: Action to be performed on the lock
+* **lockType**: 'Administrative' | 'Configuration' | string: Type of lock to be applied
 
 ## NetworkFabricProperties
 ### Properties
@@ -1013,6 +1736,54 @@
 * **terminalServerConfiguration**: [TerminalServerConfiguration](#terminalserverconfiguration) (Required): Network and credentials configuration currently applied to terminal server.
 * **trustedIpPrefixes**: string[]: Trusted IP Prefixes ARM resource IDs.
 * **uniqueRdConfiguration**: [UniqueRouteDistinguisherProperties](#uniqueroutedistinguisherproperties): Unique Route Distinguisher configuration
+
+## NetworkFabricResyncCertificatesResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkFabricResyncPasswordsResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkFabricRotateCertificatesResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NetworkFabricRotatePasswordsResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## NetworkFabricSkuProperties
 ### Properties
@@ -1082,6 +1853,18 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provides you the latest status of the NFC service, whether it is Accepted, updating, Succeeded or Failed. During this process, the states keep changing based on the status of Network Tap provisioning.
 * **sourceTapRuleId**: string (ReadOnly): Source Tap Rule Id. ARM Resource ID of the Network Tap Rule.
 
+## NetworkTapResyncResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
 ## NetworkTapRuleAction
 ### Properties
 * **destinationId**: string: Destination Id. The ARM resource Id may be either Network To Network Interconnect or NeighborGroup.
@@ -1125,6 +1908,18 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **tapRulesUrl**: string: Network Tap Rules file URL.
 
+## NetworkTapRuleResyncResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
 ## NetworkToNetworkInterconnectProperties
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'EnabledDegraded' | 'MAT' | 'RMA' | 'UnderMaintenance' | string (ReadOnly): Administrative state of the resource.
@@ -1155,11 +1950,46 @@
 * **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv4 Routes.
 * **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv6 Routes.
 
+## NniUpdateBfdAdministrativeStateRequest
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: State. Select either enable or disable.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type. Choose either Static or OptionA.
+
+## NniUpdateBfdAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [NniUpdateBfdAdministrativeStateResponseProperties](#nniupdatebfdadministrativestateresponseproperties): Properties of the NNI BFD Administrative State response.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## NniUpdateBfdAdministrativeStateResponseProperties
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string: State. Select either enable or disable.
+* **routeType**: 'OptionA' | 'Static' | string: Route Type. Choose either Static or OptionA.
+
 ## NpbStaticRouteConfiguration
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD Configuration properties.
 * **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv4 Routes.
 * **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv6 Routes.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## OptionBLayer3Configuration
 ### Properties
@@ -1204,6 +2034,10 @@
 ## QosProperties
 ### Properties
 * **qosConfigurationState**: 'Disabled' | 'Enabled' | string: QoS configuration state. Default is Disabled.
+
+## RebootProperties
+### Properties
+* **rebootType**: 'GracefulRebootWithZTP' | 'GracefulRebootWithoutZTP' | 'UngracefulRebootWithZTP' | 'UngracefulRebootWithoutZTP' | string: Type of reboot to be performed. Example: GracefulRebootWithZTP
 
 ## RoutePolicyProperties
 ### Properties
@@ -1438,6 +2272,43 @@
 * **uniqueRdConfigurationState**: 'Disabled' | 'Enabled' | string: Unique Route Distinguisher configuration state. Default is Enabled.
 * **uniqueRds**: string[] (ReadOnly): List of Unique Route Distinguisher addresses.
 
+## UpdateAdministrativeState
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+* **state**: 'Disable' | 'Enable' | 'UnderMaintenance' | string: Administrative state.
+
+## UpdateAdministrativeStateResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [UpdateAdministrativeStateResponseProperties](#updateadministrativestateresponseproperties): Response properties in case of successful administrative state update.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## UpdateAdministrativeStateResponseProperties
+### Properties
+* **failedResources**: string[]: List of ARM Resource IDs for which the given action failed to apply.
+* **successfulResources**: string[]: List of ARM Resource IDs for which the given action applied successfully.
+
+## UpdateDeviceAdministrativeState
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+* **state**: 'Disable' | 'Enable' | 'GracefulQuarantine' | 'Quarantine' | 'RMA' | 'Resync' | 'UnderMaintenance' | 'UngracefulQuarantine' | 'UngracefulRMA' | string: Administrative state.
+
+## UpdateVersion
+### Properties
+* **version**: string: Specify the version.
+
+## UpgradeNetworkFabricProperties
+### Properties
+* **action**: 'Complete' | 'Start' | string: Action to be performed while upgrading the fabric.
+* **version**: string: Specify the version.
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -1447,6 +2318,33 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## ValidateConfigurationProperties
+### Properties
+* **validateAction**: 'Cabling' | 'Configuration' | 'Connectivity' | string: Validate action that to be performed
+
+## ValidateConfigurationResponse
+### Properties
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingAdministrativeUpdate' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configuration state.
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **url**: string: URL for the details of the response.
+
+## ViewDeviceConfigurationOperationResponse
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **properties**: [ViewDeviceConfigurationResponseProperties](#viewdeviceconfigurationresponseproperties): View Device Configuration Response Properties.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## ViewDeviceConfigurationResponseProperties
+### Properties
+* **deviceConfigurationUrl**: string: Storage URL to the device configuration file.
 
 ## VlanGroupProperties
 ### Properties

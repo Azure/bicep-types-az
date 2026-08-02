@@ -181,9 +181,32 @@
 * **tags**: [AccountTags](#accounttags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addRaiBlocklistItems (Microsoft.CognitiveServices/accounts/raiBlocklists@2024-04-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/raiBlocklists
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [RaiBlocklistItemBulkRequest](#raiblocklistitembulkrequest)[]
+* **Output**: [RaiBlocklist](#raiblocklist)
+
+## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2024-04-01-preview)
+* **Resource**: Microsoft.CognitiveServices/locations
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
+* **Output**: [SkuAvailabilityListResult](#skuavailabilitylistresult)
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2024-04-01-preview)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2024-04-01-preview
+* **Output**: [ApiKeys](#apikeys)
+
+## Function reconcile (Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2024-04-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2024-04-01-preview
+* **Output**: [NetworkSecurityPerimeterConfiguration](#networksecurityperimeterconfiguration)
+
+## Function regenerateKey (Microsoft.CognitiveServices/accounts@2024-04-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [ApiKeys](#apikeys)
 
 ## AbusePenalty
@@ -265,6 +288,12 @@
 * **count**: int: The count value of Call Rate Limit.
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
 * **rules**: [ThrottlingRule](#throttlingrule)[]
+
+## CheckSkuAvailabilityParameter
+### Properties
+* **kind**: string (Required): The Kind of the resource.
+* **skus**: string[] (Required): The SKU of the resource.
+* **type**: string (Required): The Type of the resource.
 
 ## CommitmentPeriod
 ### Properties
@@ -442,6 +471,13 @@
 ### Properties
 * **id**: string: Fully qualified identifier of subscription
 
+## NetworkSecurityPerimeterConfiguration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): NSP Configuration properties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## NetworkSecurityPerimeterConfigurationAssociationInfo
 ### Properties
 * **accessMode**: string: Access Mode of the resource association
@@ -509,10 +545,25 @@
 * **renewalPeriod**: int
 * **rules**: [ThrottlingRule](#throttlingrule)[]
 
+## RaiBlocklist
+### Properties
+* **etag**: string (ReadOnly): Resource Etag.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RaiBlocklistProperties](#raiblocklistproperties): Properties of Cognitive Services RaiBlocklist.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [RaiBlocklistTags](#raiblocklisttags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## RaiBlocklistConfig
 ### Properties
 * **blocking**: bool: If blocking would occur.
 * **blocklistName**: string: Name of ContentFilter.
+
+## RaiBlocklistItemBulkRequest
+### Properties
+* **name**: string
+* **properties**: [RaiBlocklistItemProperties](#raiblocklistitemproperties): Properties of Cognitive Services RaiBlocklist Item.
 
 ## RaiBlocklistItemProperties
 ### Properties
@@ -527,6 +578,11 @@
 ## RaiBlocklistProperties
 ### Properties
 * **description**: string: Description of the block list.
+
+## RaiBlocklistTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RaiBlocklistTags
 ### Properties
@@ -560,6 +616,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## RegenerateKeyParameters
+### Properties
+* **keyName**: 'Key1' | 'Key2' (Required): key name to generate (Key1|Key2)
+
 ## RegionSetting
 ### Properties
 * **customsubdomain**: string: Maps the region to the regional custom subdomain.
@@ -578,6 +638,19 @@
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## SkuAvailability
+### Properties
+* **kind**: string: The Kind of the resource.
+* **message**: string: Additional error message.
+* **reason**: string: Reason why the SKU is not available.
+* **skuAvailable**: bool: Indicates the given SKU is available or not.
+* **skuName**: string: The SKU of Cognitive Services account.
+* **type**: string: The Type of the resource.
+
+## SkuAvailabilityListResult
+### Properties
+* **value**: [SkuAvailability](#skuavailability)[]: Check SKU availability result list.
 
 ## SkuCapability
 ### Properties

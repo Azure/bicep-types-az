@@ -22,6 +22,39 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EdgeMarketplace/publishers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateAccessToken (Microsoft.EdgeMarketplace/offers@2023-08-01)
+* **Resource**: Microsoft.EdgeMarketplace/offers
+* **ApiVersion**: 2023-08-01
+* **Input**: [AccessTokenRequest](#accesstokenrequest)
+* **Output**: [DiskAccessToken](#diskaccesstoken)
+
+## Function getAccessToken (Microsoft.EdgeMarketplace/offers@2023-08-01)
+* **Resource**: Microsoft.EdgeMarketplace/offers
+* **ApiVersion**: 2023-08-01
+* **Input**: [AccessTokenReadRequest](#accesstokenreadrequest)
+* **Output**: [DiskAccessToken](#diskaccesstoken)
+
+## AccessTokenReadRequest
+### Properties
+* **requestId**: string (Required): The name of the publisher.
+
+## AccessTokenRequest
+### Properties
+* **deviceSku**: string: The device sku.
+* **deviceVersion**: string: The device sku version.
+* **edgeMarketPlaceRegion**: string (Required): The region where the disk will be created.
+* **egeMarketPlaceResourceId**: string: The region where the disk will be created.
+* **hypervGeneration**: string: The hyperv version.
+* **marketPlaceSku**: string: The marketplace sku.
+* **marketPlaceSkuVersion**: string: The marketplace sku version.
+* **publisherName**: string: The name of the publisher.
+
+## DiskAccessToken
+### Properties
+* **accessToken**: string (Required): The access token.
+* **diskId**: string: The disk id.
+* **status**: string: The access token creation status.
+
 ## IconFileUris
 ### Properties
 * **large**: string: uri of large icon

@@ -40,9 +40,21 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
+## Function checkNameAvailability (Microsoft.Batch/locations@2017-05-01)
+* **Resource**: Microsoft.Batch/locations
+* **ApiVersion**: 2017-05-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Batch/batchAccounts@2017-05-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2017-05-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function regenerateKeys (Microsoft.Batch/batchAccounts@2017-05-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-05-01
+* **Input**: [BatchAccountRegenerateKeyParameters](#batchaccountregeneratekeyparameters)
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
 
 ## ApplicationPackage
@@ -82,6 +94,21 @@
 * **accountName**: string (ReadOnly): The Batch account name.
 * **primary**: string (ReadOnly): The primary key associated with the account.
 * **secondary**: string (ReadOnly): The secondary key associated with the account.
+
+## BatchAccountRegenerateKeyParameters
+### Properties
+* **keyName**: 'Primary' | 'Secondary' (Required): The type of account key to regenerate.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability
+* **type**: 'Microsoft.Batch/batchAccounts' (Required): The resource type. Must be set to Microsoft.Batch/batchAccounts
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## KeyVaultReference
 ### Properties

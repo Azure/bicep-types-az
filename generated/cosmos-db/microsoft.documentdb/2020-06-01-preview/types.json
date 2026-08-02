@@ -5437,6 +5437,97 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegionForOnlineOffline",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cosmos DB region, with spaces between words and each word capitalized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountListReadOnlyKeysResult",
+    "properties": {
+      "primaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the primary read-only key."
+      },
+      "secondaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the secondary read-only key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readonlykeys",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/351"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountRegenerateKeyParameters",
+    "properties": {
+      "keyKind": {
+        "type": {
+          "$ref": "#/358"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primaryReadonly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondaryReadonly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/354"
+      },
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/357"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "NotebookWorkspaceConnectionInfoResult",
     "properties": {
       "authToken": {
@@ -5461,7 +5552,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2020-06-01-preview",
     "output": {
-      "$ref": "#/350"
+      "$ref": "#/359"
     }
   }
 ]

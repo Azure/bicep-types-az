@@ -6653,5 +6653,469 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveRouteListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/398"
+        },
+        "flags": 0,
+        "description": "Gets list of effective routes"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveRoute",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the name of the user defined route. This is optional."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/386"
+        },
+        "flags": 0,
+        "description": "Gets who created the route"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 0,
+        "description": "Gets value of effective route"
+      },
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/390"
+        },
+        "flags": 0,
+        "description": "Gets address prefixes of the effective routes in CIDR notation."
+      },
+      "nextHopIpAddress": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "Gets the IP address of the next hop of the effective route"
+      },
+      "nextHopType": {
+        "type": {
+          "$ref": "#/397"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type of Azure hop the packet should be sent to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualNetworkGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualNetworkGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VnetLocal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualAppliance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/392"
+      },
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/381"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "effectiveRouteTable",
+    "resourceType": "Microsoft.Network/networkInterfaces",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/380"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroupListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/417"
+        },
+        "flags": 0,
+        "description": "Gets list of effective network security groups"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroup",
+    "properties": {
+      "networkSecurityGroup": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Gets the id of network security group that is applied"
+      },
+      "association": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 0,
+        "description": "Effective NetworkSecurityGroup association"
+      },
+      "effectiveSecurityRules": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 0,
+        "description": "Gets collection of effective security rules"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroupAssociation",
+    "properties": {
+      "subnet": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Gets the id of subnet if assigned"
+      },
+      "networkInterface": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Gets the id of network interface if assigned"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the name of the security rule specified by the user (if created by the user)"
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/407"
+        },
+        "flags": 0,
+        "description": "Gets Network protocol this rule applies to"
+      },
+      "sourcePortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets source port or range"
+      },
+      "destinationPortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets destination port or range"
+      },
+      "sourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets source address prefix"
+      },
+      "destinationAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets destination address prefix"
+      },
+      "expandedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/408"
+        },
+        "flags": 0,
+        "description": "Gets expanded source address prefix"
+      },
+      "expandedDestinationAddressPrefix": {
+        "type": {
+          "$ref": "#/409"
+        },
+        "flags": 0,
+        "description": "Gets expanded destination address prefix"
+      },
+      "access": {
+        "type": {
+          "$ref": "#/412"
+        },
+        "flags": 0,
+        "description": "Gets network traffic is allowed or denied"
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Gets the priority of the rule"
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/415"
+        },
+        "flags": 0,
+        "description": "Gets the direction of the rule"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "*"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/406"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/410"
+      },
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/403"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "effectiveNetworkSecurityGroups",
+    "resourceType": "Microsoft.Network/networkInterfaces",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reset",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/317"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
   }
 ]

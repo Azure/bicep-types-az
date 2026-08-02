@@ -2970,5 +2970,440 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAvailabilityResponse",
+    "properties": {
+      "isAvailable": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "<code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "<code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/177"
+    },
+    "input": {
+      "$ref": "#/171"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FilePathAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File path to verify."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFilePathAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/177"
+    },
+    "input": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the resource to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/177"
+    },
+    "input": {
+      "$ref": "#/184"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeRevert",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the snapshot"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BreakReplicationRequest",
+    "properties": {
+      "forceBreakReplication": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "If replication is in status transferring and you want to force break the replication, set to true"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizeRequest",
+    "properties": {
+      "remoteVolumeResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the remote volume"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PoolChangeRequest",
+    "properties": {
+      "newPoolResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the pool to move volume to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotRestoreFiles",
+    "properties": {
+      "filePaths": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 1,
+        "description": "List of files to be restored"
+      },
+      "destinationPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Destination folder where the files will be restored"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 1024
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/196"
+    },
+    "minLength": 1,
+    "maxLength": 10
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubvolumeModel",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 0,
+        "description": "It represents the minimal properties of the subvolume."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubvolumeModelProperties",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Path to the subvolume"
+      },
+      "parentPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Path to the parent subvolume"
+      },
+      "size": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Size of subvolume"
+      },
+      "bytesUsed": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Bytes used"
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Permissions of the subvolume"
+      },
+      "creationTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Creation time and date"
+      },
+      "accessedTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Most recent access time and date"
+      },
+      "modifiedTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Most recent modification time and date"
+      },
+      "changedTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Most recent change time and date"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure lifecycle management"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMetadata",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/198"
+    }
   }
 ]

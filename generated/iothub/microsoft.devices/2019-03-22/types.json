@@ -1463,11 +1463,406 @@
   },
   {
     "$type": "ObjectType",
+    "name": "TestAllRoutesInput",
+    "properties": {
+      "routingSource": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "Routing source"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "Routing message"
+      },
+      "twin": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Routing Twin Reference"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeviceMessages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TwinChangeEvents"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeviceLifecycleEvents"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeviceJobLifecycleEvents"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingMessage",
+    "properties": {
+      "body": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Body of routing message"
+      },
+      "appProperties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "App properties"
+      },
+      "systemProperties": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "System properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingMessageAppProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingMessageSystemProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingTwin",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Twin Tags"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingTwinProperties",
+    "properties": {
+      "desired": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Twin desired properties"
+      },
+      "reported": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Twin desired properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestAllRoutesResult",
+    "properties": {
+      "routes": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "JSON-serialized array of matched routes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MatchedRoute",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Properties of routes that matched"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "$testall",
+    "resourceType": "Microsoft.Devices/IotHubs/routing",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/120"
+    },
+    "input": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestRouteInput",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "Routing message"
+      },
+      "route": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "Route properties"
+      },
+      "twin": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Routing Twin Reference"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestRouteResult",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Result of testing route"
+      },
+      "details": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "Detailed result of testing route"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "undefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestRouteResultDetails",
+    "properties": {
+      "compilationErrors": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "JSON-serialized list of route compilation errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RouteCompilationError",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Route error message"
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "Severity of the route error"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Location where the route error happened"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RouteErrorRange",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "Start where the route error happened"
+      },
+      "end": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "End where the route error happened"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RouteErrorPosition",
+    "properties": {
+      "line": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Line where the route error happened"
+      },
+      "column": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Column where the route error happened"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "$testnew",
+    "resourceType": "Microsoft.Devices/IotHubs/routing",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -1493,7 +1888,271 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2019-03-22",
     "output": {
-      "$ref": "#/107"
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDevicesRequest",
+    "properties": {
+      "exportBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The export blob container URI."
+      },
+      "excludeKeys": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "The value indicating whether keys should be excluded during export."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobResponse",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start time of the job."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the job stopped processing."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "The type of the job."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 2,
+        "description": "The status of the job."
+      },
+      "failureReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "If status == failed, this string containing the reason for the failure."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status message for the job."
+      },
+      "parentJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier of the parent job, if any."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "export"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "import"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "backup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "readDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "writeDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "updateDeviceConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "rebootDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "factoryResetDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "firmwareUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enqueued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/143"
+    },
+    "input": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportDevicesRequest",
+    "properties": {
+      "inputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The input blob container URI."
+      },
+      "outputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The output blob container URI."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/143"
+    },
+    "input": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverInput",
+    "properties": {
+      "failoverRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Region the hub will be failed over to"
+      }
     }
   },
   {
@@ -1503,6 +2162,184 @@
     "apiVersion": "2019-03-22",
     "output": {
       "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateWithNonceDescription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 0,
+        "description": "The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificatePropertiesWithNonce",
+    "properties": {
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's subject name."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's expiration date and time."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's thumbprint."
+      },
+      "isVerified": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 2,
+        "description": "Determines whether certificate has been verified."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's create date and time."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's last update date and time."
+      },
+      "verificationCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's verification code that will be used for proof of possession."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate content"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateVerificationCode",
+    "resourceType": "Microsoft.Devices/IotHubs/certificates",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/167"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateVerificationDescription",
+    "properties": {
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "base-64 representation of X509 certificate .cer file or just .pem file content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateDescription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The description of an X509 CA Certificate."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verify",
+    "resourceType": "Microsoft.Devices/IotHubs/certificates",
+    "apiVersion": "2019-03-22",
+    "output": {
+      "$ref": "#/171"
+    },
+    "input": {
+      "$ref": "#/170"
     }
   }
 ]

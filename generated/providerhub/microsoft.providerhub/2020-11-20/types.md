@@ -100,10 +100,38 @@
 * **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkinManifest (Microsoft.ProviderHub/providerRegistrations@2020-11-20)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations
+* **ApiVersion**: 2020-11-20
+* **Input**: [CheckinManifestParams](#checkinmanifestparams)
+* **Output**: [CheckinManifestInfo](#checkinmanifestinfo)
+
+## Function generateManifest (Microsoft.ProviderHub/providerRegistrations@2020-11-20)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations
+* **ApiVersion**: 2020-11-20
+* **Output**: [ResourceProviderManifest](#resourceprovidermanifest)
+
+## Function generateOperations (Microsoft.ProviderHub/providerRegistrations@2020-11-20)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations
+* **ApiVersion**: 2020-11-20
+* **Output**: [OperationsDefinition](#operationsdefinition)[]
+
 ## AuthorizationActionMapping
 ### Properties
 * **desired**: string
 * **original**: string
+
+## CheckinManifestInfo
+### Properties
+* **commitId**: string
+* **isCheckedIn**: bool (Required)
+* **pullRequest**: string
+* **statusMessage**: string (Required)
+
+## CheckinManifestParams
+### Properties
+* **baselineArmManifestLocation**: string (Required): The baseline ARM manifest location supplied to the checkin manifest operation.
+* **environment**: string (Required): The environment supplied to the checkin manifest operation.
 
 ## CustomRolloutProperties
 ### Properties
@@ -226,6 +254,11 @@
 * **linkedProperty**: string
 * **linkedType**: string
 
+## LinkedOperationRule
+### Properties
+* **linkedAction**: 'Blocked' | 'Enabled' | 'NotSpecified' | 'Validate' | string (Required)
+* **linkedOperation**: 'CrossResourceGroupResourceMove' | 'CrossSubscriptionResourceMove' | 'None' | string (Required)
+
 ## LoggingRule
 ### Properties
 * **action**: string (Required)
@@ -317,6 +350,52 @@
 * **quotaId**: string (Required)
 * **requiredFeatures**: string[]
 
+## ResourceProviderEndpoint
+### Properties
+* **apiVersions**: string[]
+* **enabled**: bool
+* **endpointUri**: string
+* **featuresRule**: [ResourceProviderEndpointFeaturesRule](#resourceproviderendpointfeaturesrule)
+* **locations**: string[]
+* **requiredFeatures**: string[]
+* **timeout**: string
+
+## ResourceProviderEndpointFeaturesRule
+### Properties
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
+
+## ResourceProviderManifest
+### Properties
+* **capabilities**: [ResourceProviderCapabilities](#resourceprovidercapabilities)[]
+* **featuresRule**: [ResourceProviderManifestFeaturesRule](#resourceprovidermanifestfeaturesrule)
+* **globalNotificationEndpoints**: [ResourceProviderEndpoint](#resourceproviderendpoint)[]
+* **management**: [ResourceProviderManifestManagement](#resourceprovidermanifestmanagement)
+* **metadata**: any: Anything
+* **namespace**: string
+* **providerAuthentication**: [ResourceProviderManifestProviderAuthentication](#resourceprovidermanifestproviderauthentication)
+* **providerAuthorizations**: [ResourceProviderAuthorization](#resourceproviderauthorization)[]
+* **providerType**: 'AuthorizationFree' | 'External' | 'Hidden' | 'Internal' | 'LegacyRegistrationRequired' | 'NotSpecified' | 'RegistrationFree' | 'TenantOnly' | string
+* **providerVersion**: string
+* **requestHeaderOptions**: [ResourceProviderManifestRequestHeaderOptions](#resourceprovidermanifestrequestheaderoptions)
+* **requiredFeatures**: string[]
+* **reRegisterSubscriptionMetadata**: [ResourceProviderManifestReRegisterSubscriptionMetadata](#resourceprovidermanifestreregistersubscriptionmetadata)
+* **resourceTypes**: [ResourceType](#resourcetype)[]
+
+## ResourceProviderManifestFeaturesRule
+### Properties
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
+
+## ResourceProviderManifestManagement
+### Properties
+* **incidentContactEmail**: string
+* **incidentRoutingService**: string
+* **incidentRoutingTeam**: string
+* **manifestOwners**: string[]
+* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified'
+* **resourceAccessRoles**: any[]
+* **schemaOwners**: string[]
+* **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]
+
 ## ResourceProviderManifestPropertiesFeaturesRule
 ### Properties
 * **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
@@ -345,6 +424,46 @@
 * **preflightOptions**: ('ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string)[]
 * **preflightSupported**: bool
 
+## ResourceProviderManifestProviderAuthentication
+### Properties
+* **allowedAudiences**: string[] (Required)
+
+## ResourceProviderManifestRequestHeaderOptions
+### Properties
+* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership' | string
+
+## ResourceProviderManifestReRegisterSubscriptionMetadata
+### Properties
+* **concurrencyLimit**: int
+* **enabled**: bool (Required)
+
+## ResourceType
+### Properties
+* **allowedUnauthorizedActions**: string[]
+* **authorizationActionMappings**: [AuthorizationActionMapping](#authorizationactionmapping)[]
+* **defaultApiVersion**: string
+* **disallowedActionVerbs**: string[]
+* **endpoints**: [ResourceProviderEndpoint](#resourceproviderendpoint)[]
+* **extendedLocations**: [ExtendedLocationOptions](#extendedlocationoptions)[]
+* **featuresRule**: [ResourceTypeFeaturesRule](#resourcetypefeaturesrule)
+* **identityManagement**: [ResourceTypeIdentityManagement](#resourcetypeidentitymanagement)
+* **linkedAccessChecks**: [LinkedAccessCheck](#linkedaccesscheck)[]
+* **linkedOperationRules**: [LinkedOperationRule](#linkedoperationrule)[]
+* **loggingRules**: [LoggingRule](#loggingrule)[]
+* **marketplaceType**: 'AddOn' | 'Bypass' | 'NotSpecified' | 'Store'
+* **metadata**: any: Anything
+* **name**: string
+* **requestHeaderOptions**: [ResourceTypeRequestHeaderOptions](#resourcetyperequestheaderoptions)
+* **requiredFeatures**: string[]
+* **resourceDeletionPolicy**: 'Cascade' | 'Force' | 'NotSpecified' | string
+* **resourceValidation**: 'NotSpecified' | 'ProfaneWords' | 'ReservedWords' | string
+* **routingType**: 'CascadeExtension' | 'Default' | 'Extension' | 'Failover' | 'Fanout' | 'HostBased' | 'LocationBased' | 'ProxyOnly' | 'Tenant' | string
+* **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]
+* **skuLink**: string
+* **subscriptionStateRules**: [SubscriptionStateRule](#subscriptionstaterule)[]
+* **templateDeploymentPolicy**: [ResourceTypeTemplateDeploymentPolicy](#resourcetypetemplatedeploymentpolicy)
+* **throttlingRules**: [ThrottlingRule](#throttlingrule)[]
+
 ## ResourceTypeEndpoint
 ### Properties
 * **apiVersions**: string[]
@@ -369,6 +488,14 @@
 ### Properties
 * **request**: ('DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string)[]
 * **response**: ('DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string)[]
+
+## ResourceTypeFeaturesRule
+### Properties
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
+
+## ResourceTypeIdentityManagement
+### Properties
+* **type**: 'Actor' | 'DelegatedResourceIdentity' | 'NotSpecified' | 'SystemAssigned' | 'UserAssigned' | string
 
 ## ResourceTypeRegistration
 ### Properties
@@ -446,6 +573,15 @@
 ### Properties
 * **preflightOptions**: ('ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string)[]
 * **preflightSupported**: bool
+
+## ResourceTypeRequestHeaderOptions
+### Properties
+* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership' | string
+
+## ResourceTypeTemplateDeploymentPolicy
+### Properties
+* **capabilities**: 'Default' | 'Preflight' | string (Required)
+* **preflightOptions**: 'DeploymentRequests' | 'None' | 'RegisteredOnly' | 'TestOnly' | 'ValidationRequests' | string (Required)
 
 ## RolloutStatusBaseFailedOrSkippedRegions
 ### Properties

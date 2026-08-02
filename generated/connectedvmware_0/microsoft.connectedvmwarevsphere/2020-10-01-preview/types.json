@@ -4008,5 +4008,18 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StopVirtualMachineOptions",
+    "properties": {
+      "skipShutdown": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false."
+      }
+    }
   }
 ]

@@ -1155,5 +1155,342 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotDownloadRequest",
+    "properties": {
+      "reportCreatorTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant id."
+      },
+      "downloadType": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 1,
+        "description": "Indicates the download type."
+      },
+      "offerGuid": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The offerGuid which mapping to the reports."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompliancePdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceDetailedPdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceList"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponse",
+    "properties": {
+      "resourceList": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 2,
+        "description": "List of the reports"
+      },
+      "complianceReport": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "List of the compliance result"
+      },
+      "compliancePdfReport": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 2,
+        "description": "compliance pdf report"
+      },
+      "complianceDetailedPdfReport": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "compliance detailed pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceItem",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The subscription Id of this resource."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource group name of this resource."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type of this resource."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComplianceReportItem",
+    "properties": {
+      "categoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The category name."
+      },
+      "controlId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control Id - e.g. \"1\"."
+      },
+      "controlName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control name."
+      },
+      "controlType": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 2,
+        "description": "The control type."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "The compliance result's status."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped policy Id."
+      },
+      "policyDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The policy's display name."
+      },
+      "policyDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The policy's detail description."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped subscription Id."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource group."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource type."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      },
+      "statusChangeDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result last changed date - e.g. \"2022-10-24T02:55:16.3274379Z\". For unavailable date, set it as \"N/A\"."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseCompliancePdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "uri of compliance pdf report"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseComplianceDetailedPdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "uri of compliance detailed pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports/snapshots",
+    "apiVersion": "2022-11-16-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/93"
+    }
   }
 ]

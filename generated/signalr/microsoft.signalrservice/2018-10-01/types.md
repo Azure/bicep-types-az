@@ -14,10 +14,27 @@ The geo region of a resource never changes after it is created.
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.SignalRService/locations@2018-10-01)
+* **Resource**: Microsoft.SignalRService/locations
+* **ApiVersion**: 2018-10-01
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function listKeys (Microsoft.SignalRService/SignalR@2018-10-01)
 * **Resource**: Microsoft.SignalRService/SignalR
 * **ApiVersion**: 2018-10-01
 * **Output**: [SignalRKeys](#signalrkeys)
+
+## NameAvailability
+### Properties
+* **message**: string: The message of the operation.
+* **nameAvailable**: bool: Indicates whether the name is available or not.
+* **reason**: string: The reason of the availability. Required if name is not available.
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): The SignalR service name to validate. e.g."my-signalR-name-here"
+* **type**: string (Required): The resource type. Should be always "Microsoft.SignalRService/SignalR".
 
 ## ResourceSku
 ### Properties

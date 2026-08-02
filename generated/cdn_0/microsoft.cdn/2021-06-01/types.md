@@ -177,6 +177,85 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/securityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkHostNameAvailability (Microsoft.Cdn/profiles@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2021-06-01
+* **Input**: [CheckHostNameAvailabilityInput](#checkhostnameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
+## Function checkResourceUsage (Microsoft.Cdn/profiles@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2021-06-01
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2021-06-01
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function disableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2021-06-01
+* **Output**: [CustomDomain](#customdomain)
+
+## Function enableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2021-06-01
+* **Input**: [CustomDomainHttpsParameters](#customdomainhttpsparameters)
+* **Output**: [CustomDomain](#customdomain)
+
+## Function generateSsoUri (Microsoft.Cdn/profiles@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2021-06-01
+* **Output**: [SsoUri](#ssouri)
+
+## Function getSupportedOptimizationTypes (Microsoft.Cdn/profiles@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2021-06-01
+* **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
+
+## Function start (Microsoft.Cdn/profiles/endpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2021-06-01
+* **Output**: [Endpoint](#endpoint)
+
+## Function stop (Microsoft.Cdn/profiles/endpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2021-06-01
+* **Output**: [Endpoint](#endpoint)
+
+## Function usages (Microsoft.Cdn/profiles@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2021-06-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/afdEndpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/afdEndpoints
+* **ApiVersion**: 2021-06-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/originGroups@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/originGroups
+* **ApiVersion**: 2021-06-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/ruleSets@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/ruleSets
+* **ApiVersion**: 2021-06-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/afdEndpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/afdEndpoints
+* **ApiVersion**: 2021-06-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2021-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2021-06-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
 ## ActivatedResourceReference
 ### Properties
 * **id**: string: Resource ID.
@@ -281,6 +360,16 @@
 * **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Describes rate limit rules inside the policy.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
 
+## CheckHostNameAvailabilityInput
+### Properties
+* **hostName**: string (Required): The host name to validate.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
+
 ## ClientPortMatchConditionParameters
 ### Properties
 * **matchValues**: string[]: The match value for the condition of the delivery rule
@@ -303,6 +392,14 @@
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleCookiesConditionParameters' | string (Required)
 
+## CustomDomain
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [CustomDomainProperties](#customdomainproperties): The JSON object that contains the properties of the custom domain to create.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **type**: string (ReadOnly): Resource type.
+
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
 
@@ -320,6 +417,16 @@
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
 * **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (Required): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
+
+## CustomDomainProperties
+### Properties
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters): Certificate parameters for securing custom HTTPS
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of the custom domain.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
@@ -548,6 +655,16 @@
 ### Properties
 * **expirationDate**: string (ReadOnly): The date time that the token expires
 * **validationToken**: string (ReadOnly): Challenge used for DNS TXT record or file based validation
+
+## Endpoint
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## EndpointProperties
 ### Properties
@@ -822,6 +939,18 @@
 ### Properties
 * **id**: string: Resource ID.
 
+## ResourceUsage
+### Properties
+* **currentValue**: int (ReadOnly): Actual value of usage on the specified resource type.
+* **limit**: int (ReadOnly): Quota of the specified resource type.
+* **resourceType**: string (ReadOnly): Resource type for which the usage is provided.
+* **unit**: 'count' | string (ReadOnly): Unit of the usage. e.g. count.
+
+## ResourceUsageListResult
+### Properties
+* **nextLink**: string: URL to get the next set of custom domain objects if there are any.
+* **value**: [ResourceUsage](#resourceusage)[] (ReadOnly): List of resource usages.
+
 ## ResponseBasedOriginErrorDetectionParameters
 ### Properties
 * **httpErrorRanges**: [HttpErrorRangeParameters](#httperrorrangeparameters)[]: The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
@@ -969,6 +1098,14 @@
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleSslProtocolConditionParameters' | string (Required)
 
+## SsoUri
+### Properties
+* **ssoUriValue**: string (ReadOnly): The URI used to login to the supplemental portal.
+
+## SupportedOptimizationTypesListResult
+### Properties
+* **supportedOptimizationTypes**: ('DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string)[] (ReadOnly): Supported optimization types for a profile.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
@@ -977,6 +1114,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that last modified the resource
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -1054,4 +1196,32 @@
 ### Properties
 * **paramIndicator**: 'Expires' | 'KeyId' | 'Signature' | string (Required): Indicates the purpose of the parameter
 * **paramName**: string (Required): Parameter name
+
+## Usage
+### Properties
+* **currentValue**: int (Required): The current value of the usage.
+* **id**: string (ReadOnly): Resource identifier.
+* **limit**: int (Required): The limit of usage.
+* **name**: [UsageName](#usagename) (Required): The name of the type of usage.
+* **unit**: 'Count' | string (Required): An enum describing the unit of measurement.
+
+## UsageName
+### Properties
+* **localizedValue**: string: A localized string describing the resource name.
+* **value**: string: A string describing the resource name.
+
+## UsagesListResult
+### Properties
+* **nextLink**: string: URL to get the next set of results.
+* **value**: [Usage](#usage)[]: The list of resource usages.
+
+## ValidateCustomDomainInput
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+
+## ValidateCustomDomainOutput
+### Properties
+* **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
+* **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
+* **reason**: string (ReadOnly): The reason why the custom domain is not valid.
 

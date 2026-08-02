@@ -274,6 +274,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function diagnose (Microsoft.MachineLearningServices/workspaces@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-06-01-preview
+* **Input**: [DiagnoseWorkspaceParameters](#diagnoseworkspaceparameters)
+* **Output**: [DiagnoseResponseResult](#diagnoseresponseresult)
+
+## Function exportLabels (Microsoft.MachineLearningServices/workspaces/labelingJobs@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2022-06-01-preview
+* **Input**: [ExportSummary](#exportsummary)
+* **Output**: [ExportSummary](#exportsummary)
+
+## Function getLogs (Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments
+* **ApiVersion**: 2022-06-01-preview
+* **Input**: [DeploymentLogsRequest](#deploymentlogsrequest)
+* **Output**: [DeploymentLogs](#deploymentlogs)
+
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces@2022-06-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-06-01-preview
@@ -318,6 +336,22 @@
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-06-01-preview
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
+
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-06-01-preview
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2022-06-01-preview
+* **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2022-06-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2022-06-01-preview
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
 
 ## AccountKeyDatastoreSecrets
 ### Properties
@@ -1146,11 +1180,103 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **dataType**: 'uri_folder' (Required): [Required] Specifies the type of data.
 
 
+## DeploymentLogs
+### Properties
+* **content**: string: The retrieved online deployment logs.
+
+## DeploymentLogsRequest
+### Properties
+* **containerType**: 'InferenceServer' | 'StorageInitializer' | string: The type of container to retrieve logs from.
+* **tail**: int: The maximum number of lines to tail.
+
 ## DeploymentResourceConfiguration
 ### Properties
 * **instanceCount**: int: Optional number of instances or nodes used by the compute target.
 * **instanceType**: string: Optional type of VM used as supported by the compute target.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
+
+## DiagnoseRequestProperties
+### Properties
+* **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
+* **containerRegistry**: [DiagnoseRequestPropertiesContainerRegistry](#diagnoserequestpropertiescontainerregistry): Setting for diagnosing dependent container registry
+* **dnsResolution**: [DiagnoseRequestPropertiesDnsResolution](#diagnoserequestpropertiesdnsresolution): Setting for diagnosing dns resolution
+* **keyVault**: [DiagnoseRequestPropertiesKeyVault](#diagnoserequestpropertieskeyvault): Setting for diagnosing dependent key vault
+* **nsg**: [DiagnoseRequestPropertiesNsg](#diagnoserequestpropertiesnsg): Setting for diagnosing network security group
+* **others**: [DiagnoseRequestPropertiesOthers](#diagnoserequestpropertiesothers): Setting for diagnosing unclassified category of problems
+* **resourceLock**: [DiagnoseRequestPropertiesResourceLock](#diagnoserequestpropertiesresourcelock): Setting for diagnosing resource lock
+* **storageAccount**: [DiagnoseRequestPropertiesStorageAccount](#diagnoserequestpropertiesstorageaccount): Setting for diagnosing dependent storage account
+* **udr**: [DiagnoseRequestPropertiesUdr](#diagnoserequestpropertiesudr): Setting for diagnosing user defined routing
+
+## DiagnoseRequestPropertiesApplicationInsights
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesContainerRegistry
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesDnsResolution
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesKeyVault
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesNsg
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesOthers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesResourceLock
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesStorageAccount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesUdr
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseResponseResult
+### Properties
+* **value**: [DiagnoseResponseResultValue](#diagnoseresponseresultvalue)
+
+## DiagnoseResponseResultValue
+### Properties
+* **applicationInsightsResults**: [DiagnoseResult](#diagnoseresult)[]
+* **containerRegistryResults**: [DiagnoseResult](#diagnoseresult)[]
+* **dnsResolutionResults**: [DiagnoseResult](#diagnoseresult)[]
+* **keyVaultResults**: [DiagnoseResult](#diagnoseresult)[]
+* **networkSecurityRuleResults**: [DiagnoseResult](#diagnoseresult)[]
+* **otherResults**: [DiagnoseResult](#diagnoseresult)[]
+* **resourceLockResults**: [DiagnoseResult](#diagnoseresult)[]
+* **storageAccountResults**: [DiagnoseResult](#diagnoseresult)[]
+* **userDefinedRouteResults**: [DiagnoseResult](#diagnoseresult)[]
+
+## DiagnoseResult
+### Properties
+* **code**: string (ReadOnly): Code for workspace setup error
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Level of workspace setup error
+* **message**: string (ReadOnly): Message of workspace setup error
+
+## DiagnoseWorkspaceParameters
+### Properties
+* **value**: [DiagnoseRequestProperties](#diagnoserequestproperties): Value of Parameters
 
 ## DistributionConfiguration
 * **Discriminator**: distributionType
@@ -1227,6 +1353,13 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
+
+## EndpointAuthToken
+### Properties
+* **accessToken**: string: Access token for endpoint authentication.
+* **expiryTimeUtc**: int: Access token expiry time (UTC).
+* **refreshAfterTimeUtc**: int: Refresh access token after time (UTC).
+* **tokenType**: string: Access token type.
 
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
@@ -1307,6 +1440,33 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ## ErrorResponse
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
+
+## ExportSummary
+* **Discriminator**: format
+
+### Base Properties
+* **endDateTime**: string (ReadOnly): The time when the export was completed.
+* **exportedRowCount**: int (ReadOnly): The total number of labeled datapoints exported.
+* **labelingJobId**: string (ReadOnly): Name and identifier of the job containing exported labels.
+* **startDateTime**: string (ReadOnly): The time when the export was requested.
+
+### CocoExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'Coco' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### CsvExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'CSV' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### DatasetExportSummary
+#### Properties
+* **format**: 'Dataset' (Required): [Required] The format of exported labels, also as the discriminator.
+* **labeledAssetName**: string (ReadOnly): The unique name of the labeled data asset.
+
 
 ## FlavorData
 ### Properties
@@ -2322,6 +2482,18 @@ Defaults to 5000ms.
 * **skippedDatapointCount**: int (ReadOnly): The skipped datapoint count.
 * **totalDatapointCount**: int (ReadOnly): The total datapoint count.
 
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **location**: string: Region of workspace quota to be updated.
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
+
 ## RecurrenceSchedule
 ### Properties
 * **hours**: int[] (Required): [Required] List of hours for the schedule.
@@ -2858,6 +3030,19 @@ The expression should follow NCronTab format.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule) (Required): [Required] The recurrence schedule.
 * **triggerType**: 'Recurrence' (Required): [Required]
 
+
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
 
 ## UserAccountCredentials
 ### Properties

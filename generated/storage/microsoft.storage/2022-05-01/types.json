@@ -6153,25 +6153,50 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StorageAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of storage keys that want to be regenerated, possible values are key1, key2, kerb1, kerb2."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/441"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccountSasParameters",
     "properties": {
       "signedServices": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/448"
         },
         "flags": 1,
         "description": "The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f)."
       },
       "signedResourceTypes": {
         "type": {
-          "$ref": "#/450"
+          "$ref": "#/452"
         },
         "flags": 1,
         "description": "The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/459"
+          "$ref": "#/461"
         },
         "flags": 1,
         "description": "The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -6185,7 +6210,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/462"
+          "$ref": "#/464"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -6233,16 +6258,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/442"
-      },
-      {
-        "$ref": "#/443"
-      },
-      {
         "$ref": "#/444"
       },
       {
         "$ref": "#/445"
+      },
+      {
+        "$ref": "#/446"
+      },
+      {
+        "$ref": "#/447"
       },
       {
         "$ref": "#/2"
@@ -6265,13 +6290,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/447"
-      },
-      {
-        "$ref": "#/448"
-      },
-      {
         "$ref": "#/449"
+      },
+      {
+        "$ref": "#/450"
+      },
+      {
+        "$ref": "#/451"
       },
       {
         "$ref": "#/2"
@@ -6314,12 +6339,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/451"
-      },
-      {
-        "$ref": "#/452"
-      },
-      {
         "$ref": "#/453"
       },
       {
@@ -6338,6 +6357,12 @@
         "$ref": "#/458"
       },
       {
+        "$ref": "#/459"
+      },
+      {
+        "$ref": "#/460"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -6354,10 +6379,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/460"
+        "$ref": "#/462"
       },
       {
-        "$ref": "#/461"
+        "$ref": "#/463"
       }
     ]
   },
@@ -6380,10 +6405,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/463"
+      "$ref": "#/465"
     },
     "input": {
-      "$ref": "#/441"
+      "$ref": "#/443"
     }
   },
   {
@@ -6399,14 +6424,14 @@
       },
       "signedResource": {
         "type": {
-          "$ref": "#/470"
+          "$ref": "#/472"
         },
         "flags": 0,
         "description": "The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s)."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/479"
+          "$ref": "#/481"
         },
         "flags": 0,
         "description": "The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -6420,7 +6445,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/484"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -6441,7 +6466,7 @@
       },
       "signedIdentifier": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table."
@@ -6538,16 +6563,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/466"
-      },
-      {
-        "$ref": "#/467"
-      },
-      {
         "$ref": "#/468"
       },
       {
         "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
       },
       {
         "$ref": "#/2"
@@ -6590,12 +6615,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/471"
-      },
-      {
-        "$ref": "#/472"
-      },
-      {
         "$ref": "#/473"
       },
       {
@@ -6614,6 +6633,12 @@
         "$ref": "#/478"
       },
       {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/480"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -6630,10 +6655,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/480"
+        "$ref": "#/482"
       },
       {
-        "$ref": "#/481"
+        "$ref": "#/483"
       }
     ]
   },
@@ -6660,10 +6685,22 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/484"
+      "$ref": "#/486"
     },
     "input": {
-      "$ref": "#/465"
+      "$ref": "#/467"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreBlobRanges",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/157"
+    },
+    "input": {
+      "$ref": "#/162"
     }
   },
   {
@@ -6672,7 +6709,7 @@
     "properties": {
       "sshAuthorizedKeys": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/490"
         },
         "flags": 0,
         "description": "Optional, local user ssh authorized keys for SFTP."
@@ -6698,7 +6735,409 @@
     "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/489"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalUserRegeneratePasswordResult",
+    "properties": {
+      "sshPassword": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 2,
+        "description": "Auto generated password by the server for SSH authentication if hasSshPassword is set to true on the creation of local user."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePassword",
+    "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/492"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LegalHold",
+    "properties": {
+      "hasLegalHold": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/497"
+        },
+        "flags": 1,
+        "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
+      },
+      "allowProtectedAppendWritesAll": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "When enabled, new blocks can be written to both 'Append and Bock Blobs' while maintaining legal hold protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 23
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/496"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setLegalHold",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/495"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearLegalHold",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/495"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseContainerRequest",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/506"
+        },
+        "flags": 1,
+        "description": "Specifies the lease action. Can be one of the available actions."
+      },
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifies the lease. Can be specified in any valid GUID string format."
+      },
+      "breakPeriod": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Optional. For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60."
+      },
+      "leaseDuration": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Required for acquire. Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires."
+      },
+      "proposedLeaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional for acquire, required for change. Proposed lease ID, in a GUID string format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Acquire"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Renew"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Change"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Release"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Break"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/503"
+      },
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseContainerResponse",
+    "properties": {
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Returned unique lease ID that must be included with any request to delete the container, or to renew, change, or release the lease."
+      },
+      "leaseTimeSeconds": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Approximate time remaining in the lease period, in seconds."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lease",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/507"
+    },
+    "input": {
+      "$ref": "#/500"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicy",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 1,
+        "description": "The properties of an ImmutabilityPolicy of a blob container."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lock",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/509"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "extend",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/509"
+    },
+    "input": {
+      "$ref": "#/509"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeletedShare",
+    "properties": {
+      "deletedShareName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Identify the name of the deleted share that will be restored."
+      },
+      "deletedShareVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Identify the version of the deleted share that will be restored."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseShareRequest",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/519"
+        },
+        "flags": 1,
+        "description": "Specifies the lease action. Can be one of the available actions."
+      },
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifies the lease. Can be specified in any valid GUID string format."
+      },
+      "breakPeriod": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Optional. For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60."
+      },
+      "leaseDuration": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Required for acquire. Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires."
+      },
+      "proposedLeaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional for acquire, required for change. Proposed lease ID, in a GUID string format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Acquire"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Renew"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Change"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Release"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Break"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/514"
+      },
+      {
+        "$ref": "#/515"
+      },
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/518"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseShareResponse",
+    "properties": {
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Returned unique lease ID that must be included with any request to delete the share, or to renew, change, or release the lease."
+      },
+      "leaseTimeSeconds": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Approximate time remaining in the lease period, in seconds."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lease",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/520"
+    },
+    "input": {
+      "$ref": "#/513"
     }
   }
 ]

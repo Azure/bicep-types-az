@@ -346,5 +346,48 @@
     "output": {
       "$ref": "#/26"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/26"
+    },
+    "input": {
+      "$ref": "#/28"
+    }
   }
 ]

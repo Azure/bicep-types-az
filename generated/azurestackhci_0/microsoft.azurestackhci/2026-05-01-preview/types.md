@@ -357,6 +357,80 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/locations/validatedSolutionRecipes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function changeRing (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [ChangeRingRequest](#changeringrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function configureRemoteSupport (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [RemoteSupportRequest](#remotesupportrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function consentAndInstallDefaultExtensions (Microsoft.AzureStackHCI/clusters/arcSettings@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [ArcSetting](#arcsetting)
+
+## Function createArcIdentity (Microsoft.AzureStackHCI/clusters/arcSettings@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [ArcIdentityResponse](#arcidentityresponse)
+
+## Function createClusterIdentity (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [ClusterIdentityResponse](#clusteridentityresponse)
+
+## Function extendSoftwareAssuranceBenefit (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [SoftwareAssuranceChangeRequest](#softwareassurancechangerequest)
+* **Output**: [Cluster](#cluster)
+
+## Function generatePassword (Microsoft.AzureStackHCI/clusters/arcSettings@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [PasswordCredential](#passwordcredential)
+
+## Function reconcile (Microsoft.AzureStackHCI/clusters/arcSettings@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [ReconcileArcSettingsRequest](#reconcilearcsettingsrequest)
+* **Output**: [ArcSetting](#arcsetting)
+
+## Function triggerLogCollection (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [LogCollectionRequest](#logcollectionrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function updateSecretsLocations (Microsoft.AzureStackHCI/clusters@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [SecretsLocationsChangeRequest](#secretslocationschangerequest)
+* **Output**: [Cluster](#cluster)
+
+## Function validate (Microsoft.AzureStackHCI/edgeDevices@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/edgeDevices
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [ValidateRequest](#validaterequest)
+* **Output**: [ValidateResponse](#validateresponse)
+
+## Function validate (Microsoft.AzureStackHCI/edgeMachines@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/edgeMachines
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [EdgeMachineValidateRequest](#edgemachinevalidaterequest)
+* **Output**: [EdgeMachineValidateResponse](#edgemachinevalidateresponse)
+
+## Function validateOwnershipVouchers (Microsoft.AzureStackHCI/locations@2026-05-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/locations
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [ValidateOwnershipVouchersRequest](#validateownershipvouchersrequest)
+* **Output**: [ValidateOwnershipVouchersResponse](#validateownershipvouchersresponse)
+
 ## AddServerJobServerDetails
 ### Properties
 * **hostIpv4Address**: string (Required): Ip address of server to be added to cluster.
@@ -368,6 +442,25 @@
 ### Properties
 * **enabled**: bool: True indicates ARC connectivity is enabled
 * **serviceConfigurations**: [ServiceConfiguration](#serviceconfiguration)[]: Service configurations associated with the connectivity resource. They are only processed by the server if 'enabled' property is set to 'true'.
+
+## ArcIdentityResponse
+### Properties
+* **properties**: [ArcIdentityResponseProperties](#arcidentityresponseproperties) (ReadOnly): ArcIdentity properties.
+
+## ArcIdentityResponseProperties
+### Properties
+* **arcApplicationClientId**: string
+* **arcApplicationObjectId**: string
+* **arcApplicationTenantId**: string
+* **arcServicePrincipalObjectId**: string
+
+## ArcSetting
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ArcSettingProperties](#arcsettingproperties): ArcSetting properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ArcSettingProperties
 ### Properties
@@ -394,6 +487,26 @@
 * **identifier**: string (ReadOnly): assembly identifier for Validated Solution Recipe for AzureStackHCI Cluster
 * **url**: string (ReadOnly): Url of assembly package for Validated Solution Recipe for AzureStackHCI Cluster
 
+## ChangeRingRequest
+### Properties
+* **properties**: [ChangeRingRequestProperties](#changeringrequestproperties) (Required): Properties of the change-ring request.
+
+## ChangeRingRequestProperties
+### Properties
+* **targetRing**: string (Required): The target ring for the cluster.
+
+## Cluster
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **kind**: string {pattern: "^[-\w\._,\(\\\)]+$"}: This property identifies the purpose of the Cluster deployment. For example, a valid value is AzureLocal
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ClusterBillingProperties
 ### Properties
 * **nextBillingModel**: [NextBillingModel](#nextbillingmodel): The next billing model to be applied to the cluster.
@@ -402,6 +515,17 @@
 ### Properties
 * **diagnosticLevel**: 'Basic' | 'Enhanced' | 'Off' | string: Desired level of diagnostic data emitted by the cluster.
 * **windowsServerSubscription**: 'Disabled' | 'Enabled' | string: Desired state of Windows Server Subscription.
+
+## ClusterIdentityResponse
+### Properties
+* **properties**: [ClusterIdentityResponseProperties](#clusteridentityresponseproperties) (ReadOnly): Cluster identity properties.
+
+## ClusterIdentityResponseProperties
+### Properties
+* **aadApplicationObjectId**: string
+* **aadClientId**: string
+* **aadServicePrincipalObjectId**: string
+* **aadTenantId**: string
 
 ## ClusterJobProperties
 * **Discriminator**: jobType
@@ -1144,6 +1268,15 @@
 * **solutionType**: 'AzureLinux' | 'HCI' | string: The solution type for the available updates.
 * **values**: [EdgeMachineUpdateInfo](#edgemachineupdateinfo)[] (Required): The list of available updates.
 
+## EdgeMachineValidateRequest
+### Properties
+* **additionalInfo**: string: Additional info required for validation.
+* **edgeMachineIds**: string[] (Required): Machine Ids against which, current machine has to be validated.
+
+## EdgeMachineValidateResponse
+### Properties
+* **status**: string (ReadOnly): Edge machine validation status.
+
 ## EdgeMachineVirtualSwitchConfigurationOverrides
 ### Properties
 * **enableIov**: string (ReadOnly): Enable IoV for Virtual Switch
@@ -1484,6 +1617,15 @@
 * **percentComplete**: int (ReadOnly): The percentage of the job that is complete.
 * **validationStatus**: [EceActionStatus](#eceactionstatus) (ReadOnly): Validation status of job.
 
+## LogCollectionRequest
+### Properties
+* **properties**: [LogCollectionRequestProperties](#logcollectionrequestproperties): Properties for Log Collection Request
+
+## LogCollectionRequestProperties
+### Properties
+* **fromDate**: string (Required): From DateTimeStamp from when logs need to be connected
+* **toDate**: string (Required): To DateTimeStamp till when logs need to be connected
+
 ## LogCollectionSession
 ### Properties
 * **correlationId**: string (ReadOnly): CorrelationId of the log collection
@@ -1717,6 +1859,13 @@
 * **uniqueId**: string (ReadOnly): Unique identifier for the partition
 * **workloadDetail**: [WorkloadDetails](#workloaddetails) (ReadOnly): The workload to which this partition is assigned.
 
+## PasswordCredential
+### Properties
+* **endDateTime**: string
+* **keyId**: string
+* **secretText**: string
+* **startDateTime**: string
+
 ## PerNodeExtensionState
 ### Properties
 * **extension**: string (ReadOnly): Fully qualified resource ID for the particular Arc Extension on this node.
@@ -1816,6 +1965,14 @@
 * **priorityValue8021Action_Cluster**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 * **priorityValue8021Action_SMB**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 
+## ReconcileArcSettingsRequest
+### Properties
+* **properties**: [ReconcileArcSettingsRequestProperties](#reconcilearcsettingsrequestproperties): List of Arc Nodes in the cluster
+
+## ReconcileArcSettingsRequestProperties
+### Properties
+* **clusterNodes**: string[]
+
 ## RemoteSupportJobNodeSettings
 ### Properties
 * **connectionErrorMessage**: string (ReadOnly): The error message, if any, from the last connection attempt.
@@ -1850,6 +2007,16 @@
 * **remoteSupportProvisioningState**: 'Failed' | 'GrantInProgress' | 'None' | 'RevokeInProgress' | 'Succeeded' | string (ReadOnly): Remote Support Provisioning State
 * **remoteSupportSessionDetails**: [PerNodeRemoteSupportSession](#pernoderemotesupportsession)[] (ReadOnly)
 * **remoteSupportType**: 'Enable' | 'Revoke' | string (ReadOnly): Remote Support Type for cluster
+
+## RemoteSupportRequest
+### Properties
+* **properties**: [RemoteSupportRequestProperties](#remotesupportrequestproperties): Properties for Remote Support Request
+
+## RemoteSupportRequestProperties
+### Properties
+* **accessLevel**: 'Diagnostics' | 'DiagnosticsAndRepair' | string (ReadOnly): Remote Support Access Level
+* **expirationTimeStamp**: string: Expiration DateTimeStamp when Remote Support Access will be expired
+* **remoteSupportType**: 'Enable' | 'Revoke' | string: Remote Support Type for cluster
 
 ## RemoteSupportSession
 ### Properties
@@ -1938,6 +2105,10 @@
 * **secretsLocation**: string (Required): secrets location
 * **secretsType**: 'BackupSecrets' | string (Required): Type of secrets to store
 
+## SecretsLocationsChangeRequest
+### Properties
+* **properties**: [SecretsLocationDetails](#secretslocationdetails)[]: List of secret locations
+
 ## SecurityComplianceStatus
 ### Properties
 * **dataAtRestEncrypted**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): Indicates whether data at-rest encryption is enabled on Azure Stack HCI clustered volumes.
@@ -1978,6 +2149,14 @@
 * **provisioningState**: string (ReadOnly): Provisioning State
 * **publisherId**: string: Identifier of the Publisher for the offer
 * **skuMappings**: [SkuMappings](#skumappings)[]: Array of SKU mappings
+
+## SoftwareAssuranceChangeRequest
+### Properties
+* **properties**: [SoftwareAssuranceChangeRequestProperties](#softwareassurancechangerequestproperties)
+
+## SoftwareAssuranceChangeRequestProperties
+### Properties
+* **softwareAssuranceIntent**: 'Disable' | 'Enable' | string: Customer Intent for Software Assurance Benefit. This indicates whether the customer wishes to opt in or out of the Software Assurance program, which provides licensing and support benefits.
 
 ## SoftwareAssuranceProperties
 ### Properties
@@ -2057,6 +2236,11 @@
 * **primaryTimeServer**: string: Primary NTP server.
 * **secondaryTimeServer**: string: Secondary NTP server.
 * **timeZone**: string: Time zone.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -2204,6 +2388,23 @@
 ### Properties
 * **recipeContent**: [ValidatedSolutionRecipeContent](#validatedsolutionrecipecontent) (Required): Represents contents of a validated solution recipe.
 * **signature**: string: Represents the signature of the recipe, to be used for ensuring its integrity.
+
+## ValidateOwnershipVouchersRequest
+### Properties
+* **ownershipVoucherDetails**: [OwnershipVoucherDetails](#ownershipvoucherdetails)[] {minLength: 1} (Required): Ownership Voucher Details.
+
+## ValidateOwnershipVouchersResponse
+### Properties
+* **ownershipVoucherValidationDetails**: [OwnershipVoucherValidationDetails](#ownershipvouchervalidationdetails)[] (Required): Ownership Voucher Validation Details.
+
+## ValidateRequest
+### Properties
+* **additionalInfo**: string: Additional info required for validation.
+* **edgeDeviceIds**: string[] (Required): Node Ids against which, current node has to be validated.
+
+## ValidateResponse
+### Properties
+* **status**: string (ReadOnly): edge device validation status
 
 ## VmConnectJobDetails
 ### Properties

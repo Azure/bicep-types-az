@@ -2949,5 +2949,332 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityHistoryRequest",
+    "properties": {
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time for the history query. Defaults to 24 hours ago if not specified."
+      },
+      "endAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time for the history query. Defaults to now if not specified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityHistoryResponse",
+    "properties": {
+      "entityName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity"
+      },
+      "history": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 1,
+        "description": "List of health state transitions"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthStateTransition",
+    "properties": {
+      "previousState": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 1,
+        "description": "Previous health state before the transition"
+      },
+      "newState": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 1,
+        "description": "New health state after the transition"
+      },
+      "occurredAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Timestamp when the transition occurred"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Reason of the transition"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/257"
+      },
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/248"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getHistory",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/247"
+    },
+    "input": {
+      "$ref": "#/246"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryRequest",
+    "properties": {
+      "signalName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the signal to get history for"
+      },
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time for the history query. Defaults to 24 hours ago if not specified."
+      },
+      "endAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time for the history query. Defaults to now if not specified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryResponse",
+    "properties": {
+      "entityName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity"
+      },
+      "signalName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the signal"
+      },
+      "history": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 1,
+        "description": "Signal history data points"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SignalHistoryDataPoint",
+    "properties": {
+      "occurredAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Timestamp of the data point"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Signal value at this point in time"
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/271"
+        },
+        "flags": 1,
+        "description": "Health state at this point in time"
+      },
+      "additionalContext": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Additional context as provided by the submitter"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSignalHistory",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/264"
+    },
+    "input": {
+      "$ref": "#/263"
+    }
   }
 ]

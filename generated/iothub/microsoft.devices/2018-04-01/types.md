@@ -37,6 +37,35 @@
 * **properties**: [EventHubConsumerGroupInfoProperties](#eventhubconsumergroupinfoproperties) (ReadOnly): The tags.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function $testall (Microsoft.Devices/IotHubs/routing@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs/routing
+* **ApiVersion**: 2018-04-01
+* **Input**: [TestAllRoutesInput](#testallroutesinput)
+* **Output**: [TestAllRoutesResult](#testallroutesresult)
+
+## Function $testnew (Microsoft.Devices/IotHubs/routing@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs/routing
+* **ApiVersion**: 2018-04-01
+* **Input**: [TestRouteInput](#testrouteinput)
+* **Output**: [TestRouteResult](#testrouteresult)
+
+## Function exportDevices (Microsoft.Devices/IotHubs@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2018-04-01
+* **Input**: [ExportDevicesRequest](#exportdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
+## Function generateVerificationCode (Microsoft.Devices/IotHubs/certificates@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs/certificates
+* **ApiVersion**: 2018-04-01
+* **Output**: [CertificateWithNonceDescription](#certificatewithnoncedescription)
+
+## Function importDevices (Microsoft.Devices/IotHubs@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2018-04-01
+* **Input**: [ImportDevicesRequest](#importdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
 ## Function listkeys (Microsoft.Devices/IotHubs@2018-04-01)
 * **Resource**: Microsoft.Devices/IotHubs
 * **ApiVersion**: 2018-04-01
@@ -47,6 +76,20 @@
 * **ApiVersion**: 2018-04-01
 * **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
 
+## Function verify (Microsoft.Devices/IotHubs/certificates@2018-04-01)
+* **Resource**: Microsoft.Devices/IotHubs/certificates
+* **ApiVersion**: 2018-04-01
+* **Input**: [CertificateVerificationDescription](#certificateverificationdescription)
+* **Output**: [CertificateDescription](#certificatedescription)
+
+## CertificateDescription
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificateProperties](#certificateproperties): The description of an X509 CA Certificate.
+* **type**: string (ReadOnly): The resource type.
+
 ## CertificateProperties
 ### Properties
 * **certificate**: string: The certificate content
@@ -56,6 +99,29 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## CertificatePropertiesWithNonce
+### Properties
+* **certificate**: string (ReadOnly): The certificate content
+* **created**: string (ReadOnly): The certificate's create date and time.
+* **expiry**: string (ReadOnly): The certificate's expiration date and time.
+* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **subject**: string (ReadOnly): The certificate's subject name.
+* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
+* **updated**: string (ReadOnly): The certificate's last update date and time.
+* **verificationCode**: string (ReadOnly): The certificate's verification code that will be used for proof of possession.
+
+## CertificateVerificationDescription
+### Properties
+* **certificate**: string: base-64 representation of X509 certificate .cer file or just .pem file content.
+
+## CertificateWithNonceDescription
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificatePropertiesWithNonce](#certificatepropertieswithnonce): The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow.
+* **type**: string (ReadOnly): The resource type.
 
 ## CloudToDeviceProperties
 ### Properties
@@ -76,6 +142,11 @@
 * **path**: string (ReadOnly): The Event Hub-compatible name.
 * **retentionTimeInDays**: int: The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
 
+## ExportDevicesRequest
+### Properties
+* **excludeKeys**: bool (Required): The value indicating whether keys should be excluded during export.
+* **exportBlobContainerUri**: string (Required): The export blob container URI.
+
 ## FallbackRouteProperties
 ### Properties
 * **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
@@ -89,6 +160,11 @@
 * **lockDurationAsIso8601**: string: The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+
+## ImportDevicesRequest
+### Properties
+* **inputBlobContainerUri**: string (Required): The input blob container URI.
+* **outputBlobContainerUri**: string (Required): The output blob container URI.
 
 ## IotHubProperties
 ### Properties
@@ -134,6 +210,21 @@
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 
+## JobResponse
+### Properties
+* **endTimeUtc**: string (ReadOnly): The time the job stopped processing.
+* **failureReason**: string (ReadOnly): If status == failed, this string containing the reason for the failure.
+* **jobId**: string (ReadOnly): The job identifier.
+* **parentJobId**: string (ReadOnly): The job identifier of the parent job, if any.
+* **startTimeUtc**: string (ReadOnly): The start time of the job.
+* **status**: 'cancelled' | 'completed' | 'enqueued' | 'failed' | 'running' | 'unknown' (ReadOnly): The status of the job.
+* **statusMessage**: string (ReadOnly): The status message for the job.
+* **type**: 'backup' | 'export' | 'factoryResetDevice' | 'firmwareUpdate' | 'import' | 'readDeviceProperties' | 'rebootDevice' | 'unknown' | 'updateDeviceConfiguration' | 'writeDeviceProperties' | string (ReadOnly): The type of the job.
+
+## MatchedRoute
+### Properties
+* **properties**: [RouteProperties](#routeproperties): Properties of routes that matched
+
 ## MessagingEndpointProperties
 ### Properties
 * **lockDurationAsIso8601**: string: The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
@@ -153,6 +244,22 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RouteCompilationError
+### Properties
+* **location**: [RouteErrorRange](#routeerrorrange): Location where the route error happened
+* **message**: string: Route error message
+* **severity**: 'error' | 'warning' | string: Severity of the route error
+
+## RouteErrorPosition
+### Properties
+* **column**: int: Column where the route error happened
+* **line**: int: Line where the route error happened
+
+## RouteErrorRange
+### Properties
+* **end**: [RouteErrorPosition](#routeerrorposition): End where the route error happened
+* **start**: [RouteErrorPosition](#routeerrorposition): Start where the route error happened
 
 ## RouteProperties
 ### Properties
@@ -175,6 +282,22 @@
 * **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, operationsMonitoringEvents, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **resourceGroup**: string: The name of the resource group of the event hub endpoint.
 * **subscriptionId**: string: The subscription identifier of the event hub endpoint.
+
+## RoutingMessage
+### Properties
+* **appProperties**: [RoutingMessageAppProperties](#routingmessageappproperties): App properties
+* **body**: string: Body of routing message
+* **systemProperties**: [RoutingMessageSystemProperties](#routingmessagesystemproperties): System properties
+
+## RoutingMessageAppProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RoutingMessageSystemProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RoutingProperties
 ### Properties
@@ -208,6 +331,16 @@
 * **resourceGroup**: string: The name of the resource group of the storage account.
 * **subscriptionId**: string: The subscription identifier of the storage account.
 
+## RoutingTwin
+### Properties
+* **properties**: [RoutingTwinProperties](#routingtwinproperties)
+* **tags**: any: Twin Tags
+
+## RoutingTwinProperties
+### Properties
+* **desiredProperties**: any: Twin desired properties
+* **reportedProperties**: any: Twin desired properties
+
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
 * **keyName**: string (Required): The name of the shared access policy.
@@ -225,4 +358,29 @@
 * **connectionString**: string (Required): The connection string for the Azure Storage account to which files are uploaded.
 * **containerName**: string (Required): The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.
 * **sasTtlAsIso8601**: string: The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.
+
+## TestAllRoutesInput
+### Properties
+* **message**: [RoutingMessage](#routingmessage): Routing message
+* **routingSource**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string: Routing source
+* **twin**: [RoutingTwin](#routingtwin): Routing Twin Reference
+
+## TestAllRoutesResult
+### Properties
+* **routes**: [MatchedRoute](#matchedroute)[]: JSON-serialized array of matched routes
+
+## TestRouteInput
+### Properties
+* **message**: [RoutingMessage](#routingmessage): Routing message
+* **route**: [RouteProperties](#routeproperties) (Required): Route properties
+* **twin**: [RoutingTwin](#routingtwin): Routing Twin Reference
+
+## TestRouteResult
+### Properties
+* **details**: [TestRouteResultDetails](#testrouteresultdetails): Detailed result of testing route
+* **result**: 'false' | 'true' | 'undefined' | string: Result of testing route
+
+## TestRouteResultDetails
+### Properties
+* **compilationErrors**: [RouteCompilationError](#routecompilationerror)[]: JSON-serialized list of route compilation errors
 

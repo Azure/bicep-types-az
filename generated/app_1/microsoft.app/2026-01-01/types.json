@@ -1495,6 +1495,170 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Agent",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.App/agents",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/agents",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentConnectorCollection",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The AgentConnector items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentConnector",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listConnectorsWithSecrets",
+    "resourceType": "Microsoft.App/agents",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AgentSpaceConnector",
     "properties": {
       "properties": {
@@ -1540,7 +1704,7 @@
     "resourceType": "Microsoft.App/agentSpaces/connectors",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/108"
+      "$ref": "#/116"
     }
   },
   {
@@ -1549,7 +1713,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/119"
         },
         "flags": 1,
         "description": "The AgentSpaceConnector items on this page"
@@ -1566,7 +1730,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/108"
+      "$ref": "#/116"
     }
   },
   {
@@ -1575,48 +1739,7 @@
     "resourceType": "Microsoft.App/agentSpaces",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AgentConnector",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/99"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The name of the resource"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/36"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
+      "$ref": "#/118"
     }
   },
   {
@@ -1626,41 +1749,6 @@
     "apiVersion": "2026-01-01",
     "output": {
       "$ref": "#/113"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AgentConnectorCollection",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/116"
-        },
-        "flags": 1,
-        "description": "The AgentConnector items on this page"
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The link to the next page of items"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/113"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listConnectorsWithSecrets",
-    "resourceType": "Microsoft.App/agents",
-    "apiVersion": "2026-01-01",
-    "output": {
-      "$ref": "#/115"
     }
   }
 ]

@@ -57,3 +57,4 @@ warning | Skipping Accounts_List due to required query parameter "userEmail"
 warning | Skipping Accounts_List due to required query parameter "location"
 warning | Skipping Organizations_List due to required query parameter "userEmail"
 warning | Skipping Organizations_List due to required query parameter "location"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/NewRelic.Observability/activateSaaS': Unable to find type segments

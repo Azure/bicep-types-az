@@ -66,6 +66,18 @@
 * **ApiVersion**: 2021-07-01
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-07-01
+* **Input**: [PrivateLinkResource](#privatelinkresource)
+* **Output**: [PrivateLinkResource](#privatelinkresource)
+
+## Function runCommand (Microsoft.ContainerService/managedClusters@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-07-01
+* **Input**: [RunCommandRequest](#runcommandrequest)
+* **Output**: [RunCommandResult](#runcommandresult)
+
 ## AccessProfile
 ### Properties
 * **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
@@ -73,6 +85,15 @@
 ## AgentPoolUpgradeSettings
 ### Properties
 * **maxSurge**: string: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 1. For more information, including best practices, see: https://docs.microsoft.com/azure/aks/upgrade-cluster#customize-node-surge-upgrade
+
+## CommandResultProperties
+### Properties
+* **exitCode**: int (ReadOnly): The exit code of the command
+* **finishedAt**: string (ReadOnly): The time when the command finished.
+* **logs**: string (ReadOnly): The command output.
+* **provisioningState**: string (ReadOnly): provisioning State
+* **reason**: string (ReadOnly): An explanation of why provisioningState is set to failed (if so).
+* **startedAt**: string (ReadOnly): The time when the command started.
 
 ## ContainerServiceLinuxProfile
 ### Properties
@@ -515,6 +536,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RunCommandRequest
+### Properties
+* **clusterToken**: string: AuthToken issued for AKS AAD Server App.
+* **command**: string (Required): The command to run.
+* **context**: string: A base64 encoded zip file containing the files required by the command.
+
+## RunCommandResult
+### Properties
+* **id**: string (ReadOnly): The command id.
+* **properties**: [CommandResultProperties](#commandresultproperties): Properties of command result.
 
 ## SysctlConfig
 ### Properties

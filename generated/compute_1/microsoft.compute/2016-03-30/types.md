@@ -93,6 +93,108 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function capture (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
+* **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
+
+## Function deallocate (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function delete (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function generalize (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function manualupgrade (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function powerOff (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function redeploy (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2016-03-30
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2016-03-30
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
 ## AdditionalUnattendContent
 ### Properties
 * **componentName**: 'Microsoft-Windows-Shell-Setup': The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
@@ -103,6 +205,20 @@
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
+## ApiError
+### Properties
+* **code**: string: The error code.
+* **details**: [ApiErrorBase](#apierrorbase)[]: The Api error details
+* **innererror**: [InnerError](#innererror): The Api inner error
+* **message**: string: The error message.
+* **target**: string: The target of the particular error.
+
+## ApiErrorBase
+### Properties
+* **code**: string: The error code.
+* **message**: string: The error message.
+* **target**: string: The target of the particular error.
 
 ## AvailabilitySetProperties
 ### Properties
@@ -161,6 +277,11 @@
 * **sku**: string: The image SKU.
 * **version**: string: Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
 
+## InnerError
+### Properties
+* **errordetail**: string: The internal error message or exception dump.
+* **exceptiontype**: string: The exception type.
+
 ## InstanceViewStatus
 ### Properties
 * **code**: string: The status code.
@@ -196,6 +317,14 @@
 ## NetworkProfile
 ### Properties
 * **networkInterfaces**: [NetworkInterfaceReference](#networkinterfacereference)[]: Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+
+## OperationStatusResponse
+### Properties
+* **endTime**: string (ReadOnly): End time of the operation
+* **error**: [ApiError](#apierror) (ReadOnly): Api error
+* **name**: string (ReadOnly): Operation ID
+* **startTime**: string (ReadOnly): Start time of the operation
+* **status**: string (ReadOnly): Operation status
 
 ## OSDisk
 ### Properties
@@ -318,6 +447,21 @@
 * **extensionHandlers**: [VirtualMachineExtensionHandlerInstanceView](#virtualmachineextensionhandlerinstanceview)[]: The virtual machine extension handler instance view.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
 * **vmAgentVersion**: string: The VM Agent full version.
+
+## VirtualMachineCaptureParameters
+### Properties
+* **destinationContainerName**: string (Required): The destination container name.
+* **overwriteVhds**: bool (Required): Specifies whether to overwrite the destination virtual hard disk, in case of conflict.
+* **vhdPrefix**: string (Required): The captured virtual hard disk's name prefix.
+
+## VirtualMachineCaptureResult
+### Properties
+* **id**: string: Resource Id
+* **properties**: [VirtualMachineCaptureResultProperties](#virtualmachinecaptureresultproperties): Compute-specific operation properties, including output
+
+## VirtualMachineCaptureResultProperties
+### Properties
+* **output**: any: Operation output data (raw JSON)
 
 ## VirtualMachineExtension
 ### Properties
@@ -487,6 +631,14 @@
 ### Properties
 * **imageReference**: [ImageReference](#imagereference): The image reference.
 * **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): The OS disk.
+
+## VirtualMachineScaleSetVMInstanceIDs
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+
+## VirtualMachineScaleSetVMInstanceRequiredIDs
+### Properties
+* **instanceIds**: string[] (Required): The virtual machine scale set instance ids.
 
 ## VirtualMachineScaleSetVMInstanceView
 ### Properties

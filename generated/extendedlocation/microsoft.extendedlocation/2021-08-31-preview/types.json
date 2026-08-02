@@ -561,5 +561,58 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomLocationFindTargetResourceGroupProperties",
+    "properties": {
+      "labels": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Labels of the custom resource, this is a map of {key,value} pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomLocationFindTargetResourceGroupPropertiesLabels",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomLocationFindTargetResourceGroupResult",
+    "properties": {
+      "matchedResourceSyncRule": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The matching resource sync rule is the particular resource sync rule that matched the match expressions and labels and had lowest priority. This is the rule responsible for mapping the target resource to the target resource group."
+      },
+      "targetResourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The target resource group of matching resource sync rule. The labels from the request will be used to find out matching resource sync rule against the selector property of the resource sync rule. The one with highest priority will be returned if there are multiple matching rules."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "findTargetResourceGroup",
+    "resourceType": "Microsoft.ExtendedLocation/customLocations",
+    "apiVersion": "2021-08-31-preview",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/40"
+    }
   }
 ]

@@ -13,10 +13,28 @@
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function availableSkus (Microsoft.DataBox/locations@2018-01-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2018-01-01
+* **Input**: [AvailableSkuRequest](#availableskurequest)
+* **Output**: [AvailableSkusResult](#availableskusresult)
+
+## Function bookShipmentPickUp (Microsoft.DataBox/jobs@2018-01-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2018-01-01
+* **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
+* **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2018-01-01)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2018-01-01
 * **Output**: [UnencryptedCredentialsList](#unencryptedcredentialslist)
+
+## Function validateAddress (Microsoft.DataBox/locations@2018-01-01)
+* **Resource**: Microsoft.DataBox/locations
+* **ApiVersion**: 2018-01-01
+* **Input**: [ValidateAddress](#validateaddress)
+* **Output**: [AddressValidationOutput](#addressvalidationoutput)
 
 ## AccountCredentialDetails
 ### Properties
@@ -24,10 +42,31 @@
 * **accountName**: string (ReadOnly): Name of the account.
 * **shareCredentialDetails**: [ShareCredentialDetails](#sharecredentialdetails)[] (ReadOnly): Per share level unencrypted access credentials.
 
+## AddressValidationOutput
+### Properties
+* **properties**: [AddressValidationProperties](#addressvalidationproperties) (ReadOnly): The address validation properties.
+
+## AddressValidationProperties
+### Properties
+* **alternateAddresses**: [ShippingAddress](#shippingaddress)[] (ReadOnly): List of alternate addresses.
+* **validationStatus**: 'Ambiguous' | 'Invalid' | 'Valid' (ReadOnly): The address validation status.
+
 ## ApplianceNetworkConfiguration
 ### Properties
 * **macAddress**: string (ReadOnly): Mac Address.
 * **name**: string (ReadOnly): Name of the network.
+
+## AvailableSkuRequest
+### Properties
+* **country**: string (Required): ISO country code. Country for hardware shipment. For codes check: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+* **location**: string (Required): Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01
+* **skuNames**: ('DataBox' | 'DataBoxDisk' | 'DataBoxHeavy')[]: Sku Names to filter for available skus
+* **transferType**: 'ImportToAzure' (Required): Type of the transfer.
+
+## AvailableSkusResult
+### Properties
+* **nextLink**: string: Link for the next set of skus.
+* **value**: [SkuInformation](#skuinformation)[] (ReadOnly): List of available skus.
 
 ## ContactDetails
 ### Properties
@@ -122,6 +161,11 @@
 * **dataDestinationType**: 'StorageAccount' (Required): Data Destination Type.
 * **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
+
+## DestinationToServiceLocationMap
+### Properties
+* **destinationLocation**: string (ReadOnly): Location of the destination.
+* **serviceLocation**: string (ReadOnly): Location of the service.
 
 ## DiskSecret
 ### Properties
@@ -247,6 +291,17 @@
 * **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
 
+## ShipmentPickUpRequest
+### Properties
+* **endTime**: string (Required): Maximum date before which the pick up should commence, this must be in local time of pick up area.
+* **shipmentLocation**: string (Required): Shipment Location in the pickup place. Eg.front desk
+* **startTime**: string (Required): Minimum date after which the pick up should commence, this must be in local time of pick up area.
+
+## ShipmentPickUpResponse
+### Properties
+* **confirmationNumber**: string (ReadOnly): Confirmation number for the pick up request.
+* **readyByTime**: string (ReadOnly): Time by which shipment should be ready for pick up, this is in local time of pick up area.
+
 ## ShippingAddress
 ### Properties
 * **addressType**: 'Commercial' | 'None' | 'Residential': Type of address.
@@ -266,6 +321,32 @@
 * **family**: string: The sku family.
 * **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
+## SkuCapacity
+### Properties
+* **maximum**: string (ReadOnly): Maximum capacity in TB.
+* **usable**: string (ReadOnly): Usable capacity in TB.
+
+## SkuCost
+### Properties
+* **meterId**: string (ReadOnly): Meter id of the Sku.
+* **meterType**: string (ReadOnly): The type of the meter.
+
+## SkuInformation
+### Properties
+* **enabled**: bool (ReadOnly): The sku is enabled or not.
+* **properties**: [SkuProperties](#skuproperties) (ReadOnly): Properties of the sku.
+* **sku**: [Sku](#sku) (ReadOnly): The Sku.
+
+## SkuProperties
+### Properties
+* **apiVersions**: string[] (ReadOnly): Api versions that support this Sku.
+* **capacity**: [SkuCapacity](#skucapacity) (ReadOnly): Capacity of the Sku.
+* **costs**: [SkuCost](#skucost)[] (ReadOnly): Cost of the Sku.
+* **destinationToServiceLocationMap**: [DestinationToServiceLocationMap](#destinationtoservicelocationmap)[] (ReadOnly): The map of destination location to service location.
+* **disabledReason**: 'Country' | 'Feature' | 'NoSubscriptionInfo' | 'None' | 'OfferType' | 'Region' (ReadOnly): Reason why the Sku is disabled.
+* **disabledReasonMessage**: string (ReadOnly): Message for why the Sku is disabled.
+* **requiredFeature**: string (ReadOnly): Required feature to access the sku.
+
 ## UnencryptedCredentials
 ### Properties
 * **jobName**: string (ReadOnly): Name of the job.
@@ -275,4 +356,9 @@
 ### Properties
 * **nextLink**: string: Link for the next set of unencrypted credentials.
 * **value**: [UnencryptedCredentials](#unencryptedcredentials)[]: List of unencrypted credentials.
+
+## ValidateAddress
+### Properties
+* **deviceType**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Device type to be used for the job.
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address of the customer.
 

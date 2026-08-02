@@ -363,6 +363,53 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppPlatform/locations@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/locations
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function disableRemoteDebugging (Microsoft.AppPlatform/Spring/apps/deployments@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [RemoteDebugging](#remotedebugging)
+
+## Function enableRemoteDebugging (Microsoft.AppPlatform/Spring/apps/deployments@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [RemoteDebuggingPayload](#remotedebuggingpayload)
+* **Output**: [RemoteDebugging](#remotedebugging)
+
+## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [TestKeys](#testkeys)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/buildServices/builds/results@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/buildServices/builds/results
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [BuildResultLog](#buildresultlog)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/apps/deployments@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [LogFileUrlResponse](#logfileurlresponse)
+
+## Function getRemoteDebuggingConfig (Microsoft.AppPlatform/Spring/apps/deployments@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [RemoteDebugging](#remotedebugging)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/buildServices@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/buildServices
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/apps@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
 ## Function listEnvSecrets (Microsoft.AppPlatform/Spring/gateways@2024-01-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/gateways
 * **ApiVersion**: 2024-01-01-preview
@@ -387,6 +434,60 @@
 * **Resource**: Microsoft.AppPlatform/Spring/buildServices/builders
 * **ApiVersion**: 2024-01-01-preview
 * **Output**: [DeploymentList](#deploymentlist)
+
+## Function regenerateTestKey (Microsoft.AppPlatform/Spring@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
+* **Output**: [TestKeys](#testkeys)
+
+## Function setActiveDeployments (Microsoft.AppPlatform/Spring/apps@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ActiveDeploymentCollection](#activedeploymentcollection)
+* **Output**: [AppResource](#appresource)
+
+## Function validate (Microsoft.AppPlatform/Spring/configurationServices@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/configurationServices
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ConfigurationServiceSettings](#configurationservicesettings)
+* **Output**: [ConfigurationServiceSettingsValidateResult](#configurationservicesettingsvalidateresult)
+
+## Function validate (Microsoft.AppPlatform/Spring/containerRegistries@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/containerRegistries
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ContainerRegistryProperties](#containerregistryproperties)
+* **Output**: [ContainerRegistryValidateResult](#containerregistryvalidateresult)
+
+## Function validate (Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [CustomizedAcceleratorProperties](#customizedacceleratorproperties)
+* **Output**: [CustomizedAcceleratorValidateResult](#customizedacceleratorvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/gateways@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/gateways
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apiPortals@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apiPortals
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
+
+## Function validateResource (Microsoft.AppPlatform/Spring/configurationServices@2024-01-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/configurationServices
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ConfigurationServiceResource](#configurationserviceresource)
+* **Output**: [ConfigurationServiceSettingsValidateResult](#configurationservicesettingsvalidateresult)
 
 ## AcceleratorAuthSetting
 * **Discriminator**: authType
@@ -422,6 +523,10 @@
 * **intervalInSeconds**: int: Interval for checking for updates to Git or image repository.
 * **subPath**: string: Folder path inside the git repository to consider as the root of the accelerator or fragment.
 * **url**: string (Required): Git repository URL for the accelerator.
+
+## ActiveDeploymentCollection
+### Properties
+* **activeDeploymentNames**: string[]: Collection of Deployment name.
 
 ## ApiPortalCustomDomainProperties
 ### Properties
@@ -522,6 +627,16 @@
 * **cpu**: string (ReadOnly): Cpu quantity allocated to each Application Live View component instance. 1 core can be represented by 1 or 1000m.
 * **instanceCount**: int (ReadOnly): Desired instance count of Application Live View component instance.
 * **memory**: string (ReadOnly): Memory quantity allocated to each Application Live View component instance. 1 GB can be represented by 1Gi or 1024Mi.
+
+## AppResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
+* **identity**: [ManagedIdentityProperties](#managedidentityproperties): The Managed Identity type of the app resource
+* **location**: string: The GEO location of the application, always the same with its parent resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [AppResourceProperties](#appresourceproperties): Properties of the App resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource.
 
 ## AppResourceProperties
 ### Properties
@@ -628,6 +743,10 @@
 The default value is 1, this should not exceed build service agent pool cpu size.
 * **memory**: string: Optional Memory allocated to the build resource. 1 GB can be represented by 1Gi or 1024Mi. 
 The default value is 2Gi, this should not exceed build service agent pool memory size.
+
+## BuildResultLog
+### Properties
+* **blobUrl**: string: The public download URL of this build result log
 
 ## BuildResultProperties
 ### Properties
@@ -743,6 +862,11 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ### Properties
 * **repositories**: [ConfigurationServiceGitRepository](#configurationservicegitrepository)[]: Repositories of Application Configuration Service git property.
 
+## ConfigurationServiceGitPropertyValidateResult
+### Properties
+* **gitReposValidationResult**: [ValidationMessages](#validationmessages)[]: The detail validation results
+* **isValid**: bool: Indicate if the configuration service settings are valid
+
 ## ConfigurationServiceGitRepository
 ### Properties
 * **caCertResourceId**: string: Resource Id of CA certificate for https URL of Git repository.
@@ -772,6 +896,14 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **resourceRequests**: [ConfigurationServiceResourceRequests](#configurationserviceresourcerequests) (ReadOnly): The requested resource quantity for required CPU and Memory.
 * **settings**: [ConfigurationServiceSettings](#configurationservicesettings): The settings of Application Configuration Service.
 
+## ConfigurationServiceResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [ConfigurationServiceProperties](#configurationserviceproperties): Application Configuration Service properties payload
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
 ## ConfigurationServiceResourceRequests
 ### Properties
 * **cpu**: string (ReadOnly): Cpu allocated to each Application Configuration Service instance
@@ -782,6 +914,10 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ### Properties
 * **gitProperty**: [ConfigurationServiceGitProperty](#configurationservicegitproperty): Property of git environment.
 * **refreshIntervalInSeconds**: int: How often (in seconds) to check repository updates. Minimum value is 0.
+
+## ConfigurationServiceSettingsValidateResult
+### Properties
+* **gitPropertyValidationResult**: [ConfigurationServiceGitPropertyValidateResult](#configurationservicegitpropertyvalidateresult): Validation result for configuration service settings
 
 ## ContainerProbeSettings
 ### Properties
@@ -805,6 +941,11 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **credentials**: [ContainerRegistryCredentials](#containerregistrycredentials) (Required): The credentials of the container registry resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Container Registry.
 
+## ContainerRegistryValidateResult
+### Properties
+* **isValid**: bool: Indicate if the container registry properties are valid
+* **message**: string: Detailed validation messages.
+
 ## CustomContainer
 ### Properties
 * **args**: string[]: Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
@@ -821,6 +962,15 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Domain
 * **thumbprint**: string: The thumbprint of bound certificate.
 
+## CustomDomainValidatePayload
+### Properties
+* **name**: string (Required): Name to be validated
+
+## CustomDomainValidateResult
+### Properties
+* **isValid**: bool: Indicates if domain name is valid.
+* **message**: string: Message of why domain name is invalid.
+
 ## CustomizedAcceleratorProperties
 ### Properties
 * **acceleratorTags**: string[]
@@ -831,6 +981,11 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **iconUrl**: string
 * **imports**: string[] (ReadOnly): Imports references all imports that this accelerator/fragment depends upon.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the customized accelerator.
+
+## CustomizedAcceleratorValidateResult
+### Properties
+* **errorMessage**: string: The detail validation results
+* **state**: 'Invalid' | 'Valid' | string: State of the customized accelerator validation result
 
 ## CustomPersistentDiskProperties
 * **Discriminator**: type
@@ -1155,6 +1310,10 @@ eg: azure-servicebus, redis etc.
 * **loadTrustStore**: bool: Indicate whether the certificate will be loaded into default trust store, only work for Java runtime.
 * **resourceId**: string (Required): Resource Id of loaded certificate
 
+## LogFileUrlResponse
+### Properties
+* **url**: string (Required): URL of the log file
+
 ## MaintenanceScheduleConfiguration
 * **Discriminator**: frequency
 
@@ -1189,6 +1348,17 @@ eg: azure-servicebus, redis etc.
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
+
+## NameAvailability
+### Properties
+* **message**: string: Message why the name is not available
+* **nameAvailable**: bool: Indicates whether the name is available
+* **reason**: string: Reason why the name is not available
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): Name to be checked
+* **type**: string (Required): Type of the resource to check name availability
 
 ## NetworkProfile
 ### Properties
@@ -1262,6 +1432,19 @@ Possible enum values:
 * **queueLength**: int: Queue length.
 * **queueName**: string: Queue name.
 
+## RegenerateTestKeyRequestPayload
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): Type of the test key
+
+## RemoteDebugging
+### Properties
+* **enabled**: bool: Indicate if remote debugging is enabled
+* **port**: int: Application debugging port
+
+## RemoteDebuggingPayload
+### Properties
+* **port**: int: Application debugging port.
+
 ## RequiredTraffic
 ### Properties
 * **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
@@ -1274,6 +1457,11 @@ Possible enum values:
 ### Properties
 * **cpu**: string: Required CPU. 1 core can be represented by 1 or 1000m. This should be 500m or 1 for Basic tier, and {500m, 1, 2, 3, 4} for Standard tier.
 * **memory**: string: Required memory. 1 GB can be represented by 1Gi or 1024Mi. This should be {512Mi, 1Gi, 2Gi} for Basic tier, and {512Mi, 1Gi, 2Gi, ..., 8Gi} for Standard tier.
+
+## ResourceUploadDefinition
+### Properties
+* **relativePath**: string: Source relative path
+* **uploadUrl**: string: Upload URL
 
 ## Scale
 ### Properties
@@ -1463,4 +1651,9 @@ the relative path to the target module/project.
 * **serverVersion**: string: Server version, currently only Apache Tomcat is supported
 * **type**: 'War' (Required): Type of the source uploaded
 
+
+## ValidationMessages
+### Properties
+* **messages**: string[]: Detailed validation messages.
+* **name**: string: The name of the configuration service git repository.
 

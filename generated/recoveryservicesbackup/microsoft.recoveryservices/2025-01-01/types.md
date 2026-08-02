@@ -195,6 +195,54 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backupPreValidateProtection (Microsoft.RecoveryServices/locations@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-01-01
+* **Input**: [PreValidateEnableBackupRequest](#prevalidateenablebackuprequest)
+* **Output**: [PreValidateEnableBackupResponse](#prevalidateenablebackupresponse)
+
+## Function backupSecurityPIN (Microsoft.RecoveryServices/vaults@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults
+* **ApiVersion**: 2025-01-01
+* **Input**: [SecurityPinBase](#securitypinbase)
+* **Output**: [TokenInformation](#tokeninformation)
+
+## Function backupStatus (Microsoft.RecoveryServices/locations@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-01-01
+* **Input**: [BackupStatusRequest](#backupstatusrequest)
+* **Output**: [BackupStatusResponse](#backupstatusresponse)
+
+## Function backupValidateFeatures (Microsoft.RecoveryServices/locations@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-01-01
+* **Input**: [FeatureSupportRequest](#featuresupportrequest)
+* **Output**: [AzureVMResourceFeatureSupportResponse](#azurevmresourcefeaturesupportresponse)
+
+## Function backupValidateOperation (Microsoft.RecoveryServices/vaults@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults
+* **ApiVersion**: 2025-01-01
+* **Input**: [ValidateOperationRequestResource](#validateoperationrequestresource)
+* **Output**: [ValidateOperationsResponse](#validateoperationsresponse)
+
+## Function fetchTieringCost (Microsoft.RecoveryServices/vaults/backupTieringCost@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupTieringCost
+* **ApiVersion**: 2025-01-01
+* **Input**: [FetchTieringCostInfoRequest](#fetchtieringcostinforequest)
+* **Output**: [TieringCostInfo](#tieringcostinfo)
+
+## Function recoveryPointsRecommendedForMove (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems
+* **ApiVersion**: 2025-01-01
+* **Input**: [ListRecoveryPointsRecommendedForMoveRequest](#listrecoverypointsrecommendedformoverequest)
+* **Output**: [RecoveryPointResourceList](#recoverypointresourcelist)
+
+## Function unlockDelete (Microsoft.RecoveryServices/vaults/backupResourceGuardProxies@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupResourceGuardProxies
+* **ApiVersion**: 2025-01-01
+* **Input**: [UnlockDeleteRequest](#unlockdeleterequest)
+* **Output**: [UnlockDeleteResponse](#unlockdeleteresponse)
+
 ## AzureFileshareProtectedItemExtendedInfo
 ### Properties
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
@@ -305,6 +353,10 @@ eg: number of bytes transferred etc
 * **status**: string: The status.
 * **taskId**: string: The task display name.
 
+## AzureVMResourceFeatureSupportResponse
+### Properties
+* **supportStatus**: 'DefaultOFF' | 'DefaultON' | 'Invalid' | 'NotSupported' | 'Supported' | string: Support status of feature
+
 ## AzureVmWorkloadProtectedItemExtendedInfo
 ### Properties
 * **newestRecoveryPointInArchive**: string: The latest backup copy available for this backup item in archive tier
@@ -380,6 +432,31 @@ eg: number of bytes transferred etc
 ### Additional Properties
 * **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
 
+## AzureWorkloadRestoreRequestPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureWorkloadRestoreRequestPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureWorkloadRestoreRequestPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureWorkloadRestoreRequestPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureWorkloadRestoreRequestPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AzureWorkloadSQLRecoveryPointExtendedInfo
 ### Properties
 * **dataDirectoryPaths**: [SQLDataDirectory](#sqldatadirectory)[]: List of data directory paths during restore operation.
@@ -451,6 +528,26 @@ eg: number of bytes transferred etc
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
+
+## BackupStatusRequest
+### Properties
+* **poLogicalName**: string: Protectable Item Logical Name
+* **resourceId**: string: Entire ARM resource id of the resource
+* **resourceType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Container Type - VM, SQLPaaS, DPM, AzureFileShare...
+
+## BackupStatusResponse
+### Properties
+* **acquireStorageAccountLock**: 'Acquire' | 'NotAcquire' | string: Specifies whether the storage account lock has been acquired or not
+* **containerName**: string: Specifies the product specific container name. E.g. iaasvmcontainer;iaasvmcontainer;csname;vmname.
+* **errorCode**: string: ErrorCode in case of intent failed
+* **errorMessage**: string: ErrorMessage in case of intent failed.
+* **fabricName**: 'Azure' | 'Invalid' | string: Specifies the fabric name - Azure or AD
+* **policyName**: string: Specifies the policy name which is used for protection
+* **protectedItemName**: string: Specifies the product specific ds name. E.g. vm;iaasvmcontainer;csname;vmname.
+* **protectedItemsCount**: int: Number of protected items
+* **protectionStatus**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
+* **registrationStatus**: string: Container registration status
+* **vaultId**: string: Specifies the arm resource id of the vault
 
 ## BEKDetails
 ### Properties
@@ -551,6 +648,14 @@ Failed | Succeeded
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## EncryptionDetails
+### Properties
+* **encryptionEnabled**: bool: Identifies whether this backup copy represents an encrypted VM at the time of backup.
+* **kekUrl**: string: Key Url.
+* **kekVaultId**: string: ID of Key Vault where KEK is stored.
+* **secretKeyUrl**: string: Secret Url.
+* **secretKeyVaultId**: string: ID of Key Vault where Secret is stored.
+
 ## ErrorDetail
 ### Properties
 * **code**: string (ReadOnly): Error code.
@@ -566,6 +671,53 @@ Failed | Succeeded
 ### Properties
 * **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties): Extended Properties for Disk Exclusion.
 * **linuxVmApplicationName**: string: Linux VM name
+
+## FeatureSupportRequest
+* **Discriminator**: featureType
+
+### Base Properties
+
+### AzureBackupGoalFeatureSupportRequest
+#### Properties
+* **featureType**: 'AzureBackupGoals' (Required): backup support feature type.
+
+### AzureVMResourceFeatureSupportRequest
+#### Properties
+* **featureType**: 'AzureVMResourceBackup' (Required): backup support feature type.
+* **vmSize**: string: Size of the resource: VM size(A/D series etc) in case of IaasVM
+* **vmSku**: string: SKUs (Premium/Managed etc) in case of IaasVM
+
+
+## FetchTieringCostInfoRequest
+* **Discriminator**: objectType
+
+### Base Properties
+* **sourceTierType**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid' (Required): Source tier for the request
+* **targetTierType**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid' (Required): target tier for the request
+
+### FetchTieringCostInfoForRehydrationRequest
+#### Properties
+* **containerName**: string (Required): Name of the protected item container
+* **objectType**: 'FetchTieringCostInfoForRehydrationRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **protectedItemName**: string (Required): Name of the protectedItemName
+* **recoveryPointId**: string (Required): ID of the backup copy for rehydration cost info needs to be fetched.
+* **rehydrationPriority**: 'High' | 'Standard' | string (Required): Rehydration Priority
+
+### FetchTieringCostSavingsInfoForPolicyRequest
+#### Properties
+* **objectType**: 'FetchTieringCostSavingsInfoForPolicyRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **policyName**: string (Required): Name of the backup policy for which the cost savings information is requested
+
+### FetchTieringCostSavingsInfoForProtectedItemRequest
+#### Properties
+* **containerName**: string (Required): Name of the protected item container
+* **objectType**: 'FetchTieringCostSavingsInfoForProtectedItemRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **protectedItemName**: string (Required): Name of the protectedItemName
+
+### FetchTieringCostSavingsInfoForVaultRequest
+#### Properties
+* **objectType**: 'FetchTieringCostSavingsInfoForVaultRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+
 
 ## GenericContainerExtendedInfo
 ### Properties
@@ -594,6 +746,17 @@ Failed | Succeeded
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
+
+## IdentityBasedRestoreDetails
+### Properties
+* **objectType**: string: Gets the class type.
+* **targetStorageAccountId**: string: Fully qualified ARM ID of the target storage account.
+
+## IdentityInfo
+### Properties
+* **isSystemAssignedIdentity**: bool: To differentiate if the managed identity is system assigned or user assigned
+* **managedIdentityResourceId**: string: Managed Identity Resource Id
+Optional: Might not be required in the case of system assigned managed identity
 
 ## InquiryInfo
 ### Properties
@@ -717,6 +880,11 @@ InProgress | Failed | Succeeded
 * **resourceHealthDetails**: [ResourceHealthDetails](#resourcehealthdetails)[]: Resource Health Status
 * **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy' | string: Resource Health Status
 
+## ListRecoveryPointsRecommendedForMoveRequest
+### Properties
+* **excludedRPList**: string[]: List of Recovery Points excluded from Move
+* **objectType**: string: Gets the class type.
+
 ## MabContainerExtendedInfo
 ### Properties
 * **backupItems**: string[]: List of backup items associated with this container.
@@ -774,6 +942,23 @@ InProgress | Failed | Succeeded
 ### Properties
 * **endTime**: string: End time of the time range for log recovery.
 * **startTime**: string: Start time of the time range for log recovery.
+
+## PreValidateEnableBackupRequest
+### Properties
+* **properties**: string: Configuration of VM if any needs to be validated like OS type etc
+* **resourceId**: string: ARM Virtual Machine Id
+* **resourceType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: ProtectedItem Type- VM, SqlDataBase, AzureFileShare etc
+* **vaultId**: string: ARM id of the Recovery Services Vault
+
+## PreValidateEnableBackupResponse
+### Properties
+* **containerName**: string: Specifies the product specific container name. E.g. iaasvmcontainer;iaasvmcontainer;rgname;vmname. This is required
+for portal
+* **errorCode**: string: Response error code
+* **errorMessage**: string: Response error message
+* **protectedItemName**: string: Specifies the product specific ds name. E.g. vm;iaasvmcontainer;rgname;vmname. This is required for portal
+* **recommendation**: string: Recommended action for user
+* **status**: 'Failed' | 'Invalid' | 'Succeeded' | string: Validation Status
 
 ## PrivateEndpoint
 ### Properties
@@ -1263,6 +1448,27 @@ should be null if VM is in public cloud
 * **isSoftDeleted**: bool: Bool to indicate whether RP is in soft delete state or not
 * **ruleName**: string: Rule name tagged on Recovery Point that governs life cycle
 
+## RecoveryPointRehydrationInfo
+### Properties
+* **rehydrationPriority**: 'High' | 'Standard' | string: Rehydration Priority
+* **rehydrationRetentionDuration**: string: How long the rehydrated RP should be kept
+Should be ISO8601 Duration format e.g. "P7D"
+
+## RecoveryPointResource
+### Properties
+* **eTag**: string: Optional ETag.
+* **id**: string (ReadOnly): Resource Id represents the complete path to the resource.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name associated with the resource.
+* **properties**: [RecoveryPoint](#recoverypoint): RecoveryPointResource properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+
+## RecoveryPointResourceList
+### Properties
+* **nextLink**: string: The URI to fetch the next page of resources, with each API call returning up to 200 resources per page. Use ListNext() to fetch the next page if the total number of resources exceeds 200.
+* **value**: [RecoveryPointResource](#recoverypointresource)[]: List of resources.
+
 ## RecoveryPointTierInformation
 ### Properties
 * **extendedInfo**: [RecoveryPointTierInformationExtendedInfo](#recoverypointtierinformationextendedinfo): Recovery point tier status.
@@ -1379,6 +1585,163 @@ should be null if VM is in public cloud
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RestoreFileSpecs
+### Properties
+* **fileSpecType**: string: Indicates what the Path variable stands for
+* **path**: string: Source File/Folder path
+* **targetFolderPath**: string: Destination folder path in target FileShare
+
+## RestoreRequest
+* **Discriminator**: objectType
+
+### Base Properties
+* **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
+
+### AzureFileShareRestoreRequest
+#### Properties
+* **copyOptions**: 'CreateCopy' | 'FailOnConflict' | 'Invalid' | 'Overwrite' | 'Skip' | string: Options to resolve copy conflicts.
+* **objectType**: 'AzureFileShareRestoreRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **restoreFileSpecs**: [RestoreFileSpecs](#restorefilespecs)[]: List of Source Files/Folders(which need to recover) and TargetFolderPath details
+* **restoreRequestType**: 'FullShareRestore' | 'Invalid' | 'ItemLevelRestore' | string: Restore Type (FullShareRestore or ItemLevelRestore)
+* **sourceResourceId**: string: Source storage account ARM Id
+* **targetDetails**: [TargetAFSRestoreInfo](#targetafsrestoreinfo): Target File Share Details
+
+### AzureWorkloadPointInTimeRestoreRequest
+#### Properties
+* **objectType**: 'AzureWorkloadPointInTimeRestoreRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **pointInTime**: string: PointInTime value
+* **propertyBag**: [AzureWorkloadRestoreRequestPropertyBag](#azureworkloadrestorerequestpropertybag): Workload specific property bag.
+* **recoveryMode**: 'FileRecovery' | 'Invalid' | 'RecoveryUsingSnapshot' | 'SnapshotAttach' | 'SnapshotAttachAndRecover' | 'WorkloadRecovery' | string: Defines whether the current recovery mode is file restore or database restore
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **snapshotRestoreParameters**: [SnapshotRestoreParameters](#snapshotrestoreparameters): Additional details for snapshot recovery
+Currently used for snapshot for SAP Hana.
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM on which workload that was running is being recovered.
+* **targetInfo**: [TargetRestoreInfo](#targetrestoreinfo): Details of target database
+* **targetResourceGroupName**: string: Defines the Resource group of the Target VM
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the target VM
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User Assigned managed identity details
+Currently used for snapshot.
+
+### AzureWorkloadSAPHanaPointInTimeRestoreWithRehydrateRequest
+#### Properties
+* **objectType**: 'AzureWorkloadSAPHanaPointInTimeRestoreWithRehydrateRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **pointInTime**: string: PointInTime value
+* **propertyBag**: [AzureWorkloadRestoreRequestPropertyBag](#azureworkloadrestorerequestpropertybag): Workload specific property bag.
+* **recoveryMode**: 'FileRecovery' | 'Invalid' | 'RecoveryUsingSnapshot' | 'SnapshotAttach' | 'SnapshotAttachAndRecover' | 'WorkloadRecovery' | string: Defines whether the current recovery mode is file restore or database restore
+* **recoveryPointRehydrationInfo**: [RecoveryPointRehydrationInfo](#recoverypointrehydrationinfo): RP Rehydration Info
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **snapshotRestoreParameters**: [SnapshotRestoreParameters](#snapshotrestoreparameters): Additional details for snapshot recovery
+Currently used for snapshot for SAP Hana.
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM on which workload that was running is being recovered.
+* **targetInfo**: [TargetRestoreInfo](#targetrestoreinfo): Details of target database
+* **targetResourceGroupName**: string: Defines the Resource group of the Target VM
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the target VM
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User Assigned managed identity details
+Currently used for snapshot.
+
+### AzureWorkloadSAPHanaRestoreWithRehydrateRequest
+#### Properties
+* **objectType**: 'AzureWorkloadSAPHanaRestoreWithRehydrateRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **propertyBag**: [AzureWorkloadRestoreRequestPropertyBag](#azureworkloadrestorerequestpropertybag): Workload specific property bag.
+* **recoveryMode**: 'FileRecovery' | 'Invalid' | 'RecoveryUsingSnapshot' | 'SnapshotAttach' | 'SnapshotAttachAndRecover' | 'WorkloadRecovery' | string: Defines whether the current recovery mode is file restore or database restore
+* **recoveryPointRehydrationInfo**: [RecoveryPointRehydrationInfo](#recoverypointrehydrationinfo): RP Rehydration Info
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **snapshotRestoreParameters**: [SnapshotRestoreParameters](#snapshotrestoreparameters): Additional details for snapshot recovery
+Currently used for snapshot for SAP Hana.
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM on which workload that was running is being recovered.
+* **targetInfo**: [TargetRestoreInfo](#targetrestoreinfo): Details of target database
+* **targetResourceGroupName**: string: Defines the Resource group of the Target VM
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the target VM
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User Assigned managed identity details
+Currently used for snapshot.
+
+### AzureWorkloadSQLPointInTimeRestoreWithRehydrateRequest
+#### Properties
+* **alternateDirectoryPaths**: [SQLDataDirectoryMapping](#sqldatadirectorymapping)[]: Data directory details
+* **isNonRecoverable**: bool: SQL specific property where user can chose to set no-recovery when restore operation is tried
+* **objectType**: 'AzureWorkloadSQLPointInTimeRestoreWithRehydrateRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **pointInTime**: string: PointInTime value
+* **propertyBag**: [AzureWorkloadRestoreRequestPropertyBag](#azureworkloadrestorerequestpropertybag): Workload specific property bag.
+* **recoveryMode**: 'FileRecovery' | 'Invalid' | 'RecoveryUsingSnapshot' | 'SnapshotAttach' | 'SnapshotAttachAndRecover' | 'WorkloadRecovery' | string: Defines whether the current recovery mode is file restore or database restore
+* **recoveryPointRehydrationInfo**: [RecoveryPointRehydrationInfo](#recoverypointrehydrationinfo): RP Rehydration Info
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **shouldUseAlternateTargetLocation**: bool: Default option set to true. If this is set to false, alternate data directory must be provided
+* **snapshotRestoreParameters**: [SnapshotRestoreParameters](#snapshotrestoreparameters): Additional details for snapshot recovery
+Currently used for snapshot for SAP Hana.
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM on which workload that was running is being recovered.
+* **targetInfo**: [TargetRestoreInfo](#targetrestoreinfo): Details of target database
+* **targetResourceGroupName**: string: Defines the Resource group of the Target VM
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the target VM
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User Assigned managed identity details
+Currently used for snapshot.
+
+### AzureWorkloadSQLRestoreWithRehydrateRequest
+#### Properties
+* **alternateDirectoryPaths**: [SQLDataDirectoryMapping](#sqldatadirectorymapping)[]: Data directory details
+* **isNonRecoverable**: bool: SQL specific property where user can chose to set no-recovery when restore operation is tried
+* **objectType**: 'AzureWorkloadSQLRestoreWithRehydrateRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **propertyBag**: [AzureWorkloadRestoreRequestPropertyBag](#azureworkloadrestorerequestpropertybag): Workload specific property bag.
+* **recoveryMode**: 'FileRecovery' | 'Invalid' | 'RecoveryUsingSnapshot' | 'SnapshotAttach' | 'SnapshotAttachAndRecover' | 'WorkloadRecovery' | string: Defines whether the current recovery mode is file restore or database restore
+* **recoveryPointRehydrationInfo**: [RecoveryPointRehydrationInfo](#recoverypointrehydrationinfo): RP Rehydration Info
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **shouldUseAlternateTargetLocation**: bool: Default option set to true. If this is set to false, alternate data directory must be provided
+* **snapshotRestoreParameters**: [SnapshotRestoreParameters](#snapshotrestoreparameters): Additional details for snapshot recovery
+Currently used for snapshot for SAP Hana.
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM on which workload that was running is being recovered.
+* **targetInfo**: [TargetRestoreInfo](#targetrestoreinfo): Details of target database
+* **targetResourceGroupName**: string: Defines the Resource group of the Target VM
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the target VM
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User Assigned managed identity details
+Currently used for snapshot.
+
+### IaasVMRestoreWithRehydrationRequest
+#### Properties
+* **affinityGroup**: string: Affinity group associated to VM to be restored. Used only for Classic Compute Virtual Machines.
+* **createNewCloudService**: bool: Should a new cloud service be created while restoring the VM. If this is false, VM will be restored to the same
+cloud service as it was at the time of backup.
+* **diskEncryptionSetId**: string: DiskEncryptionSet's ID - needed if the VM needs to be encrypted at rest during restore with customer managed key.
+* **encryptionDetails**: [EncryptionDetails](#encryptiondetails): Details needed if the VM was encrypted at the time of backup.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Target extended location where the VM should be restored,
+should be null if restore is to be done in public cloud
+* **identityBasedRestoreDetails**: [IdentityBasedRestoreDetails](#identitybasedrestoredetails): IaaS VM workload specific restore details for restores using managed identity.
+* **identityInfo**: [IdentityInfo](#identityinfo): Managed Identity information required to access customer storage account.
+* **objectType**: 'IaasVMRestoreWithRehydrationRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **originalStorageAccountOption**: bool: Original Storage Account Option
+* **recoveryPointId**: string: ID of the backup copy to be recovered.
+* **recoveryPointRehydrationInfo**: [RecoveryPointRehydrationInfo](#recoverypointrehydrationinfo): RP Rehydration Info
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'Offline' | 'OriginalLocation' | 'RestoreDisks' | string: Type of this recovery.
+* **region**: string: Region in which the virtual machine is restored.
+* **restoreDiskLunList**: int[]: List of Disk LUNs for partial restore
+* **restoreWithManagedDisks**: bool: Flag to denote of an Unmanaged disk VM should be restored with Managed disks.
+* **securedVMDetails**: [SecuredVMDetails](#securedvmdetails): Stores Secured VM Details
+* **sourceResourceId**: string: Fully qualified ARM ID of the VM which is being recovered.
+* **storageAccountId**: string: Fully qualified ARM ID of the storage account to which the VM has to be restored.
+* **subnetId**: string: Subnet ID, is the subnet ID associated with the to be restored VM. For Classic VMs it would be
+{VnetID}/Subnet/{SubnetName} and, for the Azure Resource Manager VMs it would be ARM resource ID used to represent
+the subnet.
+* **targetDiskNetworkAccessSettings**: [TargetDiskNetworkAccessSettings](#targetdisknetworkaccesssettings): Specifies target network access settings for disks of VM to be restored,
+* **targetDomainNameId**: string: Fully qualified ARM ID of the domain name to be associated to the VM being restored. This applies only to Classic
+Virtual Machines.
+* **targetResourceGroupId**: string: This is the ARM Id of the resource group that you want to create for this Virtual machine and other artifacts.
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}
+* **targetVirtualMachineId**: string: This is the complete ARM Id of the VM that will be created.
+For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **virtualNetworkId**: string: This is the virtual network Id of the vnet that will be attached to the virtual machine.
+User will be validated for join action permissions in the linked access.
+* **zones**: string[]: Target zone where the VM and its disks should be restored.
+
+
 ## RetentionDuration
 ### Properties
 * **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
@@ -1436,6 +1799,14 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly schedule of this policy
 
 
+## SecuredVMDetails
+### Properties
+* **securedVMOsDiskEncryptionSetId**: string: Gets or Sets Disk Encryption Set Id for Secured VM OS Disk
+
+## SecurityPinBase
+### Properties
+* **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
+
 ## Settings
 ### Properties
 * **isCompression**: bool: Workload compression flag. This has been added so that 'isSqlCompression'
@@ -1449,11 +1820,23 @@ will be deprecated once clients upgrade to consider this flag.
 * **instantRpRetentionRangeInDays**: int
 * **userAssignedManagedIdentityDetails**: [UserAssignedManagedIdentityDetails](#userassignedmanagedidentitydetails): User assigned managed identity details
 
+## SnapshotRestoreParameters
+### Properties
+* **logPointInTimeForDBRecovery**: string
+* **skipAttachAndMount**: bool
+
 ## SQLDataDirectory
 ### Properties
 * **logicalName**: string: Logical name of the file
 * **path**: string: File path
 * **type**: 'Data' | 'Invalid' | 'Log' | string: Type of data directory mapping
+
+## SQLDataDirectoryMapping
+### Properties
+* **mappingType**: 'Data' | 'Invalid' | 'Log' | string: Type of data directory mapping
+* **sourceLogicalName**: string: Restore source logical name path
+* **sourcePath**: string: Restore source path
+* **targetPath**: string: Target path
 
 ## SubProtectionPolicy
 ### Properties
@@ -1470,6 +1853,43 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Additional Properties
 * **Additional Properties Type**: [TieringPolicy](#tieringpolicy)
 
+## TargetAFSRestoreInfo
+### Properties
+* **name**: string: File share name
+* **targetResourceId**: string: Target file share resource ARM ID
+
+## TargetDiskNetworkAccessSettings
+### Properties
+* **targetDiskAccessId**: string: Gets or sets the ARM resource ID of the target disk access to be used when TargetDiskNetworkAccessOption is set to TargetDiskNetworkAccessOption.UseNew
+* **targetDiskNetworkAccessOption**: 'EnablePrivateAccessForAllDisks' | 'EnablePublicAccessForAllDisks' | 'SameAsOnSourceDisks': Network access settings to be used for restored disks
+
+## TargetRestoreInfo
+### Properties
+* **containerId**: string: Resource Id name of the container in which Target DataBase resides
+* **databaseName**: string: Database name InstanceName/DataBaseName for SQL or System/DbName for SAP Hana
+* **overwriteOption**: 'FailOnConflict' | 'Invalid' | 'Overwrite' | string: Can Overwrite if Target DataBase already exists
+* **targetDirectoryForFileRestore**: string: Target directory location for restore as files.
+
+## TieringCostInfo
+* **Discriminator**: objectType
+
+### Base Properties
+
+### TieringCostRehydrationInfo
+#### Properties
+* **objectType**: 'TieringCostRehydrationInfo' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **rehydrationSizeInBytes**: int (Required): Rehydration size in bytes
+* **retailRehydrationCostPerGBPerMonth**: int (Required): Source tier to target tier rehydration cost per GB per month
+
+### TieringCostSavingInfo
+#### Properties
+* **objectType**: 'TieringCostSavingInfo' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **retailSourceTierCostPerGBPerMonth**: int (Required): Source tier retail cost per GB per month
+* **retailTargetTierCostPerGBPerMonth**: int (Required): Target tier retail cost per GB per month
+* **sourceTierSizeReductionInBytes**: int (Required): Source tier size reduction in bytes after moving all the recommended backup points to target tier
+* **targetTierSizeIncreaseInBytes**: int (Required): Target tier size increase in bytes after moving all the recommended backup points to target tier
+
+
 ## TieringPolicy
 ### Properties
 * **duration**: int: Number of days/weeks/months/years to retain backups in current tier before tiering.
@@ -1481,6 +1901,21 @@ Used only if TieringMode is set to TierAfter
 2. TierAfter: Tier all recovery points after a fixed period, as specified in duration + durationType below.
 3. DoNotTier: Do not tier any recovery points
 
+## TokenInformation
+### Properties
+* **expiryTimeInUtcTicks**: int: Expiry time of token.
+* **securityPIN**: string: Security PIN
+* **token**: string: Token value.
+
+## UnlockDeleteRequest
+### Properties
+* **resourceGuardOperationRequests**: string[]
+* **resourceToBeDeleted**: string
+
+## UnlockDeleteResponse
+### Properties
+* **unlockDeleteExpiryTime**: string: This is the time when unlock delete privileges will get expired.
+
 ## UserAssignedIdentityProperties
 ### Properties
 * **clientId**: string: The client ID of the assigned identity.
@@ -1491,6 +1926,30 @@ Used only if TieringMode is set to TierAfter
 * **identityArmId**: string: The ARM id of the assigned identity.
 * **identityName**: string: The name of the assigned identity.
 * **userAssignedIdentityProperties**: [UserAssignedIdentityProperties](#userassignedidentityproperties): User assigned managed identity properties
+
+## ValidateOperationRequest
+* **Discriminator**: objectType
+
+### Base Properties
+
+### ValidateIaasVMRestoreOperationRequest
+#### Properties
+* **objectType**: 'ValidateIaasVMRestoreOperationRequest' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **restoreRequest**: [RestoreRequest](#restorerequest): Sets restore request to be validated
+
+
+## ValidateOperationRequestResource
+### Properties
+* **id**: string (Required): Recovery point ID.
+* **properties**: [ValidateOperationRequest](#validateoperationrequest) (Required): ValidateOperationRequestResource properties
+
+## ValidateOperationResponse
+### Properties
+* **validationResults**: [ErrorDetail](#errordetail)[]: Gets the validation result
+
+## ValidateOperationsResponse
+### Properties
+* **validateOperationResponse**: [ValidateOperationResponse](#validateoperationresponse): Base class for validate operation response.
 
 ## VaultJobErrorInfo
 ### Properties

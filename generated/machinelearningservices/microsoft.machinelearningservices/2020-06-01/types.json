@@ -2504,19 +2504,254 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "prepareNotebook",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2020-06-01",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaUpdateParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "The list for update quota."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBaseProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "An enum describing the unit of quota measurement."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/172"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotasResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 2,
+        "description": "The list of workspace quota update result."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 2,
+        "description": "An enum describing the unit of quota measurement."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "Status of update workspace quota."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaBelowClusterMinimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaExceedsSubscriptionLimit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidVMFamilyName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotSupportedForSku"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotEnabledForRegion"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/177"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateQuotas",
+    "resourceType": "Microsoft.MachineLearningServices/locations",
+    "apiVersion": "2020-06-01",
+    "output": {
+      "$ref": "#/176"
+    },
+    "input": {
+      "$ref": "#/171"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AmlComputeNodesInformation",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/200"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/209"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2564,7 +2799,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/199"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -2606,22 +2841,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/172"
+        "$ref": "#/193"
       },
       {
-        "$ref": "#/173"
+        "$ref": "#/194"
       },
       {
-        "$ref": "#/174"
+        "$ref": "#/195"
       },
       {
-        "$ref": "#/175"
+        "$ref": "#/196"
       },
       {
-        "$ref": "#/176"
+        "$ref": "#/197"
       },
       {
-        "$ref": "#/177"
+        "$ref": "#/198"
       },
       {
         "$ref": "#/0"
@@ -2631,7 +2866,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/171"
+      "$ref": "#/192"
     }
   },
   {
@@ -2670,28 +2905,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/180"
+        "$ref": "#/201"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/202"
       },
       {
-        "$ref": "#/182"
+        "$ref": "#/203"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/184"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/206"
       },
       {
-        "$ref": "#/186"
+        "$ref": "#/207"
       },
       {
-        "$ref": "#/187"
+        "$ref": "#/208"
       },
       {
         "$ref": "#/0"
@@ -2704,7 +2939,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-06-01",
     "output": {
-      "$ref": "#/170"
+      "$ref": "#/191"
     }
   },
   {
@@ -2714,13 +2949,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/191"
+        "$ref": "#/212"
       },
       "Databricks": {
-        "$ref": "#/193"
+        "$ref": "#/214"
       },
       "VirtualMachine": {
-        "$ref": "#/195"
+        "$ref": "#/216"
       }
     }
   },
@@ -2751,7 +2986,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/213"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2775,7 +3010,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/215"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2799,7 +3034,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/196"
+          "$ref": "#/217"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2816,7 +3051,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-06-01",
     "output": {
-      "$ref": "#/190"
+      "$ref": "#/211"
     }
   }
 ]

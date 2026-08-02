@@ -26,6 +26,30 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ConfidentialLedger/managedCCFs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backup (Microsoft.ConfidentialLedger/ledgers@2023-06-28-preview)
+* **Resource**: Microsoft.ConfidentialLedger/ledgers
+* **ApiVersion**: 2023-06-28-preview
+* **Input**: [ConfidentialLedgerBackup](#confidentialledgerbackup)
+* **Output**: [ConfidentialLedgerBackupResponse](#confidentialledgerbackupresponse)
+
+## Function backup (Microsoft.ConfidentialLedger/managedCCFs@2023-06-28-preview)
+* **Resource**: Microsoft.ConfidentialLedger/managedCCFs
+* **ApiVersion**: 2023-06-28-preview
+* **Input**: [ManagedCCFBackup](#managedccfbackup)
+* **Output**: [ManagedCCFBackupResponse](#managedccfbackupresponse)
+
+## Function restore (Microsoft.ConfidentialLedger/ledgers@2023-06-28-preview)
+* **Resource**: Microsoft.ConfidentialLedger/ledgers
+* **ApiVersion**: 2023-06-28-preview
+* **Input**: [ConfidentialLedgerRestore](#confidentialledgerrestore)
+* **Output**: [ConfidentialLedgerRestoreResponse](#confidentialledgerrestoreresponse)
+
+## Function restore (Microsoft.ConfidentialLedger/managedCCFs@2023-06-28-preview)
+* **Resource**: Microsoft.ConfidentialLedger/managedCCFs
+* **ApiVersion**: 2023-06-28-preview
+* **Input**: [ManagedCCFRestore](#managedccfrestore)
+* **Output**: [ManagedCCFRestoreResponse](#managedccfrestoreresponse)
+
 ## AADBasedSecurityPrincipal
 ### Properties
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
@@ -36,6 +60,25 @@
 ### Properties
 * **cert**: string: Public key of the user cert (.pem or .cer)
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+
+## ConfidentialLedgerBackup
+### Properties
+* **restoreRegion**: string: The region where the backup of the ledger will eventually be restored to.
+* **uri**: string {sensitive} (Required): SAS URI used to access the backup Fileshare.
+
+## ConfidentialLedgerBackupResponse
+### Properties
+* **message**: string (ReadOnly): Response body stating if the ledger is being backed up.
+
+## ConfidentialLedgerRestore
+### Properties
+* **fileShareName**: string (Required): Fileshare where the ledger backup is stored.
+* **restoreRegion**: string (Required): The region the ledger is being restored to.
+* **uri**: string {sensitive} (Required): SAS URI used to access the backup fileshare.
+
+## ConfidentialLedgerRestoreResponse
+### Properties
+* **message**: string (ReadOnly): Response body stating if the ledger is being restored.
 
 ## DeploymentType
 ### Properties
@@ -55,6 +98,15 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of Ledger Resource
 * **runningState**: 'Active' | 'Paused' | 'Pausing' | 'Resuming' | 'Unknown' | string: Object representing RunningState for Ledger.
 
+## ManagedCCFBackup
+### Properties
+* **restoreRegion**: string: The region where the backup of the managed CCF resource will eventually be restored to.
+* **uri**: string {sensitive} (Required): SAS URI used to access the backup Fileshare.
+
+## ManagedCCFBackupResponse
+### Properties
+* **message**: string (ReadOnly): Response body stating if the managed CCF resource is being backed up.
+
 ## ManagedCCFProperties
 ### Properties
 * **appName**: string (ReadOnly): Unique name for the Managed CCF.
@@ -65,6 +117,16 @@
 * **nodeCount**: int: Number of CCF nodes in the Managed CCF.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of Managed CCF Resource
 * **runningState**: 'Active' | 'Paused' | 'Pausing' | 'Resuming' | 'Unknown' | string: Object representing RunningState for Managed CCF.
+
+## ManagedCCFRestore
+### Properties
+* **fileShareName**: string (Required): Fileshare where the managed CCF resource backup is stored.
+* **restoreRegion**: string (Required): The region the managed CCF resource is being restored to.
+* **uri**: string {sensitive} (Required): SAS URI used to access the backup Fileshare.
+
+## ManagedCCFRestoreResponse
+### Properties
+* **message**: string (ReadOnly): Response body stating if the managed CCF resource is being restored.
 
 ## MemberIdentityCertificate
 ### Properties

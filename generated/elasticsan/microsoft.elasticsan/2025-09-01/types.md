@@ -58,9 +58,25 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function preBackup (Microsoft.ElasticSan/elasticSans/volumegroups@2025-09-01)
+* **Resource**: Microsoft.ElasticSan/elasticSans/volumegroups
+* **ApiVersion**: 2025-09-01
+* **Input**: [VolumeNameList](#volumenamelist)
+* **Output**: [PreValidationResponse](#prevalidationresponse)
+
+## Function preRestore (Microsoft.ElasticSan/elasticSans/volumegroups@2025-09-01)
+* **Resource**: Microsoft.ElasticSan/elasticSans/volumegroups
+* **ApiVersion**: 2025-09-01
+* **Input**: [DiskSnapshotList](#disksnapshotlist)
+* **Output**: [PreValidationResponse](#prevalidationresponse)
+
 ## AutoScaleProperties
 ### Properties
 * **scaleUpProperties**: [ScaleUpProperties](#scaleupproperties): Scale up settings on Elastic San Appliance.
+
+## DiskSnapshotList
+### Properties
+* **diskSnapshotIds**: string[] (Required): array of DiskSnapshot ARM IDs
 
 ## ElasticSanProperties
 ### Properties
@@ -123,6 +139,10 @@
 ## NetworkRuleSet
 ### Properties
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
+
+## PreValidationResponse
+### Properties
+* **validationStatus**: string: a status value indicating success or failure of validation
 
 ## PrivateEndpoint
 ### Properties
@@ -210,6 +230,10 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of Private Endpoint Connections.
 * **protocolType**: 'Iscsi' | 'None' | string: Type of storage target
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Restoring' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
+
+## VolumeNameList
+### Properties
+* **volumeNames**: string[] (Required): array of volume names
 
 ## VolumeProperties
 ### Properties

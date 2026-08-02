@@ -2297,5 +2297,194 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceStatusResponse",
+    "properties": {
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The DMS instance agent version"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'"
+      },
+      "vmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The services virtual machine size, such as 'Standard_D2_v2'"
+      },
+      "supportedTaskTypes": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "The list of supported task types"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkStatus",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/177"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The proposed resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type chain (e.g. virtualMachines/extensions)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "If true, the name is valid and available. If false, 'reason' describes why not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "The reason why the name is not available, if nameAvailable is false"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The localized reason why the name is not available, if nameAvailable is false"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/181"
+    },
+    "input": {
+      "$ref": "#/180"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/locations",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/181"
+    },
+    "input": {
+      "$ref": "#/180"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectTask",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Custom task properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/187"
+    }
   }
 ]

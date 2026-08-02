@@ -52,6 +52,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces
+* **ApiVersion**: 2016-03-01
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResult](#checkavailabilityresult)
+
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
 * **ApiVersion**: 2016-03-01
@@ -60,6 +66,23 @@
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
 * **ApiVersion**: 2016-03-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function pnsCredentials (Microsoft.NotificationHubs/namespaces/notificationHubs@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2016-03-01
+* **Output**: [PnsCredentialsResource](#pnscredentialsresource)
+
+## Function regenerateKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
+* **ApiVersion**: 2016-03-01
+* **Input**: [PolicykeyResource](#policykeyresource)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function regenerateKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
+* **ApiVersion**: 2016-03-01
+* **Input**: [PolicykeyResource](#policykeyresource)
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
 ## AdmCredential
@@ -92,6 +115,31 @@
 * **baiduApiKey**: string: Baidu Api Key.
 * **baiduEndPoint**: string: Baidu Endpoint.
 * **baiduSecretKey**: string: Baidu Secret Key
+
+## CheckAvailabilityParameters
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **isAvailiable**: bool: True if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false.
+* **location**: string (Required): Resource location
+* **name**: string (Required): Resource name
+* **sku**: [Sku](#sku): The sku of the created namespace
+* **tags**: [CheckAvailabilityParametersTags](#checkavailabilityparameterstags): Resource tags
+* **type**: string (ReadOnly): Resource type
+
+## CheckAvailabilityParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CheckAvailabilityResult
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **isAvailiable**: bool: True if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false.
+* **location**: string (Required): Resource location
+* **name**: string (ReadOnly): Resource name
+* **sku**: [Sku](#sku): The sku of the created namespace
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string (ReadOnly): Resource type
 
 ## GcmCredential
 ### Properties
@@ -138,6 +186,29 @@
 * **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
 * **wnsCredential**: [WnsCredential](#wnscredential): The WnsCredential of the created NotificationHub
 
+## PnsCredentialsProperties
+### Properties
+* **admCredential**: [AdmCredential](#admcredential): The AdmCredential of the created NotificationHub
+* **apnsCredential**: [ApnsCredential](#apnscredential): The ApnsCredential of the created NotificationHub
+* **baiduCredential**: [BaiduCredential](#baiducredential): The BaiduCredential of the created NotificationHub
+* **gcmCredential**: [GcmCredential](#gcmcredential): The GcmCredential of the created NotificationHub
+* **mpnsCredential**: [MpnsCredential](#mpnscredential): The MpnsCredential of the created NotificationHub
+* **wnsCredential**: [WnsCredential](#wnscredential): The WnsCredential of the created NotificationHub
+
+## PnsCredentialsResource
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **location**: string (Required): Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [PnsCredentialsProperties](#pnscredentialsproperties): NotificationHub PNS Credentials.
+* **sku**: [Sku](#sku): The sku of the created namespace
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string (ReadOnly): Resource type
+
+## PolicykeyResource
+### Properties
+* **policyKey**: string: Name of the key that has to be regenerated for the Namespace/Notification Hub Authorization Rule. The value can be Primary Key/Secondary Key.
+
 ## ResourceListKeys
 ### Properties
 * **keyName**: string: KeyName of the created AuthorizationRule
@@ -145,6 +216,16 @@
 * **primaryKey**: string: PrimaryKey of the created AuthorizationRule.
 * **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
 * **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

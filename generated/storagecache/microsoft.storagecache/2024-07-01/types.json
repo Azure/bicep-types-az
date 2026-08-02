@@ -3459,5 +3459,18 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AmlFilesystemArchiveInfo",
+    "properties": {
+      "filesystemPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Lustre file system path to archive relative to the file system root.  Specify '/' to archive all modified data."
+      }
+    }
   }
 ]

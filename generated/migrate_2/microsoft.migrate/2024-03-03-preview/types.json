@@ -6297,5 +6297,40 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "assessmentReportUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/avsAssessments",
+    "apiVersion": "2024-03-03-preview",
+    "output": {
+      "$ref": "#/663"
+    },
+    "input": {
+      "$ref": "#/662"
+    }
   }
 ]

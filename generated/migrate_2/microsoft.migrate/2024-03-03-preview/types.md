@@ -44,6 +44,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/avsAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/avsAssessments@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/avsAssessments
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
 ## AssessmentDetails
 ### Properties
 * **confidenceRatingInPercentage**: int (ReadOnly): Confidence Rating in Percentage.
@@ -259,6 +265,11 @@ Azure sizes.
 ### Properties
 * **name**: 'DataProtectionService' | 'MonitoringService' | 'MonthlyAvsExternalStorageCost' | 'MonthlyAvsNetworkCost' | 'MonthlyAvsNodeCost' | 'MonthlyAzureHybridCost' | 'MonthlyBandwidthCost' | 'MonthlyComputeCost' | 'MonthlyLicensingCost' | 'MonthlyLinuxAzureHybridCost' | 'MonthlyManagementCost' | 'MonthlyPremiumStorageCost' | 'MonthlyPremiumV2StorageCost' | 'MonthlySecurityCost' | 'MonthlyStandardHddStorageCost' | 'MonthlyStandardSsdStorageCost' | 'MonthlyStorageCost' | 'MonthlyUltraDiskCost' | 'MonthlyUltraStorageCost' | 'PatchingService' | 'TotalMonthlyCost' | string (ReadOnly): The name.
 * **value**: int (ReadOnly): The value.
+
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
 
 ## Error
 ### Properties

@@ -171,6 +171,18 @@
 * **ApiVersion**: 2024-10-02-preview
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2024-10-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2024-10-02-preview
+* **Input**: [PrivateLinkResource](#privatelinkresource)
+* **Output**: [PrivateLinkResource](#privatelinkresource)
+
+## Function runCommand (Microsoft.ContainerService/managedClusters@2024-10-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2024-10-02-preview
+* **Input**: [RunCommandRequest](#runcommandrequest)
+* **Output**: [RunCommandResult](#runcommandresult)
+
 ## AbsoluteMonthlySchedule
 ### Properties
 * **dayOfMonth**: int {minValue: 1, maxValue: 31} (Required): The date of the month.
@@ -260,6 +272,15 @@
 ## ClusterUpgradeSettings
 ### Properties
 * **overrideSettings**: [UpgradeOverrideSettings](#upgradeoverridesettings): Settings for overrides.
+
+## CommandResultProperties
+### Properties
+* **exitCode**: int (ReadOnly): The exit code of the command
+* **finishedAt**: string (ReadOnly): The time when the command finished.
+* **logs**: string (ReadOnly): The command output.
+* **provisioningState**: string (ReadOnly): provisioning State
+* **reason**: string (ReadOnly): An explanation of why provisioningState is set to failed (if so).
+* **startedAt**: string (ReadOnly): The time when the command started.
 
 ## CompatibleVersions
 ### Properties
@@ -1125,6 +1146,17 @@
 ## ResourceReference
 ### Properties
 * **id**: string: The fully qualified Azure resource id.
+
+## RunCommandRequest
+### Properties
+* **clusterToken**: string: AuthToken issued for AKS AAD Server App.
+* **command**: string (Required): The command to run.
+* **context**: string: A base64 encoded zip file containing the files required by the command.
+
+## RunCommandResult
+### Properties
+* **id**: string (ReadOnly): The command id.
+* **properties**: [CommandResultProperties](#commandresultproperties): Properties of command result.
 
 ## SafeguardsAvailableVersionsProperties
 ### Properties

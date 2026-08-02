@@ -10214,5 +10214,1453 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SshPublicKeyGenerateKeyPairResult",
+    "properties": {
+      "privateKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Private key portion of the key pair used to authenticate to a virtual machine through ssh. The private key is returned in RFC3447 format and should be treated as a secret."
+      },
+      "publicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Public key portion of the key pair used to authenticate to a virtual machine through ssh. The public key is in ssh-rsa format."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{SshPublicKeyName}"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateKeyPair",
+    "resourceType": "Microsoft.Compute/sshPublicKeys",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/753"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureParameters",
+    "properties": {
+      "vhdPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The captured virtual hard disk's name prefix."
+      },
+      "destinationContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination container name."
+      },
+      "overwriteVhds": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "Specifies whether to overwrite the destination virtual hard disk, in case of conflict."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResult",
+    "properties": {
+      "$schema": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the schema of the captured virtual machine"
+      },
+      "contentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the version of the content"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "parameters of the captured virtual machine"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/757"
+        },
+        "flags": 2,
+        "description": "a list of resource items of the captured virtual machine"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capture",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/756"
+    },
+    "input": {
+      "$ref": "#/755"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineReimageParameters",
+    "properties": {
+      "tempDisk": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetrieveBootDiagnosticsDataResult",
+    "properties": {
+      "consoleScreenshotBlobUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The console screenshot blob URI"
+      },
+      "serialConsoleLogBlobUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The serial console log blob URI."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveBootDiagnosticsData",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/760"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineAssessPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/768"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
+      },
+      "assessmentActivityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs."
+      },
+      "rebootPending": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred."
+      },
+      "criticalAndSecurityPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of critical or security patches that have been detected as available and not yet installed."
+      },
+      "otherPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of all available patches excluding critical and security."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "availablePatches": {
+        "type": {
+          "$ref": "#/779"
+        },
+        "flags": 2,
+        "description": "The list of patches that have been detected as available for installation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/763"
+      },
+      {
+        "$ref": "#/764"
+      },
+      {
+        "$ref": "#/765"
+      },
+      {
+        "$ref": "#/766"
+      },
+      {
+        "$ref": "#/767"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineSoftwarePatchProperties",
+    "properties": {
+      "patchId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique identifier for the patch."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The friendly name of the patch."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version number of the patch. This property applies only to Linux patches."
+      },
+      "kbId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The KBID of the patch. Only applies to Windows patches."
+      },
+      "classifications": {
+        "type": {
+          "$ref": "#/770"
+        },
+        "flags": 2,
+        "description": "The classification(s) of the patch as provided by the patch publisher."
+      },
+      "rebootBehavior": {
+        "type": {
+          "$ref": "#/775"
+        },
+        "flags": 2,
+        "description": "Describes the reboot requirements of the patch."
+      },
+      "activityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs."
+      },
+      "publishedDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the repository published this patch."
+      },
+      "lastModifiedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp of the last update to this patch record."
+      },
+      "assessmentState": {
+        "type": {
+          "$ref": "#/778"
+        },
+        "flags": 2,
+        "description": "Describes the availability of a given patch."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeverReboots"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlwaysRequiresReboot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CanRequestReboot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/771"
+      },
+      {
+        "$ref": "#/772"
+      },
+      {
+        "$ref": "#/773"
+      },
+      {
+        "$ref": "#/774"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/776"
+      },
+      {
+        "$ref": "#/777"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/769"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "assessPatches",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/762"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineInstallPatchesParameters",
+    "properties": {
+      "maximumDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Specifies the maximum amount of time that the operation will run. It must be an ISO 8601-compliant duration string such as PT4H (4 hours)"
+      },
+      "rebootSetting": {
+        "type": {
+          "$ref": "#/785"
+        },
+        "flags": 1,
+        "description": "Defines when it is acceptable to reboot a VM during a software update operation."
+      },
+      "windowsParameters": {
+        "type": {
+          "$ref": "#/786"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Windows VM, as directly received by the API"
+      },
+      "linuxParameters": {
+        "type": {
+          "$ref": "#/799"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Linux VM, as directly received by the API"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IfRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Never"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Always"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/782"
+      },
+      {
+        "$ref": "#/783"
+      },
+      {
+        "$ref": "#/784"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WindowsParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/796"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Windows."
+      },
+      "kbNumbersToInclude": {
+        "type": {
+          "$ref": "#/797"
+        },
+        "flags": 0,
+        "description": "Kbs to include in the patch operation"
+      },
+      "kbNumbersToExclude": {
+        "type": {
+          "$ref": "#/798"
+        },
+        "flags": 0,
+        "description": "Kbs to exclude in the patch operation"
+      },
+      "excludeKbsRequiringReboot": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Filters out Kbs that don't have an InstallationRebootBehavior of 'NeverReboots' when this is set to true."
+      },
+      "maxPatchPublishDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is used to install patches that were published on or before this given max published date."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateRollUp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeaturePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServicePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Definition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updates"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/787"
+      },
+      {
+        "$ref": "#/788"
+      },
+      {
+        "$ref": "#/789"
+      },
+      {
+        "$ref": "#/790"
+      },
+      {
+        "$ref": "#/791"
+      },
+      {
+        "$ref": "#/792"
+      },
+      {
+        "$ref": "#/793"
+      },
+      {
+        "$ref": "#/794"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/795"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinuxParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/804"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Linux."
+      },
+      "packageNameMasksToInclude": {
+        "type": {
+          "$ref": "#/805"
+        },
+        "flags": 0,
+        "description": "packages to include in the patch operation. Format: packageName_packageVersion"
+      },
+      "packageNameMasksToExclude": {
+        "type": {
+          "$ref": "#/806"
+        },
+        "flags": 0,
+        "description": "packages to exclude in the patch operation. Format: packageName_packageVersion"
+      },
+      "maintenanceRunId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is used as a maintenance run identifier for Auto VM Guest Patching in Linux."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/800"
+      },
+      {
+        "$ref": "#/801"
+      },
+      {
+        "$ref": "#/802"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/803"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineInstallPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/813"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Failed\", \"Succeeded\", \"Unknown\" or \"CompletedWithWarnings.\""
+      },
+      "installationActivityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs."
+      },
+      "rebootStatus": {
+        "type": {
+          "$ref": "#/820"
+        },
+        "flags": 2,
+        "description": "The reboot state of the VM following completion of the operation."
+      },
+      "maintenanceWindowExceeded": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "Whether the operation ran out of time before it completed all its intended actions."
+      },
+      "excludedPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of patches that were not installed due to the user blocking their installation."
+      },
+      "notSelectedPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of patches that were detected as available for install, but did not meet the operation's criteria."
+      },
+      "pendingPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of patches that were identified as meeting the installation criteria, but were not able to be installed. Typically this happens when maintenanceWindowExceeded == true."
+      },
+      "installedPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of patches successfully installed."
+      },
+      "failedPatchCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The number of patches that could not be installed due to some issue. See errors for details."
+      },
+      "patches": {
+        "type": {
+          "$ref": "#/830"
+        },
+        "flags": 2,
+        "description": "The patches that were installed during the operation."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/808"
+      },
+      {
+        "$ref": "#/809"
+      },
+      {
+        "$ref": "#/810"
+      },
+      {
+        "$ref": "#/811"
+      },
+      {
+        "$ref": "#/812"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotNeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/814"
+      },
+      {
+        "$ref": "#/815"
+      },
+      {
+        "$ref": "#/816"
+      },
+      {
+        "$ref": "#/817"
+      },
+      {
+        "$ref": "#/818"
+      },
+      {
+        "$ref": "#/819"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchInstallationDetail",
+    "properties": {
+      "patchId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique identifier for the patch."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The friendly name of the patch."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version string of the package. It may conform to Semantic Versioning. Only applies to Linux."
+      },
+      "kbId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The KBID of the patch. Only applies to Windows patches."
+      },
+      "classifications": {
+        "type": {
+          "$ref": "#/822"
+        },
+        "flags": 2,
+        "description": "The classification(s) of the patch as provided by the patch publisher."
+      },
+      "installationState": {
+        "type": {
+          "$ref": "#/829"
+        },
+        "flags": 2,
+        "description": "The state of the patch after the installation operation completed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Installed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Excluded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSelected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/823"
+      },
+      {
+        "$ref": "#/824"
+      },
+      {
+        "$ref": "#/825"
+      },
+      {
+        "$ref": "#/826"
+      },
+      {
+        "$ref": "#/827"
+      },
+      {
+        "$ref": "#/828"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/821"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installPatches",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/807"
+    },
+    "input": {
+      "$ref": "#/781"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInput",
+    "properties": {
+      "commandId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command id."
+      },
+      "script": {
+        "type": {
+          "$ref": "#/833"
+        },
+        "flags": 0,
+        "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/834"
+        },
+        "flags": 0,
+        "description": "The run command parameters."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/682"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/836"
+        },
+        "flags": 0,
+        "description": "Run command operation response."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/835"
+    },
+    "input": {
+      "$ref": "#/832"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/839"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/841"
+        },
+        "flags": 1,
+        "description": "The virtual machine scale set instance ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetReimageParameters",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/843"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      },
+      "tempDisk": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMScaleSetConvertToSinglePlacementGroupInput",
+    "properties": {
+      "activePlacementGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the placement group in which you want future virtual machine instances to be placed. To query placement group Id, please use Virtual Machine Scale Set VMs - Get API. If not provided, the platform will choose one with maximum number of virtual machine instances."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrchestrationServiceStateInput",
+    "properties": {
+      "serviceName": {
+        "type": {
+          "$ref": "#/847"
+        },
+        "flags": 1,
+        "description": "The name of the service."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/850"
+        },
+        "flags": 1,
+        "description": "The action to be performed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutomaticRepairs"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/846"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resume"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspend"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/848"
+      },
+      {
+        "$ref": "#/849"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMReimageParameters",
+    "properties": {
+      "tempDisk": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveBootDiagnosticsData",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/760"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/835"
+    },
+    "input": {
+      "$ref": "#/832"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestRateByIntervalInput",
+    "properties": {
+      "intervalLength": {
+        "type": {
+          "$ref": "#/859"
+        },
+        "flags": 1,
+        "description": "Interval value in minutes used to create LogAnalytics call rate logs."
+      },
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      },
+      "groupByClientApplicationId": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Client Application ID."
+      },
+      "groupByUserAgent": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by User Agent."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FiveMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThirtyMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SixtyMins"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/855"
+      },
+      {
+        "$ref": "#/856"
+      },
+      {
+        "$ref": "#/857"
+      },
+      {
+        "$ref": "#/858"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/861"
+        },
+        "flags": 2,
+        "description": "LogAnalyticsOutput"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOutput",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Output file Uri path to blob container."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRequestRateByInterval",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/860"
+    },
+    "input": {
+      "$ref": "#/854"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottledRequestsInput",
+    "properties": {
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      },
+      "groupByClientApplicationId": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by Client Application ID."
+      },
+      "groupByUserAgent": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Group query result by User Agent."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getThrottledRequests",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2021-03-01",
+    "output": {
+      "$ref": "#/860"
+    },
+    "input": {
+      "$ref": "#/863"
+    }
   }
 ]

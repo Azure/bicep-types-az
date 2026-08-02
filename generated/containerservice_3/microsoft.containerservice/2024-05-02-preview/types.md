@@ -68,6 +68,22 @@
 * **ApiVersion**: 2024-05-02-preview
 * **Output**: [FleetCredentialResults](#fleetcredentialresults)
 
+## Function skip (Microsoft.ContainerService/fleets/updateRuns@2024-05-02-preview)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2024-05-02-preview
+* **Input**: [SkipProperties](#skipproperties)
+* **Output**: [UpdateRun](#updaterun)
+
+## Function start (Microsoft.ContainerService/fleets/updateRuns@2024-05-02-preview)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2024-05-02-preview
+* **Output**: [UpdateRun](#updaterun)
+
+## Function stop (Microsoft.ContainerService/fleets/updateRuns@2024-05-02-preview)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2024-05-02-preview
+* **Output**: [UpdateRun](#updaterun)
+
 ## AgentProfile
 ### Properties
 * **subnetId**: string: The ID of the subnet which the Fleet hub node will join on startup. If this is not specified, a vnet and subnet will be generated and used.
@@ -179,6 +195,17 @@ By default, this is set to False.
 ### Properties
 * **version**: string (ReadOnly): The image version to upgrade the nodes to (e.g., 'AKSUbuntu-1804gen2containerd-2022.12.13').
 
+## SkipProperties
+### Properties
+* **targets**: [SkipTarget](#skiptarget)[] (Required): The targets to skip.
+
+## SkipTarget
+### Properties
+* **name**: string (Required): The skip target's name. 
+To skip a member/group/stage, use the member/group/stage's name;
+Tp skip an after stage wait, use the parent stage's name.
+* **type**: 'AfterStageWait' | 'Group' | 'Member' | 'Stage' | string (Required): The skip target type.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -203,6 +230,15 @@ It must match a group name of an existing fleet member.
 * **members**: [MemberUpdateStatus](#memberupdatestatus)[] (ReadOnly): The list of member this UpdateGroup updates.
 * **name**: string (ReadOnly): The name of the UpdateGroup.
 * **status**: [UpdateStatus](#updatestatus) (ReadOnly): The status of the UpdateGroup.
+
+## UpdateRun
+### Properties
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [UpdateRunProperties](#updaterunproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## UpdateRunProperties
 ### Properties

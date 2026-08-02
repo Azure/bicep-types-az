@@ -4655,11 +4655,24 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ClusterMigrateRequest",
+    "properties": {
+      "clusterResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource ID of the destination cluster or kusto pool."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "FollowerDatabaseListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "The list of follower database result."
@@ -4700,7 +4713,7 @@
       },
       "databaseShareOrigin": {
         "type": {
-          "$ref": "#/424"
+          "$ref": "#/425"
         },
         "flags": 2,
         "description": "The origin of the following setup."
@@ -4723,13 +4736,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/421"
-      },
-      {
         "$ref": "#/422"
       },
       {
         "$ref": "#/423"
+      },
+      {
+        "$ref": "#/424"
       },
       {
         "$ref": "#/2"
@@ -4739,7 +4752,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/420"
+      "$ref": "#/421"
     }
   },
   {
@@ -4748,7 +4761,35 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2023-05-02",
     "output": {
-      "$ref": "#/419"
+      "$ref": "#/420"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnoseVirtualNetworkResult",
+    "properties": {
+      "findings": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 0,
+        "description": "The list of network connectivity diagnostic finding"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "diagnoseVirtualNetwork",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/428"
     }
   },
   {
@@ -4762,11 +4803,262 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ClusterPrincipalAssignmentCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Principal Assignment resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Kusto/clusters/principalAssignments."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/principalAssignments"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Specifies a Boolean value that indicates if the name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name that was checked."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/437"
+        },
+        "flags": 0,
+        "description": "Message providing the reason why the given name is invalid."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/435"
+      },
+      {
+        "$ref": "#/436"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPrincipalAssignmentNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/432"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/442"
+        },
+        "flags": 1,
+        "description": "The type of resource, for instance Microsoft.Kusto/clusters/databases."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/attachedDatabaseConfigurations"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/440"
+      },
+      {
+        "$ref": "#/441"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/439"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AttachedDatabaseConfigurationsCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Attached database resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/445"
+        },
+        "flags": 1,
+        "description": "The type of resource, for instance Microsoft.Kusto/clusters/attachedDatabaseConfigurations."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/attachedDatabaseConfigurations"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "attachedDatabaseConfigurationCheckNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/444"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedPrivateEndpointsCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Managed private endpoint resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/448"
+        },
+        "flags": 1,
+        "description": "The type of resource, for instance Microsoft.Kusto/clusters/managedPrivateEndpoints."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/managedPrivateEndpoints"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "managedPrivateEndpointsCheckNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/447"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cluster name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/451"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Kusto/clusters."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Kusto/locations",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatabasePrincipalListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/441"
+          "$ref": "#/466"
         },
         "flags": 0,
         "description": "The list of Kusto database principals."
@@ -4779,7 +5071,7 @@
     "properties": {
       "role": {
         "type": {
-          "$ref": "#/436"
+          "$ref": "#/461"
         },
         "flags": 1,
         "description": "Database principal role."
@@ -4793,7 +5085,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/440"
+          "$ref": "#/465"
         },
         "flags": 1,
         "description": "Database principal type."
@@ -4856,22 +5148,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/430"
+        "$ref": "#/455"
       },
       {
-        "$ref": "#/431"
+        "$ref": "#/456"
       },
       {
-        "$ref": "#/432"
+        "$ref": "#/457"
       },
       {
-        "$ref": "#/433"
+        "$ref": "#/458"
       },
       {
-        "$ref": "#/434"
+        "$ref": "#/459"
       },
       {
-        "$ref": "#/435"
+        "$ref": "#/460"
       },
       {
         "$ref": "#/2"
@@ -4894,13 +5186,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/437"
+        "$ref": "#/462"
       },
       {
-        "$ref": "#/438"
+        "$ref": "#/463"
       },
       {
-        "$ref": "#/439"
+        "$ref": "#/464"
       },
       {
         "$ref": "#/2"
@@ -4910,7 +5202,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/429"
+      "$ref": "#/454"
     }
   },
   {
@@ -4919,7 +5211,412 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2023-05-02",
     "output": {
-      "$ref": "#/428"
+      "$ref": "#/453"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabasePrincipalListRequest",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/469"
+        },
+        "flags": 0,
+        "description": "The list of Kusto database principals."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/454"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addPrincipals",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/453"
+    },
+    "input": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removePrincipals",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/453"
+    },
+    "input": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseInviteFollowerRequest",
+    "properties": {
+      "inviteeEmail": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The email of the invited user for which the follower invitation is generated."
+      },
+      "tableLevelSharingProperties": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "Table level sharing specifications"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseInviteFollowerResult",
+    "properties": {
+      "generatedInvitation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The generated invitation token."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "inviteFollower",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/473"
+    },
+    "input": {
+      "$ref": "#/472"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabasePrincipalAssignmentCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Principal Assignment resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/476"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Kusto/clusters/databases/principalAssignments."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases/principalAssignments"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPrincipalAssignmentNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/475"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScriptCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Script name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/479"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Kusto/clusters/databases/scripts."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases/scripts"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scriptsCheckNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/478"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataConnectionValidation",
+    "properties": {
+      "dataConnectionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the data connection."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/482"
+        },
+        "flags": 0,
+        "description": "The data connection properties to validate."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DataConnection",
+    "discriminator": "kind",
+    "baseProperties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    },
+    "elements": {
+      "CosmosDb": {
+        "$ref": "#/483"
+      },
+      "EventGrid": {
+        "$ref": "#/485"
+      },
+      "EventHub": {
+        "$ref": "#/487"
+      },
+      "IotHub": {
+        "$ref": "#/489"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CosmosDbDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 0,
+        "description": "The properties of the CosmosDb data connection."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/484"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CosmosDb"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventGridDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 0,
+        "description": "The properties of the Event Grid data connection."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/486"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventGrid"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHubDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 0,
+        "description": "The Event Hub data connection properties to validate."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 0,
+        "description": "The Iot Hub data connection properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/490"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IotHub"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataConnectionValidationListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 0,
+        "description": "The list of Kusto data connection validation errors."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataConnectionValidationResult",
+    "properties": {
+      "errorMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message which indicates a problem in data connection validation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/492"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dataConnectionValidation",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/491"
+    },
+    "input": {
+      "$ref": "#/481"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataConnectionCheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Data Connection name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Kusto/clusters/databases/dataConnections."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases/dataConnections"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2023-05-02",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/495"
     }
   }
 ]

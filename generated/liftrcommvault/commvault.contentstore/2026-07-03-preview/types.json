@@ -2396,5 +2396,555 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LatestLinkedSaaSResponse",
+    "properties": {
+      "saaSResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SaaS resource id"
+      },
+      "isHiddenSaaS": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Flag indicating if the SaaS resource is hidden"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "latestLinkedSaaS",
+    "resourceType": "Commvault.ContentStore/cloudAccounts",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/219"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaaSData",
+    "properties": {
+      "saaSResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SaaS resource id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudAccount",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkSaaS",
+    "resourceType": "Commvault.ContentStore/cloudAccounts",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/223"
+    },
+    "input": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupProtectionGroupRequest",
+    "properties": {
+      "vmList": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 1,
+        "description": "The vm list details."
+      },
+      "backupOptions": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 1,
+        "description": "The backup options for the VM backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmListItem",
+    "properties": {
+      "vmGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The GUID of the VM to backup"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupOptions",
+    "properties": {
+      "backupLevel": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 0,
+        "description": "Indicates whether to stop backup or not for the VM"
+      },
+      "jobDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the backup job to be shown in Commvault"
+      },
+      "backupCopyImmediately": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Indicates whether to run backup immediately or not for the VM"
+      },
+      "runSnapShotBackup": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Indicates whether to run snapshot backup or not for the VM, if false, it will run regular backup"
+      },
+      "notifyUserOnJobCompletion": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Indicates whether to notify the user on job completion"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FULL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "INCREMENTAL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DIFFERENTIAL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SYNTHETIC_FULL"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupProtectionGroupResponse",
+    "properties": {
+      "taskId": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 3,
+        "description": "The Commvault response for taskId"
+      },
+      "jobIds": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 3,
+        "description": "The jobIds returned from Commvault."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreProtectionItemRequest",
+    "properties": {
+      "inPlaceRestore": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Check whether inplace or out of place restore."
+      },
+      "restoreType": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "Type of Restore"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time to restore"
+      },
+      "vmDestinationInfo": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 1,
+        "description": "The vm destination details of the VM."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NONE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VIRTUAL_MACHINE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISK_ATTACH"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/241"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmDestinationInfo",
+    "properties": {
+      "vmInfoList": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 1,
+        "description": "List of information on VMs"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmInfo",
+    "properties": {
+      "sourceVmGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The GUID of VM to be restored."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The storage account to be used for restore."
+      },
+      "powerOnVmAfterRestore": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "The identifier to check if VM needs to be powered on."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the VM."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource group of the VM."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region of the VM."
+      },
+      "networkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The network Id of the VM."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subnet Id of the VM."
+      },
+      "attachAndSwapOsDisk": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "The identifier to check if to attach and swap disk of the VM."
+      },
+      "targetVmGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The GUID of target VM used in DISK ATTACH."
+      },
+      "vmtags": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 0,
+        "description": "The vmTag of the VM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmTag",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of VM tag."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The value of VM tag."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/245"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreProtectionItemResponse",
+    "properties": {
+      "taskId": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 3,
+        "description": "The Commvault response for taskId"
+      },
+      "jobIds": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 3,
+        "description": "The jobIds returned from Commvault."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/248"
+    },
+    "input": {
+      "$ref": "#/238"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorePoints",
+    "properties": {
+      "restoreTimes": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 3,
+        "description": "The Commvault Protected Item Restore points"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRestorePoints",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
+    "apiVersion": "2026-07-03-preview",
+    "output": {
+      "$ref": "#/248"
+    },
+    "input": {
+      "$ref": "#/238"
+    }
   }
 ]

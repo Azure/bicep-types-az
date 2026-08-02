@@ -209,5 +209,182 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementScoresInput",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The desired virtual machine SKU sizes."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSize",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource's CRP virtual machine SKU size."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpotPlacementScoresResponse",
+    "properties": {
+      "desiredLocations": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The desired regions"
+      },
+      "desiredSizes": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The desired virtual machine SKU sizes."
+      },
+      "desiredCount": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Desired instance count per region/zone based on the scope."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Defines if the scope is zonal or regional."
+      },
+      "placementScores": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlacementScore",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource's CRP virtual machine SKU size."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region."
+      },
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The availability zone."
+      },
+      "score": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
+      },
+      "isQuotaAvailable": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Whether the desired quota is available."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generate",
+    "resourceType": "Microsoft.Compute/locations/placementScores",
+    "apiVersion": "2025-06-05",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/19"
+    }
   }
 ]

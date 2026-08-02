@@ -70,6 +70,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reconcile (Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2023-08-01-preview)
+* **Resource**: Microsoft.Network/networkSecurityPerimeters/resourceAssociations
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function reconcile (Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2023-08-01-preview)
+* **Resource**: Microsoft.Network/networkSecurityPerimeters/profiles/accessRules
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: any
+* **Output**: any
+
 ## NetworkSecurityPerimeterProperties
 ### Properties
 * **perimeterGuid**: string (ReadOnly): perimeter guid of the network security perimeter.

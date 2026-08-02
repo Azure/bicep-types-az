@@ -46,6 +46,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/mongoClusters/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkMongoClusterNameAvailability (Microsoft.DocumentDB/locations@2025-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/locations
+* **ApiVersion**: 2025-04-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function listConnectionStrings (Microsoft.DocumentDB/mongoClusters@2025-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/mongoClusters
 * **ApiVersion**: 2025-04-01-preview
@@ -63,6 +69,17 @@
 ## BackupProperties
 ### Properties
 * **earliestRestoreTime**: string (ReadOnly): Earliest restore timestamp in UTC ISO8601 format.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## ComputeProperties
 ### Properties

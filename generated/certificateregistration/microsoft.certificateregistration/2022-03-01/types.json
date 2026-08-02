@@ -1442,5 +1442,223 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteSealRequest",
+    "properties": {
+      "lightTheme": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "If <code>true</code> use the light color theme for site seal; otherwise, use the default color theme."
+      },
+      "locale": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Locale of site seal."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteSeal",
+    "properties": {
+      "html": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "HTML snippet"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveSiteSeal",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/120"
+    },
+    "input": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateOrderAction",
+    "properties": {
+      "actionType": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 2,
+        "description": "Action type."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the certificate action was performed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateIssued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateOrderCanceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateOrderCreated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateRevoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainValidationComplete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FraudDetected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OrgNameChange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OrgValidationComplete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SanDrop"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FraudCleared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateExpired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateExpirationWarning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FraudDocumentationRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/122"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveCertificateActions",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateEmail",
+    "properties": {
+      "emailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Email id."
+      },
+      "timeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time stamp."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveEmailHistory",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/141"
+    }
   }
 ]

@@ -184,6 +184,35 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/oracleSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function action (Oracle.Database/cloudVmClusters/dbNodes@2023-09-01)
+* **Resource**: Oracle.Database/cloudVmClusters/dbNodes
+* **ApiVersion**: 2023-09-01
+* **Input**: [DbNodeAction](#dbnodeaction)
+* **Output**: [DbNode](#dbnode)
+
+## Function addStorageCapacity (Oracle.Database/cloudExadataInfrastructures@2023-09-01)
+* **Resource**: Oracle.Database/cloudExadataInfrastructures
+* **ApiVersion**: 2023-09-01
+* **Output**: [CloudExadataInfrastructure](#cloudexadatainfrastructure)
+
+## Function addVms (Oracle.Database/cloudVmClusters@2023-09-01)
+* **Resource**: Oracle.Database/cloudVmClusters
+* **ApiVersion**: 2023-09-01
+* **Input**: [AddRemoveDbNode](#addremovedbnode)
+* **Output**: [CloudVmCluster](#cloudvmcluster)
+
+## Function failover (Oracle.Database/autonomousDatabases@2023-09-01)
+* **Resource**: Oracle.Database/autonomousDatabases
+* **ApiVersion**: 2023-09-01
+* **Input**: [PeerDbDetails](#peerdbdetails)
+* **Output**: [AutonomousDatabase](#autonomousdatabase)
+
+## Function generateWallet (Oracle.Database/autonomousDatabases@2023-09-01)
+* **Resource**: Oracle.Database/autonomousDatabases
+* **ApiVersion**: 2023-09-01
+* **Input**: [GenerateAutonomousDatabaseWalletDetails](#generateautonomousdatabasewalletdetails)
+* **Output**: [AutonomousDatabaseWalletFile](#autonomousdatabasewalletfile)
+
 ## Function listActivationLinks (Oracle.Database/oracleSubscriptions@2023-09-01)
 * **Resource**: Oracle.Database/oracleSubscriptions
 * **ApiVersion**: 2023-09-01
@@ -205,10 +234,37 @@
 * **ApiVersion**: 2023-09-01
 * **Output**: [SaasSubscriptionDetails](#saassubscriptiondetails)
 
+## Function removeVms (Oracle.Database/cloudVmClusters@2023-09-01)
+* **Resource**: Oracle.Database/cloudVmClusters
+* **ApiVersion**: 2023-09-01
+* **Input**: [AddRemoveDbNode](#addremovedbnode)
+* **Output**: [CloudVmCluster](#cloudvmcluster)
+
+## Function restore (Oracle.Database/autonomousDatabases@2023-09-01)
+* **Resource**: Oracle.Database/autonomousDatabases
+* **ApiVersion**: 2023-09-01
+* **Input**: [RestoreAutonomousDatabaseDetails](#restoreautonomousdatabasedetails)
+* **Output**: [AutonomousDatabase](#autonomousdatabase)
+
+## Function shrink (Oracle.Database/autonomousDatabases@2023-09-01)
+* **Resource**: Oracle.Database/autonomousDatabases
+* **ApiVersion**: 2023-09-01
+* **Output**: [AutonomousDatabase](#autonomousdatabase)
+
+## Function switchover (Oracle.Database/autonomousDatabases@2023-09-01)
+* **Resource**: Oracle.Database/autonomousDatabases
+* **ApiVersion**: 2023-09-01
+* **Input**: [PeerDbDetails](#peerdbdetails)
+* **Output**: [AutonomousDatabase](#autonomousdatabase)
+
 ## ActivationLinks
 ### Properties
 * **existingCloudAccountActivationLink**: string (ReadOnly): Existing Cloud Account Activation Link
 * **newCloudAccountActivationLink**: string (ReadOnly): New Cloud Account Activation Link
+
+## AddRemoveDbNode
+### Properties
+* **dbServers**: (string {minLength: 1, maxLength: 255})[] (Required): Db servers ocids
 
 ## AllConnectionStringType
 ### Properties
@@ -220,6 +276,16 @@
 ### Properties
 * **apexVersion**: string: The Oracle APEX Application Development version.
 * **ordsVersion**: string: The Oracle REST Data Services (ORDS) version.
+
+## AutonomousDatabase
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [AutonomousDatabaseBaseProperties](#autonomousdatabasebaseproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## AutonomousDatabaseBackupProperties
 ### Properties
@@ -352,6 +418,10 @@
 * **timeDataGuardRoleChanged**: string: The date and time the Autonomous Data Guard role was switched for the standby Autonomous Database.
 * **timeDisasterRecoveryRoleChanged**: string: The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
 
+## AutonomousDatabaseWalletFile
+### Properties
+* **walletFiles**: string (Required): The base64 encoded wallet files
+
 ## AutonomousDbVersionProperties
 ### Properties
 * **dbWorkload**: 'AJD' | 'APEX' | 'DW' | 'OLTP' | string: The Autonomous Database workload type
@@ -365,6 +435,17 @@
 ### Properties
 * **cloudAccountHomeRegion**: string (ReadOnly): Cloud Account Home region
 * **cloudAccountName**: string (ReadOnly): Cloud Account name
+
+## CloudExadataInfrastructure
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CloudExadataInfrastructureProperties](#cloudexadatainfrastructureproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **zones**: string[] (Required): CloudExadataInfrastructure zones
 
 ## CloudExadataInfrastructureProperties
 ### Properties
@@ -399,6 +480,16 @@
 * **storageServerVersion**: string (ReadOnly): The software version of the storage servers (cells) in the Exadata infrastructure.
 * **timeCreated**: string (ReadOnly): The date and time the cloud Exadata infrastructure resource was created.
 * **totalStorageSizeInGbs**: int (ReadOnly): The total storage allocated to the cloud Exadata infrastructure resource, in gigabytes (GB).
+
+## CloudVmCluster
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CloudVmClusterProperties](#cloudvmclusterproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## CloudVmClusterProperties
 ### Properties
@@ -489,6 +580,18 @@
 * **dbName**: string: The database name. For the default DbPlan, the dbName is default.
 * **flashCacheLimit**: string: The flash cache limit for this database. This value is internally configured based on the share value assigned to the database.
 * **share**: int {minValue: 1, maxValue: 32}: The relative priority of this database.
+
+## DbNode
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DbNodeProperties](#dbnodeproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## DbNodeAction
+### Properties
+* **action**: 'Reset' | 'SoftReset' | 'Start' | 'Stop' | string (Required): Db action
 
 ## DbNodeProperties
 ### Properties
@@ -607,6 +710,12 @@
 * **lifecycleState**: 'BootStrapping' | 'Disabled' | 'Enabled' | 'Failed' | 'Updating' | string: The current state of IORM configuration for the Exadata DB system.
 * **objective**: 'Auto' | 'Balanced' | 'Basic' | 'HighThroughput' | 'LowLatency' | string: The current value for the IORM objective. The default is AUTO.
 
+## GenerateAutonomousDatabaseWalletDetails
+### Properties
+* **generateType**: 'All' | 'Single' | string: The type of wallet to generate.
+* **isRegional**: bool: True when requesting regional connection strings in PDB connect info, applicable to cross-region DG only.
+* **password**: string {sensitive} (Required): The password to encrypt the keys inside the wallet
+
 ## GiVersionProperties
 ### Properties
 * **version**: string {minLength: 1, maxLength: 255} (Required): A valid Oracle Grid Infrastructure (GI) software version.
@@ -650,6 +759,10 @@
 * **saasSubscriptionId**: string (ReadOnly): SAAS subscription ID generated by Marketplace
 * **termUnit**: string: Term Unit. P1Y, P3Y, etc, see Durations https://en.wikipedia.org/wiki/ISO_8601
 
+## PeerDbDetails
+### Properties
+* **peerDbId**: string {minLength: 1, maxLength: 255}: The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database.
+
 ## Plan
 ### Properties
 * **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
@@ -688,6 +801,10 @@
 * **tlsAuthentication**: 'Mutual' | 'Server' | string: Specifies whether the TLS handshake is using one-way (SERVER) or mutual (MUTUAL) authentication.
 * **value**: string (Required): Connection string value.
 
+## RestoreAutonomousDatabaseDetails
+### Properties
+* **timestamp**: string (Required): The time to restore the database to.
+
 ## SaasSubscriptionDetails
 ### Properties
 * **id**: string (ReadOnly): Purchased SaaS subscription ID
@@ -721,6 +838,21 @@
 ## SystemVersionProperties
 ### Properties
 * **systemVersion**: string (Required): A valid Oracle System Version
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

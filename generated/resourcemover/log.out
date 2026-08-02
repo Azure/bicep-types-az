@@ -28,6 +28,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2021-08-01/resourcemovercollection.json:2491:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping MoveCollections_ListRequiredFor due to required query parameter "sourceId"
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MoveResourceProperties-moveStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/preview/2019-10-01-preview/resourcemovercollection.json:1293:9
@@ -53,6 +54,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/preview/2019-10-01-preview/resourcemovercollection.json:2385:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping MoveCollections_ListRequiredFor due to required query parameter "sourceId"
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MoveResourceProperties-moveStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2021-01-01/resourcemovercollection.json:1293:9
@@ -78,6 +80,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2021-01-01/resourcemovercollection.json:2385:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping MoveCollections_ListRequiredFor due to required query parameter "sourceId"
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MoveResourceProperties-moveStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2022-08-01/resourcemovercollection.json:1293:9
@@ -103,6 +106,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2022-08-01/resourcemovercollection.json:2499:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping MoveCollections_ListRequiredFor due to required query parameter "sourceId"
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MoveResourceProperties-moveStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2023-08-01/resourcemovercollection.json:1305:9
@@ -128,3 +132,4 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resourcemover/resource-manager/Microsoft.Migrate/ResourceMover/stable/2023-08-01/resourcemovercollection.json:2513:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping MoveCollections_ListRequiredFor due to required query parameter "sourceId"
+warning | Unrecognized property type: any-object. Returning 'any'.

@@ -269,6 +269,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkQuotaAvailability (Microsoft.AVS/locations@2023-09-01)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2023-09-01
+* **Output**: [Quota](#quota)
+
+## Function checkTrialAvailability (Microsoft.AVS/locations@2023-09-01)
+* **Resource**: Microsoft.AVS/locations
+* **ApiVersion**: 2023-09-01
+* **Input**: [Sku](#sku)
+* **Output**: [Trial](#trial)
+
+## Function getExecutionLogs (Microsoft.AVS/privateClouds/scriptExecutions@2023-09-01)
+* **Resource**: Microsoft.AVS/privateClouds/scriptExecutions
+* **ApiVersion**: 2023-09-01
+* **Input**: ('Error' | 'Information' | 'Output' | 'Warning' | string)[]
+* **Output**: [ScriptExecution](#scriptexecution)
+
 ## Function listAdminCredentials (Microsoft.AVS/privateClouds@2023-09-01)
 * **Resource**: Microsoft.AVS/privateClouds
 * **ApiVersion**: 2023-09-01
@@ -506,6 +523,16 @@ stretched private cloud
 * **virtualNetworkId**: string: Azure resource ID of the virtual network
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
 
+## Quota
+### Properties
+* **hostsRemaining**: [QuotaHostsRemaining](#quotahostsremaining) (ReadOnly): Remaining hosts quota by sku type
+* **quotaEnabled**: 'Disabled' | 'Enabled' | string (ReadOnly): Host quota is active for current subscription
+
+## QuotaHostsRemaining
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
 ## ScriptCmdletProperties
 ### Properties
 * **audience**: 'Any' | 'Automation' | string (ReadOnly): Specifies whether a script cmdlet is intended to be invoked only through automation or visible to customers
@@ -513,6 +540,14 @@ stretched private cloud
 * **parameters**: [ScriptParameter](#scriptparameter)[] (ReadOnly): Parameters the script will accept
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **timeout**: string (ReadOnly): Recommended time limit for execution
+
+## ScriptExecution
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ScriptExecutionProperties](#scriptexecutionproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ScriptExecutionParameter
 * **Discriminator**: type
@@ -607,6 +642,11 @@ when executing
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Trial
+### Properties
+* **availableHosts**: int (ReadOnly): Number of trial hosts available
+* **status**: 'TrialAvailable' | 'TrialDisabled' | 'TrialUsed' | string (ReadOnly): Trial status
 
 ## VirtualMachineProperties
 ### Properties

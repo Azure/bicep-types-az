@@ -55,6 +55,45 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppComplianceAutomation/reports/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppComplianceAutomation/reports@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports
+* **ApiVersion**: 2024-06-27
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function download (Microsoft.AppComplianceAutomation/reports/evidences@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports/evidences
+* **ApiVersion**: 2024-06-27
+* **Input**: [EvidenceFileDownloadRequest](#evidencefiledownloadrequest)
+* **Output**: [EvidenceFileDownloadResponse](#evidencefiledownloadresponse)
+
+## Function download (Microsoft.AppComplianceAutomation/reports/snapshots@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports/snapshots
+* **ApiVersion**: 2024-06-27
+* **Input**: [SnapshotDownloadRequest](#snapshotdownloadrequest)
+* **Output**: [DownloadResponse](#downloadresponse)
+
+## Function fix (Microsoft.AppComplianceAutomation/reports@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports
+* **ApiVersion**: 2024-06-27
+* **Output**: [ReportFixResult](#reportfixresult)
+
+## Function getScopingQuestions (Microsoft.AppComplianceAutomation/reports@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports
+* **ApiVersion**: 2024-06-27
+* **Output**: [ScopingQuestions](#scopingquestions)
+
+## Function syncCertRecord (Microsoft.AppComplianceAutomation/reports@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports
+* **ApiVersion**: 2024-06-27
+* **Input**: [SyncCertRecordRequest](#synccertrecordrequest)
+* **Output**: [SyncCertRecordResponse](#synccertrecordresponse)
+
+## Function verify (Microsoft.AppComplianceAutomation/reports@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation/reports
+* **ApiVersion**: 2024-06-27
+* **Output**: [ReportVerificationResult](#reportverificationresult)
+
 ## Category
 ### Properties
 * **categoryName**: string (ReadOnly): The name of the compliance category. e.g. "Operational Security"
@@ -67,6 +106,32 @@
 * **controls**: [ControlSyncRecord](#controlsyncrecord)[]: The control records list to be synchronized.
 * **ingestionStatus**: string: Indicates the status of compliance process.
 * **offerGuid**: string {minLength: 1}: The offerGuid which mapping to the reports.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
+## ComplianceReportItem
+### Properties
+* **categoryName**: string (ReadOnly): The category name.
+* **controlFamilyName**: string (ReadOnly): The control family name.
+* **controlId**: string (ReadOnly): The control Id - e.g. "1".
+* **controlName**: string (ReadOnly): The control name.
+* **controlStatus**: 'Failed' | 'NotApplicable' | 'Passed' | 'PendingApproval' | string (ReadOnly): Control status.
+* **resourceId**: string (ReadOnly): The Id of the resource.
+* **resourceOrigin**: 'AWS' | 'Azure' | 'GCP' | string (ReadOnly): Resource origin.
+* **resourceStatus**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Resource status.
+* **resourceStatusChangeDate**: string (ReadOnly): The status change date for the resource.
+* **resourceType**: string (ReadOnly): The type of the resource.  e.g. "Microsoft.SignalRService/SignalR"
+* **responsibilityDescription**: string (ReadOnly): The description of the customer responsibility.
+* **responsibilityTitle**: string (ReadOnly): The title of the customer responsibility.
 
 ## ComplianceResult
 ### Properties
@@ -93,6 +158,34 @@
 ### Properties
 * **controlId**: string: The Id of the control. e.g. "Operational_Security_10"
 * **controlStatus**: string: Control status synchronized from app compliance.
+
+## DownloadResponse
+### Properties
+* **complianceDetailedPdfReport**: [DownloadResponseComplianceDetailedPdfReport](#downloadresponsecompliancedetailedpdfreport) (ReadOnly): The detailed compliance pdf report
+* **compliancePdfReport**: [DownloadResponseCompliancePdfReport](#downloadresponsecompliancepdfreport) (ReadOnly): Compliance pdf report
+* **complianceReport**: [ComplianceReportItem](#compliancereportitem)[] (ReadOnly): List of the compliance result
+* **resourceList**: [ResourceItem](#resourceitem)[] (ReadOnly): Resource list of the report
+
+## DownloadResponseComplianceDetailedPdfReport
+### Properties
+* **sasUri**: string (ReadOnly): The uri of detailed compliance pdf report
+
+## DownloadResponseCompliancePdfReport
+### Properties
+* **sasUri**: string (ReadOnly): The uri of compliance pdf report
+
+## EvidenceFileDownloadRequest
+### Properties
+* **offerGuid**: string {minLength: 1}: The offerGuid which mapping to the reports.
+* **reportCreatorTenantId**: string: Tenant id.
+
+## EvidenceFileDownloadResponse
+### Properties
+* **evidenceFile**: [EvidenceFileDownloadResponseEvidenceFile](#evidencefiledownloadresponseevidencefile) (ReadOnly): The uri of evidence file
+
+## EvidenceFileDownloadResponseEvidenceFile
+### Properties
+* **url**: string (ReadOnly): The url of evidence file
 
 ## EvidenceProperties
 ### Properties
@@ -127,6 +220,11 @@
 ### Properties
 * **m365**: [OverviewStatus](#overviewstatus) (ReadOnly): The Microsoft 365 certification name.
 
+## ReportFixResult
+### Properties
+* **reason**: string (ReadOnly): If the report fix action failed, to indicate the detailed failed reason.
+* **result**: 'Failed' | 'Succeeded' | string (ReadOnly): Indicates whether the fix action is Succeeded or Failed.
+
 ## ReportProperties
 ### Properties
 * **certRecords**: [CertSyncRecord](#certsyncrecord)[] (ReadOnly): List of synchronized certification records.
@@ -144,6 +242,18 @@
 * **timeZone**: string (Required): Report collection trigger time's time zone, the available list can be obtained by executing "Get-TimeZone -ListAvailable" in PowerShell.
 An example of valid timezone id is "Pacific Standard Time".
 * **triggerTime**: string (Required): Report collection trigger time.
+
+## ReportVerificationResult
+### Properties
+* **reason**: string (ReadOnly): If the report verification action failed, to indicate the detailed failed reason.
+* **result**: 'Failed' | 'Succeeded' | string (ReadOnly): Indicates whether the report verification action is Succeeded or Failed.
+
+## ResourceItem
+### Properties
+* **resourceGroup**: string (ReadOnly): The resource group name of this resource.
+* **resourceId**: string (ReadOnly): The resource Id - e.g. "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1".
+* **resourceType**: string (ReadOnly): The resource type of this resource. e.g. "Microsoft.SignalRService/SignalR"
+* **subscriptionId**: string (ReadOnly): The subscription Id of this resource.
 
 ## ResourceMetadata
 ### Properties
@@ -190,6 +300,25 @@ An example of valid timezone id is "Pacific Standard Time".
 * **answers**: [ScopingAnswer](#scopinganswer)[]: List of scoping question answers.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Fixing' | 'Succeeded' | 'Updating' | 'Verifying' | string (ReadOnly): Azure lifecycle management
 
+## ScopingQuestion
+### Properties
+* **inputType**: 'Boolean' | 'Date' | 'Email' | 'Group' | 'MultiSelectCheckbox' | 'MultiSelectDropdown' | 'MultiSelectDropdownCustom' | 'MultilineText' | 'None' | 'Number' | 'SingleSelectDropdown' | 'SingleSelection' | 'Telephone' | 'Text' | 'Upload' | 'Url' | 'YearPicker' | 'YesNoNa' | string (Required, ReadOnly): Input type of the question answer.
+* **optionIds**: string[] (Required, ReadOnly): Option id list.
+* **questionId**: string (Required, ReadOnly): Question id.
+* **rules**: ('AzureApplication' | 'CharLength' | 'CreditCardPCI' | 'Domains' | 'DynamicDropdown' | 'PreventNonEnglishChar' | 'PublicSOX' | 'PublisherVerification' | 'Required' | 'USPrivacyShield' | 'Url' | 'Urls' | 'ValidEmail' | 'ValidGuid' | string)[] (Required, ReadOnly): The rule of the question.
+* **showSubQuestionsValue**: string (ReadOnly): The answer value to show the sub questions.
+* **superiorQuestionId**: string (ReadOnly): Superior question id.
+
+## ScopingQuestions
+### Properties
+* **questions**: [ScopingQuestion](#scopingquestion)[]: List of scoping questions.
+
+## SnapshotDownloadRequest
+### Properties
+* **downloadType**: 'ComplianceDetailedPdfReport' | 'CompliancePdfReport' | 'ComplianceReport' | 'ResourceList' | string (Required): Indicates the download type.
+* **offerGuid**: string {minLength: 1}: The offerGuid which mapping to the reports.
+* **reportCreatorTenantId**: string: Tenant id.
+
 ## SnapshotProperties
 ### Properties
 * **complianceResults**: [ComplianceResult](#complianceresult)[] (ReadOnly): List of compliance results.
@@ -205,6 +334,14 @@ An example of valid timezone id is "Pacific Standard Time".
 * **location**: string: The region of 'bring your own storage' account
 * **resourceGroup**: string: The resourceGroup which 'bring your own storage' account belongs to
 * **subscriptionId**: string: The subscription id which 'bring your own storage' account belongs to
+
+## SyncCertRecordRequest
+### Properties
+* **certRecord**: [CertSyncRecord](#certsyncrecord) (Required): certification record to be synchronized.
+
+## SyncCertRecordResponse
+### Properties
+* **certRecord**: [CertSyncRecord](#certsyncrecord): certification record synchronized.
 
 ## SystemData
 ### Properties

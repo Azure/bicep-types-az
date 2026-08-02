@@ -25980,5 +25980,4811 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayBackendHealth",
+    "properties": {
+      "backendAddressPools": {
+        "type": {
+          "$ref": "#/1960"
+        },
+        "flags": 0,
+        "description": "A list of ApplicationGatewayBackendHealthPool resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayBackendHealthPool",
+    "properties": {
+      "backendAddressPool": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Reference of an ApplicationGatewayBackendAddressPool resource."
+      },
+      "backendHttpSettingsCollection": {
+        "type": {
+          "$ref": "#/1959"
+        },
+        "flags": 0,
+        "description": "List of ApplicationGatewayBackendHealthHttpSettings resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayBackendHealthHttpSettings",
+    "properties": {
+      "backendHttpSettings": {
+        "type": {
+          "$ref": "#/434"
+        },
+        "flags": 0,
+        "description": "Reference of an ApplicationGatewayBackendHttpSettings resource."
+      },
+      "servers": {
+        "type": {
+          "$ref": "#/1958"
+        },
+        "flags": 0,
+        "description": "List of ApplicationGatewayBackendHealthServer resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayBackendHealthServer",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "IP address or FQDN of backend server."
+      },
+      "ipConfiguration": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "Reference of IP configuration of backend server."
+      },
+      "health": {
+        "type": {
+          "$ref": "#/1957"
+        },
+        "flags": 0,
+        "description": "Health of backend server."
+      },
+      "healthProbeLog": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health Probe Log."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Up"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Down"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Partial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Draining"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1952"
+      },
+      {
+        "$ref": "#/1953"
+      },
+      {
+        "$ref": "#/1954"
+      },
+      {
+        "$ref": "#/1955"
+      },
+      {
+        "$ref": "#/1956"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1951"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1950"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1949"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backendhealth",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/1948"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayOnDemandProbe",
+    "properties": {
+      "protocol": {
+        "type": {
+          "$ref": "#/1965"
+        },
+        "flags": 0,
+        "description": "The protocol used for the probe."
+      },
+      "host": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Host name to send the probe to."
+      },
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>."
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds."
+      },
+      "pickHostNameFromBackendHttpSettings": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Whether the host header should be picked from the backend http settings. Default value is false."
+      },
+      "match": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "Criterion for classifying a healthy probe response."
+      },
+      "backendAddressPool": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Reference of backend pool of application gateway to which probe request will be sent."
+      },
+      "backendHttpSettings": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Reference of backend http setting of application gateway to be used for test probe."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Http"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Https"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1963"
+      },
+      {
+        "$ref": "#/1964"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGatewayBackendHealthOnDemand",
+    "properties": {
+      "backendAddressPool": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Reference of an ApplicationGatewayBackendAddressPool resource."
+      },
+      "backendHealthHttpSettings": {
+        "type": {
+          "$ref": "#/1950"
+        },
+        "flags": 0,
+        "description": "Application gateway BackendHealthHttp settings."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBackendHealthOnDemand",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/1966"
+    },
+    "input": {
+      "$ref": "#/1962"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveRouteListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1986"
+        },
+        "flags": 0,
+        "description": "A list of effective routes."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveRoute",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the user defined route. This is optional."
+      },
+      "disableBgpRoutePropagation": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "If true, on-premises routes are not propagated to the network interfaces in the subnet."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/1974"
+        },
+        "flags": 0,
+        "description": "Who created the route."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/1977"
+        },
+        "flags": 0,
+        "description": "The value of effective route."
+      },
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/1978"
+        },
+        "flags": 0,
+        "description": "The address prefixes of the effective routes in CIDR notation."
+      },
+      "nextHopIpAddress": {
+        "type": {
+          "$ref": "#/1979"
+        },
+        "flags": 0,
+        "description": "The IP address of the next hop of the effective route."
+      },
+      "nextHopType": {
+        "type": {
+          "$ref": "#/1985"
+        },
+        "flags": 0,
+        "description": "The type of Azure hop the packet should be sent to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualNetworkGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1970"
+      },
+      {
+        "$ref": "#/1971"
+      },
+      {
+        "$ref": "#/1972"
+      },
+      {
+        "$ref": "#/1973"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1975"
+      },
+      {
+        "$ref": "#/1976"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualNetworkGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VnetLocal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualAppliance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1980"
+      },
+      {
+        "$ref": "#/1981"
+      },
+      {
+        "$ref": "#/1982"
+      },
+      {
+        "$ref": "#/1983"
+      },
+      {
+        "$ref": "#/1984"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1969"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "effectiveRouteTable",
+    "resourceType": "Microsoft.Network/networkInterfaces",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/1968"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroupListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2009"
+        },
+        "flags": 0,
+        "description": "A list of effective network security groups."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroup",
+    "properties": {
+      "networkSecurityGroup": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The ID of network security group that is applied."
+      },
+      "association": {
+        "type": {
+          "$ref": "#/1990"
+        },
+        "flags": 0,
+        "description": "Associated resources."
+      },
+      "effectiveSecurityRules": {
+        "type": {
+          "$ref": "#/2008"
+        },
+        "flags": 0,
+        "description": "A collection of effective security rules."
+      },
+      "tagMap": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Mapping of tags to list of IP Addresses included within the tag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityGroupAssociation",
+    "properties": {
+      "subnet": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The ID of the subnet if assigned."
+      },
+      "networkInterface": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The ID of the network interface if assigned."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveNetworkSecurityRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the security rule specified by the user (if created by the user)."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/1995"
+        },
+        "flags": 0,
+        "description": "The network protocol this rule applies to."
+      },
+      "sourcePortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source port or range."
+      },
+      "destinationPortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination port or range."
+      },
+      "sourcePortRanges": {
+        "type": {
+          "$ref": "#/1996"
+        },
+        "flags": 0,
+        "description": "The source port ranges. Expected values include a single integer between 0 and 65535, a range using '-' as separator (e.g. 100-400), or an asterisk (*)."
+      },
+      "destinationPortRanges": {
+        "type": {
+          "$ref": "#/1997"
+        },
+        "flags": 0,
+        "description": "The destination port ranges. Expected values include a single integer between 0 and 65535, a range using '-' as separator (e.g. 100-400), or an asterisk (*)."
+      },
+      "sourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source address prefix."
+      },
+      "destinationAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination address prefix."
+      },
+      "sourceAddressPrefixes": {
+        "type": {
+          "$ref": "#/1998"
+        },
+        "flags": 0,
+        "description": "The source address prefixes. Expected values include CIDR IP ranges, Default Tags (VirtualNetwork, AzureLoadBalancer, Internet), System Tags, and the asterisk (*)."
+      },
+      "destinationAddressPrefixes": {
+        "type": {
+          "$ref": "#/1999"
+        },
+        "flags": 0,
+        "description": "The destination address prefixes. Expected values include CIDR IP ranges, Default Tags (VirtualNetwork, AzureLoadBalancer, Internet), System Tags, and the asterisk (*)."
+      },
+      "expandedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/2000"
+        },
+        "flags": 0,
+        "description": "The expanded source address prefix."
+      },
+      "expandedDestinationAddressPrefix": {
+        "type": {
+          "$ref": "#/2001"
+        },
+        "flags": 0,
+        "description": "Expanded destination address prefix."
+      },
+      "access": {
+        "type": {
+          "$ref": "#/2004"
+        },
+        "flags": 0,
+        "description": "Whether network traffic is allowed or denied."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The priority of the rule."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/2007"
+        },
+        "flags": 0,
+        "description": "The direction of the rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1992"
+      },
+      {
+        "$ref": "#/1993"
+      },
+      {
+        "$ref": "#/1994"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2002"
+      },
+      {
+        "$ref": "#/2003"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2005"
+      },
+      {
+        "$ref": "#/2006"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1991"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1989"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "effectiveNetworkSecurityGroups",
+    "resourceType": "Microsoft.Network/networkInterfaces",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/1988"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologyParameters",
+    "properties": {
+      "targetResourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the target resource group to perform topology on."
+      },
+      "targetVirtualNetwork": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The reference of the Virtual Network resource."
+      },
+      "targetSubnet": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The reference of the Subnet resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Topology",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "GUID representing the operation id."
+      },
+      "createdDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The datetime when the topology was initially created for the resource group."
+      },
+      "lastModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The datetime when the topology was last modified."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/2019"
+        },
+        "flags": 0,
+        "description": "A list of topology resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologyResource",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "associations": {
+        "type": {
+          "$ref": "#/2018"
+        },
+        "flags": 0,
+        "description": "Holds the associations the resource has with other resources in the resource group."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologyAssociation",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource that is associated with the parent resource."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the resource that is associated with the parent resource."
+      },
+      "associationType": {
+        "type": {
+          "$ref": "#/2017"
+        },
+        "flags": 0,
+        "description": "The association type of the child resource to the parent resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Associated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Contains"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2015"
+      },
+      {
+        "$ref": "#/2016"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2014"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2013"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "topology",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2012"
+    },
+    "input": {
+      "$ref": "#/2011"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationIPFlowParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID of the target resource to perform next-hop on."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/2024"
+        },
+        "flags": 1,
+        "description": "The direction of the packet represented as a 5-tuple."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/2027"
+        },
+        "flags": 1,
+        "description": "Protocol to be verified on."
+      },
+      "localPort": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The local port. Acceptable values are a single integer in the range (0-65535). Support for * for the source port, which depends on the direction."
+      },
+      "remotePort": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The remote port. Acceptable values are a single integer in the range (0-65535). Support for * for the source port, which depends on the direction."
+      },
+      "localIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The local IP address. Acceptable values are valid IPv4 addresses."
+      },
+      "remoteIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The remote IP address. Acceptable values are valid IPv4 addresses."
+      },
+      "targetNicResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The NIC ID. (If VM has multiple NICs and IP forwarding is enabled on any of them, then this parameter must be specified. Otherwise optional)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2022"
+      },
+      {
+        "$ref": "#/2023"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UDP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2025"
+      },
+      {
+        "$ref": "#/2026"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationIPFlowResult",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/2031"
+        },
+        "flags": 0,
+        "description": "Indicates whether the traffic is allowed or denied."
+      },
+      "ruleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the rule. If input is not matched against any security rule, it is not displayed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2029"
+      },
+      {
+        "$ref": "#/2030"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ipFlowVerify",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2028"
+    },
+    "input": {
+      "$ref": "#/2021"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NextHopParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource identifier of the target resource against which the action is to be performed."
+      },
+      "sourceIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The source IP address."
+      },
+      "destinationIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination IP address."
+      },
+      "targetNicResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The NIC ID. (If VM has multiple NICs and IP forwarding is enabled on any of the nics, then this parameter must be specified. Otherwise optional)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NextHopResult",
+    "properties": {
+      "nextHopType": {
+        "type": {
+          "$ref": "#/2041"
+        },
+        "flags": 0,
+        "description": "Next hop type."
+      },
+      "nextHopIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Next hop IP Address."
+      },
+      "routeTableId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource identifier for the route table associated with the route being returned. If the route being returned does not correspond to any user created routes then this field will be the string 'System Route'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualAppliance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualNetworkGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VnetLocal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperNetGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2035"
+      },
+      {
+        "$ref": "#/2036"
+      },
+      {
+        "$ref": "#/2037"
+      },
+      {
+        "$ref": "#/2038"
+      },
+      {
+        "$ref": "#/2039"
+      },
+      {
+        "$ref": "#/2040"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "nextHop",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2034"
+    },
+    "input": {
+      "$ref": "#/2033"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityGroupViewParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ID of the target VM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityGroupViewResult",
+    "properties": {
+      "networkInterfaces": {
+        "type": {
+          "$ref": "#/2053"
+        },
+        "flags": 0,
+        "description": "List of network interfaces on the specified VM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityGroupNetworkInterface",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the network interface."
+      },
+      "securityRuleAssociations": {
+        "type": {
+          "$ref": "#/2046"
+        },
+        "flags": 0,
+        "description": "All security rules associated with the network interface."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityRuleAssociations",
+    "properties": {
+      "networkInterfaceAssociation": {
+        "type": {
+          "$ref": "#/2047"
+        },
+        "flags": 0,
+        "description": "Network interface and it's custom security rules."
+      },
+      "subnetAssociation": {
+        "type": {
+          "$ref": "#/2049"
+        },
+        "flags": 0,
+        "description": "Subnet and it's custom security rules."
+      },
+      "defaultSecurityRules": {
+        "type": {
+          "$ref": "#/2051"
+        },
+        "flags": 0,
+        "description": "Collection of default security rules of the network security group."
+      },
+      "effectiveSecurityRules": {
+        "type": {
+          "$ref": "#/2052"
+        },
+        "flags": 0,
+        "description": "Collection of effective security rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceAssociation",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Network interface ID."
+      },
+      "securityRules": {
+        "type": {
+          "$ref": "#/2048"
+        },
+        "flags": 0,
+        "description": "Collection of custom security rules."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubnetAssociation",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subnet ID."
+      },
+      "securityRules": {
+        "type": {
+          "$ref": "#/2050"
+        },
+        "flags": 0,
+        "description": "Collection of custom security rules."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1991"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2045"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "securityGroupView",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2044"
+    },
+    "input": {
+      "$ref": "#/2043"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshootingParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The target resource to troubleshoot."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2056"
+        },
+        "flags": 1,
+        "description": "Properties of the troubleshooting resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshootingProperties",
+    "properties": {
+      "storageId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID for the storage account to save the troubleshoot result."
+      },
+      "storagePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The path to the blob to save the troubleshoot result in."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshootingResult",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the troubleshooting."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the troubleshooting."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The result code of the troubleshooting."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/2061"
+        },
+        "flags": 0,
+        "description": "Information from troubleshooting."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshootingDetails",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the get troubleshoot operation."
+      },
+      "reasonType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason type of failure."
+      },
+      "summary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A summary of troubleshooting."
+      },
+      "detail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Details on troubleshooting results."
+      },
+      "recommendedActions": {
+        "type": {
+          "$ref": "#/2060"
+        },
+        "flags": 0,
+        "description": "List of recommended actions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshootingRecommendedActions",
+    "properties": {
+      "actionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the recommended action."
+      },
+      "actionText": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of recommended actions."
+      },
+      "actionUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri linking to a documentation for the recommended troubleshooting actions."
+      },
+      "actionUriText": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The information from the URI for the recommended troubleshooting actions."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2059"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2058"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "troubleshoot",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2057"
+    },
+    "input": {
+      "$ref": "#/2055"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryTroubleshootingParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The target resource ID to query the troubleshooting result."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryTroubleshootResult",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2057"
+    },
+    "input": {
+      "$ref": "#/2063"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowLogInformation",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID of the resource to configure for flow log and traffic analytics (optional) ."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2066"
+        },
+        "flags": 1,
+        "description": "Properties of the flow log."
+      },
+      "flowAnalyticsConfiguration": {
+        "type": {
+          "$ref": "#/2071"
+        },
+        "flags": 0,
+        "description": "Parameters that define the configuration of traffic analytics."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowLogProperties",
+    "properties": {
+      "storageId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ID of the storage account which is used to store the flow log."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "Flag to enable/disable flow logging."
+      },
+      "retentionPolicy": {
+        "type": {
+          "$ref": "#/2067"
+        },
+        "flags": 0,
+        "description": "Parameters that define the retention policy for flow log."
+      },
+      "format": {
+        "type": {
+          "$ref": "#/2068"
+        },
+        "flags": 0,
+        "description": "Parameters that define the flow log format."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetentionPolicyParameters",
+    "properties": {
+      "days": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Number of days to retain flow log records."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Flag to enable/disable retention."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowLogFormatParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2070"
+        },
+        "flags": 0,
+        "description": "The file type of flow log."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The version (revision) of the flow log."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JSON"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2069"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrafficAnalyticsProperties",
+    "properties": {
+      "networkWatcherFlowAnalyticsConfiguration": {
+        "type": {
+          "$ref": "#/2072"
+        },
+        "flags": 1,
+        "description": "Parameters that define the configuration of traffic analytics."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrafficAnalyticsConfigurationProperties",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "Flag to enable/disable traffic analytics."
+      },
+      "workspaceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource guid of the attached workspace."
+      },
+      "workspaceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the attached workspace."
+      },
+      "workspaceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of the attached workspace."
+      },
+      "trafficAnalyticsInterval": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The interval in minutes which would decide how frequently TA service should do flow analytics."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "configureFlowLog",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2065"
+    },
+    "input": {
+      "$ref": "#/2065"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowLogStatusParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The target resource where getting the flow log and traffic analytics (optional) status."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryFlowLogStatus",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2065"
+    },
+    "input": {
+      "$ref": "#/2074"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityParameters",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/2077"
+        },
+        "flags": 1,
+        "description": "Describes the source of the connection."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/2078"
+        },
+        "flags": 1,
+        "description": "Describes the destination of connection."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/2083"
+        },
+        "flags": 0,
+        "description": "Network protocol."
+      },
+      "protocolConfiguration": {
+        "type": {
+          "$ref": "#/2084"
+        },
+        "flags": 0,
+        "description": "Configuration of the protocol."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivitySource",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID of the resource from which a connectivity check will be initiated."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The source port from which a connectivity check will be performed."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityDestination",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the resource to which a connection attempt will be made."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The IP address or URI the resource to which a connection attempt will be made."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Port on which check connectivity will be performed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Http"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Https"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Icmp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2079"
+      },
+      {
+        "$ref": "#/2080"
+      },
+      {
+        "$ref": "#/2081"
+      },
+      {
+        "$ref": "#/2082"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProtocolConfiguration",
+    "properties": {
+      "HTTPConfiguration": {
+        "type": {
+          "$ref": "#/2085"
+        },
+        "flags": 0,
+        "description": "HTTP configuration of the connectivity check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpConfiguration",
+    "properties": {
+      "method": {
+        "type": {
+          "$ref": "#/2087"
+        },
+        "flags": 0,
+        "description": "HTTP method."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/2089"
+        },
+        "flags": 0,
+        "description": "List of HTTP headers."
+      },
+      "validStatusCodes": {
+        "type": {
+          "$ref": "#/2090"
+        },
+        "flags": 0,
+        "description": "Valid status codes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Get"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2086"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpHeader",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name in HTTP header."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value in HTTP header."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2088"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityInformation",
+    "properties": {
+      "hops": {
+        "type": {
+          "$ref": "#/2115"
+        },
+        "flags": 2,
+        "description": "List of hops between the source and the destination."
+      },
+      "connectionStatus": {
+        "type": {
+          "$ref": "#/2120"
+        },
+        "flags": 2,
+        "description": "The connection status."
+      },
+      "avgLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Average latency in milliseconds."
+      },
+      "minLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Minimum latency in milliseconds."
+      },
+      "maxLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Maximum latency in milliseconds."
+      },
+      "probesSent": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Total number of probes sent."
+      },
+      "probesFailed": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Number of failed probes."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityHop",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the hop."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the hop."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IP address of the hop."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the resource corresponding to this hop."
+      },
+      "nextHopIds": {
+        "type": {
+          "$ref": "#/2093"
+        },
+        "flags": 2,
+        "description": "List of next hop identifiers."
+      },
+      "issues": {
+        "type": {
+          "$ref": "#/2114"
+        },
+        "flags": 2,
+        "description": "List of issues."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityIssue",
+    "properties": {
+      "origin": {
+        "type": {
+          "$ref": "#/2098"
+        },
+        "flags": 2,
+        "description": "The origin of the issue."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/2101"
+        },
+        "flags": 2,
+        "description": "The severity of the issue."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2111"
+        },
+        "flags": 2,
+        "description": "The type of issue."
+      },
+      "context": {
+        "type": {
+          "$ref": "#/2113"
+        },
+        "flags": 2,
+        "description": "Provides additional context on the issue."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2095"
+      },
+      {
+        "$ref": "#/2096"
+      },
+      {
+        "$ref": "#/2097"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2099"
+      },
+      {
+        "$ref": "#/2100"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AgentStopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GuestFirewall"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SocketBind"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NetworkSecurityRule"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserDefinedRoute"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PortThrottled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2102"
+      },
+      {
+        "$ref": "#/2103"
+      },
+      {
+        "$ref": "#/2104"
+      },
+      {
+        "$ref": "#/2105"
+      },
+      {
+        "$ref": "#/2106"
+      },
+      {
+        "$ref": "#/2107"
+      },
+      {
+        "$ref": "#/2108"
+      },
+      {
+        "$ref": "#/2109"
+      },
+      {
+        "$ref": "#/2110"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IssueContext",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2112"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2094"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2092"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2116"
+      },
+      {
+        "$ref": "#/2117"
+      },
+      {
+        "$ref": "#/2118"
+      },
+      {
+        "$ref": "#/2119"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connectivityCheck",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2091"
+    },
+    "input": {
+      "$ref": "#/2076"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureReachabilityReportParameters",
+    "properties": {
+      "providerLocation": {
+        "type": {
+          "$ref": "#/2123"
+        },
+        "flags": 1,
+        "description": "Parameters that define a geographic location."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/2124"
+        },
+        "flags": 0,
+        "description": "List of Internet service providers."
+      },
+      "azureLocations": {
+        "type": {
+          "$ref": "#/2125"
+        },
+        "flags": 0,
+        "description": "Optional Azure regions to scope the query to."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start time for the Azure reachability report."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end time for the Azure reachability report."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureReachabilityReportLocation",
+    "properties": {
+      "country": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the country."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the state."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the city or town."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureReachabilityReport",
+    "properties": {
+      "aggregationLevel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The aggregation level of Azure reachability report. Can be Country, State or City."
+      },
+      "providerLocation": {
+        "type": {
+          "$ref": "#/2123"
+        },
+        "flags": 1,
+        "description": "Parameters that define a geographic location."
+      },
+      "reachabilityReport": {
+        "type": {
+          "$ref": "#/2131"
+        },
+        "flags": 1,
+        "description": "List of Azure reachability report items."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureReachabilityReportItem",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Internet service provider."
+      },
+      "azureLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Azure region."
+      },
+      "latencies": {
+        "type": {
+          "$ref": "#/2130"
+        },
+        "flags": 0,
+        "description": "List of latency details for each of the time series."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureReachabilityReportLatencyInfo",
+    "properties": {
+      "timeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time stamp."
+      },
+      "score": {
+        "type": {
+          "$ref": "#/2129"
+        },
+        "flags": 0,
+        "description": "The relative latency score between 1 and 100, higher values indicating a faster connection."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 100
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2128"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2127"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "azureReachabilityReport",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2126"
+    },
+    "input": {
+      "$ref": "#/2122"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableProvidersListParameters",
+    "properties": {
+      "azureLocations": {
+        "type": {
+          "$ref": "#/2134"
+        },
+        "flags": 0,
+        "description": "A list of Azure regions."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The country for available providers list."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The state for available providers list."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city or town for available providers list."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableProvidersList",
+    "properties": {
+      "countries": {
+        "type": {
+          "$ref": "#/2144"
+        },
+        "flags": 1,
+        "description": "List of available countries."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableProvidersListCountry",
+    "properties": {
+      "countryName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The country name."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/2137"
+        },
+        "flags": 0,
+        "description": "A list of Internet service providers."
+      },
+      "states": {
+        "type": {
+          "$ref": "#/2143"
+        },
+        "flags": 0,
+        "description": "List of available states in the country."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableProvidersListState",
+    "properties": {
+      "stateName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The state name."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/2139"
+        },
+        "flags": 0,
+        "description": "A list of Internet service providers."
+      },
+      "cities": {
+        "type": {
+          "$ref": "#/2142"
+        },
+        "flags": 0,
+        "description": "List of available cities or towns in the state."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableProvidersListCity",
+    "properties": {
+      "cityName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city or town name."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/2141"
+        },
+        "flags": 0,
+        "description": "A list of Internet service providers."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2140"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2138"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2136"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "availableProvidersList",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2135"
+    },
+    "input": {
+      "$ref": "#/2133"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkConfigurationDiagnosticParameters",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID of the target resource to perform network configuration diagnostic. Valid options are VM, NetworkInterface, VMSS/NetworkInterface and Application Gateway."
+      },
+      "verbosityLevel": {
+        "type": {
+          "$ref": "#/2150"
+        },
+        "flags": 0,
+        "description": "Verbosity level."
+      },
+      "profiles": {
+        "type": {
+          "$ref": "#/2155"
+        },
+        "flags": 1,
+        "description": "List of network configuration diagnostic profiles."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Normal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2147"
+      },
+      {
+        "$ref": "#/2148"
+      },
+      {
+        "$ref": "#/2149"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkConfigurationDiagnosticProfile",
+    "properties": {
+      "direction": {
+        "type": {
+          "$ref": "#/2154"
+        },
+        "flags": 1,
+        "description": "The direction of the traffic."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Protocol to be verified on. Accepted values are '*', TCP, UDP."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Traffic source. Accepted values are '*', IP Address/CIDR, Service Tag."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Traffic destination. Accepted values are: '*', IP Address/CIDR, Service Tag."
+      },
+      "destinationPort": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Traffic destination port. Accepted values are '*', port (for example, 3389) and port range (for example, 80-100)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2152"
+      },
+      {
+        "$ref": "#/2153"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkConfigurationDiagnosticResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/2167"
+        },
+        "flags": 2,
+        "description": "List of network configuration diagnostic results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkConfigurationDiagnosticResult",
+    "properties": {
+      "profile": {
+        "type": {
+          "$ref": "#/2151"
+        },
+        "flags": 0,
+        "description": "Network configuration diagnostic profile."
+      },
+      "networkSecurityGroupResult": {
+        "type": {
+          "$ref": "#/2158"
+        },
+        "flags": 0,
+        "description": "Network security group result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityGroupResult",
+    "properties": {
+      "securityRuleAccessResult": {
+        "type": {
+          "$ref": "#/2161"
+        },
+        "flags": 0,
+        "description": "The network traffic is allowed or denied."
+      },
+      "evaluatedNetworkSecurityGroups": {
+        "type": {
+          "$ref": "#/2166"
+        },
+        "flags": 2,
+        "description": "List of results network security groups diagnostic."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2159"
+      },
+      {
+        "$ref": "#/2160"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvaluatedNetworkSecurityGroup",
+    "properties": {
+      "networkSecurityGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Network security group ID."
+      },
+      "appliedTo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID of nic or subnet to which network security group is applied."
+      },
+      "matchedRule": {
+        "type": {
+          "$ref": "#/2163"
+        },
+        "flags": 0,
+        "description": "Matched network security rule."
+      },
+      "rulesEvaluationResult": {
+        "type": {
+          "$ref": "#/2165"
+        },
+        "flags": 2,
+        "description": "List of network security rules evaluation results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MatchedRule",
+    "properties": {
+      "ruleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the matched network security rule."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityRulesEvaluationResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the network security rule."
+      },
+      "protocolMatched": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Value indicating whether protocol is matched."
+      },
+      "sourceMatched": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Value indicating whether source is matched."
+      },
+      "sourcePortMatched": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Value indicating whether source port is matched."
+      },
+      "destinationMatched": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Value indicating whether destination is matched."
+      },
+      "destinationPortMatched": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Value indicating whether destination port is matched."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2164"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2162"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2157"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "networkConfigurationDiagnostic",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2156"
+    },
+    "input": {
+      "$ref": "#/2146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PacketCaptureQueryStatusResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the packet capture resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the packet capture resource."
+      },
+      "captureStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the packet capture session."
+      },
+      "packetCaptureStatus": {
+        "type": {
+          "$ref": "#/2175"
+        },
+        "flags": 0,
+        "description": "The status of the packet capture session."
+      },
+      "stopReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The reason the current packet capture session was stopped."
+      },
+      "packetCaptureError": {
+        "type": {
+          "$ref": "#/2182"
+        },
+        "flags": 0,
+        "description": "List of errors of packet capture session."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2170"
+      },
+      {
+        "$ref": "#/2171"
+      },
+      {
+        "$ref": "#/2172"
+      },
+      {
+        "$ref": "#/2173"
+      },
+      {
+        "$ref": "#/2174"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InternalError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AgentStopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CaptureFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocalFileFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2176"
+      },
+      {
+        "$ref": "#/2177"
+      },
+      {
+        "$ref": "#/2178"
+      },
+      {
+        "$ref": "#/2179"
+      },
+      {
+        "$ref": "#/2180"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryStatus",
+    "resourceType": "Microsoft.Network/networkWatchers/packetCaptures",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2169"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionMonitorQueryResult",
+    "properties": {
+      "sourceStatus": {
+        "type": {
+          "$ref": "#/2188"
+        },
+        "flags": 0,
+        "description": "Status of connection monitor source."
+      },
+      "states": {
+        "type": {
+          "$ref": "#/2199"
+        },
+        "flags": 0,
+        "description": "Information about connection states."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2185"
+      },
+      {
+        "$ref": "#/2186"
+      },
+      {
+        "$ref": "#/2187"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionStateSnapshot",
+    "properties": {
+      "connectionState": {
+        "type": {
+          "$ref": "#/2193"
+        },
+        "flags": 0,
+        "description": "The connection state."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the connection snapshot."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the connection snapshot."
+      },
+      "evaluationState": {
+        "type": {
+          "$ref": "#/2197"
+        },
+        "flags": 0,
+        "description": "Connectivity analysis evaluation state."
+      },
+      "avgLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Average latency in ms."
+      },
+      "minLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Minimum latency in ms."
+      },
+      "maxLatencyInMs": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Maximum latency in ms."
+      },
+      "probesSent": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The number of sent probes."
+      },
+      "probesFailed": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The number of failed probes."
+      },
+      "hops": {
+        "type": {
+          "$ref": "#/2198"
+        },
+        "flags": 2,
+        "description": "List of hops between the source and the destination."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reachable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unreachable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2190"
+      },
+      {
+        "$ref": "#/2191"
+      },
+      {
+        "$ref": "#/2192"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2194"
+      },
+      {
+        "$ref": "#/2195"
+      },
+      {
+        "$ref": "#/2196"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2092"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2189"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "query",
+    "resourceType": "Microsoft.Network/networkWatchers/connectionMonitors",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2184"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckPrivateLinkServiceVisibilityRequest",
+    "properties": {
+      "privateLinkServiceAlias": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The alias of the private link service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceVisibility",
+    "properties": {
+      "visible": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Private Link Service Visibility (True/False)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPrivateLinkServiceVisibility",
+    "resourceType": "Microsoft.Network/locations",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2202"
+    },
+    "input": {
+      "$ref": "#/2201"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrepareNetworkPoliciesRequest",
+    "properties": {
+      "serviceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the service for which subnet is being prepared for."
+      },
+      "networkIntentPolicyConfigurations": {
+        "type": {
+          "$ref": "#/2208"
+        },
+        "flags": 0,
+        "description": "A list of NetworkIntentPolicyConfiguration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkIntentPolicyConfiguration",
+    "properties": {
+      "networkIntentPolicyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the Network Intent Policy for storing in target subscription."
+      },
+      "sourceNetworkIntentPolicy": {
+        "type": {
+          "$ref": "#/2206"
+        },
+        "flags": 0,
+        "description": "Source network intent policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkIntentPolicy",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2207"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2205"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnprepareNetworkPoliciesRequest",
+    "properties": {
+      "serviceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the service for which subnet is being unprepared for."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reset",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/1477"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientParameters",
+    "properties": {
+      "processorArchitecture": {
+        "type": {
+          "$ref": "#/2214"
+        },
+        "flags": 0,
+        "description": "VPN client Processor Architecture."
+      },
+      "authenticationMethod": {
+        "type": {
+          "$ref": "#/2217"
+        },
+        "flags": 0,
+        "description": "VPN client authentication method."
+      },
+      "radiusServerAuthCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public certificate data for the radius server authentication certificate as a Base-64 encoded string. Required only if external radius authentication has been configured with EAPTLS authentication."
+      },
+      "clientRootCertificates": {
+        "type": {
+          "$ref": "#/2218"
+        },
+        "flags": 0,
+        "description": "A list of client root certificates public certificate data encoded as Base-64 strings. Optional parameter for external radius based authentication with EAPTLS."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Amd64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X86"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2212"
+      },
+      {
+        "$ref": "#/2213"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EAPTLS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EAPMSCHAPv2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2215"
+      },
+      {
+        "$ref": "#/2216"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnclientpackage",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnprofile",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getvpnprofilepackageurl",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BgpPeerStatusListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2230"
+        },
+        "flags": 0,
+        "description": "List of BGP peers."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BgpPeerStatus",
+    "properties": {
+      "localAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The virtual network gateway's local address."
+      },
+      "neighbor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The remote BGP peer."
+      },
+      "asn": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The autonomous system number of the remote BGP peer."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/2229"
+        },
+        "flags": 2,
+        "description": "The BGP peer state."
+      },
+      "connectedDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "For how long the peering has been up."
+      },
+      "routesReceived": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The number of routes learned from this peer."
+      },
+      "messagesSent": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The number of BGP messages sent."
+      },
+      "messagesReceived": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The number of BGP messages received."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Idle"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connecting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2224"
+      },
+      {
+        "$ref": "#/2225"
+      },
+      {
+        "$ref": "#/2226"
+      },
+      {
+        "$ref": "#/2227"
+      },
+      {
+        "$ref": "#/2228"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBgpPeerStatus",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2222"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "supportedvpndevices",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayRouteListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2235"
+        },
+        "flags": 0,
+        "description": "List of gateway routes."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayRoute",
+    "properties": {
+      "localAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The gateway's local address."
+      },
+      "network": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The route's network prefix."
+      },
+      "nextHop": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The route's next hop."
+      },
+      "sourcePeer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The peer this route was learned from."
+      },
+      "origin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The source this route was learned from."
+      },
+      "asPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The route's AS path sequence."
+      },
+      "weight": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The route's weight."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2234"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLearnedRoutes",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2233"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientIPsecParameters",
+    "properties": {
+      "saLifeTimeSeconds": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for P2S client."
+      },
+      "saDataSizeKilobytes": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for P2S client.."
+      },
+      "ipsecEncryption": {
+        "type": {
+          "$ref": "#/2247"
+        },
+        "flags": 1,
+        "description": "The IPSec encryption algorithm (IKE phase 1)."
+      },
+      "ipsecIntegrity": {
+        "type": {
+          "$ref": "#/2254"
+        },
+        "flags": 1,
+        "description": "The IPSec integrity algorithm (IKE phase 1)."
+      },
+      "ikeEncryption": {
+        "type": {
+          "$ref": "#/2262"
+        },
+        "flags": 1,
+        "description": "The IKE encryption algorithm (IKE phase 2)."
+      },
+      "ikeIntegrity": {
+        "type": {
+          "$ref": "#/2269"
+        },
+        "flags": 1,
+        "description": "The IKE integrity algorithm (IKE phase 2)."
+      },
+      "dhGroup": {
+        "type": {
+          "$ref": "#/2278"
+        },
+        "flags": 1,
+        "description": "The DH Group used in IKE Phase 1 for initial SA."
+      },
+      "pfsGroup": {
+        "type": {
+          "$ref": "#/2288"
+        },
+        "flags": 1,
+        "description": "The Pfs Group used in IKE Phase 2 for new child SA."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DES"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DES3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES128"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES128"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES256"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2238"
+      },
+      {
+        "$ref": "#/2239"
+      },
+      {
+        "$ref": "#/2240"
+      },
+      {
+        "$ref": "#/2241"
+      },
+      {
+        "$ref": "#/2242"
+      },
+      {
+        "$ref": "#/2243"
+      },
+      {
+        "$ref": "#/2244"
+      },
+      {
+        "$ref": "#/2245"
+      },
+      {
+        "$ref": "#/2246"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MD5"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES128"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES256"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2248"
+      },
+      {
+        "$ref": "#/2249"
+      },
+      {
+        "$ref": "#/2250"
+      },
+      {
+        "$ref": "#/2251"
+      },
+      {
+        "$ref": "#/2252"
+      },
+      {
+        "$ref": "#/2253"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DES"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DES3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES128"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES128"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2255"
+      },
+      {
+        "$ref": "#/2256"
+      },
+      {
+        "$ref": "#/2257"
+      },
+      {
+        "$ref": "#/2258"
+      },
+      {
+        "$ref": "#/2259"
+      },
+      {
+        "$ref": "#/2260"
+      },
+      {
+        "$ref": "#/2261"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MD5"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA384"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCMAES128"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2263"
+      },
+      {
+        "$ref": "#/2264"
+      },
+      {
+        "$ref": "#/2265"
+      },
+      {
+        "$ref": "#/2266"
+      },
+      {
+        "$ref": "#/2267"
+      },
+      {
+        "$ref": "#/2268"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DHGroup1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DHGroup2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DHGroup14"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DHGroup2048"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECP256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECP384"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DHGroup24"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2270"
+      },
+      {
+        "$ref": "#/2271"
+      },
+      {
+        "$ref": "#/2272"
+      },
+      {
+        "$ref": "#/2273"
+      },
+      {
+        "$ref": "#/2274"
+      },
+      {
+        "$ref": "#/2275"
+      },
+      {
+        "$ref": "#/2276"
+      },
+      {
+        "$ref": "#/2277"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFS1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFS2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFS2048"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECP256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ECP384"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFS24"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFS14"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PFSMM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2279"
+      },
+      {
+        "$ref": "#/2280"
+      },
+      {
+        "$ref": "#/2281"
+      },
+      {
+        "$ref": "#/2282"
+      },
+      {
+        "$ref": "#/2283"
+      },
+      {
+        "$ref": "#/2284"
+      },
+      {
+        "$ref": "#/2285"
+      },
+      {
+        "$ref": "#/2286"
+      },
+      {
+        "$ref": "#/2287"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setvpnclientipsecparameters",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2237"
+    },
+    "input": {
+      "$ref": "#/2237"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getvpnclientipsecparameters",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2237"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnPacketCaptureStartParameters",
+    "properties": {
+      "filterData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start Packet capture parameters."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPacketCapture",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2291"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnPacketCaptureStopParameters",
+    "properties": {
+      "sasUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SAS url for packet capture on virtual network gateway."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopPacketCapture",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2293"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientConnectionHealthDetailListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2297"
+        },
+        "flags": 0,
+        "description": "List of vpn client connection health."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientConnectionHealthDetail",
+    "properties": {
+      "vpnConnectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The vpn client Id."
+      },
+      "vpnConnectionDuration": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The duration time of a connected vpn client."
+      },
+      "vpnConnectionTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start time of a connected vpn client."
+      },
+      "publicIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The public Ip of a connected vpn client."
+      },
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The assigned private Ip of a connected vpn client."
+      },
+      "vpnUserName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user name of a connected vpn client."
+      },
+      "maxBandwidth": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The max band width."
+      },
+      "egressPacketsTransferred": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The egress packets per second."
+      },
+      "egressBytesTransferred": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The egress bytes per second."
+      },
+      "ingressPacketsTransferred": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The ingress packets per second."
+      },
+      "ingressBytesTransferred": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The ingress bytes per second."
+      },
+      "maxPacketsPerSecond": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The max packets transferred per second."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2296"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVpnClientConnectionHealth",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2295"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnDeviceScriptParameters",
+    "properties": {
+      "vendor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The vendor for the vpn device."
+      },
+      "deviceFamily": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The device family for the vpn device."
+      },
+      "firmwareVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The firmware version for the vpn device."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vpndeviceconfigurationscript",
+    "resourceType": "Microsoft.Network/connections",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2299"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPacketCapture",
+    "resourceType": "Microsoft.Network/connections",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2291"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopPacketCapture",
+    "resourceType": "Microsoft.Network/connections",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/2293"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetVpnSitesConfigurationRequest",
+    "properties": {
+      "vpnSites": {
+        "type": {
+          "$ref": "#/2304"
+        },
+        "flags": 0,
+        "description": "List of resource-ids of the vpn-sites for which config is to be downloaded."
+      },
+      "outputBlobSasUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The sas-url to download the configurations for vpn-sites."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnGateway",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1665"
+        },
+        "flags": 0,
+        "description": "Properties of the VPN gateway."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2306"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reset",
+    "resourceType": "Microsoft.Network/vpnGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2305"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "P2SVpnProfileParameters",
+    "properties": {
+      "authenticationMethod": {
+        "type": {
+          "$ref": "#/2311"
+        },
+        "flags": 0,
+        "description": "VPN client authentication method."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EAPTLS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EAPMSCHAPv2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2309"
+      },
+      {
+        "$ref": "#/2310"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnProfileResponse",
+    "properties": {
+      "profileUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to the VPN profile."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnprofile",
+    "resourceType": "Microsoft.Network/p2svpnGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2312"
+    },
+    "input": {
+      "$ref": "#/2308"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "P2SVpnGateway",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1718"
+        },
+        "flags": 0,
+        "description": "Properties of the P2SVpnGateway."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2315"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getP2sVpnConnectionHealth",
+    "resourceType": "Microsoft.Network/p2svpnGateways",
+    "apiVersion": "2019-07-01",
+    "output": {
+      "$ref": "#/2314"
+    }
   }
 ]

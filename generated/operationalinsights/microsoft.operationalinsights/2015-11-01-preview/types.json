@@ -541,5 +541,34 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedKeys",
+    "properties": {
+      "primarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary shared key of a workspace."
+      },
+      "secondarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secondary shared key of a workspace."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sharedKeys",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-11-01-preview",
+    "output": {
+      "$ref": "#/52"
+    }
   }
 ]

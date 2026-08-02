@@ -2915,5 +2915,96 @@
     "output": {
       "$ref": "#/190"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegionForOnlineOffline",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cosmos DB region, with spaces between words and each word capitalized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountListReadOnlyKeysResult",
+    "properties": {
+      "primaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the primary read-only key."
+      },
+      "secondaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the secondary read-only key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readonlykeys",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2016-03-31",
+    "output": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountRegenerateKeyParameters",
+    "properties": {
+      "keyKind": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primaryReadonly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondaryReadonly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
   }
 ]

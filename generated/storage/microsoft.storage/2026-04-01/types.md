@@ -281,6 +281,30 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2026-04-01
+* **Input**: [LegalHold](#legalhold)
+* **Output**: [LegalHold](#legalhold)
+
+## Function extend (Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
+* **ApiVersion**: 2026-04-01
+* **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
+* **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
+
+## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2026-04-01
+* **Input**: [LeaseContainerRequest](#leasecontainerrequest)
+* **Output**: [LeaseContainerResponse](#leasecontainerresponse)
+
+## Function lease (Microsoft.Storage/storageAccounts/fileServices/shares@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/fileServices/shares
+* **ApiVersion**: 2026-04-01
+* **Input**: [LeaseShareRequest](#leasesharerequest)
+* **Output**: [LeaseShareResponse](#leaseshareresponse)
+
 ## Function listAccountSas (Microsoft.Storage/storageAccounts@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2026-04-01
@@ -302,6 +326,40 @@
 * **ApiVersion**: 2026-04-01
 * **Input**: [ServiceSasParameters](#servicesasparameters)
 * **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
+## Function lock (Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
+* **ApiVersion**: 2026-04-01
+* **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
+
+## Function regenerateKey (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function regeneratePassword (Microsoft.Storage/storageAccounts/localUsers@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/localUsers
+* **ApiVersion**: 2026-04-01
+* **Output**: [LocalUserRegeneratePasswordResult](#localuserregeneratepasswordresult)
+
+## Function restoreBlobRanges (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Input**: [BlobRestoreParameters](#blobrestoreparameters)
+* **Output**: [BlobRestoreStatus](#blobrestorestatus)
+
+## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2026-04-01
+* **Input**: [LegalHold](#legalhold)
+* **Output**: [LegalHold](#legalhold)
+
+## Function testExistingConnection (Microsoft.Storage/storageAccounts/connectors@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/connectors
+* **ApiVersion**: 2026-04-01
+* **Input**: [TestExistingConnectionRequest](#testexistingconnectionrequest)
+* **Output**: [TestConnectionResponse](#testconnectionresponse)
 
 ## AccessPolicy
 ### Properties
@@ -701,6 +759,15 @@
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
+## ImmutabilityPolicy
+### Properties
+* **etag**: string (ReadOnly): Resource Etag.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ImmutabilityPolicyProperties
 ### Properties
 * **etag**: string (ReadOnly): ImmutabilityPolicy Etag.
@@ -755,6 +822,38 @@
 * **name**: 'AccessTimeTracking' | string: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
 * **trackingGranularityInDays**: int: The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
 
+## LeaseContainerRequest
+### Properties
+* **action**: 'Acquire' | 'Break' | 'Change' | 'Release' | 'Renew' | string (Required): Specifies the lease action. Can be one of the available actions.
+* **breakPeriod**: int: Optional. For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.
+* **leaseDuration**: int: Required for acquire. Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires.
+* **leaseId**: string: Identifies the lease. Can be specified in any valid GUID string format.
+* **proposedLeaseId**: string: Optional for acquire, required for change. Proposed lease ID, in a GUID string format.
+
+## LeaseContainerResponse
+### Properties
+* **leaseId**: string: Returned unique lease ID that must be included with any request to delete the container, or to renew, change, or release the lease.
+* **leaseTimeSeconds**: string: Approximate time remaining in the lease period, in seconds.
+
+## LeaseShareRequest
+### Properties
+* **action**: 'Acquire' | 'Break' | 'Change' | 'Release' | 'Renew' | string (Required): Specifies the lease action. Can be one of the available actions.
+* **breakPeriod**: int: Optional. For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.
+* **leaseDuration**: int: Required for acquire. Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires.
+* **leaseId**: string: Identifies the lease. Can be specified in any valid GUID string format.
+* **proposedLeaseId**: string: Optional for acquire, required for change. Proposed lease ID, in a GUID string format.
+
+## LeaseShareResponse
+### Properties
+* **leaseId**: string: Returned unique lease ID that must be included with any request to delete the share, or to renew, change, or release the lease.
+* **leaseTimeSeconds**: string: Approximate time remaining in the lease period, in seconds.
+
+## LegalHold
+### Properties
+* **allowProtectedAppendWritesAll**: bool: When enabled, new blocks can be written to both 'Append and Bock Blobs' while maintaining legal hold protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
+* **hasLegalHold**: bool (ReadOnly): The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
+* **tags**: (string {minLength: 3, maxLength: 23})[] (Required): Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.
+
 ## LegalHoldProperties
 ### Properties
 * **hasLegalHold**: bool (ReadOnly): The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
@@ -788,6 +887,10 @@
 * **sid**: string (ReadOnly): A unique Security Identifier that is generated by the server.
 * **sshAuthorizedKeys**: [SshPublicKey](#sshpublickey)[]: Optional, local user ssh authorized keys for SFTP.
 * **userId**: int (ReadOnly): A unique Identifier that is generated by the server.
+
+## LocalUserRegeneratePasswordResult
+### Properties
+* **sshPassword**: string {sensitive} (ReadOnly): Auto generated password by the server for SSH authentication if hasSshPassword is set to true on the creation of local user.
 
 ## ManagementPolicyAction
 ### Properties
@@ -1193,6 +1296,10 @@
 * **storageAccountSkuConversionStatus**: [StorageAccountSkuConversionStatus](#storageaccountskuconversionstatus) (ReadOnly): This property is readOnly and is set by server during asynchronous storage account sku conversion operations.
 * **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
 
+## StorageAccountRegenerateKeyParameters
+### Properties
+* **keyName**: string (Required): The name of storage keys that want to be regenerated, possible values are key1, key2, kerb1, kerb2.
+
 ## StorageAccountSharedKeyAccessProperties
 ### Properties
 * **blob**: [ServiceSharedKeyAccessProperties](#servicesharedkeyaccessproperties): Shared key access settings for Blob service.
@@ -1366,6 +1473,19 @@ URI Format - 'azds://<location>:<dataShareName>:<dataShareIdentifier>'.
 * **tenantId**: string (ReadOnly): Returns the Tenant ID that issued the token for the user who added the tag.
 * **timestamp**: string (ReadOnly): Returns the date and time the tag was added.
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who added the tag.
+
+## TestConnectionResponse
+### Properties
+* **storageConnectorErrorMessage**: string: A string representing the error received from the backing data store.
+Format will vary depending on the data store type and will be capped at 1 MB in size.
+The error message will be empty if the connection was successful.
+* **storageConnectorMethodName**: string {minLength: 1} (Required): Indicates the method used to validate the connection to the backing data store.
+Valid values are `GetBlob` and `ListBlobs` for failure, and `TestExistingConnection` for success.
+* **storageConnectorRequestId**: string {minLength: 1} (Required): The request Id associated with the request sent to the backing data store for validation.
+
+## TestExistingConnectionRequest
+### Properties
+* **uniqueId**: string (Required): The uniqueId of the storage connector as returned by the server.
 
 ## TrackedResourceTags
 ### Properties

@@ -89,6 +89,57 @@
 * **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/resourceGuards' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backup (Microsoft.DataProtection/backupVaults/backupInstances@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [TriggerBackupRequest](#triggerbackuprequest)
+* **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function checkFeatureSupport (Microsoft.DataProtection/locations@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/locations
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [FeatureValidationRequestBase](#featurevalidationrequestbase)
+* **Output**: [FeatureValidationResponseBase](#featurevalidationresponsebase)
+
+## Function checkNameAvailability (Microsoft.DataProtection/locations@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/locations
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function findRestorableTimeRanges (Microsoft.DataProtection/backupVaults/backupInstances@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [AzureBackupFindRestorableTimeRangesRequest](#azurebackupfindrestorabletimerangesrequest)
+* **Output**: [AzureBackupFindRestorableTimeRangesResponseResource](#azurebackupfindrestorabletimerangesresponseresource)
+
+## Function restore (Microsoft.DataProtection/backupVaults/backupInstances@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [AzureBackupRestoreRequest](#azurebackuprestorerequest)
+* **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function validateForBackup (Microsoft.DataProtection/backupVaults@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [ValidateForBackupRequest](#validateforbackuprequest)
+* **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function validateRestore (Microsoft.DataProtection/backupVaults/backupInstances@2021-10-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [ValidateRestoreRequestObject](#validaterestorerequestobject)
+* **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## AdHocBackupRuleOptions
+### Properties
+* **ruleName**: string (Required)
+* **triggerOption**: [AdhocBackupTriggerOption](#adhocbackuptriggeroption) (Required): Adhoc backup trigger option
+
+## AdhocBackupTriggerOption
+### Properties
+* **retentionTagOverride**: string
+
 ## AdhocBasedTaggingCriteria
 ### Properties
 * **tagInfo**: [RetentionTag](#retentiontag): Retention tag information
@@ -103,6 +154,25 @@
 * **objectType**: 'SecretStoreBasedAuthCredentials' (Required): Type of the specific object - used for deserializing
 * **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Secret store resource
 
+
+## AzureBackupFindRestorableTimeRangesRequest
+### Properties
+* **endTime**: string: End time for the List Restore Ranges request. ISO 8601 format.
+* **sourceDataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string (Required): Gets or sets the type of the source data store.
+* **startTime**: string: Start time for the List Restore Ranges request. ISO 8601 format.
+
+## AzureBackupFindRestorableTimeRangesResponse
+### Properties
+* **objectType**: string
+* **restorableTimeRanges**: [RestorableTimeRange](#restorabletimerange)[]: Returns the Restore Ranges available on the Backup Instance.
+
+## AzureBackupFindRestorableTimeRangesResponseResource
+### Properties
+* **id**: string (ReadOnly): Resource Id represents the complete path to the resource.
+* **name**: string (ReadOnly): Resource name associated with the resource.
+* **properties**: [AzureBackupFindRestorableTimeRangesResponse](#azurebackupfindrestorabletimerangesresponse): AzureBackupFindRestorableTimeRangesResponseResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
 
 ## AzureBackupJob
 ### Properties
@@ -154,6 +224,26 @@
 * **recoveryPointType**: string
 * **retentionTagName**: string
 * **retentionTagVersion**: string
+
+
+## AzureBackupRestoreRequest
+* **Discriminator**: objectType
+
+### Base Properties
+* **restoreTargetInfo**: [RestoreTargetInfoBase](#restoretargetinfobase) (Required): Gets or sets the restore target information.
+* **sourceDataStoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore' | string (Required): Gets or sets the type of the source data store.
+
+### AzureBackupRecoveryTimeBasedRestoreRequest
+#### Properties
+* **objectType**: 'AzureBackupRecoveryTimeBasedRestoreRequest' (Required)
+* **recoveryPointTime**: string (Required): The recovery time in ISO 8601 format example - 2020-08-14T17:30:00.0000000Z.
+
+### AzureBackupRestoreWithRehydrationRequest
+#### Properties
+* **objectType**: 'AzureBackupRestoreWithRehydrationRequest' (Required)
+* **recoveryPointId**: string (Required)
+* **rehydrationPriority**: 'High' | 'Invalid' | 'Standard' | string (Required): Priority to be used for rehydration. Values High or Standard
+* **rehydrationRetentionDuration**: string (Required): Retention duration in ISO 8601 format i.e P10D .
 
 
 ## BackupCriteria
@@ -281,6 +371,17 @@ Examples:
 * **objectType**: 'VmwareVMProperties' (Required): Type of the specific object - used for deserializing
 
 
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: Resource name for which availability needs to be checked
+* **type**: string: Describes the Resource type: Microsoft.DataProtection/BackupVaults
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string: Gets or sets the message.
+* **nameAvailable**: bool: Gets or sets a value indicating whether [name available].
+* **reason**: string: Gets or sets the reason.
+
 ## CopyOption
 * **Discriminator**: objectType
 
@@ -376,6 +477,30 @@ Examples:
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## FeatureValidationRequestBase
+* **Discriminator**: objectType
+
+### Base Properties
+
+### FeatureValidationRequest
+#### Properties
+* **featureName**: string: backup support feature name.
+* **featureType**: 'DataSourceType' | 'Invalid' | string: backup support feature type.
+* **objectType**: 'FeatureValidationRequest' (Required): Type of the specific object - used for deserializing
+
+
+## FeatureValidationResponseBase
+* **Discriminator**: objectType
+
+### Base Properties
+
+### FeatureValidationResponse
+#### Properties
+* **features**: [SupportedFeature](#supportedfeature)[]: Response features
+* **featureType**: 'DataSourceType' | 'Invalid' | string: backup support feature type.
+* **objectType**: 'FeatureValidationResponse' (Required): Type of the specific object - used for deserializing
+
+
 ## InnerError
 ### Properties
 * **additionalInfo**: [InnerErrorAdditionalInfo](#innererroradditionalinfo): Any Key value pairs that can be provided to the client for additional  verbose information.
@@ -386,6 +511,18 @@ Examples:
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ItemLevelRestoreCriteria
+* **Discriminator**: objectType
+
+### Base Properties
+
+### RangeBasedItemLevelRestoreCriteria
+#### Properties
+* **maxMatchingValue**: string: maximum value for range prefix match
+* **minMatchingValue**: string: minimum value for range prefix match
+* **objectType**: 'RangeBasedItemLevelRestoreCriteria' (Required): Type of the specific object - used for deserializing
+
 
 ## JobExtendedInfo
 ### Properties
@@ -414,6 +551,11 @@ Examples:
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## OperationJobExtendedInfo
+### Properties
+* **jobId**: string: Arm Id of the job created for this operation.
+* **objectType**: string (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 ## PolicyInfo
 ### Properties
@@ -463,10 +605,44 @@ Examples:
 * **startTimeUtc**: string: Start time in UTC of latest ResourceMove operation attempted. ISO 8601 format.
 * **targetResourcePath**: string: ARM resource path of target resource used in latest ResourceMove operation
 
+## RestorableTimeRange
+### Properties
+* **endTime**: string (Required): End time for the available restore range
+* **objectType**: string
+* **startTime**: string (Required): Start time for the available restore range
+
 ## RestoreJobRecoveryPointDetails
 ### Properties
 * **recoveryPointID**: string
 * **recoveryPointTime**: string
+
+## RestoreTargetInfoBase
+* **Discriminator**: objectType
+
+### Base Properties
+* **recoveryOption**: 'FailIfExists' | string (Required): Recovery Option
+* **restoreLocation**: string: Target Restore region
+
+### ItemLevelRestoreTargetInfo
+#### Properties
+* **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Credentials to use to authenticate with data source provider.
+* **datasourceInfo**: [Datasource](#datasource) (Required): Information of target DS
+* **datasourceSetInfo**: [DatasourceSet](#datasourceset): Information of target DS Set
+* **objectType**: 'ItemLevelRestoreTargetInfo' (Required): Type of Datasource object, used to initialize the right inherited type
+* **restoreCriteria**: [ItemLevelRestoreCriteria](#itemlevelrestorecriteria)[] (Required): Restore Criteria
+
+### RestoreFilesTargetInfo
+#### Properties
+* **objectType**: 'RestoreFilesTargetInfo' (Required): Type of Datasource object, used to initialize the right inherited type
+* **targetDetails**: [TargetDetails](#targetdetails) (Required): Destination of RestoreAsFiles operation, when destination is not a datasource
+
+### RestoreTargetInfo
+#### Properties
+* **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Credentials to use to authenticate with data source provider.
+* **datasourceInfo**: [Datasource](#datasource) (Required): Information of target DS
+* **datasourceSetInfo**: [DatasourceSet](#datasourceset): Information of target DS Set
+* **objectType**: 'RestoreTargetInfo' (Required): Type of Datasource object, used to initialize the right inherited type
+
 
 ## RetentionTag
 ### Properties
@@ -490,6 +666,12 @@ Examples:
 * **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore' | string: Gets or sets the type of the datastore.
 * **type**: 'GeoRedundant' | 'LocallyRedundant' | string: Gets or sets the type.
 
+## SupportedFeature
+### Properties
+* **exposureControlledFeatures**: string[]: support feature type.
+* **featureName**: string: support feature type.
+* **supportStatus**: 'AlphaPreview' | 'GenerallyAvailable' | 'Invalid' | 'NotSupported' | 'PrivatePreview' | 'PublicPreview' | string: feature support status
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -510,6 +692,18 @@ Examples:
 ### Properties
 * **copyAfter**: [CopyOption](#copyoption) (Required): It can be CustomCopyOption or ImmediateCopyOption.
 * **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): Info of target datastore
+
+## TargetDetails
+### Properties
+* **filePrefix**: string (Required): Restore operation may create multiple files inside location pointed by Url
+Below will be the common prefix for all of them
+* **restoreTargetLocationType**: 'AzureBlobs' | 'AzureFiles' | 'Invalid' | string (Required): Denotes the target location where the data will be restored,
+string value for the enum {Microsoft.Internal.AzureBackup.DataProtection.Common.Interface.RestoreTargetLocationType}
+* **url**: string (Required): Url denoting the restore destination. It can point to container / file share etc
+
+## TriggerBackupRequest
+### Properties
+* **backupRuleOptions**: [AdHocBackupRuleOptions](#adhocbackupruleoptions) (Required): Name for the Rule of the Policy which needs to be applied for this backup
 
 ## TriggerContext
 * **Discriminator**: objectType
@@ -544,4 +738,12 @@ Examples:
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ValidateForBackupRequest
+### Properties
+* **backupInstance**: [BackupInstance](#backupinstance) (Required): Backup Instance
+
+## ValidateRestoreRequestObject
+### Properties
+* **restoreRequestObject**: [AzureBackupRestoreRequest](#azurebackuprestorerequest) (Required): Gets or sets the restore request object.
 

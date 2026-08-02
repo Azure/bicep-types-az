@@ -1024,5 +1024,241 @@
     },
     "readableScopes": 14,
     "writableScopes": 14
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTemplateDefinition",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "The template content. Use this element to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTemplateDefinitionTemplate",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportTemplate",
+    "resourceType": "Microsoft.Resources/deploymentStacks",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStack",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Deployment stack properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackValidateResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String Id used to locate any resource on Azure."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of this resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The error detail."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "The validation result details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackValidateProperties",
+    "properties": {
+      "actionOnUnmanage": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Defines the behavior of resources that are no longer managed after the Deployment stack is updated or deleted."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The correlation id of the Deployment stack validate operation. It is in GUID format and is used for tracing."
+      },
+      "denySettings": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The Deployment stack deny settings."
+      },
+      "deploymentScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Deployment stack deployment scope."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Deployment stack validation description."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Deployment parameters."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The URI of the template."
+      },
+      "validatedResources": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "The array of resources that were validated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackValidatePropertiesParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/50"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Resources/deploymentStacks",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/85"
+    }
   }
 ]

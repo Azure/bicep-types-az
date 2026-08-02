@@ -280,11 +280,65 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegenerateKeyParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of key to be regenerated"
+      },
+      "rank": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The rank of the key to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.EngagementFabric/Accounts",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ChannelTypeDescriptionList",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/29"
         },
         "flags": 0,
         "description": "Channel descriptions"
@@ -311,7 +365,7 @@
       },
       "channelFunctions": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/28"
         },
         "flags": 0,
         "description": "All the available functions for the channel"
@@ -327,7 +381,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/22"
+      "$ref": "#/27"
     }
   },
   {
@@ -336,7 +390,7 @@
     "resourceType": "Microsoft.EngagementFabric/Accounts",
     "apiVersion": "2018-09-01-preview",
     "output": {
-      "$ref": "#/21"
+      "$ref": "#/26"
     }
   }
 ]

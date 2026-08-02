@@ -6378,6 +6378,389 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegionForOnlineOffline",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cosmos DB region, with spaces between words and each word capitalized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountListReadOnlyKeysResult",
+    "properties": {
+      "primaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the primary read-only key."
+      },
+      "secondaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the secondary read-only key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readonlykeys",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/421"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountRegenerateKeyParameters",
+    "properties": {
+      "keyKind": {
+        "type": {
+          "$ref": "#/428"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primaryReadonly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondaryReadonly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/424"
+      },
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/426"
+      },
+      {
+        "$ref": "#/427"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetResults",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/430"
+        },
+        "flags": 0,
+        "description": "The properties of an Azure Cosmos DB resource throughput"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the ARM resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the ARM resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource group to which the resource belongs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/432"
+        },
+        "flags": 0,
+        "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetProperties",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/431"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetPropertiesResource",
+    "properties": {
+      "throughput": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both."
+      },
+      "autoscaleSettings": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both."
+      },
+      "minimumThroughput": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The minimum throughput of the resource"
+      },
+      "offerReplacePending": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The throughput replace is pending"
+      },
+      "_rid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A system generated property. A unique identifier."
+      },
+      "_ts": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 2,
+        "description": "A system generated property that denotes the last updated timestamp of the resource."
+      },
+      "_etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A system generated property representing the resource etag required for optimistic concurrency control."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/429"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "NotebookWorkspaceConnectionInfoResult",
     "properties": {
       "authToken": {
@@ -6402,7 +6785,201 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2021-03-01-preview",
     "output": {
-      "$ref": "#/420"
+      "$ref": "#/451"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RepairPostBody",
+    "properties": {
+      "keyspace": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the keyspace that repair should be run on."
+      },
+      "tables": {
+        "type": {
+          "$ref": "#/454"
+        },
+        "flags": 0,
+        "description": "List of tables in the keyspace to repair. If omitted, repair all tables in the keyspace."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterNodeStatus",
+    "properties": {
+      "nodes": {
+        "type": {
+          "$ref": "#/467"
+        },
+        "flags": 0,
+        "description": "Information about nodes in the cluster (corresponds to what is returned from nodetool info)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterNodeStatusNodesItem",
+    "properties": {
+      "datacenter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Cassandra data center this node resides in."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/459"
+        },
+        "flags": 0,
+        "description": "Indicates whether the node is functioning or not."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "The state of the node in relation to the cluster."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The node's URL."
+      },
+      "load": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of file system data in the data directory (e.g., 47.66 KB), excluding all content in the snapshots subdirectories. Because all SSTable data files are included, any data that is not cleaned up (such as TTL-expired cell or tombstoned data) is counted."
+      },
+      "tokens": {
+        "type": {
+          "$ref": "#/466"
+        },
+        "flags": 0,
+        "description": "List of tokens."
+      },
+      "owns": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "The percentage of the data owned by the node per datacenter times the replication factor (e.g., 33.3, or null if the data is not available). For example, a node can own 33% of the ring, but shows 100% if the replication factor is 3. For non-system keyspaces, the endpoint percentage ownership information is shown."
+      },
+      "hostId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The network ID of the node."
+      },
+      "rack": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The rack this node is part of."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Up"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Down"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/458"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Normal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Leaving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Joining"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/460"
+      },
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/462"
+      },
+      {
+        "$ref": "#/463"
+      },
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchNodeStatus",
+    "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/455"
     }
   }
 ]

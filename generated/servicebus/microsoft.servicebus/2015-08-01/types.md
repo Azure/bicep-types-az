@@ -94,6 +94,24 @@
 * **ApiVersion**: 2015-08-01
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function regenerateKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## MessageCountDetails
 ### Properties
 * **activeMessageCount**: int (ReadOnly): Number of active messages in the queue, topic, or subscription.
@@ -141,6 +159,10 @@
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **supportOrdering**: bool: A value that indicates whether the queue supports ordering.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
+
+## RegenerateKeysParameters
+### Properties
+* **Policykey**: 'PrimaryKey' | 'SecondaryKey': Key that needs to be regenerated.
 
 ## ResourceListKeys
 ### Properties

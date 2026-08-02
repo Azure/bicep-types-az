@@ -2576,6 +2576,136 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RegenerateAccessKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SBNamespaceMigrate",
+    "properties": {
+      "targetNamespaceType": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1,
+        "description": "Type of namespaces"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Messaging"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotificationHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mixed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relay"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverPropertiesProperties",
+    "properties": {
+      "IsSafeFailover": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
@@ -2595,11 +2725,35 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2018-01-01-preview",
     "output": {
       "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/176"
     }
   }
 ]

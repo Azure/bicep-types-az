@@ -191,6 +191,11 @@
 * **ApiVersion**: 2015-04-08
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
 
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2015-04-08)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2015-04-08
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
 ## Capability
 ### Properties
 * **name**: string: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
@@ -324,6 +329,11 @@
 * **primaryMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-write key.
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
+
+## DatabaseAccountListReadOnlyKeysResult
+### Properties
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
 ## ExcludedPath

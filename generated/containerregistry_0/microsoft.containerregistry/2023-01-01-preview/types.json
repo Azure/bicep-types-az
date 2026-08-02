@@ -4343,6 +4343,128 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ImportImageParameters",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/357"
+        },
+        "flags": 1,
+        "description": "The source of the image."
+      },
+      "targetTags": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 0,
+        "description": "List of strings of the form repo[:tag]. When tag is omitted the source will be used (or 'latest' if source tag is also omitted)."
+      },
+      "untaggedTargetRepositories": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 0,
+        "description": "List of strings of repository names to do a manifest only copy. No tag will be created."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/363"
+        },
+        "flags": 0,
+        "description": "When Force, any existing target tags will be overwritten. When NoForce, any existing target tags will fail the operation before any copying begins."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportSource",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource identifier of the source Azure Container Registry."
+      },
+      "registryUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The address of the source registry (e.g. 'mcr.microsoft.com')."
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/358"
+        },
+        "flags": 0,
+        "description": "Credentials used when importing from a registry uri."
+      },
+      "sourceImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Repository name of the source image.\r\nSpecify an image by repository ('hello-world'). This will use the 'latest' tag.\r\nSpecify an image by tag ('hello-world:latest').\r\nSpecify an image by sha256-based manifest digest ('hello-world@sha256:abc123')."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportSourceCredentials",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The username to authenticate with the source registry."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The password used to authenticate with the source registry."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoForce"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Force"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "RegistryListCredentialsResult",
     "properties": {
       "username": {
@@ -4354,7 +4476,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/369"
         },
         "flags": 0,
         "description": "The list of passwords for a container registry."
@@ -4367,7 +4489,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/368"
         },
         "flags": 0,
         "description": "The password name."
@@ -4393,17 +4515,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/358"
+        "$ref": "#/366"
       },
       {
-        "$ref": "#/359"
+        "$ref": "#/367"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/357"
+      "$ref": "#/365"
     }
   },
   {
@@ -4412,7 +4534,160 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/356"
+      "$ref": "#/364"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateCredentialParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/374"
+        },
+        "flags": 1,
+        "description": "Specifies name of the password which should be regenerated -- password or password2."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateCredential",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/364"
+    },
+    "input": {
+      "$ref": "#/371"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCredentialsParameters",
+    "properties": {
+      "tokenId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource ID of the token for which credentials have to be generated."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expiry date of the generated credentials after which the credentials become invalid."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 0,
+        "description": "Specifies name of the password which should be regenerated if any -- password1 or password2."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/377"
+      },
+      {
+        "$ref": "#/378"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCredentialsResult",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The username for a container registry."
+      },
+      "passwords": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "The list of passwords for a container registry."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/322"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCredentials",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/380"
+    },
+    "input": {
+      "$ref": "#/376"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventInfo",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The event ID."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ping",
+    "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/383"
     }
   },
   {
@@ -4421,7 +4696,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events."
@@ -4441,14 +4716,14 @@
     "properties": {
       "eventRequestMessage": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/387"
         },
         "flags": 0,
         "description": "The event request message sent to the service URI."
       },
       "eventResponseMessage": {
         "type": {
-          "$ref": "#/372"
+          "$ref": "#/394"
         },
         "flags": 0,
         "description": "The event response message received from the service URI."
@@ -4468,14 +4743,14 @@
     "properties": {
       "content": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/388"
         },
         "flags": 0,
         "description": "The content of the event request message."
       },
       "headers": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/393"
         },
         "flags": 0,
         "description": "The headers of the event request message."
@@ -4530,28 +4805,28 @@
       },
       "target": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/389"
         },
         "flags": 0,
         "description": "The target of the event."
       },
       "request": {
         "type": {
-          "$ref": "#/368"
+          "$ref": "#/390"
         },
         "flags": 0,
         "description": "The request that generated the event."
       },
       "actor": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/391"
         },
         "flags": 0,
         "description": "The agent that initiated the event. For most situations, this could be from the authorization context of the request."
       },
       "source": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it."
@@ -4722,7 +4997,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/395"
         },
         "flags": 0,
         "description": "The headers of the event response message."
@@ -4761,7 +5036,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/364"
+      "$ref": "#/386"
     }
   },
   {
@@ -4770,7 +5045,44 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/363"
+      "$ref": "#/385"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CallbackConfig",
+    "properties": {
+      "serviceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The service URI for the webhook to post notifications."
+      },
+      "customHeaders": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 0,
+        "description": "Custom headers that will be added to the webhook notifications."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CallbackConfigCustomHeaders",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getCallbackConfig",
+    "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/398"
     }
   }
 ]

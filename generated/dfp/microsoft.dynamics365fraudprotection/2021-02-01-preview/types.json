@@ -345,5 +345,67 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckInstanceNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name for checking availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type of DFP instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckInstanceNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Indicator of availability of the DFP instance name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason of unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed message of the request unavailability."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Dynamics365FraudProtection/locations",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/34"
+    }
   }
 ]

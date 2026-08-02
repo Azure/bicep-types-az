@@ -72,6 +72,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerInstance/sandboxGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function attach (Microsoft.ContainerInstance/containerGroups/containers@2026-06-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2026-06-01-preview
+* **Output**: [ContainerAttachResponse](#containerattachresponse)
+
+## Function connect (Microsoft.ContainerInstance/sandboxGroups@2026-06-01-preview)
+* **Resource**: Microsoft.ContainerInstance/sandboxGroups
+* **ApiVersion**: 2026-06-01-preview
+* **Output**: [SandboxGroupAccessToken](#sandboxgroupaccesstoken)
+
+## Function exec (Microsoft.ContainerInstance/containerGroups/containers@2026-06-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [ContainerExecRequest](#containerexecrequest)
+* **Output**: [ContainerExecResponse](#containerexecresponse)
+
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
@@ -111,9 +127,29 @@
 * **name**: string (Required): The user-provided name of the container instance.
 * **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
+## ContainerAttachResponse
+### Properties
+* **password**: string {sensitive}: The password to the output stream from the attach. Send as an Authorization header value when connecting to the websocketUri.
+* **webSocketUri**: string: The uri for the output stream from the attach.
+
 ## ContainerExec
 ### Properties
 * **command**: string[]: The commands to execute within the container.
+
+## ContainerExecRequest
+### Properties
+* **command**: string: The command to be executed.
+* **terminalSize**: [ContainerExecRequestTerminalSize](#containerexecrequestterminalsize): The size of the terminal.
+
+## ContainerExecRequestTerminalSize
+### Properties
+* **cols**: int: The column size of the terminal
+* **rows**: int: The row size of the terminal
+
+## ContainerExecResponse
+### Properties
+* **password**: string {sensitive}: The password to start the exec command.
+* **webSocketUri**: string: The uri for the exec websocket.
 
 ## ContainerGroupDiagnostics
 ### Properties
@@ -508,6 +544,12 @@
 ### Properties
 * **limits**: [ResourceLimits](#resourcelimits): The resource limits of this container instance.
 * **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests of this container instance.
+
+## SandboxGroupAccessToken
+### Properties
+* **accessToken**: string {sensitive} (Required): The access token used to authenticate against the endpoint.
+* **endpoint**: string (Required): The endpoint URL to use with the access token.
+* **notAfter**: string (Required): The UTC date and time at which the access token expires.
 
 ## SandboxGroupNetworkProfile
 ### Properties

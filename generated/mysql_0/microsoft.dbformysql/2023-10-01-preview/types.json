@@ -1973,5 +1973,528 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerRestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
+      },
+      "maxFailoverSeconds": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The maximum allowed failover time in seconds."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerGtidSetParameter",
+    "properties": {
+      "gtidSet": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Gtid set of server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Server",
+    "properties": {
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The cmk identity for the server."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The SKU (pricing tier) of the server."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Properties of the server."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cutoverMigration",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupAndExportRequest",
+    "properties": {
+      "targetDetails": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 1,
+        "description": "Backup Target Store Details"
+      },
+      "backupSettings": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 1,
+        "description": "Backup Settings"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupStoreDetails",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "FullBackupStoreDetails": {
+        "$ref": "#/171"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FullBackupStoreDetails",
+    "properties": {
+      "sasUriList": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 1,
+        "description": "SASUriList of storage containers where backup data is to be streamed/copied."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullBackupStoreDetails"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupSettings",
+    "properties": {
+      "backupName": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 1,
+        "description": "The name of the backup."
+      },
+      "backupFormat": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "(^[a-z0-9]$)|(^[a-z0-9][a-z0-9-]*[a-z0-9]$)"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CollatedFormat"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Raw"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupAndExportResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "The operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time"
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Operation progress (0-100)."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "The response properties of a backup and export operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "The error object."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CancelInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupAndExportResponseProperties",
+    "properties": {
+      "datasourceSizeInBytes": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Size of datasource in bytes"
+      },
+      "dataTransferredInBytes": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Data transferred in bytes"
+      },
+      "backupMetadata": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Metadata related to backup to be stored for restoring resource in key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/189"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupAndExport",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/179"
+    },
+    "input": {
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateBackupResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 0,
+        "description": "The response properties of a pre backup operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateBackupResponseProperties",
+    "properties": {
+      "numberOfContainers": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Estimated no of storage containers required for resource data to be backed up."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateBackup",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/194"
+    }
   }
 ]

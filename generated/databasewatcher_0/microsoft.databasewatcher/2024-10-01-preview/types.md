@@ -58,6 +58,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DatabaseWatcher/watchers/targets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function start (Microsoft.DatabaseWatcher/watchers@2024-10-01-preview)
+* **Resource**: Microsoft.DatabaseWatcher/watchers
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [Watcher](#watcher)
+
+## Function startValidation (Microsoft.DatabaseWatcher/watchers/healthValidations@2024-10-01-preview)
+* **Resource**: Microsoft.DatabaseWatcher/watchers/healthValidations
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [HealthValidation](#healthvalidation)
+
+## Function stop (Microsoft.DatabaseWatcher/watchers@2024-10-01-preview)
+* **Resource**: Microsoft.DatabaseWatcher/watchers
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [Watcher](#watcher)
+
 ## AlertRuleResourceProperties
 ### Properties
 * **alertRuleResourceId**: string (Required): The resource ID of the alert rule resource.
@@ -76,6 +91,14 @@
 * **kustoDataIngestionUri**: string (Required): The Kusto data ingestion URI.
 * **kustoManagementUrl**: string (Required): The Kusto management URL.
 * **kustoOfferingType**: 'adx' | 'fabric' | 'free' | string (Required): The type of a Kusto offering.
+
+## HealthValidation
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [HealthValidationProperties](#healthvalidationproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## HealthValidationProperties
 ### Properties
@@ -152,6 +175,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -177,6 +205,17 @@
 * **akvResourceId**: string: The Azure resource ID of the Key Vault instance storing database authentication secrets.
 * **akvTargetPassword**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the password for authentication to a target.
 * **akvTargetUser**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the login name (aka user name, aka account name) for authentication to a target.
+
+## Watcher
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [WatcherProperties](#watcherproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## WatcherProperties
 ### Properties

@@ -3410,5 +3410,1037 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name for which availability needs to be checked"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes the Resource type: Microsoft.DataProtection/BackupVaults"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether [name available]."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reason."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/251"
+    },
+    "input": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FeatureValidationRequestBase",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "FeatureValidationRequest": {
+        "$ref": "#/254"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureValidationRequest",
+    "properties": {
+      "featureType": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "backup support feature type."
+      },
+      "featureName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "backup support feature name."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataSourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureValidationRequest"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FeatureValidationResponseBase",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "FeatureValidationResponse": {
+        "$ref": "#/260"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureValidationResponse",
+    "properties": {
+      "featureType": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 0,
+        "description": "backup support feature type."
+      },
+      "features": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 0,
+        "description": "Response features"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataSourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportedFeature",
+    "properties": {
+      "featureName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "support feature type."
+      },
+      "supportStatus": {
+        "type": {
+          "$ref": "#/271"
+        },
+        "flags": 0,
+        "description": "feature support status"
+      },
+      "exposureControlledFeatures": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 0,
+        "description": "support feature type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlphaPreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivatePreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublicPreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenerallyAvailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/264"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureValidationResponse"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFeatureSupport",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/259"
+    },
+    "input": {
+      "$ref": "#/253"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerBackupRequest",
+    "properties": {
+      "backupRuleOptions": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 1,
+        "description": "Name for the Rule of the Policy which needs to be applied for this backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdHocBackupRuleOptions",
+    "properties": {
+      "ruleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "triggerOption": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 1,
+        "description": "Adhoc backup trigger option"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdhocBackupTriggerOption",
+    "properties": {
+      "retentionTagOverride": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationJobExtendedInfo",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Arm Id of the job created for this operation."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/279"
+    },
+    "input": {
+      "$ref": "#/276"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AzureBackupRestoreRequest",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "restoreTargetInfo": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore target information."
+      },
+      "sourceDataStoreType": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of the source data store."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified Azure Resource Manager ID of the datasource which is being recovered."
+      }
+    },
+    "elements": {
+      "AzureBackupRestoreWithRehydrationRequest": {
+        "$ref": "#/304"
+      },
+      "AzureBackupRecoveryTimeBasedRestoreRequest": {
+        "$ref": "#/310"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RestoreTargetInfoBase",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "recoveryOption": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 1,
+        "description": "Recovery Option"
+      },
+      "restoreLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Target Restore region"
+      }
+    },
+    "elements": {
+      "ItemLevelRestoreTargetInfo": {
+        "$ref": "#/285"
+      },
+      "RestoreFilesTargetInfo": {
+        "$ref": "#/291"
+      },
+      "RestoreTargetInfo": {
+        "$ref": "#/298"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailIfExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ItemLevelRestoreTargetInfo",
+    "properties": {
+      "restoreCriteria": {
+        "type": {
+          "$ref": "#/289"
+        },
+        "flags": 1,
+        "description": "Restore Criteria"
+      },
+      "datasourceInfo": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 1,
+        "description": "Information of target DS"
+      },
+      "datasourceSetInfo": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "Information of target DS Set"
+      },
+      "datasourceAuthCredentials": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Credentials to use to authenticate with data source provider."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ItemLevelRestoreCriteria",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "RangeBasedItemLevelRestoreCriteria": {
+        "$ref": "#/287"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RangeBasedItemLevelRestoreCriteria",
+    "properties": {
+      "minMatchingValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "minimum value for range prefix match"
+      },
+      "maxMatchingValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "maximum value for range prefix match"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RangeBasedItemLevelRestoreCriteria"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/286"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemLevelRestoreTargetInfo"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreFilesTargetInfo",
+    "properties": {
+      "targetDetails": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 1,
+        "description": "Destination of RestoreAsFiles operation, when destination is not a datasource"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetDetails",
+    "properties": {
+      "filePrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Restore operation may create multiple files inside location pointed by Url\r\nBelow will be the common prefix for all of them"
+      },
+      "restoreTargetLocationType": {
+        "type": {
+          "$ref": "#/296"
+        },
+        "flags": 1,
+        "description": "Denotes the target location where the data will be restored,\r\nstring value for the enum {Microsoft.Internal.AzureBackup.DataProtection.Common.Interface.RestoreTargetLocationType}"
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Url denoting the restore destination. It can point to container / file share etc"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBlobs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFiles"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/294"
+      },
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreFilesTargetInfo"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreTargetInfo",
+    "properties": {
+      "datasourceInfo": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 1,
+        "description": "Information of target DS"
+      },
+      "datasourceSetInfo": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "Information of target DS Set"
+      },
+      "datasourceAuthCredentials": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Credentials to use to authenticate with data source provider."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreTargetInfo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SnapshotStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/302"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRestoreWithRehydrationRequest",
+    "properties": {
+      "rehydrationPriority": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 1,
+        "description": "Priority to be used for rehydration. Values High or Standard"
+      },
+      "rehydrationRetentionDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention duration in ISO 8601 format i.e P10D ."
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/309"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/305"
+      },
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupRestoreWithRehydrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRecoveryTimeBasedRestoreRequest",
+    "properties": {
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The recovery time in ISO 8601 format example - 2020-08-14T17:30:00.0000000Z."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupRecoveryTimeBasedRestoreRequest"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/279"
+    },
+    "input": {
+      "$ref": "#/281"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncBackupInstanceRequest",
+    "properties": {
+      "syncType": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0,
+        "description": "Field indicating sync type e.g. to sync only in case of failure or in all cases"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForceResync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateRestoreRequestObject",
+    "properties": {
+      "restoreRequestObject": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore request object."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateRestore",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/279"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesRequest",
+    "properties": {
+      "sourceDataStoreType": {
+        "type": {
+          "$ref": "#/323"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of the source data store."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time for the List Restore Ranges request. ISO 8601 format."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time for the List Restore Ranges request. ISO 8601 format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/320"
+      },
+      {
+        "$ref": "#/321"
+      },
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesResponseResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 0,
+        "description": "AzureBackupFindRestorableTimeRangesResponseResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesResponse",
+    "properties": {
+      "restorableTimeRanges": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 0,
+        "description": "Returns the Restore Ranges available on the Backup Instance."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorableTimeRange",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Start time for the available restore range"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "End time for the available restore range"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/326"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "findRestorableTimeRanges",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateForBackupRequest",
+    "properties": {
+      "backupInstance": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "Backup Instance"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateForBackup",
+    "resourceType": "Microsoft.DataProtection/backupVaults",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/279"
+    },
+    "input": {
+      "$ref": "#/329"
+    }
   }
 ]

@@ -26,6 +26,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Security/automations@2023-12-01-preview)
+* **Resource**: Microsoft.Security/automations
+* **ApiVersion**: 2023-12-01-preview
+* **Input**: [Automation](#automation)
+* **Output**: [AutomationValidationStatus](#automationvalidationstatus)
+
+## Automation
+### Properties
+* **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **kind**: string: Kind of the resource
+* **location**: string: The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [AutomationProperties](#automationproperties): Security automation data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [AutomationTags](#automationtags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## AutomationAction
 * **Discriminator**: actionType
 
@@ -78,12 +96,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## AutomationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AutomationTriggeringRule
 ### Properties
 * **expectedValue**: string: The expected value.
 * **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith' | string: A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+
+## AutomationValidationStatus
+### Properties
+* **isValid**: bool: Indicates whether the model is valid or not.
+* **message**: string: The validation message.
 
 ## NotificationsSource
 * **Discriminator**: sourceType

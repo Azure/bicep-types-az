@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/aksAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/aksAssessments@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/aksAssessments
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
 ## AKSAssessmentOptionsOutboundEdgeGroup
 ### Properties
 * **categories**: ('All' | 'ComputeOptimized' | 'GeneralPurpose' | 'GpuOptimized' | 'HighPerformanceCompute' | 'Isolated' | 'MemoryOptimized' | 'StorageOptimized' | string)[] (Required): Gets or sets the Azure VM Category.
@@ -189,6 +195,11 @@ Azure sizes.
 ### Properties
 * **name**: 'DataProtectionService' | 'MonitoringService' | 'MonthlyAvsExternalStorageCost' | 'MonthlyAvsNetworkCost' | 'MonthlyAvsNodeCost' | 'MonthlyAzureHybridCost' | 'MonthlyBandwidthCost' | 'MonthlyComputeCost' | 'MonthlyLicensingCost' | 'MonthlyLinuxAzureHybridCost' | 'MonthlyManagementCost' | 'MonthlyPremiumStorageCost' | 'MonthlyPremiumV2StorageCost' | 'MonthlySecurityCost' | 'MonthlyStandardHddStorageCost' | 'MonthlyStandardSsdStorageCost' | 'MonthlyStorageCost' | 'MonthlyUltraDiskCost' | 'MonthlyUltraStorageCost' | 'PatchingService' | 'TotalMonthlyCost' | string (ReadOnly): The name.
 * **value**: int (ReadOnly): The value.
+
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
 
 ## Linkages
 ### Properties

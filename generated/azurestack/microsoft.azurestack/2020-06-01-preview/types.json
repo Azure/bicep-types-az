@@ -1318,5 +1318,296 @@
     "output": {
       "$ref": "#/64"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceConfiguration",
+    "properties": {
+      "deviceVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the device."
+      },
+      "identitySystem": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Identity system of the device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureAD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ADFS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the next page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "List of products."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Properties of the product resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ID of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of Resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProducts",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProduct",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceProductLogUpdate",
+    "properties": {
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation to log."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status to log."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error related to the operation."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error details related to operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLog",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Log ID."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged product ID."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged subscription ID."
+      },
+      "registrationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged registration name."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged resource group name."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged operation."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation start datetime."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation end datetime."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error data."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadProductLog",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/93"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivationKeyResult",
+    "properties": {
+      "activationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Stack activation key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getactivationkey",
+    "resourceType": "Microsoft.AzureStack/registrations",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/95"
+    }
   }
 ]

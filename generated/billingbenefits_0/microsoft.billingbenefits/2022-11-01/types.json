@@ -2116,5 +2116,219 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity name"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 0,
+        "description": "Role assignment entity properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntityProperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Principal Id"
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role definition id"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Scope of the role assignment entity"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "elevate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/171"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateValidateRequest",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name"
+      },
+      "appliedScopeType": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "Type of the Applied Scope."
+      },
+      "appliedScopeProperties": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Properties specific to applied scope type. Not required if not applicable."
+      },
+      "renew": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Setting this to true will automatically purchase a new benefit on the expiration date time."
+      },
+      "renewProperties": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Single"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidateResponse",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Url to get the next page."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidResponseProperty",
+    "properties": {
+      "valid": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicates if the provided input was valid"
+      },
+      "reasonCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason code if the provided input was invalid"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason if the provided input was invalid"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/181"
+    },
+    "input": {
+      "$ref": "#/174"
+    }
   }
 ]

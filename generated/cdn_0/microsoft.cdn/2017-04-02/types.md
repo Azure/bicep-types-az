@@ -47,6 +47,42 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkResourceUsage (Microsoft.Cdn/profiles@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2017-04-02
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-04-02
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function generateSsoUri (Microsoft.Cdn/profiles@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2017-04-02
+* **Output**: [SsoUri](#ssouri)
+
+## Function getSupportedOptimizationTypes (Microsoft.Cdn/profiles@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2017-04-02
+* **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
+
+## Function start (Microsoft.Cdn/profiles/endpoints@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-04-02
+* **Output**: [Endpoint](#endpoint)
+
+## Function stop (Microsoft.Cdn/profiles/endpoints@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-04-02
+* **Output**: [Endpoint](#endpoint)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2017-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-04-02
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
@@ -66,6 +102,15 @@
 * **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.
 * **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535
 * **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535
+
+## Endpoint
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## EndpointProperties
 ### Properties
@@ -103,10 +148,35 @@
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
 
+## ResourceUsage
+### Properties
+* **currentValue**: int (ReadOnly): Actual value of usage on the specified resource type.
+* **limit**: int (ReadOnly): Quota of the specified resource type.
+* **resourceType**: string (ReadOnly): Resource type for which the usage is provided.
+* **unit**: string (ReadOnly): Unit of the usage. e.g. Count.
+
+## ResourceUsageListResult
+### Properties
+* **nextLink**: string: URL to get the next set of custom domain objects if there are any.
+* **value**: [ResourceUsage](#resourceusage)[] (ReadOnly): List of resource usages.
+
 ## Sku
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Verizon' | string: Name of the pricing tier.
 
+## SsoUri
+### Properties
+* **ssoUriValue**: string (ReadOnly): The URI used to login to the supplemental portal.
+
+## SupportedOptimizationTypesListResult
+### Properties
+* **supportedOptimizationTypes**: ('DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string)[] (ReadOnly): Supported optimization types for a profile.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
@@ -121,4 +191,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ValidateCustomDomainInput
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+
+## ValidateCustomDomainOutput
+### Properties
+* **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
+* **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
+* **reason**: string (ReadOnly): The reason why the custom domain is not valid.
 

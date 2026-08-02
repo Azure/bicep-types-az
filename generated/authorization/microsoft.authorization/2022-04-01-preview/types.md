@@ -20,6 +20,18 @@
 * **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Authorization/roleAssignmentScheduleRequests@2022-04-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2022-04-01-preview
+* **Input**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+* **Output**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+
+## Function validate (Microsoft.Authorization/roleEligibilityScheduleRequests@2022-04-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2022-04-01-preview
+* **Input**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+* **Output**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+
 ## ExpandedProperties
 ### Properties
 * **principal**: [ExpandedPropertiesPrincipal](#expandedpropertiesprincipal): Details of the principal
@@ -44,6 +56,13 @@
 * **displayName**: string: Display name of the resource
 * **id**: string: Scope id of the resource
 * **type**: string: Type of the resource
+
+## RoleAssignmentScheduleRequest
+### Properties
+* **id**: string (ReadOnly): The role assignment schedule request ID.
+* **name**: string (ReadOnly): The role assignment schedule request name.
+* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties.
+* **type**: string (ReadOnly): The role assignment schedule request type.
 
 ## RoleAssignmentScheduleRequestProperties
 ### Properties
@@ -81,6 +100,13 @@
 ### Properties
 * **ticketNumber**: string: Ticket number for the role assignment
 * **ticketSystem**: string: Ticket system name for the role assignment
+
+## RoleEligibilityScheduleRequest
+### Properties
+* **id**: string (ReadOnly): The role eligibility schedule request ID.
+* **name**: string (ReadOnly): The role eligibility schedule request name.
+* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
+* **type**: string (ReadOnly): The role eligibility schedule request type.
 
 ## RoleEligibilityScheduleRequestProperties
 ### Properties

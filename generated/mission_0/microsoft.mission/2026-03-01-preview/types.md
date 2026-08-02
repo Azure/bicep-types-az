@@ -117,6 +117,84 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Mission/virtualEnclaves/workloads' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkAddressSpaceAvailability (Microsoft.Mission/communities@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/communities
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [CheckAddressSpaceAvailabilityRequest](#checkaddressspaceavailabilityrequest)
+* **Output**: [CheckAddressSpaceAvailabilityResponse](#checkaddressspaceavailabilityresponse)
+
+## Function handleApprovalCreation (Microsoft.Mission/communities/communityEndpoints@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/communities/communityEndpoints
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalCallbackRequest](#approvalcallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalCreation (Microsoft.Mission/enclaveConnections@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/enclaveConnections
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalCallbackRequest](#approvalcallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalCreation (Microsoft.Mission/virtualEnclaves@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/virtualEnclaves
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalCallbackRequest](#approvalcallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalCreation (Microsoft.Mission/virtualEnclaves/enclaveEndpoints@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/virtualEnclaves/enclaveEndpoints
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalCallbackRequest](#approvalcallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalDeletion (Microsoft.Mission/communities/communityEndpoints@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/communities/communityEndpoints
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalDeletionCallbackRequest](#approvaldeletioncallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalDeletion (Microsoft.Mission/enclaveConnections@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/enclaveConnections
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalDeletionCallbackRequest](#approvaldeletioncallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalDeletion (Microsoft.Mission/virtualEnclaves@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/virtualEnclaves
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalDeletionCallbackRequest](#approvaldeletioncallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function handleApprovalDeletion (Microsoft.Mission/virtualEnclaves/enclaveEndpoints@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/virtualEnclaves/enclaveEndpoints
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalDeletionCallbackRequest](#approvaldeletioncallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function notifyInitiator (Microsoft.Mission/approvals@2026-03-01-preview)
+* **Resource**: Microsoft.Mission/approvals
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [ApprovalActionRequest](#approvalactionrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## ApprovalActionRequest
+### Properties
+* **approvalStatus**: 'Approved' | 'Rejected' | string (Required): Approval status indicating 'Approved' or 'Rejected'
+
+## ApprovalActionResponse
+### Properties
+* **message**: string (Required): Confirmation message indicating the result of the operation.
+
+## ApprovalCallbackRequest
+### Properties
+* **approvalCallbackPayload**: string: Payload requested by client upon approval action
+* **approvalStatus**: 'Approved' | 'Rejected' | string (Required): Approval status indicating 'Approved' or 'Rejected'
+* **resourceRequestAction**: 'Create' | 'Delete' | 'Reset' | 'Update' | string (Required): Resource request action indicating action which needed to be performed upon calling approval-callback post action
+
+## ApprovalDeletionCallbackRequest
+### Properties
+* **resourceRequestAction**: 'Create' | 'Delete' | 'Update' | string (Required): Resource request action indicating action which needed to be performed upon calling approval-deletion-callback post action
+
 ## ApprovalProperties
 ### Properties
 * **approvedByEntraIds**: string[] (ReadOnly): Array of Entra IDs of approvers who have approved the approval request
@@ -155,6 +233,15 @@
 * **approverEntraId**: string (Required): Entra ObjectID of the approver
 * **lastUpdatedAt**: string (Required): approval request last updated at
 * **mandatoryApprovalGroupMembershipIds**: string[] (ReadOnly): Indicates if this approver is part of a mandatory approver group with list of Entra IDs
+
+## CheckAddressSpaceAvailabilityRequest
+### Properties
+* **communityResourceId**: string (Required): Resource Id of the Community
+* **enclaveVirtualNetwork**: [EnclaveVirtualNetworkModel](#enclavevirtualnetworkmodel) (Required): Information about the enclave virtual network
+
+## CheckAddressSpaceAvailabilityResponse
+### Properties
+* **value**: bool (Required): Boolean representing whether the address space is available.
 
 ## CommunityEndpointDestinationRule
 ### Properties

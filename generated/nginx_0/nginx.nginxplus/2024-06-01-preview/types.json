@@ -1313,5 +1313,159 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisCreate",
+    "properties": {
+      "config": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisCreateConfig",
+    "properties": {
+      "rootFile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The root file of the NGINX config file(s). It must match one of the files' filepath."
+      },
+      "files": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0
+      },
+      "protectedFiles": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0
+      },
+      "package": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The status of the analysis."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisResultData",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisDiagnostic",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the error"
+      },
+      "directive": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "file": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "the filepath of the most relevant config file"
+      },
+      "line": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 1
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "rule": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "analyze",
+    "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
   }
 ]

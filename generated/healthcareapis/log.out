@@ -10,6 +10,7 @@ warning | Modeler/MissingType | The schema 'OperationResultsDescription-properti
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2025-04-01-preview/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
 warning | Modeler/MissingType | The schema 'IotMappingProperties-content' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2025-04-01-preview/healthcare-apis.json#/components/schemas/IotMappingProperties-content
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2025-03-01-preview/healthcare-apis.json:2355:5
@@ -17,6 +18,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2025-03-01-preview/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -25,6 +27,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2024-03-31/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -33,6 +36,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2024-03-01/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -41,6 +45,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2023-12-01/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -49,6 +54,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2023-11-01/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -57,6 +63,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2023-09-06/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -65,6 +72,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2023-02-28/healthcare-apis.json:2560:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -73,6 +81,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2022-12-01/healthcare-apis.json:2548:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -87,6 +96,7 @@ warning | Modeler/MissingType | The schema 'components·uxcjev·schemas·analyti
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2022-10-01-preview/healthcare-apis.json#/components/schemas/components·uxcjev·schemas·analyticsconnectormapping·additionalproperties
 warning | Modeler/MissingType | The schema 'components·wbq9i2·schemas·analyticsconnectordatadestination·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2022-10-01-preview/healthcare-apis.json#/components/schemas/components·wbq9i2·schemas·analyticsconnectordatadestination·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -95,6 +105,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2022-06-01/healthcare-apis.json:2548:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -103,6 +114,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2022-05-15/healthcare-apis.json:2520:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -111,6 +123,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2022-01-31-preview/healthcare-apis.json:2546:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -119,6 +132,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServicesResource' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2021-11-01/healthcare-apis.json:2520:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -135,6 +149,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2021-06-01-preview/healthcare-apis.json:2452:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -153,6 +168,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2021-01-11/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2020-03-30/healthcare-apis.json:805:5
@@ -162,6 +178,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2020-03-30/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2020-03-15/healthcare-apis.json:505:5
@@ -171,6 +188,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2020-03-15/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2019-09-16/healthcare-apis.json:505:5
@@ -180,6 +198,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/stable/2019-09-16/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2018-08-20-preview/healthcare-apis.json:495:5
@@ -189,3 +208,4 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/HealthcareApis/preview/2018-08-20-preview/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HealthcareApis/checkNameAvailability': Unable to find type segments

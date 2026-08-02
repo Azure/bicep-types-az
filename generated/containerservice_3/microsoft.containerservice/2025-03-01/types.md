@@ -63,10 +63,31 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/fleets/updateStrategies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateUpdateRun (Microsoft.ContainerService/fleets/autoUpgradeProfiles@2025-03-01)
+* **Resource**: Microsoft.ContainerService/fleets/autoUpgradeProfiles
+* **ApiVersion**: 2025-03-01
+* **Output**: [GenerateResponse](#generateresponse)
+
 ## Function listCredentials (Microsoft.ContainerService/fleets@2025-03-01)
 * **Resource**: Microsoft.ContainerService/fleets
 * **ApiVersion**: 2025-03-01
 * **Output**: [FleetCredentialResults](#fleetcredentialresults)
+
+## Function skip (Microsoft.ContainerService/fleets/updateRuns@2025-03-01)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2025-03-01
+* **Input**: [SkipProperties](#skipproperties)
+* **Output**: [UpdateRun](#updaterun)
+
+## Function start (Microsoft.ContainerService/fleets/updateRuns@2025-03-01)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2025-03-01
+* **Output**: [UpdateRun](#updaterun)
+
+## Function stop (Microsoft.ContainerService/fleets/updateRuns@2025-03-01)
+* **Resource**: Microsoft.ContainerService/fleets/updateRuns
+* **ApiVersion**: 2025-03-01
+* **Output**: [UpdateRun](#updaterun)
 
 ## AgentProfile
 ### Properties
@@ -161,6 +182,10 @@ By default, this is set to False.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the UpdateStrategy resource.
 * **strategy**: [UpdateRunStrategy](#updaterunstrategy) (Required): Defines the update sequence of the clusters.
 
+## GenerateResponse
+### Properties
+* **id**: string (Required, ReadOnly): The ARM resource id of the generated UpdateRun. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}'.
+
 ## ManagedClusterUpdate
 ### Properties
 * **nodeImageSelection**: [NodeImageSelection](#nodeimageselection): The node image upgrade to be applied to the target nodes in update run.
@@ -199,6 +224,17 @@ By default, this is set to False.
 ### Properties
 * **version**: string (ReadOnly): The image version to upgrade the nodes to (e.g., 'AKSUbuntu-1804gen2containerd-2022.12.13').
 
+## SkipProperties
+### Properties
+* **targets**: [SkipTarget](#skiptarget)[] (Required): The targets to skip.
+
+## SkipTarget
+### Properties
+* **name**: string (Required): The skip target's name. 
+To skip a member/group/stage, use the member/group/stage's name;
+Tp skip an after stage wait, use the parent stage's name.
+* **type**: 'AfterStageWait' | 'Group' | 'Member' | 'Stage' | string (Required): The skip target type.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -223,6 +259,15 @@ It must match a group name of an existing fleet member.
 * **members**: [MemberUpdateStatus](#memberupdatestatus)[] (ReadOnly): The list of member this UpdateGroup updates.
 * **name**: string (ReadOnly): The name of the UpdateGroup.
 * **status**: [UpdateStatus](#updatestatus) (ReadOnly): The status of the UpdateGroup.
+
+## UpdateRun
+### Properties
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [UpdateRunProperties](#updaterunproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## UpdateRunProperties
 ### Properties

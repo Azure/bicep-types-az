@@ -26,6 +26,22 @@
 * **tags**: [DeploymentStacksWhatIfResultTags](#deploymentstackswhatifresulttags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentStacksWhatIfResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportTemplate (Microsoft.Resources/deploymentStacks@2025-07-01)
+* **Resource**: Microsoft.Resources/deploymentStacks
+* **ApiVersion**: 2025-07-01
+* **Output**: [DeploymentStackTemplateDefinition](#deploymentstacktemplatedefinition)
+
+## Function validate (Microsoft.Resources/deploymentStacks@2025-07-01)
+* **Resource**: Microsoft.Resources/deploymentStacks
+* **ApiVersion**: 2025-07-01
+* **Input**: [DeploymentStack](#deploymentstack)
+* **Output**: [DeploymentStackValidateResult](#deploymentstackvalidateresult)
+
+## Function whatIf (Microsoft.Resources/deploymentStacksWhatIfResults@2025-07-01)
+* **Resource**: Microsoft.Resources/deploymentStacksWhatIfResults
+* **ApiVersion**: 2025-07-01
+* **Output**: [DeploymentStacksWhatIfResult](#deploymentstackswhatifresult)
+
 ## ActionOnUnmanage
 ### Properties
 * **managementGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource management group.
@@ -83,6 +99,16 @@
 * **reference**: [KeyVaultParameterReference](#keyvaultparameterreference): Azure Key Vault parameter reference.
 * **type**: string: Type of the value.
 * **value**: any: Input value to the parameter.
+
+## DeploymentStack
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string: The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DeploymentStackProperties](#deploymentstackproperties): Deployment stack properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DeploymentStackTags](#deploymentstacktags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## DeploymentStackProperties
 ### Properties
@@ -239,6 +265,16 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## DeploymentStacksWhatIfResult
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string: The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DeploymentStacksWhatIfResultProperties](#deploymentstackswhatifresultproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DeploymentStacksWhatIfResultTags](#deploymentstackswhatifresulttags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## DeploymentStacksWhatIfResultProperties
 ### Properties
 * **actionOnUnmanage**: [ActionOnUnmanage](#actiononunmanage) (Required): Defines the behavior of resources that are no longer managed after the Deployment stack is updated or deleted.
@@ -293,10 +329,57 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DeploymentStacksWhatIfResultTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DeploymentStackTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DeploymentStackTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DeploymentStackTemplateDefinition
+### Properties
+* **template**: [DeploymentStackTemplateDefinitionTemplate](#deploymentstacktemplatedefinitiontemplate): The template content. Use this element to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+* **templateLink**: [DeploymentStacksTemplateLink](#deploymentstackstemplatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
+
+## DeploymentStackTemplateDefinitionTemplate
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DeploymentStackValidateProperties
+### Properties
+* **actionOnUnmanage**: [ActionOnUnmanage](#actiononunmanage): Defines the behavior of resources that are no longer managed after the Deployment stack is updated or deleted.
+* **correlationId**: string: The correlation id of the Deployment stack validate operation. It is in GUID format and is used for tracing.
+* **denySettings**: [DenySettings](#denysettings): The Deployment stack deny settings.
+* **deploymentExtensions**: [DeploymentExtension](#deploymentextension)[]: The deployment extensions.
+* **deploymentScope**: string: The Deployment stack deployment scope.
+* **description**: string: The Deployment stack validation description.
+* **parameters**: [DeploymentStackValidatePropertiesParameters](#deploymentstackvalidatepropertiesparameters): Deployment parameters.
+* **templateLink**: [DeploymentStacksTemplateLink](#deploymentstackstemplatelink): The URI of the template.
+* **validatedResources**: [ResourceReference](#resourcereference)[]: The array of resources that were validated.
+* **validationLevel**: 'Provider' | 'ProviderNoRbac' | 'Template' | string: The validation level of the deployment stack
+
+## DeploymentStackValidatePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentParameter](#deploymentparameter)
+
+## DeploymentStackValidateResult
+### Properties
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
+* **id**: string (ReadOnly): String Id used to locate any resource on Azure.
+* **name**: string (ReadOnly): Name of this resource.
+* **properties**: [DeploymentStackValidateProperties](#deploymentstackvalidateproperties): The validation result details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): Type of this resource.
 
 ## ErrorAdditionalInfo
 ### Properties

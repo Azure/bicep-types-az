@@ -144,6 +144,36 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): The virtual machine zones.
 
+## Function capture (Microsoft.Compute/virtualMachines@2018-10-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-10-01
+* **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
+* **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
+
+## Function getRequestRateByInterval (Microsoft.Compute/locations/logAnalytics@2018-10-01)
+* **Resource**: Microsoft.Compute/locations/logAnalytics
+* **ApiVersion**: 2018-10-01
+* **Input**: [RequestRateByIntervalInput](#requestratebyintervalinput)
+* **Output**: [LogAnalyticsOperationResult](#loganalyticsoperationresult)
+
+## Function getThrottledRequests (Microsoft.Compute/locations/logAnalytics@2018-10-01)
+* **Resource**: Microsoft.Compute/locations/logAnalytics
+* **ApiVersion**: 2018-10-01
+* **Input**: [ThrottledRequestsInput](#throttledrequestsinput)
+* **Output**: [LogAnalyticsOperationResult](#loganalyticsoperationresult)
+
+## Function runCommand (Microsoft.Compute/virtualMachines@2018-10-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-10-01
+* **Input**: [RunCommandInput](#runcommandinput)
+* **Output**: [RunCommandResult](#runcommandresult)
+
+## Function runCommand (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-10-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-10-01
+* **Input**: [RunCommandInput](#runcommandinput)
+* **Output**: [RunCommandResult](#runcommandresult)
+
 ## AdditionalCapabilities
 ### Properties
 * **ultraSSDEnabled**: bool: The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
@@ -316,6 +346,14 @@
 * **provisionVMAgent**: bool: Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
 * **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS.
 
+## LogAnalyticsOperationResult
+### Properties
+* **properties**: [LogAnalyticsOutput](#loganalyticsoutput) (ReadOnly): LogAnalyticsOutput
+
+## LogAnalyticsOutput
+### Properties
+* **output**: string (ReadOnly): Output file Uri path to blob container.
+
 ## MaintenanceRedeployStatus
 ### Properties
 * **isCustomerInitiatedMaintenanceAllowed**: bool: True, if customer is allowed to perform Maintenance.
@@ -392,6 +430,16 @@
 * **name**: string (Required): The plan ID.
 * **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
 * **publisher**: string (Required): The publisher ID.
+
+## RequestRateByIntervalInput
+### Properties
+* **blobContainerSasUri**: string (Required): SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+* **fromTime**: string (Required): From time of the query
+* **groupByOperationName**: bool: Group query result by Operation Name.
+* **groupByResourceName**: bool: Group query result by Resource Name.
+* **groupByThrottlePolicy**: bool: Group query result by Throttle Policy applied.
+* **intervalLength**: 'FiveMins' | 'SixtyMins' | 'ThirtyMins' | 'ThreeMins' (Required): Interval value in minutes used to create LogAnalytics call rate logs.
+* **toTime**: string (Required): To time of the query
 
 ## ResourceTags
 ### Properties
@@ -471,6 +519,21 @@
 * **progress**: [RollingUpgradeProgressInfo](#rollingupgradeprogressinfo) (ReadOnly): Information about the number of virtual machine instances in each upgrade state.
 * **runningStatus**: [RollingUpgradeRunningStatus](#rollingupgraderunningstatus) (ReadOnly): Information about the current running state of the overall upgrade.
 
+## RunCommandInput
+### Properties
+* **commandId**: string (Required): The run command id.
+* **parameters**: [RunCommandInputParameter](#runcommandinputparameter)[]: The run command parameters.
+* **script**: string[]: Optional. The script to be executed.  When this value is given, the given script will override the default script of the command.
+
+## RunCommandInputParameter
+### Properties
+* **name**: string (Required): The run command parameter name.
+* **value**: string (Required): The run command parameter value.
+
+## RunCommandResult
+### Properties
+* **value**: [InstanceViewStatus](#instanceviewstatus)[]: Run command operation response.
+
 ## Sku
 ### Properties
 * **capacity**: int: Specifies the number of virtual machines in the scale set.
@@ -495,6 +558,15 @@
 ## SubResource
 ### Properties
 * **id**: string: Resource Id
+
+## ThrottledRequestsInput
+### Properties
+* **blobContainerSasUri**: string (Required): SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+* **fromTime**: string (Required): From time of the query
+* **groupByOperationName**: bool: Group query result by Operation Name.
+* **groupByResourceName**: bool: Group query result by Resource Name.
+* **groupByThrottlePolicy**: bool: Group query result by Throttle Policy applied.
+* **toTime**: string (Required): To time of the query
 
 ## UpgradePolicy
 ### Properties
@@ -526,6 +598,20 @@
 * **extensionHandlers**: [VirtualMachineExtensionHandlerInstanceView](#virtualmachineextensionhandlerinstanceview)[]: The virtual machine extension handler instance view.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
 * **vmAgentVersion**: string: The VM Agent full version.
+
+## VirtualMachineCaptureParameters
+### Properties
+* **destinationContainerName**: string (Required): The destination container name.
+* **overwriteVhds**: bool (Required): Specifies whether to overwrite the destination virtual hard disk, in case of conflict.
+* **vhdPrefix**: string (Required): The captured virtual hard disk's name prefix.
+
+## VirtualMachineCaptureResult
+### Properties
+* **$schema**: string (ReadOnly): the schema of the captured virtual machine
+* **contentVersion**: string (ReadOnly): the version of the content
+* **id**: string: Resource Id
+* **parameters**: any (ReadOnly): parameters of the captured virtual machine
+* **resources**: any[] (ReadOnly): a list of resource items of the captured virtual machine
 
 ## VirtualMachineExtension
 ### Properties

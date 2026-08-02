@@ -982,6 +982,52 @@
 * **properties**: [TagProductLinkContractProperties](#tagproductlinkcontractproperties): Tag-API link entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/workspaces/tags/productLinks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applynetworkconfigurationupdates (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [ApiManagementServiceApplyNetworkConfigurationParameters](#apimanagementserviceapplynetworkconfigurationparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function backup (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function connectivityCheck (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [ConnectivityCheckRequest](#connectivitycheckrequest)
+* **Output**: [ConnectivityCheckResponse](#connectivitycheckresponse)
+
+## Function deploy (Microsoft.ApiManagement/service/tenant@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [DeployConfigurationParameters](#deployconfigurationparameters)
+* **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function generateSsoUrl (Microsoft.ApiManagement/service/users@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/users
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: [GenerateSsoUrlResult](#generatessourlresult)
+
+## Function generateToken (Microsoft.ApiManagement/service/gateways@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [GatewayTokenRequestContract](#gatewaytokenrequestcontract)
+* **Output**: [GatewayTokenContract](#gatewaytokencontract)
+
+## Function getLoginLinks (Microsoft.ApiManagement/service/authorizationProviders/authorizations@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/authorizationProviders/authorizations
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [AuthorizationLoginRequestContract](#authorizationloginrequestcontract)
+* **Output**: [AuthorizationLoginResponseContract](#authorizationloginresponsecontract)
+
+## Function getssotoken (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: [ApiManagementServiceGetSsoTokenResult](#apimanagementservicegetssotokenresult)
+
 ## Function listDebugCredentials (Microsoft.ApiManagement/service/gateways@2023-03-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/gateways
 * **ApiVersion**: 2023-03-01-preview
@@ -1053,6 +1099,51 @@
 * **Resource**: Microsoft.ApiManagement/service/workspaces/namedValues
 * **ApiVersion**: 2023-03-01-preview
 * **Output**: [NamedValueSecretContract](#namedvaluesecretcontract)
+
+## Function migrateToStv2 (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [MigrateToStv2Contract](#migratetostv2contract)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function refreshSecret (Microsoft.ApiManagement/service/certificates@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/certificates
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: [CertificateContract](#certificatecontract)
+
+## Function refreshSecret (Microsoft.ApiManagement/service/namedValues@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/namedValues
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: [NamedValueContract](#namedvaluecontract)
+
+## Function refreshSecret (Microsoft.ApiManagement/service/workspaces/namedValues@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/workspaces/namedValues
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: [NamedValueContract](#namedvaluecontract)
+
+## Function restore (Microsoft.ApiManagement/service@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
+* **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function save (Microsoft.ApiManagement/service/tenant@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
+* **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function token (Microsoft.ApiManagement/service/users@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/users
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [UserTokenParameters](#usertokenparameters)
+* **Output**: [UserTokenResult](#usertokenresult)
+
+## Function validate (Microsoft.ApiManagement/service/tenant@2023-03-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [DeployConfigurationParameters](#deployconfigurationparameters)
+* **Output**: [OperationResultContract](#operationresultcontract)
 
 ## AccessInformationCreateParameterPropertiesOrAccessInformationContractProperties
 ### Properties
@@ -1135,10 +1226,27 @@
 * **name**: string: The license name used for the API
 * **url**: string: A URL to the license used for the API. MUST be in the format of a URL
 
+## ApiManagementServiceApplyNetworkConfigurationParameters
+### Properties
+* **location**: string: Location of the Api Management service to update for a multi-region service. For a service deployed in a single region, this parameter is not required.
+
+## ApiManagementServiceBackupRestoreParameters
+### Properties
+* **accessKey**: string: Storage account access key. Required only if `accessType` is set to `AccessKey`.
+* **accessType**: 'AccessKey' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The type of access to be used for the storage account.
+* **backupName**: string (Required): The name of the backup file to create/retrieve.
+* **clientId**: string: The Client ID of user assigned managed identity. Required only if `accessType` is set to `UserAssignedManagedIdentity`.
+* **containerName**: string (Required): The name of the blob container (used to place/retrieve the backup).
+* **storageAccount**: string (Required): The name of the Azure storage account (used to place/retrieve the backup).
+
 ## ApiManagementServiceBasePropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApiManagementServiceGetSsoTokenResult
+### Properties
+* **redirectUri**: string: Redirect URL to the Publisher Portal containing the SSO token.
 
 ## ApiManagementServiceIdentity
 ### Properties
@@ -1191,10 +1299,29 @@ dictionary key references will be ARM resource ids in the form:
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration of the API Management service.
 * **virtualNetworkType**: 'External' | 'Internal' | 'None' | string: The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
+## ApiManagementServiceResource
+### Properties
+* **etag**: string (ReadOnly): ETag of the resource.
+* **id**: string (ReadOnly): Resource ID.
+* **identity**: [ApiManagementServiceIdentity](#apimanagementserviceidentity): Managed service identity of the Api Management service.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of the API Management service.
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ApimResourceTags](#apimresourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type for API Management resource is set to Microsoft.ApiManagement.
+* **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
+
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int (Required): Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
 * **name**: 'Basic' | 'Consumption' | 'Developer' | 'Isolated' | 'Premium' | 'Standard' | string (Required): Name of the Sku.
+
+## ApimResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ApimResourceTags
 ### Properties
@@ -1266,6 +1393,14 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **code**: string: Error code
 * **message**: string: Error message
+
+## AuthorizationLoginRequestContract
+### Properties
+* **postLoginRedirectUrl**: string: The redirect URL after login has completed.
+
+## AuthorizationLoginResponseContract
+### Properties
+* **loginLink**: string: The login link
 
 ## AuthorizationProviderContractProperties
 ### Properties
@@ -1402,6 +1537,20 @@ dictionary key references will be ARM resource ids in the form:
 * **encodedCertificate**: string: Base64 Encoded certificate.
 * **storeName**: 'CertificateAuthority' | 'Root' | string (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
 
+## CertificateContract
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CertificateContractProperties](#certificatecontractproperties): Certificate properties details.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## CertificateContractProperties
+### Properties
+* **expirationDate**: string (Required): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **keyVault**: [KeyVaultContractProperties](#keyvaultcontractproperties): KeyVault location details of the certificate.
+* **subject**: string (Required): Subject attribute of the certificate.
+* **thumbprint**: string (Required): Thumbprint of the certificate.
+
 ## CertificateCreateOrUpdatePropertiesOrCertificateContractProperties
 ### Properties
 * **data**: string (WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
@@ -1439,6 +1588,60 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **legacyApi**: 'Disabled' | 'Enabled' | string: Indication whether or not the legacy Configuration API (v1) should be exposed on the API Management service. Value is optional but must be 'Enabled' or 'Disabled'. If 'Disabled', legacy Configuration API (v1) will not be available for self-hosted gateways. Default value is 'Enabled'
 
+## ConnectivityCheckRequest
+### Properties
+* **destination**: [ConnectivityCheckRequestDestination](#connectivitycheckrequestdestination) (Required): The connectivity check operation destination.
+* **preferredIPVersion**: 'IPv4' | string: The IP version to be used. Only IPv4 is supported for now.
+* **protocol**: 'HTTP' | 'HTTPS' | 'TCP' | string: The request's protocol. Specific protocol configuration can be available based on this selection. The specified destination address must be coherent with this value.
+* **protocolConfiguration**: [ConnectivityCheckRequestProtocolConfiguration](#connectivitycheckrequestprotocolconfiguration): Protocol-specific configuration.
+* **source**: [ConnectivityCheckRequestSource](#connectivitycheckrequestsource) (Required): Definitions about the connectivity check origin.
+
+## ConnectivityCheckRequestDestination
+### Properties
+* **address**: string (Required): Destination address. Can either be an IP address or a FQDN.
+* **port**: int (Required): Destination port.
+
+## ConnectivityCheckRequestProtocolConfiguration
+### Properties
+* **HTTPConfiguration**: [ConnectivityCheckRequestProtocolConfigurationHttpConfiguration](#connectivitycheckrequestprotocolconfigurationhttpconfiguration): Configuration for HTTP or HTTPS requests.
+
+## ConnectivityCheckRequestProtocolConfigurationHttpConfiguration
+### Properties
+* **headers**: [HttpHeader](#httpheader)[]: List of headers to be included in the request.
+* **method**: 'GET' | 'POST' | string: The HTTP method to be used.
+* **validStatusCodes**: int[]: List of HTTP status codes considered valid for the request response.
+
+## ConnectivityCheckRequestSource
+### Properties
+* **instance**: int: The particular VMSS instance from which to fire the request.
+* **region**: string (Required): The API Management service region from where to start the connectivity check operation.
+
+## ConnectivityCheckResponse
+### Properties
+* **avgLatencyInMs**: int (ReadOnly): Average latency in milliseconds.
+* **connectionStatus**: 'Connected' | 'Degraded' | 'Disconnected' | 'Unknown' | string (ReadOnly): The connection status.
+* **hops**: [ConnectivityHop](#connectivityhop)[] (ReadOnly): List of hops between the source and the destination.
+* **maxLatencyInMs**: int (ReadOnly): Maximum latency in milliseconds.
+* **minLatencyInMs**: int (ReadOnly): Minimum latency in milliseconds.
+* **probesFailed**: int (ReadOnly): Number of failed probes.
+* **probesSent**: int (ReadOnly): Total number of probes sent.
+
+## ConnectivityHop
+### Properties
+* **address**: string (ReadOnly): The IP address of the hop.
+* **id**: string (ReadOnly): The ID of the hop.
+* **issues**: [ConnectivityIssue](#connectivityissue)[] (ReadOnly): List of issues.
+* **nextHopIds**: string[] (ReadOnly): List of next hop identifiers.
+* **resourceId**: string (ReadOnly): The ID of the resource corresponding to this hop.
+* **type**: string (ReadOnly): The type of the hop.
+
+## ConnectivityIssue
+### Properties
+* **context**: [IssueContext](#issuecontext)[] (ReadOnly): Provides additional context on the issue.
+* **origin**: 'Inbound' | 'Local' | 'Outbound' | string (ReadOnly): The origin of the issue.
+* **severity**: 'Error' | 'Warning' | string (ReadOnly): The severity of the issue.
+* **type**: 'AgentStopped' | 'DnsResolution' | 'GuestFirewall' | 'NetworkSecurityRule' | 'Platform' | 'PortThrottled' | 'SocketBind' | 'Unknown' | 'UserDefinedRoute' | string (ReadOnly): The type of issue.
+
 ## ContentItemContractProperties
 ### Properties
 ### Additional Properties
@@ -1467,6 +1670,15 @@ dictionary key references will be ARM resource ids in the form:
 * **deletionDate**: string: UTC Timestamp when the service was soft-deleted. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
 * **scheduledPurgeDate**: string: UTC Date and Time when the service will be automatically purged. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
 * **serviceId**: string: Fully-qualified API Management Service Resource ID
+
+## DeployConfigurationParameterProperties
+### Properties
+* **branch**: string (Required): The name of the Git branch from which the configuration is to be deployed to the configuration database.
+* **force**: bool: The value enforcing deleting subscriptions to products that are deleted in this update.
+
+## DeployConfigurationParameters
+### Properties
+* **properties**: [DeployConfigurationParameterProperties](#deployconfigurationparameterproperties): Deploy Configuration Parameter contract properties.
 
 ## DiagnosticContractProperties
 ### Properties
@@ -1500,6 +1712,18 @@ dictionary key references will be ARM resource ids in the form:
 * **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]: Email Template Parameter values.
 * **subject**: string {minLength: 1, maxLength: 1000}: Subject of the Template.
 * **title**: string: Title of the Template.
+
+## ErrorFieldContract
+### Properties
+* **code**: string: Property level error code.
+* **message**: string: Human-readable representation of property-level error.
+* **target**: string: Property name.
+
+## ErrorResponseBody
+### Properties
+* **code**: string: Service-defined error code. This code serves as a sub-status for the HTTP error code specified in the response.
+* **details**: [ErrorFieldContract](#errorfieldcontract)[]: The list of invalid fields send in request, in case of validation error.
+* **message**: string: Human-readable representation of the error.
 
 ## FailureStatusCodeRange
 ### Properties
@@ -1543,10 +1767,23 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **traceId**: string: Trace id.
 
+## GatewayTokenContract
+### Properties
+* **value**: string: Shared Access Authentication token value for the Gateway.
+
+## GatewayTokenRequestContract
+### Properties
+* **expiry**: string (Required): The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **keyType**: 'primary' | 'secondary' (Required): The Key to be used to generate gateway token.
+
 ## GatewayTraceContract
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## GenerateSsoUrlResult
+### Properties
+* **value**: string: Redirect Url containing the SSO URL value.
 
 ## GlobalSchemaContractProperties
 ### Properties
@@ -1585,6 +1822,11 @@ dictionary key references will be ARM resource ids in the form:
 * **negotiateClientCertificate**: bool: Specify true to always negotiate client certificate on the hostname. Default Value is false.
 * **type**: 'ConfigurationApi' | 'DeveloperPortal' | 'Management' | 'Portal' | 'Proxy' | 'Scm' | string (Required): Hostname type.
 
+## HttpHeader
+### Properties
+* **name**: string (Required): Header name.
+* **value**: string (Required): Header value.
+
 ## HttpMessageDiagnostic
 ### Properties
 * **body**: [BodyDiagnosticSettings](#bodydiagnosticsettings): Body logging settings.
@@ -1617,6 +1859,11 @@ dictionary key references will be ARM resource ids in the form:
 * **text**: string (Required): Comment text.
 * **userId**: string (Required): A resource identifier for the user who left the comment.
 
+## IssueContext
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## IssueContractProperties
 ### Properties
 * **apiId**: string: A resource identifier for the API the issue was created for.
@@ -1630,6 +1877,12 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **identityClientId**: string: Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
 * **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties) (ReadOnly): Last time sync and refresh status of secret from key vault.
+* **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires API Management service to be configured with aka.ms/apimmsi
+
+## KeyVaultContractProperties
+### Properties
+* **identityClientId**: string: Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
+* **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties): Last time sync and refresh status of secret from key vault.
 * **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires API Management service to be configured with aka.ms/apimmsi
 
 ## KeyVaultLastAccessStatusContractProperties
@@ -1651,6 +1904,25 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## MigrateToStv2Contract
+### Properties
+* **mode**: 'NewIP' | 'PreserveIp' | string: Mode of Migration to stv2. Default is PreserveIp.
+
+## NamedValueContract
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [NamedValueContractProperties](#namedvaluecontractproperties): NamedValue entity contract properties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## NamedValueContractProperties
+### Properties
+* **displayName**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"} (Required): Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
+* **keyVault**: [KeyVaultContractProperties](#keyvaultcontractproperties): KeyVault location details of the namedValue.
+* **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
+* **tags**: string[] {maxLength: 32}: Optional tags that when provided can be used to filter the NamedValue list.
+* **value**: string {maxLength: 4096}: Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
 ## NamedValueCreateContractPropertiesOrNamedValueContractProperties
 ### Properties
@@ -1700,6 +1972,29 @@ Instrumentation key for applicationInsights logger.
 * **responses**: [ResponseContract](#responsecontract)[]: Array of Operation responses.
 * **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
 * **urlTemplate**: string {minLength: 1, maxLength: 1000} (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+
+## OperationResultContract
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [OperationResultContractProperties](#operationresultcontractproperties): Properties of the Operation Contract.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## OperationResultContractProperties
+### Properties
+* **actionLog**: [OperationResultLogItemContract](#operationresultlogitemcontract)[] (ReadOnly): This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation.
+* **error**: [ErrorResponseBody](#errorresponsebody): Error Body Contract
+* **id**: string: Operation result identifier.
+* **resultInfo**: string: Optional result info.
+* **started**: string: Start time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **status**: 'Failed' | 'InProgress' | 'Started' | 'Succeeded': Status of an async operation.
+* **updated**: string: Last update time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+
+## OperationResultLogItemContract
+### Properties
+* **action**: string: Action like create/update/delete.
+* **objectKey**: string: Identifier of the entity being created/updated/deleted.
+* **objectType**: string: The type of entity contract.
 
 ## ParameterContract
 ### Properties
@@ -1929,6 +2224,15 @@ Instrumentation key for applicationInsights logger.
 * **percentage**: int {minValue: 0, maxValue: 100}: Rate of sampling for fixed-rate sampling.
 * **samplingType**: 'fixed' | string: Sampling type.
 
+## SaveConfigurationParameter
+### Properties
+* **properties**: [SaveConfigurationParameterProperties](#saveconfigurationparameterproperties): Properties of the Save Configuration Parameters.
+
+## SaveConfigurationParameterProperties
+### Properties
+* **branch**: string (Required): The name of the Git branch in which to commit the current configuration snapshot.
+* **force**: bool: The value if true, the current configuration database is committed to the Git repository, even if the Git repository has newer changes that would be overwritten.
+
 ## SchemaContractProperties
 ### Properties
 * **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml` </br> - `OData Schema` use `application/vnd.ms-azure-apim.odata.schema`.
@@ -2062,6 +2366,19 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **clientId**: string: The client id of user assigned identity.
 * **principalId**: string: The principal id of user assigned identity.
+
+## UserTokenParameterProperties
+### Properties
+* **expiry**: string (Required): The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **keyType**: 'primary' | 'secondary' (Required): The Key to be used to generate token for user.
+
+## UserTokenParameters
+### Properties
+* **properties**: [UserTokenParameterProperties](#usertokenparameterproperties): User Token Parameter contract properties.
+
+## UserTokenResult
+### Properties
+* **value**: string: Shared Access Authorization token for the User.
 
 ## VirtualNetworkConfiguration
 ### Properties

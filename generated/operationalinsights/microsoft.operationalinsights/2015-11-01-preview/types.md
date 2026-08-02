@@ -36,6 +36,11 @@
 * **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): The properties of the linked service.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function sharedKeys (Microsoft.OperationalInsights/workspaces@2015-11-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2015-11-01-preview
+* **Output**: [SharedKeys](#sharedkeys)
+
 ## LinkedServiceProperties
 ### Properties
 * **resourceId**: string (Required): The resource id of the resource that will be linked to the workspace.
@@ -49,6 +54,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SharedKeys
+### Properties
+* **primarySharedKey**: string: The primary shared key of a workspace.
+* **secondarySharedKey**: string: The secondary shared key of a workspace.
 
 ## Sku
 ### Properties

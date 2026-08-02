@@ -16,6 +16,11 @@
 * **ApiVersion**: 2021-11-01-preview
 * **Output**: [SourceConfigurationResult](#sourceconfigurationresult)
 
+## Function validateLinker (Microsoft.ServiceLinker/linkers@2021-11-01-preview)
+* **Resource**: Microsoft.ServiceLinker/linkers
+* **ApiVersion**: 2021-11-01-preview
+* **Output**: [ValidateResult](#validateresult)
+
 ## AuthInfoBase
 * **Discriminator**: authType
 
@@ -82,6 +87,16 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## ValidateResult
+### Properties
+* **authType**: 'secret' | 'servicePrincipalCertificate' | 'servicePrincipalSecret' | 'systemAssignedIdentity' | 'userAssignedIdentity' | string: The authentication type.
+* **linkerStatus**: 'Healthy' | 'Not healthy' | string: Specifies if the linker is healthy.
+* **name**: string: The linker name.
+* **reason**: string: The reason of the error.
+* **reportEndTimeUtc**: string: The end time of the validation report.
+* **reportStartTimeUtc**: string: The start time of the validation report.
+* **targetId**: string: The resource Id of target service.
 
 ## VNetSolution
 ### Properties

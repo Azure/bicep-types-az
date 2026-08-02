@@ -2616,6 +2616,213 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ClusterResizeParameters",
+    "properties": {
+      "targetInstanceCount": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The target instance count for the operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutoscaleConfigurationUpdateParameter",
+    "properties": {
+      "autoscale": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The autoscale configuration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterDiskEncryptionParameters",
+    "properties": {
+      "vaultUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net"
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Key name that is used for enabling disk encryption."
+      },
+      "keyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specific key version that is used for enabling disk encryption."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewaySettings",
+    "properties": {
+      "restAuthCredential.isEnabled": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Indicates whether or not the gateway settings based authorization is enabled."
+      },
+      "restAuthCredential.username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The gateway settings user name."
+      },
+      "restAuthCredential.password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The gateway settings user password."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGatewaySettings",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGatewaySettingsParameters",
+    "properties": {
+      "restAuthCredential.isEnabled": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Indicates whether or not the gateway settings based authorization is enabled."
+      },
+      "restAuthCredential.username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The gateway settings user name."
+      },
+      "restAuthCredential.password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The gateway settings user password."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateClusterIdentityCertificateParameters",
+    "properties": {
+      "applicationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The application id."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The certificate in base64 encoded format."
+      },
+      "certificatePassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password of the certificate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteScriptActionParameters",
+    "properties": {
+      "scriptActions": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "The list of run time script actions."
+      },
+      "persistOnSuccess": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "Gets or sets if the scripts needs to be persisted."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterConfigurations",
+    "properties": {
+      "configurations": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "The configuration object for the specified configuration for the specified cluster."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterConfiguration",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterConfigurations",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "configurations",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/180"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "HostInfo",
     "properties": {
       "name": {
@@ -2644,7 +2851,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/171"
+      "$ref": "#/184"
     }
   },
   {
@@ -2653,7 +2860,468 @@
     "resourceType": "Microsoft.HDInsight/clusters",
     "apiVersion": "2021-06-01",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityCheckRequestParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityCheckResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "This indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason of the result."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The related message."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.HDInsight/locations",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterCreateRequestValidationParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cluster name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tenant id."
+      },
+      "fetchAaddsResource": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "This indicates whether fetch Aadds resource or not."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the cluster."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 0,
+        "description": "The availability zones."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "The cluster create parameters."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The identity of the cluster, if configured."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterCreateParametersExtendedTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterCreateProperties",
+    "properties": {
+      "clusterVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of the cluster."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The type of operating system."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "The cluster tier."
+      },
+      "clusterDefinition": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The cluster definition."
+      },
+      "kafkaRestProperties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The cluster kafka rest proxy configuration."
+      },
+      "securityProfile": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The security profile."
+      },
+      "computeProfile": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The compute profile."
+      },
+      "storageProfile": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The storage profile."
+      },
+      "diskEncryptionProperties": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The disk encryption properties."
+      },
+      "encryptionInTransitProperties": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The encryption-in-transit properties."
+      },
+      "minSupportedTlsVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The minimal supported tls version."
+      },
+      "networkProperties": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The network properties."
+      },
+      "computeIsolationProperties": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The compute isolation properties."
+      },
+      "privateLinkConfigurations": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "The private link configurations."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterCreateValidationResult",
+    "properties": {
+      "validationErrors": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "The validation errors."
+      },
+      "validationWarnings": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "The validation warnings."
+      },
+      "estimatedCreationDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The estimated creation duration."
+      },
+      "aaddsResourcesDetails": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "The Azure active directory domain service resource details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "errorResource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error resource."
+      },
+      "messageArguments": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "The message arguments"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/203"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/203"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AaddsResourceDetails",
+    "properties": {
+      "domainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Azure active directory domain service name."
+      },
+      "initialSyncComplete": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "This indicates whether initial sync complete or not."
+      },
+      "ldapsEnabled": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "This indicates whether enable ldaps or not."
+      },
+      "ldapsPublicCertificateInBase64": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The base 64 format string of public ldap certificate."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id of azure active directory domain service."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The subnet resource id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tenant id of azure active directory domain service ."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCreateRequest",
+    "resourceType": "Microsoft.HDInsight/locations",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/202"
+    },
+    "input": {
+      "$ref": "#/191"
     }
   }
 ]
