@@ -44,6 +44,30 @@
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function forecast (Microsoft.CostManagement/externalSubscriptions@2019-11-01)
+* **Resource**: Microsoft.CostManagement/externalSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Function forecast (Microsoft.CostManagement/externalBillingAccounts@2019-11-01)
+* **Resource**: Microsoft.CostManagement/externalBillingAccounts
+* **ApiVersion**: 2019-11-01
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Function query (Microsoft.CostManagement/externalSubscriptions@2019-11-01)
+* **Resource**: Microsoft.CostManagement/externalSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Function query (Microsoft.CostManagement/externalBillingAccounts@2019-11-01)
+* **Resource**: Microsoft.CostManagement/externalBillingAccounts
+* **ApiVersion**: 2019-11-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## AlertProperties
 ### Properties
 * **closeTime**: string: dateTime in which alert was closed
@@ -127,6 +151,15 @@
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
+## ForecastDefinition
+### Properties
+* **dataset**: [QueryDataset](#querydataset) (Required): Has definition for data in this forecast.
+* **includeActualCost**: bool: a boolean determining if actualCost will be included
+* **includeFreshPartialCost**: bool: a boolean determining if FreshPartialCost will be included
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the forecast. If custom, then a specific time period must be provided.
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod): Has time period for pulling data for the forecast.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the forecast.
+
 ## KpiProperties
 ### Properties
 * **enabled**: bool: show the KPI in the UI?
@@ -143,11 +176,28 @@
 * **function**: 'Avg' | 'Max' | 'Min' | 'Sum' | string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
+## QueryColumn
+### Properties
+* **name**: string: The name of column.
+* **type**: string: The type of column.
+
 ## QueryComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
 * **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
+
+## QueryDataset
+### Properties
+* **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
+* **filter**: [QueryFilter](#queryfilter): The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter.
+* **granularity**: 'Daily' | string: The granularity of rows in the query.
+* **grouping**: [QueryGrouping](#querygrouping)[] {maxLength: 2}: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
+
+## QueryDatasetAggregation
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [QueryAggregation](#queryaggregation)
 
 ## QueryDatasetAggregation
 ### Properties
@@ -166,6 +216,20 @@
 ### Properties
 * **columns**: string[]: Array of column names to be included in the query. Any valid query column name is allowed. If not provided, then query includes all columns.
 
+## QueryDefinition
+### Properties
+* **dataset**: [QueryDataset](#querydataset) (Required): Has definition for data in this query.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod): Has time period for pulling data for the query.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the query.
+
+## QueryFilter
+### Properties
+* **and**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
+* **dimensions**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a dimension
+* **or**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
+* **tags**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a tag
+
 ## QueryFilterAutoGenerated
 ### Properties
 * **and**: [QueryFilterAutoGenerated](#queryfilterautogenerated)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
@@ -177,6 +241,23 @@
 ### Properties
 * **name**: string (Required): The name of the column to group.
 * **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
+
+## QueryProperties
+### Properties
+* **columns**: [QueryColumn](#querycolumn)[]: Array of columns
+* **nextLink**: string: The link (url) to the next page of results.
+* **rows**: any[][]: Array of rows
+
+## QueryResult
+### Properties
+* **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly): Resource Id.
+* **location**: string (ReadOnly): Resource location
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [QueryProperties](#queryproperties)
+* **sku**: string (ReadOnly): Resource SKU
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## QueryTimePeriod
 ### Properties
@@ -243,6 +324,11 @@
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

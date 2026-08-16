@@ -59,11 +59,56 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforMySQL/locations@2021-05-01-preview)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforMySQL/locations@2021-05-01-preview)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function updateConfigurations (Microsoft.DBforMySQL/flexibleServers@2021-05-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [ConfigurationListForBatchUpdate](#configurationlistforbatchupdate)
+* **Output**: [ConfigurationListResult](#configurationlistresult)
+
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
+
+## Configuration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ConfigurationForBatchUpdate
+### Properties
+* **name**: string: Name of the configuration.
+* **properties**: [ConfigurationForBatchUpdateProperties](#configurationforbatchupdateproperties): The properties can be updated for a configuration.
+
+## ConfigurationForBatchUpdateProperties
+### Properties
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
+
+## ConfigurationListForBatchUpdate
+### Properties
+* **value**: [ConfigurationForBatchUpdate](#configurationforbatchupdate)[]: The list of server configurations.
+
+## ConfigurationListResult
+### Properties
+* **nextLink**: string: The link used to get the next page of operations.
+* **value**: [Configuration](#configuration)[]: The list of server configurations.
 
 ## ConfigurationProperties
 ### Properties
@@ -81,6 +126,11 @@
 ### Properties
 * **charset**: string: The charset of the database.
 * **collation**: string: The collation of the database.
+
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): name of the subnet
+* **usage**: int (ReadOnly): Number of used delegated subnets
 
 ## FirewallRuleProperties
 ### Properties
@@ -105,6 +155,17 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **reason**: string: Reason for name being unavailable.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## Network
 ### Properties
@@ -162,4 +223,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkResourceId**: string: Virtual network resource id.
+
+## VirtualNetworkSubnetUsageResult
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly): A list of delegated subnet usage
 

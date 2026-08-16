@@ -10,6 +10,11 @@
 * **properties**: [RemediationProperties](#remediationproperties): Properties for the remediation.
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.PolicyInsights/remediations@2019-07-01)
+* **Resource**: Microsoft.PolicyInsights/remediations
+* **ApiVersion**: 2019-07-01
+* **Output**: [Remediation](#remediation)
+
 ## Function listDeployments (Microsoft.PolicyInsights/remediations@2019-07-01)
 * **Resource**: Microsoft.PolicyInsights/remediations
 * **ApiVersion**: 2019-07-01
@@ -22,6 +27,13 @@
 * **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
 * **message**: string (ReadOnly): Description of the error.
 * **target**: string (ReadOnly): The target of the error.
+
+## Remediation
+### Properties
+* **id**: string (ReadOnly): The ID of the remediation.
+* **name**: string (ReadOnly): The name of the remediation.
+* **properties**: [RemediationProperties](#remediationproperties): Properties for the remediation.
+* **type**: string (ReadOnly): The type of the remediation.
 
 ## RemediationDeployment
 ### Properties

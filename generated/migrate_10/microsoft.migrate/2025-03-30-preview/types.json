@@ -1172,5 +1172,188 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryRequest",
+    "properties": {
+      "scopeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Task Scope ARM Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryResponse",
+    "properties": {
+      "items": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 1,
+        "description": "List of Task Summary Items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryItem",
+    "properties": {
+      "stage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Task Stage"
+      },
+      "aggregatedStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Aggregated status of tasks in this stage."
+      },
+      "statusCounts": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "Counts of tasks in this stage by status."
+      },
+      "tasks": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "List of tasks in this stage."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskStatusCounts",
+    "properties": {
+      "statusCounts": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "Status counts dictionary mapping TaskStatus to the count of tasks with that status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskStatusCountMap",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The task status."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 1,
+        "description": "The count of tasks with this status."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Task",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "taskSummary",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2025-03-30-preview",
+    "output": {
+      "$ref": "#/90"
+    },
+    "input": {
+      "$ref": "#/89"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.Migrate/migrateProjects/waves",
+    "apiVersion": "2025-03-30-preview",
+    "output": {
+      "$ref": "#/78"
+    }
   }
 ]

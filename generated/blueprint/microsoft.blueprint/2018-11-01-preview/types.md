@@ -96,6 +96,11 @@
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (ReadOnly): Properties for a Resource Manager template blueprint artifact.
 
 
+## Function whoIsBlueprint (Microsoft.Blueprint/blueprintAssignments@2018-11-01-preview)
+* **Resource**: Microsoft.Blueprint/blueprintAssignments
+* **ApiVersion**: 2018-11-01-preview
+* **Output**: [WhoIsBlueprintContract](#whoisblueprintcontract)
+
 ## AssignmentDeploymentJob
 ### Properties
 * **action**: string: Name of the action performed in this job.
@@ -317,4 +322,8 @@
 ### Properties
 * **clientId**: string: Client App Id associated with this identity.
 * **principalId**: string: Azure Active Directory principal ID associated with this Identity.
+
+## WhoIsBlueprintContract
+### Properties
+* **objectId**: string: AAD object Id of the Azure Blueprints service principal in the tenant.
 

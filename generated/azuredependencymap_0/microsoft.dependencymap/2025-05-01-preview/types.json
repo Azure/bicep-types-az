@@ -469,5 +469,341 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDependenciesRequest",
+    "properties": {
+      "focusedMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Machine arm id"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Filters for ExportDependencies"
+      },
+      "applianceNameList": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "List of Appliance Names"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapVisualizationFilter",
+    "properties": {
+      "dateTime": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "DateTime filter"
+      },
+      "processNameFilter": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Process name filter"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DateTimeFilter",
+    "properties": {
+      "startDateTimeUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start date time for dependency map visualization query"
+      },
+      "endDateTimeUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End date time for dependency map visualization query"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProcessNameFilter",
+    "properties": {
+      "operator": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "Operator for process name filter"
+      },
+      "processNames": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "List of process names on which the operator should be applied"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "contains"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notContains"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDependenciesOperationResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status URL of export dependencies operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource name of the operation status. It must match the last segment of 'id' field."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The overall arm status of the operation. It has one of the terminal states - Succeeded/Failed/Canceled."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Contains error details if status is Failed/Canceled."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Properties for export dependencies. These should only be set if the status is Succeeded."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDependenciesResultProperties",
+    "properties": {
+      "exportedDataSasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SAS URI of the blob containing the exported dependencies data."
+      },
+      "statusCode": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "A status code returned by the service with additional context about the export dependencies operation."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Additional information about the exported data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoMatch"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompleteMatch"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartialMatch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportDependenciesAdditionalInfo",
+    "properties": {
+      "availableDaysCount": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Number of days for which data was available in the exported results."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDependencies",
+    "resourceType": "Microsoft.DependencyMap/maps",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/43"
+    }
   }
 ]

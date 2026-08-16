@@ -874,5 +874,395 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.FileShares/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/74"
+    },
+    "input": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareLimitsResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "The properties of the file share limits."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareLimitsOutput",
+    "properties": {
+      "limits": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "The limits for the file share."
+      },
+      "provisioningConstants": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 1,
+        "description": "The provisioning constants for the file share."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareLimits",
+    "properties": {
+      "maxFileShares": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum number of file shares that can be created."
+      },
+      "maxFileShareSnapshots": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum number of snapshots allowed per file share."
+      },
+      "maxFileShareSubnets": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum number of subnets that can be associated with a file share."
+      },
+      "maxFileSharePrivateEndpointConnections": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum number of private endpoint connections allowed for a file share."
+      },
+      "minProvisionedStorageGiB": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The minimum provisioned storage in GiB for a file share."
+      },
+      "maxProvisionedStorageGiB": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum provisioned storage in GiB for a file share."
+      },
+      "minProvisionedIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The minimum provisioned IOPS (Input/Output Operations Per Second) for a file share."
+      },
+      "maxProvisionedIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum provisioned IOPS (Input/Output Operations Per Second) for a file share."
+      },
+      "minProvisionedThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The minimum provisioned throughput in MiB/s for a file share."
+      },
+      "maxProvisionedThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum provisioned throughput in MiB/s for a file share."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProvisioningConstants",
+    "properties": {
+      "baseIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Base IO per second."
+      },
+      "scalarIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Scalar IO per second."
+      },
+      "baseThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Base throughput in MiB per second."
+      },
+      "scalarThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Scalar throughput in MiB per second."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLimits",
+    "resourceType": "Microsoft.FileShares/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProvisioningRecommendationRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "The properties of the file share provisioning recommendation input."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProvisioningRecommendationInput",
+    "properties": {
+      "provisionedStorageGiB": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The desired provisioned storage size of the share in GiB. Will be use to calculate the values of remaining provisioning parameters."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProvisioningRecommendationResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "The properties of the file share provisioning recommendation output."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProvisioningRecommendationOutput",
+    "properties": {
+      "provisionedIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The recommended value of provisioned IO / sec of the share."
+      },
+      "provisionedThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The recommended value of provisioned throughput / sec of the share."
+      },
+      "availableRedundancyOptions": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "Redundancy options for the share."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProvisioningRecommendation",
+    "resourceType": "Microsoft.FileShares/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareUsageDataResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "The properties of the file share usage data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareUsageDataOutput",
+    "properties": {
+      "liveShares": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "File share usage data for active file shares."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LiveSharesUsageData",
+    "properties": {
+      "fileShareCount": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The number of active file shares."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getUsageData",
+    "resourceType": "Microsoft.FileShares/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/94"
+    }
   }
 ]

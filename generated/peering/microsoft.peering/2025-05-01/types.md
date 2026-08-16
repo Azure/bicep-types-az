@@ -84,6 +84,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Peering/peerings/registeredPrefixes@2025-05-01)
+* **Resource**: Microsoft.Peering/peerings/registeredPrefixes
+* **ApiVersion**: 2025-05-01
+* **Output**: [PeeringRegisteredPrefix](#peeringregisteredprefix)
+
 ## BgpSession
 ### Properties
 * **maxPrefixesAdvertisedV4**: int: The maximum number of prefixes advertised over the IPv4 session.
@@ -182,6 +187,14 @@ network the connectivity probe traffic can reach their endpoint for the connecti
 * **asn**: int: The customer's ASN from which traffic originates.
 * **peeringServicePrefixKey**: string (ReadOnly): The peering service prefix key that is to be shared with the customer.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## PeeringRegisteredPrefix
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PeeringRegisteredPrefixProperties](#peeringregisteredprefixproperties): The properties that define a registered prefix.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PeeringRegisteredPrefixProperties
 ### Properties

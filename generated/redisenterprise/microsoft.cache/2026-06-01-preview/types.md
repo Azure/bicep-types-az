@@ -71,6 +71,18 @@
 * **ApiVersion**: 2026-06-01-preview
 * **Output**: [SkuDetailsList](#skudetailslist)
 
+## Function regenerateKey (Microsoft.Cache/redisEnterprise/databases@2026-06-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function validate (Microsoft.Cache/redisEnterprise/migrations@2026-06-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/migrations
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [MigrationValidationRequest](#migrationvalidationrequest)
+* **Output**: [MigrationValidationResponse](#migrationvalidationresponse)
+
 ## AccessKeys
 ### Properties
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate
@@ -190,6 +202,31 @@
 * **switchDns**: bool (Required): Sets whether the DNS is switched automatically after the data is transferred from the source cache to the target cache. This property must be true during the preview.
 
 
+## MigrationValidationDisparity
+### Properties
+* **category**: string (Required): A localized string denoting the category of the validation issue. Examples are "Region", "Data", "Identity", "Clustering Mode", and "TLS".
+* **message**: string (Required): Detailed message describing the validation issue.
+
+## MigrationValidationError
+### Properties
+* **disparities**: [MigrationValidationDisparity](#migrationvalidationdisparity)[] (Required): List of specific disparities that cause this error.
+
+## MigrationValidationRequest
+### Properties
+* **forceMigrate**: bool: Sets whether to ignore warnings when validating if the source cache can be migrated to the target cache. If this property is true, the isValid property in the response will ignore warning-level disparities between the source and target resource. The default value is false.
+* **skipDataMigration**: bool: Sets whether the data is migrated from source to target or not. The default value is true.
+* **sourceResourceId**: string (Required): The source resource ID to validate migration from. This is the resource ID of the Azure Cache for Redis.
+
+## MigrationValidationResponse
+### Properties
+* **errors**: [MigrationValidationError](#migrationvalidationerror)[]: List of validation errors that prevent migration.
+* **isValid**: bool (Required): Indicates whether the migration validation passed.
+* **warnings**: [MigrationValidationWarning](#migrationvalidationwarning)[]: List of validation warnings that may impact migration.
+
+## MigrationValidationWarning
+### Properties
+* **disparities**: [MigrationValidationDisparity](#migrationvalidationdisparity)[] (Required): List of specific disparities that cause this warning.
+
 ## Module
 ### Properties
 * **args**: string: Configuration options for the module, e.g. 'ERROR_RATE 0.01 INITIAL_SIZE 400'.
@@ -227,6 +264,10 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' (Required): Which access key to regenerate.
 
 ## Sku
 ### Properties

@@ -2251,5 +2251,97 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentScheduleRequest",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role assignment schedule request ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role assignment schedule request name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role assignment schedule request type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Role assignment schedule request properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Authorization/roleAssignmentScheduleRequests",
+    "apiVersion": "2024-02-01-preview",
+    "output": {
+      "$ref": "#/184"
+    },
+    "input": {
+      "$ref": "#/184"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleEligibilityScheduleRequest",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role eligibility schedule request ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role eligibility schedule request name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role eligibility schedule request type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Role eligibility schedule request properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Authorization/roleEligibilityScheduleRequests",
+    "apiVersion": "2024-02-01-preview",
+    "output": {
+      "$ref": "#/186"
+    },
+    "input": {
+      "$ref": "#/186"
+    }
   }
 ]

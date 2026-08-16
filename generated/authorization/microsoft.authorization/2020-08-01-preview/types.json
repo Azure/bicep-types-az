@@ -185,5 +185,73 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentCreateParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Role assignment properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResponse",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Whether or not validation succeeded"
+      },
+      "errorInfo": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Failed validation result details"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResponseErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code indicating why validation failed"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Message indicating why validation failed"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Authorization/roleAssignments",
+    "apiVersion": "2020-08-01-preview",
+    "output": {
+      "$ref": "#/12"
+    },
+    "input": {
+      "$ref": "#/11"
+    }
   }
 ]

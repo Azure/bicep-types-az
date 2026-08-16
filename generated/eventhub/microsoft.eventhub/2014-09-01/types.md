@@ -57,6 +57,11 @@
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function AuthorizationRules (Microsoft.EventHub/namespaces@2014-09-01)
+* **Resource**: Microsoft.EventHub/namespaces
+* **ApiVersion**: 2014-09-01
+* **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
+
 ## ConsumerGroupProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Exact time the message was created.
@@ -88,9 +93,22 @@
 * **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace.
 * **updatedAt**: string: The time the Namespace was updated.
 
+## SharedAccessAuthorizationRuleListResult
+### Properties
+* **nextLink**: string: Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules
+* **value**: [SharedAccessAuthorizationRuleResource](#sharedaccessauthorizationruleresource)[]: Result of the List Authorization Rules operation.
+
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.
+
+## SharedAccessAuthorizationRuleResource
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **location**: string: Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): Properties supplied to create or update SharedAccessAuthorizationRule
+* **type**: string (ReadOnly): Resource type
 
 ## Sku
 ### Properties

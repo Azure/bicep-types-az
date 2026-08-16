@@ -24,6 +24,24 @@
 * **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createAPIKey (Microsoft.Confluent/organizations/environments/clusters@2024-02-13)
+* **Resource**: Microsoft.Confluent/organizations/environments/clusters
+* **ApiVersion**: 2024-02-13
+* **Input**: [CreateAPIKeyModel](#createapikeymodel)
+* **Output**: [APIKeyRecord](#apikeyrecord)
+
+## Function createInvitation (Microsoft.Confluent/organizations/access@2024-02-13)
+* **Resource**: Microsoft.Confluent/organizations/access
+* **ApiVersion**: 2024-02-13
+* **Input**: [AccessInviteUserAccountModel](#accessinviteuseraccountmodel)
+* **Output**: [InvitationRecord](#invitationrecord)
+
+## Function createRoleBinding (Microsoft.Confluent/organizations/access@2024-02-13)
+* **Resource**: Microsoft.Confluent/organizations/access
+* **ApiVersion**: 2024-02-13
+* **Input**: [AccessCreateRoleBindingRequestModel](#accesscreaterolebindingrequestmodel)
+* **Output**: [RoleBindingRecord](#rolebindingrecord)
+
 ## Function listClusters (Microsoft.Confluent/organizations/access@2024-02-13)
 * **Resource**: Microsoft.Confluent/organizations/access
 * **ApiVersion**: 2024-02-13
@@ -72,6 +90,36 @@
 * **Input**: [ListAccessRequestModel](#listaccessrequestmodel)
 * **Output**: [AccessListUsersSuccessResponse](#accesslistuserssuccessresponse)
 
+## Function orgvalidate (Microsoft.Confluent/validations@2024-02-13)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2024-02-13
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [OrganizationResource](#organizationresource)
+
+## Function orgvalidateV2 (Microsoft.Confluent/validations@2024-02-13)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2024-02-13
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [ValidationResponse](#validationresponse)
+
+## AccessCreateRoleBindingRequestModel
+### Properties
+* **crn_pattern**: string: A CRN that specifies the scope and resource patterns necessary for the role to bind
+* **principal**: string: The principal User or Group to bind the role to
+* **role_name**: string: The name of the role to bind to the principal
+
+## AccessInvitedUserDetails
+### Properties
+* **auth_type**: string: Auth type of the user
+* **invitedEmail**: string: UPN/Email of the user who is being invited
+
+## AccessInviteUserAccountModel
+### Properties
+* **email**: string: Email of the logged in user
+* **invitedUserDetails**: [AccessInvitedUserDetails](#accessinviteduserdetails): Details of the user who is being invited
+* **organizationId**: string: Id of the organization
+* **upn**: string: Upn of the logged in user
+
 ## AccessListClusterSuccessResponse
 ### Properties
 * **data**: [ClusterRecord](#clusterrecord)[]: List of clusters
@@ -113,6 +161,40 @@
 * **data**: string[]: List of role binding names
 * **kind**: string: Type of response
 * **metadata**: [ConfluentListMetadata](#confluentlistmetadata): Metadata of the list
+
+## APIKeyOwnerEntity
+### Properties
+* **id**: string: API Key owner id
+* **kind**: string: Type of the owner service or user account
+* **related**: string: API URL for accessing or modifying the referred object
+* **resourceName**: string: CRN reference to the referred resource
+
+## APIKeyProperties
+### Properties
+* **metadata**: [SCMetadataEntity](#scmetadataentity): Metadata of the record
+* **spec**: [APIKeySpecEntity](#apikeyspecentity): Specification of the API Key
+
+## APIKeyRecord
+### Properties
+* **id**: string: Id of the api key
+* **kind**: string: Type of api key
+* **properties**: [APIKeyProperties](#apikeyproperties): API Key Properties
+
+## APIKeyResourceEntity
+### Properties
+* **environment**: string: The environment of the api key
+* **id**: string: Id of the resource
+* **kind**: string: Type of the owner which can be service or user account
+* **related**: string: API URL for accessing or modifying the api key resource object
+* **resourceName**: string: CRN reference to the referred resource
+
+## APIKeySpecEntity
+### Properties
+* **description**: string: The description of the API Key
+* **name**: string: The name of the API Key
+* **owner**: [APIKeyOwnerEntity](#apikeyownerentity): Specification of the cluster
+* **resource**: [APIKeyResourceEntity](#apikeyresourceentity): Specification of the cluster
+* **secret**: string {sensitive} (WriteOnly): API Key Secret
 
 ## ClusterByokEntity
 ### Properties
@@ -186,6 +268,11 @@
 * **prev**: string: Previous page of the list
 * **total_size**: int: Total size of the list
 
+## CreateAPIKeyModel
+### Properties
+* **description**: string: Description of the API Key
+* **name**: string: Name of the API Key
+
 ## EnvironmentRecord
 ### Properties
 * **display_name**: string: Display name of the user
@@ -241,6 +328,16 @@
 * **termId**: string {maxLength: 50}: Offer Plan Term Id
 * **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
 
+## OrganizationResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **location**: string: Location of Organization resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [OrganizationResourceProperties](#organizationresourceproperties) (Required): Organization resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
+* **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
+* **type**: string (ReadOnly): The type of the resource.
+
 ## OrganizationResourceProperties
 ### Properties
 * **createdTime**: string (ReadOnly): The creation time of the resource.
@@ -250,6 +347,11 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provision states for confluent RP
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [UserDetail](#userdetail) (Required): Subscriber detail
+
+## OrganizationResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## OrganizationResourceTags
 ### Properties
@@ -324,4 +426,13 @@
 * **id**: string: Id of the user
 * **kind**: string: Type of account
 * **metadata**: [MetadataEntity](#metadataentity): Metadata of the record
+
+## ValidationResponse
+### Properties
+* **info**: [ValidationResponseInfo](#validationresponseinfo): Info from the response
+
+## ValidationResponseInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

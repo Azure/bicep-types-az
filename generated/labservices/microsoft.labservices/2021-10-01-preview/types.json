@@ -2427,5 +2427,58 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveImageBody",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name for the image we create."
+      },
+      "labVirtualMachineId": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The ID of the lab virtual machine you want to save an image from."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InviteBody",
+    "properties": {
+      "text": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom text for the invite email."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResetPasswordBody",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The user whose password is being reset"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 5,
+        "description": "The password"
+      }
+    }
   }
 ]

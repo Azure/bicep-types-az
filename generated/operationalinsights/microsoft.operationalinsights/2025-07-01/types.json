@@ -3784,7 +3784,7 @@
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Column display name."
+        "description": "Column display name. Can be set at creation time; after creation, updates must either match column name or set to null/empty. If not provided, defaults to column name."
       },
       "description": {
         "type": {
@@ -4651,5 +4651,358 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedKeys",
+    "properties": {
+      "primarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary shared key of a workspace."
+      },
+      "secondarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secondary shared key of a workspace."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSharedKey",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2025-07-01",
+    "output": {
+      "$ref": "#/366"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sharedKeys",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2025-07-01",
+    "output": {
+      "$ref": "#/366"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchGetSchemaResponse",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "The metadata from search results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "The array of result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadata",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The request id of the search."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The search result type."
+      },
+      "total": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The total number of search results."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of top search results."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the search results request."
+      },
+      "coreSummaries": {
+        "type": {
+          "$ref": "#/372"
+        },
+        "flags": 0,
+        "description": "The core summaries."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the search results."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time for the search."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of last update."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ETag of the search results."
+      },
+      "sort": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "How the results are sorted."
+      },
+      "requestTime": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The request time."
+      },
+      "aggregatedValueField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated value field."
+      },
+      "aggregatedGroupingFields": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated grouping fields."
+      },
+      "sum": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The sum of all aggregates returned in the result set."
+      },
+      "max": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The max of all aggregates returned in the result set."
+      },
+      "schema": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "The schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CoreSummary",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of a core summary."
+      },
+      "numberOfDocuments": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The number of documents of a core summary."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/371"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSort",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the field the search query is sorted on."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "The sort order of the search."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/373"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadataSchema",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the metadata schema."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The version of the metadata schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSchemaValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the schema."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the schema."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type."
+      },
+      "indexed": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates the field is searchable as free text."
+      },
+      "stored": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is stored."
+      },
+      "facet": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is a facet."
+      },
+      "ownerType": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 0,
+        "description": "The array of workflows containing the field."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/379"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "schema",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2025-07-01",
+    "output": {
+      "$ref": "#/369"
+    }
   }
 ]

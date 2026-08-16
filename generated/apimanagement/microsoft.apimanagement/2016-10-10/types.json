@@ -2831,5 +2831,734 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceManageDeploymentsParameters",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Location of the API Management service Azure data center."
+      },
+      "skuType": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 1,
+        "description": "SKU type of the API Management service."
+      },
+      "skuUnitCount": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "SKU Unit count of the API Management service. Default value is 1."
+      },
+      "additionalLocations": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 0,
+        "description": "Additional data center locations for the API Management service."
+      },
+      "vpnConfiguration": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Virtual network configuration."
+      },
+      "vpnType": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Developer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "Properties of the API Management service."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "SKU properties of the API Management service."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ETag of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type for API Management resource is set to Microsoft.ApiManagement."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "managedeployments",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/219"
+    },
+    "input": {
+      "$ref": "#/209"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceBackupRestoreParameters",
+    "properties": {
+      "storageAccount": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure Cloud Storage account (used to place/retrieve the backup) name."
+      },
+      "accessKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure Cloud Storage account (used to place/retrieve the backup) access key."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure Cloud Storage blob container name used to place/retrieve the backup."
+      },
+      "backupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the backup file to create."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/219"
+    },
+    "input": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/219"
+    },
+    "input": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceGetSsoTokenResult",
+    "properties": {
+      "redirect_uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Redirect URL containing the SSO token."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getssotoken",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/225"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceUploadCertificateParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 1,
+        "description": "Hostname type."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Base64 Encoded certificate."
+      },
+      "certificate_password": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Certificate password."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Proxy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Portal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Management"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scm"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadcertificate",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/105"
+    },
+    "input": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceUpdateHostnameParameters",
+    "properties": {
+      "update": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 0,
+        "description": "Hostnames to create or update."
+      },
+      "delete": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Hostnames types to delete."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Proxy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Portal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Management"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scm"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/239"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/240"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updatehostname",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/219"
+    },
+    "input": {
+      "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applynetworkconfigurationupdates",
+    "resourceType": "Microsoft.ApiManagement/service",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/219"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeployConfigurationParameters",
+    "properties": {
+      "branch": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Git branch from which the configuration is to be deployed to the configuration database."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The value enforcing deleting subscriptions to products that are deleted in this update."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultContract",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Operation result identifier."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "Status of an async operation."
+      },
+      "started": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Last update time of an async operation. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      },
+      "resultInfo": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional result info."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 0,
+        "description": "Error Body contract."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorBodyContract",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service-defined error code. This code serves as a sub-status for the HTTP error code specified in the response."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable representation of the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 0,
+        "description": "The list of invalid fields send in request, in case of validation error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorFieldContract",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property level error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable representation of property-level error."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/252"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deploy",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/245"
+    },
+    "input": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveConfigurationParameter",
+    "properties": {
+      "branch": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Git branch in which to commit the current configuration snapshot."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The value if true, the current configuration database is committed to the Git repository, even if the Git repository has newer changes that would be overwritten."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "save",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/245"
+    },
+    "input": {
+      "$ref": "#/255"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/245"
+    },
+    "input": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateSsoUrlResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Redirect Url containing the SSO URL value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSsoUrl",
+    "resourceType": "Microsoft.ApiManagement/service/users",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/258"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserTokenParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 1,
+        "description": "The Key to be used to generate token for user."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserTokenResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Shared Access Authorization token for the User."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "token",
+    "resourceType": "Microsoft.ApiManagement/service/users",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/264"
+    },
+    "input": {
+      "$ref": "#/260"
+    }
   }
 ]

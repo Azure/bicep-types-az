@@ -848,5 +848,18 @@
     "output": {
       "$ref": "#/62"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CollectionAdminUpdate",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the object identifier of the admin."
+      }
+    }
   }
 ]

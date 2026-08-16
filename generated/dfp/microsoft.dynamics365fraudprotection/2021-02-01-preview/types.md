@@ -13,6 +13,23 @@
 * **tags**: [DFPInstanceTags](#dfpinstancetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.Dynamics365FraudProtection/instances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Dynamics365FraudProtection/locations@2021-02-01-preview)
+* **Resource**: Microsoft.Dynamics365FraudProtection/locations
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: [CheckInstanceNameAvailabilityParameters](#checkinstancenameavailabilityparameters)
+* **Output**: [CheckInstanceNameAvailabilityResult](#checkinstancenameavailabilityresult)
+
+## CheckInstanceNameAvailabilityParameters
+### Properties
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"}: Name for checking availability.
+* **type**: string: The resource type of DFP instance.
+
+## CheckInstanceNameAvailabilityResult
+### Properties
+* **message**: string: The detailed message of the request unavailability.
+* **nameAvailable**: bool: Indicator of availability of the DFP instance name.
+* **reason**: string: The reason of unavailability.
+
 ## DFPInstanceAdministrators
 ### Properties
 * **members**: string[]: An array of administrator user identities.

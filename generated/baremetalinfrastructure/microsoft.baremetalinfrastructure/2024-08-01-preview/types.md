@@ -27,6 +27,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.BareMetalInfrastructure/bareMetalStorageInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.BareMetalInfrastructure/bareMetalInstances@2024-08-01-preview)
+* **Resource**: Microsoft.BareMetalInfrastructure/bareMetalInstances
+* **ApiVersion**: 2024-08-01-preview
+* **Input**: [ForceState](#forcestate)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function shutdown (Microsoft.BareMetalInfrastructure/bareMetalInstances@2024-08-01-preview)
+* **Resource**: Microsoft.BareMetalInfrastructure/bareMetalInstances
+* **ApiVersion**: 2024-08-01-preview
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function start (Microsoft.BareMetalInfrastructure/bareMetalInstances@2024-08-01-preview)
+* **Resource**: Microsoft.BareMetalInfrastructure/bareMetalInstances
+* **ApiVersion**: 2024-08-01-preview
+* **Output**: [OperationStatus](#operationstatus)
+
 ## AzureBareMetalInstanceProperties
 ### Properties
 * **azureBareMetalInstanceId**: string: Specifies the Azure Bare Metal Instance unique ID.
@@ -57,6 +73,10 @@
 * **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
 * **name**: string: The disk name.
 
+## ForceState
+### Properties
+* **forceState**: 'active' | 'inactive' | string: Whether to force restart by shutting all processes.
+
 ## HardwareProfile
 ### Properties
 * **azureBareMetalInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S448se' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m' | string: Specifies the Azure Bare Metal Instance SKU.
@@ -70,6 +90,18 @@
 ### Properties
 * **circuitId**: string: Specifies the circuit id for connecting to express route.
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the network interfaces for the Azure Bare Metal Instance.
+
+## OperationStatus
+### Properties
+* **error**: [OperationStatusError](#operationstatuserror): An error from the Azure Bare Metal Infrastructure service.
+* **name**: string: Unique Operation Status Identifier.
+* **startTime**: string: Start Time when the operation was initially executed.
+* **status**: 'Executing' | 'Failed' | 'Requesting' | 'Succeeded' | string: Status of the operation.
+
+## OperationStatusError
+### Properties
+* **code**: string: Server-defined set of error codes.
+* **message**: string: Human-readable representation of the error.
 
 ## OSProfile
 ### Properties

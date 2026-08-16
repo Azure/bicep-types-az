@@ -5135,5 +5135,17 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reset",
+    "resourceType": "Microsoft.Network/virtualnetworkgateways",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/259"
+    },
+    "input": {
+      "$ref": "#/259"
+    }
   }
 ]

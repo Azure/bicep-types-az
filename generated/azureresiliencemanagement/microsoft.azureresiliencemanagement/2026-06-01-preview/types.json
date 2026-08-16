@@ -7984,5 +7984,346 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendCapacityRequest",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/719"
+        },
+        "flags": 1,
+        "description": "Azure resource IDs to evaluate for resiliency. Pass an empty array to automatically discover and evaluate non-resilient resources in the service group. Maximum 50 resources per request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    },
+    "maxLength": 50
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendCapacityResult",
+    "properties": {
+      "resourceCapacities": {
+        "type": {
+          "$ref": "#/732"
+        },
+        "flags": 1,
+        "description": "Individual resiliency assessment for each evaluated resource."
+      },
+      "recommendations": {
+        "type": {
+          "$ref": "#/733"
+        },
+        "flags": 1,
+        "description": "High-level recommendations that apply across multiple resources (e.g., regional migration patterns, common SKU upgrades)."
+      },
+      "agentError": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message from the AI advisor, if the advisory enrichment failed. The deterministic assessment results are still available even when this field is set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendCapacityResourceResult",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Fully qualified ARM resource ID of the evaluated resource."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM resource type (e.g., 'Microsoft.Compute/virtualMachines', 'Microsoft.Storage/storageAccounts')."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Current SKU or pricing tier of the resource (e.g., 'Standard_D4s_v3', 'Standard_LRS')."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure region where the resource is deployed (e.g., 'eastus', 'westeurope')."
+      },
+      "capacityAssessment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Human-readable assessment of this resource's resiliency posture. Contains actionable recommendations when available, or null when the AI advisor is unavailable."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message if the resource could not be evaluated (e.g., resource not found or access denied). Other fields may be empty when this is set."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/727"
+        },
+        "flags": 0,
+        "description": "Resiliency eligibility classification for this resource. See ResiliencyEligibilityCategory for possible values."
+      },
+      "suggestedRegions": {
+        "type": {
+          "$ref": "#/728"
+        },
+        "flags": 0,
+        "description": "Alternative Azure regions that support resiliency for this resource type. Populated when the current region does not support the required redundancy."
+      },
+      "suggestedSkus": {
+        "type": {
+          "$ref": "#/729"
+        },
+        "flags": 0,
+        "description": "Alternative SKUs that support redundancy for this resource type in the current region. Populated when the current SKU is not eligible for resiliency."
+      },
+      "steps": {
+        "type": {
+          "$ref": "#/730"
+        },
+        "flags": 0,
+        "description": "Ordered list of actions to enable or improve resiliency for this resource."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/731"
+        },
+        "flags": 0,
+        "description": "Links to relevant Azure documentation for configuring resiliency."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unsupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZrEligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SkuCapacityConstrained"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SkuIneligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegionUnsupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/722"
+      },
+      {
+        "$ref": "#/723"
+      },
+      {
+        "$ref": "#/724"
+      },
+      {
+        "$ref": "#/725"
+      },
+      {
+        "$ref": "#/726"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/721"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recommendCapacity",
+    "resourceType": "Microsoft.AzureResilienceManagement/goalAssignments",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/720"
+    },
+    "input": {
+      "$ref": "#/718"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshGoalResourcesResponse",
+    "properties": {
+      "resourceCount": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Total count of resources under the goal assignment after refresh."
+      },
+      "lastRefreshTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time when the refresh operation was last performed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshGoalResources",
+    "resourceType": "Microsoft.AzureResilienceManagement/goalAssignments",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/735"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGoalResourceRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/739"
+        },
+        "flags": 1,
+        "description": "List of update goal resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GoalResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/738"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGoalResourceResponse",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/741"
+        },
+        "flags": 1,
+        "description": "List of update goal resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/738"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateGoalResources",
+    "resourceType": "Microsoft.AzureResilienceManagement/goalAssignments",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/740"
+    },
+    "input": {
+      "$ref": "#/737"
+    }
   }
 ]

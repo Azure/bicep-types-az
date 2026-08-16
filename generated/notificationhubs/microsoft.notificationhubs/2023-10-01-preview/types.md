@@ -76,6 +76,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NotificationHubs/namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResult](#checkavailabilityresult)
+
+## Function debugsend (Microsoft.NotificationHubs/namespaces/notificationHubs@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [DebugSendResponse](#debugsendresponse)
+
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/authorizationRules@2023-10-01-preview)
 * **Resource**: Microsoft.NotificationHubs/namespaces/authorizationRules
 * **ApiVersion**: 2023-10-01-preview
@@ -84,6 +95,28 @@
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules@2023-10-01-preview)
 * **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules
 * **ApiVersion**: 2023-10-01-preview
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function pnsCredentials (Microsoft.NotificationHubs/namespaces@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [PnsCredentialsResource](#pnscredentialsresource)
+
+## Function pnsCredentials (Microsoft.NotificationHubs/namespaces/notificationHubs@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [PnsCredentialsResource](#pnscredentialsresource)
+
+## Function regenerateKeys (Microsoft.NotificationHubs/namespaces/authorizationRules@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces/authorizationRules
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [PolicyKeyResource](#policykeyresource)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function regenerateKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [PolicyKeyResource](#policykeyresource)
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
 ## AdmCredential
@@ -133,6 +166,59 @@ developer account
 * **subject**: string {sensitive, minLength: 1} (Required): Gets or sets web push subject.
 * **vapidPrivateKey**: string {sensitive, minLength: 1} (Required): Gets or sets VAPID private key.
 * **vapidPublicKey**: string {sensitive, minLength: 1} (Required): Gets or sets VAPID public key.
+
+## CheckAvailabilityParameters
+### Properties
+* **id**: string (ReadOnly): Gets resource Id
+* **isAvailiable**: bool: Not used and deprecated since API version 2023-01-01-preview
+* **location**: string: Gets or sets resource location
+* **name**: string {minLength: 1} (Required): Gets or sets resource name
+* **sku**: [Sku](#sku): The Sku description for a namespace
+* **tags**: [CheckAvailabilityParametersTags](#checkavailabilityparameterstags): Gets or sets resource tags
+* **type**: string (ReadOnly): Gets resource type
+
+## CheckAvailabilityParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CheckAvailabilityResult
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **isAvailiable**: bool: Gets or sets true if the name is available and can be used to
+create new Namespace/NotificationHub. Otherwise false.
+* **location**: string: Deprecated - only for compatibility.
+* **name**: string (ReadOnly): The name of the resource
+* **sku**: [Sku](#sku): The Sku description for a namespace
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [CheckAvailabilityResultTags](#checkavailabilityresulttags): Deprecated - only for compatibility.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## CheckAvailabilityResultTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DebugSendResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string: Deprecated - only for compatibility.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DebugSendResult](#debugsendresult): Result of DebugSend operations.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [DebugSendResponseTags](#debugsendresponsetags): Deprecated - only for compatibility.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## DebugSendResponseTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DebugSendResult
+### Properties
+* **failure**: int (ReadOnly): Gets or sets send failure
+* **results**: [RegistrationResult](#registrationresult)[] (ReadOnly): Gets or sets actual failure description
+* **success**: int (ReadOnly): Gets or sets successful send
 
 ## FcmV1Credential
 ### Properties
@@ -227,6 +313,25 @@ operations.
 * **wnsCredential**: [WnsCredential](#wnscredential): Description of a NotificationHub WnsCredential.
 * **xiaomiCredential**: [XiaomiCredential](#xiaomicredential): Description of a NotificationHub XiaomiCredential.
 
+## PnsCredentialsResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string: Deprecated - only for compatibility.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PnsCredentials](#pnscredentials): Collection of Notification Hub or Notification Hub Namespace PNS credentials.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [PnsCredentialsResourceTags](#pnscredentialsresourcetags): Deprecated - only for compatibility.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PnsCredentialsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PolicyKeyResource
+### Properties
+* **policyKey**: 'PrimaryKey' | 'SecondaryKey' | string (Required): Type of Shared Access Policy Key (primary or secondary).
+
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[] (ReadOnly): List of group ids. For Notification Hubs, it always contains a single "namespace" element.
@@ -251,6 +356,13 @@ operations.
 ## PublicInternetAuthorizationRule
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): List of access rights.
+
+## RegistrationResult
+### Properties
+* **applicationPlatform**: string (ReadOnly): PNS type.
+* **outcome**: string (ReadOnly): Notification outcome.
+* **pnsHandle**: string (ReadOnly): PNS handle.
+* **registrationId**: string (ReadOnly): Registration id.
 
 ## RemotePrivateEndpointConnection
 ### Properties

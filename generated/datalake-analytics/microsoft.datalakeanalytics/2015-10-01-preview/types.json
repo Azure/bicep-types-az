@@ -1461,5 +1461,82 @@
     "output": {
       "$ref": "#/108"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Data Lake Analytics name to check availability for."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeAnalytics/accounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeAnalytics/accounts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInformation",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 2,
+        "description": "The Boolean value of true or false to indicate whether the Data Lake Analytics account name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the Data Lake Analytics account name is not available, if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The message describing why the Data Lake Analytics account name is not available, if nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataLakeAnalytics/locations",
+    "apiVersion": "2015-10-01-preview",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/112"
+    }
   }
 ]

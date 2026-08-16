@@ -157,5 +157,52 @@
     "output": {
       "$ref": "#/8"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MapsKeySpecification",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Whether the operation refers to the primary or secondary key."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Maps/accounts",
+    "apiVersion": "2017-01-01-preview",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/10"
+    }
   }
 ]

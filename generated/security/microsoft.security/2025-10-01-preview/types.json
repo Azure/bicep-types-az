@@ -404,5 +404,188 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchPricingUpdateRequest",
+    "properties": {
+      "plansConfigurations": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "Array of pricing plan configurations to update. Maximum of 30 plans allowed per batch request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchPlanItem",
+    "properties": {
+      "planName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the pricing plan (e.g., VirtualMachines, StorageAccounts, CloudPosture, Containers, etc.)"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Pricing configuration properties for this plan"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/35"
+    },
+    "minLength": 1,
+    "maxLength": 30
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchPricingUpdateResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "Results for each individual pricing plan update within the batch operation"
+      },
+      "summary": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Summary statistics for the batch operation including total, successful, and failed update counts"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchPricingResult",
+    "properties": {
+      "planName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the pricing plan that was processed in this batch operation"
+      },
+      "success": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Whether the update for this pricing plan was successful"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message if the update failed (only present when success=false). Contains specific validation or authorization error details."
+      },
+      "result": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Updated pricing configuration resource (only present when success=true). Contains the complete pricing configuration with all properties populated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Pricing",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Pricing data"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchOperationSummary",
+    "properties": {
+      "totalRequested": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "Total number of pricing configurations requested for update in this batch"
+      },
+      "successfulUpdates": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Number of pricing configurations successfully updated"
+      },
+      "failedUpdates": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Number of pricing configurations that failed to update due to validation or authorization errors"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 30
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "batch",
+    "resourceType": "Microsoft.Security/pricings",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/37"
+    },
+    "input": {
+      "$ref": "#/34"
+    }
   }
 ]

@@ -6295,5 +6295,901 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportRequest",
+    "properties": {
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/533"
+        },
+        "flags": 1,
+        "description": "The type of the storage key to use."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a \"?.\""
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The storage uri to use."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the SQL administrator."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The password of the SQL administrator."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/536"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedAccessKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/531"
+      },
+      {
+        "$ref": "#/532"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ADPassword"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/534"
+      },
+      {
+        "$ref": "#/535"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/538"
+        },
+        "flags": 0,
+        "description": "The import/export operation properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportExportResponseProperties",
+    "properties": {
+      "requestType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The request type of the operation."
+      },
+      "requestId": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "The request type of the operation."
+      },
+      "serverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the server."
+      },
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the database."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status message returned from the server."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The operation status last modified time."
+      },
+      "queuedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The operation queued time."
+      },
+      "blobUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The blob uri."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message returned from the server."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/537"
+    },
+    "input": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportRequest",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the database to import."
+      },
+      "edition": {
+        "type": {
+          "$ref": "#/555"
+        },
+        "flags": 1,
+        "description": "The edition for the database being created.\r\n\r\nThe list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:\r\n\r\n```azurecli\r\naz sql db list-editions -l <location> -o table\r\n````\r\n\r\n```powershell\r\nGet-AzSqlServerServiceObjective -Location <location>\r\n````"
+      },
+      "serviceObjectiveName": {
+        "type": {
+          "$ref": "#/621"
+        },
+        "flags": 1,
+        "description": "The name of the service objective to assign to the database."
+      },
+      "maxSizeBytes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The maximum size for the newly imported database."
+      },
+      "storageKeyType": {
+        "type": {
+          "$ref": "#/624"
+        },
+        "flags": 1,
+        "description": "The type of the storage key to use."
+      },
+      "storageKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a \"?.\""
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The storage uri to use."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the SQL administrator."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The password of the SQL administrator."
+      },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/627"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Web"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Business"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PremiumRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stretch"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataWarehouse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralPurpose"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BusinessCritical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hyperscale"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/541"
+      },
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/543"
+      },
+      {
+        "$ref": "#/544"
+      },
+      {
+        "$ref": "#/545"
+      },
+      {
+        "$ref": "#/546"
+      },
+      {
+        "$ref": "#/547"
+      },
+      {
+        "$ref": "#/548"
+      },
+      {
+        "$ref": "#/549"
+      },
+      {
+        "$ref": "#/550"
+      },
+      {
+        "$ref": "#/551"
+      },
+      {
+        "$ref": "#/552"
+      },
+      {
+        "$ref": "#/553"
+      },
+      {
+        "$ref": "#/554"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System4"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System2L"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System3L"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System4L"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S4"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S6"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S7"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S9"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S12"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P4"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P6"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P11"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P15"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PRS1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PRS2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PRS4"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PRS6"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW100"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW200"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW300"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW400"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW500"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW600"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW1000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW1200"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW1000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW1500"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW1500c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW2000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW2000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW3000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW2500c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW3000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW6000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW5000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW6000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW7500c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW10000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW15000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DW30000c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS100"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS200"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS300"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS400"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS500"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS600"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS1000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS1200"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS1500"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DS2000"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ElasticPool"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/557"
+      },
+      {
+        "$ref": "#/558"
+      },
+      {
+        "$ref": "#/559"
+      },
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      },
+      {
+        "$ref": "#/564"
+      },
+      {
+        "$ref": "#/565"
+      },
+      {
+        "$ref": "#/566"
+      },
+      {
+        "$ref": "#/567"
+      },
+      {
+        "$ref": "#/568"
+      },
+      {
+        "$ref": "#/569"
+      },
+      {
+        "$ref": "#/570"
+      },
+      {
+        "$ref": "#/571"
+      },
+      {
+        "$ref": "#/572"
+      },
+      {
+        "$ref": "#/573"
+      },
+      {
+        "$ref": "#/574"
+      },
+      {
+        "$ref": "#/575"
+      },
+      {
+        "$ref": "#/576"
+      },
+      {
+        "$ref": "#/577"
+      },
+      {
+        "$ref": "#/578"
+      },
+      {
+        "$ref": "#/579"
+      },
+      {
+        "$ref": "#/580"
+      },
+      {
+        "$ref": "#/581"
+      },
+      {
+        "$ref": "#/582"
+      },
+      {
+        "$ref": "#/583"
+      },
+      {
+        "$ref": "#/584"
+      },
+      {
+        "$ref": "#/585"
+      },
+      {
+        "$ref": "#/586"
+      },
+      {
+        "$ref": "#/587"
+      },
+      {
+        "$ref": "#/588"
+      },
+      {
+        "$ref": "#/589"
+      },
+      {
+        "$ref": "#/590"
+      },
+      {
+        "$ref": "#/591"
+      },
+      {
+        "$ref": "#/592"
+      },
+      {
+        "$ref": "#/593"
+      },
+      {
+        "$ref": "#/594"
+      },
+      {
+        "$ref": "#/595"
+      },
+      {
+        "$ref": "#/596"
+      },
+      {
+        "$ref": "#/597"
+      },
+      {
+        "$ref": "#/598"
+      },
+      {
+        "$ref": "#/599"
+      },
+      {
+        "$ref": "#/600"
+      },
+      {
+        "$ref": "#/601"
+      },
+      {
+        "$ref": "#/602"
+      },
+      {
+        "$ref": "#/603"
+      },
+      {
+        "$ref": "#/604"
+      },
+      {
+        "$ref": "#/605"
+      },
+      {
+        "$ref": "#/606"
+      },
+      {
+        "$ref": "#/607"
+      },
+      {
+        "$ref": "#/608"
+      },
+      {
+        "$ref": "#/609"
+      },
+      {
+        "$ref": "#/610"
+      },
+      {
+        "$ref": "#/611"
+      },
+      {
+        "$ref": "#/612"
+      },
+      {
+        "$ref": "#/613"
+      },
+      {
+        "$ref": "#/614"
+      },
+      {
+        "$ref": "#/615"
+      },
+      {
+        "$ref": "#/616"
+      },
+      {
+        "$ref": "#/617"
+      },
+      {
+        "$ref": "#/618"
+      },
+      {
+        "$ref": "#/619"
+      },
+      {
+        "$ref": "#/620"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedAccessKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/622"
+      },
+      {
+        "$ref": "#/623"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ADPassword"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/625"
+      },
+      {
+        "$ref": "#/626"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Sql/servers",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/537"
+    },
+    "input": {
+      "$ref": "#/540"
+    }
   }
 ]

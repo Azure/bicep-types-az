@@ -13,6 +13,11 @@
 * **tags**: [DeploymentStackTags](#deploymentstacktags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentStacks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportTemplate (Microsoft.Resources/deploymentStacks@2022-08-01-preview)
+* **Resource**: Microsoft.Resources/deploymentStacks
+* **ApiVersion**: 2022-08-01-preview
+* **Output**: [DeploymentStackTemplateDefinition](#deploymentstacktemplatedefinition)
+
 ## ActionOnUnmanage
 ### Properties
 * **managementGroups**: 'delete' | 'detach' | string: Specifies an action for a newly unmanaged resource management group.
@@ -89,6 +94,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DeploymentStackTemplateDefinition
+### Properties
+* **template**: [DeploymentStackTemplateDefinitionTemplate](#deploymentstacktemplatedefinitiontemplate): The template content. Use this element to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+* **templateLink**: [DeploymentStacksTemplateLink](#deploymentstackstemplatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
+
+## DeploymentStackTemplateDefinitionTemplate
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ErrorAdditionalInfo
 ### Properties

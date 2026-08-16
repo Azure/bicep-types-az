@@ -77,6 +77,11 @@
 * **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties): Gets or sets the peering prefix properties.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Peering/peerings/registeredPrefixes@2022-06-01)
+* **Resource**: Microsoft.Peering/peerings/registeredPrefixes
+* **ApiVersion**: 2022-06-01
+* **Output**: [PeeringRegisteredPrefix](#peeringregisteredprefix)
+
 ## BgpSession
 ### Properties
 * **maxPrefixesAdvertisedV4**: int: The maximum number of prefixes advertised over the IPv4 session.
@@ -166,6 +171,13 @@
 * **asn**: int: The customer's ASN from which traffic originates.
 * **peeringServicePrefixKey**: string (ReadOnly): The peering service prefix key that is to be shared with the customer.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## PeeringRegisteredPrefix
+### Properties
+* **id**: string (ReadOnly): The ID of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [PeeringRegisteredPrefixProperties](#peeringregisteredprefixproperties): The properties that define a registered prefix.
+* **type**: string (ReadOnly): The type of the resource.
 
 ## PeeringRegisteredPrefixProperties
 ### Properties

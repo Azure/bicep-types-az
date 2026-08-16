@@ -22,6 +22,23 @@
 * **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): DigitalTwinsInstance endpoint resource properties.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DigitalTwins/locations@2020-10-31)
+* **Resource**: Microsoft.DigitalTwins/locations
+* **ApiVersion**: 2020-10-31
+* **Input**: [CheckNameRequest](#checknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## CheckNameRequest
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (Required): The type of resource, for instance Microsoft.DigitalTwins/digitalTwinsInstances.
+
+## CheckNameResult
+### Properties
+* **message**: string: Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated.
+* **nameAvailable**: bool: Specifies a Boolean value that indicates if the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: Message providing the reason why the given name is invalid.
+
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
 

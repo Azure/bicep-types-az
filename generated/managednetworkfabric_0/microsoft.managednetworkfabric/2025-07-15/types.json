@@ -15337,5 +15337,4961 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForStateUpdate",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1379"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingAdministrativeUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1366"
+      },
+      {
+        "$ref": "#/1367"
+      },
+      {
+        "$ref": "#/1368"
+      },
+      {
+        "$ref": "#/1369"
+      },
+      {
+        "$ref": "#/1370"
+      },
+      {
+        "$ref": "#/1371"
+      },
+      {
+        "$ref": "#/1372"
+      },
+      {
+        "$ref": "#/1373"
+      },
+      {
+        "$ref": "#/1374"
+      },
+      {
+        "$ref": "#/1375"
+      },
+      {
+        "$ref": "#/1376"
+      },
+      {
+        "$ref": "#/1377"
+      },
+      {
+        "$ref": "#/1378"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/1381"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/1384"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1380"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/1383"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1382"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAdministrativeState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/1390"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/1391"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnderMaintenance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1387"
+      },
+      {
+        "$ref": "#/1388"
+      },
+      {
+        "$ref": "#/1389"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1396"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1397"
+        },
+        "flags": 0,
+        "description": "Response properties in case of successful administrative state update."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1395"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAdministrativeStateResponseProperties",
+    "properties": {
+      "successfulResources": {
+        "type": {
+          "$ref": "#/1398"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action applied successfully."
+      },
+      "failedResources": {
+        "type": {
+          "$ref": "#/1399"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action failed to apply."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateConfigurationResponse",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1415"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL for the details of the response."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingAdministrativeUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1402"
+      },
+      {
+        "$ref": "#/1403"
+      },
+      {
+        "$ref": "#/1404"
+      },
+      {
+        "$ref": "#/1405"
+      },
+      {
+        "$ref": "#/1406"
+      },
+      {
+        "$ref": "#/1407"
+      },
+      {
+        "$ref": "#/1408"
+      },
+      {
+        "$ref": "#/1409"
+      },
+      {
+        "$ref": "#/1410"
+      },
+      {
+        "$ref": "#/1411"
+      },
+      {
+        "$ref": "#/1412"
+      },
+      {
+        "$ref": "#/1413"
+      },
+      {
+        "$ref": "#/1414"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NeighborGroupResyncResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1424"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/neighborGroups",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1423"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkBootstrapDeviceRebootResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1427"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reboot",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1426"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkBootstrapDeviceRefreshConfigurationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1430"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1429"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkBootstrapDeviceResyncPasswordsResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1433"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncPasswords",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1432"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateDeviceAdministrativeState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/1445"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/1446"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulRMA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resync"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulQuarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulQuarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Quarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnderMaintenance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1436"
+      },
+      {
+        "$ref": "#/1437"
+      },
+      {
+        "$ref": "#/1438"
+      },
+      {
+        "$ref": "#/1439"
+      },
+      {
+        "$ref": "#/1440"
+      },
+      {
+        "$ref": "#/1441"
+      },
+      {
+        "$ref": "#/1442"
+      },
+      {
+        "$ref": "#/1443"
+      },
+      {
+        "$ref": "#/1444"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkBootstrapDeviceUpdateAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1448"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1447"
+    },
+    "input": {
+      "$ref": "#/1435"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateVersion",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkBootstrapDeviceUpgradeResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1452"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1451"
+    },
+    "input": {
+      "$ref": "#/1450"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RebootProperties",
+    "properties": {
+      "rebootType": {
+        "type": {
+          "$ref": "#/1459"
+        },
+        "flags": 0,
+        "description": "Type of reboot to be performed. Example: GracefulRebootWithZTP"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulRebootWithZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulRebootWithoutZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulRebootWithZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulRebootWithoutZTP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1455"
+      },
+      {
+        "$ref": "#/1456"
+      },
+      {
+        "$ref": "#/1457"
+      },
+      {
+        "$ref": "#/1458"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reboot",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    },
+    "input": {
+      "$ref": "#/1454"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceRefreshConfigurationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1462"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1461"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFabricResyncCertificatesResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1465"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncCertificates",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1464"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceResyncPasswordsResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1468"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncPasswords",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1467"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceRoCommand",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the command."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceROCommandsOperationStatusResult",
+    "properties": {
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time of the operation."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the async operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1472"
+        },
+        "flags": 0,
+        "description": "The additional properties of the operation status result."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of the operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceROCommands",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1486"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "outputUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Predefined link containing Device RO Command output."
+      },
+      "deviceConfigurationPreview": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Device RO command Response limited to 4000 characters."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingAdministrativeUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1473"
+      },
+      {
+        "$ref": "#/1474"
+      },
+      {
+        "$ref": "#/1475"
+      },
+      {
+        "$ref": "#/1476"
+      },
+      {
+        "$ref": "#/1477"
+      },
+      {
+        "$ref": "#/1478"
+      },
+      {
+        "$ref": "#/1479"
+      },
+      {
+        "$ref": "#/1480"
+      },
+      {
+        "$ref": "#/1481"
+      },
+      {
+        "$ref": "#/1482"
+      },
+      {
+        "$ref": "#/1483"
+      },
+      {
+        "$ref": "#/1484"
+      },
+      {
+        "$ref": "#/1485"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runRoCommand",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1471"
+    },
+    "input": {
+      "$ref": "#/1470"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceRwCommand",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the command."
+      },
+      "commandUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the commands file URL."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceRunRwCommandResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1490"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1491"
+        },
+        "flags": 0,
+        "description": "Network Device Run Rw Command Response properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceRwCommandResponseProperties",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1505"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "outputUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Predefined link containing Device Rw Command output."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingAdministrativeUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1492"
+      },
+      {
+        "$ref": "#/1493"
+      },
+      {
+        "$ref": "#/1494"
+      },
+      {
+        "$ref": "#/1495"
+      },
+      {
+        "$ref": "#/1496"
+      },
+      {
+        "$ref": "#/1497"
+      },
+      {
+        "$ref": "#/1498"
+      },
+      {
+        "$ref": "#/1499"
+      },
+      {
+        "$ref": "#/1500"
+      },
+      {
+        "$ref": "#/1501"
+      },
+      {
+        "$ref": "#/1502"
+      },
+      {
+        "$ref": "#/1503"
+      },
+      {
+        "$ref": "#/1504"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runRwCommand",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1489"
+    },
+    "input": {
+      "$ref": "#/1488"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceUpdateAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1508"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1507"
+    },
+    "input": {
+      "$ref": "#/1435"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceUpgradeRequest",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Version to which the device needs to be upgraded."
+      },
+      "rwDeviceConfigUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL to the file containing Read-write configuration to be applied on the device during upgrade."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDeviceUpgradeResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1512"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1511"
+    },
+    "input": {
+      "$ref": "#/1510"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArmConfigurationDiffOperationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1515"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1516"
+        },
+        "flags": 0,
+        "description": "Arm Configuration Diff Response Properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArmConfigurationDiffResponseProperties",
+    "properties": {
+      "configurationDiffUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Storage URL to the diff file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "armConfigurationDiff",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1514"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitBatchStatusRequest",
+    "properties": {
+      "commitBatchId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Commit Batch Identifier. If not provided, the latest commit batch status will be returned."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitBatchStatusOperationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1520"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1521"
+        },
+        "flags": 0,
+        "description": "Commit Batch Status Response Properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitBatchStatusResponseProperties",
+    "properties": {
+      "commitBatchId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Commit Batch Identifier."
+      },
+      "commitBatchState": {
+        "type": {
+          "$ref": "#/1525"
+        },
+        "flags": 2,
+        "description": "Commit Batch State."
+      },
+      "commitBatchDetails": {
+        "type": {
+          "$ref": "#/1526"
+        },
+        "flags": 0,
+        "description": "Commit Batch Details."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Processing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1522"
+      },
+      {
+        "$ref": "#/1523"
+      },
+      {
+        "$ref": "#/1524"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitBatchDetails",
+    "properties": {
+      "failedDevices": {
+        "type": {
+          "$ref": "#/1527"
+        },
+        "flags": 0,
+        "description": "List of devices for which the commit operation failed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitBatchStatus",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1519"
+    },
+    "input": {
+      "$ref": "#/1518"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitConfigurationRequest",
+    "properties": {
+      "commitStage": {
+        "type": {
+          "$ref": "#/1533"
+        },
+        "flags": 0,
+        "description": "Commit stage Action to be performed."
+      },
+      "commitPolicy": {
+        "type": {
+          "$ref": "#/1535"
+        },
+        "flags": 0,
+        "description": "Commit configuration Policy. Supported policy is StageCEConfiguration, which indicates to prepare the configuration for the CE device type."
+      },
+      "devices": {
+        "type": {
+          "$ref": "#/1536"
+        },
+        "flags": 0,
+        "description": "List of ARM resource IDs of devices to be included in the commit operation. Either CE1 or CE2 is allowed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Continue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rollback"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1530"
+      },
+      {
+        "$ref": "#/1531"
+      },
+      {
+        "$ref": "#/1532"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StageCEConfiguration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1534"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitConfigurationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1538"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1537"
+    },
+    "input": {
+      "$ref": "#/1529"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deprovision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscardCommitBatchRequest",
+    "properties": {
+      "commitBatchId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Commit Batch Identifier. If not provided, the latest commit batch status will be returned."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscardCommitBatchOperationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1543"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1544"
+        },
+        "flags": 0,
+        "description": "Discard commit batch response properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscardCommitBatchResponseProperties",
+    "properties": {
+      "commitBatchId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Commit Batch Identifier."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discardCommitBatch",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1542"
+    },
+    "input": {
+      "$ref": "#/1541"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetTopologyResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1547"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1548"
+        },
+        "flags": 0,
+        "description": "Properties of the GetTopology Response."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetTopologyResponseProperties",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Topology JSON string."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getTopology",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1546"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFabricLockRequest",
+    "properties": {
+      "lockType": {
+        "type": {
+          "$ref": "#/1553"
+        },
+        "flags": 0,
+        "description": "Type of lock to be applied"
+      },
+      "action": {
+        "type": {
+          "$ref": "#/1556"
+        },
+        "flags": 0,
+        "description": "Action to be performed on the lock"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Administrative"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Configuration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1551"
+      },
+      {
+        "$ref": "#/1552"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Lock"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlock"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1554"
+      },
+      {
+        "$ref": "#/1555"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lockFabric",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    },
+    "input": {
+      "$ref": "#/1550"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncCertificates",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1464"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFabricResyncPasswordsResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1562"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncPasswords",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1561"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFabricRotateCertificatesResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1565"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateCertificates",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1564"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkFabricRotatePasswordsResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1568"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotatePasswords",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1567"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateInfraManagementBfdConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateWorkloadManagementBfdConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpgradeNetworkFabricProperties",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/1575"
+        },
+        "flags": 0,
+        "description": "Action to be performed while upgrading the fabric."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the version."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1573"
+      },
+      {
+        "$ref": "#/1574"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1394"
+    },
+    "input": {
+      "$ref": "#/1572"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateConfigurationProperties",
+    "properties": {
+      "validateAction": {
+        "type": {
+          "$ref": "#/1581"
+        },
+        "flags": 0,
+        "description": "Validate action that to be performed"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Configuration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1578"
+      },
+      {
+        "$ref": "#/1579"
+      },
+      {
+        "$ref": "#/1580"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    },
+    "input": {
+      "$ref": "#/1577"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ViewDeviceConfigurationOperationResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1584"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1585"
+        },
+        "flags": 0,
+        "description": "View Device Configuration Response Properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ViewDeviceConfigurationResponseProperties",
+    "properties": {
+      "deviceConfigurationUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Storage URL to the device configuration file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "viewDeviceConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1583"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceUpdate",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1601"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "successfulDevices": {
+        "type": {
+          "$ref": "#/1602"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action applied successfully."
+      },
+      "failedDevices": {
+        "type": {
+          "$ref": "#/1603"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action failed to apply."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingAdministrativeUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1588"
+      },
+      {
+        "$ref": "#/1589"
+      },
+      {
+        "$ref": "#/1590"
+      },
+      {
+        "$ref": "#/1591"
+      },
+      {
+        "$ref": "#/1592"
+      },
+      {
+        "$ref": "#/1593"
+      },
+      {
+        "$ref": "#/1594"
+      },
+      {
+        "$ref": "#/1595"
+      },
+      {
+        "$ref": "#/1596"
+      },
+      {
+        "$ref": "#/1597"
+      },
+      {
+        "$ref": "#/1598"
+      },
+      {
+        "$ref": "#/1599"
+      },
+      {
+        "$ref": "#/1600"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkMonitors",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1587"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkTapRuleResyncResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1606"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1605"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkTapResyncResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1611"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTaps",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1610"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTaps",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalNetworkUpdateBfdAdministrativeStateRequest",
+    "properties": {
+      "routeType": {
+        "type": {
+          "$ref": "#/1621"
+        },
+        "flags": 0,
+        "description": "Route Type that helps to know which bfd we are updating."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1626"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OptionA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1619"
+      },
+      {
+        "$ref": "#/1620"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1622"
+      },
+      {
+        "$ref": "#/1623"
+      },
+      {
+        "$ref": "#/1624"
+      },
+      {
+        "$ref": "#/1625"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalNetworkUpdateBfdAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1628"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1629"
+        },
+        "flags": 0,
+        "description": "Response properties."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalNetworkUpdateBfdAdministrativeStateResponseProperties",
+    "properties": {
+      "routeType": {
+        "type": {
+          "$ref": "#/1632"
+        },
+        "flags": 0,
+        "description": "Route Type that helps to know which bfd we are updating."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1637"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OptionA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1630"
+      },
+      {
+        "$ref": "#/1631"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1633"
+      },
+      {
+        "$ref": "#/1634"
+      },
+      {
+        "$ref": "#/1635"
+      },
+      {
+        "$ref": "#/1636"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1627"
+    },
+    "input": {
+      "$ref": "#/1618"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBfdAdministrativeStateRequest",
+    "properties": {
+      "routeType": {
+        "type": {
+          "$ref": "#/1644"
+        },
+        "flags": 0,
+        "description": "Route Type that helps to know which bfd we are updating."
+      },
+      "neighborAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1649"
+        },
+        "flags": 0,
+        "description": "BFD Administrative state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bgp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1642"
+      },
+      {
+        "$ref": "#/1643"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1645"
+      },
+      {
+        "$ref": "#/1646"
+      },
+      {
+        "$ref": "#/1647"
+      },
+      {
+        "$ref": "#/1648"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBfdAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1651"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1652"
+        },
+        "flags": 0,
+        "description": "Internal Network BFD Administrative State response properties"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBfdAdministrativeStateResponseProperties",
+    "properties": {
+      "neighborAddressAdministrativeStatus": {
+        "type": {
+          "$ref": "#/1659"
+        },
+        "flags": 0,
+        "description": "NeighborAddress administrative status"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NeighborAddressBfdAdministrativeStatus",
+    "properties": {
+      "neighborAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1658"
+        },
+        "flags": 0,
+        "description": "BFD Administrative state."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1654"
+      },
+      {
+        "$ref": "#/1655"
+      },
+      {
+        "$ref": "#/1656"
+      },
+      {
+        "$ref": "#/1657"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1653"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1650"
+    },
+    "input": {
+      "$ref": "#/1641"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBgpAdministrativeStateRequest",
+    "properties": {
+      "neighborAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1664"
+        },
+        "flags": 0,
+        "description": "BGP Administrative state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1662"
+      },
+      {
+        "$ref": "#/1663"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBgpAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1666"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1667"
+        },
+        "flags": 0,
+        "description": "Internal Network BGP Administrative State response properties"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InternalNetworkUpdateBgpAdministrativeStateResponseProperties",
+    "properties": {
+      "neighborAddressAdministrativeStatus": {
+        "type": {
+          "$ref": "#/1672"
+        },
+        "flags": 0,
+        "description": "NeighborAddress administrative status"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NeighborAddressBgpAdministrativeStatus",
+    "properties": {
+      "neighborAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "NeighborAddress - Input should be either All or Specific Ipv4 Address or Specific Ipv6 Address."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1671"
+        },
+        "flags": 0,
+        "description": "BGP Administrative state."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1669"
+      },
+      {
+        "$ref": "#/1670"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1668"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1665"
+    },
+    "input": {
+      "$ref": "#/1661"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkBootstrapDevices/networkBootstrapInterfaces",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1365"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NniUpdateBfdAdministrativeStateRequest",
+    "properties": {
+      "routeType": {
+        "type": {
+          "$ref": "#/1681"
+        },
+        "flags": 0,
+        "description": "Route Type. Choose either Static or OptionA."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1686"
+        },
+        "flags": 0,
+        "description": "State. Select either enable or disable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OptionA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1679"
+      },
+      {
+        "$ref": "#/1680"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1682"
+      },
+      {
+        "$ref": "#/1683"
+      },
+      {
+        "$ref": "#/1684"
+      },
+      {
+        "$ref": "#/1685"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NniUpdateBfdAdministrativeStateResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/1393"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/1688"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/1380"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1689"
+        },
+        "flags": 0,
+        "description": "Properties of the NNI BFD Administrative State response."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NniUpdateBfdAdministrativeStateResponseProperties",
+    "properties": {
+      "routeType": {
+        "type": {
+          "$ref": "#/1692"
+        },
+        "flags": 0,
+        "description": "Route Type. Choose either Static or OptionA."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/1697"
+        },
+        "flags": 0,
+        "description": "State. Select either enable or disable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OptionA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1690"
+      },
+      {
+        "$ref": "#/1691"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1693"
+      },
+      {
+        "$ref": "#/1694"
+      },
+      {
+        "$ref": "#/1695"
+      },
+      {
+        "$ref": "#/1696"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1687"
+    },
+    "input": {
+      "$ref": "#/1678"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateNpbStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects",
+    "apiVersion": "2025-07-15",
+    "output": {
+      "$ref": "#/1392"
+    },
+    "input": {
+      "$ref": "#/1386"
+    }
   }
 ]

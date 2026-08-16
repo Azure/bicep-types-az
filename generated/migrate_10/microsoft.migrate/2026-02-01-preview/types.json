@@ -1172,5 +1172,316 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateWavePlanRequest",
+    "properties": {
+      "assessmentArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM Id of the assessment for which the wave plan report is to be generated."
+      },
+      "migrationPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional. Specify the migration path for which the wave plan report is to be generated. If not specified, the default will be used"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateWavePlanResponse",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateWavePlan",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/90"
+    },
+    "input": {
+      "$ref": "#/89"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshEntitiesRequest",
+    "properties": {
+      "migrationEntityIds": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "List of migration entity ARM IDs to refresh. Each ID must be a fully qualified ARM resource ID belonging to the same subscription and resource group as the migrate project."
+      },
+      "migrationEntityGroupIds": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "List of migration entity group ARM IDs. All entities within these groups will be refreshed. Each ID must be a fully qualified ARM resource ID belonging to the same subscription and resource group as the migrate project."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshEntitiesResponse",
+    "properties": {
+      "migrationEntityIds": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "List of migration entity ARM IDs being refreshed."
+      },
+      "migrationEntityGroupIds": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 2,
+        "description": "List of migration entity group ARM IDs being refreshed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshEntities",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/95"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryRequest",
+    "properties": {
+      "scopeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Task Scope ARM Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryResponse",
+    "properties": {
+      "items": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "List of Task Summary Items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskSummaryItem",
+    "properties": {
+      "stage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Task Stage"
+      },
+      "aggregatedStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Aggregated status of tasks in this stage."
+      },
+      "statusCounts": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 1,
+        "description": "Counts of tasks in this stage by status."
+      },
+      "tasks": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "List of tasks in this stage."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskStatusCounts",
+    "properties": {
+      "statusCounts": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 1,
+        "description": "Status counts dictionary mapping TaskStatus to the count of tasks with that status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaskStatusCountMap",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The task status."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The count of tasks with this status."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Task",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "taskSummary",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.Migrate/migrateProjects/waves",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/78"
+    }
   }
 ]

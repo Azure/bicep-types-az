@@ -171,6 +171,58 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applyNow (Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents
+* **ApiVersion**: 2026-04-01-preview
+* **Output**: [MaintenanceEventActionResponse](#maintenanceeventactionresponse)
+
+## Function checkMigrationNameAvailability (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [MigrationNameAvailability](#migrationnameavailability)
+* **Output**: [MigrationNameAvailability](#migrationnameavailability)
+
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL/locations@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [NameAvailabilityModel](#nameavailabilitymodel)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforPostgreSQL/locations@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageModel](#virtualnetworksubnetusagemodel)
+
+## Function ltrPreBackup (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
+* **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
+
+## Function migrateNetwork (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Output**: [MigrateNetworkStatus](#migratenetworkstatus)
+
+## Function reschedule (Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [MaintenanceEventRescheduleRequest](#maintenanceeventreschedulerequest)
+* **Output**: [MaintenanceEventActionResponse](#maintenanceeventactionresponse)
+
+## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [BackupsLongTermRetentionRequest](#backupslongtermretentionrequest)
+* **Output**: [BackupsLongTermRetentionResponse](#backupslongtermretentionresponse)
+
+## Function startMajorVersionUpgradePrecheck (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [StartMajorVersionUpgradePrecheckRequest](#startmajorversionupgradeprecheckrequest)
+* **Output**: [StartMajorVersionUpgradePrecheckResponse](#startmajorversionupgradeprecheckresponse)
+
 ## AdminCredentials
 ### Properties
 * **sourceServerPassword**: string {sensitive} (Required, WriteOnly): Password for the user of the source server.
@@ -205,6 +257,32 @@
 * **backupType**: 'Customer On-Demand' | 'Full' | string: Type of backup.
 * **completedTime**: string: Time(ISO8601 format) at which the backup was completed.
 * **source**: string: Source of the backup.
+
+## BackupSettings
+### Properties
+* **backupName**: string (Required): Backup Name for the current backup
+
+## BackupsLongTermRetentionRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+* **targetDetails**: [BackupStoreDetails](#backupstoredetails) (Required): Backup store detail for target server.
+
+## BackupsLongTermRetentionResponse
+### Properties
+* **properties**: [LtrBackupOperationResponseProperties](#ltrbackupoperationresponseproperties): Long Term Retention Backup Operation Resource Properties
+
+## BackupsLongTermRetentionResponseProperties
+### Properties
+* **numberOfContainers**: int (Required): Number of storage containers the plugin will use during backup. More than one containers may be used for size limitations, parallelism, or redundancy etc.
+
+## BackupStoreDetails
+### Properties
+* **sasUriList**: (string {sensitive})[] (Required): List of SAS uri of storage containers where backup data is to be streamed/copied.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
 
 ## Cluster
 ### Properties
@@ -275,6 +353,11 @@
 * **storageMb**: int: Storage size (in MB) for database server.
 * **version**: string: Major version of PostgreSQL database engine.
 
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): Name of the delegated subnet for which IP addresses are in use
+* **usage**: int (ReadOnly): Number of IP addresses used by the delegated subnet
+
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): IP address defining the end of the range of addresses of a firewall rule. Must be expressed in IPv4 format.
@@ -298,6 +381,28 @@
 * **percentComplete**: int {minValue: 0, maxValue: 100}: Percentage completed.
 * **startTime**: string (Required): Start time of the operation.
 * **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | string (Required): Service-set extensible enum indicating the status of operation.
+
+## LtrPreBackupRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+
+## LtrPreBackupResponse
+### Properties
+* **properties**: [BackupsLongTermRetentionResponseProperties](#backupslongtermretentionresponseproperties) (Required): Additional Properties for the pre backup response
+
+## MaintenanceEventActionResponse
+### Properties
+* **appliedNow**: bool: A value indicating whether this was an apply-now (immediate) action. True for ApplyNow; false for Reschedule.
+* **lastUpdatedTime**: string: The time this maintenance event record was last updated (UTC).
+* **maintenanceEventId**: string: The maintenance event name (maintenance ID).
+* **plannedEndTime**: string: The planned end time of the maintenance event (UTC).
+* **plannedStartTime**: string: The planned start time of the maintenance event (UTC).
+* **serverId**: string: The full Azure resource ID of the server.
+* **status**: 'Canceled' | 'Complete' | 'InProgress' | 'Planned' | 'Rescheduled' | string: The status of the maintenance event.
+
+## MaintenanceEventRescheduleRequest
+### Properties
+* **postponeToDateTime**: string (Required): New start time in RFC3339 format.
 
 ## MaintenanceEventResourceProperties
 ### Properties
@@ -328,6 +433,21 @@
 * **precheckResult**: [PrecheckResult](#precheckresult): The detailed result of the precheck operation.
 * **status**: 'Canceled' | 'Failed' | 'Succeeded' | 'Validating' | string: The status of the precheck validation.
 * **targetVersion**: '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | string: The target PostgreSQL major version for the upgrade.
+
+## MigrateNetworkStatus
+### Properties
+* **resourceGroupName**: string: Name of the resource group.
+* **serverName**: string: Name of the server.
+* **state**: 'CancelInProgress' | 'Cancelled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded' | string (ReadOnly): State of the network migration operation.
+* **subscriptionId**: string: Identifier of the subscription.
+
+## MigrationNameAvailability
+### Properties
+* **message**: string (ReadOnly): Migration name availability message.
+* **name**: string (Required): Name of the migration to check for validity and availability.
+* **nameAvailable**: bool (ReadOnly): Indicates if the migration name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): Migration name availability reason.
+* **type**: string (Required): Type of resource.
 
 ## MigrationProperties
 ### Properties
@@ -379,6 +499,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DatabaseMigrationState](#databasemigrationstate)
+
+## NameAvailabilityModel
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **name**: string (ReadOnly): Name for which validity and availability was checked.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+* **type**: string (ReadOnly): Type of resource. It can be 'Microsoft.DBforPostgreSQL/flexibleServers' or 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints'.
 
 ## Network
 ### Properties
@@ -479,6 +607,16 @@
 * **name**: string (Required): Name by which is known a given compute size assigned to a server.
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): Tier of the compute assigned to a server.
 
+## StartMajorVersionUpgradePrecheckRequest
+### Properties
+* **targetVersion**: '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | string (Required): The target major version to upgrade to.
+
+## StartMajorVersionUpgradePrecheckResponse
+### Properties
+* **createTime**: string: The time when the precheck was created.
+* **name**: string: The precheck validation ID.
+* **status**: 'Canceled' | 'Failed' | 'Succeeded' | 'Validating' | string: The status of the precheck validation.
+
 ## Storage
 ### Properties
 * **autoGrow**: 'Disabled' | 'Enabled' | string: Flag to enable or disable the automatic growth of storage size of a server when available space is nearing zero and conditions allow for automatically growing storage size.
@@ -557,4 +695,14 @@
 * **endpointType**: 'ReadWrite' | string: Type of endpoint for the virtual endpoints.
 * **members**: string[]: List of servers that one of the virtual endpoints can refer to.
 * **virtualEndpoints**: string[] (ReadOnly): List of virtual endpoints for a server.
+
+## VirtualNetworkSubnetUsageModel
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly)
+* **location**: string (ReadOnly): location of the delegated subnet usage
+* **subscriptionId**: string (ReadOnly): subscriptionId of the delegated subnet usage
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkArmResourceId**: string: Virtual network resource id.
 

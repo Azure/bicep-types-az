@@ -104,12 +104,63 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Mission/virtualEnclaves/workloads' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function approvalCallback (Microsoft.Mission/enclaveConnections@2024-06-01-preview)
+* **Resource**: Microsoft.Mission/enclaveConnections
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [ApprovalCallbackRequest](#approvalcallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function approvalDeletionCallback (Microsoft.Mission/enclaveConnections@2024-06-01-preview)
+* **Resource**: Microsoft.Mission/enclaveConnections
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [ApprovalDeletionCallbackRequest](#approvaldeletioncallbackrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## Function checkAddressSpaceAvailability (Microsoft.Mission/communities@2024-06-01-preview)
+* **Resource**: Microsoft.Mission/communities
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CheckAddressSpaceAvailabilityRequest](#checkaddressspaceavailabilityrequest)
+* **Output**: [CheckAddressSpaceAvailabilityResponse](#checkaddressspaceavailabilityresponse)
+
+## Function initiatorCallback (Microsoft.Mission/approvals@2024-06-01-preview)
+* **Resource**: Microsoft.Mission/approvals
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [ApprovalActionRequest](#approvalactionrequest)
+* **Output**: [ApprovalActionResponse](#approvalactionresponse)
+
+## ApprovalActionRequest
+### Properties
+* **approvalStatus**: 'Approved' | 'Rejected' | string (Required): Approval status indicating 'Approved' or 'Rejected'
+
+## ApprovalActionResponse
+### Properties
+* **message**: string (Required): Confirmation message indicating the result of the operation.
+
+## ApprovalCallbackRequest
+### Properties
+* **approvalStatus**: 'Approved' | 'Rejected' | string (Required): Approval status indicating 'Approved' or 'Rejected'
+* **resourceId**: string (Required): Resource Id of the item being approved or rejected
+* **resourceRequestAction**: 'Create' | 'Delete' | 'Reset' | 'Update' | string (Required): Resource request action indicating action which needed to be performed upon calling approval-callback post action
+
+## ApprovalDeletionCallbackRequest
+### Properties
+* **resourceRequestAction**: 'Create' | 'Delete' | 'Update' | string (Required): Resource request action indicating action which needed to be performed upon calling approval-deletion-callback post action
+
 ## ApprovalProperties
 ### Properties
 * **parent1**: string: Parameter for optimizing query results
 * **parent2**: string: Parameter for optimizing query results
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State.
 * **requestMetadata**: [RequestMetadata](#requestmetadata) (Required): Request metadata for the approval request.
+
+## CheckAddressSpaceAvailabilityRequest
+### Properties
+* **communityResourceId**: string (Required): Resource Id of the Community
+* **enclaveVirtualNetwork**: [EnclaveVirtualNetworkModel](#enclavevirtualnetworkmodel) (Required): Information about the enclave virtual network
+
+## CheckAddressSpaceAvailabilityResponse
+### Properties
+* **value**: bool (Required): Boolean representing whether the address space is available.
 
 ## CommunityEndpointDestinationRule
 ### Properties

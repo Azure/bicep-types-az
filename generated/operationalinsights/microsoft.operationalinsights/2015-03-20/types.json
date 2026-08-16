@@ -329,6 +329,327 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SearchGetSchemaResponse",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The metadata from search results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The array of result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadata",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The request id of the search."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The search result type."
+      },
+      "total": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The total number of search results."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The number of top search results."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the search results request."
+      },
+      "coreSummaries": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The core summaries."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the search results."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time for the search."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of last update."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ETag of the search results."
+      },
+      "sort": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "How the results are sorted."
+      },
+      "requestTime": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The request time."
+      },
+      "aggregatedValueField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated value field."
+      },
+      "aggregatedGroupingFields": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated grouping fields."
+      },
+      "sum": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The sum of all aggregates returned in the result set."
+      },
+      "max": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The max of all aggregates returned in the result set."
+      },
+      "schema": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The schema."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CoreSummary",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of a core summary."
+      },
+      "numberOfDocuments": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The number of documents of a core summary."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSort",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the field the search query is sorted on."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The sort order of the search."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadataSchema",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the metadata schema."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The version of the metadata schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSchemaValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the schema."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the schema."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type."
+      },
+      "indexed": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates the field is searchable as free text."
+      },
+      "stored": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is stored."
+      },
+      "facet": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is a facet."
+      },
+      "ownerType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The array of workflows containing the field."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "schema",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedKeys",
     "properties": {
       "primarySharedKey": {
@@ -353,7 +674,16 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2015-03-20",
     "output": {
-      "$ref": "#/22"
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSharedKey",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/38"
     }
   }
 ]

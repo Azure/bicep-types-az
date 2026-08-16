@@ -11,6 +11,41 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SerialConsole/serialPorts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function connect (Microsoft.SerialConsole/serialPorts@2024-07-01)
+* **Resource**: Microsoft.SerialConsole/serialPorts
+* **ApiVersion**: 2024-07-01
+* **Output**: [SerialPortConnectResult](#serialportconnectresult)
+
+## Function disableConsole (Microsoft.SerialConsole/consoleServices@2024-07-01)
+* **Resource**: Microsoft.SerialConsole/consoleServices
+* **ApiVersion**: 2024-07-01
+* **Output**: [DisableSerialConsoleResult](#disableserialconsoleresult)
+
+## Function enableConsole (Microsoft.SerialConsole/consoleServices@2024-07-01)
+* **Resource**: Microsoft.SerialConsole/consoleServices
+* **ApiVersion**: 2024-07-01
+* **Output**: [EnableSerialConsoleResult](#enableserialconsoleresult)
+
+## DisableSerialConsoleResult
+### Properties
+* **properties**: [DisableSerialConsoleResultProperties](#disableserialconsoleresultproperties)
+
+## DisableSerialConsoleResultProperties
+### Properties
+* **disabled**: bool: Whether or not Serial Console is disabled.
+
+## EnableSerialConsoleResult
+### Properties
+* **properties**: [EnableSerialConsoleResultProperties](#enableserialconsoleresultproperties)
+
+## EnableSerialConsoleResultProperties
+### Properties
+* **disabled**: bool: Whether or not Serial Console is disabled.
+
+## SerialPortConnectResult
+### Properties
+* **connectionString**: string: Connection string to the serial port of the resource.
+
 ## SerialPortProperties
 ### Properties
 * **connectionState**: 'active' | 'inactive': Specifies whether the port is currently active.

@@ -1487,5 +1487,394 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveBillingSubscriptionRequest",
+    "properties": {
+      "destinationEnrollmentAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination enrollment account id."
+      },
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The billing properties of a subscription."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateMoveBillingSubscriptionEligibilityResult",
+    "properties": {
+      "isMoveEligible": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 2,
+        "description": "Specifies whether the subscription is eligible to move."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateMoveBillingSubscriptionEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Error code for the billing subscription move validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountIsLocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AssetNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AssetHasCap"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingAccountInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvoiceSectionIsRestricted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MarketplaceNotEnabledOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionTypeNotSupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateMoveEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/89"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionMergeRequest",
+    "properties": {
+      "targetBillingSubscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the target billing subscription that will be merged with the source subscription provided in the request."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The quantity of the source billing subscription that will be merged with the target billing subscription."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "merge",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionSplitRequest",
+    "properties": {
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing frequency of the target subscription in the ISO8601 format. Example: P1M, P3M, P1Y"
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The quantity of the target product to which the subscription needs to be split into."
+      },
+      "targetProductTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the target product to which the subscription needs to be split into. This value is not same as the value returned in Get API call and can be retrieved from Catalog API to know the product id to split into."
+      },
+      "targetSkuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the target product to which the subscription needs to be split into. This value is not same as the value returned in Get API call and can be retrieved from Catalog API to know the sku id to split into."
+      },
+      "termDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The term duration of the target in ISO8601 format product to which the subscription needs to be split into. Example: P1M, P1Y"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "split",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
   }
 ]

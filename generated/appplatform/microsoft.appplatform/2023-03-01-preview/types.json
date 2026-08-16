@@ -8188,11 +8188,254 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegenerateTestKeyRequestPayload",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/562"
+        },
+        "flags": 1,
+        "description": "Type of the test key"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateTestKey",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/557"
+    },
+    "input": {
+      "$ref": "#/559"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/557"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Type of the resource to check name availability"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to be checked"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicates whether the name is available"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason why the name is not available"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message why the name is not available"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppPlatform/locations",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/566"
+    },
+    "input": {
+      "$ref": "#/565"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationServiceSettingsValidateResult",
+    "properties": {
+      "gitPropertyValidationResult": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 0,
+        "description": "Validation result for configuration service settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationServiceGitPropertyValidateResult",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicate if the configuration service settings are valid"
+      },
+      "gitReposValidationResult": {
+        "type": {
+          "$ref": "#/572"
+        },
+        "flags": 0,
+        "description": "The detail validation results"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationMessages",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the configuration service git repository."
+      },
+      "messages": {
+        "type": {
+          "$ref": "#/571"
+        },
+        "flags": 0,
+        "description": "Detailed validation messages."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/570"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.AppPlatform/Spring/configurationServices",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/568"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BuildResultLog",
+    "properties": {
+      "blobUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The public download URL of this build result log"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLogFileUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/buildServices/builds/results",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/574"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUploadDefinition",
+    "properties": {
+      "relativePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Source relative path"
+      },
+      "uploadUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Upload URL"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getResourceUploadUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/buildServices",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DeploymentList",
     "properties": {
       "deployments": {
         "type": {
-          "$ref": "#/560"
+          "$ref": "#/579"
         },
         "flags": 0,
         "description": "A list of deployment resource ids."
@@ -8211,7 +8454,259 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices/builders",
     "apiVersion": "2023-03-01-preview",
     "output": {
-      "$ref": "#/559"
+      "$ref": "#/578"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getResourceUploadUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveDeploymentCollection",
+    "properties": {
+      "activeDeploymentNames": {
+        "type": {
+          "$ref": "#/583"
+        },
+        "flags": 0,
+        "description": "Collection of Deployment name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 0,
+        "description": "Properties of the App resource"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 0,
+        "description": "The Managed Identity type of the app resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The GEO location of the application, always the same with its parent resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource Id for the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setActiveDeployments",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/584"
+    },
+    "input": {
+      "$ref": "#/582"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainValidatePayload",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to be validated"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainValidateResult",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicates if domain name is valid."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message of why domain name is invalid."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateDomain",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/587"
+    },
+    "input": {
+      "$ref": "#/586"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoteDebuggingPayload",
+    "properties": {
+      "port": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Application debugging port."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoteDebugging",
+    "properties": {
+      "port": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Application debugging port"
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicate if remote debugging is enabled"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableRemoteDebugging",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/590"
+    },
+    "input": {
+      "$ref": "#/589"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableRemoteDebugging",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/590"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRemoteDebuggingConfig",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/590"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogFileUrlResponse",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "URL of the log file"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLogFileUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/594"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnosticParameters",
+    "properties": {
+      "appInstance": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "App instance name"
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Your target file path in your own BYOS"
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Duration of your JFR. 1 min can be represented by 1m or 60s."
+      }
     }
   },
   {
@@ -8228,7 +8723,85 @@
     "resourceType": "Microsoft.AppPlatform/Spring/gateways",
     "apiVersion": "2023-03-01-preview",
     "output": {
-      "$ref": "#/562"
+      "$ref": "#/597"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateDomain",
+    "resourceType": "Microsoft.AppPlatform/Spring/gateways",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/587"
+    },
+    "input": {
+      "$ref": "#/586"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateDomain",
+    "resourceType": "Microsoft.AppPlatform/Spring/apiPortals",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/587"
+    },
+    "input": {
+      "$ref": "#/586"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomizedAcceleratorValidateResult",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/604"
+        },
+        "flags": 0,
+        "description": "State of the customized accelerator validation result"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detail validation results"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/602"
+      },
+      {
+        "$ref": "#/603"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/601"
+    },
+    "input": {
+      "$ref": "#/498"
     }
   }
 ]

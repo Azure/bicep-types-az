@@ -7697,5 +7697,906 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChatRequest",
+    "properties": {
+      "question": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The question of the chat turn"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChatResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/608"
+        },
+        "flags": 1,
+        "description": "The properties of chat response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChatResponseProperties",
+    "properties": {
+      "question": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The question from the request"
+      },
+      "answer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The answer from the system"
+      },
+      "citations": {
+        "type": {
+          "$ref": "#/610"
+        },
+        "flags": 0
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 3,
+        "description": "The usage of questions within the chat session"
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 3,
+        "description": "The limit of questions within the chat session"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnswerCitation",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The title of the citation."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The url of the citation."
+      },
+      "chunkIndex": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The chunk index of the content."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/609"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "chat",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/chatSessions",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/607"
+    },
+    "input": {
+      "$ref": "#/606"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageNameCheckAvailabilityParameters",
+    "properties": {
+      "definitionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Image definition name."
+      },
+      "versionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Image version name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkImageNameAvailability",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/612"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetFileUploadURLParameters",
+    "properties": {
+      "blobName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The custom file name of the uploaded blob."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/617"
+        },
+        "flags": 0,
+        "description": "Resource type for file uploading."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Package"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHD"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/615"
+      },
+      {
+        "$ref": "#/616"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileUploadURLResponse",
+    "properties": {
+      "uploadUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URL used for uploading the package."
+      },
+      "blobPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFileUploadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/618"
+    },
+    "input": {
+      "$ref": "#/614"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PackageCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "applicationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Application name to verify."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Version name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "fully qualified resource type which includes provider namespace."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Value indicating the availability of the name: true if the name is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/624"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a name. Required if nameAvailable == false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the name. Required if nameAvailable == false."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/622"
+      },
+      {
+        "$ref": "#/623"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPackageNameAvailability",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/621"
+    },
+    "input": {
+      "$ref": "#/620"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFreeHourBalance",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/297"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubGetUsageRequest",
+    "properties": {
+      "startTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "endTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "pageSize": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "pageIndex": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubGetUsageResponse",
+    "properties": {
+      "totalUsedFreeHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalUsedBillableHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalCharges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "packageUsageEntries": {
+        "type": {
+          "$ref": "#/636"
+        },
+        "flags": 0
+      },
+      "nextRequest": {
+        "type": {
+          "$ref": "#/627"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubPackageUsage",
+    "properties": {
+      "applicationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "applicationVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "azureResourceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "totalUsedFreeHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalUsedBillableHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalCharges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "usageEntriesGroupedByUpdateType": {
+        "type": {
+          "$ref": "#/635"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubUsageGroupedByUpdateType",
+    "properties": {
+      "updateType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "totalUsedFreeHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalUsedBillableHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalCharges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "usageGroups": {
+        "type": {
+          "$ref": "#/634"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubUsageGroup",
+    "properties": {
+      "totalUsedFreeHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalUsedBillableHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "totalCharges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "releaseBuildRevision": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "releaseBuildNumber": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "releaseBuildDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "osBuild": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "release": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "testType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "productFamily": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "executionUsageDetails": {
+        "type": {
+          "$ref": "#/633"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingHubExecutionUsageDetail",
+    "properties": {
+      "applicationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "applicationVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "executionRequestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "meterId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "startTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "endTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "osBuild": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "release": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "testType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "updateType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "usedFreeHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "usedBillableHours": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      },
+      "billedCharges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/632"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/631"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/630"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/629"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getUsage",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/628"
+    },
+    "input": {
+      "$ref": "#/627"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DraftPackageGetPathResponse",
+    "properties": {
+      "baseUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The base URL of the storage account."
+      },
+      "draftPackagePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relative path of the folder hosting package files."
+      },
+      "workingPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relative path for a temporary folder for package creation work."
+      },
+      "sasToken": {
+        "type": {
+          "$ref": "#/639"
+        },
+        "flags": 2,
+        "description": "A SAS token for the storage account to access workspace."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Expiry date of the SAS token."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPath",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/draftPackages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/638"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadURLResponse",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/639"
+        },
+        "flags": 2,
+        "description": "The download URL."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Expiry date of the download URL."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/641"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PackageRunTestParameters",
+    "properties": {
+      "testType": {
+        "type": {
+          "$ref": "#/647"
+        },
+        "flags": 0,
+        "description": "The type of the test."
+      },
+      "osUpdateType": {
+        "type": {
+          "$ref": "#/651"
+        },
+        "flags": 0,
+        "description": "Specifies the OS update type to test against."
+      },
+      "osName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operating system name. e.g. Windows 10 1809."
+      },
+      "releaseName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the tested release (OS update)."
+      },
+      "flightingRing": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The flighting ring, only for release of feature updates."
+      },
+      "customImageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The tested custom image id. 'osName', 'release', 'buildVersion' and 'mediaPackageVersion' would be ignored when it's eligible.'"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OutOfBoxTest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FunctionalTest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FlowDrivenTest"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/644"
+      },
+      {
+        "$ref": "#/645"
+      },
+      {
+        "$ref": "#/646"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityUpdate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureUpdate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InplaceUpgrade"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/648"
+      },
+      {
+        "$ref": "#/649"
+      },
+      {
+        "$ref": "#/650"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/641"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVideoDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/641"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestResultConsoleLogDownloadURLParameters",
+    "properties": {
+      "logFileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The log file name corresponding to the download URL."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConsoleLogDownloadUrl",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/641"
+    },
+    "input": {
+      "$ref": "#/654"
+    }
   }
 ]

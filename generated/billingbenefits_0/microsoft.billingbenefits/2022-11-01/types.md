@@ -50,6 +50,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function elevate (Microsoft.BillingBenefits/savingsPlanOrders@2022-11-01)
+* **Resource**: Microsoft.BillingBenefits/savingsPlanOrders
+* **ApiVersion**: 2022-11-01
+* **Output**: [RoleAssignmentEntity](#roleassignmententity)
+
+## Function validate (Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2022-11-01)
+* **Resource**: Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans
+* **ApiVersion**: 2022-11-01
+* **Input**: [SavingsPlanUpdateValidateRequest](#savingsplanupdatevalidaterequest)
+* **Output**: [SavingsPlanValidateResponse](#savingsplanvalidateresponse)
+
 ## AppliedScopeProperties
 ### Properties
 * **displayName**: string: Display name
@@ -132,6 +143,18 @@
 ### Properties
 * **instanceFlexibility**: 'Off' | 'On' | string: Turning this on will apply the reservation discount to other VMs in the same VM size group.
 
+## RoleAssignmentEntity
+### Properties
+* **id**: string: Role assignment entity id
+* **name**: string: Role assignment entity name
+* **properties**: [RoleAssignmentEntityProperties](#roleassignmententityproperties): Role assignment entity properties
+
+## RoleAssignmentEntityProperties
+### Properties
+* **principalId**: string: Principal Id
+* **roleDefinitionId**: string: Role definition id
+* **scope**: string: Scope of the role assignment entity
+
 ## SavingsPlanModelProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
@@ -186,6 +209,29 @@
 * **provisioningState**: 'Cancelled' | 'ConfirmedBilling' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'PendingBilling' | 'Succeeded' | string (ReadOnly): Provisioning state
 * **savingsPlans**: string[]
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
+
+## SavingsPlanUpdateRequestProperties
+### Properties
+* **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
+* **appliedScopeType**: 'ManagementGroup' | 'Shared' | 'Single' | string: Type of the Applied Scope.
+* **displayName**: string: Display name
+* **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
+* **renewProperties**: [RenewProperties](#renewproperties)
+
+## SavingsPlanUpdateValidateRequest
+### Properties
+* **benefits**: [SavingsPlanUpdateRequestProperties](#savingsplanupdaterequestproperties)[]
+
+## SavingsPlanValidateResponse
+### Properties
+* **benefits**: [SavingsPlanValidResponseProperty](#savingsplanvalidresponseproperty)[]
+* **nextLink**: string: Url to get the next page.
+
+## SavingsPlanValidResponseProperty
+### Properties
+* **reason**: string: Failure reason if the provided input was invalid
+* **reasonCode**: string: Failure reason code if the provided input was invalid
+* **valid**: bool: Indicates if the provided input was valid
 
 ## Sku
 ### Properties

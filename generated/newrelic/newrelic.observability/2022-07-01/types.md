@@ -25,6 +25,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'NewRelic.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getMetricRules (NewRelic.Observability/monitors@2022-07-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2022-07-01
+* **Input**: [MetricsRequest](#metricsrequest)
+* **Output**: [MetricRules](#metricrules)
+
+## Function getMetricStatus (NewRelic.Observability/monitors@2022-07-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2022-07-01
+* **Input**: [MetricsStatusRequest](#metricsstatusrequest)
+* **Output**: [MetricsStatusResponse](#metricsstatusresponse)
+
 ## Function listAppServices (NewRelic.Observability/monitors@2022-07-01)
 * **Resource**: NewRelic.Observability/monitors
 * **ApiVersion**: 2022-07-01
@@ -36,6 +48,22 @@
 * **ApiVersion**: 2022-07-01
 * **Input**: [HostsGetRequest](#hostsgetrequest)
 * **Output**: [VMHostsListResponse](#vmhostslistresponse)
+
+## Function monitoredResources (NewRelic.Observability/monitors@2022-07-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2022-07-01
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function switchBilling (NewRelic.Observability/monitors@2022-07-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2022-07-01
+* **Input**: [SwitchBillingRequest](#switchbillingrequest)
+* **Output**: [NewRelicMonitorResource](#newrelicmonitorresource)
+
+## Function vmHostPayloads (NewRelic.Observability/monitors@2022-07-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2022-07-01
+* **Output**: [VMExtensionPayload](#vmextensionpayload)
 
 ## AccountInfo
 ### Properties
@@ -91,6 +119,32 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **sendMetrics**: 'Disabled' | 'Enabled' | string: Flag specifying if metrics should be sent for the Monitor resource.
 * **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: User Email
 
+## MetricsRequest
+### Properties
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): User Email
+
+## MetricsStatusRequest
+### Properties
+* **azureResourceIds**: string[]: Azure resource IDs
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): User Email
+
+## MetricsStatusResponse
+### Properties
+* **azureResourceIds**: string[]: Azure resource IDs
+
+## MonitoredResource
+### Properties
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string: Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending logs to NewRelic.
+* **sendingMetrics**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending metrics to NewRelic.
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [MonitoredResource](#monitoredresource)[] (Required): The MonitoredResource items on this page
+
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
@@ -118,6 +172,17 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **singleSignOnProperties**: [NewRelicSingleSignOnProperties](#newrelicsinglesignonproperties): date when plan was applied
 * **userId**: string: User id
 
+## NewRelicMonitorResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MonitorProperties](#monitorproperties) (Required): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## NewRelicSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
@@ -136,6 +201,13 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **planDetails**: string: plan id as published by NewRelic
 * **usageType**: 'COMMITTED' | 'PAYG' | string: Different usage type like PAYG/COMMITTED. this could be enum
 
+## SwitchBillingRequest
+### Properties
+* **azureResourceId**: string: Azure resource Id
+* **organizationId**: string: Organization id
+* **planData**: [PlanData](#plandata): Plan details
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): User Email
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -144,6 +216,11 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -167,6 +244,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **firstName**: string {maxLength: 50}: First name
 * **lastName**: string {maxLength: 50}: Last name
 * **phoneNumber**: string {maxLength: 40}: Contact phone number
+
+## VMExtensionPayload
+### Properties
+* **ingestionKey**: string: Ingestion key of the account
 
 ## VMHostsListResponse
 ### Properties

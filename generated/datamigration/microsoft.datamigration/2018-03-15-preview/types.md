@@ -38,6 +38,28 @@
 * **properties**: [ProjectTaskProperties](#projecttaskproperties): Custom task properties
 * **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.DataMigration/services/projects/tasks@2018-03-15-preview)
+* **Resource**: Microsoft.DataMigration/services/projects/tasks
+* **ApiVersion**: 2018-03-15-preview
+* **Output**: [ProjectTask](#projecttask)
+
+## Function checkNameAvailability (Microsoft.DataMigration/services@2018-03-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-03-15-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailabilityResponse](#nameavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.DataMigration/locations@2018-03-15-preview)
+* **Resource**: Microsoft.DataMigration/locations
+* **ApiVersion**: 2018-03-15-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailabilityResponse](#nameavailabilityresponse)
+
+## Function checkStatus (Microsoft.DataMigration/services@2018-03-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-03-15-preview
+* **Output**: [DataMigrationServiceStatusResponse](#datamigrationservicestatusresponse)
+
 ## BlobShare
 ### Properties
 * **sasUri**: string (Required): SAS URI of Azure Storage Account Container.
@@ -129,6 +151,13 @@
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' | string (ReadOnly): The resource's provisioning state
 * **publicKey**: string: The public key of the service, used to encrypt secrets sent to the service
 * **virtualSubnetId**: string (Required): The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+
+## DataMigrationServiceStatusResponse
+### Properties
+* **agentVersion**: string: The DMS instance agent version
+* **status**: string: The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'
+* **supportedTaskTypes**: string[]: The list of supported task types
+* **vmSize**: string: The services virtual machine size, such as 'Standard_D2_v2'
 
 ## FileShare
 ### Properties
@@ -292,6 +321,17 @@
 * **enableQueryAnalysisValidation**: bool: Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
 * **enableSchemaValidation**: bool: Allows to compare the schema information between source and target.
 
+## NameAvailabilityRequest
+### Properties
+* **name**: string: The proposed resource name
+* **type**: string: The resource type chain (e.g. virtualMachines/extensions)
+
+## NameAvailabilityResponse
+### Properties
+* **message**: string: The localized reason why the name is not available, if nameAvailable is false
+* **nameAvailable**: bool: If true, the name is valid and available. If false, 'reason' describes why not.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the name is not available, if nameAvailable is false
+
 ## ODataError
 ### Properties
 * **code**: string: The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
@@ -307,6 +347,14 @@
 * **sourcePlatform**: 'SQL' | 'Unknown' | string (Required): Source platform for the project
 * **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Information for connecting to target
 * **targetPlatform**: 'SQLDB' | 'Unknown' | string (Required): Target platform for the project
+
+## ProjectTask
+### Properties
+* **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProjectTaskProperties](#projecttaskproperties): Custom task properties
+* **type**: string (ReadOnly): Resource type.
 
 ## ProjectTaskProperties
 * **Discriminator**: taskType

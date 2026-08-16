@@ -450,6 +450,38 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/sessionPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function apply (Microsoft.App/containerApps/patches@2024-10-02-preview)
+* **Resource**: Microsoft.App/containerApps/patches
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [ContainerAppsPatchResource](#containerappspatchresource)
+
+## Function checkNameAvailability (Microsoft.App/connectedEnvironments@2024-10-02-preview)
+* **Resource**: Microsoft.App/connectedEnvironments
+* **ApiVersion**: 2024-10-02-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.App/managedEnvironments@2024-10-02-preview)
+* **Resource**: Microsoft.App/managedEnvironments
+* **ApiVersion**: 2024-10-02-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function getAuthtoken (Microsoft.App/containerApps@2024-10-02-preview)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [ContainerAppAuthToken](#containerappauthtoken)
+
+## Function getAuthtoken (Microsoft.App/managedEnvironments@2024-10-02-preview)
+* **Resource**: Microsoft.App/managedEnvironments
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [EnvironmentAuthToken](#environmentauthtoken)
+
+## Function invoke (Microsoft.App/functions@2024-10-02-preview)
+* **Resource**: Microsoft.App/functions
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: string
+
 ## Function listAuthToken (Microsoft.App/builders/builds@2024-10-02-preview)
 * **Resource**: Microsoft.App/builders/builds
 * **ApiVersion**: 2024-10-02-preview
@@ -484,6 +516,37 @@
 * **Resource**: Microsoft.App/logicApps
 * **ApiVersion**: 2024-10-02-preview
 * **Output**: [WorkflowEnvelope](#workflowenvelope)
+
+## Function resume (Microsoft.App/jobs@2024-10-02-preview)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [Job](#job)
+
+## Function start (Microsoft.App/containerApps@2024-10-02-preview)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [ContainerApp](#containerapp)
+
+## Function start (Microsoft.App/jobs@2024-10-02-preview)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2024-10-02-preview
+* **Input**: [JobExecutionTemplate](#jobexecutiontemplate)
+* **Output**: [JobExecutionBase](#jobexecutionbase)
+
+## Function stop (Microsoft.App/containerApps@2024-10-02-preview)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [ContainerApp](#containerapp)
+
+## Function stop (Microsoft.App/jobs@2024-10-02-preview)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [ContainerAppJobExecutions](#containerappjobexecutions)
+
+## Function suspend (Microsoft.App/jobs@2024-10-02-preview)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2024-10-02-preview
+* **Output**: [Job](#job)
 
 ## AllowedAudiencesValidation
 ### Properties
@@ -665,6 +728,17 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **valid**: bool (ReadOnly): Is the certificate valid?.
 * **value**: any (WriteOnly): PFX or PEM blob
 
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
 ## CircuitBreakerPolicy
 ### Properties
 * **consecutiveErrors**: int: Number of consecutive errors before the circuit breaker opens
@@ -732,6 +806,40 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **probes**: [ContainerAppProbe](#containerappprobe)[]: List of probes for the container.
 * **resources**: [ContainerResources](#containerresources): Container resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: Container volume mounts.
+
+## ContainerApp
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code.
+* **kind**: 'workflowapp' | string: Metadata used to render different experiences for resources of the same type; e.g. WorkflowApp is a kind of Microsoft.App/ContainerApps type. If supported, the resource provider must validate and persist this value.
+* **location**: string (Required): The geo-location where the resource lives
+* **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ContainerAppProperties](#containerappproperties): ContainerApp resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ContainerAppAuthToken
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ContainerAppAuthTokenProperties](#containerappauthtokenproperties): Container App auth token resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ContainerAppAuthTokenProperties
+### Properties
+* **expires**: string (ReadOnly): Token expiration date.
+* **token**: string {sensitive} (ReadOnly): Auth token value.
+
+## ContainerAppJobExecutions
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources.
+* **value**: [JobExecution](#jobexecution)[] (Required): Collection of resources.
 
 ## ContainerAppProbe
 ### Properties
@@ -807,6 +915,21 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **keyVaultUrl**: string (ReadOnly): Azure Key Vault URL pointing to the secret referenced by the container app.
 * **name**: string (ReadOnly): Secret Name.
 * **value**: string {sensitive} (ReadOnly): Secret Value.
+
+## ContainerAppsPatchResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PatchProperties](#patchproperties) (ReadOnly): Properties that describes current states of the patch resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ContainerExecutionStatus
+### Properties
+* **additionalInformation**: string: Additional information for the container status
+* **code**: int: Exit code
+* **name**: string: Container Name.
+* **status**: string: Status of the container
 
 ## ContainerRegistry
 ### Properties
@@ -1129,6 +1252,21 @@ eg: azure-servicebus, redis etc.
 * **containerAppAuthEncryptionSecretName**: string: The secret name which is referenced for EncryptionKey.
 * **containerAppAuthSigningSecretName**: string: The secret name which is referenced for SigningKey.
 
+## EnvironmentAuthToken
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [EnvironmentAuthTokenProperties](#environmentauthtokenproperties): Environment auth token resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## EnvironmentAuthTokenProperties
+### Properties
+* **expires**: string (ReadOnly): Token expiration date.
+* **token**: string {sensitive} (ReadOnly): Auth token value.
+
 ## EnvironmentVar
 ### Properties
 * **name**: string: Environment variable name.
@@ -1150,6 +1288,10 @@ eg: azure-servicebus, redis etc.
 * **messageTemplate**: string: Message template.
 * **parameters**: string[]: Parameters for the template.
 * **target**: string: The error target.
+
+## ExecutionStatus
+### Properties
+* **replicas**: [ReplicaExecutionStatus](#replicaexecutionstatus)[]: Replicas in the execution.
 
 ## ExtendedLocation
 ### Properties
@@ -1433,6 +1575,18 @@ configuration settings of the custom Open ID Connect provider.
 * **name**: string: Name of the service bind
 * **serviceId**: string: Resource id of the target service
 
+## Job
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities needed by a container app job to interact with other Azure services to not maintain any secrets or credentials in code.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [JobProperties](#jobproperties): Container Apps Job resource specific properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## JobConfiguration
 ### Properties
 * **eventTriggerConfig**: [JobConfigurationEventTriggerConfig](#jobconfigurationeventtriggerconfig): Trigger configuration of an event driven job.
@@ -1461,6 +1615,40 @@ configuration settings of the custom Open ID Connect provider.
 * **cronExpression**: string (Required): Cron formatted repeating schedule ("* * * * *") of a Cron Job.
 * **parallelism**: int: Number of parallel replicas of a job that can run at a given time.
 * **replicaCompletionCount**: int: Minimum number of successful replica completions before overall job completion.
+
+## JobExecution
+### Properties
+* **id**: string: Job execution Id.
+* **name**: string: Job execution Name.
+* **properties**: [JobExecutionProperties](#jobexecutionproperties): Container Apps Job execution specific properties.
+* **type**: string: Job execution type
+
+## JobExecutionBase
+### Properties
+* **id**: string: Job execution Id.
+* **name**: string: Job execution name.
+
+## JobExecutionContainer
+### Properties
+* **args**: string[]: Container start command arguments.
+* **command**: string[]: Container start command.
+* **env**: [EnvironmentVar](#environmentvar)[]: Container environment variables.
+* **image**: string: Container image tag.
+* **name**: string: Custom container name.
+* **resources**: [ContainerResources](#containerresources): Container resource requirements.
+
+## JobExecutionProperties
+### Properties
+* **detailedStatus**: [ExecutionStatus](#executionstatus): Detailed status of the job execution.
+* **endTime**: string: Job execution end time.
+* **startTime**: string: Job execution start time.
+* **status**: 'Degraded' | 'Failed' | 'Processing' | 'Running' | 'Stopped' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current running State of the job
+* **template**: [JobExecutionTemplate](#jobexecutiontemplate): Job's execution container.
+
+## JobExecutionTemplate
+### Properties
+* **containers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of container definitions for the Container Apps Job.
+* **initContainers**: [JobExecutionContainer](#jobexecutioncontainer)[]: List of specialized containers that run before job containers.
 
 ## JobProperties
 ### Properties
@@ -1771,6 +1959,11 @@ Note that URLs within the current domain are always implicitly allowed.
 * **runningStateDetails**: string (ReadOnly): The details of container current running state
 * **started**: bool: The container start status
 
+## ReplicaExecutionStatus
+### Properties
+* **containers**: [ContainerExecutionStatus](#containerexecutionstatus)[]: Containers in the execution replica
+* **name**: string: Replica Name.
+
 ## ReplicaProperties
 ### Properties
 * **containers**: [ReplicaContainer](#replicacontainer)[]: The containers collection under a replica.
@@ -2018,6 +2211,26 @@ call the token refresh API. The default is 72 hours.
 ### Properties
 * **destinations**: string[]: Open telemetry traces destinations
 * **includeDapr**: bool: Boolean indicating if including dapr traces
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

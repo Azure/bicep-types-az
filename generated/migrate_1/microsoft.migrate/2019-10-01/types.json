@@ -5555,5 +5555,155 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGroupBody",
+    "properties": {
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "For optimistic concurrency control."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 0,
+        "description": "Properties of the group."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupBodyProperties",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/572"
+        },
+        "flags": 0,
+        "description": "Whether to add or remove the machines."
+      },
+      "machines": {
+        "type": {
+          "$ref": "#/573"
+        },
+        "flags": 0,
+        "description": "List of machine names that are part of this group."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/570"
+      },
+      {
+        "$ref": "#/571"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Group",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the group."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "For optimistic concurrency control."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of the object = [Microsoft.Migrate/assessmentProjects/groups]."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "Properties of the group."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateMachines",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups",
+    "apiVersion": "2019-10-01",
+    "output": {
+      "$ref": "#/574"
+    },
+    "input": {
+      "$ref": "#/568"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "assessmentReportUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/groups/assessments",
+    "apiVersion": "2019-10-01",
+    "output": {
+      "$ref": "#/576"
+    }
   }
 ]

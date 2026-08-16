@@ -55,6 +55,22 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function beginGetAccess (Microsoft.Compute/disks@2020-06-30)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2020-06-30
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function beginGetAccess (Microsoft.Compute/snapshots@2020-06-30)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2020-06-30
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## AccessUri
+### Properties
+* **accessSAS**: string (ReadOnly): A SAS uri for accessing a disk.
+
 ## CreationData
 ### Properties
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
@@ -129,6 +145,11 @@
 ### Properties
 * **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the disk encryption key
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
+
+## GrantAccessData
+### Properties
+* **access**: 'None' | 'Read' | 'Write' | string (Required)
+* **durationInSeconds**: int (Required): Time duration in seconds until the SAS access expires.
 
 ## ImageDiskReference
 ### Properties

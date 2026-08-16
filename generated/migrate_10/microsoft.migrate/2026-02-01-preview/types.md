@@ -48,9 +48,42 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/migrateProjects/waves' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateWavePlan (Microsoft.Migrate/migrateProjects@2026-02-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [GenerateWavePlanRequest](#generatewaveplanrequest)
+* **Output**: [GenerateWavePlanResponse](#generatewaveplanresponse)
+
+## Function refresh (Microsoft.Migrate/migrateProjects/waves@2026-02-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects/waves
+* **ApiVersion**: 2026-02-01-preview
+* **Output**: [WaveProperties](#waveproperties)
+
+## Function refreshEntities (Microsoft.Migrate/migrateProjects@2026-02-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [RefreshEntitiesRequest](#refreshentitiesrequest)
+* **Output**: [RefreshEntitiesResponse](#refreshentitiesresponse)
+
+## Function taskSummary (Microsoft.Migrate/migrateProjects@2026-02-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [TaskSummaryRequest](#tasksummaryrequest)
+* **Output**: [TaskSummaryResponse](#tasksummaryresponse)
+
 ## Arg
 ### Properties
 * **query**: string (Required): The query to create workloads within the wave.
+
+## GenerateWavePlanRequest
+### Properties
+* **assessmentArmId**: string: ARM Id of the assessment for which the wave plan report is to be generated.
+* **migrationPath**: string: Optional. Specify the migration path for which the wave plan report is to be generated. If not specified, the default will be used
+
+## GenerateWavePlanResponse
+### Properties
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
+* **sasUri**: string (Required, ReadOnly): Hyperlink to download report.
 
 ## MigrationEntityGroupProperties
 ### Properties
@@ -96,6 +129,16 @@
 * **instanceType**: 'ServerMigration' (Required): Discriminator for migration specific properties.
 
 
+## RefreshEntitiesRequest
+### Properties
+* **migrationEntityGroupIds**: string[]: List of migration entity group ARM IDs. All entities within these groups will be refreshed. Each ID must be a fully qualified ARM resource ID belonging to the same subscription and resource group as the migrate project.
+* **migrationEntityIds**: string[]: List of migration entity ARM IDs to refresh. Each ID must be a fully qualified ARM resource ID belonging to the same subscription and resource group as the migrate project.
+
+## RefreshEntitiesResponse
+### Properties
+* **migrationEntityGroupIds**: string[] (ReadOnly): List of migration entity group ARM IDs being refreshed.
+* **migrationEntityIds**: string[] (ReadOnly): List of migration entity ARM IDs being refreshed.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -104,6 +147,15 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## Task
+### Properties
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [TaskProperties](#taskproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## TaskProperties
 ### Properties
@@ -117,6 +169,30 @@
 * **stage**: string: Task Stage
 * **status**: string (Required): Task Status
 * **taskType**: 'SystemDefined' | 'UserDefined' | string (Required, ReadOnly): Task Type
+
+## TaskStatusCountMap
+### Properties
+* **count**: int (Required): The count of tasks with this status.
+* **status**: string (Required): The task status.
+
+## TaskStatusCounts
+### Properties
+* **statusCounts**: [TaskStatusCountMap](#taskstatuscountmap)[] (Required): Status counts dictionary mapping TaskStatus to the count of tasks with that status.
+
+## TaskSummaryItem
+### Properties
+* **aggregatedStatus**: string (Required): Aggregated status of tasks in this stage.
+* **stage**: string (Required): Task Stage
+* **statusCounts**: [TaskStatusCounts](#taskstatuscounts) (Required): Counts of tasks in this stage by status.
+* **tasks**: [Task](#task)[] (Required): List of tasks in this stage.
+
+## TaskSummaryRequest
+### Properties
+* **scopeId**: string (Required): Task Scope ARM Id
+
+## TaskSummaryResponse
+### Properties
+* **items**: [TaskSummaryItem](#tasksummaryitem)[] (Required): List of Task Summary Items
 
 ## WaveProperties
 ### Properties

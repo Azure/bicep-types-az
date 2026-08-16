@@ -1379,5 +1379,32 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Network/networkSecurityPerimeters/profiles/accessRules",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/114"
+    },
+    "input": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Network/networkSecurityPerimeters/resourceAssociations",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/114"
+    },
+    "input": {
+      "$ref": "#/114"
+    }
   }
 ]

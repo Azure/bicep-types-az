@@ -774,5 +774,131 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessTokenRequest",
+    "properties": {
+      "publisherName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the publisher."
+      },
+      "edgeMarketPlaceRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The region where the disk will be created."
+      },
+      "egeMarketPlaceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region where the disk will be created."
+      },
+      "hypervGeneration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The hyperv version."
+      },
+      "marketPlaceSku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The marketplace sku."
+      },
+      "marketPlaceSkuVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The marketplace sku version."
+      },
+      "deviceSku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The device sku."
+      },
+      "deviceVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The device sku version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskAccessToken",
+    "properties": {
+      "diskId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The disk id."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The access token creation status."
+      },
+      "accessToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The access token."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateAccessToken",
+    "resourceType": "Microsoft.EdgeMarketplace/offers",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessTokenReadRequest",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the publisher."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getAccessToken",
+    "resourceType": "Microsoft.EdgeMarketplace/offers",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
   }
 ]

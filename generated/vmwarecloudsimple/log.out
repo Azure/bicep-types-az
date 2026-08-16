@@ -1,5 +1,5 @@
 Generating types for 'specification/vmwarecloudsimple/resource-manager/Microsoft.VMwareCloudSimple/VmwareCloudSimple/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -102,3 +102,5 @@ warning | Skipping DedicatedCloudNodes_CreateOrUpdate due to required header par
 warning | Skipping VirtualMachineTemplates_List due to required query parameter "resourcePoolName"
 warning | Skipping VirtualNetworks_List due to required query parameter "resourcePoolName"
 warning | Skipping VirtualMachines_CreateOrUpdate due to required header parameter "referer"
+warning | Skipping VirtualMachines_Start due to required header parameter "referer"
+warning | Skipping VirtualMachines_Stop due to required header parameter "referer"

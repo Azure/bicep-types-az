@@ -47,6 +47,12 @@ Leave this field empty if latestScan == true.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/sqlVulnerabilityAssessments/scans/scanResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function baselineRules (Microsoft.Security/sqlVulnerabilityAssessments@2026-04-01-preview)
+* **Resource**: Microsoft.Security/sqlVulnerabilityAssessments
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [RulesResultsInput](#rulesresultsinput)
+* **Output**: [RulesResults](#rulesresults)
+
 ## Baseline
 ### Properties
 * **expectedResults**: string[][]: Expected results.
@@ -77,10 +83,34 @@ Leave this field empty if latestScan == true.
 * **portalLink**: string: Optional link to remediate in Azure Portal.
 * **scripts**: string[]: Remediation script.
 
+## RuleResults
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RuleResultsProperties](#ruleresultsproperties): Rule results properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## RuleResultsProperties
 ### Properties
 * **latestScan**: bool: Take results from latest scan.
 * **results**: string[][]: Expected results in the baseline.
+
+## RulesResults
+### Properties
+* **nextLink**: string
+* **value**: [RuleResults](#ruleresults)[]: List of rule results.
+
+## RulesResultsInput
+### Properties
+* **latestScan**: bool: Take results from latest scan.
+* **results**: [RulesResultsInputResults](#rulesresultsinputresults): Expected results to be inserted into the baseline.
+Leave this field empty if latestScan == true.
+
+## RulesResultsInputResults
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string[][]
 
 ## ScanPropertiesV2
 ### Properties

@@ -173,6 +173,51 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getChangeLog (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [Changelog](#changelog)
+
+## Function getChangeLog (PaloAltoNetworks.Cloudngfw/localRulestacks@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [Changelog](#changelog)
+
+## Function getCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounter](#rulecounter)
+
+## Function getCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounter](#rulecounter)
+
+## Function getCounters (PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks/localRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounter](#rulecounter)
+
+## Function getGlobalRulestack (PaloAltoNetworks.Cloudngfw/firewalls@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/firewalls
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [GlobalRulestackInfo](#globalrulestackinfo)
+
+## Function getLogProfile (PaloAltoNetworks.Cloudngfw/firewalls@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/firewalls
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [LogSettings](#logsettings)
+
+## Function getSupportInfo (PaloAltoNetworks.Cloudngfw/firewalls@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/firewalls
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [SupportInfo](#supportinfo)
+
+## Function getSupportInfo (PaloAltoNetworks.Cloudngfw/localRulestacks@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [SupportInfo](#supportinfo)
+
 ## Function listAppIds (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-05-11-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
 * **ApiVersion**: 2026-05-11-preview
@@ -213,6 +258,41 @@
 * **ApiVersion**: 2026-05-11-preview
 * **Output**: [PredefinedUrlCategoriesResponse](#predefinedurlcategoriesresponse)
 
+## Function resetCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounterReset](#rulecounterreset)
+
+## Function resetCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounterReset](#rulecounterreset)
+
+## Function resetCounters (PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2026-05-11-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks/localRules
+* **ApiVersion**: 2026-05-11-preview
+* **Output**: [RuleCounterReset](#rulecounterreset)
+
+## ApplicationInsights
+### Properties
+* **id**: string: Resource id for Application Insights
+* **key**: string: Application Insights key
+
+## AppSeenData
+### Properties
+* **appSeenList**: [AppSeenInfo](#appseeninfo)[] (Required): array of appSeen
+* **count**: int (Required): number of rows
+
+## AppSeenInfo
+### Properties
+* **category**: string (Required): category
+* **risk**: string (Required): risk
+* **standardPorts**: string (Required): standardPorts
+* **subCategory**: string (Required): subCategory
+* **tag**: string (Required): tag
+* **technology**: string (Required): technology
+* **title**: string (Required): title
+
 ## AzureResourceManagerManagedIdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly): The active directory identifier of this principal.
@@ -243,6 +323,12 @@
 * **description**: string: user description for this object
 * **etag**: string: read only string representing last create or update
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+
+## Changelog
+### Properties
+* **changes**: string[] (Required): list of changes
+* **lastCommitted**: string: lastCommitted timestamp
+* **lastModified**: string: lastModified timestamp
 
 ## CountriesResponse
 ### Properties
@@ -292,6 +378,14 @@
 * **address**: [IPAddress](#ipaddress) (Required): Address Space
 * **port**: string (Required): port ID
 
+## EventHub
+### Properties
+* **id**: string: Resource ID of EventHub
+* **name**: string: EventHub name
+* **nameSpace**: string: EventHub namespace
+* **policyName**: string: EventHub policy name
+* **subscriptionId**: string: Subscription Id
+
 ## FirewallDeploymentProperties
 ### Properties
 * **associatedRulestack**: [RulestackDetails](#rulestackdetails): Associated Rulestack
@@ -333,6 +427,10 @@
 * **name**: string (Required): Settings name
 * **protocol**: 'TCP' | 'UDP' | string (Required): Protocol Type
 
+## GlobalRulestackInfo
+### Properties
+* **azureId**: string (Required): rulestack description
+
 ## IPAddress
 ### Properties
 * **address**: string: Address value
@@ -353,6 +451,22 @@
 * **nextLink**: string: next link
 * **value**: string[] (Required): firewalls list
 
+## LogDestination
+### Properties
+* **eventHubConfigurations**: [EventHub](#eventhub): Event Hub configurations
+* **monitorConfigurations**: [MonitorLog](#monitorlog): Monitor Log configurations
+* **storageConfigurations**: [StorageAccount](#storageaccount): Storage account configurations
+
+## LogSettings
+### Properties
+* **applicationInsights**: [ApplicationInsights](#applicationinsights): Application Insight details
+* **commonDestination**: [LogDestination](#logdestination): Common destination configurations
+* **decryptLogDestination**: [LogDestination](#logdestination): Decrypt destination configurations
+* **logOption**: 'INDIVIDUAL_DESTINATION' | 'SAME_DESTINATION' | string: Log option SAME/INDIVIDUAL
+* **logType**: 'AUDIT' | 'DECRYPTION' | 'DLP' | 'THREAT' | 'TRAFFIC' | 'WILDFIRE' | string: One of possible log type
+* **threatLogDestination**: [LogDestination](#logdestination): Threat destination configurations
+* **trafficLogDestination**: [LogDestination](#logdestination): Traffic destination configurations
+
 ## MarketplaceDetails
 ### Properties
 * **marketplaceSubscriptionId**: string (ReadOnly): Marketplace Subscription Id
@@ -366,6 +480,14 @@
 * **applicationInsightsResourceId**: string (Required): Resource Id of application insights resource
 * **panEtag**: string: read only string representing last create or update
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+
+## MonitorLog
+### Properties
+* **id**: string: Resource ID of MonitorLog
+* **primaryKey**: string: Primary Key value for Monitor
+* **secondaryKey**: string: Secondary Key value for Monitor
+* **subscriptionId**: string: Subscription Id
+* **workspace**: string: MonitorLog workspace
 
 ## NetworkProfile
 ### Properties
@@ -418,6 +540,27 @@
 * **etag**: string: etag info
 * **prefixList**: string[] (Required): prefix list
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+
+## RuleCounter
+### Properties
+* **appSeen**: [AppSeenData](#appseendata): apps seen
+* **firewallName**: string: firewall name
+* **hitCount**: int: hit count
+* **lastUpdatedTimestamp**: string: last updated timestamp
+* **priority**: string (Required): priority number
+* **requestTimestamp**: string: timestamp of request
+* **ruleListName**: string: rule list name
+* **ruleName**: string (Required): rule name
+* **ruleStackName**: string: rule Stack Name
+* **timestamp**: string: timestamp of response
+
+## RuleCounterReset
+### Properties
+* **firewallName**: string: firewall name
+* **priority**: string (ReadOnly): priority number
+* **ruleListName**: string: rule list name
+* **ruleName**: string: rule name
+* **ruleStackName**: string: rule Stack Name
 
 ## RuleEntry
 ### Properties
@@ -478,6 +621,12 @@
 * **feeds**: string[]: list of feeds
 * **prefixLists**: string[]: prefix list
 
+## StorageAccount
+### Properties
+* **accountName**: string: Storage account name
+* **id**: string: Resource ID of storage account
+* **subscriptionId**: string: Subscription Id
+
 ## StrataCloudManagerConfig
 ### Properties
 * **cloudManagerName**: string (Required): Strata Cloud Manager name which is intended to manage the policy for this firewall.
@@ -486,6 +635,21 @@
 ### Properties
 * **folderName**: string: Strata Cloud Manager folder in which this firewall has been placed
 * **hubUrl**: string: URL for Strata Cloud Manager
+
+## SupportInfo
+### Properties
+* **accountId**: string: Support account associated with given resource
+* **accountRegistered**: 'FALSE' | 'TRUE' | string: account registered in Customer Support Portal
+* **freeTrial**: 'FALSE' | 'TRUE' | string: Product usage is in free trial period
+* **freeTrialCreditLeft**: int: Free trial credit remaining
+* **freeTrialDaysLeft**: int: Free trial days remaining
+* **helpURL**: string: URL for paloaltonetworks live community
+* **productSerial**: string: product Serial associated with given resource
+* **productSku**: string: product SKU associated with given resource
+* **registerURL**: string: URL for registering product in paloaltonetworks Customer Service Portal
+* **supportURL**: string: URL for paloaltonetworks Customer Service Portal
+* **userDomainSupported**: 'FALSE' | 'TRUE' | string: user domain is supported in Customer Support Portal
+* **userRegistered**: 'FALSE' | 'TRUE' | string: user registered in Customer Support Portal
 
 ## SystemData
 ### Properties

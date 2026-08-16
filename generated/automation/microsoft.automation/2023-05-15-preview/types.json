@@ -7094,5 +7094,99 @@
     "output": {
       "$ref": "#/454"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GraphicalRunbookContent",
+    "properties": {
+      "rawContent": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "Raw graphical Runbook content."
+      },
+      "graphRunbookJson": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Graphical Runbook content as JSON"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawGraphicalRunbookContent",
+    "properties": {
+      "schemaVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Schema version of the serializer."
+      },
+      "runbookDefinition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serialized Graphical runbook"
+      },
+      "runbookType": {
+        "type": {
+          "$ref": "#/468"
+        },
+        "flags": 0,
+        "description": "Runbook Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShellWorkflow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/466"
+      },
+      {
+        "$ref": "#/467"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertGraphRunbookContent",
+    "resourceType": "Microsoft.Automation/automationAccounts",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/464"
+    },
+    "input": {
+      "$ref": "#/464"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridRunbookWorkerMoveParameters",
+    "properties": {
+      "hybridRunbookWorkerGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target hybrid runbook worker group."
+      }
+    }
   }
 ]

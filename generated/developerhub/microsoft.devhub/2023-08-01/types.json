@@ -869,5 +869,70 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthCallRequest",
+    "properties": {
+      "redirectUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL the client will redirect to on successful authentication. If empty, no redirect will occur."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthInfoResponse",
+    "properties": {
+      "authURL": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL for authorizing the Developer Hub GitHub App"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OAuth token used to make calls to GitHub"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGitHubOAuthInfo",
+    "resourceType": "Microsoft.DevHub/locations/githuboauth",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GeneratePreviewArtifactsResponse",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatePreviewArtifacts",
+    "resourceType": "Microsoft.DevHub/locations",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/71"
+    },
+    "input": {
+      "$ref": "#/31"
+    }
   }
 ]

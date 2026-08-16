@@ -939,12 +939,307 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "PolicykeyResource",
+    "properties": {
+      "policyKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the key that has to be regenerated for the Namespace/Notification Hub Authorization Rule. The value can be Primary Key/Secondary Key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAvailabilityParameters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The sku of the created namespace"
+      },
+      "isAvailiable": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "True if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAvailabilityParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAvailabilityResult",
+    "properties": {
+      "isAvailiable": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "True if the name is available and can be used to create new Namespace/NotificationHub. Otherwise false."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The sku of the created namespace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNotificationHubAvailability",
+    "resourceType": "Microsoft.NotificationHubs/namespaces",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/58"
+    },
+    "input": {
+      "$ref": "#/56"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
     "apiVersion": "2016-03-01",
     "output": {
       "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PnsCredentialsResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "NotificationHub PNS Credentials."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The sku of the created namespace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PnsCredentialsProperties",
+    "properties": {
+      "apnsCredential": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The ApnsCredential of the created NotificationHub"
+      },
+      "wnsCredential": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The WnsCredential of the created NotificationHub"
+      },
+      "gcmCredential": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The GcmCredential of the created NotificationHub"
+      },
+      "mpnsCredential": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The MpnsCredential of the created NotificationHub"
+      },
+      "admCredential": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The AdmCredential of the created NotificationHub"
+      },
+      "baiduCredential": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The BaiduCredential of the created NotificationHub"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pnsCredentials",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/63"
     }
   }
 ]

@@ -45,6 +45,17 @@
 * **properties**: [OriginPropertiesParametersOrOriginProperties](#originpropertiesparametersororiginproperties)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateSsoUri (Microsoft.Cdn/profiles@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2016-04-02
+* **Output**: [SsoUri](#ssouri)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-04-02
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
@@ -102,4 +113,18 @@
 ## Sku
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_Verizon': Name of the pricing tier
+
+## SsoUri
+### Properties
+* **ssoUriValue**: string: The URI used to login to third party web portal.
+
+## ValidateCustomDomainInput
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+
+## ValidateCustomDomainOutput
+### Properties
+* **customDomainValidated**: bool: Indicates whether the custom domain is validated or not.
+* **message**: string: The message describing why the custom domain is not valid.
+* **reason**: string: The reason why the custom domain is not valid.
 

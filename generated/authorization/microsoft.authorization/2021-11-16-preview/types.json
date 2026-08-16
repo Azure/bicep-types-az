@@ -2451,5 +2451,14 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDownloadUri",
+    "resourceType": "Microsoft.Authorization/accessReviewHistoryDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/43"
+    }
   }
 ]

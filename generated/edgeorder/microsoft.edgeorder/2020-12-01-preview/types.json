@@ -1530,5 +1530,52 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancellationReason",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Reason for cancellation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReturnOrderItemDetails",
+    "properties": {
+      "returnAddress": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "customer return address."
+      },
+      "returnReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Return Reason."
+      },
+      "serviceTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service tag (located on the bottom-right corner of the device)"
+      },
+      "shippingBoxRequired": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Shipping Box required"
+      }
+    }
   }
 ]

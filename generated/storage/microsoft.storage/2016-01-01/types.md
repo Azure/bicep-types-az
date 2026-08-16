@@ -19,6 +19,12 @@
 * **ApiVersion**: 2016-01-01
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
+## Function regenerateKey (Microsoft.Storage/storageAccounts@2016-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2016-01-01
+* **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
 ## CustomDomain
 ### Properties
 * **name**: string (Required): Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
@@ -79,4 +85,8 @@
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
 * **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
 * **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
+
+## StorageAccountRegenerateKeyParameters
+### Properties
+* **keyName**: string (Required)
 

@@ -359,5 +359,29 @@
     "output": {
       "$ref": "#/27"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/27"
+    },
+    "input": {
+      "$ref": "#/29"
+    }
   }
 ]

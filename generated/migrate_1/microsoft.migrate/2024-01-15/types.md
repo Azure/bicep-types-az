@@ -392,6 +392,42 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/webAppCollectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/aksAssessments@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/aksAssessments
+* **ApiVersion**: 2024-01-15
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/assessments@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/assessments
+* **ApiVersion**: 2024-01-15
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/avsAssessments@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/avsAssessments
+* **ApiVersion**: 2024-01-15
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/sqlAssessments@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/sqlAssessments
+* **ApiVersion**: 2024-01-15
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/webAppAssessments@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/webAppAssessments
+* **ApiVersion**: 2024-01-15
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function updateMachines (Microsoft.Migrate/assessmentProjects/groups@2024-01-15)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups
+* **ApiVersion**: 2024-01-15
+* **Input**: [UpdateGroupBody](#updategroupbody)
+* **Output**: [Group](#group)
+
 ## AKSAssessmentDetails
 ### Properties
 * **confidenceRatingInPercentage**: int (ReadOnly): Gets Confidence score.
@@ -1145,6 +1181,11 @@ vCPU VM Sizes.
 * **displayName**: string (ReadOnly): User friendly name of the disk.
 * **gigabytesAllocated**: int (ReadOnly): Gigabytes of storage provisioned for this disk.
 
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
+
 ## EntityUptime
 ### Properties
 * **daysPerMonth**: int: Gets the days per month.
@@ -1175,6 +1216,19 @@ vCPU VM Sizes.
 ### Properties
 * **assessmentType**: 'AvsAssessment' | 'MachineAssessment' | 'SqlAssessment' | 'Unknown' | 'WebAppAssessment' | string (ReadOnly): Gets the assessment type.
 * **count**: int (ReadOnly): Gets the affected entity count.
+
+## Group
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [GroupProperties](#groupproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## GroupBodyProperties
+### Properties
+* **machines**: string[]: List of machine names that are part of this group.
+* **operationType**: 'Add' | 'Remove' | string: Whether to add or remove the machines.
 
 ## GroupProperties
 ### Properties
@@ -1752,6 +1806,11 @@ consistent with other targets).
 ### Properties
 * **familyName**: string: Family name.
 * **targetLocations**: string[]: List of locations where ultra disk is supported for this VMfamily.
+
+## UpdateGroupBody
+### Properties
+* **eTag**: string: For optimistic concurrency control.
+* **properties**: [GroupBodyProperties](#groupbodyproperties): Properties of the group.
 
 ## VmFamilyOptions
 ### Properties

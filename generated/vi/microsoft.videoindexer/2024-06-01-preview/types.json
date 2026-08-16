@@ -870,5 +870,187 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateAccessTokenParameters",
+    "properties": {
+      "permissionType": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 1,
+        "description": "The requested permission"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "The requested media type"
+      },
+      "videoId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The video ID"
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The project ID"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Contributor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reader"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Video"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Project"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessToken",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "The access token."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateAccessToken",
+    "resourceType": "Microsoft.VideoIndexer/accounts",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/75"
+    },
+    "input": {
+      "$ref": "#/67"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateRestrictedViewerAccessTokenParameters",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "The requested media type"
+      },
+      "videoId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The video ID"
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The project ID"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Video"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Project"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateRestrictedViewerAccessToken",
+    "resourceType": "Microsoft.VideoIndexer/accounts",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/75"
+    },
+    "input": {
+      "$ref": "#/78"
+    }
   }
 ]

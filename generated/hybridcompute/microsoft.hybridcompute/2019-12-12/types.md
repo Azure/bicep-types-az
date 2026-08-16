@@ -25,6 +25,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reconnect (Microsoft.HybridCompute/machines@2019-12-12)
+* **Resource**: Microsoft.HybridCompute/machines
+* **ApiVersion**: 2019-12-12
+* **Input**: [MachineReconnect](#machinereconnect)
+* **Output**: [Machine](#machine)
+
 ## ErrorDetail
 ### Properties
 * **code**: string (Required): The error's code.
@@ -38,6 +44,16 @@
 * **countryOrRegion**: string: The country or region where the resource is located
 * **district**: string: The district, state, or province where the resource is located.
 * **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
+
+## Machine
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [MachineIdentity](#machineidentity)
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MachineProperties](#machineproperties): Hybrid Compute Machine properties
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## MachineExtensionInstanceView
 ### Properties
@@ -99,6 +115,20 @@
 ## MachinePropertiesOsProfile
 ### Properties
 * **computerName**: string (ReadOnly): Specifies the host OS name of the hybrid machine.
+
+## MachineReconnect
+### Properties
+* **properties**: [MachineReconnectProperties](#machinereconnectproperties): Hybrid Compute Machine properties
+
+## MachineReconnectProperties
+### Properties
+* **clientPublicKey**: string: Public Key that the client provides to be used during initial resource onboarding.
+* **vmId**: string: Specifies the hybrid machine unique ID.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

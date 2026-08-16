@@ -97,6 +97,53 @@
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): The cluster principal.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addPrincipals (Microsoft.Kusto/clusters/databases@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2020-09-18
+* **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/clusters@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-09-18
+* **Input**: [CheckNameRequest](#checknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/locations@2020-09-18)
+* **Resource**: Microsoft.Kusto/locations
+* **ApiVersion**: 2020-09-18
+* **Input**: [ClusterCheckNameRequest](#clusterchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkNameAvailability (Microsoft.Kusto/clusters/databases@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2020-09-18
+* **Input**: [DataConnectionCheckNameRequest](#dataconnectionchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkPrincipalAssignmentNameAvailability (Microsoft.Kusto/clusters@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-09-18
+* **Input**: [ClusterPrincipalAssignmentCheckNameRequest](#clusterprincipalassignmentchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function checkPrincipalAssignmentNameAvailability (Microsoft.Kusto/clusters/databases@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2020-09-18
+* **Input**: [DatabasePrincipalAssignmentCheckNameRequest](#databaseprincipalassignmentchecknamerequest)
+* **Output**: [CheckNameResult](#checknameresult)
+
+## Function dataConnectionValidation (Microsoft.Kusto/clusters/databases@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2020-09-18
+* **Input**: [DataConnectionValidation](#dataconnectionvalidation)
+* **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
+
+## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-09-18
+* **Output**: [DiagnoseVirtualNetworkResult](#diagnosevirtualnetworkresult)
+
 ## Function listFollowerDatabases (Microsoft.Kusto/clusters@2020-09-18)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2020-09-18
@@ -112,6 +159,12 @@
 * **ApiVersion**: 2020-09-18
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## Function removePrincipals (Microsoft.Kusto/clusters/databases@2020-09-18)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2020-09-18
+* **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
 ## AttachedDatabaseConfigurationProperties
 ### Properties
 * **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
@@ -125,6 +178,28 @@
 * **capacity**: int: The number of instances of the cluster.
 * **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E64i_v3' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' | string (Required): SKU name.
 * **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
+
+## CheckNameRequest
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' | 'Microsoft.Kusto/clusters/databases' (Required): The type of resource, for instance Microsoft.Kusto/clusters/databases.
+
+## CheckNameResult
+### Properties
+* **message**: string: Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated.
+* **name**: string: The name that was checked.
+* **nameAvailable**: bool: Specifies a Boolean value that indicates if the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: Message providing the reason why the given name is invalid.
+
+## ClusterCheckNameRequest
+### Properties
+* **name**: string (Required): Cluster name.
+* **type**: 'Microsoft.Kusto/clusters' (Required): The type of resource, Microsoft.Kusto/clusters.
+
+## ClusterPrincipalAssignmentCheckNameRequest
+### Properties
+* **name**: string (Required): Principal Assignment resource name.
+* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (Required): The type of resource, Microsoft.Kusto/clusters/principalAssignments.
 
 ## ClusterPrincipalProperties
 ### Properties
@@ -169,6 +244,15 @@
 * **tenantName**: string (ReadOnly): The tenant name of the principal
 * **type**: 'App' | 'Group' | 'User' | string (Required): Database principal type.
 
+## DatabasePrincipalAssignmentCheckNameRequest
+### Properties
+* **name**: string (Required): Principal Assignment resource name.
+* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (Required): The type of resource, Microsoft.Kusto/clusters/databases/principalAssignments.
+
+## DatabasePrincipalListRequest
+### Properties
+* **value**: [DatabasePrincipal](#databaseprincipal)[]: The list of Kusto database principals.
+
 ## DatabasePrincipalListResult
 ### Properties
 * **value**: [DatabasePrincipal](#databaseprincipal)[]: The list of Kusto database principals.
@@ -186,6 +270,53 @@
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
+
+## DataConnection
+* **Discriminator**: kind
+
+### Base Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): The name of the resource
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+### EventGridDataConnection
+#### Properties
+* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): The properties of the Event Grid data connection.
+
+### EventHubDataConnection
+#### Properties
+* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): The Event Hub data connection properties to validate.
+
+### IotHubDataConnection
+#### Properties
+* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): The Iot Hub data connection properties.
+
+
+## DataConnectionCheckNameRequest
+### Properties
+* **name**: string (Required): Data Connection name.
+* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (Required): The type of resource, Microsoft.Kusto/clusters/databases/dataConnections.
+
+## DataConnectionValidation
+### Properties
+* **dataConnectionName**: string: The name of the data connection.
+* **properties**: [DataConnection](#dataconnection): The data connection properties to validate.
+
+## DataConnectionValidationListResult
+### Properties
+* **value**: [DataConnectionValidationResult](#dataconnectionvalidationresult)[]: The list of Kusto data connection validation errors.
+
+## DataConnectionValidationResult
+### Properties
+* **errorMessage**: string: A message which indicates a problem in data connection validation.
+
+## DiagnoseVirtualNetworkResult
+### Properties
+* **findings**: string[]: The list of network connectivity diagnostic finding
 
 ## EventGridConnectionProperties
 ### Properties

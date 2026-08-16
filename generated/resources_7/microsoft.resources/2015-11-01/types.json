@@ -457,5 +457,298 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Deployment",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Gets or sets the deployment properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentProperties",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the template content. Use only one of Template or TemplateLink."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Gets or sets the URI referencing the template. Use only one of Template or TemplateLink."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Deployment parameters. Use only one of Parameters or ParametersLink."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Gets or sets the URI referencing the parameters. Use only one of Parameters or ParametersLink."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Gets or sets the deployment mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentValidateResult",
+    "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Gets or sets validation error."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Gets or sets the template deployment properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceManagementErrorWithDetails",
+    "properties": {
+      "details": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets validation error."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the error code returned from the server."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the error message returned from the server."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target of the error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceManagementError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the error code returned from the server."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the error message returned from the server."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target of the error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPropertiesExtended",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the state of the provisioning."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the correlation ID of the deployment."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the timestamp of the template deployment."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets key/value pairs that represent deployment output."
+      },
+      "providers": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Gets the list of resource providers needed for the deployment."
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Gets the list of deployment dependencies."
+      },
+      "template": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the template content. Use only one of Template or TemplateLink."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Gets or sets the URI referencing the template. Use only one of Template or TemplateLink."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Deployment parameters. Use only one of Parameters or ParametersLink."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Gets or sets the URI referencing the parameters. Use only one of Parameters or ParametersLink."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Gets or sets the deployment mode."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The deployment error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/18"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/32"
+    },
+    "input": {
+      "$ref": "#/27"
+    }
   }
 ]

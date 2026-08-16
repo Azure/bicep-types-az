@@ -4734,21 +4734,14 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FaultSimulationListResult",
+    "name": "FaultSimulationIdContent",
     "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/354"
-        },
-        "flags": 1,
-        "description": "The FaultSimulation items on this page"
-      },
-      "nextLink": {
+      "simulationId": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 0,
-        "description": "The link to the next page of items"
+        "flags": 1,
+        "description": "unique identifier for the fault simulation."
       }
     }
   },
@@ -5087,6 +5080,38 @@
     "value": "Zone"
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FaultSimulationListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/356"
+        },
+        "flags": 1,
+        "description": "The FaultSimulation items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/324"
@@ -5098,6 +5123,188 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2025-03-01-preview",
     "output": {
+      "$ref": "#/355"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FaultSimulationContentWrapper",
+    "properties": {
+      "parameters": {
+        "type": {
+          "$ref": "#/349"
+        },
+        "flags": 1,
+        "description": "Parameters for Fault Simulation start action."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
+      "$ref": "#/358"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedMaintenanceWindowStatus",
+    "properties": {
+      "isWindowEnabled": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If maintenance window is enabled on this cluster."
+      },
+      "isRegionReady": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Indicates if the region is ready to configure maintenance windows."
+      },
+      "isWindowActive": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If maintenance window is active."
+      },
+      "canApplyUpdates": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If updates can be applied."
+      },
+      "lastWindowStatusUpdateAtUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window update time in UTC."
+      },
+      "lastWindowStartTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window start time in UTC."
+      },
+      "lastWindowEndTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window end time in UTC."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMaintenanceWindowStatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedAzResiliencyStatus",
+    "properties": {
+      "baseResourceStatus": {
+        "type": {
+          "$ref": "#/365"
+        },
+        "flags": 0,
+        "description": "List of Managed VM Sizes for Service Fabric Managed Clusters."
+      },
+      "isClusterZoneResilient": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "URL to get the next set of Managed VM Sizes if there are any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceAzStatus",
+    "properties": {
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM Size properties."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM Size id."
+      },
+      "isZoneResilient": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "VM Size name."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Zone resiliency status details for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/364"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getazresiliencystatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
       "$ref": "#/323"
     }
   },
@@ -5107,6 +5314,30 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
     "apiVersion": "2025-03-01-preview",
     "output": {
+      "$ref": "#/355"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
+      "$ref": "#/358"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopFaultSimulation",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/324"
+    },
+    "input": {
       "$ref": "#/323"
     }
   }

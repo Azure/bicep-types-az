@@ -37,6 +37,12 @@
 * **ApiVersion**: 2018-09-01
 * **Output**: [RunGetLogResult](#rungetlogresult)
 
+## Function scheduleRun (Microsoft.ContainerRegistry/registries@2018-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2018-09-01
+* **Input**: [RunRequest](#runrequest)
+* **Output**: [Run](#run)
+
 ## AgentProperties
 ### Properties
 * **cpu**: int: The CPU configuration in terms of number of cores required for the run.
@@ -116,6 +122,13 @@ object that allows multiple ways of providing the value for it.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Run
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [RunProperties](#runproperties): The properties of a run.
+* **type**: string (ReadOnly): The type of the resource.
+
 ## RunGetLogResult
 ### Properties
 * **logLink**: string: The link to logs for a run on a azure container registry.
@@ -140,6 +153,61 @@ object that allows multiple ways of providing the value for it.
 * **startTime**: string: The time the run started.
 * **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout' | string: The current status of the run.
 * **task**: string: The task against which run was scheduled.
+
+## RunRequest
+* **Discriminator**: type
+
+### Base Properties
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
+
+### DockerBuildRequest
+#### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing the run.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
+* **dockerFilePath**: string (Required): The Docker file path relative to the source location.
+* **imageNames**: string[]: The fully qualified image names including the repository and tag.
+* **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
+* **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
+* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
+* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+* **target**: string: The name of the target build stage for the docker build.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
+* **type**: 'DockerBuildRequest' (Required): The type of the run request.
+
+### EncodedTaskRunRequest
+#### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
+* **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
+* **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
+* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
+* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
+* **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
+* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
+
+### FileTaskRunRequest
+#### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
+* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
+* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+* **taskFilePath**: string (Required): The template/definition file path relative to the source.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
+* **type**: 'FileTaskRunRequest' (Required): The type of the run request.
+* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
+* **valuesFilePath**: string: The values/parameters file path relative to the source.
+
+### TaskRunRequest
+#### Properties
+* **taskName**: string (Required): The name of task against which run has to be queued.
+* **type**: 'TaskRunRequest' (Required): The type of the run request.
+* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
+
 
 ## SecretObject
 ### Properties

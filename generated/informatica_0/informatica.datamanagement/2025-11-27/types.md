@@ -26,6 +26,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Informatica.DataManagement/organizations/serverlessRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkDependencies (Informatica.DataManagement/organizations/serverlessRuntimes@2025-11-27)
+* **Resource**: Informatica.DataManagement/organizations/serverlessRuntimes
+* **ApiVersion**: 2025-11-27
+* **Output**: [CheckDependenciesResponse](#checkdependenciesresponse)
+
+## Function getAllServerlessRuntimes (Informatica.DataManagement/organizations@2025-11-27)
+* **Resource**: Informatica.DataManagement/organizations
+* **ApiVersion**: 2025-11-27
+* **Output**: [InformaticaServerlessRuntimeResourceList](#informaticaserverlessruntimeresourcelist)
+
+## Function getServerlessMetadata (Informatica.DataManagement/organizations@2025-11-27)
+* **Resource**: Informatica.DataManagement/organizations
+* **ApiVersion**: 2025-11-27
+* **Output**: [ServerlessMetadataResponse](#serverlessmetadataresponse)
+
+## Function serverlessResourceById (Informatica.DataManagement/organizations/serverlessRuntimes@2025-11-27)
+* **Resource**: Informatica.DataManagement/organizations/serverlessRuntimes
+* **ApiVersion**: 2025-11-27
+* **Output**: [InformaticaServerlessRuntimeResource](#informaticaserverlessruntimeresource)
+
 ## AdvancedCustomProperties
 ### Properties
 * **key**: string: advanced custom properties key
@@ -40,11 +60,22 @@
 * **type**: string (Required): Type of the application config.
 * **value**: string (Required): Value of the application config.
 
+## ApplicationTypeMetadata
+### Properties
+* **name**: string: Application type name
+* **value**: string: Application type value
+
 ## CdiConfigProps
 ### Properties
 * **applicationConfigs**: [ApplicationConfigs](#applicationconfigs)[] (Required): ApplicationConfigs of the CDI or CDIE.
 * **engineName**: string (Required): EngineName of the application config.
 * **engineVersion**: string (Required): EngineVersion of the application config.
+
+## CheckDependenciesResponse
+### Properties
+* **count**: int (Required): Count of dependencies
+* **id**: string (Required): id of resource
+* **references**: [ServerlessRuntimeDependency](#serverlessruntimedependency)[] (Required): List of dependencies
 
 ## CompanyDetails
 ### Properties
@@ -54,6 +85,44 @@
 * **domain**: string: Domain name
 * **numberOfEmployees**: int: Number Of Employees
 * **officeAddress**: string: Office Address
+
+## ComputeUnitsMetadata
+### Properties
+* **name**: string: ComputeUnit name
+* **value**: string[]: ComputeUnit value
+
+## InfaRuntimeResourceFetchMetaData
+### Properties
+* **createdBy**: string (Required): Created by
+* **createdTime**: string (Required): Created time
+* **description**: string: Description of the runtime resource
+* **id**: string (Required): Informatica serverless runtime id
+* **name**: string (Required): Environment name
+* **serverlessConfigProperties**: [InfaServerlessFetchConfigProperties](#infaserverlessfetchconfigproperties) (Required): Serverless Config Properties
+* **status**: string (Required): Status of the environment
+* **statusLocalized**: string (Required): Display message for the given status
+* **statusMessage**: string (Required): status message
+* **type**: 'SERVERLESS' | string (Required): Environment Type
+* **updatedBy**: string (Required): Last Updated by
+* **updatedTime**: string (Required): Updated Time
+
+## InfaServerlessFetchConfigProperties
+### Properties
+* **advancedCustomProperties**: string: Advanced custom properties
+* **applicationType**: string: applicationType name
+* **computeUnits**: string: Compute Units
+* **executionTimeout**: string: Execution timeout
+* **platform**: string: Serverless Account Platform
+* **region**: string: region name for the runtime environment
+* **resourceGroupName**: string: Resource group name
+* **serverlessArmResourceId**: string: Serverless Arm Resource ID
+* **serverlessRuntimeDataDisks**: [ServerlessRuntimeDataDisk](#serverlessruntimedatadisk)[]: Serverless runtime data disks
+* **subnet**: string: subnet name
+* **subscriptionId**: string: subscription ID
+* **supplementaryFileLocation**: string: Supplementary File location
+* **tags**: string: Tags for the resource
+* **tenantId**: string: Tenant ID
+* **vnet**: string: virtual network
 
 ## InformaticaProperties
 ### Properties
@@ -78,6 +147,19 @@
 * **serverlessRuntimeTags**: [ServerlessRuntimeTag](#serverlessruntimetag)[]: Serverless Runtime Tags
 * **serverlessRuntimeUserContextProperties**: [ServerlessRuntimeUserContextProperties](#serverlessruntimeusercontextproperties): Serverless runtime user context properties
 * **supplementaryFileLocation**: string: Supplementary file location.
+
+## InformaticaServerlessRuntimeResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [InformaticaServerlessRuntimeProperties](#informaticaserverlessruntimeproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## InformaticaServerlessRuntimeResourceList
+### Properties
+* **informaticaRuntimeResources**: [InfaRuntimeResourceFetchMetaData](#infaruntimeresourcefetchmetadata)[] (Required): List of runtime resources for the fetch all API
 
 ## LinkOrganization
 ### Properties
@@ -120,6 +202,25 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of the resource.
 * **userDetails**: [UserDetails](#userdetails): User details
 
+## RegionsMetadata
+### Properties
+* **id**: string: Region Id
+* **name**: string: Region name
+
+## ServerlessConfigProperties
+### Properties
+* **applicationTypes**: [ApplicationTypeMetadata](#applicationtypemetadata)[]: List of application types supported by informatica
+* **computeUnits**: [ComputeUnitsMetadata](#computeunitsmetadata)[]: The list of compute units with possible array of values
+* **executionTimeout**: string: Serverless Runtime execution timeout
+* **platform**: 'AZURE' | string: Platform types
+* **regions**: [RegionsMetadata](#regionsmetadata)[]: List of supported serverless informatica regions
+
+## ServerlessMetadataResponse
+### Properties
+* **serverlessConfigProperties**: [ServerlessConfigProperties](#serverlessconfigproperties): serverless config properties
+* **serverlessRuntimeConfigProperties**: [ServerlessRuntimeConfigProperties](#serverlessruntimeconfigproperties): serverless runtime config properties
+* **type**: 'SERVERLESS' | string: type of the runtime environment.
+
 ## ServerlessRuntimeConfigProperties
 ### Properties
 * **cdiConfigProps**: [CdiConfigProps](#cdiconfigprops)[]: The List of Informatica Serverless Runtime CDI Config Properties.
@@ -132,6 +233,15 @@
 * **sourceMount**: string: Source mount point
 * **targetMount**: string: Target mount point
 * **type**: string: Type of the data disk
+
+## ServerlessRuntimeDependency
+### Properties
+* **appContextId**: string (Required): Application context ID
+* **description**: string (Required): description of Dependency
+* **documentType**: string (Required): document type
+* **id**: string (Required): Dependency ID
+* **lastUpdatedTime**: string (Required): Last Update Time
+* **path**: string (Required): Dependency path
 
 ## ServerlessRuntimeNetworkProfile
 ### Properties

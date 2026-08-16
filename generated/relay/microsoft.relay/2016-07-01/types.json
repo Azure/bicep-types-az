@@ -666,6 +666,75 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AuthorizationRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Result of the List AuthorizationRules operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link to the next set of results. Not empty if Value contains incomplete list of AuthorizationRules"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "Authorization Rule properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "AuthorizationRules",
+    "resourceType": "Microsoft.Relay/namespaces",
+    "apiVersion": "2016-07-01",
+    "output": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AuthorizationRuleKeys",
     "properties": {
       "primaryConnectionString": {
@@ -711,6 +780,62 @@
     "resourceType": "Microsoft.Relay/namespaces/AuthorizationRules",
     "apiVersion": "2016-07-01",
     "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeysParameters",
+    "properties": {
+      "policyKey": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Key that needs to be regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Relay/namespaces/AuthorizationRules",
+    "apiVersion": "2016-07-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "authorizationRules",
+    "resourceType": "Microsoft.Relay/namespaces/HybridConnections",
+    "apiVersion": "2016-07-01",
+    "output": {
       "$ref": "#/48"
     }
   },
@@ -718,6 +843,27 @@
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Relay/namespaces/HybridConnections/authorizationRules",
+    "apiVersion": "2016-07-01",
+    "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Relay/namespaces/HybridConnections/authorizationRules",
+    "apiVersion": "2016-07-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "authorizationRules",
+    "resourceType": "Microsoft.Relay/namespaces/WcfRelays",
     "apiVersion": "2016-07-01",
     "output": {
       "$ref": "#/48"
@@ -729,7 +875,19 @@
     "resourceType": "Microsoft.Relay/namespaces/WcfRelays/authorizationRules",
     "apiVersion": "2016-07-01",
     "output": {
-      "$ref": "#/48"
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Relay/namespaces/WcfRelays/authorizationRules",
+    "apiVersion": "2016-07-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
     }
   }
 ]

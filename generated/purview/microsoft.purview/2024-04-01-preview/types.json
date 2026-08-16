@@ -1657,6 +1657,19 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CollectionAdminUpdate",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the object identifier of the admin."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "atlasKafkaPrimaryEndpoint": {
@@ -1681,7 +1694,7 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/132"
+      "$ref": "#/133"
     }
   },
   {
@@ -1690,7 +1703,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "Set of features"
@@ -1709,7 +1722,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/138"
         },
         "flags": 2,
         "description": "Features with enabled status"
@@ -1730,10 +1743,62 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/137"
     },
     "input": {
-      "$ref": "#/134"
+      "$ref": "#/135"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionStatusUpdateRequest",
+    "properties": {
+      "privateEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The private endpoint resource identifier."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The private endpoint connection status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionStatusUpdateResponse",
+    "properties": {
+      "privateEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The private endpoint resource identifier."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The private endpoint connection status."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ingestionPrivateEndpointConnectionStatus",
+    "resourceType": "Microsoft.Purview/accounts",
+    "apiVersion": "2024-04-01-preview",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/140"
     }
   },
   {
@@ -1742,10 +1807,10 @@
     "resourceType": "Microsoft.Purview/locations",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/137"
     },
     "input": {
-      "$ref": "#/134"
+      "$ref": "#/135"
     }
   }
 ]

@@ -10,6 +10,39 @@
 * **properties**: [PricingProperties](#pricingproperties): Pricing data
 * **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function batch (Microsoft.Security/pricings@2025-10-01-preview)
+* **Resource**: Microsoft.Security/pricings
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [BatchPricingUpdateRequest](#batchpricingupdaterequest)
+* **Output**: [BatchPricingUpdateResponse](#batchpricingupdateresponse)
+
+## BatchOperationSummary
+### Properties
+* **failedUpdates**: int {minValue: 0} (Required): Number of pricing configurations that failed to update due to validation or authorization errors
+* **successfulUpdates**: int {minValue: 0} (Required): Number of pricing configurations successfully updated
+* **totalRequested**: int {minValue: 1, maxValue: 30} (Required): Total number of pricing configurations requested for update in this batch
+
+## BatchPlanItem
+### Properties
+* **planName**: string (Required): Name of the pricing plan (e.g., VirtualMachines, StorageAccounts, CloudPosture, Containers, etc.)
+* **properties**: [PricingProperties](#pricingproperties) (Required): Pricing configuration properties for this plan
+
+## BatchPricingResult
+### Properties
+* **errorMessage**: string: Detailed error message if the update failed (only present when success=false). Contains specific validation or authorization error details.
+* **planName**: string (Required): Name of the pricing plan that was processed in this batch operation
+* **result**: [Pricing](#pricing): Updated pricing configuration resource (only present when success=true). Contains the complete pricing configuration with all properties populated.
+* **success**: bool (Required): Whether the update for this pricing plan was successful
+
+## BatchPricingUpdateRequest
+### Properties
+* **plansConfigurations**: [BatchPlanItem](#batchplanitem)[] {minLength: 1, maxLength: 30} (Required): Array of pricing plan configurations to update. Maximum of 30 plans allowed per batch request.
+
+## BatchPricingUpdateResponse
+### Properties
+* **results**: [BatchPricingResult](#batchpricingresult)[] (Required): Results for each individual pricing plan update within the batch operation
+* **summary**: [BatchOperationSummary](#batchoperationsummary) (Required): Summary statistics for the batch operation including total, successful, and failed update counts
+
 ## Extension
 ### Properties
 * **additionalExtensionProperties**: [ExtensionAdditionalExtensionProperties](#extensionadditionalextensionproperties): Property values associated with the extension.
@@ -27,6 +60,13 @@
 ### Properties
 * **code**: 'Failed' | 'Succeeded' | string: The operation status code.
 * **message**: string: Additional information regarding the success/failure of the operation.
+
+## Pricing
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [PricingProperties](#pricingproperties): Pricing data
+* **type**: string (ReadOnly): Resource type
 
 ## PricingProperties
 ### Properties

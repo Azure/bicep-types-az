@@ -145,6 +145,69 @@
 * **properties**: [HciEdgeDeviceProperties](#hciedgedeviceproperties): properties for Arc-enabled edge device with HCI OS.
 
 
+## Function configureRemoteSupport (Microsoft.AzureStackHCI/clusters@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-04-01
+* **Input**: [RemoteSupportRequest](#remotesupportrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function consentAndInstallDefaultExtensions (Microsoft.AzureStackHCI/clusters/arcSettings@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2024-04-01
+* **Output**: [ArcSetting](#arcsetting)
+
+## Function createArcIdentity (Microsoft.AzureStackHCI/clusters/arcSettings@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2024-04-01
+* **Output**: [ArcIdentityResponse](#arcidentityresponse)
+
+## Function createClusterIdentity (Microsoft.AzureStackHCI/clusters@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-04-01
+* **Output**: [ClusterIdentityResponse](#clusteridentityresponse)
+
+## Function extendSoftwareAssuranceBenefit (Microsoft.AzureStackHCI/clusters@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-04-01
+* **Input**: [SoftwareAssuranceChangeRequest](#softwareassurancechangerequest)
+* **Output**: [Cluster](#cluster)
+
+## Function generatePassword (Microsoft.AzureStackHCI/clusters/arcSettings@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2024-04-01
+* **Output**: [PasswordCredential](#passwordcredential)
+
+## Function triggerLogCollection (Microsoft.AzureStackHCI/clusters@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-04-01
+* **Input**: [LogCollectionRequest](#logcollectionrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function validate (Microsoft.AzureStackHCI/edgeDevices@2024-04-01)
+* **Resource**: Microsoft.AzureStackHCI/edgeDevices
+* **ApiVersion**: 2024-04-01
+* **Input**: [ValidateRequest](#validaterequest)
+* **Output**: [ValidateResponse](#validateresponse)
+
+## ArcIdentityResponse
+### Properties
+* **properties**: [ArcIdentityResponseProperties](#arcidentityresponseproperties) (ReadOnly): ArcIdentity properties.
+
+## ArcIdentityResponseProperties
+### Properties
+* **arcApplicationClientId**: string
+* **arcApplicationObjectId**: string
+* **arcApplicationTenantId**: string
+* **arcServicePrincipalObjectId**: string
+
+## ArcSetting
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ArcSettingProperties](#arcsettingproperties): ArcSetting properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ArcSettingProperties
 ### Properties
 * **aggregateState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
@@ -158,10 +221,32 @@
 * **perNodeDetails**: [PerNodeState](#pernodestate)[] (ReadOnly): State of Arc agent in each of the nodes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
 
+## Cluster
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity of Cluster resource
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ClusterDesiredProperties
 ### Properties
 * **diagnosticLevel**: 'Basic' | 'Enhanced' | 'Off' | string: Desired level of diagnostic data emitted by the cluster.
 * **windowsServerSubscription**: 'Disabled' | 'Enabled' | string: Desired state of Windows Server Subscription.
+
+## ClusterIdentityResponse
+### Properties
+* **properties**: [ClusterIdentityResponseProperties](#clusteridentityresponseproperties) (ReadOnly): Cluster identity properties.
+
+## ClusterIdentityResponseProperties
+### Properties
+* **aadApplicationObjectId**: string
+* **aadClientId**: string
+* **aadServicePrincipalObjectId**: string
+* **aadTenantId**: string
 
 ## ClusterNode
 ### Properties
@@ -528,6 +613,15 @@
 * **logCollectionSessionDetails**: [LogCollectionSession](#logcollectionsession)[] (ReadOnly)
 * **toDate**: string (ReadOnly): To DateTimeStamp till when logs need to be connected
 
+## LogCollectionRequest
+### Properties
+* **properties**: [LogCollectionRequestProperties](#logcollectionrequestproperties): Properties for Log Collection Request
+
+## LogCollectionRequestProperties
+### Properties
+* **fromDate**: string (Required): From DateTimeStamp from when logs need to be connected
+* **toDate**: string (Required): To DateTimeStamp till when logs need to be connected
+
 ## LogCollectionSession
 ### Properties
 * **correlationId**: string (ReadOnly): CorrelationId of the log collection
@@ -588,6 +682,13 @@
 * **lastUpdated**: string: Last time this component was updated.
 * **packageType**: string: Package type
 * **version**: string: Package version
+
+## PasswordCredential
+### Properties
+* **endDateTime**: string
+* **keyId**: string
+* **secretText**: string
+* **startDateTime**: string
 
 ## PerNodeExtensionState
 ### Properties
@@ -668,6 +769,16 @@
 * **remoteSupportSessionDetails**: [PerNodeRemoteSupportSession](#pernoderemotesupportsession)[] (ReadOnly)
 * **remoteSupportType**: 'Enable' | 'Revoke' | string (ReadOnly): Remote Support Type for cluster
 
+## RemoteSupportRequest
+### Properties
+* **properties**: [RemoteSupportRequestProperties](#remotesupportrequestproperties): Properties for Remote Support Request
+
+## RemoteSupportRequestProperties
+### Properties
+* **accessLevel**: 'Diagnostics' | 'DiagnosticsAndRepair' | string (ReadOnly): Remote Support Access Level
+* **expirationTimeStamp**: string: Expiration DateTimeStamp when Remote Support Access will be expired
+* **remoteSupportType**: 'Enable' | 'Revoke' | string: Remote Support Type for cluster
+
 ## SbeCredentials
 ### Properties
 * **eceSecretName**: string: secret name expected for Enterprise Cloud Engine (ECE).
@@ -739,6 +850,14 @@
 * **publisherId**: string: Identifier of the Publisher for the offer
 * **skuMappings**: [SkuMappings](#skumappings)[]: Array of SKU mappings
 
+## SoftwareAssuranceChangeRequest
+### Properties
+* **properties**: [SoftwareAssuranceChangeRequestProperties](#softwareassurancechangerequestproperties)
+
+## SoftwareAssuranceChangeRequestProperties
+### Properties
+* **softwareAssuranceIntent**: 'Disable' | 'Enable' | string: Customer Intent for Software Assurance Benefit.
+
 ## SoftwareAssuranceProperties
 ### Properties
 * **lastUpdated**: string (ReadOnly): TimeStamp denoting the latest SA benefit applicability is validated.
@@ -781,6 +900,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -856,4 +980,13 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## ValidateRequest
+### Properties
+* **additionalInfo**: string: Additional info required for validation.
+* **edgeDeviceIds**: string[] (Required): Node Ids against which, current node has to be validated.
+
+## ValidateResponse
+### Properties
+* **status**: string (ReadOnly): edge device validation status
 

@@ -26,6 +26,18 @@
 * **tags**: [EventHubConsumerGroupInfoTags](#eventhubconsumergroupinfotags) (ReadOnly): The tags.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportDevices (Microsoft.Devices/IotHubs@2016-02-03)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2016-02-03
+* **Input**: [ExportDevicesRequest](#exportdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
+## Function importDevices (Microsoft.Devices/IotHubs@2016-02-03)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2016-02-03
+* **Input**: [ImportDevicesRequest](#importdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
 ## Function listkeys (Microsoft.Devices/IotHubs@2016-02-03)
 * **Resource**: Microsoft.Devices/IotHubs
 * **ApiVersion**: 2016-02-03
@@ -55,11 +67,21 @@
 * **path**: string (ReadOnly): The Event Hub-compatible name.
 * **retentionTimeInDays**: int: The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
 
+## ExportDevicesRequest
+### Properties
+* **ExcludeKeys**: bool (Required): The value indicating whether keys should be excluded during export.
+* **ExportBlobContainerUri**: string (Required): The export blob container URI.
+
 ## FeedbackProperties
 ### Properties
 * **lockDurationAsIso8601**: string: The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+
+## ImportDevicesRequest
+### Properties
+* **InputBlobContainerUri**: string (Required): The input blob container URI.
+* **OutputBlobContainerUri**: string (Required): The output blob container URI.
 
 ## IotHubProperties
 ### Properties
@@ -102,6 +124,17 @@
 * **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule.
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
+
+## JobResponse
+### Properties
+* **endTimeUtc**: string (ReadOnly): The time the job stopped processing.
+* **failureReason**: string (ReadOnly): If status == failed, this string containing the reason for the failure.
+* **jobId**: string (ReadOnly): The job identifier.
+* **parentJobId**: string (ReadOnly): The job identifier of the parent job, if any.
+* **startTimeUtc**: string (ReadOnly): The start time of the job.
+* **status**: 'cancelled' | 'completed' | 'enqueued' | 'failed' | 'running' | 'unknown' (ReadOnly): The status of the job.
+* **statusMessage**: string (ReadOnly): The status message for the job.
+* **type**: 'backup' | 'export' | 'factoryResetDevice' | 'firmwareUpdate' | 'import' | 'readDeviceProperties' | 'rebootDevice' | 'unknown' | 'updateDeviceConfiguration' | 'writeDeviceProperties' | string (ReadOnly): The type of the job.
 
 ## MessagingEndpointProperties
 ### Properties

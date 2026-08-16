@@ -1765,11 +1765,85 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 1,
+        "description": "The resource type to check for name availability."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppConfiguration/configurationStores"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The value indicating whether the resource name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration/locations",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/139"
+    },
+    "input": {
+      "$ref": "#/136"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ApiKeyListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/143"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -1834,7 +1908,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/137"
+      "$ref": "#/142"
     }
   },
   {
@@ -1843,7 +1917,32 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of the key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.AppConfiguration/configurationStores",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/142"
+    },
+    "input": {
+      "$ref": "#/145"
     }
   }
 ]

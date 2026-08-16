@@ -55,6 +55,11 @@
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ListQueryKeysResult](#listquerykeysresult)
 
+## Function upgrade (Microsoft.Search/searchServices@2025-02-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: [SearchService](#searchservice)
+
 ## AdminKeyResult
 ### Properties
 * **primaryKey**: string (ReadOnly): The primary admin API key of the search service.
@@ -181,6 +186,18 @@
 * **key**: string (ReadOnly): The value of the query API key.
 * **name**: string (ReadOnly): The name of the query API key. Query names are optional, but assigning a name can help you remember how it's used.
 
+## SearchService
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [Identity](#identity): The identity of the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the search service.
+* **sku**: [Sku](#sku): The SKU of the search service, which determines price tier and capacity limits. This property is required when creating a new search service.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata of the search service containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SearchServiceProperties
 ### Properties
 * **authOptions**: [DataPlaneAuthOptions](#dataplaneauthoptions): Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
@@ -232,6 +249,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

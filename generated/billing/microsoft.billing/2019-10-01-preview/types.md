@@ -296,10 +296,105 @@
 * **properties**: [BillingPropertyProperties](#billingpropertyproperties) (ReadOnly): A billing property.
 * **type**: 'Microsoft.Billing/billingProperty' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acceptTransfer (Microsoft.Billing/transfers@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/transfers
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [AcceptTransferRequest](#accepttransferrequest)
+* **Output**: [RecipientTransferDetails](#recipienttransferdetails)
+
+## Function declineTransfer (Microsoft.Billing/transfers@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/transfers
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [RecipientTransferDetails](#recipienttransferdetails)
+
+## Function download (Microsoft.Billing/billingAccounts/billingProfiles/invoices/pricesheet@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoices/pricesheet
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function download (Microsoft.Billing/billingAccounts/billingProfiles/pricesheet@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/pricesheet
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadDocuments (Microsoft.Billing/billingAccounts@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: string[]
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadDocuments (Microsoft.Billing/billingAccounts/billingSubscriptions@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: string[]
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadDocuments (Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: string[]
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function initiateTransfer (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [InitiateTransferRequest](#initiatetransferrequest)
+* **Output**: [TransferDetails](#transferdetails)
+
+## Function initiateTransfer (Microsoft.Billing/billingAccounts/billingProfiles/customers@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/customers
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [InitiateTransferRequest](#initiatetransferrequest)
+* **Output**: [TransferDetails](#transferdetails)
+
 ## Function listInvoiceSectionsWithCreateSubscriptionPermission (Microsoft.Billing/billingAccounts@2019-10-01-preview)
 * **Resource**: Microsoft.Billing/billingAccounts
 * **ApiVersion**: 2019-10-01-preview
 * **Output**: [InvoiceSectionListWithCreateSubPermissionResult](#invoicesectionlistwithcreatesubpermissionresult)
+
+## Function transfer (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [TransferBillingSubscriptionRequestProperties](#transferbillingsubscriptionrequestproperties)
+* **Output**: [TransferBillingSubscriptionResult](#transferbillingsubscriptionresult)
+
+## Function transfer (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [TransferProductRequestProperties](#transferproductrequestproperties)
+* **Output**: [Product](#product)
+
+## Function updateAutoRenew (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [UpdateAutoRenewRequest](#updateautorenewrequest)
+* **Output**: [UpdateAutoRenewOperation](#updateautorenewoperation)
+
+## Function validateTransfer (Microsoft.Billing/transfers@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/transfers
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [AcceptTransferRequest](#accepttransferrequest)
+* **Output**: [ValidateTransferListResponse](#validatetransferlistresponse)
+
+## Function validateTransferEligibility (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [TransferBillingSubscriptionRequestProperties](#transferbillingsubscriptionrequestproperties)
+* **Output**: [ValidateSubscriptionTransferEligibilityResult](#validatesubscriptiontransfereligibilityresult)
+
+## Function validateTransferEligibility (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [TransferProductRequestProperties](#transferproductrequestproperties)
+* **Output**: [ValidateProductTransferEligibilityResult](#validateproducttransfereligibilityresult)
+
+## AcceptTransferProperties
+### Properties
+* **productDetails**: [ProductDetails](#productdetails)[]: Request parameters to accept transfer.
+
+## AcceptTransferRequest
+### Properties
+* **properties**: [AcceptTransferProperties](#accepttransferproperties): Request parameters to accept transfer.
 
 ## AddressDetails
 ### Properties
@@ -459,11 +554,23 @@
 * **enrollmentAccounts**: [EnrollmentAccount](#enrollmentaccount)[]: Associated enrollment accounts. By default this is not populated, unless it's specified in $expand.
 * **status**: string: The status of the department.
 
+## DetailedTransferStatus
+### Properties
+* **errorDetails**: [Error](#error): Error details for transfer execution.
+* **productId**: string (ReadOnly): The ID of the product that is transferred.
+* **productType**: 'AzureReservation' | 'AzureSubscription' | string (ReadOnly): Type of product that is transferred.
+* **transferStatus**: 'Completed' | 'Failed' | 'InProgress' | 'NotStarted' | string (ReadOnly): Transfer status.
+
 ## Document
 ### Properties
 * **documentNumbers**: string[] (ReadOnly): Document numbers for an Enterprise Agreement invoice.
 * **kind**: 'CreditNote' | 'Invoice' | 'TaxReceipt' | 'VoidNote' | string (ReadOnly): The type of the document.
 * **url**: string (ReadOnly): Document URL.
+
+## DownloadUrl
+### Properties
+* **expiryTime**: string (ReadOnly): The time in UTC when the download URL will expire.
+* **url**: string (ReadOnly): The URL to the PDF file.
 
 ## Enrollment
 ### Properties
@@ -501,11 +608,25 @@
 * **marketplacesEnabled**: bool (ReadOnly): The policy that controls whether Azure marketplace purchases are allowed in the enrollment.
 * **reservedInstancesEnabled**: bool (ReadOnly): The policy that controls whether Azure reservation purchases are allowed in the enrollment.
 
+## Error
+### Properties
+* **errorCode**: string (ReadOnly): Error code.
+* **errorMessage**: string (ReadOnly): Error message.
+
 ## IndirectRelationshipInfo
 ### Properties
 * **billingAccountName**: string: The billing account name of the partner or the customer for an indirect motion.
 * **billingProfileName**: string: The billing profile name of the partner or the customer for an indirect motion.
 * **displayName**: string: The display name of the partner or customer for an indirect motion.
+
+## InitiateTransferProperties
+### Properties
+* **recipientEmailId**: string: The email ID of the recipient to whom the transfer request is sent.
+* **resellerId**: string: Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account.
+
+## InitiateTransferRequest
+### Properties
+* **properties**: [InitiateTransferProperties](#initiatetransferproperties): Request parameters to initiate transfer.
 
 ## InstructionProperties
 ### Properties
@@ -594,6 +715,18 @@
 * **reservationPurchases**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether Azure reservation purchases are allowed for a billing profile.
 * **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
 
+## Product
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProductProperties](#productproperties): The properties of a product.
+* **type**: string (ReadOnly): Resource type.
+
+## ProductDetails
+### Properties
+* **productId**: string: The ID of the product that is transferred.
+* **productType**: 'AzureReservation' | 'AzureSubscription' | string: Type of the product that is transferred.
+
 ## ProductProperties
 ### Properties
 * **availabilityId**: string (ReadOnly): The availability of the product.
@@ -619,8 +752,120 @@
 * **status**: 'Active' | 'AutoRenew' | 'Cancelled' | 'Disabled' | 'Expired' | 'Expiring' | 'Inactive' | 'PastDue' | string: The current status of the product.
 * **tenantId**: string (ReadOnly): The id of the tenant in which the product is used.
 
+## RecipientTransferDetails
+### Properties
+* **properties**: [RecipientTransferProperties](#recipienttransferproperties): Details of the transfer.
+
+## RecipientTransferProperties
+### Properties
+* **allowedProductType**: ('AzureReservation' | 'DevTestAzureSubscription' | 'StandardAzureSubscription' | string)[] (ReadOnly): Type of subscriptions that can be transferred.
+* **canceledBy**: string (ReadOnly): The email ID of the user who canceled the transfer request.
+* **creationTime**: string (ReadOnly): The time at which the transfer request was created.
+* **detailedTransferStatus**: [DetailedTransferStatus](#detailedtransferstatus)[] (ReadOnly): Detailed transfer status.
+* **expirationTime**: string (ReadOnly): The time at which the transfer request expires.
+* **initiatorCustomerType**: string (ReadOnly): The type of customer who sent the transfer request.
+* **initiatorEmailId**: string (ReadOnly): The email ID of the user who sent the transfer request.
+* **lastModifiedTime**: string (ReadOnly): The time at which the transfer request was last modified.
+* **recipientEmailId**: string (ReadOnly): The email ID of the user to whom the transfer request was sent.
+* **resellerId**: string (ReadOnly): Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account.
+* **resellerName**: string (ReadOnly): Optional name of the reseller for transfer requests that are sent from Microsoft Partner Agreement billing account.
+* **transferStatus**: 'Canceled' | 'Completed' | 'CompletedWithErrors' | 'Declined' | 'Failed' | 'InProgress' | 'Pending' | string (ReadOnly): Overall transfer status.
+
 ## Reseller
 ### Properties
 * **description**: string (ReadOnly): The name of the reseller.
 * **resellerId**: string (ReadOnly): The MPN ID of the reseller.
+
+## TransferBillingSubscriptionRequestProperties
+### Properties
+* **destinationBillingProfileId**: string: The destination billing profile id.
+* **destinationInvoiceSectionId**: string: The destination invoice section id.
+
+## TransferBillingSubscriptionResult
+### Properties
+* **properties**: [TransferBillingSubscriptionResultProperties](#transferbillingsubscriptionresultproperties): Properties of the transfer billing subscription operation result.
+
+## TransferBillingSubscriptionResultProperties
+### Properties
+* **billingSubscriptionName**: string: The destination billing subscription id.
+
+## TransferDetails
+### Properties
+* **properties**: [TransferProperties](#transferproperties): Details of the transfer.
+
+## TransferProductRequestProperties
+### Properties
+* **destinationBillingProfileId**: string: The destination billing profile id.
+* **destinationInvoiceSectionId**: string: The destination invoice section id.
+
+## TransferProperties
+### Properties
+* **billingAccountId**: string (ReadOnly): The ID of the billing account to which the product is billed after the transfer request is completed.
+* **billingProfileId**: string (ReadOnly): The ID of the billing profile to which the product will be billed after the transfer.
+* **canceledBy**: string (ReadOnly): The email ID of the user who canceled the transfer request.
+* **creationTime**: string (ReadOnly): The time at which the transfer request was created.
+* **detailedTransferStatus**: [DetailedTransferStatus](#detailedtransferstatus)[] (ReadOnly): Detailed transfer status.
+* **expirationTime**: string (ReadOnly): The time at which the transfer request expires.
+* **initiatorCustomerType**: string (ReadOnly): The type of customer who sent the transfer request.
+* **initiatorEmailId**: string (ReadOnly): The email ID of the user who sent the transfer request.
+* **invoiceSectionId**: string (ReadOnly): The ID of the invoice section to which the product is billed after the transfer request is completed.
+* **lastModifiedTime**: string (ReadOnly): The time at which the transfer request was last modified.
+* **recipientEmailId**: string (ReadOnly): The email ID of the user to whom the transfer request was sent.
+* **resellerId**: string (ReadOnly): Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account.
+* **resellerName**: string (ReadOnly): Optional name of the reseller for transfer requests that are sent from Microsoft Partner Agreement billing account.
+* **transferStatus**: 'Canceled' | 'Completed' | 'CompletedWithErrors' | 'Declined' | 'Failed' | 'InProgress' | 'Pending' | string (ReadOnly): Overall transfer status.
+
+## UpdateAutoRenewOperation
+### Properties
+* **properties**: [UpdateAutoRenewOperationProperties](#updateautorenewoperationproperties): Summary of update auto renew operation properties
+
+## UpdateAutoRenewOperationProperties
+### Properties
+* **endDate**: string: The date at which the product will be canceled.
+
+## UpdateAutoRenewRequest
+### Properties
+* **autoRenew**: 'false' | 'true' | string: The flag that determines the auto-renew settings for a product.
+
+## ValidateProductTransferEligibilityError
+### Properties
+* **code**: 'CrossBillingAccountNotAllowed' | 'DestinationBillingProfilePastDue' | 'InsufficientPermissionOnDestination' | 'InsufficientPermissionOnSource' | 'InvalidSource' | 'NotAvailableForDestinationMarket' | 'OneTimePurchaseProductTransferNotAllowed' | 'ProductNotActive' | 'ProductTypeNotSupported' | string: Error code for the product transfer validation.
+* **details**: string: Detailed error message explaining the error.
+* **message**: string: The error message.
+
+## ValidateProductTransferEligibilityResult
+### Properties
+* **errorDetails**: [ValidateProductTransferEligibilityError](#validateproducttransfereligibilityerror): Validation error details.
+* **isTransferEligible**: bool (ReadOnly): Specifies whether the transfer is eligible or not.
+
+## ValidateSubscriptionTransferEligibilityError
+### Properties
+* **code**: 'BillingAccountInactive' | 'CrossBillingAccountNotAllowed' | 'DestinationBillingProfileInactive' | 'DestinationBillingProfileNotFound' | 'DestinationBillingProfilePastDue' | 'DestinationInvoiceSectionInactive' | 'DestinationInvoiceSectionNotFound' | 'InsufficientPermissionOnDestination' | 'InsufficientPermissionOnSource' | 'InvalidDestination' | 'InvalidSource' | 'MarketplaceNotEnabledOnDestination' | 'NotAvailableForDestinationMarket' | 'ProductInactive' | 'ProductNotFound' | 'ProductTypeNotSupported' | 'SourceBillingProfilePastDue' | 'SourceInvoiceSectionInactive' | 'SubscriptionNotActive' | 'SubscriptionTypeNotSupported' | string: Error code for the product transfer validation.
+* **details**: string: Detailed error message explaining the error.
+* **message**: string: The error message.
+
+## ValidateSubscriptionTransferEligibilityResult
+### Properties
+* **errorDetails**: [ValidateSubscriptionTransferEligibilityError](#validatesubscriptiontransfereligibilityerror): Validation error details.
+* **isTransferEligible**: bool (ReadOnly): Specifies whether the subscription is eligible to be transferred.
+
+## ValidateTransferListResponse
+### Properties
+* **value**: [ValidateTransferResponse](#validatetransferresponse)[] (ReadOnly): The list of transfer validation results.
+
+## ValidateTransferResponse
+### Properties
+* **properties**: [ValidateTransferResponseProperties](#validatetransferresponseproperties): The properties of transfer validation response.
+
+## ValidateTransferResponseProperties
+### Properties
+* **productId**: string (ReadOnly): The product id for which this result applies.
+* **results**: [ValidationResultProperties](#validationresultproperties)[]: The array of validation results.
+* **status**: string (ReadOnly): The status of validation
+
+## ValidationResultProperties
+### Properties
+* **code**: string (ReadOnly): Result Code.
+* **level**: string (ReadOnly): Result Level.
+* **message**: string (ReadOnly): The validation message.
 

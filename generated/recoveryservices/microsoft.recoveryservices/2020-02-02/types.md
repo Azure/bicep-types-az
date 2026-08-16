@@ -51,6 +51,23 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.RecoveryServices/locations@2020-02-02)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2020-02-02
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string: Resource name for which availability needs to be checked
+* **type**: string: Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string
+* **nameAvailable**: bool
+* **reason**: string
+
 ## CmkKekIdentity
 ### Properties
 * **userAssignedIdentity**: string: The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned

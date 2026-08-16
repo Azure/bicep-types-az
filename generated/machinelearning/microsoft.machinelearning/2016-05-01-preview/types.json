@@ -1667,5 +1667,93 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveCommitmentAssociationRequest",
+    "properties": {
+      "destinationPlanId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM ID of the commitment plan to re-parent the commitment association to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitmentAssociation",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An entity tag used to enforce optimistic concurrency."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The properties of the commitment association resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "User-defined tags for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.MachineLearning/commitmentPlans/commitmentAssociations",
+    "apiVersion": "2016-05-01-preview",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/121"
+    }
   }
 ]

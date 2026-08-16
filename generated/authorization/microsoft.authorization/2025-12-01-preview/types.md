@@ -10,6 +10,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/attributeNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function action (Microsoft.Authorization/attributeNamespaces@2025-12-01-preview)
+* **Resource**: Microsoft.Authorization/attributeNamespaces
+* **ApiVersion**: 2025-12-01-preview
+* **Input**: [AttributeNamespaceCreateRequest](#attributenamespacecreaterequest)
+* **Output**: [AttributeNamespace](#attributenamespace)
+
+## AttributeNamespace
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## AttributeNamespaceCreateRequest
+### Properties
+* **namespaceOwnerPrincipalId**: string (Required): The principal ID of the namespace owner.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).

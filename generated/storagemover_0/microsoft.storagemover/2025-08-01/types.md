@@ -80,6 +80,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.StorageMover/storageMovers/projects/jobDefinitions/jobRuns' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function startJob (Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2025-08-01)
+* **Resource**: Microsoft.StorageMover/storageMovers/projects/jobDefinitions
+* **ApiVersion**: 2025-08-01
+* **Output**: [JobRunResourceId](#jobrunresourceid)
+
+## Function stopJob (Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2025-08-01)
+* **Resource**: Microsoft.StorageMover/storageMovers/projects/jobDefinitions
+* **ApiVersion**: 2025-08-01
+* **Output**: [JobRunResourceId](#jobrunresourceid)
+
 ## AgentProperties
 ### Properties
 * **agentStatus**: 'Executing' | 'Offline' | 'Online' | 'Registering' | 'RequiresAttention' | 'Unregistering' | string (ReadOnly): The Agent status.
@@ -226,6 +236,10 @@
 * **targetProperties**: any (ReadOnly): Copy of Endpoint resource's properties at time of Job Run creation.
 * **targetResourceId**: string (ReadOnly): Fully qualified resource id of of Endpoint. This id may no longer exist.
 * **warnings**: [JobRunWarning](#jobrunwarning)[] (ReadOnly): Warning details.
+
+## JobRunResourceId
+### Properties
+* **jobRunResourceId**: string (ReadOnly): Fully qualified resource id of the Job Run.
 
 ## JobRunWarning
 ### Properties

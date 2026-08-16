@@ -149,6 +149,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkMigrationNameAvailability (Microsoft.DBforPostgreSQL/flexibleServers@2025-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-08-01
+* **Input**: [MigrationNameAvailability](#migrationnameavailability)
+* **Output**: [MigrationNameAvailability](#migrationnameavailability)
+
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL/locations@2025-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2025-08-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [NameAvailabilityModel](#nameavailabilitymodel)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforPostgreSQL/locations@2025-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2025-08-01
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageModel](#virtualnetworksubnetusagemodel)
+
+## Function ltrPreBackup (Microsoft.DBforPostgreSQL/flexibleServers@2025-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-08-01
+* **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
+* **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
+
+## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2025-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-08-01
+* **Input**: [BackupsLongTermRetentionRequest](#backupslongtermretentionrequest)
+* **Output**: [BackupsLongTermRetentionResponse](#backupslongtermretentionresponse)
+
 ## AdminCredentials
 ### Properties
 * **sourceServerPassword**: string {sensitive} (Required, WriteOnly): Password for the user of the source server.
@@ -183,6 +213,32 @@
 * **backupType**: 'Customer On-Demand' | 'Full' | string: Type of backup.
 * **completedTime**: string: Time(ISO8601 format) at which the backup was completed.
 * **source**: string: Source of the backup.
+
+## BackupSettings
+### Properties
+* **backupName**: string (Required): Backup Name for the current backup
+
+## BackupsLongTermRetentionRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+* **targetDetails**: [BackupStoreDetails](#backupstoredetails) (Required): Backup store detail for target server.
+
+## BackupsLongTermRetentionResponse
+### Properties
+* **properties**: [LtrBackupOperationResponseProperties](#ltrbackupoperationresponseproperties): Long Term Retention Backup Operation Resource Properties
+
+## BackupsLongTermRetentionResponseProperties
+### Properties
+* **numberOfContainers**: int (Required): Number of storage containers the plugin will use during backup. More than one containers may be used for size limitations, parallelism, or redundancy etc.
+
+## BackupStoreDetails
+### Properties
+* **sasUriList**: (string {sensitive})[] (Required): List of SAS uri of storage containers where backup data is to be streamed/copied.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
 
 ## Cluster
 ### Properties
@@ -251,6 +307,11 @@
 * **storageMb**: int: Storage size (in MB) for database server.
 * **version**: string: Major version of PostgreSQL database engine.
 
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): Name of the delegated subnet for which IP addresses are in use
+* **usage**: int (ReadOnly): Number of IP addresses used by the delegated subnet
+
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): IP address defining the end of the range of addresses of a firewall rule. Must be expressed in IPv4 format.
@@ -275,12 +336,28 @@
 * **startTime**: string (Required): Start time of the operation.
 * **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | string (Required): Service-set extensible enum indicating the status of operation.
 
+## LtrPreBackupRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+
+## LtrPreBackupResponse
+### Properties
+* **properties**: [BackupsLongTermRetentionResponseProperties](#backupslongtermretentionresponseproperties) (Required): Additional Properties for the pre backup response
+
 ## MaintenanceWindow
 ### Properties
 * **customWindow**: string: Indicates whether custom window is enabled or disabled.
 * **dayOfWeek**: int: Day of the week to be used for maintenance window.
 * **startHour**: int: Start hour to be used for maintenance window.
 * **startMinute**: int: Start minute to be used for maintenance window.
+
+## MigrationNameAvailability
+### Properties
+* **message**: string (ReadOnly): Migration name availability message.
+* **name**: string (Required): Name of the migration to check for validity and availability.
+* **nameAvailable**: bool (ReadOnly): Indicates if the migration name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): Migration name availability reason.
+* **type**: string (Required): Type of resource.
 
 ## MigrationProperties
 ### Properties
@@ -332,6 +409,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DatabaseMigrationState](#databasemigrationstate)
+
+## NameAvailabilityModel
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **name**: string (ReadOnly): Name for which validity and availability was checked.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+* **type**: string (ReadOnly): Type of resource. It can be 'Microsoft.DBforPostgreSQL/flexibleServers' or 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints'.
 
 ## Network
 ### Properties
@@ -486,4 +571,14 @@
 * **endpointType**: 'ReadWrite' | string: Type of endpoint for the virtual endpoints.
 * **members**: string[]: List of servers that one of the virtual endpoints can refer to.
 * **virtualEndpoints**: string[] (ReadOnly): List of virtual endpoints for a server.
+
+## VirtualNetworkSubnetUsageModel
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly)
+* **location**: string (ReadOnly): location of the delegated subnet usage
+* **subscriptionId**: string (ReadOnly): subscriptionId of the delegated subnet usage
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkArmResourceId**: string: Virtual network resource id.
 

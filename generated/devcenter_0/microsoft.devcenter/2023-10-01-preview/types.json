@@ -5585,5 +5585,165 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncErrorDetails",
+    "properties": {
+      "operationError": {
+        "type": {
+          "$ref": "#/515"
+        },
+        "flags": 2,
+        "description": "Error information for the overall synchronization operation."
+      },
+      "conflicts": {
+        "type": {
+          "$ref": "#/517"
+        },
+        "flags": 2,
+        "description": "Catalog items that have conflicting names."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/520"
+        },
+        "flags": 2,
+        "description": "Errors that occured during synchronization."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogErrorDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An identifier for the error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message describing the error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogConflictError",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The path of the file that has a conflicting name."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the conflicting catalog item."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/516"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogSyncError",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The path of the file the error is associated with."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/519"
+        },
+        "flags": 2,
+        "description": "Errors associated with the file."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/515"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/518"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSyncErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/514"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogResourceValidationErrorDetails",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/523"
+        },
+        "flags": 2,
+        "description": "Errors associated with resources synchronized from the catalog."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/515"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/devboxdefinitions",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
   }
 ]

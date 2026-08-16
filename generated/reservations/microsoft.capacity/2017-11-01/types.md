@@ -25,10 +25,30 @@
 * **sku**: [SkuName](#skuname) (ReadOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function merge (Microsoft.Capacity/reservationOrders@2017-11-01)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2017-11-01
+* **Input**: [MergeRequest](#mergerequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function split (Microsoft.Capacity/reservationOrders@2017-11-01)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2017-11-01
+* **Input**: [SplitRequest](#splitrequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
 * **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' | string
+
+## MergeProperties
+### Properties
+* **sources**: string[]: Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## MergeRequest
+### Properties
+* **properties**: [MergeProperties](#mergeproperties)
 
 ## ReservationMergeProperties
 ### Properties
@@ -79,4 +99,13 @@
 ## SkuName
 ### Properties
 * **name**: string
+
+## SplitProperties
+### Properties
+* **quantities**: int[]: List of the quantities in the new reservations to create.
+* **reservationId**: string: Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## SplitRequest
+### Properties
+* **properties**: [SplitProperties](#splitproperties)
 

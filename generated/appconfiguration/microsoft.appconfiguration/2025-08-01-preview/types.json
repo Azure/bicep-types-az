@@ -2373,11 +2373,85 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "The resource type to check for name availability."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppConfiguration/configurationStores"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "The value indicating whether the resource name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration/locations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/186"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ApiKeyListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/193"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -2442,7 +2516,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/187"
+      "$ref": "#/192"
     }
   },
   {
@@ -2451,7 +2525,82 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/186"
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of the key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.AppConfiguration/configurationStores",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityPerimeterConfiguration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "Network security configuration properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/197"
     }
   }
 ]

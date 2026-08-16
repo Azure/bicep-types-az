@@ -15855,5 +15855,271 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceStatusResponse",
+    "properties": {
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The DMS instance agent version"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'"
+      },
+      "vmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The services virtual machine size, such as 'Standard_D2_v2'"
+      },
+      "supportedTaskTypes": {
+        "type": {
+          "$ref": "#/1153"
+        },
+        "flags": 0,
+        "description": "The list of supported task types"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkStatus",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1152"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The proposed resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type chain (e.g. virtualMachines/extensions)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "If true, the name is valid and available. If false, 'reason' describes why not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1159"
+        },
+        "flags": 0,
+        "description": "The reason why the name is not available, if nameAvailable is false"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The localized reason why the name is not available, if nameAvailable is false"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1157"
+      },
+      {
+        "$ref": "#/1158"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1156"
+    },
+    "input": {
+      "$ref": "#/1155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/locations",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1156"
+    },
+    "input": {
+      "$ref": "#/1155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectTask",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Custom task properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1162"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "command",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/serviceTasks",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1162"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileStorageInfo",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A URI that can be used to access the file content."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/1167"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileStorageInfoHeaders",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "read",
+    "resourceType": "Microsoft.DataMigration/services/projects/files",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readwrite",
+    "resourceType": "Microsoft.DataMigration/services/projects/files",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1166"
+    }
   }
 ]

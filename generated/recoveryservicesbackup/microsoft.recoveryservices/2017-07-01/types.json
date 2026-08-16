@@ -357,5 +357,657 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreValidateEnableBackupRequest",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "ProtectedItem Type- VM, SqlDataBase, AzureFileShare etc"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM Virtual Machine Id"
+      },
+      "vaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM id of the Recovery Services Vault"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Configuration of VM if any needs to be validated like OS type etc"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sharepoint"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Client"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreValidateEnableBackupResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "Validation Status"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Response error code"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Response error message"
+      },
+      "recommendation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommended action for user"
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the product specific container name. E.g. iaasvmcontainer;iaasvmcontainer;rgname;vmname. This is required\r\nfor portal"
+      },
+      "protectedItemName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the product specific ds name. E.g. vm;iaasvmcontainer;rgname;vmname. This is required for portal"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupPreValidateProtection",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupStatusRequest",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Container Type - VM, SQLPaaS, DPM, AzureFileShare..."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Entire ARM resource id of the resource"
+      },
+      "poLogicalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Protectable Item Logical Name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sharepoint"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Client"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupStatusResponse",
+    "properties": {
+      "protectionStatus": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Specifies whether the container is registered or not"
+      },
+      "vaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the arm resource id of the vault"
+      },
+      "fabricName": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Specifies the fabric name - Azure or AD"
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the product specific container name. E.g. iaasvmcontainer;iaasvmcontainer;csname;vmname."
+      },
+      "protectedItemName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the product specific ds name. E.g. vm;iaasvmcontainer;csname;vmname."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ErrorCode in case of intent failed"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ErrorMessage in case of intent failed."
+      },
+      "policyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the policy name which is used for protection"
+      },
+      "registrationStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Container registration status"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotProtected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Protecting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Protected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Azure"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupStatus",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/75"
+    },
+    "input": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FeatureSupportRequest",
+    "discriminator": "featureType",
+    "baseProperties": {},
+    "elements": {
+      "AzureBackupGoals": {
+        "$ref": "#/87"
+      },
+      "AzureVMResourceBackup": {
+        "$ref": "#/89"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupGoalFeatureSupportRequest",
+    "properties": {
+      "featureType": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "backup support feature type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupGoals"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureVMResourceFeatureSupportRequest",
+    "properties": {
+      "vmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Size of the resource: VM size(A/D series etc) in case of IaasVM"
+      },
+      "vmSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SKUs (Premium/Managed etc) in case of IaasVM"
+      },
+      "featureType": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 1,
+        "description": "backup support feature type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureVMResourceBackup"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureVMResourceFeatureSupportResponse",
+    "properties": {
+      "supportStatus": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Support status of feature"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Supported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultOFF"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupValidateFeatures",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/91"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
   }
 ]

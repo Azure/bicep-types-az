@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/webAppAssessments/webAppServicePlans' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/webAppAssessments@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/webAppAssessments
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
 ## AppSvcContainerSettings
 ### Properties
 * **isolationRequired**: bool (Required): Gets or sets the isolation required.
@@ -139,6 +145,11 @@
 * **numberOfMachines**: int (Required): Gets or sets the number of machines.
 * **numberOfServers**: int (Required): Gets or sets the number of servers.
 * **numberOfWebApps**: int (Required): Gets or sets the number of web apps.
+
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
 
 ## Linkages
 ### Properties

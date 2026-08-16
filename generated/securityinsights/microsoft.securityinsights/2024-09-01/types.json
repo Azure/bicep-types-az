@@ -12259,5 +12259,4465 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentAlertList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1034"
+        },
+        "flags": 1,
+        "description": "Array of incident alerts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlert",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/952"
+        },
+        "flags": 0,
+        "description": "SecurityAlert entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1033"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertProperties",
+    "properties": {
+      "alertDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the alert."
+      },
+      "alertType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type name of the alert."
+      },
+      "compromisedEntity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Display name of the main entity being reported on."
+      },
+      "confidenceLevel": {
+        "type": {
+          "$ref": "#/956"
+        },
+        "flags": 2,
+        "description": "The confidence level of this alert."
+      },
+      "confidenceReasons": {
+        "type": {
+          "$ref": "#/958"
+        },
+        "flags": 2,
+        "description": "The confidence reasons"
+      },
+      "confidenceScore": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The confidence score of the alert."
+      },
+      "confidenceScoreStatus": {
+        "type": {
+          "$ref": "#/963"
+        },
+        "flags": 2,
+        "description": "The confidence score calculation status, i.e. indicating if score calculation is pending for this alert, not applicable or final."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alert description."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The impact end time of the alert (the time of the last event contributing to the alert)."
+      },
+      "intent": {
+        "type": {
+          "$ref": "#/978"
+        },
+        "flags": 2,
+        "description": "Holds the alert intent stage(s) mapping for this alert."
+      },
+      "providerAlertId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of the alert inside the product which generated the alert."
+      },
+      "processingEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the alert was made available for consumption."
+      },
+      "productComponentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of a component inside the product which generated the alert."
+      },
+      "productName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the product which published this alert."
+      },
+      "productVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of the product generating the alert."
+      },
+      "remediationSteps": {
+        "type": {
+          "$ref": "#/979"
+        },
+        "flags": 2,
+        "description": "Manual action items to take to remediate the alert."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/984"
+        },
+        "flags": 0,
+        "description": "The severity of the alert"
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The impact start time of the alert (the time of the first event contributing to the alert)."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/990"
+        },
+        "flags": 2,
+        "description": "The lifecycle status of the alert."
+      },
+      "systemAlertId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Holds the product identifier of the alert for the product."
+      },
+      "tactics": {
+        "type": {
+          "$ref": "#/1009"
+        },
+        "flags": 2,
+        "description": "The tactics of the alert"
+      },
+      "timeGenerated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the alert was generated."
+      },
+      "vendorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the vendor that raise the alert."
+      },
+      "alertLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The uri link of the alert."
+      },
+      "resourceIdentifiers": {
+        "type": {
+          "$ref": "#/1010"
+        },
+        "flags": 2,
+        "description": "The list of resource identifiers of the alert."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1011"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/953"
+      },
+      {
+        "$ref": "#/954"
+      },
+      {
+        "$ref": "#/955"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertPropertiesConfidenceReasonsItem",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason's description"
+      },
+      "reasonType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type (category) of the reason"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/957"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProcess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotFinal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Final"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/959"
+      },
+      {
+        "$ref": "#/960"
+      },
+      {
+        "$ref": "#/961"
+      },
+      {
+        "$ref": "#/962"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Probing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exploitation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivilegeEscalation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefenseEvasion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CredentialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LateralMovement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Execution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Collection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exfiltration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommandAndControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Impact"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/964"
+      },
+      {
+        "$ref": "#/965"
+      },
+      {
+        "$ref": "#/966"
+      },
+      {
+        "$ref": "#/967"
+      },
+      {
+        "$ref": "#/968"
+      },
+      {
+        "$ref": "#/969"
+      },
+      {
+        "$ref": "#/970"
+      },
+      {
+        "$ref": "#/971"
+      },
+      {
+        "$ref": "#/972"
+      },
+      {
+        "$ref": "#/973"
+      },
+      {
+        "$ref": "#/974"
+      },
+      {
+        "$ref": "#/975"
+      },
+      {
+        "$ref": "#/976"
+      },
+      {
+        "$ref": "#/977"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/980"
+      },
+      {
+        "$ref": "#/981"
+      },
+      {
+        "$ref": "#/982"
+      },
+      {
+        "$ref": "#/983"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dismissed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/985"
+      },
+      {
+        "$ref": "#/986"
+      },
+      {
+        "$ref": "#/987"
+      },
+      {
+        "$ref": "#/988"
+      },
+      {
+        "$ref": "#/989"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reconnaissance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceDevelopment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Execution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivilegeEscalation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefenseEvasion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CredentialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LateralMovement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Collection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exfiltration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommandAndControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Impact"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreAttack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImpairProcessControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InhibitResponseFunction"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/991"
+      },
+      {
+        "$ref": "#/992"
+      },
+      {
+        "$ref": "#/993"
+      },
+      {
+        "$ref": "#/994"
+      },
+      {
+        "$ref": "#/995"
+      },
+      {
+        "$ref": "#/996"
+      },
+      {
+        "$ref": "#/997"
+      },
+      {
+        "$ref": "#/998"
+      },
+      {
+        "$ref": "#/999"
+      },
+      {
+        "$ref": "#/1000"
+      },
+      {
+        "$ref": "#/1001"
+      },
+      {
+        "$ref": "#/1002"
+      },
+      {
+        "$ref": "#/1003"
+      },
+      {
+        "$ref": "#/1004"
+      },
+      {
+        "$ref": "#/1005"
+      },
+      {
+        "$ref": "#/1006"
+      },
+      {
+        "$ref": "#/1007"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1008"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1012"
+      },
+      {
+        "$ref": "#/1013"
+      },
+      {
+        "$ref": "#/1014"
+      },
+      {
+        "$ref": "#/1015"
+      },
+      {
+        "$ref": "#/1016"
+      },
+      {
+        "$ref": "#/1017"
+      },
+      {
+        "$ref": "#/1018"
+      },
+      {
+        "$ref": "#/1019"
+      },
+      {
+        "$ref": "#/1020"
+      },
+      {
+        "$ref": "#/1021"
+      },
+      {
+        "$ref": "#/1022"
+      },
+      {
+        "$ref": "#/1023"
+      },
+      {
+        "$ref": "#/1024"
+      },
+      {
+        "$ref": "#/1025"
+      },
+      {
+        "$ref": "#/1026"
+      },
+      {
+        "$ref": "#/1027"
+      },
+      {
+        "$ref": "#/1028"
+      },
+      {
+        "$ref": "#/1029"
+      },
+      {
+        "$ref": "#/1030"
+      },
+      {
+        "$ref": "#/1031"
+      },
+      {
+        "$ref": "#/1032"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/951"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "alerts",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/950"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentBookmarkList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1063"
+        },
+        "flags": 1,
+        "description": "Array of incident bookmarks."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HuntingBookmark",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1038"
+        },
+        "flags": 0,
+        "description": "HuntingBookmark entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1062"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HuntingBookmarkProperties",
+    "properties": {
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the bookmark was created"
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/401"
+        },
+        "flags": 0,
+        "description": "Describes a user that created the bookmark"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The display name of the bookmark"
+      },
+      "eventTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the event"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/1039"
+        },
+        "flags": 0,
+        "description": "List of labels relevant to this bookmark"
+      },
+      "notes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The notes of the bookmark"
+      },
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The query of the bookmark."
+      },
+      "queryResult": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The query result of the bookmark."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time the bookmark was updated"
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/401"
+        },
+        "flags": 0,
+        "description": "Describes a user that updated the bookmark"
+      },
+      "incidentInfo": {
+        "type": {
+          "$ref": "#/403"
+        },
+        "flags": 0,
+        "description": "Describes an incident that relates to bookmark"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1040"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
+      },
+      {
+        "$ref": "#/1044"
+      },
+      {
+        "$ref": "#/1045"
+      },
+      {
+        "$ref": "#/1046"
+      },
+      {
+        "$ref": "#/1047"
+      },
+      {
+        "$ref": "#/1048"
+      },
+      {
+        "$ref": "#/1049"
+      },
+      {
+        "$ref": "#/1050"
+      },
+      {
+        "$ref": "#/1051"
+      },
+      {
+        "$ref": "#/1052"
+      },
+      {
+        "$ref": "#/1053"
+      },
+      {
+        "$ref": "#/1054"
+      },
+      {
+        "$ref": "#/1055"
+      },
+      {
+        "$ref": "#/1056"
+      },
+      {
+        "$ref": "#/1057"
+      },
+      {
+        "$ref": "#/1058"
+      },
+      {
+        "$ref": "#/1059"
+      },
+      {
+        "$ref": "#/1060"
+      },
+      {
+        "$ref": "#/1061"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1037"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bookmarks",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/1036"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentEntitiesResponse",
+    "properties": {
+      "entities": {
+        "type": {
+          "$ref": "#/1219"
+        },
+        "flags": 0,
+        "description": "Array of the incident related entities."
+      },
+      "metaData": {
+        "type": {
+          "$ref": "#/1243"
+        },
+        "flags": 0,
+        "description": "The metadata from the incident related entities results."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Entity",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    },
+    "elements": {
+      "Account": {
+        "$ref": "#/1067"
+      },
+      "AzureResource": {
+        "$ref": "#/1071"
+      },
+      "Bookmark": {
+        "$ref": "#/1075"
+      },
+      "CloudApplication": {
+        "$ref": "#/1077"
+      },
+      "DnsResolution": {
+        "$ref": "#/1081"
+      },
+      "File": {
+        "$ref": "#/1086"
+      },
+      "FileHash": {
+        "$ref": "#/1091"
+      },
+      "Host": {
+        "$ref": "#/1101"
+      },
+      "IoTDevice": {
+        "$ref": "#/1111"
+      },
+      "Ip": {
+        "$ref": "#/1118"
+      },
+      "MailCluster": {
+        "$ref": "#/1124"
+      },
+      "MailMessage": {
+        "$ref": "#/1130"
+      },
+      "Mailbox": {
+        "$ref": "#/1159"
+      },
+      "Malware": {
+        "$ref": "#/1163"
+      },
+      "Process": {
+        "$ref": "#/1169"
+      },
+      "RegistryKey": {
+        "$ref": "#/1177"
+      },
+      "RegistryValue": {
+        "$ref": "#/1192"
+      },
+      "SecurityAlert": {
+        "$ref": "#/1205"
+      },
+      "SecurityGroup": {
+        "$ref": "#/1207"
+      },
+      "SubmissionMail": {
+        "$ref": "#/1211"
+      },
+      "Url": {
+        "$ref": "#/1215"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1068"
+        },
+        "flags": 0,
+        "description": "Account entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1070"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountEntityProperties",
+    "properties": {
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory tenant id."
+      },
+      "aadUserId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory user id."
+      },
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the account. This field should hold only the name without any domain added to it, i.e. administrator."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the account."
+      },
+      "hostEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Host entity id that contains the account in case it is a local account (not domain joined)"
+      },
+      "isDomainJoined": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Determines whether this is a domain account."
+      },
+      "ntDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The NetBIOS domain name as it appears in the alert format - domain\\username. Examples: NT AUTHORITY."
+      },
+      "objectGuid": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory."
+      },
+      "puid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory Passport User ID."
+      },
+      "sid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account security identifier, e.g. S-1-5-18."
+      },
+      "upnSuffix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user principal name suffix for the account, in some cases it is also the domain name. Examples: contoso.com."
+      },
+      "dnsDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The fully qualified domain DNS name."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1069"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1072"
+        },
+        "flags": 0,
+        "description": "AzureResource entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1074"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceEntityProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The azure resource id of the resource"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The subscription id of the resource"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1073"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HuntingBookmark",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1038"
+        },
+        "flags": 0,
+        "description": "HuntingBookmark entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1076"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudApplicationEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1078"
+        },
+        "flags": 0,
+        "description": "CloudApplication entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1080"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudApplicationEntityProperties",
+    "properties": {
+      "appId": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The technical identifier of the application."
+      },
+      "appName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the related cloud application."
+      },
+      "instanceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user defined instance name of the cloud application. It is often used to distinguish between several applications of the same type that a customer has."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1079"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DnsEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1082"
+        },
+        "flags": 0,
+        "description": "Dns entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1085"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DnsEntityProperties",
+    "properties": {
+      "dnsServerIpEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An ip entity id for the dns server resolving the request"
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the dns record associated with the alert"
+      },
+      "hostIpAddressEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An ip entity id for the dns request client"
+      },
+      "ipAddressEntityIds": {
+        "type": {
+          "$ref": "#/1083"
+        },
+        "flags": 2,
+        "description": "Ip entity identifiers for the resolved ip address."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1084"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1087"
+        },
+        "flags": 0,
+        "description": "File entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1090"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileEntityProperties",
+    "properties": {
+      "directory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The full path to the file."
+      },
+      "fileHashEntityIds": {
+        "type": {
+          "$ref": "#/1088"
+        },
+        "flags": 2,
+        "description": "The file hash entity identifiers associated with this file"
+      },
+      "fileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The file name without path (some alerts might not include path)."
+      },
+      "hostEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Host entity id which the file belongs to"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1089"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileHashEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1092"
+        },
+        "flags": 0,
+        "description": "FileHash entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1100"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileHashEntityProperties",
+    "properties": {
+      "algorithm": {
+        "type": {
+          "$ref": "#/1098"
+        },
+        "flags": 2,
+        "description": "The hash algorithm type."
+      },
+      "hashValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The file hash value."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1099"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MD5"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SHA256AC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1093"
+      },
+      {
+        "$ref": "#/1094"
+      },
+      {
+        "$ref": "#/1095"
+      },
+      {
+        "$ref": "#/1096"
+      },
+      {
+        "$ref": "#/1097"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1102"
+        },
+        "flags": 0,
+        "description": "Host entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1110"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostEntityProperties",
+    "properties": {
+      "azureID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The azure resource id of the VM."
+      },
+      "dnsDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The DNS domain that this host belongs to. Should contain the compete DNS suffix for the domain"
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hostname without the domain suffix."
+      },
+      "isDomainJoined": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Determines whether this host belongs to a domain."
+      },
+      "netBiosName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The host name (pre-windows2000)."
+      },
+      "ntDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The NT domain that this host belongs to."
+      },
+      "omsAgentID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The OMS agent id, if the host has OMS agent installed."
+      },
+      "osFamily": {
+        "type": {
+          "$ref": "#/1108"
+        },
+        "flags": 0,
+        "description": "The operating system type."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A free text representation of the operating system. This field is meant to hold specific versions the are more fine grained than OSFamily or future values not supported by OSFamily enumeration"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1109"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Android"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IOS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1103"
+      },
+      {
+        "$ref": "#/1104"
+      },
+      {
+        "$ref": "#/1105"
+      },
+      {
+        "$ref": "#/1106"
+      },
+      {
+        "$ref": "#/1107"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTDeviceEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1112"
+        },
+        "flags": 0,
+        "description": "IoTDevice entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1117"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTDeviceEntityProperties",
+    "properties": {
+      "deviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the IoT Device in the IoT Hub"
+      },
+      "deviceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The friendly name of the device"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The source of the device"
+      },
+      "iotSecurityAgentId": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The ID of the security agent running on the device"
+      },
+      "deviceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the device"
+      },
+      "vendor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The vendor of the device"
+      },
+      "edgeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the edge device"
+      },
+      "macAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The MAC address of the device"
+      },
+      "model": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The model of the device"
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The serial number of the device"
+      },
+      "firmwareVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The firmware version of the device"
+      },
+      "operatingSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The operating system of the device"
+      },
+      "iotHubEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The AzureResource entity id of the IoT Hub"
+      },
+      "hostEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Host entity id of this device"
+      },
+      "ipAddressEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IP entity if of this device"
+      },
+      "threatIntelligence": {
+        "type": {
+          "$ref": "#/1114"
+        },
+        "flags": 2,
+        "description": "A list of TI contexts attached to the IoTDevice entity."
+      },
+      "protocols": {
+        "type": {
+          "$ref": "#/1115"
+        },
+        "flags": 2,
+        "description": "A list of protocols of the IoTDevice entity."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1116"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligence",
+    "properties": {
+      "confidence": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "Confidence (must be between 0 and 1)"
+      },
+      "providerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the provider from whom this Threat Intelligence information was received"
+      },
+      "reportLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Report link"
+      },
+      "threatDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Threat description (free text)"
+      },
+      "threatName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Threat name (e.g. \"Jedobot malware\")"
+      },
+      "threatType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Threat type (e.g. \"Botnet\")"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1113"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1119"
+        },
+        "flags": 0,
+        "description": "Ip entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1123"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpEntityProperties",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IP address as string, e.g. 127.0.0.1 (either in Ipv4 or Ipv6)"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1120"
+        },
+        "flags": 2,
+        "description": "The geo-location context attached to the ip entity"
+      },
+      "threatIntelligence": {
+        "type": {
+          "$ref": "#/1121"
+        },
+        "flags": 2,
+        "description": "A list of TI contexts attached to the ip entity."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1122"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GeoLocation",
+    "properties": {
+      "asn": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "Autonomous System Number"
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "City name"
+      },
+      "countryCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The country code according to ISO 3166 format"
+      },
+      "countryName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Country name according to ISO 3166 Alpha 2: the lowercase of the English Short Name"
+      },
+      "latitude": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The longitude of the identified location, expressed as a floating point number with range of -180 to 180, with positive numbers representing East and negative numbers representing West. Latitude and longitude are derived from the city or postal code."
+      },
+      "longitude": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The latitude of the identified location, expressed as a floating point number with range of - 90 to 90, with positive numbers representing North and negative numbers representing South. Latitude and longitude are derived from the city or postal code."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State name"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailClusterEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1125"
+        },
+        "flags": 0,
+        "description": "Mail cluster entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1129"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailClusterEntityProperties",
+    "properties": {
+      "networkMessageIds": {
+        "type": {
+          "$ref": "#/1126"
+        },
+        "flags": 2,
+        "description": "The mail message IDs that are part of the mail cluster"
+      },
+      "countByDeliveryStatus": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 2,
+        "description": "Count of mail messages by DeliveryStatus string representation"
+      },
+      "countByThreatType": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 2,
+        "description": "Count of mail messages by ThreatType string representation"
+      },
+      "countByProtectionStatus": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 2,
+        "description": "Count of mail messages by ProtectionStatus string representation"
+      },
+      "threats": {
+        "type": {
+          "$ref": "#/1127"
+        },
+        "flags": 2,
+        "description": "The threats of mail messages that are part of the mail cluster"
+      },
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The query that was used to identify the messages of the mail cluster"
+      },
+      "queryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The query time"
+      },
+      "mailCount": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The number of mail messages that are part of the mail cluster"
+      },
+      "isVolumeAnomaly": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Is this a volume anomaly mail cluster"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The source of the mail cluster (default is 'O365 ATP')"
+      },
+      "clusterSourceIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The id of the cluster source"
+      },
+      "clusterSourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the cluster source"
+      },
+      "clusterQueryStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cluster query start time"
+      },
+      "clusterQueryEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cluster query end time"
+      },
+      "clusterGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cluster group"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1128"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailMessageEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1131"
+        },
+        "flags": 0,
+        "description": "Mail message entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1158"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailMessageEntityProperties",
+    "properties": {
+      "fileEntityIds": {
+        "type": {
+          "$ref": "#/1132"
+        },
+        "flags": 2,
+        "description": "The File entity ids of this mail message's attachments"
+      },
+      "recipient": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The recipient of this mail message. Note that in case of multiple recipients the mail message is forked and each copy has one recipient"
+      },
+      "urls": {
+        "type": {
+          "$ref": "#/1133"
+        },
+        "flags": 2,
+        "description": "The Urls contained in this mail message"
+      },
+      "threats": {
+        "type": {
+          "$ref": "#/1134"
+        },
+        "flags": 2,
+        "description": "The threats of this mail message"
+      },
+      "p1Sender": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p1 sender's email address"
+      },
+      "p1SenderDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p1 sender's display name"
+      },
+      "p1SenderDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p1 sender's domain"
+      },
+      "senderIP": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sender's IP address"
+      },
+      "p2Sender": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p2 sender's email address"
+      },
+      "p2SenderDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p2 sender's display name"
+      },
+      "p2SenderDomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The p2 sender's domain"
+      },
+      "receiveDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The receive date of this message"
+      },
+      "networkMessageId": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The network message id of this mail message"
+      },
+      "internetMessageId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The internet message id of this mail message"
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The subject of this mail message"
+      },
+      "language": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The language of this mail message"
+      },
+      "threatDetectionMethods": {
+        "type": {
+          "$ref": "#/1135"
+        },
+        "flags": 2,
+        "description": "The threat detection methods"
+      },
+      "bodyFingerprintBin1": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The bodyFingerprintBin1"
+      },
+      "bodyFingerprintBin2": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The bodyFingerprintBin2"
+      },
+      "bodyFingerprintBin3": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The bodyFingerprintBin3"
+      },
+      "bodyFingerprintBin4": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The bodyFingerprintBin4"
+      },
+      "bodyFingerprintBin5": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The bodyFingerprintBin5"
+      },
+      "antispamDirection": {
+        "type": {
+          "$ref": "#/1140"
+        },
+        "flags": 0,
+        "description": "The directionality of this mail message"
+      },
+      "deliveryAction": {
+        "type": {
+          "$ref": "#/1146"
+        },
+        "flags": 0,
+        "description": "The delivery action of this mail message like Delivered, Blocked, Replaced etc"
+      },
+      "deliveryLocation": {
+        "type": {
+          "$ref": "#/1156"
+        },
+        "flags": 0,
+        "description": "The delivery location of this mail message like Inbox, JunkFolder etc"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1157"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Intraorg"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1136"
+      },
+      {
+        "$ref": "#/1137"
+      },
+      {
+        "$ref": "#/1138"
+      },
+      {
+        "$ref": "#/1139"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeliveredAsSpam"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delivered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Replaced"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1141"
+      },
+      {
+        "$ref": "#/1142"
+      },
+      {
+        "$ref": "#/1143"
+      },
+      {
+        "$ref": "#/1144"
+      },
+      {
+        "$ref": "#/1145"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JunkFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletedFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Quarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Forwarded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1147"
+      },
+      {
+        "$ref": "#/1148"
+      },
+      {
+        "$ref": "#/1149"
+      },
+      {
+        "$ref": "#/1150"
+      },
+      {
+        "$ref": "#/1151"
+      },
+      {
+        "$ref": "#/1152"
+      },
+      {
+        "$ref": "#/1153"
+      },
+      {
+        "$ref": "#/1154"
+      },
+      {
+        "$ref": "#/1155"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailboxEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1160"
+        },
+        "flags": 0,
+        "description": "Mailbox entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1162"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MailboxEntityProperties",
+    "properties": {
+      "mailboxPrimaryAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The mailbox's primary address"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The mailbox's display name"
+      },
+      "upn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The mailbox's UPN"
+      },
+      "externalDirectoryObjectId": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The AzureAD identifier of mailbox. Similar to AadUserId in account entity but this property is specific to mailbox object on office side"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1161"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MalwareEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1164"
+        },
+        "flags": 0,
+        "description": "File entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1168"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MalwareEntityProperties",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The malware category by the vendor, e.g. Trojan"
+      },
+      "fileEntityIds": {
+        "type": {
+          "$ref": "#/1165"
+        },
+        "flags": 2,
+        "description": "List of linked file entity identifiers on which the malware was found"
+      },
+      "malwareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The malware name by the vendor, e.g. Win32/Toga!rfn"
+      },
+      "processEntityIds": {
+        "type": {
+          "$ref": "#/1166"
+        },
+        "flags": 2,
+        "description": "List of linked process entity identifiers on which the malware was found."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1167"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProcessEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1170"
+        },
+        "flags": 0,
+        "description": "Process entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1176"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProcessEntityProperties",
+    "properties": {
+      "accountEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account entity id running the processes."
+      },
+      "commandLine": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The command line used to create the process"
+      },
+      "creationTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the process started to run"
+      },
+      "elevationToken": {
+        "type": {
+          "$ref": "#/1174"
+        },
+        "flags": 0,
+        "description": "The elevation token associated with the process."
+      },
+      "hostEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The host entity id on which the process was running"
+      },
+      "hostLogonSessionEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The session entity id in which the process was running"
+      },
+      "imageFileEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Image file entity id"
+      },
+      "parentProcessEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The parent process entity id."
+      },
+      "processId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The process ID"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1175"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Limited"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1171"
+      },
+      {
+        "$ref": "#/1172"
+      },
+      {
+        "$ref": "#/1173"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryKeyEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1178"
+        },
+        "flags": 0,
+        "description": "RegistryKey entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1191"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryKeyEntityProperties",
+    "properties": {
+      "hive": {
+        "type": {
+          "$ref": "#/1189"
+        },
+        "flags": 2,
+        "description": "the hive that holds the registry key."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The registry key path."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1190"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_LOCAL_MACHINE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_CLASSES_ROOT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_CURRENT_CONFIG"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_USERS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_CURRENT_USER_LOCAL_SETTINGS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_PERFORMANCE_DATA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_PERFORMANCE_NLSTEXT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_PERFORMANCE_TEXT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_A"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HKEY_CURRENT_USER"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1179"
+      },
+      {
+        "$ref": "#/1180"
+      },
+      {
+        "$ref": "#/1181"
+      },
+      {
+        "$ref": "#/1182"
+      },
+      {
+        "$ref": "#/1183"
+      },
+      {
+        "$ref": "#/1184"
+      },
+      {
+        "$ref": "#/1185"
+      },
+      {
+        "$ref": "#/1186"
+      },
+      {
+        "$ref": "#/1187"
+      },
+      {
+        "$ref": "#/1188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryValueEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1193"
+        },
+        "flags": 0,
+        "description": "RegistryKey entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1204"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryValueEntityProperties",
+    "properties": {
+      "keyEntityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The registry key entity id."
+      },
+      "valueData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "String formatted representation of the value data."
+      },
+      "valueName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The registry value name."
+      },
+      "valueType": {
+        "type": {
+          "$ref": "#/1202"
+        },
+        "flags": 2,
+        "description": "Specifies the data types to use when storing values in the registry, or identifies the data type of a value in the registry."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1203"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "String"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExpandString"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Binary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DWord"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiString"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "QWord"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1194"
+      },
+      {
+        "$ref": "#/1195"
+      },
+      {
+        "$ref": "#/1196"
+      },
+      {
+        "$ref": "#/1197"
+      },
+      {
+        "$ref": "#/1198"
+      },
+      {
+        "$ref": "#/1199"
+      },
+      {
+        "$ref": "#/1200"
+      },
+      {
+        "$ref": "#/1201"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlert",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/952"
+        },
+        "flags": 0,
+        "description": "SecurityAlert entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1206"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityGroupEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1208"
+        },
+        "flags": 0,
+        "description": "SecurityGroup entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1210"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityGroupEntityProperties",
+    "properties": {
+      "distinguishedName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The group distinguished name"
+      },
+      "objectGuid": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "A single-value attribute that is the unique identifier for the object, assigned by active directory."
+      },
+      "sid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SID attribute is a single-value attribute that specifies the security identifier (SID) of the group"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1209"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubmissionMailEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1212"
+        },
+        "flags": 0,
+        "description": "Submission mail entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1214"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubmissionMailEntityProperties",
+    "properties": {
+      "networkMessageId": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The network message id of email to which submission belongs"
+      },
+      "submissionId": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 2,
+        "description": "The submission id"
+      },
+      "submitter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The submitter"
+      },
+      "submissionDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The submission date"
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Time stamp when the message is received (Mail)"
+      },
+      "recipient": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The recipient of the mail"
+      },
+      "sender": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sender of the mail"
+      },
+      "senderIp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sender's IP"
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The subject of submission mail"
+      },
+      "reportType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The submission type for the given instance. This maps to Junk, Phish, Malware or NotJunk."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1213"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlEntity",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1216"
+        },
+        "flags": 0,
+        "description": "Url entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1218"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlEntityProperties",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A full URL the entity points to"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/1217"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1066"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentEntitiesResultsMetadata",
+    "properties": {
+      "count": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 1,
+        "description": "Total number of aggregations of the given kind in the incident related entities result."
+      },
+      "entityKind": {
+        "type": {
+          "$ref": "#/1242"
+        },
+        "flags": 1,
+        "description": "The kind of the aggregated entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Host"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudApplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsResolution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileHash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Malware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Process"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistryValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Url"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IoTDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bookmark"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MailMessage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mailbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmissionMail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1221"
+      },
+      {
+        "$ref": "#/1222"
+      },
+      {
+        "$ref": "#/1223"
+      },
+      {
+        "$ref": "#/1224"
+      },
+      {
+        "$ref": "#/1225"
+      },
+      {
+        "$ref": "#/1226"
+      },
+      {
+        "$ref": "#/1227"
+      },
+      {
+        "$ref": "#/1228"
+      },
+      {
+        "$ref": "#/1229"
+      },
+      {
+        "$ref": "#/1230"
+      },
+      {
+        "$ref": "#/1231"
+      },
+      {
+        "$ref": "#/1232"
+      },
+      {
+        "$ref": "#/1233"
+      },
+      {
+        "$ref": "#/1234"
+      },
+      {
+        "$ref": "#/1235"
+      },
+      {
+        "$ref": "#/1236"
+      },
+      {
+        "$ref": "#/1237"
+      },
+      {
+        "$ref": "#/1238"
+      },
+      {
+        "$ref": "#/1239"
+      },
+      {
+        "$ref": "#/1240"
+      },
+      {
+        "$ref": "#/1241"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1220"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "entities",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/1065"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceIndicatorModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/749"
+        },
+        "flags": 0,
+        "description": "Threat Intelligence Entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1247"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "indicator"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1246"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ThreatIntelligenceInformation",
+    "discriminator": "kind",
+    "baseProperties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    },
+    "elements": {
+      "indicator": {
+        "$ref": "#/1249"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceIndicatorModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/749"
+        },
+        "flags": 0,
+        "description": "Threat Intelligence Entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1250"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "indicator"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createIndicator",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/1248"
+    },
+    "input": {
+      "$ref": "#/1245"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceFilteringCriteria",
+    "properties": {
+      "pageSize": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Page size"
+      },
+      "minConfidence": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Minimum confidence."
+      },
+      "maxConfidence": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Maximum confidence."
+      },
+      "minValidUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time for ValidUntil filter."
+      },
+      "maxValidUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time for ValidUntil filter."
+      },
+      "includeDisabled": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Parameter to include/exclude disabled indicators."
+      },
+      "sortBy": {
+        "type": {
+          "$ref": "#/1258"
+        },
+        "flags": 0,
+        "description": "Columns to sort by and sorting order"
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/1259"
+        },
+        "flags": 0,
+        "description": "Sources of threat intelligence indicators"
+      },
+      "patternTypes": {
+        "type": {
+          "$ref": "#/1260"
+        },
+        "flags": 0,
+        "description": "Pattern types"
+      },
+      "threatTypes": {
+        "type": {
+          "$ref": "#/1261"
+        },
+        "flags": 0,
+        "description": "Threat types of threat intelligence indicators"
+      },
+      "ids": {
+        "type": {
+          "$ref": "#/1262"
+        },
+        "flags": 0,
+        "description": "Ids of threat intelligence indicators"
+      },
+      "keywords": {
+        "type": {
+          "$ref": "#/1263"
+        },
+        "flags": 0,
+        "description": "Keywords for searching threat intelligence indicators"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Skip token."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceSortingCriteria",
+    "properties": {
+      "itemKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Column name"
+      },
+      "sortOrder": {
+        "type": {
+          "$ref": "#/1257"
+        },
+        "flags": 0,
+        "description": "Sorting order (ascending/descending/unsorted)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unsorted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ascending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "descending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1254"
+      },
+      {
+        "$ref": "#/1255"
+      },
+      {
+        "$ref": "#/1256"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1253"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceInformationList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URL to fetch the next set of information objects."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/1265"
+        },
+        "flags": 1,
+        "description": "Array of threat intelligence information objects."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1248"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryIndicators",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/1264"
+    },
+    "input": {
+      "$ref": "#/1252"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceAppendTags",
+    "properties": {
+      "threatIntelligenceTags": {
+        "type": {
+          "$ref": "#/1268"
+        },
+        "flags": 0,
+        "description": "List of tags to be appended."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "replaceTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/1248"
+    },
+    "input": {
+      "$ref": "#/1245"
+    }
   }
 ]

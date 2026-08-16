@@ -6756,6 +6756,408 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveRegistrationToken",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/89"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MsixImageURI",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URI to Image"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImageList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/501"
+        },
+        "flags": 1,
+        "description": "The ExpandMsixImage items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImage",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/498"
+        },
+        "flags": 0,
+        "description": "Detailed properties for ExpandMsixImage"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImageProperties",
+    "properties": {
+      "packageAlias": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Alias of MSIX Package."
+      },
+      "imagePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "VHD/CIM image path on Network Share."
+      },
+      "packageName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Name from appxmanifest.xml."
+      },
+      "packageFamilyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name."
+      },
+      "packageFullName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Full Name from appxmanifest.xml."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "User friendly Name to be displayed in the portal."
+      },
+      "packageRelativePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Relative Path to the package inside the image."
+      },
+      "isRegularRegistration": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Specifies how to register Package in feed."
+      },
+      "isActive": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Make this version of the package the active one across the hostpool."
+      },
+      "packageDependencies": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 0,
+        "description": "List of package dependencies."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package version found in the appxmanifest.xml."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Date Package was last updated, found in the appxmanifest.xml."
+      },
+      "packageApplications": {
+        "type": {
+          "$ref": "#/500"
+        },
+        "flags": 0,
+        "description": "List of package applications."
+      },
+      "certificateName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate name found in the appxmanifest.xml."
+      },
+      "certificateExpiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Date certificate expires, found in the appxmanifest.xml."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/497"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "expandMsixImage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/496"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportPackageInfoRequest",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URI to Image"
+      },
+      "packageArchitecture": {
+        "type": {
+          "$ref": "#/511"
+        },
+        "flags": 0,
+        "description": "Possible device architectures that an app attach package can be configured for"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ARM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ARM64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "x86"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "x64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Neutral"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "x86a64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ALL"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/506"
+      },
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/509"
+      },
+      {
+        "$ref": "#/510"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppAttachPackageList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/515"
+        },
+        "flags": 1,
+        "description": "The AppAttachPackage items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppAttachPackage",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Detailed properties for App Attach Package"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/514"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/513"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importAppAttachPackageInfo",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/512"
+    },
+    "input": {
+      "$ref": "#/503"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ScopedRegistrationTokenProperties",
     "properties": {
@@ -6777,7 +7179,27 @@
       "$ref": "#/490"
     },
     "input": {
-      "$ref": "#/494"
+      "$ref": "#/517"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SendMessage",
+    "properties": {
+      "messageTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Title of message."
+      },
+      "messageBody": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Body of message."
+      }
     }
   }
 ]

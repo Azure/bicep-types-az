@@ -74,6 +74,11 @@
 * **tags**: [WorkloadInstanceModelTags](#workloadinstancemodeltags): Gets or sets the resource tags.
 * **type**: 'Microsoft.Migrate/modernizeProjects/workloadInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getSecrets (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: [WorkloadDeploymentModel](#workloaddeploymentmodel)
+
 ## ACRProperties
 ### Properties
 * **registryName**: string: Gets or sets the azure container registry name.
@@ -697,6 +702,15 @@ managedIdentity.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## WorkloadDeploymentModel
+### Properties
+* **id**: string (ReadOnly): Gets or sets the Id of the resource.
+* **name**: string (ReadOnly): Gets or sets the name of the resource.
+* **properties**: [WorkloadDeploymentModelProperties](#workloaddeploymentmodelproperties): Workload deployment model properties.
+* **systemData**: [WorkloadDeploymentModelSystemData](#workloaddeploymentmodelsystemdata) (ReadOnly)
+* **tags**: [WorkloadDeploymentModelTags](#workloaddeploymentmodeltags): Gets or sets the resource tags.
+* **type**: string (ReadOnly): Gets or sets the type of the resource.
+
 ## WorkloadDeploymentModelCustomProperties
 * **Discriminator**: instanceType
 
@@ -753,6 +767,11 @@ managedIdentity.
 * **lastModifiedBy**: string: Gets or sets the identity that last modified the resource.
 * **lastModifiedByType**: string: Gets or sets the type of identity that last modified the resource: user, application,
 managedIdentity.
+
+## WorkloadDeploymentModelTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WorkloadDeploymentModelTags
 ### Properties

@@ -213,10 +213,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): User in DataBoxEdge Resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateCertificate (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-12-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-12-01
+* **Output**: [GenerateCertResponse](#generatecertresponse)
+
+## Function getExtendedInformation (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-12-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-12-01
+* **Output**: [DataBoxEdgeDeviceExtendedInfo](#databoxedgedeviceextendedinfo)
+
 ## Function listDCAccessCode (Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-12-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders
 * **ApiVersion**: 2020-12-01
 * **Output**: [DCAccessCode](#dcaccesscode)
+
+## Function updateExtendedInformation (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-12-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-12-01
+* **Input**: [DataBoxEdgeDeviceExtendedInfoPatch](#databoxedgedeviceextendedinfopatch)
+* **Output**: [DataBoxEdgeDeviceExtendedInfo](#databoxedgedeviceextendedinfo)
+
+## Function uploadCertificate (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-12-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-12-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: [UploadCertificateResponse](#uploadcertificateresponse)
 
 ## Address
 ### Properties
@@ -320,6 +342,33 @@
 * **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): DataFormat for Container
 * **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Details of the refresh job on this container.
 
+## DataBoxEdgeDeviceExtendedInfo
+### Properties
+* **id**: string (ReadOnly): The path ID that uniquely identifies the object.
+* **name**: string (ReadOnly): The object name.
+* **properties**: [DataBoxEdgeDeviceExtendedInfoProperties](#databoxedgedeviceextendedinfoproperties): The extended info properties.
+* **type**: string (ReadOnly): The hierarchical type of the object.
+
+## DataBoxEdgeDeviceExtendedInfoPatch
+### Properties
+* **channelIntegrityKeyName**: string: The name for Channel Integrity Key stored in the Client Key Vault
+* **channelIntegrityKeyVersion**: string: The version of Channel Integrity Key stored in the Client Key Vault
+* **clientSecretStoreId**: string: The Key Vault ARM Id for client secrets
+* **clientSecretStoreUrl**: string: The url to access the Client Key Vault
+* **syncStatus**: 'KeyVaultNotConfigured' | 'KeyVaultSyncFailed' | 'KeyVaultSyncPending' | 'KeyVaultSynced' | 'KeyVaultSyncing' | string: For changing or to initiate the resync to key-vault set the status to KeyVaultSyncPending, rest of the status will not be applicable.
+
+## DataBoxEdgeDeviceExtendedInfoProperties
+### Properties
+* **channelIntegrityKeyName**: string: The name of Channel Integrity Key stored in the Client Key Vault
+* **channelIntegrityKeyVersion**: string: The version of Channel Integrity Key stored in the Client Key Vault
+* **clientSecretStoreId**: string: The Key Vault ARM Id for client secrets
+* **clientSecretStoreUrl**: string: The url to access the Client Key Vault
+* **deviceSecrets**: [DeviceSecrets](#devicesecrets) (ReadOnly): Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
+* **encryptionKey**: string: The public part of the encryption certificate. Client uses this to encrypt any secret.
+* **encryptionKeyThumbprint**: string: The digital signature of encrypted certificate.
+* **keyVaultSyncStatus**: 'KeyVaultNotConfigured' | 'KeyVaultSyncFailed' | 'KeyVaultSyncPending' | 'KeyVaultSynced' | 'KeyVaultSyncing' | string: Key vault sync status
+* **resourceKey**: string (ReadOnly): The Resource ID of the Resource.
+
 ## DataBoxEdgeDeviceProperties
 ### Properties
 * **configuredRoleTypes**: ('ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string)[] (ReadOnly): Type of compute roles configured.
@@ -352,6 +401,17 @@
 ### Properties
 * **authCode**: string: DCAccess Code for the Self Managed shipment.
 
+## DeviceSecrets
+### Properties
+* **bmcDefaultUserPassword**: [Secret](#secret): Keyvault Id of BMCDefaultUserPassword
+* **hcsDataVolumeBitLockerExternalKey**: [Secret](#secret): Keyvault Id of HcsDataVolumeBitLockerExternalKey
+* **hcsInternalVolumeBitLockerExternalKey**: [Secret](#secret): Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+* **rotateKeyForDataVolumeBitlocker**: [Secret](#secret): Keyvault Id of RotateKeyForDataVolumeBitlocker
+* **rotateKeysForSedDrivesSerialized**: [Secret](#secret): Keyvault Id of RotateKeysForSedDrivesSerialized
+* **sedEncryptionExternalKey**: [Secret](#secret): Keyvault Id of SEDEncryptionExternalKey
+* **sedEncryptionExternalKeyId**: [Secret](#secret): Keyvault Id of SEDEncryptionExternalKeyId
+* **systemVolumeBitLockerRecoveryKey**: [Secret](#secret): Keyvault Id of SystemVolumeBitLockerRecoveryKey
+
 ## EdgeProfile
 ### Properties
 * **subscription**: [EdgeProfileSubscription](#edgeprofilesubscription): Edge Profile Subscription
@@ -379,6 +439,14 @@
 * **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
 * **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
+
+## GenerateCertResponse
+### Properties
+* **expiryTimeInUTC**: string: Gets or sets expiry time in UTC
+* **privateKey**: string: Gets or sets base64 encoded private part of the certificate,
+needed to form the activation key
+* **publicKey**: string: Gets or sets base64 encoded certificate raw data,
+this is the public part needed to be uploaded to cert vault
 
 ## ImageRepositoryCredential
 ### Properties
@@ -594,6 +662,11 @@ by the already existing properties
 * **startTime**: string (Required): The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
 * **topic**: string: Topic where periodic events are published to IoT device.
 
+## RawCertificateData
+### Properties
+* **authenticationType**: 'AzureActiveDirectory' | 'Invalid' | string: The authentication type.
+* **certificate**: string (Required): The base64 encoded certificate raw data.
+
 ## RefreshDetails
 ### Properties
 * **errorManifestFile**: string: Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
@@ -615,6 +688,11 @@ by the already existing properties
 ## RoleSinkInfo
 ### Properties
 * **roleId**: string (Required): Compute role ID.
+
+## Secret
+### Properties
+* **encryptedSecret**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Encrypted (using device public key) secret value.
+* **keyVaultId**: string: Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
 
 ## ShareAccessRight
 ### Properties
@@ -711,6 +789,21 @@ by the already existing properties
 * **totalNumberOfUpdatesPendingInstall**: int (ReadOnly): The total number of items pending install.
 * **totalUpdateSizeInBytes**: int (ReadOnly): The total size of updates available for download in bytes.
 * **updateTitles**: string[] (ReadOnly): The list of updates available for install.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata) (Required): The Base 64 encoded certificate raw data.
+
+## UploadCertificateResponse
+### Properties
+* **aadAudience**: string (ReadOnly): Identifier of the target resource that is the recipient of the requested token.
+* **aadAuthority**: string (ReadOnly): Azure Active Directory tenant authority.
+* **aadTenantId**: string (ReadOnly): Azure Active Directory tenant ID.
+* **authType**: 'AzureActiveDirectory' | 'Invalid' | string: Specifies authentication type.
+* **azureManagementEndpointAudience**: string (ReadOnly): The azure management endpoint audience.
+* **resourceId**: string (ReadOnly): The resource ID of the Data Box Edge/Gateway device.
+* **servicePrincipalClientId**: string (ReadOnly): Azure Active Directory service principal client ID.
+* **servicePrincipalObjectId**: string (ReadOnly): Azure Active Directory service principal object ID.
 
 ## UserAccessRight
 ### Properties

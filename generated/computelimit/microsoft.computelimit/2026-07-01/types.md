@@ -66,6 +66,40 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ComputeLimit/locations/vmFamilies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disable (Microsoft.ComputeLimit/locations/features@2026-07-01)
+* **Resource**: Microsoft.ComputeLimit/locations/features
+* **ApiVersion**: 2026-07-01
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function enable (Microsoft.ComputeLimit/locations/features@2026-07-01)
+* **Resource**: Microsoft.ComputeLimit/locations/features
+* **ApiVersion**: 2026-07-01
+* **Input**: [FeatureEnableRequest](#featureenablerequest)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function setMemberCapOverrides (Microsoft.ComputeLimit/locations/sharedLimitCaps@2026-07-01)
+* **Resource**: Microsoft.ComputeLimit/locations/sharedLimitCaps
+* **ApiVersion**: 2026-07-01
+* **Input**: [SetMemberCapOverridesRequest](#setmembercapoverridesrequest)
+* **Output**: [SetMemberCapOverridesResult](#setmembercapoverridesresult)
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## FeatureEnableRequest
+### Properties
+* **serviceTreeId**: string: The Service Tree identifier associated with this feature action.
+
 ## FeatureProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
@@ -80,10 +114,37 @@
 * **localizedValue**: string (ReadOnly): The localized limit name.
 * **value**: string (Required): The limit name.
 
+## MemberCap
+### Properties
+* **cap**: int {minValue: 0} (Required): The cap value in count units for this member subscription.
+* **subscriptionId**: string {pattern: "^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$"} (Required): The member subscription identifier this cap applies to.
+
 ## MemberCapOverrideProperties
 ### Properties
 * **cap**: int {minValue: 0} (Required): The cap value in count units for this member subscription.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
+
+## SetMemberCapOverridesRequest
+### Properties
+* **memberCapOverrides**: [MemberCap](#membercap)[] (Required): The full set of per-member cap overrides to persist for this resource.
+This call replaces the existing set entirely; supply an empty array
+(`[]`) to clear all overrides.
+
+## SetMemberCapOverridesResult
+### Properties
+* **memberCapOverrides**: [MemberCap](#membercap)[] (Required): The per-member cap overrides as persisted after the action completed.
 
 ## SharedLimitCapProperties
 ### Properties

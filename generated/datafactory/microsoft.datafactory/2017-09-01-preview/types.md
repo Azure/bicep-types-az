@@ -68,10 +68,53 @@
 * **properties**: [Trigger](#trigger) (Required): Properties of the trigger.
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function configureFactoryRepo (Microsoft.DataFactory/locations@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/locations
+* **ApiVersion**: 2017-09-01-preview
+* **Input**: [FactoryRepoUpdate](#factoryrepoupdate)
+* **Output**: [Factory](#factory)
+
+## Function getConnectionInfo (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: [IntegrationRuntimeConnectionInfo](#integrationruntimeconnectioninfo)
+
+## Function getStatus (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function ipAddress (Microsoft.DataFactory/factories/integrationRuntimes/nodes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes/nodes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: [IntegrationRuntimeNodeIpAddress](#integrationruntimenodeipaddress)
+
 ## Function listAuthKeys (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
 * **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
 * **ApiVersion**: 2017-09-01-preview
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
+## Function monitoringData (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: [IntegrationRuntimeMonitoringData](#integrationruntimemonitoringdata)
+
+## Function pipelineruns (Microsoft.DataFactory/factories@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories
+* **ApiVersion**: 2017-09-01-preview
+* **Input**: [PipelineRunFilterParameters](#pipelinerunfilterparameters)
+* **Output**: [PipelineRunQueryResponse](#pipelinerunqueryresponse)
+
+## Function regenerateAuthKey (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Input**: [IntegrationRuntimeRegenerateKeyParameters](#integrationruntimeregeneratekeyparameters)
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
+## Function start (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
 
 ## Activity
 * **Discriminator**: type
@@ -932,6 +975,18 @@
 * **type**: 'Expression' | string (Required): Expression type.
 * **value**: string (Required): Expression value.
 
+## Factory
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
+* **location**: string: The resource location.
+* **name**: string (ReadOnly): The resource name.
+* **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **type**: string (ReadOnly): The resource type.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## FactoryIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
@@ -943,6 +998,12 @@
 * **createTime**: string (ReadOnly): Time the factory was created in ISO8601 format.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
 * **version**: string (ReadOnly): Version of the factory.
+* **vstsConfiguration**: [FactoryVstsConfiguration](#factoryvstsconfiguration): VSTS repo information of the factory.
+
+## FactoryRepoUpdate
+### Properties
+* **factoryResourceId**: string: The factory resource id.
+* **resourceGroupName**: string: The resource group name.
 * **vstsConfiguration**: [FactoryVstsConfiguration](#factoryvstsconfiguration): VSTS repo information of the factory.
 
 ## FactoryVstsConfiguration
@@ -1268,6 +1329,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## IntegrationRuntimeConnectionInfo
+### Properties
+* **hostServiceUri**: string (ReadOnly): The on-premises integration runtime host URL.
+* **identityCertThumbprint**: string (ReadOnly): The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
+* **isIdentityCertExprired**: bool (ReadOnly): Whether the identity certificate is expired.
+* **publicKey**: string (ReadOnly): The public key for encrypting a credential when transferring the credential to the integration runtime.
+* **serviceToken**: string (ReadOnly): The token generated in service. Callers use this token to authenticate to integration runtime.
+* **version**: string (ReadOnly): The integration runtime version.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## IntegrationRuntimeCustomSetupScriptProperties
 ### Properties
 * **blobContainerUri**: string: The URI of the Azure blob container that contains the custom setup script.
@@ -1279,11 +1351,37 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **path**: string: The path to contain the staged data in the Blob storage.
 * **stagingLinkedService**: [EntityReference](#entityreference): The staging linked service reference.
 
+## IntegrationRuntimeMonitoringData
+### Properties
+* **name**: string: Integration runtime name.
+* **nodes**: [IntegrationRuntimeNodeMonitoringData](#integrationruntimenodemonitoringdata)[]: Integration runtime node monitoring data.
+
+## IntegrationRuntimeNodeIpAddress
+### Properties
+* **ipAddress**: string (ReadOnly): The IP address of self-hosted integration runtime node.
+
+## IntegrationRuntimeNodeMonitoringData
+### Properties
+* **availableMemoryInMB**: int (ReadOnly): Available memory (MB) on the integration runtime node.
+* **concurrentJobsLimit**: int (ReadOnly): Maximum concurrent jobs on the integration runtime node.
+* **concurrentJobsRunning**: int (ReadOnly): The number of jobs currently running on the integration runtime node.
+* **cpuUtilization**: int (ReadOnly): CPU percentage on the integration runtime node.
+* **maxConcurrentJobs**: int (ReadOnly): The maximum concurrent jobs in this integration runtime.
+* **nodeName**: string (ReadOnly): Name of the integration runtime node.
+* **receivedBytes**: int (ReadOnly): Received bytes on the integration runtime node.
+* **sentBytes**: int (ReadOnly): Sent bytes on the integration runtime node.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## IntegrationRuntimeReference
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for integration runtime.
 * **referenceName**: string (Required): Reference integration runtime name.
 * **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
+
+## IntegrationRuntimeRegenerateKeyParameters
+### Properties
+* **keyName**: 'authKey1' | 'authKey2' | string: The name of the authentication key to regenerate.
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -1304,6 +1402,29 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## IntegrationRuntimeStatus
+* **Discriminator**: type
+
+### Base Properties
+* **dataFactoryName**: string (ReadOnly): The data factory name which the integration runtime belong to.
+* **state**: 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
+
+### ManagedIntegrationRuntimeStatus
+#### Properties
+* **type**: 'Managed' (Required): Type of integration runtime.
+* **typeProperties**: [ManagedIntegrationRuntimeStatusTypeProperties](#managedintegrationruntimestatustypeproperties) (Required): Managed integration runtime status type properties.
+
+### SelfHostedIntegrationRuntimeStatus
+#### Properties
+* **type**: 'SelfHosted' (Required): Type of integration runtime.
+* **typeProperties**: [SelfHostedIntegrationRuntimeStatusTypeProperties](#selfhostedintegrationruntimestatustypeproperties) (Required): Self-hosted integration runtime status type properties.
+
+
+## IntegrationRuntimeStatusResponse
+### Properties
+* **name**: string (ReadOnly): The integration runtime name.
+* **properties**: [IntegrationRuntimeStatus](#integrationruntimestatus) (Required): Integration runtime properties.
+
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **subnet**: string: The name of the subnet this integration runtime will join.
@@ -1321,6 +1442,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 * **username**: any (Required): The user name that you use to access Jira Service.
+
+## LinkedIntegrationRuntime
+### Properties
+* **createTime**: string (ReadOnly): The creating time of the linked integration runtime.
+* **dataFactoryLocation**: string (ReadOnly): The location of the data factory for which the linked integration runtime belong to.
+* **dataFactoryName**: string (ReadOnly): The name of the data factory for which the linked integration runtime belong to.
+* **name**: string (ReadOnly): The name of the linked integration runtime.
+* **subscriptionId**: string (ReadOnly): The subscription ID for which the linked integration runtime belong to.
 
 ## LinkedIntegrationRuntimeProperties
 * **Discriminator**: authorizationType
@@ -1723,6 +1852,41 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
+## ManagedIntegrationRuntimeError
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error message.
+* **parameters**: string[] (ReadOnly): Managed integration runtime error parameters.
+* **time**: string (ReadOnly): The time when the error occurred.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIntegrationRuntimeNode
+### Properties
+* **errors**: [ManagedIntegrationRuntimeError](#managedintegrationruntimeerror)[]: The errors that occurred on this integration runtime node.
+* **nodeId**: string (ReadOnly): The managed integration runtime node id.
+* **status**: 'Available' | 'Recycling' | 'Starting' | 'Unavailable' | string (ReadOnly): The managed integration runtime node status.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIntegrationRuntimeOperationResult
+### Properties
+* **activityId**: string (ReadOnly): The activity id for the operation request.
+* **errorCode**: string (ReadOnly): The error code.
+* **parameters**: string[] (ReadOnly): Managed integration runtime error parameters.
+* **result**: string (ReadOnly): The operation result.
+* **startTime**: string (ReadOnly): The start time of the operation.
+* **type**: string (ReadOnly): The operation type. Could be start or stop.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIntegrationRuntimeStatusTypeProperties
+### Properties
+* **createTime**: string (ReadOnly): The time at which the integration runtime was created, in ISO8601 format.
+* **lastOperation**: [ManagedIntegrationRuntimeOperationResult](#managedintegrationruntimeoperationresult) (ReadOnly): The last operation result that occurred on this integration runtime.
+* **nodes**: [ManagedIntegrationRuntimeNode](#managedintegrationruntimenode)[] (ReadOnly): The list of nodes for managed integration runtime.
+* **otherErrors**: [ManagedIntegrationRuntimeError](#managedintegrationruntimeerror)[] (ReadOnly): The errors that occurred on this integration runtime.
+
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
 * **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource for managed integration runtime.
@@ -1884,6 +2048,55 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: string (Required): Reference pipeline name.
 * **type**: 'PipelineReference' | string (Required): Pipeline reference type.
 
+## PipelineRun
+### Properties
+* **durationInMs**: int (ReadOnly): The duration of a pipeline run.
+* **invokedBy**: [PipelineRunInvokedBy](#pipelineruninvokedby) (ReadOnly): Entity that started the pipeline run.
+* **lastUpdated**: string (ReadOnly): The last updated timestamp for the pipeline run event in ISO8601 format.
+* **message**: string (ReadOnly): The message from a pipeline run.
+* **parameters**: [PipelineRunParameters](#pipelinerunparameters) (ReadOnly): The full or partial list of parameter name, value pair used in the pipeline run.
+* **pipelineName**: string (ReadOnly): The pipeline name.
+* **runEnd**: string (ReadOnly): The end time of a pipeline run in ISO8601 format.
+* **runId**: string (ReadOnly): Identifier of a run.
+* **runStart**: string (ReadOnly): The start time of a pipeline run in ISO8601 format.
+* **status**: string (ReadOnly): The status of a pipeline run.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## PipelineRunFilterParameters
+### Properties
+* **continuationToken**: string: The continuation token for getting the next page of results. Null for first page.
+* **filters**: [PipelineRunQueryFilter](#pipelinerunqueryfilter)[]: List of filters.
+* **lastUpdatedAfter**: string (Required): The time at or after which the pipeline run event was updated in 'ISO 8601' format.
+* **lastUpdatedBefore**: string (Required): The time at or before which the pipeline run event was updated in 'ISO 8601' format.
+* **orderBy**: [PipelineRunQueryOrderBy](#pipelinerunqueryorderby)[]: List of OrderBy option.
+
+## PipelineRunInvokedBy
+### Properties
+* **id**: string (ReadOnly): The ID of the entity that started the run.
+* **name**: string (ReadOnly): Name of the entity that started the pipeline run.
+
+## PipelineRunParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PipelineRunQueryFilter
+### Properties
+* **operand**: 'PipelineName' | 'RunEnd' | 'RunStart' | 'Status' | string (Required): Parameter name to be used for filter.
+* **operator**: 'Equals' | 'In' | 'NotEquals' | 'NotIn' | string (Required): Operator to be used for filter.
+* **values**: string[] (Required): List of filter values.
+
+## PipelineRunQueryOrderBy
+### Properties
+* **order**: 'ASC' | 'DESC' | string (Required): Sorting order of the parameter.
+* **orderBy**: 'RunEnd' | 'RunStart' | string (Required): Parameter name to be used for order by.
+
+## PipelineRunQueryResponse
+### Properties
+* **continuationToken**: string: The continuation token for getting the next page of results, if any remaining results exist, null otherwise.
+* **value**: [PipelineRun](#pipelinerun)[] (Required): List of pipeline runs.
+
 ## PostgreSqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: [SecretBase](#secretbase) (Required): The connection string.
@@ -1927,6 +2140,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## RelationalTableDatasetTypeProperties
 ### Properties
 * **tableName**: any: The relational table name. Type: string (or Expression with resultType string).
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -2025,6 +2243,55 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **type**: string (Required): Type of the secret.
 * **value**: string (Required): Value of secure string.
+
+## SelfHostedIntegrationRuntimeNode
+### Properties
+* **capabilities**: [SelfHostedIntegrationRuntimeNodeCapabilities](#selfhostedintegrationruntimenodecapabilities) (ReadOnly): The integration runtime capabilities dictionary
+* **concurrentJobsLimit**: int (ReadOnly): Maximum concurrent jobs on the integration runtime node.
+* **expiryTime**: string (ReadOnly): The time at which the integration runtime will expire in ISO8601 format.
+* **hostServiceUri**: string (ReadOnly): URI for the host machine of the integration runtime.
+* **isActiveDispatcher**: bool (ReadOnly): Indicates whether this node is the active dispatcher for integration runtime requests.
+* **lastConnectTime**: string (ReadOnly): The most recent time at which the integration runtime was connected in ISO8601 format.
+* **lastEndUpdateTime**: string (ReadOnly): The last time for the integration runtime node update end.
+* **lastStartTime**: string (ReadOnly): The time the node last started up.
+* **lastStartUpdateTime**: string (ReadOnly): The last time for the integration runtime node update start.
+* **lastStopTime**: string (ReadOnly): The integration runtime node last stop time.
+* **lastUpdateResult**: 'Fail' | 'Succeed' | string (ReadOnly): The result of the last integration runtime node update.
+* **machineName**: string (ReadOnly): Machine name of the integration runtime node.
+* **maxConcurrentJobs**: int (ReadOnly): The maximum concurrent jobs in this integration runtime.
+* **nodeName**: string (ReadOnly): Name of the integration runtime node.
+* **registerTime**: string (ReadOnly): The time at which the integration runtime node was registered in ISO8601 format.
+* **status**: 'InitializeFailed' | 'Initializing' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Upgrading' | string (ReadOnly): Status of the integration runtime node.
+* **version**: string (ReadOnly): Version of the integration runtime node.
+* **versionStatus**: string (ReadOnly): Status of the integration runtime node version.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## SelfHostedIntegrationRuntimeNodeCapabilities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SelfHostedIntegrationRuntimeStatusTypeProperties
+### Properties
+* **autoUpdate**: 'Off' | 'On' | string (ReadOnly): Whether Self-hosted integration runtime auto update has been turned on.
+* **capabilities**: [SelfHostedIntegrationRuntimeStatusTypePropertiesCapabilities](#selfhostedintegrationruntimestatustypepropertiescapabilities) (ReadOnly): Object with additional information about integration runtime capabilities.
+* **createTime**: string (ReadOnly): The time at which the integration runtime was created, in ISO8601 format.
+* **internalChannelEncryption**: 'NotEncrypted' | 'NotSet' | 'SslEncrypted' | string (ReadOnly): It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+* **links**: [LinkedIntegrationRuntime](#linkedintegrationruntime)[]: The list of linked integration runtimes that are created to share with this integration runtime.
+* **localTimeZoneOffset**: string (ReadOnly): The local time zone offset in hours.
+* **nodes**: [SelfHostedIntegrationRuntimeNode](#selfhostedintegrationruntimenode)[]: The list of nodes for this integration runtime.
+* **scheduledUpdateDate**: string (ReadOnly): The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+* **serviceUrls**: string[] (ReadOnly): The URLs for the services used in integration runtime backend service.
+* **taskQueueId**: string (ReadOnly): The task queue id of the integration runtime.
+* **updateDelayOffset**: string (ReadOnly): The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+* **version**: string (ReadOnly): Version of the integration runtime.
+* **versionStatus**: string (ReadOnly): Status of the integration runtime version.
+
+## SelfHostedIntegrationRuntimeStatusTypePropertiesCapabilities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties

@@ -137,6 +137,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/replicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DataReplication/locations@2024-09-01)
+* **Resource**: Microsoft.DataReplication/locations
+* **ApiVersion**: 2024-09-01
+* **Input**: [CheckNameAvailabilityModel](#checknameavailabilitymodel)
+* **Output**: [CheckNameAvailabilityResponseModel](#checknameavailabilityresponsemodel)
+
+## Function plannedFailover (Microsoft.DataReplication/replicationVaults/protectedItems@2024-09-01)
+* **Resource**: Microsoft.DataReplication/replicationVaults/protectedItems
+* **ApiVersion**: 2024-09-01
+* **Input**: [PlannedFailoverModel](#plannedfailovermodel)
+* **Output**: [PlannedFailoverModel](#plannedfailovermodel)
+
+## Function preflight (Microsoft.DataReplication/deployments@2024-09-01)
+* **Resource**: Microsoft.DataReplication/deployments
+* **ApiVersion**: 2024-09-01
+* **Input**: [DeploymentPreflightModel](#deploymentpreflightmodel)
+* **Output**: [DeploymentPreflightModel](#deploymentpreflightmodel)
+
 ## AffectedObjectDetails
 ### Properties
 * **description**: string: Description of the affected object details.
@@ -148,6 +166,29 @@
 * **resourceName**: string {minLength: 1} (Required): Gets or sets the AzStackHCICluster resource name.
 * **storageAccountName**: string {minLength: 1} (Required): Gets or sets the Storage account name.
 * **storageContainers**: [StorageContainerProperties](#storagecontainerproperties)[] (Required): Gets or sets the list of AzStackHCICluster Storage Container.
+
+## CheckNameAvailabilityModel
+### Properties
+* **name**: string: Gets or sets the resource name.
+* **type**: string: Gets or sets the resource type.
+
+## CheckNameAvailabilityResponseModel
+### Properties
+* **message**: string: Gets or sets the message for resource name unavailability.
+* **nameAvailable**: bool: Gets or sets a value indicating whether resource name is available or not.
+* **reason**: string: Gets or sets the reason for resource name unavailability.
+
+## DeploymentPreflightModel
+### Properties
+* **resources**: [DeploymentPreflightResource](#deploymentpreflightresource)[]: Gets or sets the list of resources.
+
+## DeploymentPreflightResource
+### Properties
+* **apiVersion**: string: Gets or sets the Api version.
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string: Gets or sets the resource name.
+* **properties**: any: Gets or sets the properties of the resource.
+* **type**: string: Gets or sets the resource type.
 
 ## DiskControllerInputs
 ### Properties
@@ -438,6 +479,30 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## PlannedFailoverModel
+### Properties
+* **properties**: [PlannedFailoverModelProperties](#plannedfailovermodelproperties) (Required): Planned failover model properties.
+
+## PlannedFailoverModelCustomProperties
+* **Discriminator**: instanceType
+
+### Base Properties
+
+### HyperVToAzStackHCIPlannedFailoverModelCustomProperties
+#### Properties
+* **instanceType**: 'HyperVToAzStackHCI' (Required): Discriminator property for PlannedFailoverModelCustomProperties.
+* **shutdownSourceVM**: bool (Required): Gets or sets a value indicating whether VM needs to be shut down.
+
+### VMwareToAzStackHCIPlannedFailoverModelCustomProperties
+#### Properties
+* **instanceType**: 'VMwareToAzStackHCI' (Required): Discriminator property for PlannedFailoverModelCustomProperties.
+* **shutdownSourceVM**: bool (Required): Gets or sets a value indicating whether VM needs to be shut down.
+
+
+## PlannedFailoverModelProperties
+### Properties
+* **customProperties**: [PlannedFailoverModelCustomProperties](#plannedfailovermodelcustomproperties) (Required): Planned failover model custom properties.
 
 ## PolicyModelCustomProperties
 * **Discriminator**: instanceType

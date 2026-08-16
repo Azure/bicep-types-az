@@ -53,6 +53,42 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function capabilities (Microsoft.RecoveryServices/locations@2022-01-31-preview)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2022-01-31-preview
+* **Input**: [ResourceCapabilities](#resourcecapabilities)
+* **Output**: [CapabilitiesResponse](#capabilitiesresponse)
+
+## Function checkNameAvailability (Microsoft.RecoveryServices/locations@2022-01-31-preview)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2022-01-31-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## CapabilitiesProperties
+### Properties
+* **dnsZones**: [DNSZone](#dnszone)[]
+
+## CapabilitiesResponse
+### Properties
+* **properties**: [CapabilitiesResponseProperties](#capabilitiesresponseproperties): Capabilities properties in response
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CapabilitiesResponseProperties
+### Properties
+* **dnsZones**: [DNSZoneResponse](#dnszoneresponse)[]
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string: Resource name for which availability needs to be checked
+* **type**: string: Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string
+* **nameAvailable**: bool
+* **reason**: string
+
 ## CmkKekIdentity
 ### Properties
 * **userAssignedIdentity**: string: The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
@@ -61,6 +97,15 @@
 ## CmkKeyVaultProperties
 ### Properties
 * **keyUri**: string: The key uri of the Customer Managed Key
+
+## DNSZone
+### Properties
+* **subResource**: 'AzureBackup' | 'AzureSiteRecovery' | string: Subresource type for vault, AzureBackup or AzureSiteRecovery
+
+## DNSZoneResponse
+### Properties
+* **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
+* **subResource**: 'AzureBackup' | 'AzureSiteRecovery' | string: Subresource type for vault, AzureBackup or AzureSiteRecovery
 
 ## IdentityData
 ### Properties
@@ -102,6 +147,11 @@
 ### Properties
 * **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
 * **certificate**: any: The base64 encoded certificate raw data string
+
+## ResourceCapabilities
+### Properties
+* **properties**: [CapabilitiesProperties](#capabilitiesproperties): Capabilities information
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
 
 ## Sku
 ### Properties

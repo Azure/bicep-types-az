@@ -3181,7 +3181,7 @@
           "$ref": "#/267"
         },
         "flags": 0,
-        "description": "Set of protocol types, default NFSv3, CIFS for SMB protocol"
+        "description": "Specify the protocol types for the volume. Supported values are NFSv3, NFSv4.1, and CIFS. For SMB volumes, specify CIFS.\nThe value SMB isn't supported in the protocolTypes property. Default: NFSv3"
       },
       "provisioningState": {
         "type": {
@@ -6548,6 +6548,620 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FilePathAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "File path to verify."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes"
+      },
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Resource logical availability zone which is used within zone mapping lookup for the subscription and region. The lookup will retrieve the physical zone where volume is placed."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAvailabilityResponse",
+    "properties": {
+      "isAvailable": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "<code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 0,
+        "description": "<code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFilePathAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/500"
+    },
+    "input": {
+      "$ref": "#/499"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/512"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource group name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/backupVaults/backups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/506"
+      },
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/509"
+      },
+      {
+        "$ref": "#/510"
+      },
+      {
+        "$ref": "#/511"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/500"
+    },
+    "input": {
+      "$ref": "#/505"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the resource to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/521"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource group name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/backupVaults/backups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/515"
+      },
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/518"
+      },
+      {
+        "$ref": "#/519"
+      },
+      {
+        "$ref": "#/520"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/500"
+    },
+    "input": {
+      "$ref": "#/514"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryNetworkSiblingSetRequest",
+    "properties": {
+      "networkSiblingSetId": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "Network Sibling Set ID for a group of volumes sharing networking resources in a subnet."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSiblingSet",
+    "properties": {
+      "networkSiblingSetId": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Network Sibling Set ID for a group of volumes sharing networking resources in a subnet."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}"
+      },
+      "networkSiblingSetStateId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Network sibling set state Id identifying the current state of the sibling set."
+      },
+      "networkFeatures": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 0,
+        "description": "Network features available to the volume, or current state of update."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/534"
+        },
+        "flags": 2,
+        "description": "Gets the status of the NetworkSiblingSet at the time the operation was called."
+      },
+      "nicInfoList": {
+        "type": {
+          "$ref": "#/537"
+        },
+        "flags": 0,
+        "description": "List of NIC information"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic_Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_Basic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/525"
+      },
+      {
+        "$ref": "#/526"
+      },
+      {
+        "$ref": "#/527"
+      },
+      {
+        "$ref": "#/528"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/530"
+      },
+      {
+        "$ref": "#/531"
+      },
+      {
+        "$ref": "#/532"
+      },
+      {
+        "$ref": "#/533"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NicInfo",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "IP Address"
+      },
+      "volumeResourceIds": {
+        "type": {
+          "$ref": "#/536"
+        },
+        "flags": 0,
+        "description": "Volume resource Ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/535"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryNetworkSiblingSet",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/524"
+    },
+    "input": {
+      "$ref": "#/523"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateNetworkSiblingSetRequest",
+    "properties": {
+      "networkSiblingSetId": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "Network Sibling Set ID for a group of volumes sharing networking resources in a subnet."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}"
+      },
+      "networkSiblingSetStateId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Network sibling set state Id identifying the current state of the sibling set."
+      },
+      "networkFeatures": {
+        "type": {
+          "$ref": "#/544"
+        },
+        "flags": 1,
+        "description": "Network features available to the volume."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic_Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_Basic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/540"
+      },
+      {
+        "$ref": "#/541"
+      },
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/543"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateNetworkSiblingSet",
+    "resourceType": "Microsoft.NetApp/locations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/524"
+    },
+    "input": {
+      "$ref": "#/539"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetKeyVaultStatusResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/547"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the getKeyVaultStatus."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetKeyVaultStatusResponseProperties",
+    "properties": {
+      "keyVaultUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URI of the key vault/managed HSM that should be used for encryption."
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the key that should be used for encryption."
+      },
+      "keyVaultResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure resource ID of the key vault/managed HSM that should be used for encryption."
+      },
+      "keyVaultPrivateEndpoints": {
+        "type": {
+          "$ref": "#/549"
+        },
+        "flags": 0,
+        "description": "Pairs of virtual network ID and private endpoint ID. Every virtual network that has volumes encrypted with customer-managed keys needs its own key vault private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultPrivateEndpoint",
+    "properties": {
+      "virtualNetworkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier for the virtual network id"
+      },
+      "privateEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier of the private endpoint to reach the Azure Key Vault"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/548"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getKeyVaultStatus",
+    "resourceType": "Microsoft.NetApp/netAppAccounts",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/546"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PeeringPassphrases",
     "properties": {
       "clusterPeeringCommand": {
@@ -6586,7 +7200,249 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/499"
+      "$ref": "#/551"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PoolChangeRequest",
+    "properties": {
+      "newPoolResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource id of the pool to move volume to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Cache",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "Cache properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/555"
+        },
+        "flags": 0,
+        "description": "The availability zones."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/556"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poolChange",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/554"
+    },
+    "input": {
+      "$ref": "#/553"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetSmbPassword",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SvmPeerCommandResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/560"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the SVM peer command response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SvmPeerCommandResponseProperties",
+    "properties": {
+      "svmPeeringCommand": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A command that needs to be run on the external ONTAP to accept svm peering.  Will only be present if <code>svmPeeringStatus</code> is <code>pending</code>"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "authorizeExternalReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/559"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizeRequest",
+    "properties": {
+      "remoteVolumeResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource id of the remote volume"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BreakFileLocksRequest",
+    "properties": {
+      "clientIp": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "To clear file locks on a volume for a particular client"
+      },
+      "confirmRunningDisruptiveOperation": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Break File locks could be a disruptive operation for application as locks on the volume will be broken, if want to process, set to true."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BreakReplicationRequest",
+    "properties": {
+      "forceBreakReplication": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "If replication is in status transferring and you want to force break the replication, set to true"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetGroupIdListForLdapUserRequest",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "username is required to fetch the group to which user is part of"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetGroupIdListForLdapUserResponse",
+    "properties": {
+      "groupIdsForLdapUser": {
+        "type": {
+          "$ref": "#/567"
+        },
+        "flags": 0,
+        "description": "Group Id list"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGroupIdListForLdapUser",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/566"
+    },
+    "input": {
+      "$ref": "#/565"
     }
   },
   {
@@ -6595,7 +7451,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/506"
+          "$ref": "#/574"
         },
         "flags": 0,
         "description": "Type of quota. If provided, quotaTarget must also be specified. The quotaType and quotaTarget properties are optional, but when filtering by quota type, quotaType and quotaTarget must be supplied together. Service/API will return an error if only one is provided."
@@ -6609,7 +7465,7 @@
       },
       "usageThresholdPercentage": {
         "type": {
-          "$ref": "#/507"
+          "$ref": "#/575"
         },
         "flags": 0,
         "description": "The usageThresholdPercentage filter takes the usage threshold percentage and returns records where the usage is greater than or equal to the input value. This is an optional property."
@@ -6636,16 +7492,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/502"
+        "$ref": "#/570"
       },
       {
-        "$ref": "#/503"
+        "$ref": "#/571"
       },
       {
-        "$ref": "#/504"
+        "$ref": "#/572"
       },
       {
-        "$ref": "#/505"
+        "$ref": "#/573"
       },
       {
         "$ref": "#/2"
@@ -6663,7 +7519,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/509"
+          "$ref": "#/577"
         },
         "flags": 0,
         "description": "Represents the properties of the ListQuotaReport."
@@ -6676,7 +7532,7 @@
     "properties": {
       "quotaReportRecords": {
         "type": {
-          "$ref": "#/516"
+          "$ref": "#/584"
         },
         "flags": 0,
         "description": "List of quota reports"
@@ -6689,7 +7545,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/515"
+          "$ref": "#/583"
         },
         "flags": 0,
         "description": "Type of quota"
@@ -6751,16 +7607,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/511"
+        "$ref": "#/579"
       },
       {
-        "$ref": "#/512"
+        "$ref": "#/580"
       },
       {
-        "$ref": "#/513"
+        "$ref": "#/581"
       },
       {
-        "$ref": "#/514"
+        "$ref": "#/582"
       },
       {
         "$ref": "#/2"
@@ -6770,7 +7626,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/510"
+      "$ref": "#/578"
     }
   },
   {
@@ -6779,10 +7635,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/508"
+      "$ref": "#/576"
     },
     "input": {
-      "$ref": "#/501"
+      "$ref": "#/569"
     }
   },
   {
@@ -6791,7 +7647,7 @@
     "properties": {
       "exclude": {
         "type": {
-          "$ref": "#/521"
+          "$ref": "#/589"
         },
         "flags": 0,
         "description": "Exclude Replications filter. 'None' returns all replications, 'Deleted' excludes deleted replications. Default is 'None'"
@@ -6810,10 +7666,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/519"
+        "$ref": "#/587"
       },
       {
-        "$ref": "#/520"
+        "$ref": "#/588"
       },
       {
         "$ref": "#/2"
@@ -6826,7 +7682,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/535"
+          "$ref": "#/603"
         },
         "flags": 1,
         "description": "The Replication items on this page"
@@ -6853,14 +7709,14 @@
       },
       "endpointType": {
         "type": {
-          "$ref": "#/526"
+          "$ref": "#/594"
         },
         "flags": 0,
         "description": "Indicates whether the local volume is the source or destination for the Volume Replication"
       },
       "replicationSchedule": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/598"
         },
         "flags": 0,
         "description": "Schedule"
@@ -6881,7 +7737,7 @@
       },
       "mirrorState": {
         "type": {
-          "$ref": "#/534"
+          "$ref": "#/602"
         },
         "flags": 2,
         "description": "The status of the replication"
@@ -6914,10 +7770,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/524"
+        "$ref": "#/592"
       },
       {
-        "$ref": "#/525"
+        "$ref": "#/593"
       },
       {
         "$ref": "#/2"
@@ -6940,13 +7796,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/527"
+        "$ref": "#/595"
       },
       {
-        "$ref": "#/528"
+        "$ref": "#/596"
       },
       {
-        "$ref": "#/529"
+        "$ref": "#/597"
       },
       {
         "$ref": "#/2"
@@ -6969,13 +7825,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/531"
+        "$ref": "#/599"
       },
       {
-        "$ref": "#/532"
+        "$ref": "#/600"
       },
       {
-        "$ref": "#/533"
+        "$ref": "#/601"
       },
       {
         "$ref": "#/2"
@@ -6985,7 +7841,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/523"
+      "$ref": "#/591"
     }
   },
   {
@@ -6994,10 +7850,414 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/522"
+      "$ref": "#/590"
     },
     "input": {
-      "$ref": "#/518"
+      "$ref": "#/586"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeerClusterForVolumeMigrationRequest",
+    "properties": {
+      "peerIpAddresses": {
+        "type": {
+          "$ref": "#/606"
+        },
+        "flags": 1,
+        "description": "A list of IC-LIF IPs that can be used to connect to the On-prem cluster"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterPeerCommandResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/608"
+        },
+        "flags": 0,
+        "description": "Represents the properties of the cluster peer command response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterPeerCommandResponseProperties",
+    "properties": {
+      "clusterPeeringCommand": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ClusterPeeringCommand to run to accept cluster peer. Will only be present if <code>clusterPeeringStatus</code> is <code>pending</code>."
+      },
+      "passphrase": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Passphrase for use with cluster peer command"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "peerExternalCluster",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/607"
+    },
+    "input": {
+      "$ref": "#/605"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Volume",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 1,
+        "description": "Volume properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/611"
+        },
+        "flags": 0,
+        "description": "The availability zones."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/612"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "populateAvailabilityZone",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/610"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelocateVolumeRequest",
+    "properties": {
+      "creationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "New creation token for the volume that controls the mount point name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeRevert",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource id of the snapshot"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "splitCloneFromParent",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/610"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BucketCredentialsExpiry",
+    "properties": {
+      "keyPairExpiryDays": {
+        "type": {
+          "$ref": "#/618"
+        },
+        "flags": 0,
+        "description": "The number of days from now until the newly generated Access and Secret key pair will expire."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BucketGenerateCredentials",
+    "properties": {
+      "accessKey": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 2,
+        "description": "The Access Key that is required along with the Secret Key to access the bucket."
+      },
+      "secretKey": {
+        "type": {
+          "$ref": "#/620"
+        },
+        "flags": 2,
+        "description": "The Secret Key that is required along with the Access Key to access the bucket."
+      },
+      "keyPairExpiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The bucket's Access and Secret key pair expiry date and time (in UTC)."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCredentials",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/619"
+    },
+    "input": {
+      "$ref": "#/617"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotRestoreFiles",
+    "properties": {
+      "filePaths": {
+        "type": {
+          "$ref": "#/624"
+        },
+        "flags": 1,
+        "description": "List of files to be restored"
+      },
+      "destinationPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Destination folder where the files will be restored"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 1024
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/623"
+    },
+    "minLength": 1,
+    "maxLength": 10
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubvolumeModel",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/626"
+        },
+        "flags": 0,
+        "description": "It represents the minimal properties of the subvolume."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubvolumeModelProperties",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Path to the subvolume"
+      },
+      "parentPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Path to the parent subvolume"
+      },
+      "size": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Size of subvolume"
+      },
+      "bytesUsed": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Bytes used"
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Permissions of the subvolume"
+      },
+      "creationTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Creation time and date"
+      },
+      "accessedTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Most recent access time and date"
+      },
+      "modifiedTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Most recent modification time and date"
+      },
+      "changedTimeStamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Most recent change time and date"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure lifecycle management"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMetadata",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/625"
     }
   }
 ]

@@ -36,6 +36,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'MongoDB.Atlas/organizations/projects/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function clusterTierRegions (MongoDB.Atlas/organizations/projects@2026-03-01-preview)
+* **Resource**: MongoDB.Atlas/organizations/projects
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [RegionsByTierResponse](#regionsbytierresponse)
+
+## Function tierLimitReached (MongoDB.Atlas/organizations/projects@2026-03-01-preview)
+* **Resource**: MongoDB.Atlas/organizations/projects
+* **ApiVersion**: 2026-03-01-preview
+* **Output**: [TierLimitReachedResponse](#tierlimitreachedresponse)
+
 ## ClusterProperties
 ### Properties
 * **backups**: bool (ReadOnly): Whether backups are active for the cluster; null if undetermined.
@@ -81,6 +91,13 @@
 * **organizationName**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9 _\-().,:@+&',]{1,64}$"} (Required): Organization name in MongoDB system
 * **redirectUrl**: string: Redirect URL for the MongoDB
 
+## ProjectLimitStatus
+### Properties
+* **current**: int (Required): Current value.
+* **isReached**: bool (Required): Whether the limit has been reached.
+* **maximum**: int (Required): Maximum allowed value.
+* **type**: 'FLEX' | 'FREE' | 'M10' | 'M30' | string (Required): Type of the limit.
+
 ## ProjectProperties
 ### Properties
 * **clusterCount**: int {minValue: 0} (ReadOnly): Number of clusters in the project.
@@ -88,6 +105,12 @@
 * **projectId**: string (ReadOnly): Atlas project id.
 * **projectName**: string (ReadOnly): Atlas project name.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+
+## RegionsByTierResponse
+### Properties
+* **organizationId**: string (Required, ReadOnly): Atlas organization id.
+* **projectId**: string (Required, ReadOnly): Atlas project id.
+* **regionsByTier**: [TierRegions](#tierregions)[] (Required, ReadOnly): List of cluster tiers and their supported regions.
 
 ## SystemData
 ### Properties
@@ -97,6 +120,15 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TierLimitReachedResponse
+### Properties
+* **limits**: [ProjectLimitStatus](#projectlimitstatus)[] (Required, ReadOnly): List of project limit statuses.
+
+## TierRegions
+### Properties
+* **regions**: string[] (Required): Supported region names.
+* **tier**: 'FLEX' | 'FREE' | 'M10' | 'M30' | string (Required): Cluster tier name.
 
 ## TrackedResourceTags
 ### Properties

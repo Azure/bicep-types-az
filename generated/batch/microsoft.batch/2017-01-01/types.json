@@ -549,6 +549,38 @@
   },
   {
     "$type": "ObjectType",
+    "name": "BatchAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "The type of account key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "BatchAccountKeys",
     "properties": {
       "primary": {
@@ -569,11 +601,23 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2017-01-01",
     "output": {
-      "$ref": "#/40"
+      "$ref": "#/44"
     }
   }
 ]

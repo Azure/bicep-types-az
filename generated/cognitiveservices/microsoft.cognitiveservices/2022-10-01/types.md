@@ -71,9 +71,21 @@
 * **tags**: [AccountTags](#accounttags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2022-10-01)
+* **Resource**: Microsoft.CognitiveServices/locations
+* **ApiVersion**: 2022-10-01
+* **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
+* **Output**: [SkuAvailabilityListResult](#skuavailabilitylistresult)
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2022-10-01)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2022-10-01
+* **Output**: [ApiKeys](#apikeys)
+
+## Function regenerateKey (Microsoft.CognitiveServices/accounts@2022-10-01)
+* **Resource**: Microsoft.CognitiveServices/accounts
+* **ApiVersion**: 2022-10-01
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [ApiKeys](#apikeys)
 
 ## AccountProperties
@@ -144,6 +156,12 @@
 * **count**: int: The count value of Call Rate Limit.
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
 * **rules**: [ThrottlingRule](#throttlingrule)[]
+
+## CheckSkuAvailabilityParameter
+### Properties
+* **kind**: string (Required): The Kind of the resource.
+* **skus**: string[] (Required): The SKU of the resource.
+* **type**: string (Required): The Type of the resource.
 
 ## CommitmentPeriod
 ### Properties
@@ -261,6 +279,10 @@
 * **renewalPeriod**: int
 * **rules**: [ThrottlingRule](#throttlingrule)[]
 
+## RegenerateKeyParameters
+### Properties
+* **keyName**: 'Key1' | 'Key2' (Required): key name to generate (Key1|Key2)
+
 ## RequestMatchPattern
 ### Properties
 * **method**: string
@@ -273,6 +295,19 @@
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## SkuAvailability
+### Properties
+* **kind**: string: The Kind of the resource.
+* **message**: string: Additional error message.
+* **reason**: string: Reason why the SKU is not available.
+* **skuAvailable**: bool: Indicates the given SKU is available or not.
+* **skuName**: string: The SKU of Cognitive Services account.
+* **type**: string: The Type of the resource.
+
+## SkuAvailabilityListResult
+### Properties
+* **value**: [SkuAvailability](#skuavailability)[]: Check SKU availability result list.
 
 ## SkuCapability
 ### Properties

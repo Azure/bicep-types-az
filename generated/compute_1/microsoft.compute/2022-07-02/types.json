@@ -2436,5 +2436,116 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrantAccessData",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 1
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "Time duration in seconds until the SAS access expires."
+      },
+      "getSecureVMGuestStateSAS": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Set this flag to true to get additional SAS for VM guest state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Write"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUri",
+    "properties": {
+      "accessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a disk."
+      },
+      "securityDataAccessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a VM guest state."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2022-07-02",
+    "output": {
+      "$ref": "#/178"
+    },
+    "input": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2022-07-02",
+    "output": {
+      "$ref": "#/178"
+    },
+    "input": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2022-07-02",
+    "output": {
+      "$ref": "#/178"
+    },
+    "input": {
+      "$ref": "#/173"
+    }
   }
 ]

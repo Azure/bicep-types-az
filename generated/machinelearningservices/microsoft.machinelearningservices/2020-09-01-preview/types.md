@@ -151,6 +151,17 @@
 * **ApiVersion**: 2020-09-01-preview
 * **Output**: [ListNotebookKeysResult](#listnotebookkeysresult)
 
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2020-09-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2020-09-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2020-09-01-preview
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
+
 ## ACIServiceCreateRequestDataCollection
 ### Properties
 * **eventHubEnabled**: bool: Option for enabling/disabling Event Hub.
@@ -655,6 +666,17 @@ The path specified gets used to call the user script.
 * **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
 * **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
 
+## NotebookPreparationError
+### Properties
+* **errorMessage**: string
+* **statusCode**: int
+
+## NotebookResourceInfo
+### Properties
+* **fqdn**: string
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror): The error that occurs when preparing notebook.
+* **resourceId**: string: the data plane resourceId that used to initialize notebook component
+
 ## Password
 ### Properties
 * **name**: string (ReadOnly)
@@ -697,6 +719,18 @@ The path specified gets used to call the user script.
 * **incrementalDatasetLastRefreshTime**: string (ReadOnly): The time of last successful incremental dataset refresh in UTC.
 * **skippedDatapointCount**: int (ReadOnly): The skipped datapoint count.
 * **totalDatapointCount**: int (ReadOnly): The total datapoint count.
+
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **location**: string: Region of the AML workspace in the id.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
 
 ## RCranPackage
 ### Properties
@@ -816,6 +850,19 @@ The path specified gets used to call the user script.
 * **publicIpAddress**: string (ReadOnly): Public IP address
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
+
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
 
 ## UserAccountCredentials
 ### Properties

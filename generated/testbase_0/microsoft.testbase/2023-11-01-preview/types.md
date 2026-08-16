@@ -269,6 +269,67 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/vhds' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function chat (Microsoft.TestBase/testBaseAccounts/chatSessions@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/chatSessions
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [ChatRequest](#chatrequest)
+* **Output**: [ChatResponse](#chatresponse)
+
+## Function checkImageNameAvailability (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [ImageNameCheckAvailabilityParameters](#imagenamecheckavailabilityparameters)
+* **Output**: [VerificationResult](#verificationresult)
+
+## Function checkPackageNameAvailability (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [PackageCheckNameAvailabilityParameters](#packagechecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function getConsoleLogDownloadUrl (Microsoft.TestBase/testBaseAccounts/packages/testResults@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages/testResults
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [TestResultConsoleLogDownloadURLParameters](#testresultconsolelogdownloadurlparameters)
+* **Output**: [DownloadURLResponse](#downloadurlresponse)
+
+## Function getDownloadUrl (Microsoft.TestBase/testBaseAccounts/packages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: [DownloadURLResponse](#downloadurlresponse)
+
+## Function getDownloadUrl (Microsoft.TestBase/testBaseAccounts/packages/testResults@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages/testResults
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: [DownloadURLResponse](#downloadurlresponse)
+
+## Function getFileUploadUrl (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [GetFileUploadURLParameters](#getfileuploadurlparameters)
+* **Output**: [FileUploadURLResponse](#fileuploadurlresponse)
+
+## Function getFreeHourBalance (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: [BillingHubGetFreeHourBalanceResponse](#billinghubgetfreehourbalanceresponse)
+
+## Function getPath (Microsoft.TestBase/testBaseAccounts/draftPackages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/draftPackages
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: [DraftPackageGetPathResponse](#draftpackagegetpathresponse)
+
+## Function getUsage (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [BillingHubGetUsageRequest](#billinghubgetusagerequest)
+* **Output**: [BillingHubGetUsageResponse](#billinghubgetusageresponse)
+
+## Function getVideoDownloadUrl (Microsoft.TestBase/testBaseAccounts/packages/testResults@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages/testResults
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: [DownloadURLResponse](#downloadurlresponse)
+
 ## ActionRequestProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
@@ -320,6 +381,12 @@
 * **testAnalysisResult**: [TestAnalysisResult](#testanalysisresult): The result of test analysis.
 
 
+## AnswerCitation
+### Properties
+* **chunkIndex**: int: The chunk index of the content.
+* **title**: string: The title of the citation.
+* **url**: string: The url of the citation.
+
 ## AvailableInplaceUpgradeOSProperties
 ### Properties
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
@@ -336,6 +403,23 @@
 * **osUpdateType**: string: The OS update type of an Available OS of a Test Base Account.
 * **osVersion**: string: The version of an Available OS of a Test Base Account.
 
+## BillingHubExecutionUsageDetail
+### Properties
+* **applicationName**: string
+* **applicationVersion**: string
+* **billedCharges**: int
+* **endTimeStamp**: string
+* **executionRequestId**: string
+* **meterId**: string
+* **osBuild**: string
+* **release**: string
+* **sku**: string
+* **startTimeStamp**: string
+* **testType**: string
+* **updateType**: string
+* **usedBillableHours**: int
+* **usedFreeHours**: int
+
 ## BillingHubFreeHourIncrementEntry
 ### Properties
 * **createTimeStamp**: string
@@ -350,9 +434,78 @@
 * **incrementEntries**: [BillingHubFreeHourIncrementEntry](#billinghubfreehourincremententry)[]
 * **totalRemainingFreeHours**: int
 
+## BillingHubGetUsageRequest
+### Properties
+* **endTimeStamp**: string (Required)
+* **pageIndex**: int
+* **pageSize**: int
+* **startTimeStamp**: string (Required)
+
+## BillingHubGetUsageResponse
+### Properties
+* **nextRequest**: [BillingHubGetUsageRequest](#billinghubgetusagerequest)
+* **packageUsageEntries**: [BillingHubPackageUsage](#billinghubpackageusage)[]
+* **totalCharges**: int
+* **totalUsedBillableHours**: int
+* **totalUsedFreeHours**: int
+
+## BillingHubPackageUsage
+### Properties
+* **applicationName**: string
+* **applicationVersion**: string
+* **azureResourceUri**: string
+* **totalCharges**: int
+* **totalUsedBillableHours**: int
+* **totalUsedFreeHours**: int
+* **usageEntriesGroupedByUpdateType**: [BillingHubUsageGroupedByUpdateType](#billinghubusagegroupedbyupdatetype)[]
+
+## BillingHubUsageGroup
+### Properties
+* **executionUsageDetails**: [BillingHubExecutionUsageDetail](#billinghubexecutionusagedetail)[]
+* **osBuild**: string
+* **productFamily**: string
+* **release**: string
+* **releaseBuildDate**: string
+* **releaseBuildNumber**: int
+* **releaseBuildRevision**: int
+* **testType**: string
+* **totalCharges**: int
+* **totalUsedBillableHours**: int
+* **totalUsedFreeHours**: int
+
+## BillingHubUsageGroupedByUpdateType
+### Properties
+* **totalCharges**: int
+* **totalUsedBillableHours**: int
+* **totalUsedFreeHours**: int
+* **updateType**: string
+* **usageGroups**: [BillingHubUsageGroup](#billinghubusagegroup)[]
+
+## ChatRequest
+### Properties
+* **question**: string (Required): The question of the chat turn
+
+## ChatResponse
+### Properties
+* **properties**: [ChatResponseProperties](#chatresponseproperties) (Required): The properties of chat response.
+
+## ChatResponseProperties
+### Properties
+* **answer**: string (Required): The answer from the system
+* **citations**: [AnswerCitation](#answercitation)[]
+* **limit**: int (Required, ReadOnly): The limit of questions within the chat session
+* **question**: string (Required): The question from the request
+* **usage**: int (Required, ReadOnly): The usage of questions within the chat session
+
 ## ChatSessionProperties
 ### Properties
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the name. Required if nameAvailable == false.
+* **nameAvailable**: bool: Value indicating the availability of the name: true if the name is available; otherwise, false.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason for unavailability of a name. Required if nameAvailable == false.
 
 ## Command
 ### Properties
@@ -408,6 +561,19 @@
 ## DistributionGroupListReceiverValue
 ### Properties
 * **distributionGroups**: string[]: The list of distribution groups.
+
+## DownloadURLResponse
+### Properties
+* **downloadUrl**: string {sensitive} (ReadOnly): The download URL.
+* **expirationTime**: string (ReadOnly): Expiry date of the download URL.
+
+## DraftPackageGetPathResponse
+### Properties
+* **baseUrl**: string (ReadOnly): The base URL of the storage account.
+* **draftPackagePath**: string (ReadOnly): The relative path of the folder hosting package files.
+* **expirationTime**: string (ReadOnly): Expiry date of the SAS token.
+* **sasToken**: string {sensitive} (ReadOnly): A SAS token for the storage account to access workspace.
+* **workingPath**: string (ReadOnly): The relative path for a temporary folder for package creation work.
 
 ## DraftPackageIntuneAppMetadata
 ### Properties
@@ -479,6 +645,11 @@
 ### Properties
 * **actualProcessName**: string (Required): The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
 
+## FileUploadURLResponse
+### Properties
+* **blobPath**: string (ReadOnly): The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource.
+* **uploadUrl**: string (ReadOnly): The URL used for uploading the package.
+
 ## FirstPartyAppDefinition
 ### Properties
 * **architecture**: 'arm64' | 'x64' | 'x86' | string: The architecture of a first party application of a Test Base Account.
@@ -527,6 +698,11 @@
 * **version**: string: The version of a winget gallery application SKU.
 
 
+## GetFileUploadURLParameters
+### Properties
+* **blobName**: string: The custom file name of the uploaded blob.
+* **resourceType**: 'Package' | 'VHD' | string: Resource type for file uploading.
+
 ## HighlightedFile
 ### Properties
 * **path**: string (Required): The path of the highlighted file.
@@ -546,6 +722,11 @@
 * **osState**: 'Generalized' | 'Specialized' | string (Required): Custom image OS state.
 * **provisioningState**: string (ReadOnly)
 * **securityType**: 'Standard' | 'TrustedLaunch' | string (Required): Custom image security type.
+
+## ImageNameCheckAvailabilityParameters
+### Properties
+* **definitionName**: string (Required): Image definition name.
+* **versionName**: string (Required): Image version name.
 
 ## ImageValidationResults
 ### Properties
@@ -630,6 +811,13 @@
 * **testRunTime**: string: The run time of the test.
 * **testStatus**: 'Completed' | 'DataProcessing' | 'InfrastructureFailure' | 'None' | 'TestAndUpdateFailure' | 'TestExecutionInProgress' | 'TestFailure' | 'UpdateFailure' | string: The status of the test.
 * **testType**: string: The test type of the package
+
+## PackageCheckNameAvailabilityParameters
+### Properties
+* **applicationName**: string (Required): Application name to verify.
+* **name**: string (Required): Resource name to verify.
+* **type**: string: fully qualified resource type which includes provider namespace.
+* **version**: string (Required): Version name to verify.
 
 ## PackageProperties
 ### Properties
@@ -793,6 +981,10 @@
 * **analysisStatus**: 'Available' | 'Completed' | 'Failed' | 'InProgress' | 'None' | 'NotAvailable' | 'Succeeded' | string: The analysis status.
 * **grade**: 'Fail' | 'None' | 'NotAvailable' | 'Pass' | string: The grade of the test result.
 * **name**: string: Metric name
+
+## TestResultConsoleLogDownloadURLParameters
+### Properties
+* **logFileName**: string (Required): The log file name corresponding to the download URL.
 
 ## TestResultFirstPartyAppDefinition
 ### Properties

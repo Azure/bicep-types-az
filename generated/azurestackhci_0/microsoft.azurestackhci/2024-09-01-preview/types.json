@@ -9168,5 +9168,550 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PasswordCredential",
+    "properties": {
+      "secretText": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "keyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "endDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatePassword",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/756"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArcIdentityResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/759"
+        },
+        "flags": 2,
+        "description": "ArcIdentity properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArcIdentityResponseProperties",
+    "properties": {
+      "arcApplicationClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "arcApplicationTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "arcServicePrincipalObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "arcApplicationObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createArcIdentity",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/758"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArcSetting",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "ArcSetting properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "consentAndInstallDefaultExtensions",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/761"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretsLocationsChangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/764"
+        },
+        "flags": 0,
+        "description": "List of secret locations"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Cluster",
+    "properties": {
+      "identity": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Identity of Cluster resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Cluster properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/766"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateSecretsLocations",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/765"
+    },
+    "input": {
+      "$ref": "#/763"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterIdentityResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/769"
+        },
+        "flags": 2,
+        "description": "Cluster identity properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterIdentityResponseProperties",
+    "properties": {
+      "aadClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "aadServicePrincipalObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "aadApplicationObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createClusterIdentity",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/768"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SoftwareAssuranceChangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/772"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SoftwareAssuranceChangeRequestProperties",
+    "properties": {
+      "softwareAssuranceIntent": {
+        "type": {
+          "$ref": "#/775"
+        },
+        "flags": 0,
+        "description": "Customer Intent for Software Assurance Benefit."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/773"
+      },
+      {
+        "$ref": "#/774"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "extendSoftwareAssuranceBenefit",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/765"
+    },
+    "input": {
+      "$ref": "#/771"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogCollectionRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/778"
+        },
+        "flags": 0,
+        "description": "Properties for Log Collection Request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogCollectionRequestProperties",
+    "properties": {
+      "fromDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From DateTimeStamp from when logs need to be connected"
+      },
+      "toDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To DateTimeStamp till when logs need to be connected"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerLogCollection",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/765"
+    },
+    "input": {
+      "$ref": "#/777"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoteSupportRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/781"
+        },
+        "flags": 0,
+        "description": "Properties for Remote Support Request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoteSupportRequestProperties",
+    "properties": {
+      "accessLevel": {
+        "type": {
+          "$ref": "#/784"
+        },
+        "flags": 2,
+        "description": "Remote Support Access Level"
+      },
+      "expirationTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Expiration DateTimeStamp when Remote Support Access will be expired"
+      },
+      "remoteSupportType": {
+        "type": {
+          "$ref": "#/787"
+        },
+        "flags": 0,
+        "description": "Remote Support Type for cluster"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Diagnostics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DiagnosticsAndRepair"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/782"
+      },
+      {
+        "$ref": "#/783"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoke"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/785"
+      },
+      {
+        "$ref": "#/786"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "configureRemoteSupport",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/765"
+    },
+    "input": {
+      "$ref": "#/780"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateRequest",
+    "properties": {
+      "edgeDeviceIds": {
+        "type": {
+          "$ref": "#/790"
+        },
+        "flags": 1,
+        "description": "Node Ids against which, current node has to be validated."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Additional info required for validation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "edge device validation status"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.AzureStackHCI/edgeDevices",
+    "apiVersion": "2024-09-01-preview",
+    "output": {
+      "$ref": "#/791"
+    },
+    "input": {
+      "$ref": "#/789"
+    }
   }
 ]

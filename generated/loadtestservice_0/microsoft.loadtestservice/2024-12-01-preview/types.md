@@ -58,6 +58,31 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.LoadTestService/locations/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkAvailability (Microsoft.LoadTestService/locations/quotas@2024-12-01-preview)
+* **Resource**: Microsoft.LoadTestService/locations/quotas
+* **ApiVersion**: 2024-12-01-preview
+* **Input**: [QuotaBucketRequest](#quotabucketrequest)
+* **Output**: [CheckQuotaAvailabilityResponse](#checkquotaavailabilityresponse)
+
+## Function set (Microsoft.LoadTestService/loadTests/limits@2024-12-01-preview)
+* **Resource**: Microsoft.LoadTestService/loadTests/limits
+* **ApiVersion**: 2024-12-01-preview
+* **Input**: [MaxMonthlyVirtualUserHoursLimitRequest](#maxmonthlyvirtualuserhourslimitrequest)
+* **Output**: [MaxMonthlyVirtualUserHoursResource](#maxmonthlyvirtualuserhoursresource)
+
+## CheckQuotaAvailabilityResponse
+### Properties
+* **id**: string (Required, ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [CheckQuotaAvailabilityResponseProperties](#checkquotaavailabilityresponseproperties): Check quota availability response properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (Required, ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## CheckQuotaAvailabilityResponseProperties
+### Properties
+* **availabilityStatus**: string: Message indicating additional details to add to quota support request.
+* **isAvailable**: bool: True/False indicating whether the quota request be granted based on availability.
+
 ## EncryptionProperties
 ### Properties
 * **identity**: [EncryptionPropertiesIdentity](#encryptionpropertiesidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
@@ -94,11 +119,39 @@
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## MaxMonthlyVirtualUserHoursLimitRequest
+### Properties
+* **limit**: int {minValue: -1}: The new maxMonthlyVirtualUserHours limit, with -1 indicating that there is no limit.
+
+## MaxMonthlyVirtualUserHoursResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MaxMonthlyVirtualUserHoursResourceProperties](#maxmonthlyvirtualuserhoursresourceproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## MaxMonthlyVirtualUserHoursResourceProperties
 ### Properties
 * **limit**: int {minValue: -1} (ReadOnly): Current limit value, with -1 indicating that there is no limit.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 * **usage**: int {minValue: 0} (ReadOnly): Current usage value.
+
+## QuotaBucketRequest
+### Properties
+* **properties**: [QuotaBucketRequestProperties](#quotabucketrequestproperties): Request object of new quota for a quota bucket.
+
+## QuotaBucketRequestProperties
+### Properties
+* **currentQuota**: int {minValue: 0}: Current quota limit of the quota bucket.
+* **currentUsage**: int {minValue: 0}: Current quota usage of the quota bucket.
+* **dimensions**: [QuotaBucketRequestPropertiesDimensions](#quotabucketrequestpropertiesdimensions): Dimensions for new quota request.
+* **newQuota**: int {minValue: 0}: New quota limit of the quota bucket.
+
+## QuotaBucketRequestPropertiesDimensions
+### Properties
+* **location**: string {minLength: 1}: Location dimension for new quota request of the quota bucket.
+* **subscriptionId**: string {minLength: 1}: Subscription Id dimension for new quota request of the quota bucket.
 
 ## QuotaResourceProperties
 ### Properties

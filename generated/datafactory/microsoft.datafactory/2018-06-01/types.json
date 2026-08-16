@@ -40317,6 +40317,2716 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FactoryRepoUpdate",
+    "properties": {
+      "factoryResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The factory resource id."
+      },
+      "repoConfiguration": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Git repo information of the factory."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Factory",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of the factory."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Managed service identity of the factory."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/2089"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FactoryTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "configureFactoryRepo",
+    "resourceType": "Microsoft.DataFactory/locations",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2088"
+    },
+    "input": {
+      "$ref": "#/2087"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExposureControlRequest",
+    "properties": {
+      "featureName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The feature name."
+      },
+      "featureType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The feature type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExposureControlResponse",
+    "properties": {
+      "featureName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The feature name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The feature value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFeatureValue",
+    "resourceType": "Microsoft.DataFactory/locations",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2092"
+    },
+    "input": {
+      "$ref": "#/2091"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAccessPolicy",
+    "properties": {
+      "permissions": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access."
+      },
+      "accessResourcePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource."
+      },
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the profile. Currently only the default is supported. The default value is DefaultProfile."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time for the token. If not specified the current time will be used."
+      },
+      "expireTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessPolicyResponse",
+    "properties": {
+      "policy": {
+        "type": {
+          "$ref": "#/2094"
+        },
+        "flags": 0,
+        "description": "The user access policy."
+      },
+      "accessToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Data Plane read only access token."
+      },
+      "dataPlaneUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Data Plane service base URL."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDataPlaneAccess",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2095"
+    },
+    "input": {
+      "$ref": "#/2094"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubAccessTokenRequest",
+    "properties": {
+      "gitHubAccessCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "GitHub access code."
+      },
+      "gitHubClientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "GitHub application client ID."
+      },
+      "gitHubClientSecret": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "GitHub bring your own app client secret information."
+      },
+      "gitHubAccessTokenBaseUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "GitHub access token base URL."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubAccessTokenResponse",
+    "properties": {
+      "gitHubAccessToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "GitHub access token."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGitHubAccessToken",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2098"
+    },
+    "input": {
+      "$ref": "#/2097"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getFeatureValue",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2092"
+    },
+    "input": {
+      "$ref": "#/2091"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExposureControlBatchRequest",
+    "properties": {
+      "exposureControlRequests": {
+        "type": {
+          "$ref": "#/2102"
+        },
+        "flags": 1,
+        "description": "List of exposure control features."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2091"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExposureControlBatchResponse",
+    "properties": {
+      "exposureControlResponses": {
+        "type": {
+          "$ref": "#/2104"
+        },
+        "flags": 1,
+        "description": "List of exposure control feature values."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2092"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryFeaturesValue",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2103"
+    },
+    "input": {
+      "$ref": "#/2101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugPackage",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug session."
+      },
+      "dataFlow": {
+        "type": {
+          "$ref": "#/2107"
+        },
+        "flags": 0,
+        "description": "Data flow instance."
+      },
+      "dataFlows": {
+        "type": {
+          "$ref": "#/2108"
+        },
+        "flags": 0,
+        "description": "List of Data flows"
+      },
+      "datasets": {
+        "type": {
+          "$ref": "#/2110"
+        },
+        "flags": 0,
+        "description": "List of datasets."
+      },
+      "linkedServices": {
+        "type": {
+          "$ref": "#/2112"
+        },
+        "flags": 0,
+        "description": "List of linked services."
+      },
+      "staging": {
+        "type": {
+          "$ref": "#/1783"
+        },
+        "flags": 0,
+        "description": "Staging info for debug session."
+      },
+      "debugSettings": {
+        "type": {
+          "$ref": "#/2113"
+        },
+        "flags": 0,
+        "description": "Data flow debug settings."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "Data flow properties."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatasetDebugResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 1,
+        "description": "Dataset properties."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedServiceDebugResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/612"
+        },
+        "flags": 1,
+        "description": "Properties of linked service."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2111"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugPackageDebugSettings",
+    "properties": {
+      "sourceSettings": {
+        "type": {
+          "$ref": "#/2115"
+        },
+        "flags": 0,
+        "description": "Source setting for data flow debug."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2116"
+        },
+        "flags": 0,
+        "description": "Data flow parameters."
+      },
+      "datasetParameters": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Parameters for dataset."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowSourceSetting",
+    "properties": {
+      "sourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The data flow source name."
+      },
+      "rowLimit": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Defines the row limit of data flow source in debug."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2114"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugPackageDebugSettingsParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddDataFlowToDebugSessionResponse",
+    "properties": {
+      "jobVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug job version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addDataFlowToDebugSession",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2117"
+    },
+    "input": {
+      "$ref": "#/2106"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDataFlowDebugSessionRequest",
+    "properties": {
+      "computeType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Compute type of the cluster. The value will be overwritten by the same setting in integration runtime if provided."
+      },
+      "coreCount": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Core count of the cluster. The value will be overwritten by the same setting in integration runtime if provided."
+      },
+      "timeToLive": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Time to live setting of the cluster in minutes."
+      },
+      "integrationRuntime": {
+        "type": {
+          "$ref": "#/2120"
+        },
+        "flags": 0,
+        "description": "Set to use integration runtime setting for data flow debug session."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeDebugResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/513"
+        },
+        "flags": 1,
+        "description": "Integration runtime properties."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDataFlowDebugSessionResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The state of the debug session."
+      },
+      "sessionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug session."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createDataFlowDebugSession",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2121"
+    },
+    "input": {
+      "$ref": "#/2119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteDataFlowDebugSessionRequest",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug session."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugCommandRequest",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug session."
+      },
+      "command": {
+        "type": {
+          "$ref": "#/2128"
+        },
+        "flags": 0,
+        "description": "The command type."
+      },
+      "commandPayload": {
+        "type": {
+          "$ref": "#/2129"
+        },
+        "flags": 0,
+        "description": "The command payload object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "executePreviewQuery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "executeStatisticsQuery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "executeExpressionQuery"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2125"
+      },
+      {
+        "$ref": "#/2126"
+      },
+      {
+        "$ref": "#/2127"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugCommandPayload",
+    "properties": {
+      "streamName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The stream name which is used for preview."
+      },
+      "rowLimits": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Row limits for preview response."
+      },
+      "columns": {
+        "type": {
+          "$ref": "#/2130"
+        },
+        "flags": 0,
+        "description": "Array of column names."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expression which is used for preview."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugCommandResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The run status of data preview, statistics or expression preview."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The result data of data preview, statistics or expression preview."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeDataFlowDebugCommand",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2131"
+    },
+    "input": {
+      "$ref": "#/2124"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryDataFlowDebugSessionsResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2135"
+        },
+        "flags": 1,
+        "description": "The DataFlowDebugSessionInfo items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataFlowDebugSessionInfo",
+    "properties": {
+      "dataFlowName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the data flow."
+      },
+      "computeType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Compute type of the cluster."
+      },
+      "coreCount": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Core count of the cluster."
+      },
+      "nodeCount": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Node count of the cluster. (deprecated property)"
+      },
+      "integrationRuntimeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Attached integration runtime name of data flow debug session."
+      },
+      "sessionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of data flow debug session."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time of data flow debug session."
+      },
+      "timeToLiveInMinutes": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Compute type of the cluster."
+      },
+      "lastActivityTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Last activity time of data flow debug session."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2134"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryDataFlowDebugSessions",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2133"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunFilterParameters",
+    "properties": {
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results. Null for first page."
+      },
+      "lastUpdatedAfter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time at or after which the run event was updated in 'ISO 8601' format."
+      },
+      "lastUpdatedBefore": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time at or before which the run event was updated in 'ISO 8601' format."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/2158"
+        },
+        "flags": 0,
+        "description": "List of filters."
+      },
+      "orderBy": {
+        "type": {
+          "$ref": "#/2173"
+        },
+        "flags": 0,
+        "description": "List of OrderBy option."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunQueryFilter",
+    "properties": {
+      "operand": {
+        "type": {
+          "$ref": "#/2151"
+        },
+        "flags": 1,
+        "description": "Parameter name to be used for filter. The allowed operands to query pipeline runs are PipelineName, RunStart, RunEnd and Status; to query activity runs are ActivityName, ActivityRunStart, ActivityRunEnd, ActivityType and Status, and to query trigger runs are TriggerName, TriggerRunTimestamp and Status."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/2156"
+        },
+        "flags": 1,
+        "description": "Operator to be used for filter."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/2157"
+        },
+        "flags": 1,
+        "description": "List of filter values."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PipelineName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Status"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunEnd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityRunStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityRunEnd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TriggerName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TriggerRunTimestamp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunGroupId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2139"
+      },
+      {
+        "$ref": "#/2140"
+      },
+      {
+        "$ref": "#/2141"
+      },
+      {
+        "$ref": "#/2142"
+      },
+      {
+        "$ref": "#/2143"
+      },
+      {
+        "$ref": "#/2144"
+      },
+      {
+        "$ref": "#/2145"
+      },
+      {
+        "$ref": "#/2146"
+      },
+      {
+        "$ref": "#/2147"
+      },
+      {
+        "$ref": "#/2148"
+      },
+      {
+        "$ref": "#/2149"
+      },
+      {
+        "$ref": "#/2150"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Equals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotEquals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "In"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotIn"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2152"
+      },
+      {
+        "$ref": "#/2153"
+      },
+      {
+        "$ref": "#/2154"
+      },
+      {
+        "$ref": "#/2155"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2138"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunQueryOrderBy",
+    "properties": {
+      "orderBy": {
+        "type": {
+          "$ref": "#/2169"
+        },
+        "flags": 1,
+        "description": "Parameter name to be used for order by. The allowed parameters to order by for pipeline runs are PipelineName, RunStart, RunEnd and Status; for activity runs are ActivityName, ActivityRunStart, ActivityRunEnd and Status; for trigger runs are TriggerName, TriggerRunTimestamp and Status."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/2172"
+        },
+        "flags": 1,
+        "description": "Sorting order of the parameter."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunEnd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PipelineName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Status"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityRunStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivityRunEnd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TriggerName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TriggerRunTimestamp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2160"
+      },
+      {
+        "$ref": "#/2161"
+      },
+      {
+        "$ref": "#/2162"
+      },
+      {
+        "$ref": "#/2163"
+      },
+      {
+        "$ref": "#/2164"
+      },
+      {
+        "$ref": "#/2165"
+      },
+      {
+        "$ref": "#/2166"
+      },
+      {
+        "$ref": "#/2167"
+      },
+      {
+        "$ref": "#/2168"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ASC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DESC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2170"
+      },
+      {
+        "$ref": "#/2171"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PipelineRunsQueryResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2179"
+        },
+        "flags": 1,
+        "description": "List of pipeline runs."
+      },
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results, if any remaining results exist, null otherwise."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PipelineRun",
+    "properties": {
+      "runId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Identifier of a run."
+      },
+      "runGroupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Identifier that correlates all the recovery runs of a pipeline run."
+      },
+      "isLatest": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Indicates if the recovered pipeline run is the latest in its group."
+      },
+      "pipelineName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The pipeline name."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2176"
+        },
+        "flags": 2,
+        "description": "The full or partial list of parameter name, value pair used in the pipeline run."
+      },
+      "runDimensions": {
+        "type": {
+          "$ref": "#/2177"
+        },
+        "flags": 2,
+        "description": "Run dimensions emitted by Pipeline run."
+      },
+      "invokedBy": {
+        "type": {
+          "$ref": "#/2178"
+        },
+        "flags": 2,
+        "description": "Entity that started the pipeline run."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last updated timestamp for the pipeline run event in ISO8601 format."
+      },
+      "runStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of a pipeline run in ISO8601 format."
+      },
+      "runEnd": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time of a pipeline run in ISO8601 format."
+      },
+      "durationInMs": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The duration of a pipeline run."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of a pipeline run. Possible values: Queued, InProgress, Succeeded, Failed, Canceling, Cancelled"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The message from a pipeline run."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PipelineRunParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PipelineRunDimensions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PipelineRunInvokedBy",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the entity that started the pipeline run."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the entity that started the run."
+      },
+      "invokedByType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the entity that started the run."
+      },
+      "pipelineName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the pipeline that triggered the run, if any."
+      },
+      "pipelineRunId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The run id of the pipeline that triggered the run, if any."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryPipelineRuns",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2174"
+    },
+    "input": {
+      "$ref": "#/2137"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRunsQueryResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2191"
+        },
+        "flags": 1,
+        "description": "List of trigger runs."
+      },
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results, if any remaining results exist, null otherwise."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRun",
+    "properties": {
+      "triggerRunId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger run id."
+      },
+      "triggerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger name."
+      },
+      "triggerType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger type."
+      },
+      "triggerRunTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger run start time."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2186"
+        },
+        "flags": 2,
+        "description": "Trigger run status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger error message."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2187"
+        },
+        "flags": 2,
+        "description": "List of property name and value related to trigger run. Name, value pair depends on type of trigger."
+      },
+      "triggeredPipelines": {
+        "type": {
+          "$ref": "#/2188"
+        },
+        "flags": 2,
+        "description": "List of pipeline name and run Id triggered by the trigger run."
+      },
+      "runDimension": {
+        "type": {
+          "$ref": "#/2189"
+        },
+        "flags": 2,
+        "description": "Run dimension for which trigger was fired."
+      },
+      "dependencyStatus": {
+        "type": {
+          "$ref": "#/2190"
+        },
+        "flags": 2,
+        "description": "Status of the upstream pipelines."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inprogress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2183"
+      },
+      {
+        "$ref": "#/2184"
+      },
+      {
+        "$ref": "#/2185"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRunProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRunTriggeredPipelines",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRunDimension",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRunDependencyStatus",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2182"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryTriggerRuns",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2181"
+    },
+    "input": {
+      "$ref": "#/2137"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerFilterParameters",
+    "properties": {
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results. Null for first page."
+      },
+      "parentTriggerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the parent TumblingWindowTrigger to get the child rerun triggers"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerQueryResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2196"
+        },
+        "flags": 1,
+        "description": "List of triggers."
+      },
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results, if any remaining results exist, null otherwise."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1997"
+        },
+        "flags": 1,
+        "description": "Properties of the trigger."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2195"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "querytriggers",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2194"
+    },
+    "input": {
+      "$ref": "#/2193"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeConnectionInfo",
+    "properties": {
+      "serviceToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The token generated in service. Callers use this token to authenticate to integration runtime."
+      },
+      "identityCertThumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation."
+      },
+      "hostServiceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The on-premises integration runtime host URL."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The integration runtime version."
+      },
+      "publicKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The public key for encrypting a credential when transferring the credential to the integration runtime."
+      },
+      "isIdentityCertExprired": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Whether the identity certificate is expired."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConnectionInfo",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2198"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeStatusResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The integration runtime name."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2201"
+        },
+        "flags": 1,
+        "description": "Integration runtime properties."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "IntegrationRuntimeStatus",
+    "discriminator": "type",
+    "baseProperties": {
+      "dataFactoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The data factory name which the integration runtime belong to."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/2212"
+        },
+        "flags": 2,
+        "description": "The state of integration runtime."
+      }
+    },
+    "elements": {
+      "Managed": {
+        "$ref": "#/2213"
+      },
+      "SelfHosted": {
+        "$ref": "#/2229"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedRegistration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Limited"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccessDenied"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2202"
+      },
+      {
+        "$ref": "#/2203"
+      },
+      {
+        "$ref": "#/2204"
+      },
+      {
+        "$ref": "#/2205"
+      },
+      {
+        "$ref": "#/2206"
+      },
+      {
+        "$ref": "#/2207"
+      },
+      {
+        "$ref": "#/2208"
+      },
+      {
+        "$ref": "#/2209"
+      },
+      {
+        "$ref": "#/2210"
+      },
+      {
+        "$ref": "#/2211"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIntegrationRuntimeStatus",
+    "properties": {
+      "typeProperties": {
+        "type": {
+          "$ref": "#/2214"
+        },
+        "flags": 1,
+        "description": "Managed integration runtime status type properties."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2228"
+        },
+        "flags": 1,
+        "description": "Type of integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIntegrationRuntimeStatusTypeProperties",
+    "properties": {
+      "createTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the integration runtime was created, in ISO8601 format."
+      },
+      "nodes": {
+        "type": {
+          "$ref": "#/2224"
+        },
+        "flags": 2,
+        "description": "The list of nodes for managed integration runtime."
+      },
+      "otherErrors": {
+        "type": {
+          "$ref": "#/2225"
+        },
+        "flags": 2,
+        "description": "The errors that occurred on this integration runtime."
+      },
+      "lastOperation": {
+        "type": {
+          "$ref": "#/2226"
+        },
+        "flags": 2,
+        "description": "The last operation result that occurred on this integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIntegrationRuntimeNode",
+    "properties": {
+      "nodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The managed integration runtime node id."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2220"
+        },
+        "flags": 2,
+        "description": "The managed integration runtime node status."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/2223"
+        },
+        "flags": 0,
+        "description": "The errors that occurred on this integration runtime node."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recycling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2216"
+      },
+      {
+        "$ref": "#/2217"
+      },
+      {
+        "$ref": "#/2218"
+      },
+      {
+        "$ref": "#/2219"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIntegrationRuntimeError",
+    "properties": {
+      "time": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the error occurred."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2222"
+        },
+        "flags": 2,
+        "description": "Managed integration runtime error parameters."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error message."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2221"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2215"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2221"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIntegrationRuntimeOperationResult",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The operation type. Could be start or stop."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of the operation."
+      },
+      "result": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The operation result."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2227"
+        },
+        "flags": 2,
+        "description": "Managed integration runtime error parameters."
+      },
+      "activityId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The activity id for the operation request."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Managed"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SelfHostedIntegrationRuntimeStatus",
+    "properties": {
+      "typeProperties": {
+        "type": {
+          "$ref": "#/2230"
+        },
+        "flags": 1,
+        "description": "Self-hosted integration runtime status type properties."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2257"
+        },
+        "flags": 1,
+        "description": "Type of integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SelfHostedIntegrationRuntimeStatusTypeProperties",
+    "properties": {
+      "createTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the integration runtime was created, in ISO8601 format."
+      },
+      "taskQueueId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The task queue id of the integration runtime."
+      },
+      "internalChannelEncryption": {
+        "type": {
+          "$ref": "#/2234"
+        },
+        "flags": 2,
+        "description": "It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist)."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Version of the integration runtime."
+      },
+      "nodes": {
+        "type": {
+          "$ref": "#/2249"
+        },
+        "flags": 0,
+        "description": "The list of nodes for this integration runtime."
+      },
+      "scheduledUpdateDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The date at which the integration runtime will be scheduled to update, in ISO8601 format."
+      },
+      "updateDelayOffset": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours"
+      },
+      "localTimeZoneOffset": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The local time zone offset in hours."
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/2250"
+        },
+        "flags": 2,
+        "description": "Object with additional information about integration runtime capabilities."
+      },
+      "serviceUrls": {
+        "type": {
+          "$ref": "#/2251"
+        },
+        "flags": 2,
+        "description": "The URLs for the services used in integration runtime backend service."
+      },
+      "autoUpdate": {
+        "type": {
+          "$ref": "#/2254"
+        },
+        "flags": 2,
+        "description": "Whether Self-hosted integration runtime auto update has been turned on."
+      },
+      "versionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Status of the integration runtime version."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/2256"
+        },
+        "flags": 0,
+        "description": "The list of linked integration runtimes that are created to share with this integration runtime."
+      },
+      "pushedVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version that the integration runtime is going to update to."
+      },
+      "latestVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The latest version on download center."
+      },
+      "autoUpdateETA": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The estimated time when the self-hosted integration runtime will be updated."
+      },
+      "selfContainedInteractiveAuthoringEnabled": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "An alternative option to ensure interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSet"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SslEncrypted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotEncrypted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2231"
+      },
+      {
+        "$ref": "#/2232"
+      },
+      {
+        "$ref": "#/2233"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SelfHostedIntegrationRuntimeNode",
+    "properties": {
+      "nodeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the integration runtime node."
+      },
+      "machineName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Machine name of the integration runtime node."
+      },
+      "hostServiceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "URI for the host machine of the integration runtime."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2243"
+        },
+        "flags": 2,
+        "description": "Status of the integration runtime node."
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/2244"
+        },
+        "flags": 2,
+        "description": "The integration runtime capabilities dictionary"
+      },
+      "versionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Status of the integration runtime node version."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Version of the integration runtime node."
+      },
+      "registerTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the integration runtime node was registered in ISO8601 format."
+      },
+      "lastConnectTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The most recent time at which the integration runtime was connected in ISO8601 format."
+      },
+      "expiryTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the integration runtime will expire in ISO8601 format."
+      },
+      "lastStartTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time the node last started up."
+      },
+      "lastStopTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The integration runtime node last stop time."
+      },
+      "lastUpdateResult": {
+        "type": {
+          "$ref": "#/2248"
+        },
+        "flags": 2,
+        "description": "The result of the last integration runtime node update."
+      },
+      "lastStartUpdateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last time for the integration runtime node update start."
+      },
+      "lastEndUpdateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last time for the integration runtime node update end."
+      },
+      "isActiveDispatcher": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Indicates whether this node is the active dispatcher for integration runtime requests."
+      },
+      "concurrentJobsLimit": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Maximum concurrent jobs on the integration runtime node."
+      },
+      "maxConcurrentJobs": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The maximum concurrent jobs in this integration runtime."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedRegistration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Limited"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initializing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitializeFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2236"
+      },
+      {
+        "$ref": "#/2237"
+      },
+      {
+        "$ref": "#/2238"
+      },
+      {
+        "$ref": "#/2239"
+      },
+      {
+        "$ref": "#/2240"
+      },
+      {
+        "$ref": "#/2241"
+      },
+      {
+        "$ref": "#/2242"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SelfHostedIntegrationRuntimeNodeCapabilities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fail"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2245"
+      },
+      {
+        "$ref": "#/2246"
+      },
+      {
+        "$ref": "#/2247"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2235"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SelfHostedIntegrationRuntimeStatusTypePropertiesCapabilities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2252"
+      },
+      {
+        "$ref": "#/2253"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedIntegrationRuntime",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the linked integration runtime."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The subscription ID for which the linked integration runtime belong to."
+      },
+      "dataFactoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the data factory for which the linked integration runtime belong to."
+      },
+      "dataFactoryLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The location of the data factory for which the linked integration runtime belong to."
+      },
+      "createTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The creating time of the linked integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2255"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SelfHosted"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStatus",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2200"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateLinkedIntegrationRuntimeRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the linked integration runtime."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of the subscription that the linked integration runtime belongs to."
+      },
+      "dataFactoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the data factory that the linked integration runtime belongs to."
+      },
+      "dataFactoryLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the data factory that the linked integration runtime belongs to."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkedIntegrationRuntime",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2200"
+    },
+    "input": {
+      "$ref": "#/2259"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "IntegrationRuntimeAuthKeys",
     "properties": {
       "authKey1": {
@@ -40341,7 +43051,1018 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2087"
+      "$ref": "#/2261"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeMonitoringData",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Integration runtime name."
+      },
+      "nodes": {
+        "type": {
+          "$ref": "#/2265"
+        },
+        "flags": 0,
+        "description": "Integration runtime node monitoring data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeNodeMonitoringData",
+    "properties": {
+      "nodeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the integration runtime node."
+      },
+      "availableMemoryInMB": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Available memory (MB) on the integration runtime node."
+      },
+      "cpuUtilization": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "CPU percentage on the integration runtime node."
+      },
+      "concurrentJobsLimit": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Maximum concurrent jobs on the integration runtime node."
+      },
+      "concurrentJobsRunning": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The number of jobs currently running on the integration runtime node."
+      },
+      "maxConcurrentJobs": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The maximum concurrent jobs in this integration runtime."
+      },
+      "sentBytes": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Sent bytes on the integration runtime node."
+      },
+      "receivedBytes": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Received bytes on the integration runtime node."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2264"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "monitoringData",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2263"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2270"
+        },
+        "flags": 0,
+        "description": "The name of the authentication key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "authKey1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "authKey2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2268"
+      },
+      {
+        "$ref": "#/2269"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAuthKey",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2261"
+    },
+    "input": {
+      "$ref": "#/2267"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedIntegrationRuntimeRequest",
+    "properties": {
+      "factoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The data factory name for linked integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2200"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/513"
+        },
+        "flags": 1,
+        "description": "Integration runtime properties."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "\"If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableInteractiveQuery",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2274"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableInteractiveQueryRequest",
+    "properties": {
+      "autoTerminationMinutes": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The allowed idle time for interactive authoring."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableInteractiveQuery",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2274"
+    },
+    "input": {
+      "$ref": "#/2276"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetSsisObjectMetadataRequest",
+    "properties": {
+      "metadataPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Metadata path."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisObjectMetadataListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2296"
+        },
+        "flags": 1,
+        "description": "The SsisObjectMetadata items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "SsisObjectMetadata",
+    "discriminator": "type",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Metadata id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Metadata name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Metadata description."
+      }
+    },
+    "elements": {
+      "Environment": {
+        "$ref": "#/2281"
+      },
+      "Folder": {
+        "$ref": "#/2285"
+      },
+      "Package": {
+        "$ref": "#/2287"
+      },
+      "Project": {
+        "$ref": "#/2291"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisEnvironment",
+    "properties": {
+      "folderId": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Folder id which contains environment."
+      },
+      "variables": {
+        "type": {
+          "$ref": "#/2283"
+        },
+        "flags": 0,
+        "description": "Variable in environment"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2284"
+        },
+        "flags": 1,
+        "description": "Type of metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisVariable",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Variable id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Variable name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Variable description."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Variable type."
+      },
+      "sensitive": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Whether variable is sensitive."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Variable value."
+      },
+      "sensitiveValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Variable sensitive value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2282"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Environment"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisFolder",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2286"
+        },
+        "flags": 1,
+        "description": "Type of metadata."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Folder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisPackage",
+    "properties": {
+      "folderId": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Folder id which contains package."
+      },
+      "projectVersion": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Project version which contains package."
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Project id which contains package."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2289"
+        },
+        "flags": 0,
+        "description": "Parameters in package"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2290"
+        },
+        "flags": 1,
+        "description": "Type of metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisParameter",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Parameter id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Parameter name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Parameter description."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Parameter type."
+      },
+      "required": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Whether parameter is required."
+      },
+      "sensitive": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Whether parameter is sensitive."
+      },
+      "designDefaultValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Design default value of parameter."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Default value of parameter."
+      },
+      "sensitiveDefaultValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Default sensitive value of parameter."
+      },
+      "valueType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Parameter value type."
+      },
+      "valueSet": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Parameter value set."
+      },
+      "variable": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Parameter reference variable."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2288"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Package"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisProject",
+    "properties": {
+      "folderId": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Folder id which contains project."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Project version."
+      },
+      "environmentRefs": {
+        "type": {
+          "$ref": "#/2293"
+        },
+        "flags": 0,
+        "description": "Environment reference in project"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2294"
+        },
+        "flags": 0,
+        "description": "Parameters in project"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2295"
+        },
+        "flags": 1,
+        "description": "Type of metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisEnvironmentReference",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Environment reference id."
+      },
+      "environmentFolderName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Environment folder name."
+      },
+      "environmentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Environment name."
+      },
+      "referenceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reference type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2292"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2288"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Project"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2280"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getObjectMetadata",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2279"
+    },
+    "input": {
+      "$ref": "#/2278"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsisObjectMetadataStatusResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status of the operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation name."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation properties."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation error message."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshObjectMetadata",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2298"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationRuntimeNodeIpAddress",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The IP address of self-hosted integration runtime node."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ipAddress",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes/nodes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2300"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivityRunsQueryResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2304"
+        },
+        "flags": 1,
+        "description": "List of activity runs."
+      },
+      "continuationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The continuation token for getting the next page of results, if any remaining results exist, null otherwise."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivityRun",
+    "properties": {
+      "pipelineName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the pipeline."
+      },
+      "pipelineRunId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the pipeline run."
+      },
+      "activityName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the activity."
+      },
+      "activityType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the activity."
+      },
+      "activityRunId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the activity run."
+      },
+      "linkedServiceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the compute linked service."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the activity run."
+      },
+      "activityRunStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time of the activity run in 'ISO 8601' format."
+      },
+      "activityRunEnd": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time of the activity run in 'ISO 8601' format."
+      },
+      "durationInMs": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The duration of the activity run."
+      },
+      "input": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The input for the activity."
+      },
+      "output": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The output for the activity."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The error if any from the activity run."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2303"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryActivityruns",
+    "resourceType": "Microsoft.DataFactory/factories/pipelineruns",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2302"
+    },
+    "input": {
+      "$ref": "#/2137"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DictionaryOfany",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateRunResponse",
+    "properties": {
+      "runId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Identifier of a run."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createRun",
+    "resourceType": "Microsoft.DataFactory/factories/pipelines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2307"
+    },
+    "input": {
+      "$ref": "#/2306"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerSubscriptionOperationStatus",
+    "properties": {
+      "triggerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Trigger name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2315"
+        },
+        "flags": 2,
+        "description": "Event Subscription Status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2310"
+      },
+      {
+        "$ref": "#/2311"
+      },
+      {
+        "$ref": "#/2312"
+      },
+      {
+        "$ref": "#/2313"
+      },
+      {
+        "$ref": "#/2314"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEventSubscriptionStatus",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2309"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "subscribeToEvents",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2309"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unsubscribeFromEvents",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/2309"
     }
   }
 ]

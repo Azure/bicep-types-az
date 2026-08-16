@@ -11,9 +11,42 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/locations/placementScores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generate (Microsoft.Compute/locations/placementScores@2025-06-05)
+* **Resource**: Microsoft.Compute/locations/placementScores
+* **ApiVersion**: 2025-06-05
+* **Input**: [SpotPlacementScoresInput](#spotplacementscoresinput)
+* **Output**: [SpotPlacementScoresResponse](#spotplacementscoresresponse)
+
 ## DiagnosticProperties
 ### Properties
 * **supportedResourceTypes**: string[]: Describes what are the supported resource types for a diagnostic.
+
+## PlacementScore
+### Properties
+* **availabilityZone**: string: The availability zone.
+* **isQuotaAvailable**: bool: Whether the desired quota is available.
+* **region**: string: The region.
+* **score**: string: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
+* **sku**: string: The resource's CRP virtual machine SKU size.
+
+## ResourceSize
+### Properties
+* **sku**: string: The resource's CRP virtual machine SKU size.
+
+## SpotPlacementScoresInput
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired virtual machine SKU sizes.
+
+## SpotPlacementScoresResponse
+### Properties
+* **availabilityZones**: bool: Defines if the scope is zonal or regional.
+* **desiredCount**: int: Desired instance count per region/zone based on the scope.
+* **desiredLocations**: string[]: The desired regions
+* **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired virtual machine SKU sizes.
+* **placementScores**: [PlacementScore](#placementscore)[]: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
 
 ## SystemData
 ### Properties

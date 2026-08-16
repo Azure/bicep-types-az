@@ -445,6 +445,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backfill (Microsoft.MachineLearningServices/workspaces/featuresets/versions@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/featuresets/versions
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [FeaturesetVersionBackfillRequest](#featuresetversionbackfillrequest)
+* **Output**: [FeaturesetVersionBackfillResponse](#featuresetversionbackfillresponse)
+
+## Function diagnose (Microsoft.MachineLearningServices/workspaces@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [DiagnoseWorkspaceParameters](#diagnoseworkspaceparameters)
+* **Output**: [DiagnoseResponseResult](#diagnoseresponseresult)
+
+## Function exportLabels (Microsoft.MachineLearningServices/workspaces/labelingJobs@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [ExportSummary](#exportsummary)
+* **Output**: [ExportSummary](#exportsummary)
+
+## Function getFeature (Microsoft.MachineLearningServices/workspaces/featuresets/versions@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/featuresets/versions
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [GetFeatureRequest](#getfeaturerequest)
+* **Output**: [Feature](#feature)
+
+## Function getLogs (Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [DeploymentLogsRequest](#deploymentlogsrequest)
+* **Output**: [DeploymentLogs](#deploymentlogs)
+
 ## Function listFeatures (Microsoft.MachineLearningServices/workspaces/featuresets/versions@2023-02-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/featuresets/versions
 * **ApiVersion**: 2023-02-01-preview
@@ -499,6 +529,28 @@
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2023-02-01-preview
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
+
+## Function package (Microsoft.MachineLearningServices/workspaces/models/versions@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/models/versions
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [PackageRequest](#packagerequest)
+* **Output**: [PackageResponse](#packageresponse)
+
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2023-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
 
 ## AccountKeyDatastoreSecrets
 ### Properties
@@ -787,6 +839,17 @@ Only 'Accuracy' is supported for Text-NER, so user need not set this explicitly.
 * **enabled**: bool
 * **maxNodeCount**: int
 * **minNodeCount**: int
+
+## BaseEnvironmentSource
+* **Discriminator**: baseEnvironmentSourceType
+
+### Base Properties
+
+### BaseEnvironmentId
+#### Properties
+* **baseEnvironmentSourceType**: 'EnvironmentAsset' (Required): [Required] Base environment type.
+* **resourceId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Resource id accepting ArmId or AzureMlId.
+
 
 ## BatchDeploymentConfiguration
 * **Discriminator**: deploymentConfigurationType
@@ -1416,12 +1479,104 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 * **dataType**: 'uri_folder' (Required): [Required] Specifies the type of data.
 
 
+## DeploymentLogs
+### Properties
+* **content**: string: The retrieved online deployment logs.
+
+## DeploymentLogsRequest
+### Properties
+* **containerType**: 'InferenceServer' | 'ModelDataCollector' | 'StorageInitializer' | string: The type of container to retrieve logs from.
+* **tail**: int: The maximum number of lines to tail.
+
 ## DeploymentResourceConfiguration
 ### Properties
 * **instanceCount**: int: Optional number of instances or nodes used by the compute target.
 * **instanceType**: string: Optional type of VM used as supported by the compute target.
 * **locations**: string[]: Locations where the job can run.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
+
+## DiagnoseRequestProperties
+### Properties
+* **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
+* **containerRegistry**: [DiagnoseRequestPropertiesContainerRegistry](#diagnoserequestpropertiescontainerregistry): Setting for diagnosing dependent container registry
+* **dnsResolution**: [DiagnoseRequestPropertiesDnsResolution](#diagnoserequestpropertiesdnsresolution): Setting for diagnosing dns resolution
+* **keyVault**: [DiagnoseRequestPropertiesKeyVault](#diagnoserequestpropertieskeyvault): Setting for diagnosing dependent key vault
+* **nsg**: [DiagnoseRequestPropertiesNsg](#diagnoserequestpropertiesnsg): Setting for diagnosing network security group
+* **others**: [DiagnoseRequestPropertiesOthers](#diagnoserequestpropertiesothers): Setting for diagnosing unclassified category of problems
+* **resourceLock**: [DiagnoseRequestPropertiesResourceLock](#diagnoserequestpropertiesresourcelock): Setting for diagnosing resource lock
+* **storageAccount**: [DiagnoseRequestPropertiesStorageAccount](#diagnoserequestpropertiesstorageaccount): Setting for diagnosing dependent storage account
+* **udr**: [DiagnoseRequestPropertiesUdr](#diagnoserequestpropertiesudr): Setting for diagnosing user defined routing
+
+## DiagnoseRequestPropertiesApplicationInsights
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesContainerRegistry
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesDnsResolution
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesKeyVault
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesNsg
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesOthers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesResourceLock
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesStorageAccount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesUdr
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseResponseResult
+### Properties
+* **value**: [DiagnoseResponseResultValue](#diagnoseresponseresultvalue)
+
+## DiagnoseResponseResultValue
+### Properties
+* **applicationInsightsResults**: [DiagnoseResult](#diagnoseresult)[]
+* **containerRegistryResults**: [DiagnoseResult](#diagnoseresult)[]
+* **dnsResolutionResults**: [DiagnoseResult](#diagnoseresult)[]
+* **keyVaultResults**: [DiagnoseResult](#diagnoseresult)[]
+* **networkSecurityRuleResults**: [DiagnoseResult](#diagnoseresult)[]
+* **otherResults**: [DiagnoseResult](#diagnoseresult)[]
+* **resourceLockResults**: [DiagnoseResult](#diagnoseresult)[]
+* **storageAccountResults**: [DiagnoseResult](#diagnoseresult)[]
+* **userDefinedRouteResults**: [DiagnoseResult](#diagnoseresult)[]
+
+## DiagnoseResult
+### Properties
+* **code**: string (ReadOnly): Code for workspace setup error
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Level of workspace setup error
+* **message**: string (ReadOnly): Message of workspace setup error
+
+## DiagnoseWorkspaceParameters
+### Properties
+* **value**: [DiagnoseRequestProperties](#diagnoserequestproperties): Value of Parameters
 
 ## DistributionConfiguration
 * **Discriminator**: distributionType
@@ -1498,6 +1653,13 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 ### Properties
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
+
+## EndpointAuthToken
+### Properties
+* **accessToken**: string: Access token for endpoint authentication.
+* **expiryTimeUtc**: int: Access token expiry time (UTC).
+* **refreshAfterTimeUtc**: int: Refresh access token after time (UTC).
+* **tokenType**: string: Access token type.
 
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
@@ -1582,6 +1744,33 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
 
+## ExportSummary
+* **Discriminator**: format
+
+### Base Properties
+* **endDateTime**: string (ReadOnly): The time when the export was completed.
+* **exportedRowCount**: int (ReadOnly): The total number of labeled datapoints exported.
+* **labelingJobId**: string (ReadOnly): Name and identifier of the job containing exported labels.
+* **startDateTime**: string (ReadOnly): The time when the export was requested.
+
+### CocoExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'Coco' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### CsvExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'CSV' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### DatasetExportSummary
+#### Properties
+* **format**: 'Dataset' (Required): [Required] The format of exported labels, also as the discriminator.
+* **labeledAssetName**: string (ReadOnly): The unique name of the labeled data asset.
+
+
 ## Feature
 ### Properties
 * **dataType**: 'Binary' | 'Boolean' | 'Datetime' | 'Double' | 'Float' | 'Integer' | 'Long' | 'String' | string: Specifies type
@@ -1629,6 +1818,29 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 ## FeaturesetSpecification
 ### Properties
 * **path**: string: Specifies the spec path
+
+## FeaturesetVersionBackfillRequest
+### Properties
+* **description**: string: Specifies description
+* **displayName**: string: Specifies description
+* **featureWindow**: [FeatureWindow](#featurewindow): Specifies the backfill feature window to be materialized
+* **resource**: [MaterializationComputeResource](#materializationcomputeresource): Specifies the compute resource settings
+* **sparkConfiguration**: [FeaturesetVersionBackfillRequestSparkConfiguration](#featuresetversionbackfillrequestsparkconfiguration): Specifies the spark compute settings
+* **tags**: [FeaturesetVersionBackfillRequestTags](#featuresetversionbackfillrequesttags): Specifies the tags
+
+## FeaturesetVersionBackfillRequestSparkConfiguration
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FeaturesetVersionBackfillRequestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FeaturesetVersionBackfillResponse
+### Properties
+* **jobId**: string: Job id created as part of request
 
 ## FeaturesetVersionProperties
 ### Properties
@@ -1740,6 +1952,10 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 * **trainingMode**: 'Auto' | 'Distributed' | 'NonDistributed' | string: TrainingMode mode - Setting to 'auto' is same as setting it to 'non-distributed' for now, however in the future may result in mixed mode or heuristics based mode selection. Default is 'auto'.
 If 'Distributed' then only distributed featurization is used and distributed algorithms are chosen.
 If 'NonDistributed' then only non distributed algorithms are chosen.
+
+## GetFeatureRequest
+### Properties
+* **featureName**: string: Specifies name of the feature.
 
 ## HDInsightProperties
 ### Properties
@@ -2050,6 +2266,32 @@ Note: This settings is not supported for the 'yolov5' algorithm.
 * **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
 * **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
 * **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
+
+## InferencingServer
+* **Discriminator**: serverType
+
+### Base Properties
+
+### AzureMLBatchInferencingServer
+#### Properties
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for AML batch inferencing server.
+* **serverType**: 'AzureMLBatch' (Required): [Required] Inferencing server type for various targets.
+
+### AzureMLOnlineInferencingServer
+#### Properties
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for AML inferencing server.
+* **serverType**: 'AzureMLOnline' (Required): [Required] Inferencing server type for various targets.
+
+### CustomInferencingServer
+#### Properties
+* **inferenceConfiguration**: [OnlineInferenceConfiguration](#onlineinferenceconfiguration): Inference configuration for custom inferencing.
+* **serverType**: 'Custom' (Required): [Required] Inferencing server type for various targets.
+
+### TritonInferencingServer
+#### Properties
+* **inferenceConfiguration**: [OnlineInferenceConfiguration](#onlineinferenceconfiguration): Inference configuration for Triton.
+* **serverType**: 'Triton' (Required): [Required] Inferencing server type for various targets.
+
 
 ## InstanceResourceSchema
 ### Properties
@@ -2495,6 +2737,11 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
 * **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
+## ModelConfiguration
+### Properties
+* **mode**: 'Download' | 'ReadOnlyMount' | string: Input delivery mode for the model.
+* **mountPath**: string: Relative mounting path of the model in the target image.
+
 ## ModelContainerProperties
 ### Properties
 * **description**: string: The asset description text.
@@ -2504,6 +2751,13 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the model container.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
+## ModelPackageInput
+### Properties
+* **inputType**: 'UriFile' | 'UriFolder' | string (Required): [Required] Type of the input included in the target image.
+* **mode**: 'Download' | 'ReadOnlyMount' | string: Input delivery mode of the input.
+* **mountPath**: string: Relative mount path of the input in the target image.
+* **path**: [PackageInputPathBase](#packageinputpathbase) (Required): [Required] Location of the input.
 
 ## ModelVersionFlavors
 ### Properties
@@ -2689,6 +2943,19 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### Additional Properties
 * **Additional Properties Type**: int
 
+## OnlineInferenceConfiguration
+### Properties
+* **configurations**: [OnlineInferenceConfigurationConfigurations](#onlineinferenceconfigurationconfigurations): Additional configurations
+* **entryScript**: string: Entry script or command to invoke.
+* **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
+* **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
+* **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
+
+## OnlineInferenceConfigurationConfigurations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## OnlineRequestSettings
 ### Properties
 * **maxConcurrentRequestsPerInstance**: int: The number of maximum concurrent requests per node allowed per deployment. Defaults to 1.
@@ -2714,6 +2981,74 @@ Defaults to 5000ms.
 * **scaleType**: 'TargetUtilization' (Required): [Required] Type of deployment scaling algorithm
 * **targetUtilizationPercentage**: int: Target CPU usage for the autoscaler.
 
+
+## PackageInputPathBase
+* **Discriminator**: inputPathType
+
+### Base Properties
+
+### PackageInputPathId
+#### Properties
+* **inputPathType**: 'PathId' (Required): [Required] Input path type for package inputs.
+* **resourceId**: string: Input resource id.
+
+### PackageInputPathVersion
+#### Properties
+* **inputPathType**: 'PathVersion' (Required): [Required] Input path type for package inputs.
+* **resourceName**: string: Input resource name.
+* **resourceVersion**: string: Input resource version.
+
+### PackageInputPathUrl
+#### Properties
+* **inputPathType**: 'Url' (Required): [Required] Input path type for package inputs.
+* **url**: string: Input path url.
+
+
+## PackageRequest
+### Properties
+* **baseEnvironmentSource**: [BaseEnvironmentSource](#baseenvironmentsource): Base environment to start with.
+* **environmentVariables**: [PackageRequestEnvironmentVariables](#packagerequestenvironmentvariables): Collection of environment variables.
+* **inferencingServer**: [InferencingServer](#inferencingserver) (Required): [Required] Inferencing server configurations.
+* **inputs**: [ModelPackageInput](#modelpackageinput)[]: Collection of inputs.
+* **modelConfiguration**: [ModelConfiguration](#modelconfiguration): Model configuration including the mount mode.
+* **tags**: [PackageRequestTags](#packagerequesttags): Tag dictionary. Tags can be added, removed, and updated.
+* **targetEnvironmentName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Target environment name to be generated by package.
+* **targetEnvironmentVersion**: string: Target environment version to be generated by package.
+
+## PackageRequestEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageRequestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageResponse
+### Properties
+* **baseEnvironmentSource**: [BaseEnvironmentSource](#baseenvironmentsource) (ReadOnly): Base environment to start with.
+* **buildId**: string (ReadOnly): Build id of the image build operation.
+* **buildState**: 'Failed' | 'NotStarted' | 'Running' | 'Succeeded' | string (ReadOnly): Build state of the image build operation.
+* **environmentVariables**: [PackageResponseEnvironmentVariables](#packageresponseenvironmentvariables) (ReadOnly): Collection of environment variables.
+* **inferencingServer**: [InferencingServer](#inferencingserver) (ReadOnly): Inferencing server configurations.
+* **inputs**: [ModelPackageInput](#modelpackageinput)[] (ReadOnly): Collection of inputs.
+* **logUrl**: string (ReadOnly): Log url of the image build operation.
+* **modelConfiguration**: [ModelConfiguration](#modelconfiguration) (ReadOnly): Model configuration including the mount mode.
+* **tags**: [PackageResponseTags](#packageresponsetags) (ReadOnly): Tag dictionary. Tags can be added, removed, and updated.
+* **targetEnvironmentId**: string (ReadOnly): Asset ID of the target environment created by package operation.
+* **targetEnvironmentName**: string (ReadOnly): Target environment name to be generated by package.
+* **targetEnvironmentVersion**: string (ReadOnly): Target environment version to be generated by package.
+
+## PackageResponseEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageResponseTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Password
 ### Properties
@@ -2797,6 +3132,18 @@ Defaults to 5000ms.
 ### Properties
 * **jobTier**: 'Basic' | 'Premium' | 'Spot' | 'Standard' | string: Enum to determine the job tier.
 * **priority**: int: Controls the priority of the job on a compute.
+
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **location**: string: Region of workspace quota to be updated.
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
 
 ## RecurrenceSchedule
 ### Properties
@@ -3510,6 +3857,19 @@ The expression should follow NCronTab format.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **triggerType**: 'Recurrence' (Required): [Required]
 
+
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
 
 ## UserAccountCredentials
 ### Properties

@@ -1752,5 +1752,221 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataSchemaExportRequest",
+    "properties": {
+      "assignedTo": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "An entity the metadata schema is requested for."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "api"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "environment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deployment"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataSchemaExportResult",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "The export format for the schema"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The result of the export operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "link"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportMetadataSchema",
+    "resourceType": "Microsoft.ApiCenter/services",
+    "apiVersion": "2024-03-15-preview",
+    "output": {
+      "$ref": "#/143"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiSpecExportResult",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "The format of exported result"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The result of the export operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "link"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportSpecification",
+    "resourceType": "Microsoft.ApiCenter/services/workspaces/apis/versions/definitions",
+    "apiVersion": "2024-03-15-preview",
+    "output": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiSpecImportRequest",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Value of the API specification source."
+      },
+      "format": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "Format of the API specification source."
+      },
+      "specification": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "API specification details."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "link"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiSpecImportRequestSpecification",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specification name."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specification version."
+      }
+    }
   }
 ]

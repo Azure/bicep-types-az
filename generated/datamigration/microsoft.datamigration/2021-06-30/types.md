@@ -65,6 +65,49 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataMigration/services/serviceTasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.DataMigration/services/projects/tasks@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services/projects/tasks
+* **ApiVersion**: 2021-06-30
+* **Output**: [ProjectTask](#projecttask)
+
+## Function cancel (Microsoft.DataMigration/services/serviceTasks@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services/serviceTasks
+* **ApiVersion**: 2021-06-30
+* **Output**: [ProjectTask](#projecttask)
+
+## Function checkNameAvailability (Microsoft.DataMigration/services@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2021-06-30
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailabilityResponse](#nameavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.DataMigration/locations@2021-06-30)
+* **Resource**: Microsoft.DataMigration/locations
+* **ApiVersion**: 2021-06-30
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailabilityResponse](#nameavailabilityresponse)
+
+## Function checkStatus (Microsoft.DataMigration/services@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2021-06-30
+* **Output**: [DataMigrationServiceStatusResponse](#datamigrationservicestatusresponse)
+
+## Function command (Microsoft.DataMigration/services/projects/tasks@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services/projects/tasks
+* **ApiVersion**: 2021-06-30
+* **Input**: [CommandProperties](#commandproperties)
+* **Output**: [CommandProperties](#commandproperties)
+
+## Function read (Microsoft.DataMigration/services/projects/files@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services/projects/files
+* **ApiVersion**: 2021-06-30
+* **Output**: [FileStorageInfo](#filestorageinfo)
+
+## Function readwrite (Microsoft.DataMigration/services/projects/files@2021-06-30)
+* **Resource**: Microsoft.DataMigration/services/projects/files
+* **ApiVersion**: 2021-06-30
+* **Output**: [FileStorageInfo](#filestorageinfo)
+
 ## AzureActiveDirectoryApp
 ### Properties
 * **appKey**: string (Required): Key used to authenticate to the Azure Active Directory Application
@@ -416,6 +459,13 @@
 * **virtualNicId**: string: The ID of the Microsoft.Network/networkInterfaces resource which the service have
 * **virtualSubnetId**: string (Required): The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
 
+## DataMigrationServiceStatusResponse
+### Properties
+* **agentVersion**: string: The DMS instance agent version
+* **status**: string: The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'
+* **supportedTaskTypes**: string[]: The list of supported task types
+* **vmSize**: string: The services virtual machine size, such as 'Standard_D2_v2'
+
 ## ExecutionStatistics
 ### Properties
 * **cpuTimeMs**: int: CPU Time in millisecond(s) for the query execution
@@ -435,6 +485,16 @@
 * **password**: string: Password credential used to connect to the share location.
 * **path**: string (Required): The folder path for this share.
 * **userName**: string: User name credential to connect to the share location
+
+## FileStorageInfo
+### Properties
+* **headers**: [FileStorageInfoHeaders](#filestorageinfoheaders): Dictionary of <string>
+* **uri**: string: A URI that can be used to access the file content.
+
+## FileStorageInfoHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GetTdeCertificatesSqlTaskInput
 ### Properties
@@ -1649,6 +1709,17 @@
 * **type**: string (Required): Type of connection info
 * **userName**: string: User name
 
+## NameAvailabilityRequest
+### Properties
+* **name**: string: The proposed resource name
+* **type**: string: The resource type chain (e.g. virtualMachines/extensions)
+
+## NameAvailabilityResponse
+### Properties
+* **message**: string: The localized reason why the name is not available, if nameAvailable is false
+* **nameAvailable**: bool: If true, the name is valid and available. If false, 'reason' describes why not.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the name is not available, if nameAvailable is false
+
 ## ODataError
 ### Properties
 * **code**: string: The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
@@ -1704,6 +1775,15 @@
 * **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' | string (Required): Source platform for the project
 * **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Information for connecting to target
 * **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' | string (Required): Target platform for the project
+
+## ProjectTask
+### Properties
+* **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ProjectTaskProperties](#projecttaskproperties): Custom task properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## ProjectTaskProperties
 * **Discriminator**: taskType

@@ -6976,11 +6976,75 @@
   },
   {
     "$type": "ObjectType",
+    "name": "InheritedSettingsForProject",
+    "properties": {
+      "projectCatalogSettings": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Dev Center settings to be used when associating a project with a catalog."
+      },
+      "networkSettings": {
+        "type": {
+          "$ref": "#/637"
+        },
+        "flags": 2,
+        "description": "Network settings that will be enforced on this project."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectNetworkSettings",
+    "properties": {
+      "microsoftHostedNetworkEnableStatus": {
+        "type": {
+          "$ref": "#/640"
+        },
+        "flags": 2,
+        "description": "Indicates whether pools in this Dev Center can use Microsoft Hosted Networks. Defaults to Enabled if not set."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/638"
+      },
+      {
+        "$ref": "#/639"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getInheritedSettings",
+    "resourceType": "Microsoft.DevCenter/projects",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/636"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SkuListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/646"
+          "$ref": "#/652"
         },
         "flags": 2,
         "description": "Current page of results."
@@ -7007,14 +7071,14 @@
       },
       "locations": {
         "type": {
-          "$ref": "#/638"
+          "$ref": "#/644"
         },
         "flags": 2,
         "description": "SKU supported locations."
       },
       "capabilities": {
         "type": {
-          "$ref": "#/640"
+          "$ref": "#/646"
         },
         "flags": 2,
         "description": "Collection of name/value pairs to describe the SKU capabilities."
@@ -7028,7 +7092,7 @@
       },
       "tier": {
         "type": {
-          "$ref": "#/645"
+          "$ref": "#/651"
         },
         "flags": 0,
         "description": "This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT."
@@ -7085,7 +7149,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/639"
+      "$ref": "#/645"
     }
   },
   {
@@ -7108,23 +7172,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/641"
+        "$ref": "#/647"
       },
       {
-        "$ref": "#/642"
+        "$ref": "#/648"
       },
       {
-        "$ref": "#/643"
+        "$ref": "#/649"
       },
       {
-        "$ref": "#/644"
+        "$ref": "#/650"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/637"
+      "$ref": "#/643"
     }
   },
   {
@@ -7133,7 +7197,559 @@
     "resourceType": "Microsoft.DevCenter/projects",
     "apiVersion": "2025-02-01",
     "output": {
-      "$ref": "#/636"
+      "$ref": "#/642"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncErrorDetails",
+    "properties": {
+      "operationError": {
+        "type": {
+          "$ref": "#/655"
+        },
+        "flags": 2,
+        "description": "Error information for the overall synchronization operation."
+      },
+      "conflicts": {
+        "type": {
+          "$ref": "#/657"
+        },
+        "flags": 2,
+        "description": "Catalog items that have conflicting names."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/660"
+        },
+        "flags": 2,
+        "description": "Errors that occured during synchronization."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogErrorDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An identifier for the error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message describing the error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogConflictError",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The path of the file that has a conflicting name."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the conflicting catalog item."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/656"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogSyncError",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The path of the file the error is associated with."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/659"
+        },
+        "flags": 2,
+        "description": "Errors associated with the file."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/655"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/658"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSyncErrorDetails",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/654"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogResourceValidationErrorDetails",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/663"
+        },
+        "flags": 2,
+        "description": "Errors associated with resources synchronized from the catalog."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/655"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/662"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/environmentDefinitions",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/662"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSyncErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/654"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/662"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getErrorDetails",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/662"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageDefinitionBuildDetails",
+    "properties": {
+      "imageReference": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 2,
+        "description": "The specific image version used by the build."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/676"
+        },
+        "flags": 2,
+        "description": "The status of the build."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Start time of the task group."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "End time of the task group."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/618"
+        },
+        "flags": 2,
+        "description": "Details for image creation error. Populated when the image creation is not successful."
+      },
+      "taskGroups": {
+        "type": {
+          "$ref": "#/696"
+        },
+        "flags": 2,
+        "description": "The list of task groups executed during the image definition build."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TimedOut"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/670"
+      },
+      {
+        "$ref": "#/671"
+      },
+      {
+        "$ref": "#/672"
+      },
+      {
+        "$ref": "#/673"
+      },
+      {
+        "$ref": "#/674"
+      },
+      {
+        "$ref": "#/675"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageDefinitionBuildTaskGroup",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the task group."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/684"
+        },
+        "flags": 2,
+        "description": "The status of the task group."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Start time of the task group."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "End time of the task group."
+      },
+      "tasks": {
+        "type": {
+          "$ref": "#/695"
+        },
+        "flags": 2,
+        "description": "The list of tasks executed during the task group."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TimedOut"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/678"
+      },
+      {
+        "$ref": "#/679"
+      },
+      {
+        "$ref": "#/680"
+      },
+      {
+        "$ref": "#/681"
+      },
+      {
+        "$ref": "#/682"
+      },
+      {
+        "$ref": "#/683"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageDefinitionBuildTask",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the task."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/687"
+        },
+        "flags": 0,
+        "description": "Parameters for the task."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name to help differentiate multiple instances of the same task."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ID of the task instance."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Start time of the task."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "End time of the task."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/694"
+        },
+        "flags": 2,
+        "description": "The status of the task."
+      },
+      "logUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URI for retrieving logs for the task execution."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageDefinitionBuildTaskParametersItem",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/686"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TimedOut"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/688"
+      },
+      {
+        "$ref": "#/689"
+      },
+      {
+        "$ref": "#/690"
+      },
+      {
+        "$ref": "#/691"
+      },
+      {
+        "$ref": "#/692"
+      },
+      {
+        "$ref": "#/693"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/685"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/677"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getBuildDetails",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/669"
     }
   }
 ]

@@ -70,6 +70,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Chaos/targets/capabilities' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getExecutionDetails (Microsoft.Chaos/experiments/executions@2025-01-01)
+* **Resource**: Microsoft.Chaos/experiments/executions
+* **ApiVersion**: 2025-01-01
+* **Output**: [ExperimentExecutionDetails](#experimentexecutiondetails)
+
+## ActionStatus
+### Properties
+* **actionId**: string (ReadOnly): The id of the action status.
+* **actionName**: string (ReadOnly): The name of the action status.
+* **endTime**: string (ReadOnly): String that represents the end time of the action.
+* **startTime**: string (ReadOnly): String that represents the start time of the action.
+* **status**: string (ReadOnly): The status of the action.
+* **targets**: [ExperimentExecutionActionTargetDetailsProperties](#experimentexecutionactiontargetdetailsproperties)[] (ReadOnly): The array of targets.
+
+## BranchStatus
+### Properties
+* **actions**: [ActionStatus](#actionstatus)[] (ReadOnly): The array of actions.
+* **branchId**: string (ReadOnly): The id of the branch status.
+* **branchName**: string (ReadOnly): The name of the branch status.
+* **status**: string (ReadOnly): The status of the branch.
+
 ## CapabilityProperties
 ### Properties
 * **description**: string (ReadOnly): Localized string of the description.
@@ -165,6 +186,39 @@
 ### Properties
 * **zones**: string[]: List of Azure availability zones to filter targets by.
 
+## ExperimentExecutionActionTargetDetailsError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message
+
+## ExperimentExecutionActionTargetDetailsProperties
+### Properties
+* **error**: [ExperimentExecutionActionTargetDetailsError](#experimentexecutionactiontargetdetailserror) (ReadOnly): The error of the action.
+* **status**: string (ReadOnly): The status of the execution.
+* **target**: string (ReadOnly): The target for the action.
+* **targetCompletedTime**: string (ReadOnly): String that represents the completed date time.
+* **targetFailedTime**: string (ReadOnly): String that represents the failed date time.
+
+## ExperimentExecutionDetails
+### Properties
+* **id**: string (ReadOnly): String of the fully qualified resource ID.
+* **name**: string (ReadOnly): String of the resource name.
+* **properties**: [ExperimentExecutionDetailsProperties](#experimentexecutiondetailsproperties) (ReadOnly): The properties of the experiment execution details.
+* **type**: string (ReadOnly): String of the resource type.
+
+## ExperimentExecutionDetailsProperties
+### Properties
+* **failureReason**: string (ReadOnly): The reason why the execution failed.
+* **lastActionAt**: string (ReadOnly): String that represents the last action date time.
+* **runInformation**: [ExperimentExecutionDetailsPropertiesRunInformation](#experimentexecutiondetailspropertiesruninformation) (ReadOnly): The information of the experiment run.
+* **startedAt**: string (ReadOnly): String that represents the start date time.
+* **status**: string (ReadOnly): The status of the execution.
+* **stoppedAt**: string (ReadOnly): String that represents the stop date time.
+
+## ExperimentExecutionDetailsPropertiesRunInformation
+### Properties
+* **steps**: [StepStatus](#stepstatus)[] (ReadOnly): The steps of the experiment run.
+
 ## ExperimentExecutionProperties
 ### Properties
 * **startedAt**: string (ReadOnly): String that represents the start date time.
@@ -188,6 +242,13 @@
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## StepStatus
+### Properties
+* **branches**: [BranchStatus](#branchstatus)[] (ReadOnly): The array of branches.
+* **status**: string (ReadOnly): The value of the status of the step.
+* **stepId**: string (ReadOnly): The id of the step.
+* **stepName**: string (ReadOnly): The name of the step.
 
 ## SystemData
 ### Properties

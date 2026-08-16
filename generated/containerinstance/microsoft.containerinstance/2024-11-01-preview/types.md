@@ -57,6 +57,17 @@
 * **type**: 'Microsoft.ContainerInstance/ngroups' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The zones for the container group.
 
+## Function attach (Microsoft.ContainerInstance/containerGroups/containers@2024-11-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2024-11-01-preview
+* **Output**: [ContainerAttachResponse](#containerattachresponse)
+
+## Function exec (Microsoft.ContainerInstance/containerGroups/containers@2024-11-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2024-11-01-preview
+* **Input**: [ContainerExecRequest](#containerexecrequest)
+* **Output**: [ContainerExecResponse](#containerexecresponse)
+
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
@@ -96,9 +107,29 @@
 * **name**: string (Required): The user-provided name of the container instance.
 * **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
+## ContainerAttachResponse
+### Properties
+* **password**: string {sensitive}: The password to the output stream from the attach. Send as an Authorization header value when connecting to the websocketUri.
+* **webSocketUri**: string: The uri for the output stream from the attach.
+
 ## ContainerExec
 ### Properties
 * **command**: string[]: The commands to execute within the container.
+
+## ContainerExecRequest
+### Properties
+* **command**: string: The command to be executed.
+* **terminalSize**: [ContainerExecRequestTerminalSize](#containerexecrequestterminalsize): The size of the terminal.
+
+## ContainerExecRequestTerminalSize
+### Properties
+* **cols**: int: The column size of the terminal
+* **rows**: int: The row size of the terminal
+
+## ContainerExecResponse
+### Properties
+* **password**: string {sensitive}: The password to start the exec command.
+* **webSocketUri**: string: The uri for the exec websocket.
 
 ## ContainerGroupDiagnostics
 ### Properties

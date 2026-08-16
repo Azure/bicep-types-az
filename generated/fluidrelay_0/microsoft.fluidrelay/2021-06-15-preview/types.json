@@ -352,5 +352,78 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyRequest",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "The key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FluidRelayServerKeys",
+    "properties": {
+      "key1": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The primary key for this server"
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The secondary key for this server"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.FluidRelay/fluidRelayServers",
+    "apiVersion": "2021-06-15-preview",
+    "output": {
+      "$ref": "#/33"
+    },
+    "input": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getKeys",
+    "resourceType": "Microsoft.FluidRelay/fluidRelayServers",
+    "apiVersion": "2021-06-15-preview",
+    "output": {
+      "$ref": "#/33"
+    }
   }
 ]

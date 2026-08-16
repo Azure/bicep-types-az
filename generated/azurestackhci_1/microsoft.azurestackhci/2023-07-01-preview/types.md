@@ -119,6 +119,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureStackHCI/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.AzureStackHCI/virtualMachineInstances@2023-07-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2023-07-01-preview
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
+## Function start (Microsoft.AzureStackHCI/virtualMachineInstances@2023-07-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2023-07-01-preview
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
+## Function stop (Microsoft.AzureStackHCI/virtualMachineInstances@2023-07-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2023-07-01-preview
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
 ## Components3Iu67JSchemasVirtualnetworkpropertiesPropertiesSubnetsItemsPropertiesRoutetableProperties
 ### Properties
 * **routes**: [VirtualNetworkPropertiesSubnetsPropertiesItemsItem](#virtualnetworkpropertiessubnetspropertiesitemsitem)[]: Routes - Collection of routes contained within a route table.
@@ -407,6 +422,16 @@
 ### Properties
 * **operationId**: string: The ID of the operation performed on the virtual hard disk
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string: The status of the operation performed on the virtual hard disk [Succeeded, Failed, InProgress]
+
+## VirtualMachineInstance
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [Identity](#identity): Identity for the resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [VirtualMachineInstanceProperties](#virtualmachineinstanceproperties): Properties under the virtual machine instance resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## VirtualMachineInstanceProperties
 ### Properties

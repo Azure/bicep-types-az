@@ -69,6 +69,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.BillingBenefits/discounts@2024-11-01-preview)
+* **Resource**: Microsoft.BillingBenefits/discounts
+* **ApiVersion**: 2024-11-01-preview
+* **Output**: [Discount](#discount)
+
+## Function elevate (Microsoft.BillingBenefits/savingsPlanOrders@2024-11-01-preview)
+* **Resource**: Microsoft.BillingBenefits/savingsPlanOrders
+* **ApiVersion**: 2024-11-01-preview
+* **Output**: [RoleAssignmentEntity](#roleassignmententity)
+
+## Function validate (Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2024-11-01-preview)
+* **Resource**: Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans
+* **ApiVersion**: 2024-11-01-preview
+* **Input**: [SavingsPlanUpdateValidateRequest](#savingsplanupdatevalidaterequest)
+* **Output**: [SavingsPlanValidateResponse](#savingsplanvalidateresponse)
+
 ## AppliedScopeProperties
 ### Properties
 * **displayName**: string: Display name
@@ -110,6 +126,22 @@
 * **meterType**: string: Must be present if the market, product, sku, and claims, and optional term information resolves to multiple availabilities that only differ by meter type. Validation: Maximum length 128 characters.
 * **ruleType**: 'FixedListPrice' | 'FixedPriceLock' | 'PriceCeiling' | string (Required): The type of the priceable node pricing rule. Validation: Required. Supported values are fixedPriceLock, fixedListPrice, and priceCeiling.
 * **termUnits**: string: The term units for the priceable node. Validation: Optional, Maximum length 128 characters. Must be present if and only if the availability derived by market, product, sku, and claims has terms.
+
+## Discount
+### Properties
+* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **location**: string (Required): The geo-location where the resource lives
+* **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+* **name**: string (ReadOnly): The name of the resource
+* **plan**: [Plan](#plan): Plan for the resource.
+* **properties**: [DiscountProperties](#discountproperties): Discount properties
+* **sku**: [Sku](#sku): The resource model definition representing SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## DiscountProperties
 * **Discriminator**: entityType
@@ -273,6 +305,18 @@
 ### Properties
 * **name**: string
 
+## RoleAssignmentEntity
+### Properties
+* **id**: string: Role assignment entity id
+* **name**: string: Role assignment entity name
+* **properties**: [RoleAssignmentEntityProperties](#roleassignmententityproperties): Role assignment entity properties
+
+## RoleAssignmentEntityProperties
+### Properties
+* **principalId**: string: Principal Id
+* **roleDefinitionId**: string: Role definition id
+* **scope**: string: Scope of the role assignment entity
+
 ## SavingsPlanModelProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
@@ -328,6 +372,29 @@
 * **savingsPlans**: string[]
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
 
+## SavingsPlanUpdateRequestProperties
+### Properties
+* **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
+* **appliedScopeType**: 'ManagementGroup' | 'Shared' | 'Single' | string: Type of the Applied Scope.
+* **displayName**: string: Display name
+* **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
+* **renewProperties**: [RenewProperties](#renewproperties)
+
+## SavingsPlanUpdateValidateRequest
+### Properties
+* **benefits**: [SavingsPlanUpdateRequestProperties](#savingsplanupdaterequestproperties)[]
+
+## SavingsPlanValidateResponse
+### Properties
+* **benefits**: [SavingsPlanValidResponseProperty](#savingsplanvalidresponseproperty)[]
+* **nextLink**: string: Url to get the next page.
+
+## SavingsPlanValidResponseProperty
+### Properties
+* **reason**: string: Failure reason if the provided input was invalid
+* **reasonCode**: string: Failure reason code if the provided input was invalid
+* **valid**: bool: Indicates if the provided input was valid
+
 ## Sku
 ### Properties
 * **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
@@ -344,6 +411,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

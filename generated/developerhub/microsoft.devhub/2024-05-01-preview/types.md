@@ -27,6 +27,30 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevHub/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.DevHub/iacProfiles@2024-05-01-preview)
+* **Resource**: Microsoft.DevHub/iacProfiles
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [ExportTemplateRequest](#exporttemplaterequest)
+* **Output**: [PrLinkResponse](#prlinkresponse)
+
+## Function generatePreviewArtifacts (Microsoft.DevHub/locations@2024-05-01-preview)
+* **Resource**: Microsoft.DevHub/locations
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [ArtifactGenerationProperties](#artifactgenerationproperties)
+* **Output**: [GeneratePreviewArtifactsResponse](#generatepreviewartifactsresponse)
+
+## Function getGitHubOAuthInfo (Microsoft.DevHub/locations/githuboauth@2024-05-01-preview)
+* **Resource**: Microsoft.DevHub/locations/githuboauth
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [GitHubOAuthCallRequest](#githuboauthcallrequest)
+* **Output**: [GitHubOAuthInfoResponse](#githuboauthinforesponse)
+
+## Function scale (Microsoft.DevHub/iacProfiles@2024-05-01-preview)
+* **Resource**: Microsoft.DevHub/iacProfiles
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [ScaleTemplateRequest](#scaletemplaterequest)
+* **Output**: [PrLinkResponse](#prlinkresponse)
+
 ## ACR
 ### Properties
 * **acrRegistryName**: string: ACR registry
@@ -62,6 +86,28 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ExportTemplateRequest
+### Properties
+* **instanceName**: string
+* **instanceStage**: string
+* **resourceGroupIds**: string[]
+* **siteId**: string
+* **templateName**: string: Template Name
+
+## GeneratePreviewArtifactsResponse
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GitHubOAuthCallRequest
+### Properties
+* **redirectUrl**: string: The URL the client will redirect to on successful authentication. If empty, no redirect will occur.
+
+## GitHubOAuthInfoResponse
+### Properties
+* **authURL**: string: URL for authorizing the Developer Hub GitHub App
+* **token**: string: OAuth token used to make calls to GitHub
 
 ## GitHubWorkflowProfile
 ### Properties
@@ -116,6 +162,21 @@
 * **quickStartTemplateType**: 'ALL' | 'HCI' | 'HCIAKS' | 'HCIARCVM' | 'None' | string: Determines the authorization status of requests.
 * **sourceResourceId**: string: the source store of the template
 * **templateDetails**: [IacTemplateDetails](#iactemplatedetails)[]
+* **templateName**: string: Template Name
+
+## PrLinkResponse
+### Properties
+* **prLink**: string: The link of the pull request.
+
+## ScaleProperty
+### Properties
+* **numberOfStores**: int: Number of the store
+* **region**: string: The region of the store
+* **stage**: string: The stage of the store
+
+## ScaleTemplateRequest
+### Properties
+* **scaleProperties**: [ScaleProperty](#scaleproperty)[]
 * **templateName**: string: Template Name
 
 ## StageProperties

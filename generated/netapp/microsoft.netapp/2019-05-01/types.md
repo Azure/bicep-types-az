@@ -48,6 +48,18 @@
 * **tags**: any: Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkFilePathAvailability (Microsoft.NetApp/locations@2019-05-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2019-05-01
+* **Input**: any
+* **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
+## Function checkNameAvailability (Microsoft.NetApp/locations@2019-05-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2019-05-01
+* **Input**: any
+* **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
 ## AccountProperties
 ### Properties
 * **activeDirectories**: [ActiveDirectory](#activedirectory)[]: Active Directories
@@ -93,6 +105,12 @@
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **size**: int {minValue: 4398046511104, maxValue: 549755813888000} (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+
+## ResourceNameAvailability
+### Properties
+* **isAvailable**: bool: <code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both.
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: <code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable.
 
 ## SnapshotProperties
 ### Properties

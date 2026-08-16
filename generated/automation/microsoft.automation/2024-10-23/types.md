@@ -351,6 +351,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automation/automationAccounts/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function convertGraphRunbookContent (Microsoft.Automation/automationAccounts@2024-10-23)
+* **Resource**: Microsoft.Automation/automationAccounts
+* **ApiVersion**: 2024-10-23
+* **Input**: [GraphicalRunbookContent](#graphicalrunbookcontent)
+* **Output**: [GraphicalRunbookContent](#graphicalrunbookcontent)
+
 ## Function listDeletedRunbooks (Microsoft.Automation/automationAccounts@2024-10-23)
 * **Resource**: Microsoft.Automation/automationAccounts
 * **ApiVersion**: 2024-10-23
@@ -583,6 +589,11 @@
 * **isOptional**: bool: Gets or sets the isOptional flag of the connection field definition.
 * **type**: string (Required): Gets or sets the type of the connection field definition.
 
+## GraphicalRunbookContent
+### Properties
+* **graphRunbookJson**: string: Graphical Runbook content as JSON
+* **rawContent**: [RawGraphicalRunbookContent](#rawgraphicalrunbookcontent): Raw graphical Runbook content.
+
 ## HybridRunbookWorkerCreateOrUpdateParametersOrHybridRunbookWorkerProperties
 ### Properties
 * **ip**: string (ReadOnly): Gets or sets the assigned machine IP address.
@@ -763,6 +774,12 @@
 * **provisioningState**: 'ActivitiesStored' | 'Canceled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
+
+## RawGraphicalRunbookContent
+### Properties
+* **runbookDefinition**: string: Serialized Graphical runbook
+* **runbookType**: 'GraphPowerShell' | 'GraphPowerShellWorkflow' | string: Runbook Type
+* **schemaVersion**: string: Schema version of the serializer.
 
 ## RunAsCredentialAssociationProperty
 ### Properties

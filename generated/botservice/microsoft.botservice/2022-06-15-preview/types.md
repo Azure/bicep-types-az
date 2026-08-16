@@ -58,6 +58,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.BotService/botServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createEmailSignInUrl (Microsoft.BotService/botServices@2022-06-15-preview)
+* **Resource**: Microsoft.BotService/botServices
+* **ApiVersion**: 2022-06-15-preview
+* **Output**: [CreateEmailSignInUrlResponse](#createemailsigninurlresponse)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2022-06-15-preview)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2022-06-15-preview
@@ -68,12 +73,31 @@
 * **ApiVersion**: 2022-06-15-preview
 * **Output**: [ConnectionSetting](#connectionsetting)
 
+## Function regeneratekeys (Microsoft.BotService/botServices/channels@2022-06-15-preview)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2022-06-15-preview
+* **Input**: [SiteInfo](#siteinfo)
+* **Output**: [BotChannel](#botchannel)
+
 ## AlexaChannelProperties
 ### Properties
 * **alexaSkillId**: string (Required): The Alexa skill Id
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
 * **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+
+## BotChannel
+### Properties
+* **etag**: string: Entity Tag.
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [Channel](#channel): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+* **zones**: string[] (ReadOnly): Entity zones
 
 ## BotProperties
 ### Properties
@@ -266,6 +290,16 @@
 * **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
 * **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
 
+## CreateEmailSignInUrlResponse
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **location**: string: Specifies the location of the resource.
+* **properties**: [CreateEmailSignInUrlResponseProperties](#createemailsigninurlresponseproperties): The set of properties specific to sign in url
+
+## CreateEmailSignInUrlResponseProperties
+### Properties
+* **url**: string: Sign in url.
+
 ## DirectLineChannelProperties
 ### Properties
 * **DirectLineEmbedCode**: string: Direct Line embed code of the resource
@@ -422,6 +456,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Site
 ### Properties
 * **appId**: string: DirectLine application id
@@ -443,6 +482,11 @@
 * **siteName**: string (Required): Site name
 * **tenantId**: string: Tenant Id
 * **trustedOrigins**: string[]: List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+
+## SiteInfo
+### Properties
+* **key**: 'key1' | 'key2' (Required): Determines which key is to be regenerated
+* **siteName**: string (Required): The site name
 
 ## Sku
 ### Properties

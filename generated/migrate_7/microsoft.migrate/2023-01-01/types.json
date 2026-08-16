@@ -1718,5 +1718,650 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegisterToolInput",
+    "properties": {
+      "tool": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tool to be registered."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerDiscovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloudamize"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Turbonomic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zerto"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CorentTech"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessmentV1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration_Replication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Carbonite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataMigrationAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseMigrationService"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Device42"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JetStream"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RackWare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnifyCloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Flexera"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerDiscovery_Import"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Lakeside"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppServiceMigrationAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Movere"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudSphere"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Modernization"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration_DataReplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationResult",
+    "properties": {
+      "isRegistered": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the tool is registered or not."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registerTool",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/185"
+    },
+    "input": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshSummaryInput",
+    "properties": {
+      "goal": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "Gets or sets the goal for which summary needs to be refreshed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Servers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DesktopVirtualization"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WebApplications"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataCenter"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshSummaryResult",
+    "properties": {
+      "isRefreshed": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the migrate project summary is refreshed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSummary",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationDetailsInput",
+    "properties": {
+      "tool": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tool to be registered."
+      },
+      "applicationDetails": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerDiscovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloudamize"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Turbonomic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zerto"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CorentTech"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerAssessmentV1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration_Replication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Carbonite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataMigrationAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseMigrationService"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Device42"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JetStream"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RackWare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnifyCloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Flexera"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerDiscovery_Import"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Lakeside"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppServiceMigrationAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Movere"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudSphere"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Modernization"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerMigration_DataReplication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/222"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AadAppDetails",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "applicationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationDetailsResponse",
+    "properties": {
+      "serviceEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "oneTimeKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registrationDetails",
+    "resourceType": "Microsoft.Migrate/migrateProjects",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/225"
+    },
+    "input": {
+      "$ref": "#/197"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionConfig",
+    "properties": {
+      "publisherSasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the publisher sas uri for the solution."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConfig",
+    "resourceType": "Microsoft.Migrate/migrateProjects/solutions",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cleanupData",
+    "resourceType": "Microsoft.Migrate/migrateProjects/solutions",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/229"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProxy",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Properties of a private endpoint connection proxy."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Migrate/migrateProjects/privateEndpointConnectionProxies",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/231"
+    }
   }
 ]

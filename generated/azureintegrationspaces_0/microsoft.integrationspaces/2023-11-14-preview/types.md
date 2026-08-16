@@ -70,10 +70,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IntegrationSpaces/spaces/infrastructureResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBusinessProcessDevelopmentArtifact (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
+* **Resource**: Microsoft.IntegrationSpaces/spaces/applications
+* **ApiVersion**: 2023-11-14-preview
+* **Input**: [GetOrDeleteBusinessProcessDevelopmentArtifactRequest](#getordeletebusinessprocessdevelopmentartifactrequest)
+* **Output**: [SaveOrGetBusinessProcessDevelopmentArtifactResponse](#saveorgetbusinessprocessdevelopmentartifactresponse)
+
 ## Function listBusinessProcessDevelopmentArtifacts (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
 * **Resource**: Microsoft.IntegrationSpaces/spaces/applications
 * **ApiVersion**: 2023-11-14-preview
 * **Output**: [ListBusinessProcessDevelopmentArtifactsResponse](#listbusinessprocessdevelopmentartifactsresponse)
+
+## Function saveBusinessProcessDevelopmentArtifact (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
+* **Resource**: Microsoft.IntegrationSpaces/spaces/applications
+* **ApiVersion**: 2023-11-14-preview
+* **Input**: [SaveOrValidateBusinessProcessDevelopmentArtifactRequest](#saveorvalidatebusinessprocessdevelopmentartifactrequest)
+* **Output**: [SaveOrGetBusinessProcessDevelopmentArtifactResponse](#saveorgetbusinessprocessdevelopmentartifactresponse)
 
 ## ApplicationProperties
 ### Properties
@@ -175,6 +187,10 @@
 ### Additional Properties
 * **Additional Properties Type**: [TrackingEventDefinition](#trackingeventdefinition)
 
+## GetOrDeleteBusinessProcessDevelopmentArtifactRequest
+### Properties
+* **name**: string (Required): The name of the business process development artifact.
+
 ## InfrastructureResourceProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
@@ -190,6 +206,11 @@
 * **name**: string (Required): The name of the business process development artifact.
 * **properties**: [BusinessProcessDevelopmentArtifactProperties](#businessprocessdevelopmentartifactproperties): The properties of the business process development artifact.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system data of the business process development artifact.
+
+## SaveOrValidateBusinessProcessDevelopmentArtifactRequest
+### Properties
+* **name**: string (Required): The name of the business process development artifact.
+* **properties**: [BusinessProcessDevelopmentArtifactProperties](#businessprocessdevelopmentartifactproperties): The properties of the business process development artifact.
 
 ## SpaceResourceProperties
 ### Properties

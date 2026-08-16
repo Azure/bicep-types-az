@@ -51,10 +51,42 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HDInsight/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HDInsight/locations@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/locations
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [NameAvailabilityCheckRequestParameters](#nameavailabilitycheckrequestparameters)
+* **Output**: [NameAvailabilityCheckResult](#nameavailabilitycheckresult)
+
+## Function configurations (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Output**: [ClusterConfigurations](#clusterconfigurations)
+
+## Function getGatewaySettings (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Output**: [GatewaySettings](#gatewaysettings)
+
 ## Function listHosts (Microsoft.HDInsight/clusters@2025-01-15-preview)
 * **Resource**: Microsoft.HDInsight/clusters
 * **ApiVersion**: 2025-01-15-preview
 * **Output**: [HostInfo](#hostinfo)[]
+
+## Function validateCreateRequest (Microsoft.HDInsight/locations@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/locations
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [ClusterCreateRequestValidationParameters](#clustercreaterequestvalidationparameters)
+* **Output**: [ClusterCreateValidationResult](#clustercreatevalidationresult)
+
+## AaddsResourceDetails
+### Properties
+* **domainName**: string: The Azure active directory domain service name.
+* **initialSyncComplete**: bool: This indicates whether initial sync complete or not.
+* **ldapsEnabled**: bool: This indicates whether enable ldaps or not.
+* **ldapsPublicCertificateInBase64**: string: The base 64 format string of public ldap certificate.
+* **resourceId**: string: The resource id of azure active directory domain service.
+* **subnetId**: string: The subnet resource id.
+* **tenantId**: string: The tenant id of azure active directory domain service .
 
 ## ApplicationGetEndpoint
 ### Properties
@@ -124,10 +156,41 @@
 * **groupId**: string: The AAD security group id.
 * **groupName**: string: The AAD security group name.
 
+## ClusterConfigurations
+### Properties
+* **configurations**: [ClusterConfigurations](#clusterconfigurations): The configuration object for the specified configuration for the specified cluster.
+
+## ClusterConfigurations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
+
 ## ClusterCreateParametersExtendedTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ClusterCreateParametersExtendedTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ClusterCreateProperties
+### Properties
+* **clusterDefinition**: [ClusterDefinition](#clusterdefinition): The cluster definition.
+* **clusterVersion**: string: The version of the cluster.
+* **computeIsolationProperties**: [ComputeIsolationProperties](#computeisolationproperties): The compute isolation properties.
+* **computeProfile**: [ComputeProfile](#computeprofile): The compute profile.
+* **diskEncryptionProperties**: [DiskEncryptionProperties](#diskencryptionproperties): The disk encryption properties.
+* **encryptionInTransitProperties**: [EncryptionInTransitProperties](#encryptionintransitproperties): The encryption-in-transit properties.
+* **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties): The cluster kafka rest proxy configuration.
+* **minSupportedTlsVersion**: string: The minimal supported tls version.
+* **networkProperties**: [NetworkProperties](#networkproperties): The network properties.
+* **osType**: 'Linux' | 'Windows' | string: The type of operating system.
+* **privateLinkConfigurations**: [PrivateLinkConfiguration](#privatelinkconfiguration)[]: The private link configurations.
+* **securityProfile**: [SecurityProfile](#securityprofile): The security profile.
+* **storageProfile**: [StorageProfile](#storageprofile): The storage profile.
+* **tier**: 'Premium' | 'Standard' | string: The cluster tier.
 
 ## ClusterCreatePropertiesOrClusterGetProperties
 ### Properties
@@ -155,6 +218,25 @@
 * **securityProfile**: [SecurityProfile](#securityprofile): The security profile.
 * **storageProfile**: [StorageProfile](#storageprofile): The storage profile.
 * **tier**: 'Premium' | 'Standard' | string: The cluster tier.
+
+## ClusterCreateRequestValidationParameters
+### Properties
+* **fetchAaddsResource**: bool: This indicates whether fetch Aadds resource or not.
+* **identity**: [ClusterIdentity](#clusteridentity): The identity of the cluster, if configured.
+* **location**: string: The location of the cluster.
+* **name**: string: The cluster name.
+* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
+* **tenantId**: string: The tenant id.
+* **type**: string: The resource type.
+* **zones**: string[]: The availability zones.
+
+## ClusterCreateValidationResult
+### Properties
+* **aaddsResourcesDetails**: [AaddsResourceDetails](#aaddsresourcedetails)[]: The Azure active directory domain service resource details.
+* **estimatedCreationDuration**: string: The estimated creation duration.
+* **validationErrors**: [ValidationErrorInfo](#validationerrorinfo)[]: The validation errors.
+* **validationWarnings**: [ValidationErrorInfo](#validationerrorinfo)[]: The validation warnings.
 
 ## ClusterDefinition
 ### Properties
@@ -203,6 +285,11 @@
 * **disksPerNode**: int: The number of disks per node.
 * **storageAccountType**: string (ReadOnly): ReadOnly. The storage account type. Do not set this value.
 
+## DictionaryOfString
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DiskEncryptionProperties
 ### Properties
 * **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5' | string: Algorithm identifier for encryption, default RSA-OAEP.
@@ -216,6 +303,12 @@
 ### Properties
 * **isEncryptionInTransitEnabled**: bool: Indicates whether or not inter cluster node communication is encrypted in transit.
 
+## EntraUserInfo
+### Properties
+* **displayName**: string: The display name of the Entra user.
+* **objectId**: string: The unique object ID of the Entra user or client ID of the enterprise applications.
+* **upn**: string: The User Principal Name (UPN) of the Entra user. It may be empty in certain cases, such as for enterprise applications.
+
 ## Errors
 ### Properties
 * **code**: string: The error code.
@@ -225,6 +318,13 @@
 ### Properties
 * **excludedServicesConfigId**: string: The config id of excluded services.
 * **excludedServicesList**: string: The list of excluded services.
+
+## GatewaySettings
+### Properties
+* **restAuthCredential.isEnabled**: string (ReadOnly): Indicates whether or not the gateway settings based authorization is enabled.
+* **restAuthCredential.password**: string (ReadOnly): The gateway settings user password.
+* **restAuthCredential.username**: string (ReadOnly): The gateway settings user name.
+* **restAuthEntraUsers**: [EntraUserInfo](#entrauserinfo)[]: List of Entra users for gateway access.
 
 ## HardwareProfile
 ### Properties
@@ -271,6 +371,17 @@
 * **password**: string: The password.
 * **sshProfile**: [SshProfile](#sshprofile): The SSH profile.
 * **username**: string: The username.
+
+## NameAvailabilityCheckRequestParameters
+### Properties
+* **name**: string: The resource name.
+* **type**: string: The resource type
+
+## NameAvailabilityCheckResult
+### Properties
+* **message**: string (ReadOnly): The related message.
+* **nameAvailable**: bool: This indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason of the result.
 
 ## NetworkProperties
 ### Properties
@@ -416,6 +527,13 @@
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 * **tenantId**: string: The tenant id of user assigned identity.
+
+## ValidationErrorInfo
+### Properties
+* **code**: string: The error code.
+* **errorResource**: string: The error resource.
+* **message**: string: The error message.
+* **messageArguments**: string[]: The message arguments
 
 ## VirtualNetworkProfile
 ### Properties

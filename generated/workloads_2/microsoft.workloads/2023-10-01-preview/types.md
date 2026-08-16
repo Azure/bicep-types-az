@@ -38,6 +38,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function importEntities (Microsoft.Workloads/sapDiscoverySites@2023-10-01-preview)
+* **Resource**: Microsoft.Workloads/sapDiscoverySites
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
 ## ConfigurationData
 ### Properties
 * **cpu**: int (ReadOnly): Provide the CPU value of the server. For example, 16, 32 etc.
@@ -52,6 +57,11 @@
 * **totalDiskIops**: int (ReadOnly): Provide the total disk IOPS capacity. Add the disk volume for each individual disk and provide the sum total in this field.
 * **totalDiskSizeGB**: int (ReadOnly): Provide the total disk volume capacity in GB. Add the disk volume for each individual disks and provide the total sum in this field.
 
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
 ## ErrorDefinition
 ### Properties
 * **code**: string (ReadOnly): Service specific error code which serves as the substatus for the HTTP error code.
@@ -59,10 +69,29 @@
 * **message**: string (ReadOnly): Description of the error.
 * **recommendation**: string (ReadOnly): Description of the recommendation.
 
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
 ## ExtendedLocation
 ### Properties
 * **name**: string (Required): The extended location name.
 * **type**: string (Required): The extended location type.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## PerformanceData
 * **Discriminator**: dataSource

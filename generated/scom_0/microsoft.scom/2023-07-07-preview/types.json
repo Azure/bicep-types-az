@@ -1,0 +1,1227 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-_]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Scom/managedInstances"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-07-07-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Scom/managedInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The properties of a SCOM instance resource"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The Azure Active Directory identity of the SCOM instance"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoringInstanceProperties",
+    "properties": {
+      "productVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "SCOM product version to be installed on instance"
+      },
+      "vNetSubnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Virtual Network subnet id on which Aquila instance will be provisioned"
+      },
+      "managementEndpoints": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "List of management server endpoints"
+      },
+      "databaseInstance": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The database instance where the SCOM Operational and Warehouse databases will be stored."
+      },
+      "domainController": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Domain controller details"
+      },
+      "domainUserCredentials": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Domain user which will be used to join VMs to domain and login to VMs."
+      },
+      "gmsaDetails": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Gmsa Details for load balancer and vmss"
+      },
+      "azureHybridBenefit": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The properties to enable Azure Hybrid benefit for various SCOM infrastructure license."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the provisioning state."
+      },
+      "logAnalyticsProperties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Details of Log Analytics workspace and data being ingested."
+      },
+      "operationsStatus": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Gets status of current and latest SCOM managed instance operations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementServerProperties",
+    "properties": {
+      "serverName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Management server Name"
+      },
+      "vmResId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure VM Resource Id of the Management server."
+      },
+      "fqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Management server Fully Qualified Domain Name."
+      },
+      "serverRoles": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Represent whether the Server is a Management Server and/or Web Console Server."
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Management server health state."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseInstanceProperties",
+    "properties": {
+      "databaseInstanceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource Id of existing database instance"
+      },
+      "databaseFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified domain name of existing database instance"
+      },
+      "dwDatabaseName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of warehouse database on database instance"
+      },
+      "operationalDatabaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id of operational database on database instance"
+      },
+      "dwDatabaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id of warehouse database on database instance"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainControllerProperties",
+    "properties": {
+      "domainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified domain name"
+      },
+      "dnsServer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "IP address of DNS server"
+      },
+      "ouPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Organizational Unit path in which the SCOM servers will be present"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainUserCredentials",
+    "properties": {
+      "keyVaultUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Key vault url to get the domain username and password"
+      },
+      "userNameSecret": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Domain user name secret"
+      },
+      "passwordSecret": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Domain Password secret"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GmsaDetails",
+    "properties": {
+      "loadBalancerIP": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Frontend IP configuration for Load Balancer, which should be an available IP in customer VNet"
+      },
+      "gmsaAccount": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "gMSA account under which context all Management Server services will run"
+      },
+      "managementServerGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OnPrem AD Computer Group where we will join VMs for ease of management"
+      },
+      "dnsName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Frontend DNS name for Load Balancer which will be used by Agents to initiate communication"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureHybridBenefitProperties",
+    "properties": {
+      "scomLicenseType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "SCOM license type. Maximize savings by using license you already own"
+      },
+      "windowsServerLicenseType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Specifies that the image or disk that is being used was licensed on-premises. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)"
+      },
+      "sqlServerLicenseType": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "SQL Server license type. Maximize savings by using Azure Hybrid Benefit for SQL Server with license you already own"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureHybridBenefit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureHybridBenefit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureHybridBenefit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsConfiguration",
+    "properties": {
+      "workspaceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource ID of the Log Analytics workspace to be used."
+      },
+      "dataTypes": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The types of data to be ingested to Log Analytics workspace."
+      },
+      "importData": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A one-time optional parameter to import data of last 7 days."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "State"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Event"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Audit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedInstanceOperationStatus",
+    "properties": {
+      "operationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Operation Name"
+      },
+      "operationState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Operation id"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The identity type"
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "System Assigned Identity ObjectId."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory tenant id."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The resource ids of the user assigned identities to use"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory principal id."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory client id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIdentityUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Scom/managedInstances@2023-07-07-preview",
+    "body": {
+      "$ref": "#/4"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Scom/managedInstances/monitoredResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-07-07-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Scom/managedInstances/monitoredResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "The properties of a monitored resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResourceProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ArmId of the monitored resource."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Location of the monitored resource."
+      },
+      "computerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ComputerName of the monitored resource."
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The domain name associated with the monitored resource."
+      },
+      "managementServerEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The management server endpoint to which the monitored resource is directed."
+      },
+      "healthStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The health status of the monitored resource."
+      },
+      "connectionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The connection status of the monitored resource."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the monitored resource agent version."
+      },
+      "installType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Install type of monitored resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Scom/managedInstances/monitoredResources@2023-07-07-preview",
+    "body": {
+      "$ref": "#/55"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Scom/managedInstances/managedGateways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-07-07-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Scom/managedInstances/managedGateways",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "The properties of a gateway resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedGatewayProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ArmId of the gateway to be monitored."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Location of the gateway to be monitored."
+      },
+      "computerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ComputerName of the gateway to be monitored."
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The domain name associated with the gateway to be monitored."
+      },
+      "managementServerEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The management server endpoint to which the gateway is directed."
+      },
+      "healthStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The health status of the gateway resource."
+      },
+      "connectionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The connection status of the gateway resource."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the gateway resource."
+      },
+      "installType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Install type of gateway resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Scom/managedInstances/managedGateways@2023-07-07-preview",
+    "body": {
+      "$ref": "#/60"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScalingProperties",
+    "properties": {
+      "serverCount": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Required management server count"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SetServerCountResponseProperties",
+    "properties": {
+      "serverCount": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Management server count"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setServerCount",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/65"
+    },
+    "input": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchServersResponseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the patch operation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "patchServers",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/22"
+    },
+    "input": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnlinkLogAnalyticsResponseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the unlink operation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlinkLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsUpdateConfiguration",
+    "properties": {
+      "dataTypes": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The types of data to be ingested to Log Analytics workspace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "State"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Event"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Audit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateLogAnalytics",
+    "resourceType": "Microsoft.Scom/managedInstances",
+    "apiVersion": "2023-07-07-preview",
+    "output": {
+      "$ref": "#/73"
+    },
+    "input": {
+      "$ref": "#/73"
+    }
+  }
+]

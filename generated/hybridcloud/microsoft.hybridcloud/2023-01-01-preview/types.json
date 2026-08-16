@@ -503,5 +503,123 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveredResources",
+    "properties": {
+      "resourceFilter": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Remote cloud resource filter."
+      },
+      "discoveredResources": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "List of discovered remote cloud resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceFilter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Remote Resource name to filter on."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Remote Resource type to filter on."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Remote Resource location/region to filter on."
+      },
+      "tag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Remote Resource tags to filter on in key:value format."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveredResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Remote cloud resource identifier"
+      },
+      "bodyContentType": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Content type of the cloud resource body."
+      },
+      "body": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Properties of the remote cloud resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Xml"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Json"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discoverResources",
+    "resourceType": "Microsoft.HybridCloud/cloudConnectors",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/42"
+    }
   }
 ]

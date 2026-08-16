@@ -41,6 +41,11 @@
 * **ApiVersion**: 2020-07-01
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
 
+## Function vmIngestionDetails (Microsoft.Elastic/monitors@2020-07-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2020-07-01
+* **Output**: [VMIngestionDetailsResponse](#vmingestiondetailsresponse)
+
 ## CompanyInfo
 ### Properties
 * **business**: string {maxLength: 64}: Business of the company
@@ -151,6 +156,11 @@
 ### Properties
 * **nextLink**: string: Link to the next Vm resource Id, if any.
 * **value**: [VMResources](#vmresources)[]: Results of a list operation.
+
+## VMIngestionDetailsResponse
+### Properties
+* **cloudId**: string: The cloudId of given Elastic monitor resource.
+* **ingestionKey**: string {sensitive}: Ingestion details to install agent on given VM.
 
 ## VMResources
 ### Properties

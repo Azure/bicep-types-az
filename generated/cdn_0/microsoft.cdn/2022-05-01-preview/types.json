@@ -11617,5 +11617,906 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UsagesListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1112"
+        },
+        "flags": 0,
+        "description": "The list of resource usages."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Usage",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource identifier."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/1110"
+        },
+        "flags": 1,
+        "description": "An enum describing the unit of measurement."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The current value of the usage."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The limit of usage."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/1111"
+        },
+        "flags": 1,
+        "description": "The name of the type of usage."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1109"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UsageName",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A string describing the resource name."
+      },
+      "localizedValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A localized string describing the resource name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "usages",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckHostNameAvailabilityInput",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name to validate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkHostNameAvailability",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1115"
+    },
+    "input": {
+      "$ref": "#/1114"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SsoUri",
+    "properties": {
+      "ssoUriValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI used to login to the supplemental portal."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSsoUri",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportedOptimizationTypesListResult",
+    "properties": {
+      "supportedOptimizationTypes": {
+        "type": {
+          "$ref": "#/1126"
+        },
+        "flags": 2,
+        "description": "Supported optimization types for a profile."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralWebDelivery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralMediaStreaming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VideoOnDemandMediaStreaming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LargeFileDownload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DynamicSiteAcceleration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1120"
+      },
+      {
+        "$ref": "#/1121"
+      },
+      {
+        "$ref": "#/1122"
+      },
+      {
+        "$ref": "#/1123"
+      },
+      {
+        "$ref": "#/1124"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSupportedOptimizationTypes",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsageListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1132"
+        },
+        "flags": 2,
+        "description": "List of resource usages."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to get the next set of custom domain objects if there are any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsage",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type for which the usage is provided."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/1131"
+        },
+        "flags": 2,
+        "description": "Unit of the usage. e.g. count."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Actual value of usage on the specified resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Quota of the specified resource type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1130"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1129"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1128"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AfdPurgeParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/1135"
+        },
+        "flags": 1,
+        "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
+      },
+      "domains": {
+        "type": {
+          "$ref": "#/1136"
+        },
+        "flags": 0,
+        "description": "List of domains."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "usages",
+    "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateCustomDomainInput",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateCustomDomainOutput",
+    "properties": {
+      "customDomainValidated": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Indicates whether the custom domain is valid or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the custom domain is not valid."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message describing why the custom domain is not valid."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCustomDomain",
+    "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1139"
+    },
+    "input": {
+      "$ref": "#/1138"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "usages",
+    "resourceType": "Microsoft.Cdn/profiles/originGroups",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "usages",
+    "resourceType": "Microsoft.Cdn/profiles/ruleSets",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Endpoint",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/838"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties required to create an endpoint."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1144"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Read only system data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1143"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1143"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PurgeParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/1148"
+        },
+        "flags": 1,
+        "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/1150"
+        },
+        "flags": 1,
+        "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCustomDomain",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1139"
+    },
+    "input": {
+      "$ref": "#/1138"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1128"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1154"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties of the custom domain to create."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Read only system data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      },
+      "resourceState": {
+        "type": {
+          "$ref": "#/1158"
+        },
+        "flags": 2,
+        "description": "Resource status of the custom domain."
+      },
+      "customHttpsProvisioningState": {
+        "type": {
+          "$ref": "#/1164"
+        },
+        "flags": 2,
+        "description": "Provisioning status of the custom domain."
+      },
+      "customHttpsProvisioningSubstate": {
+        "type": {
+          "$ref": "#/1175"
+        },
+        "flags": 2,
+        "description": "Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step."
+      },
+      "customHttpsParameters": {
+        "type": {
+          "$ref": "#/970"
+        },
+        "flags": 0,
+        "description": "Certificate parameters for securing custom HTTPS"
+      },
+      "validationData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/1181"
+        },
+        "flags": 2,
+        "description": "Provisioning status of Custom Https of the custom domain."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1155"
+      },
+      {
+        "$ref": "#/1156"
+      },
+      {
+        "$ref": "#/1157"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1159"
+      },
+      {
+        "$ref": "#/1160"
+      },
+      {
+        "$ref": "#/1161"
+      },
+      {
+        "$ref": "#/1162"
+      },
+      {
+        "$ref": "#/1163"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmittingDomainControlValidationRequest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingDomainControlValidationREquestApproval"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestApproved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestRejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestTimedOut"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IssuingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeployingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeployed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1165"
+      },
+      {
+        "$ref": "#/1166"
+      },
+      {
+        "$ref": "#/1167"
+      },
+      {
+        "$ref": "#/1168"
+      },
+      {
+        "$ref": "#/1169"
+      },
+      {
+        "$ref": "#/1170"
+      },
+      {
+        "$ref": "#/1171"
+      },
+      {
+        "$ref": "#/1172"
+      },
+      {
+        "$ref": "#/1173"
+      },
+      {
+        "$ref": "#/1174"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1176"
+      },
+      {
+        "$ref": "#/1177"
+      },
+      {
+        "$ref": "#/1178"
+      },
+      {
+        "$ref": "#/1179"
+      },
+      {
+        "$ref": "#/1180"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1153"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1153"
+    },
+    "input": {
+      "$ref": "#/970"
+    }
   }
 ]

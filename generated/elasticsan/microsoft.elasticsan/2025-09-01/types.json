@@ -2001,5 +2001,80 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeNameList",
+    "properties": {
+      "volumeNames": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 1,
+        "description": "array of volume names"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreValidationResponse",
+    "properties": {
+      "validationStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "a status value indicating success or failure of validation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "preBackup",
+    "resourceType": "Microsoft.ElasticSan/elasticSans/volumegroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/179"
+    },
+    "input": {
+      "$ref": "#/177"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskSnapshotList",
+    "properties": {
+      "diskSnapshotIds": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 1,
+        "description": "array of DiskSnapshot ARM IDs"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "preRestore",
+    "resourceType": "Microsoft.ElasticSan/elasticSans/volumegroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/179"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
   }
 ]

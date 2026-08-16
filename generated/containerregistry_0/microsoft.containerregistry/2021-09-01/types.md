@@ -52,6 +52,11 @@
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getCallbackConfig (Microsoft.ContainerRegistry/registries/webhooks@2021-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2021-09-01
+* **Output**: [CallbackConfig](#callbackconfig)
+
 ## Function listCredentials (Microsoft.ContainerRegistry/registries@2021-09-01)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2021-09-01
@@ -62,9 +67,30 @@
 * **ApiVersion**: 2021-09-01
 * **Output**: [EventListResult](#eventlistresult)
 
+## Function ping (Microsoft.ContainerRegistry/registries/webhooks@2021-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2021-09-01
+* **Output**: [EventInfo](#eventinfo)
+
+## Function regenerateCredential (Microsoft.ContainerRegistry/registries@2021-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2021-09-01
+* **Input**: [RegenerateCredentialParameters](#regeneratecredentialparameters)
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
 ## Actor
 ### Properties
 * **name**: string: The subject or username associated with the request context that generated the event.
+
+## CallbackConfig
+### Properties
+* **customHeaders**: [CallbackConfigCustomHeaders](#callbackconfigcustomheaders): Custom headers that will be added to the webhook notifications.
+* **serviceUri**: string (Required): The service URI for the webhook to post notifications.
+
+## CallbackConfigCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## EncryptionProperty
 ### Properties
@@ -86,6 +112,10 @@
 * **source**: [Source](#source): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
 * **target**: [Target](#target): The target of the event.
 * **timestamp**: string: The time at which the event occurred.
+
+## EventInfo
+### Properties
+* **id**: string: The event ID.
 
 ## EventListResult
 ### Properties
@@ -189,6 +219,10 @@ dictionary key references will be ARM resource ids in the form:
 ## QuarantinePolicy
 ### Properties
 * **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+
+## RegenerateCredentialParameters
+### Properties
+* **name**: 'password' | 'password2' (Required): Specifies name of the password which should be regenerated -- password or password2.
 
 ## RegistryListCredentialsResult
 ### Properties

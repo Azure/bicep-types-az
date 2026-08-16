@@ -8471,6 +8471,1094 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegionForOnlineOffline",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cosmos DB region, with spaces between words and each word capitalized."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountListReadOnlyKeysResult",
+    "properties": {
+      "primaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the primary read-only key."
+      },
+      "secondaryReadonlyMasterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64 encoded value of the secondary read-only key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readonlykeys",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/553"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseAccountRegenerateKeyParameters",
+    "properties": {
+      "keyKind": {
+        "type": {
+          "$ref": "#/560"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primaryReadonly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondaryReadonly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/557"
+      },
+      {
+        "$ref": "#/558"
+      },
+      {
+        "$ref": "#/559"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetResults",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/562"
+        },
+        "flags": 0,
+        "description": "The properties of an Azure Cosmos DB resource throughput"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the ARM resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the ARM resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource group to which the resource belongs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/564"
+        },
+        "flags": 0,
+        "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetProperties",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/563"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThroughputSettingsGetPropertiesResource",
+    "properties": {
+      "throughput": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both."
+      },
+      "autoscaleSettings": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both."
+      },
+      "minimumThroughput": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The minimum throughput of the resource"
+      },
+      "offerReplacePending": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The throughput replace is pending"
+      },
+      "_rid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A system generated property. A unique identifier."
+      },
+      "_ts": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "A system generated property that denotes the last updated timestamp of the resource."
+      },
+      "_etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A system generated property representing the resource etag required for optimistic concurrency control."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetrieveThroughputParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/568"
+        },
+        "flags": 1,
+        "description": "Properties to retrieve throughput parameters object"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the ARM resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the ARM resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource group to which the resource belongs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/572"
+        },
+        "flags": 0,
+        "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetrieveThroughputProperties",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 1,
+        "description": "The standard JSON format of a resource throughput"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetrieveThroughputPropertiesResource",
+    "properties": {
+      "physicalPartitionIds": {
+        "type": {
+          "$ref": "#/571"
+        },
+        "flags": 1,
+        "description": "Array of PhysicalPartitionId objects."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionId",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id of a physical partition"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/570"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionThroughputInfoResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/574"
+        },
+        "flags": 0,
+        "description": "The properties of an Azure Cosmos DB PhysicalPartitionThroughputInfoResult object"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the ARM resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the ARM resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource group to which the resource belongs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/578"
+        },
+        "flags": 0,
+        "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionThroughputInfoResultProperties",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/575"
+        },
+        "flags": 0,
+        "description": "properties of physical partition throughput info"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionThroughputInfoResultPropertiesResource",
+    "properties": {
+      "physicalPartitionThroughputInfo": {
+        "type": {
+          "$ref": "#/577"
+        },
+        "flags": 0,
+        "description": "Array of physical partition throughput info objects"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionThroughputInfoResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id of a physical partition"
+      },
+      "throughput": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "Throughput of a physical partition"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveThroughputDistribution",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/567"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedistributeThroughputParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 1,
+        "description": "Properties to redistribute throughput parameters object"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the ARM resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the ARM resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource group to which the resource belongs."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/589"
+        },
+        "flags": 0,
+        "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedistributeThroughputProperties",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/582"
+        },
+        "flags": 1,
+        "description": "The standard JSON format of a resource throughput"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedistributeThroughputPropertiesResource",
+    "properties": {
+      "throughputPolicy": {
+        "type": {
+          "$ref": "#/586"
+        },
+        "flags": 1,
+        "description": "ThroughputPolicy to apply for throughput redistribution"
+      },
+      "targetPhysicalPartitionThroughputInfo": {
+        "type": {
+          "$ref": "#/587"
+        },
+        "flags": 1,
+        "description": "Array of PhysicalPartitionThroughputInfoResource objects."
+      },
+      "sourcePhysicalPartitionThroughputInfo": {
+        "type": {
+          "$ref": "#/588"
+        },
+        "flags": 1,
+        "description": "Array of PhysicalPartitionThroughputInfoResource objects."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "equal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/583"
+      },
+      {
+        "$ref": "#/584"
+      },
+      {
+        "$ref": "#/585"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redistributeThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MergeParameters",
+    "properties": {
+      "isDryRun": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Specifies whether the operation is a real merge operation or a simulation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionStorageInfoCollection",
+    "properties": {
+      "physicalPartitionStorageInfoCollection": {
+        "type": {
+          "$ref": "#/594"
+        },
+        "flags": 2,
+        "description": "List of physical partitions and their properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PhysicalPartitionStorageInfo",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique identifier of the partition."
+      },
+      "storageInKB": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "The storage in KB for the physical partition."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/593"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "partitionMerge",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/592"
+    },
+    "input": {
+      "$ref": "#/591"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContinuousBackupRestoreLocation",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the continuous backup restore location."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupInformation",
+    "properties": {
+      "continuousBackupInformation": {
+        "type": {
+          "$ref": "#/598"
+        },
+        "flags": 2,
+        "description": "Information about the status of continuous backups."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContinuousBackupInformation",
+    "properties": {
+      "latestRestorableTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The latest restorable timestamp for a resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveContinuousBackupInformation",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/597"
+    },
+    "input": {
+      "$ref": "#/596"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveThroughputDistribution",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/567"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redistributeThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveThroughputDistribution",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/567"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redistributeThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveThroughputDistribution",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/567"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redistributeThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/573"
+    },
+    "input": {
+      "$ref": "#/580"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "partitionMerge",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/592"
+    },
+    "input": {
+      "$ref": "#/591"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveContinuousBackupInformation",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/597"
+    },
+    "input": {
+      "$ref": "#/596"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveContinuousBackupInformation",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/597"
+    },
+    "input": {
+      "$ref": "#/596"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToAutoscale",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateToManualThroughput",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/561"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveContinuousBackupInformation",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/597"
+    },
+    "input": {
+      "$ref": "#/596"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataTransferJobGetResults",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/438"
+        },
+        "flags": 0,
+        "description": "The properties of a DataTransfer Job"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique resource identifier of the database account."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the database account."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/628"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/628"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
+    "apiVersion": "2022-08-15-preview",
+    "output": {
+      "$ref": "#/628"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "NotebookWorkspaceConnectionInfoResult",
     "properties": {
       "authToken": {
@@ -8495,7 +9583,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2022-08-15-preview",
     "output": {
-      "$ref": "#/552"
+      "$ref": "#/632"
     }
   }
 ]

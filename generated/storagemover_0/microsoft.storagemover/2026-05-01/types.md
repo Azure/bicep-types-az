@@ -80,6 +80,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.StorageMover/storageMovers/projects/jobDefinitions/jobRuns' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reconcileJob (Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2026-05-01)
+* **Resource**: Microsoft.StorageMover/storageMovers/projects/jobDefinitions
+* **ApiVersion**: 2026-05-01
+* **Output**: [JobRunResourceId](#jobrunresourceid)
+
+## Function startJob (Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2026-05-01)
+* **Resource**: Microsoft.StorageMover/storageMovers/projects/jobDefinitions
+* **ApiVersion**: 2026-05-01
+* **Output**: [JobRunResourceId](#jobrunresourceid)
+
+## Function stopJob (Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2026-05-01)
+* **Resource**: Microsoft.StorageMover/storageMovers/projects/jobDefinitions
+* **ApiVersion**: 2026-05-01
+* **Output**: [JobRunResourceId](#jobrunresourceid)
+
 ## AgentProperties
 ### Properties
 * **agentStatus**: 'Executing' | 'Offline' | 'Online' | 'Registering' | 'RequiresAttention' | 'Unregistering' | string (ReadOnly): The Agent status.
@@ -286,6 +301,10 @@ created.
 * **targetResourceId**: string (ReadOnly): Fully qualified resource id of of Endpoint. This id may no longer exist.
 * **triggerType**: 'Manual' | 'Scheduled' | string (ReadOnly): Trigger type for the job run. Default is manual.
 * **warnings**: [JobRunWarning](#jobrunwarning)[] (ReadOnly): Warning details.
+
+## JobRunResourceId
+### Properties
+* **jobRunResourceId**: string (ReadOnly): Fully qualified resource id of the Job Run.
 
 ## JobRunWarning
 ### Properties

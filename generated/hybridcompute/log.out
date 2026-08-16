@@ -1,5 +1,5 @@
 Generating types for 'specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -13,7 +13,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/stable/2026-07-15/openapi.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/stable/2026-07-15/openapi.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -24,7 +26,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-06-16-preview/openapi.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-06-16-preview/openapi.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -35,7 +39,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-06-04-preview/openapi.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-06-04-preview/openapi.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -46,7 +52,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-02-12-preview/openapi.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2026-02-12-preview/openapi.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -57,7 +65,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2025-09-16-preview/openapi.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2025-09-16-preview/openapi.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -79,7 +89,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2025-08-21-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -101,7 +113,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2025-06-01/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -123,7 +137,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2025-02-19-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -145,7 +161,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/stable/2025-01-13/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -167,7 +185,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2024-11-10-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
@@ -181,7 +201,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2024-09-10-preview/HybridCompute.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2024-09-10-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -212,7 +234,9 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'R
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -233,7 +257,9 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/stable/2024-07-10/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -264,7 +290,9 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'R
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -295,7 +323,9 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'R
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
@@ -309,7 +339,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2023-10-03-preview/HybridCompute.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2023-10-03-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
@@ -323,7 +355,9 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2023-06-20-preview/HybridCompute.json#/components/schemas/components·f9j7vk·schemas·machineextensionupdateproperties·properties·settings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2023-06-20-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/validateLicense': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
@@ -338,6 +372,7 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2023-03-15-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -357,6 +392,7 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -376,6 +412,7 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
@@ -389,6 +426,7 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/stable/2022-11-10/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
@@ -408,6 +446,7 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -419,11 +458,13 @@ warning | Modeler/MissingType | The schema 'components·f9j7vk·schemas·machine
 warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2022-05-10-preview/HybridCompute.json#/components/schemas/components·1a7hg8v·schemas·machineextensionupdateproperties·properties·protectedsettings·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MachineExtensionInstanceView-status' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2021-12-10-preview/HybridCompute.json:1229:9
@@ -435,6 +476,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Skipping resource action upgradeExtensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/upgradeExtensions': failed to find a response schema
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hybridcompute/resource-manager/Microsoft.HybridCompute/HybridCompute/preview/2021-06-10-preview/HybridCompute.json:706:5

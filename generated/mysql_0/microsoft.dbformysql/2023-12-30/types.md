@@ -114,6 +114,46 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/locations/capabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backupAndExport (Microsoft.DBforMySQL/flexibleServers@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-12-30
+* **Input**: [BackupAndExportRequest](#backupandexportrequest)
+* **Output**: [BackupAndExportResponse](#backupandexportresponse)
+
+## Function checkNameAvailability (Microsoft.DBforMySQL/locations@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2023-12-30
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforMySQL/locations@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2023-12-30
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function cutoverMigration (Microsoft.DBforMySQL/flexibleServers@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-12-30
+* **Output**: [Server](#server)
+
+## Function updateConfigurations (Microsoft.DBforMySQL/flexibleServers@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-12-30
+* **Input**: [ConfigurationListForBatchUpdate](#configurationlistforbatchupdate)
+* **Output**: [ConfigurationListResult](#configurationlistresult)
+
+## Function validateBackup (Microsoft.DBforMySQL/flexibleServers@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-12-30
+* **Output**: [ValidateBackupResponse](#validatebackupresponse)
+
+## Function validateEstimateHighAvailability (Microsoft.DBforMySQL/flexibleServers@2023-12-30)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-12-30
+* **Input**: [HighAvailabilityValidationEstimation](#highavailabilityvalidationestimation)
+* **Output**: [HighAvailabilityValidationEstimation](#highavailabilityvalidationestimation)
+
 ## AdministratorProperties
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string: Type of the sever administrator.
@@ -135,11 +175,79 @@
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
 
+## BackupAndExportRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+* **targetDetails**: [BackupStoreDetails](#backupstoredetails) (Required): Backup Target Store Details
+
+## BackupAndExportResponse
+### Properties
+* **endTime**: string: End time
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Operation progress (0-100).
+* **properties**: [BackupAndExportResponseProperties](#backupandexportresponseproperties): The response properties of a backup and export operation.
+* **startTime**: string: Start time
+* **status**: 'CancelInProgress' | 'Canceled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded': The operation status
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## BackupAndExportResponseProperties
+### Properties
+* **backupMetadata**: string: Metadata related to backup to be stored for restoring resource in key-value pairs.
+* **datasourceSizeInBytes**: int: Size of datasource in bytes
+* **dataTransferredInBytes**: int: Data transferred in bytes
+
+## BackupSettings
+### Properties
+* **backupFormat**: 'CollatedFormat' | 'Raw' | string: Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)
+* **backupName**: string {pattern: "(^[a-z0-9]$)|(^[a-z0-9][a-z0-9-]*[a-z0-9]$)"} (Required): The name of the backup.
+
+## BackupStoreDetails
+* **Discriminator**: objectType
+
+### Base Properties
+
+### FullBackupStoreDetails
+#### Properties
+* **objectType**: 'FullBackupStoreDetails' (Required): Type of the specific object - used for deserializing
+* **sasUriList**: string[] (Required): SASUriList of storage containers where backup data is to be streamed/copied.
+
+
 ## CapabilityPropertiesV2
 ### Properties
 * **supportedFlexibleServerEditions**: [ServerEditionCapabilityV2](#servereditioncapabilityv2)[] (ReadOnly): A list of supported flexible server editions.
 * **supportedGeoBackupRegions**: string[] (ReadOnly): supported geo backup regions
 * **supportedServerVersions**: [ServerVersionCapabilityV2](#serverversioncapabilityv2)[] (ReadOnly): A list of supported server versions.
+
+## Configuration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ConfigurationForBatchUpdate
+### Properties
+* **name**: string: Name of the configuration.
+* **properties**: [ConfigurationForBatchUpdateProperties](#configurationforbatchupdateproperties): The properties can be updated for a configuration.
+
+## ConfigurationForBatchUpdateProperties
+### Properties
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
+
+## ConfigurationListForBatchUpdate
+### Properties
+* **resetAllToDefault**: 'False' | 'True' | string: Whether to reset all server parameters to default.
+* **value**: [ConfigurationForBatchUpdate](#configurationforbatchupdate)[]: The list of server configurations.
+
+## ConfigurationListResult
+### Properties
+* **nextLink**: string: The link used to get the next page of operations.
+* **value**: [Configuration](#configuration)[]: The list of server configurations.
 
 ## ConfigurationProperties
 ### Properties
@@ -168,6 +276,24 @@
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
 
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): name of the subnet
+* **usage**: int (ReadOnly): Number of used delegated subnets
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
@@ -178,6 +304,12 @@
 * **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
 * **standbyAvailabilityZone**: string: Availability zone of the standby server.
 * **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | string (ReadOnly): The state of server high availability.
+
+## HighAvailabilityValidationEstimation
+### Properties
+* **estimatedDowntime**: int (ReadOnly): Estimated seconds of downtime for the deployment.
+* **expectedStandbyAvailabilityZone**: string: Expected Availability zone of the standby server.
+* **scheduledStandbyAvailabilityZone**: string (ReadOnly): Scheduled Availability zone of the standby server.
 
 ## ImportSourceProperties
 ### Properties
@@ -224,6 +356,17 @@
 * **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **reason**: string: Reason for name being unavailable.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
+
 ## Network
 ### Properties
 * **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
@@ -254,6 +397,18 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## Server
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [MySQLServerIdentity](#mysqlserveridentity): The cmk identity for the server.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [MySQLServerSku](#mysqlserversku): The SKU (pricing tier) of the server.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ServerBackupProperties
 ### Properties
@@ -344,4 +499,27 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ValidateBackupResponse
+### Properties
+* **properties**: [ValidateBackupResponseProperties](#validatebackupresponseproperties): The response properties of a pre backup operation.
+
+## ValidateBackupResponseProperties
+### Properties
+* **numberOfContainers**: int: Estimated no of storage containers required for resource data to be backed up.
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkResourceId**: string: Virtual network resource id.
+
+## VirtualNetworkSubnetUsageResult
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly): A list of delegated subnet usage
+* **location**: string (ReadOnly): The location name.
+* **subscriptionId**: string (ReadOnly): The subscription id.
 

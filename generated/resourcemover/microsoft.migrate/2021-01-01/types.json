@@ -1700,5 +1700,525 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrepareRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status of the operation. ARM expects the terminal status to be one of Succeeded/ Failed/ Canceled. All other values imply that the operation is still running."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Error stating all error details for the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 2,
+        "description": "Custom data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "The operation error info."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveErrorInfo",
+    "properties": {
+      "moveResources": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 2,
+        "description": "The affected move resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AffectedMoveResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The affected move resource id."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The affected move resource source id."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 2,
+        "description": "The affected move resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/135"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/135"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/133"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepare",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateMove",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commit",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscardRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discard",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/153"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolveDependencies",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkRemoveRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bulkRemove",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/160"
+    }
   }
 ]

@@ -2434,5 +2434,252 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartStreamingJobParameters",
+    "properties": {
+      "outputStartMode": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time."
+      },
+      "outputStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JobStartTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LastOutputEventTime"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTestStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of the test operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 2,
+        "description": "Describes the error that occurred."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorResponse",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code associated with the error that occurred."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Describes the error in detail."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/inputs",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/outputs",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/67"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "test",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FunctionRetrieveDefaultDefinitionParameters",
+    "discriminator": "bindingType",
+    "baseProperties": {},
+    "elements": {
+      "Microsoft.MachineLearning/WebService": {
+        "$ref": "#/153"
+      },
+      "Microsoft.StreamAnalytics/JavascriptUdf": {
+        "$ref": "#/157"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningWebServiceFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with an Azure Machine learning web service."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureMachineLearningWebServiceFunctionBindingRetrievalProperties",
+    "properties": {
+      "executeEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs"
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.MachineLearning/WebService"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionRetrieveDefaultDefinitionParameters",
+    "properties": {
+      "bindingRetrievalProperties": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "The binding retrieval properties associated with a JavaScript function."
+      },
+      "bindingType": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Indicates the function binding type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JavaScriptFunctionBindingRetrievalProperties",
+    "properties": {
+      "script": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'."
+      },
+      "udfType": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "The function type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scalar"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StreamAnalytics/JavascriptUdf"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveDefaultDefinition",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/152"
+    }
   }
 ]

@@ -747,5 +747,56 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryPerformanceInsightResetDataResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Indicates result of the operation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "operation message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetQueryPerformanceInsightData",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/42"
+    }
   }
 ]

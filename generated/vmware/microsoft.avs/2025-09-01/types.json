@@ -7805,6 +7805,135 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Quota",
+    "properties": {
+      "hostsRemaining": {
+        "type": {
+          "$ref": "#/635"
+        },
+        "flags": 2,
+        "description": "Remaining hosts quota by sku type"
+      },
+      "quotaEnabled": {
+        "type": {
+          "$ref": "#/638"
+        },
+        "flags": 2,
+        "description": "Host quota is active for current subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaHostsRemaining",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/636"
+      },
+      {
+        "$ref": "#/637"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkQuotaAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Trial",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/644"
+        },
+        "flags": 2,
+        "description": "Trial status"
+      },
+      "availableHosts": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Number of trial hosts available"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialAvailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialUsed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrialDisabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/641"
+      },
+      {
+        "$ref": "#/642"
+      },
+      {
+        "$ref": "#/643"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkTrialAvailability",
+    "resourceType": "Microsoft.AVS/locations",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/640"
+    },
+    "input": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getVcfLicense",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
       "nsxtUsername": {
@@ -7843,7 +7972,7 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/634"
+      "$ref": "#/647"
     }
   },
   {
@@ -7852,7 +7981,7 @@
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/639"
+          "$ref": "#/652"
         },
         "flags": 0,
         "description": "Zone and associated hosts info"
@@ -7865,7 +7994,7 @@
     "properties": {
       "hosts": {
         "type": {
-          "$ref": "#/638"
+          "$ref": "#/651"
         },
         "flags": 2,
         "description": "List of hosts belonging to the availability zone in a cluster"
@@ -7888,7 +8017,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/637"
+      "$ref": "#/650"
     }
   },
   {
@@ -7897,7 +8026,225 @@
     "resourceType": "Microsoft.AVS/privateClouds/clusters",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/636"
+      "$ref": "#/649"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProperties",
+    "resourceType": "Microsoft.AVS/privateClouds/licenses",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/263"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Maintenance",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateChecks",
+    "resourceType": "Microsoft.AVS/privateClouds/maintenances",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/655"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceReschedule",
+    "properties": {
+      "rescheduleTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "reschedule time"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "rescheduling reason"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reschedule",
+    "resourceType": "Microsoft.AVS/privateClouds/maintenances",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/655"
+    },
+    "input": {
+      "$ref": "#/657"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceSchedule",
+    "properties": {
+      "scheduleTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "schedule time"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "scheduling message"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "schedule",
+    "resourceType": "Microsoft.AVS/privateClouds/maintenances",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/655"
+    },
+    "input": {
+      "$ref": "#/659"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Output"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/661"
+      },
+      {
+        "$ref": "#/662"
+      },
+      {
+        "$ref": "#/663"
+      },
+      {
+        "$ref": "#/664"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/665"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScriptExecution",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExecutionLogs",
+    "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/667"
+    },
+    "input": {
+      "$ref": "#/666"
     }
   }
 ]

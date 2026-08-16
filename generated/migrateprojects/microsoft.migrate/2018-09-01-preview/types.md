@@ -24,6 +24,23 @@
 * **properties**: [SolutionProperties](#solutionproperties): Gets or sets the properties of the solution.
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getConfig (Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects/solutions
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: [SolutionConfig](#solutionconfig)
+
+## Function refreshSummary (Microsoft.Migrate/migrateProjects@2018-09-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2018-09-01-preview
+* **Input**: [RefreshSummaryInput](#refreshsummaryinput)
+* **Output**: [RefreshSummaryResult](#refreshsummaryresult)
+
+## Function registerTool (Microsoft.Migrate/migrateProjects@2018-09-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects
+* **ApiVersion**: 2018-09-01-preview
+* **Input**: [RegisterToolInput](#registertoolinput)
+* **Output**: [RegistrationResult](#registrationresult)
+
 ## MigrateProjectProperties
 ### Properties
 * **lastSummaryRefreshedTime**: string (ReadOnly): Gets the last time the project summary was refreshed.
@@ -67,6 +84,26 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RefreshSummaryInput
+### Properties
+* **goal**: 'Databases' | 'Servers' | string: Gets or sets the goal for which summary needs to be refreshed.
+
+## RefreshSummaryResult
+### Properties
+* **isRefreshed**: bool: Gets or sets a value indicating whether the migrate project summary is refreshed.
+
+## RegisterToolInput
+### Properties
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string: Gets or sets the tool to be registered.
+
+## RegistrationResult
+### Properties
+* **isRegistered**: bool: Gets or sets a value indicating whether the tool is registered or not.
+
+## SolutionConfig
+### Properties
+* **publisherSasUri**: string: Gets or sets the publisher sas uri for the solution.
 
 ## SolutionDetails
 ### Properties

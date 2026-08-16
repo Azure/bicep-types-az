@@ -18,6 +18,16 @@
 * **ApiVersion**: 2017-03-01
 * **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
 
+## Function regenerateCredential (Microsoft.ContainerRegistry/registries@2017-03-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2017-03-01
+* **Input**: [RegenerateCredentialParameters](#regeneratecredentialparameters)
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
+## RegenerateCredentialParameters
+### Properties
+* **name**: 'password' | 'password2' (Required): Specifies name of the password which should be regenerated -- password or password2.
+
 ## RegistryCreateParametersTags
 ### Properties
 ### Additional Properties

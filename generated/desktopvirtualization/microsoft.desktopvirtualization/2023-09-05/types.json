@@ -4574,5 +4574,228 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrieveRegistrationToken",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2023-09-05",
+    "output": {
+      "$ref": "#/229"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MsixImageURI",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URI to Image"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImageList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/349"
+        },
+        "flags": 0,
+        "description": "List of MSIX package properties from give MSIX Image."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Link to the next page of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImage",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/346"
+        },
+        "flags": 0,
+        "description": "Detailed properties for ExpandMsixImage"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpandMsixImageProperties",
+    "properties": {
+      "packageAlias": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Alias of MSIX Package."
+      },
+      "imagePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "VHD/CIM image path on Network Share."
+      },
+      "packageName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Name from appxmanifest.xml."
+      },
+      "packageFamilyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name."
+      },
+      "packageFullName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Full Name from appxmanifest.xml."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "User friendly Name to be displayed in the portal."
+      },
+      "packageRelativePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Relative Path to the package inside the image."
+      },
+      "isRegularRegistration": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Specifies how to register Package in feed."
+      },
+      "isActive": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Make this version of the package the active one across the hostpool."
+      },
+      "packageDependencies": {
+        "type": {
+          "$ref": "#/347"
+        },
+        "flags": 0,
+        "description": "List of package dependencies."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Package Version found in the appxmanifest.xml."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Date Package was last updated, found in the appxmanifest.xml."
+      },
+      "packageApplications": {
+        "type": {
+          "$ref": "#/348"
+        },
+        "flags": 0,
+        "description": "List of package applications."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/273"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/345"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "expandMsixImage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2023-09-05",
+    "output": {
+      "$ref": "#/344"
+    },
+    "input": {
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SendMessage",
+    "properties": {
+      "messageTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Title of message."
+      },
+      "messageBody": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Body of message."
+      }
+    }
   }
 ]

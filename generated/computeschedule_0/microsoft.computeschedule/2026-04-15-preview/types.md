@@ -1,0 +1,1002 @@
+# Microsoft.ComputeSchedule @ 2026-04-15-preview
+
+## Resource Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ScheduledActionProperties](#scheduledactionproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.ComputeSchedule/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ComputeSchedule/scheduledActions/occurrences@2026-04-15-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2026-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}"} (Required, DeployTimeConstant): The resource name
+* **properties**: [OccurrenceProperties](#occurrenceproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ComputeSchedule/scheduledActions/occurrences' (ReadOnly, DeployTimeConstant): The resource type
+
+## Function attachResources (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ResourceAttachRequest](#resourceattachrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function cancel (Microsoft.ComputeSchedule/scheduledActions/occurrences@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions/occurrences
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [CancelOccurrenceRequest](#canceloccurrencerequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function cancelNextOccurrence (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [CancelOccurrenceRequest](#canceloccurrencerequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function delay (Microsoft.ComputeSchedule/scheduledActions/occurrences@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions/occurrences
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [DelayRequest](#delayrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function detachResources (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ResourceDetachRequest](#resourcedetachrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function patchResources (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ResourcePatchRequest](#resourcepatchrequest)
+* **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function triggerManualOccurrence (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Output**: [Occurrence](#occurrence)
+
+## Function virtualMachinesCancelOperations (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [CancelOperationsRequest](#canceloperationsrequest)
+* **Output**: [CancelOperationsResponse](#canceloperationsresponse)
+
+## Function virtualMachinesExecuteCreate (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteCreateRequest](#executecreaterequest)
+* **Output**: [CreateResourceOperationResponse](#createresourceoperationresponse)
+
+## Function virtualMachinesExecuteCreateFlex (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteCreateFlexRequest](#executecreateflexrequest)
+* **Output**: [CreateFlexResourceOperationResponse](#createflexresourceoperationresponse)
+
+## Function virtualMachinesExecuteDeallocate (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteDeallocateRequest](#executedeallocaterequest)
+* **Output**: [DeallocateResourceOperationResponse](#deallocateresourceoperationresponse)
+
+## Function virtualMachinesExecuteDelete (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteDeleteRequest](#executedeleterequest)
+* **Output**: [DeleteResourceOperationResponse](#deleteresourceoperationresponse)
+
+## Function virtualMachinesExecuteHibernate (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteHibernateRequest](#executehibernaterequest)
+* **Output**: [HibernateResourceOperationResponse](#hibernateresourceoperationresponse)
+
+## Function virtualMachinesExecuteStart (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [ExecuteStartRequest](#executestartrequest)
+* **Output**: [StartResourceOperationResponse](#startresourceoperationresponse)
+
+## Function virtualMachinesGetOperationErrors (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [GetOperationErrorsRequest](#getoperationerrorsrequest)
+* **Output**: [GetOperationErrorsResponse](#getoperationerrorsresponse)
+
+## Function virtualMachinesGetOperationStatus (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [GetOperationStatusRequest](#getoperationstatusrequest)
+* **Output**: [GetOperationStatusResponse](#getoperationstatusresponse)
+
+## Function virtualMachinesSubmitDeallocate (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [SubmitDeallocateRequest](#submitdeallocaterequest)
+* **Output**: [DeallocateResourceOperationResponse](#deallocateresourceoperationresponse)
+
+## Function virtualMachinesSubmitHibernate (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [SubmitHibernateRequest](#submithibernaterequest)
+* **Output**: [HibernateResourceOperationResponse](#hibernateresourceoperationresponse)
+
+## Function virtualMachinesSubmitStart (Microsoft.ComputeSchedule/locations@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/locations
+* **ApiVersion**: 2026-04-15-preview
+* **Input**: [SubmitStartRequest](#submitstartrequest)
+* **Output**: [StartResourceOperationResponse](#startresourceoperationresponse)
+
+## AdditionalCapabilities
+### Properties
+* **hibernationEnabled**: bool: The flag that enables or disables hibernation capability on the VM.
+* **ultraSSDEnabled**: bool: The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
+
+## AdditionalUnattendContent
+### Properties
+* **componentName**: 'Microsoft-Windows-Shell-Setup': The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+* **content**: string: Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+* **passName**: 'OobeSystem': The pass name. Currently, the only allowable value is OobeSystem.
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands' | string: Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+
+## AllInstancesDown
+### Properties
+* **automaticallyApprove**: bool: Specifies if Scheduled Events should be auto-approved when all instances are down. Its default value is true.
+
+## ApiEntityReference
+### Properties
+* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
+## ApplicationProfile
+### Properties
+* **galleryApplications**: [VMGalleryApplication](#vmgalleryapplication)[]: Specifies the gallery applications that should be made available to the VM
+
+## AzureCoreFoundationsError
+### Properties
+* **code**: string (Required): One of a server-defined set of error codes.
+* **details**: [AzureCoreFoundationsError](#azurecorefoundationserror)[]: An array of details about specific errors that led to this reported error.
+* **innererror**: [AzureCoreFoundationsInnerError](#azurecorefoundationsinnererror): An object containing more specific information than the current object about the error.
+* **message**: string (Required): A human-readable representation of the error.
+* **target**: string: The target of the error.
+
+## AzureCoreFoundationsInnerError
+### Properties
+* **code**: string: One of a server-defined set of error codes.
+* **innererror**: [AzureCoreFoundationsInnerError](#azurecorefoundationsinnererror): Inner error.
+
+## AzureResourceManagerCommonTypesExtendedLocation
+### Properties
+* **name**: string (Required): The name of the extended location.
+* **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
+
+## BootDiagnostics
+### Properties
+* **enabled**: bool: Whether boot diagnostics should be enabled on the Virtual Machine.
+* **storageUri**: string: Uri of the storage account to use for placing the console output and screenshot. If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+
+## BulkActionVMExtension
+### Properties
+* **name**: string (Required): The name of the virtual machine extension.
+* **properties**: [BulkActionVmExtensionProperties](#bulkactionvmextensionproperties) (Required): Properties of the virtual machine extension.
+
+## BulkActionVmExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
+* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
+* **protectedSettings**: [BulkActionVmExtensionPropertiesProtectedSettings](#bulkactionvmextensionpropertiesprotectedsettings): The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference): The extensions protected settings that are passed by reference, and consumed from key vault
+* **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: [BulkActionVmExtensionPropertiesSettings](#bulkactionvmextensionpropertiessettings): JSON formatted public settings for the extension.
+* **suppressFailures**: bool: Indicates whether failures stemming from the extension will be suppressed (Operational failures such as not connecting to the VM will not be suppressed regardless of this value). The default is false.
+* **type**: string: Specifies the type of the extension; an example is 'CustomScriptExtension'.
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
+
+## BulkActionVmExtensionPropertiesProtectedSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## BulkActionVmExtensionPropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## BulkActionVMProperties
+### Properties
+* **additionalCapabilities**: [AdditionalCapabilities](#additionalcapabilities): Specifies additional capabilities enabled or disabled on the virtual machine.
+* **applicationProfile**: [ApplicationProfile](#applicationprofile): Specifies the gallery applications that should be made available to the VM.
+* **capacityReservation**: [CapacityReservationProfile](#capacityreservationprofile): Specifies information about the capacity reservation that is used to allocate virtual machine. Minimum compute api-version: 2021-04-01.
+* **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. Minimum compute api-version: 2015-06-15.
+* **extensionsTimeBudget**: string: Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). Minimum compute api-version: 2020-06-01.
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware profile for the virtual machine.
+* **licenseType**: string: Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
+* **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network interfaces of the virtual machine.
+* **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
+* **scheduledEventsPolicy**: [ScheduledEventsPolicy](#scheduledeventspolicy): Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related configurations for the virtual machine.
+* **scheduledEventsProfile**: [ScheduledEventsProfile](#scheduledeventsprofile): Specifies Scheduled Event related configurations.
+* **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security related profile settings for the virtual machine.
+* **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
+* **userData**: string: UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. Minimum compute api-version: 2021-03-01.
+
+## BulkVMConfiguration
+### Properties
+* **computeApiVersion**: string: Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machines.
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location of the Virtual Machine.
+* **identity**: [VirtualMachineIdentity](#virtualmachineidentity): The identity of the virtual machine, if configured.
+* **name**: string: Identifier for created virtual machine. If not passed, it will be created from resource prefix.
+* **placement**: [Placement](#placement): Placement constraints for virtual machine hardware placement.
+* **plan**: [Plan](#plan): The marketplace image plan used for the virtual machine.
+* **properties**: [BulkActionVMProperties](#bulkactionvmproperties): Specifies the properties of the virtual machine to be created.
+* **resourceGroupName**: string: Resource group name for the virtual machine.
+* **tags**: [BulkVMConfigurationTags](#bulkvmconfigurationtags): Resource tags to apply to the virtual machines created by this bulk action.
+* **vmExtensions**: [BulkActionVMExtension](#bulkactionvmextension)[]: Virtual Machine Extensions Array to be applied to the Virtual Machines.
+* **zones**: string[]: The availability zones.
+
+## BulkVMConfigurationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CancelOccurrenceRequest
+### Properties
+* **resourceIds**: string[] (Required): The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources.
+
+## CancelOperationsRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to cancel operations on
+
+## CancelOperationsResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations that were successfully cancelled
+
+## CapacityReservationProfile
+### Properties
+* **capacityReservationGroup**: [SubResource](#subresource): Specifies the capacity reservation group resource id that should be used for allocating the virtual machine provided enough capacity has been reserved. Please refer to https://aka.ms/CapacityReservation for more details.
+
+## CreateFlexResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the create flex request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the create flex request if no errors exist
+* **type**: string (Required): The type of resources used in the create flex request eg virtual machines
+
+## CreateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the create request eg virtual machines
+
+## DataDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite' | string: Specifies the caching requirements. Possible values are: None, ReadOnly, ReadWrite. The defaulting behavior is: None for Standard storage. ReadOnly for Premium storage.
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Restore' | string (Required): Specifies how the virtual machine disk should be created. Possible values are Attach, FromImage, Empty, Copy, Restore.
+* **deleteOption**: 'Delete' | 'Detach' | string: Specifies whether data disk should be deleted or detached upon VM deletion. Possible values are: Delete, Detach. The default value is set to Detach.
+* **detachOption**: 'ForceDetach' | string: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: ForceDetach. This feature is still in preview. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
+* **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. The property 'diskSizeGB' is the number of bytes x 1024^3 for the disk and the value cannot be larger than 1023.
+* **image**: [VirtualHardDisk](#virtualharddisk): The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+* **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The managed disk parameters.
+* **name**: string: The disk name.
+* **sourceResource**: [ApiEntityReference](#apientityreference): The source resource identifier. It can be a snapshot, or disk restore point from which to create a disk.
+* **toBeDetached**: bool: Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset.
+* **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
+* **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
+
+## DeallocateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the deallocate request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the deallocate request if no errors exist
+* **type**: string (Required): The type of resources used in the deallocate request eg virtual machines
+
+## DelayRequest
+### Properties
+* **delay**: string (Required): The exact time to delay the operations to
+* **resourceIds**: string[] (Required): The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence.
+
+## DeleteResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the delete request eg virtual machines
+
+## DiagnosticsProfile
+### Properties
+* **bootDiagnostics**: [BootDiagnostics](#bootdiagnostics): Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. **NOTE**: If storageUri is being specified then ensure that the storage account is in the same region and subscription as the VM. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.
+
+## DiffDiskSettings
+### Properties
+* **option**: 'Local' | string: Specifies the ephemeral disk settings for operating system disk.
+* **placement**: 'CacheDisk' | 'NvmeDisk' | 'ResourceDisk' | string: Specifies the ephemeral disk placement for operating system disk. Possible values are: CacheDisk, ResourceDisk, NvmeDisk. The defaulting behavior is: CacheDisk if one is configured for the VM size otherwise ResourceDisk or NvmeDisk is used. Minimum api-version for NvmeDisk: 2024-03-01.
+
+## DiskEncryptionSetParameters
+### Properties
+* **id**: string: The ID of the sub-resource.
+
+## DiskEncryptionSettings
+### Properties
+* **diskEncryptionKey**: [KeyVaultSecretReference](#keyvaultsecretreference): Specifies the location of the disk encryption key, which is a Key Vault Secret.
+* **enabled**: bool: Specifies whether disk encryption should be enabled on the virtual machine.
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Specifies the location of the key encryption key in Key Vault.
+
+## EncryptionIdentity
+### Properties
+* **userAssignedIdentityResourceId**: string: Specifies ARM Resource ID of one of the user identities associated with the VM.
+
+## EventGridAndResourceGraph
+### Properties
+* **enable**: bool: Specifies if event grid and resource graph is enabled for Scheduled event related configurations.
+* **scheduledEventsApiVersion**: string: Specifies the api-version to determine which Scheduled Events configuration schema version will be delivered.
+
+## ExecuteCreateFlexRequest
+### Properties
+* **correlationid**: string: Correlationid item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resourceConfigParameters**: [ResourceProvisionFlexPayload](#resourceprovisionflexpayload) (Required): Resource creation payload with flex properties
+
+## ExecuteCreateRequest
+### Properties
+* **correlationid**: string: CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resourceConfigParameters**: [ResourceProvisionPayload](#resourceprovisionpayload) (Required): resource creation payload
+
+## ExecuteDeallocateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteDeleteRequest
+### Properties
+* **correlationid**: string: CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **forceDeletion**: bool: Forced delete resource item
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteHibernateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecuteStartRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+
+## ExecutionParameters
+### Properties
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+
+## FallbackOperationInfo
+### Properties
+* **error**: [ResourceOperationError](#resourceoperationerror): The error code if the fallback operation failed
+* **lastOpType**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string (Required): The last operation type that was performed as a fallback
+* **status**: string (Required): The status of the fallback operation
+
+## FlexProperties
+### Properties
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type for the VMs
+* **priorityProfile**: [PriorityProfile](#priorityprofile) (Required): The priority profile for VM allocation
+* **vmSizeProfiles**: [VmSizeProfile](#vmsizeprofile)[] {minLength: 1, maxLength: 5} (Required): The list of VM size profiles to use for flex creation
+* **zoneAllocationPolicy**: [ZoneAllocationPolicy](#zoneallocationpolicy): The zone allocation policy for distributing VMs across availability zones
+
+## GetOperationErrorsRequest
+### Properties
+* **operationIds**: string[] (Required): The list of operation ids to query errors of
+
+## GetOperationErrorsResponse
+### Properties
+* **results**: [OperationErrorsResult](#operationerrorsresult)[] (Required): An array of operationids and their corresponding errors if any
+
+## GetOperationStatusRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to get the status of
+
+## GetOperationStatusResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations based on their operation ids
+
+## HardwareProfile
+### Properties
+* **vmSize**: string: Specifies the size of the virtual machine. The enum data type is currently deprecated and will be removed by December 23rd 2023. The recommended way to get the list of available sizes is using these APIs: [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes), [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list), [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). The available VM sizes depend on region and availability set.
+* **vmSizeProperties**: [VmSizeProperties](#vmsizeproperties): Specifies the properties for customizing the size of the virtual machine. Minimum api-version: 2021-07-01. This feature is still in preview mode and is not supported for VirtualMachineScaleSet. Please follow the instructions in [VM Customization](https://aka.ms/vmcustomization) for more details.
+
+## HibernateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the Hibernate request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the Hibernate request if no errors exist
+* **type**: string (Required): The type of resources used in the Hibernate request eg virtual machines
+
+## HostEndpointSettings
+### Properties
+* **inVMAccessControlProfileReferenceId**: string: Specifies the InVMAccessControlProfileVersion resource id in the format of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles/{profile}/versions/{version}
+* **mode**: 'Audit' | 'Disabled' | 'Enforce' | string: Specifies the execution mode. In Audit mode, the system acts as if it is enforcing the access control policy, including emitting access denial entries in the logs but it does not actually deny any requests to host endpoints. In Enforce mode, the system will enforce the access control and it is the recommended mode of operation.
+
+## ImageReference
+### Properties
+* **communityGalleryImageId**: string: Specified the community gallery image unique id for vm deployment. This can be fetched from community gallery image GET call.
+* **id**: string: The ID of the sub-resource.
+* **offer**: string: Specifies the offer of the platform image or marketplace image used to create the virtual machine.
+* **publisher**: string: The image publisher.
+* **sharedGalleryImageId**: string: Specified the shared gallery image unique id for vm deployment. This can be fetched from shared gallery image GET call.
+* **sku**: string: The image SKU.
+* **version**: string: Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available. Please do not use field 'version' for gallery image deployment, gallery image should always use 'id' field for deployment, to use 'latest' version of gallery image, just set '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageName}' in the 'id' field without version input.
+
+## KeyVaultKeyReference
+### Properties
+* **keyUrl**: string (Required): The URL referencing a key encryption key in Key Vault.
+* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing the key.
+
+## KeyVaultSecretReference
+### Properties
+* **secretUrl**: string (Required): The URL referencing a secret in a Key Vault.
+* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing the secret.
+
+## LinuxConfiguration
+### Properties
+* **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
+* **enableVMAgentPlatformUpdates**: bool: Indicates whether VMAgent Platform Updates is enabled for the Linux virtual machine. Default value is false.
+* **patchSettings**: [LinuxPatchSettings](#linuxpatchsettings): [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+* **provisionVMAgent**: bool: Indicates whether virtual machine agent should be provisioned on the virtual machine. When this property is not specified in the request body, default behavior is to set it to true. This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+* **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS.
+
+## LinuxPatchSettings
+### Properties
+* **assessmentMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+* **automaticByPlatformSettings**: [LinuxVMGuestPatchAutomaticByPlatformSettings](#linuxvmguestpatchautomaticbyplatformsettings): Specifies additional settings for patch mode AutomaticByPlatform in VM Guest Patching on Linux.
+* **patchMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+
+## LinuxVMGuestPatchAutomaticByPlatformSettings
+### Properties
+* **bypassPlatformSafetyChecksOnUserSchedule**: bool: Enables customer to schedule patching without accidental upgrades
+* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | 'Unknown' | string: Specifies the reboot setting for all AutomaticByPlatform patch installation operations.
+
+## ManagedDiskParameters
+### Properties
+* **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Specifies the customer managed disk encryption set resource id for the managed disk.
+* **id**: string: The ID of the sub-resource.
+* **securityProfile**: [VMDiskSecurityProfile](#vmdisksecurityprofile): Specifies the security profile for the managed disk.
+* **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+
+## NetworkInterfaceReference
+### Properties
+* **id**: string: The ID of the sub-resource.
+* **properties**: [NetworkInterfaceReferenceProperties](#networkinterfacereferenceproperties): Describes a network interface reference properties.
+
+## NetworkInterfaceReferenceProperties
+### Properties
+* **deleteOption**: 'Delete' | 'Detach' | string: Specify what happens to the network interface when the VM is deleted
+* **primary**: bool: Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+
+## NetworkProfile
+### Properties
+* **networkApiVersion**: '2020-11-01' | '2022-11-01' | string: specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+* **networkInterfaceConfigurations**: [VirtualMachineNetworkInterfaceConfiguration](#virtualmachinenetworkinterfaceconfiguration)[]: Specifies the networking configurations that will be used to create the virtual machine networking resources.
+* **networkInterfaces**: [NetworkInterfaceReference](#networkinterfacereference)[]: Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+
+## NotificationProperties
+### Properties
+* **destination**: string (Required): Where the notification should be sent. For email, it should follow email format.
+* **disabled**: bool: Tells if the notification is enabled or not.
+* **language**: 'en-us' | string (Required): The language the notification should be sent on.
+* **type**: 'Email' | string (Required): Type of notification to be sent.
+
+## Occurrence
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [OccurrenceProperties](#occurrenceproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## OccurrenceProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The aggregated provisioning state of the occurrence
+* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): The result for occurrences that achieved a terminal state
+* **scheduledTime**: string (Required, ReadOnly): The time the occurrence is scheduled for. This value can be changed by calling the delay API
+
+## OccurrenceResultSummary
+### Properties
+* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): The summarized status of the resources.
+* **total**: int (Required): The total number of resources that the occurrence was supposed to act on.
+
+## OperationErrorDetails
+### Properties
+* **azureOperationName**: string: The compute operationid of the Start/Deallocate/Hibernate request
+* **crpOperationId**: string: The compute operationid of the Start/Deallocate/Hibernate request
+* **errorCode**: string (Required): The error code of the operation
+* **errorDetails**: string (Required): The error details of the operation
+* **timestamp**: string: The timestamp of the error occurence
+* **timeStamp**: string: The timestamp of the error occurence
+
+## OperationErrorsResult
+### Properties
+* **activationTime**: string: The activation time of a vm operation
+* **completedAt**: string: The completion time of the operation if the operation was completed
+* **creationTime**: string: The creation time of the error result
+* **operationErrors**: [OperationErrorDetails](#operationerrordetails)[]: A list of errors associated with the operationid
+* **operationId**: string: The operationId identifying a vm operation
+* **requestErrorCode**: string: Request level error code
+* **requestErrorDetails**: string: Request level error details
+
+## OSDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite' | string: Specifies the caching requirements. Possible values are: None, ReadOnly, ReadWrite. The defaulting behavior is: None for Standard storage. ReadOnly for Premium storage.
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Restore' | string (Required): Specifies how the virtual machine disk should be created. Possible values are Attach, FromImage. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described.
+* **deleteOption**: 'Delete' | 'Detach' | string: Specifies whether OS Disk should be deleted or detached upon VM deletion. Possible values are: Delete, Detach. The default value is set to Detach. For an ephemeral OS Disk, the default value is set to Delete. The user cannot change the delete option for an ephemeral OS Disk.
+* **diffDiskSettings**: [DiffDiskSettings](#diffdisksettings): Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
+* **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. The property 'diskSizeGB' is the number of bytes x 1024^3 for the disk and the value cannot be larger than 1023.
+* **encryptionSettings**: [DiskEncryptionSettings](#diskencryptionsettings): Specifies the encryption settings for the OS Disk. Minimum compute api-version: 2015-06-15.
+* **image**: [VirtualHardDisk](#virtualharddisk): The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The managed disk parameters.
+* **name**: string: The disk name.
+* **osType**: 'Linux' | 'Windows' | string: This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. Possible values are: Windows, Linux.
+* **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
+* **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
+
+## OSImageNotificationProfile
+### Properties
+* **enable**: bool: Specifies whether the OS Image Scheduled event is enabled or disabled.
+* **notBeforeTimeout**: string: Length of time a Virtual Machine being reimaged or having its OS upgraded will have to potentially approve the OS Image Scheduled Event before the event is auto approved (timed out). The configuration is specified in ISO 8601 format, and the value must be 15 minutes (PT15M)
+
+## OSProfile
+### Properties
+* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+* **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
+* **allowExtensionOperations**: bool: Specifies whether extension operations should be allowed on the virtual machine. This may only be set to False when no extensions are present on the virtual machine.
+* **computerName**: string: Specifies the host OS name of the virtual machine. This name cannot be updated after the VM is created. **Max-length (Windows):** 15 characters. **Max-length (Linux):** 64 characters. For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).
+* **customData**: string: Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. **Note: Do not pass any secrets or passwords in customData property.** This property cannot be updated after the VM is created. The property 'customData' is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/). For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init).
+* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
+* **requireGuestProvisionSignal**: bool: Optional property which must either be set to True or omitted.
+* **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]: Specifies set of certificates that should be installed onto the virtual machine. To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Specifies Windows operating system settings on the virtual machine.
+
+## PatchSettings
+### Properties
+* **assessmentMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+* **automaticByPlatformSettings**: [WindowsVMGuestPatchAutomaticByPlatformSettings](#windowsvmguestpatchautomaticbyplatformsettings): Specifies additional settings for patch mode AutomaticByPlatform in VM Guest Patching on Windows.
+* **enableHotpatching**: bool: Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.
+* **patchMode**: 'AutomaticByOS' | 'AutomaticByPlatform' | 'Manual' | string: Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+
+## Placement
+### Properties
+* **excludeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection.
+* **includeZones**: string[]: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection.
+* **zonePlacementPolicy**: 'Any' | 'Auto' | string: Specifies the policy for resource's placement in availability zone. Possible values are: **Any** (used for Virtual Machines), **Auto** (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation.
+
+## Plan
+### Properties
+* **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
+* **product**: string (Required): The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+* **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+* **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+* **version**: string: The version of the desired product/artifact.
+
+## PriorityProfile
+### Properties
+* **allocationStrategy**: 'CapacityOptimized' | 'LowestPrice' | 'Prioritized' | string: The allocation strategy for VM size selection
+* **type**: 'Regular' | 'Spot' | string: The priority type for VM allocation
+
+## ProxyAgentSettings
+### Properties
+* **addProxyAgentExtension**: bool: Specify whether to implicitly install the ProxyAgent Extension. This option is currently applicable only for Linux Os.
+* **enabled**: bool: Specifies whether ProxyAgent feature should be enabled on the virtual machine or virtual machine scale set.
+* **imds**: [HostEndpointSettings](#hostendpointsettings): Specifies the IMDS endpoint settings while creating the virtual machine or virtual machine scale set. Minimum api-version: 2024-03-01.
+* **keyIncarnationId**: int: Increase the value of this property allows users to reset the key used for securing communication channel between guest and host.
+* **mode**: 'Audit' | 'Enforce' | string: Specifies the mode that ProxyAgent will execute on. Warning: this property has been deprecated, please specify 'mode' under particular hostendpoint setting.
+* **wireServer**: [HostEndpointSettings](#hostendpointsettings): Specifies the Wire Server endpoint settings while creating the virtual machine or virtual machine scale set. Minimum api-version: 2024-03-01.
+
+## PublicIPAddressSku
+### Properties
+* **name**: 'Basic' | 'Standard' | string: Specify public IP sku name
+* **tier**: 'Global' | 'Regional' | string: Specify public IP sku tier
+
+## ResourceAttachRequest
+### Properties
+* **resources**: [ScheduledActionResource](#scheduledactionresource)[] (Required): List of resources to be attached/patched
+
+## ResourceDetachRequest
+### Properties
+* **resources**: string[] (Required): List of resources to be detached
+
+## ResourceOperation
+### Properties
+* **errorCode**: string: Resource level error code if it exists
+* **errorDetails**: string: Resource level error details if they exist
+* **operation**: [ResourceOperationDetails](#resourceoperationdetails): Details of the operation performed on a resource
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg ArmId
+
+## ResourceOperationDetails
+### Properties
+* **completedAt**: string: Time the operation was complete if errors are null
+* **deadline**: string: Deadline for the operation
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: Type of deadline of the operation
+* **fallbackOperationInfo**: [FallbackOperationInfo](#fallbackoperationinfo): Fallback operation details if a fallback was performed
+* **operationId**: string (Required): Operation identifier for the unique operation
+* **opType**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Type of operation performed on the resources
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg ArmId
+* **resourceOperationError**: [ResourceOperationError](#resourceoperationerror): Operation level errors if they exist
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+* **state**: 'Blocked' | 'Cancelled' | 'Executing' | 'Failed' | 'PendingExecution' | 'PendingScheduling' | 'Scheduled' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current state of the operation
+* **subscriptionId**: string: Subscription id attached to the request
+* **timezone**: string: Timezone for the operation
+* **timeZone**: string: Timezone for the operation
+
+## ResourceOperationError
+### Properties
+* **errorCode**: string (Required): Code for the error eg 404, 500
+* **errorDetails**: string (Required): Detailed message about the error
+
+## ResourceOperationResponse
+### Properties
+* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The resource status of for each resource
+* **totalResources**: int (Required): The total number of resources operated on
+
+## ResourcePatchRequest
+### Properties
+* **resources**: [ScheduledActionResource](#scheduledactionresource)[] (Required): The list of resources we watch to patch
+
+## ResourceProvisionFlexPayload
+### Properties
+* **flexProperties**: [FlexProperties](#flexproperties) (Required): The flex properties for flexible VM creation
+* **resourceCount**: int (Required): Number of VMs to be created
+* **resourcePrefix**: string: If resourceOverrides doesn't contain name, service will create name based on prefix and resourceCount
+* **virtualMachineBaseProfile**: [BulkVMConfiguration](#bulkvmconfiguration): JSON object that contains VM properties that are common across all VMs in this batch
+* **virtualMachineOverrides**: [BulkVMConfiguration](#bulkvmconfiguration)[]: JSON array that contains VM properties that should be overridden for each VM in the batch
+
+## ResourceProvisionPayload
+### Properties
+* **resourceCount**: int (Required): Number of VMs to be created
+* **resourcePrefix**: string: if resourceOverrides doesn't contain "name", service will create name based of prefix and ResourceCount e.g. resourceprefix-0,resourceprefix-1..
+* **virtualMachineBaseProfile**: [BulkVMConfiguration](#bulkvmconfiguration): Virtual machine profile object that contains VM properties that are common across all VMs in this batch  (if you want to create 100 VMs in this request, and they all have same vmSize, then include vmSize in baseProfile)
+* **virtualMachineOverrides**: [BulkVMConfiguration](#bulkvmconfiguration)[]: Virtual machine profile array that contains VM properties that needs to be overridden for each VM in the batch (if you want to create 100 VMs, they all need a distinct computerName property, you pass computerNames for each VM in batch in this array), service will merge baseProfile with VM specific overrides and create a merged VMProfile.
+
+## ResourceResultSummary
+### Properties
+* **code**: string (Required): The error code for those resources. In case of success, code is populated with Success.
+* **count**: int (Required): The number of resources that the code applies to.
+* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): The error details for the resources. Not populated on success cases.
+
+## Resources
+### Properties
+* **ids**: string[] (Required): The resource ids used for the request
+
+## ResourceStatus
+### Properties
+* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Errors encountered while trying to perform
+* **resourceId**: string (Required): The arm identifier of the resource
+* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The state the resource is currently on
+
+## RetryPolicy
+### Properties
+* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Action to take on failure
+* **retryCount**: int: Retry count for user request
+* **retryWindowInMinutes**: int: Retry window in minutes for user request
+
+## Schedule
+### Properties
+* **deadline**: string: The deadline for the operation
+* **deadLine**: string: The deadline for the operation
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string (Required): The deadlinetype of the operation, this can either be InitiateAt or CompleteBy
+* **timezone**: string: The timezone for the operation
+* **timeZone**: string: The timezone for the operation
+
+## ScheduledActionProperties
+### Properties
+* **actionType**: 'Deallocate' | 'Hibernate' | 'Internal' | 'Start' | string (Required): The action the scheduled action should perform in the resources
+* **disabled**: bool: Tell if the scheduled action is disabled or not
+* **endTime**: string: The time when the scheduled action is supposed to stop scheduling
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): The notification settings for the scheduled action
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last provisioning operation performed on the resource.
+* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of resource the scheduled action is targeting
+* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The schedule the scheduled action is supposed to follow
+* **startTime**: string (Required): The time which the scheduled action is supposed to start running
+
+## ScheduledActionResource
+### Properties
+* **id**: string (Required, ReadOnly): The compute RP resource id of the resource in the scheduled actions scope.
+* **name**: string (Required, ReadOnly): The name of the resource
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: The desired notification settings for the specified resource.
+* **resourceId**: string (Required): The ARM Id of the resource.
+"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+* **type**: string (ReadOnly): The type of resource
+
+## ScheduledActionsSchedule
+### Properties
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt.
+* **executionParameters**: [ExecutionParameters](#executionparameters): The execution parameters the scheduled action is supposed to follow
+* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[] (Required): The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month.
+* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[] (Required): The months the scheduled action is supposed to run on
+* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): The week days the scheduled action is supposed to run on
+* **scheduledTime**: string (Required): The time the scheduled action is supposed to run on
+* **timeZone**: string (Required): The timezone the scheduled time is specified on
+
+## ScheduledEventsAdditionalPublishingTargets
+### Properties
+* **eventGridAndResourceGraph**: [EventGridAndResourceGraph](#eventgridandresourcegraph): The configuration parameters used while creating eventGridAndResourceGraph Scheduled Event setting.
+
+## ScheduledEventsPolicy
+### Properties
+* **allInstancesDown**: [AllInstancesDown](#allinstancesdown): The configuration parameters used while creating AllInstancesDown scheduled event setting creation.
+* **scheduledEventsAdditionalPublishingTargets**: [ScheduledEventsAdditionalPublishingTargets](#scheduledeventsadditionalpublishingtargets): The configuration parameters used while publishing scheduledEventsAdditionalPublishingTargets.
+* **userInitiatedReboot**: [UserInitiatedReboot](#userinitiatedreboot): The configuration parameters used while creating userInitiatedReboot scheduled event setting creation.
+* **userInitiatedRedeploy**: [UserInitiatedRedeploy](#userinitiatedredeploy): The configuration parameters used while creating userInitiatedRedeploy scheduled event setting creation.
+
+## ScheduledEventsProfile
+### Properties
+* **osImageNotificationProfile**: [OSImageNotificationProfile](#osimagenotificationprofile): Specifies OS Image Scheduled Event related configurations.
+* **terminateNotificationProfile**: [TerminateNotificationProfile](#terminatenotificationprofile): Specifies Terminate Scheduled Event related configurations.
+
+## SecurityProfile
+### Properties
+* **encryptionAtHost**: bool: This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. The default behavior is: The Encryption at host will be disabled unless this property is set to true for the resource.
+* **encryptionIdentity**: [EncryptionIdentity](#encryptionidentity): Specifies the Managed Identity used by ADE to get access token for keyvault operations.
+* **proxyAgentSettings**: [ProxyAgentSettings](#proxyagentsettings): Specifies ProxyAgent settings while creating the virtual machine. Minimum compute api-version: 2023-09-01.
+* **securityType**: 'ConfidentialVM' | 'TrustedLaunch' | string: Specifies the SecurityType of the virtual machine. It has to be set to any specified value to enable UefiSettings. The default behavior is: UefiSettings will not be enabled unless this property is set.
+* **uefiSettings**: [UefiSettings](#uefisettings): Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum compute api-version: 2020-12-01.
+
+## SshConfiguration
+### Properties
+* **publicKeys**: [SshPublicKey](#sshpublickey)[]: The list of SSH public keys used to authenticate with linux based VMs.
+
+## SshPublicKey
+### Properties
+* **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+* **path**: string: Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+
+## StartResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the start request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
+* **type**: string (Required): The type of resources used in the start request eg virtual machines
+
+## StorageProfile
+### Properties
+* **dataDisks**: [DataDisk](#datadisk)[]: Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+* **diskControllerType**: 'NVMe' | 'SCSI' | string: Specifies the disk controller type configured for the VM. **Note:** This property will be set to the default disk controller type if not specified provided virtual machine is being created with 'hyperVGeneration' set to V2 based on the capabilities of the operating system disk and VM size from the the specified minimum api version. You need to deallocate the VM before updating its disk controller type unless you are updating the VM size in the VM configuration which implicitly deallocates and reallocates the VM. Minimum api-version: 2022-08-01.
+* **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+* **osDisk**: [OSDisk](#osdisk): Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+
+## SubmitDeallocateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
+
+## SubmitHibernateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
+
+## SubmitStartRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources) (Required): The resources for the request
+* **schedule**: [Schedule](#schedule) (Required): The schedule for the request
+
+## SubResource
+### Properties
+* **id**: string: The ID of the sub-resource.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TerminateNotificationProfile
+### Properties
+* **enable**: bool: Specifies whether the Terminate Scheduled event is enabled or disabled.
+* **notBeforeTimeout**: string: Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UefiSettings
+### Properties
+* **secureBootEnabled**: bool: Specifies whether secure boot should be enabled on the virtual machine. Minimum compute api-version: 2020-12-01.
+* **vTpmEnabled**: bool: Specifies whether vTPM should be enabled on the virtual machine. Minimum compute api-version: 2020-12-01.
+
+## UserAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## UserInitiatedReboot
+### Properties
+* **automaticallyApprove**: bool: Specifies Reboot Scheduled Event related configurations.
+
+## UserInitiatedRedeploy
+### Properties
+* **automaticallyApprove**: bool: Specifies Redeploy Scheduled Event related configurations.
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string: For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
+* **certificateUrl**: string: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  'data':'<Base64-encoded-certificate>',<br>  'dataType':'pfx',<br>  'password':'<pfx-file-password>'<br>} <br> To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: [SubResource](#subresource): The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
+
+## VirtualHardDisk
+### Properties
+* **uri**: string: Specifies the virtual hard disk's uri.
+
+## VirtualMachineIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal id of virtual machine identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id associated with the virtual machine. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
+* **userAssignedIdentities**: [VirtualMachineIdentityUserAssignedIdentities](#virtualmachineidentityuserassignedidentities): The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## VirtualMachineIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+
+## VirtualMachineIpTag
+### Properties
+* **ipTagType**: string: IP tag type. Example: FirstPartyUsage.
+* **tag**: string: IP tag associated with the public IP. Example: SQL, Storage etc.
+
+## VirtualMachineNetworkInterfaceConfiguration
+### Properties
+* **name**: string (Required): The network interface configuration name.
+* **properties**: [VirtualMachineNetworkInterfaceConfigurationProperties](#virtualmachinenetworkinterfaceconfigurationproperties): Describes a virtual machine network profile's IP configuration.
+* **tags**: [VirtualMachineNetworkInterfaceConfigurationTags](#virtualmachinenetworkinterfaceconfigurationtags): Resource tags applied to the networkInterface address created by this NetworkInterfaceConfiguration
+
+## VirtualMachineNetworkInterfaceConfigurationProperties
+### Properties
+* **auxiliaryMode**: 'AcceleratedConnections' | 'Floating' | 'None' | string: Specifies whether the Auxiliary mode is enabled for the Network Interface resource.
+* **auxiliarySku**: 'A1' | 'A2' | 'A4' | 'A8' | 'None' | string: Specifies whether the Auxiliary sku is enabled for the Network Interface resource.
+* **deleteOption**: 'Delete' | 'Detach' | string: Specify what happens to the network interface when the VM is deleted
+* **disableTcpStateTracking**: bool: Specifies whether the network interface is disabled for tcp state tracking.
+* **dnsSettings**: [VirtualMachineNetworkInterfaceDnsSettingsConfiguration](#virtualmachinenetworkinterfacednssettingsconfiguration): The dns settings to be applied on the network interfaces.
+* **dscpConfiguration**: [SubResource](#subresource): The DSCP configuration for the network interface.
+* **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
+* **enableFpga**: bool: Specifies whether the network interface is FPGA networking-enabled.
+* **enableIPForwarding**: bool: Whether IP forwarding enabled on this NIC.
+* **ipConfigurations**: [VirtualMachineNetworkInterfaceIPConfiguration](#virtualmachinenetworkinterfaceipconfiguration)[] (Required): Specifies the IP configurations of the network interface.
+* **networkSecurityGroup**: [SubResource](#subresource): The network security group.
+* **primary**: bool: Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+
+## VirtualMachineNetworkInterfaceConfigurationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineNetworkInterfaceDnsSettingsConfiguration
+### Properties
+* **dnsServers**: string[]: List of DNS servers IP addresses
+
+## VirtualMachineNetworkInterfaceIPConfiguration
+### Properties
+* **name**: string (Required): The IP configuration name.
+* **properties**: [VirtualMachineNetworkInterfaceIPConfigurationProperties](#virtualmachinenetworkinterfaceipconfigurationproperties): Describes a virtual machine network interface IP configuration properties.
+
+## VirtualMachineNetworkInterfaceIPConfigurationProperties
+### Properties
+* **applicationGatewayBackendAddressPools**: [SubResource](#subresource)[]: Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+* **applicationSecurityGroups**: [SubResource](#subresource)[]: Specifies an array of references to application security group.
+* **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]: Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+* **primary**: bool: Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6' | string: Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+* **publicIPAddressConfiguration**: [VirtualMachinePublicIPAddressConfiguration](#virtualmachinepublicipaddressconfiguration): The publicIPAddressConfiguration.
+* **subnet**: [SubResource](#subresource): Specifies the identifier of the subnet.
+
+## VirtualMachinePublicIPAddressConfiguration
+### Properties
+* **name**: string (Required): The publicIP address configuration name.
+* **properties**: [VirtualMachinePublicIPAddressConfigurationProperties](#virtualmachinepublicipaddressconfigurationproperties): Describes a virtual machines IP Configuration's PublicIPAddress configuration
+* **sku**: [PublicIPAddressSku](#publicipaddresssku): Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.
+* **tags**: [VirtualMachinePublicIPAddressConfigurationTags](#virtualmachinepublicipaddressconfigurationtags): Resource tags applied to the publicIP address created by this PublicIPAddressConfiguration
+
+## VirtualMachinePublicIPAddressConfigurationProperties
+### Properties
+* **deleteOption**: 'Delete' | 'Detach' | string: Specify what happens to the public IP address when the VM is deleted
+* **dnsSettings**: [VirtualMachinePublicIPAddressDnsSettingsConfiguration](#virtualmachinepublicipaddressdnssettingsconfiguration): The dns settings to be applied on the publicIP addresses .
+* **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
+* **ipTags**: [VirtualMachineIpTag](#virtualmachineiptag)[]: The list of IP tags associated with the public IP address.
+* **publicIPAddressVersion**: 'IPv4' | 'IPv6' | string: Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string: Specify the public IP allocation type
+* **publicIPPrefix**: [SubResource](#subresource): The PublicIPPrefix from which to allocate publicIP addresses.
+
+## VirtualMachinePublicIPAddressConfigurationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachinePublicIPAddressDnsSettingsConfiguration
+### Properties
+* **domainNameLabel**: string (Required): The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+* **domainNameLabelScope**: 'NoReuse' | 'ResourceGroupReuse' | 'SubscriptionReuse' | 'TenantReuse' | string: The Domain name label scope of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the hashed domain name label with policy according to the domain name label scope and vm network profile unique ID.
+
+## VMDiskSecurityProfile
+### Properties
+* **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Specifies the customer managed disk encryption set resource id for the managed disk that is used for Customer Managed Key encrypted ConfidentialVM OS Disk and VMGuest blob.
+* **securityEncryptionType**: 'DiskWithVMGuestState' | 'NonPersistedTPM' | 'VMGuestStateOnly' | string: Specifies the EncryptionType of the managed disk. It is set to DiskWithVMGuestState for encryption of the managed disk along with VMGuestState blob, VMGuestStateOnly for encryption of just the VMGuestState blob, and NonPersistedTPM for not persisting firmware state in the VMGuestState blob.. **Note:** It can be set for only Confidential VMs.
+
+## VMGalleryApplication
+### Properties
+* **configurationReference**: string: Optional, Specifies the uri to an azure blob that will replace the default configuration for the package if provided
+* **enableAutomaticUpgrade**: bool: If set to true, when a new Gallery Application version is available in PIR/SIG, it will be automatically updated for the VM/VMSS
+* **order**: int: Optional, Specifies the order in which the packages have to be installed
+* **packageReferenceId**: string (Required): Specifies the GalleryApplicationVersion resource id on the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{application}/versions/{version}
+* **tags**: string: Optional, Specifies a passthrough value for more generic context.
+* **treatFailureAsDeploymentFailure**: bool: Optional, If true, any failure for any operation in the VmApplication will fail the deployment
+
+## VmSizeProfile
+### Properties
+* **name**: string {minLength: 1} (Required): The name of the VM size, eg Standard_D2ads_v5
+* **rank**: int: The rank of this VM size in the priority order
+
+## VmSizeProperties
+### Properties
+* **vCpusAvailable**: int: Specifies the number of vCPUs available for the VM. When this property is not specified in the request body the default behavior is to set it to the value of vCPUs available for that VM size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).
+* **vCpusPerCore**: int: Specifies the vCPU to physical core ratio. When this property is not specified in the request body the default behavior is set to the value of vCPUsPerCore for the VM Size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list). **Setting this property to 1 also means that hyper-threading is disabled.**
+
+## WindowsConfiguration
+### Properties
+* **additionalUnattendContent**: [AdditionalUnattendContent](#additionalunattendcontent)[]: Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
+* **enableAutomaticUpdates**: bool: Indicates whether Automatic Updates is enabled for the Windows virtual machine. Default value is true. For virtual machine scale sets, this property can be updated and updates will take effect on OS reprovisioning.
+* **patchSettings**: [PatchSettings](#patchsettings): [Preview Feature] Specifies settings related to VM Guest Patching on Windows.
+* **provisionVMAgent**: bool: Indicates whether virtual machine agent should be provisioned on the virtual machine. When this property is not specified in the request body, it is set to true by default. This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+* **timeZone**: string: Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+* **winRM**: [WinRMConfiguration](#winrmconfiguration): Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
+
+## WindowsVMGuestPatchAutomaticByPlatformSettings
+### Properties
+* **bypassPlatformSafetyChecksOnUserSchedule**: bool: Enables customer to schedule patching without accidental upgrades
+* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | 'Unknown' | string: Specifies the reboot setting for all AutomaticByPlatform patch installation operations.
+
+## WinRMConfiguration
+### Properties
+* **listeners**: [WinRMListener](#winrmlistener)[]: The list of Windows Remote Management listeners
+
+## WinRMListener
+### Properties
+* **certificateUrl**: string: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>} <br> To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+* **protocol**: 'Http' | 'Https' | string: Specifies the protocol of WinRM listener. Possible values are: **http,** **https.**
+
+## ZoneAllocationPolicy
+### Properties
+* **distributionStrategy**: 'BestEffortBalanced' | 'BestEffortSingleZone' | 'Prioritized' | 'StrictBalanced' | string (Required): The distribution strategy for zone allocation
+* **zonePreferences**: [ZonePreference](#zonepreference)[]: The zone preferences for allocation priority
+
+## ZonePreference
+### Properties
+* **rank**: int: The rank of this zone in the priority order
+* **zone**: string (Required): The zone identifier
+

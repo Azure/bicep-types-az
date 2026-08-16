@@ -713,5 +713,24 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleInstances",
+    "properties": {
+      "roleInstances": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "List of cloud service role instance names. Value of '*' will signify all role instances of the cloud service."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
   }
 ]

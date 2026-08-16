@@ -1310,5 +1310,25 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SendMessage",
+    "properties": {
+      "messageTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Title of message."
+      },
+      "messageBody": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Body of message."
+      }
+    }
   }
 ]

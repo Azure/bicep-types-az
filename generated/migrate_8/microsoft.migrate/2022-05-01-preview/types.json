@@ -5636,5 +5636,69 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkloadDeploymentModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Workload deployment model properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the Id of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the type of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 2
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/339"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkloadDeploymentModelTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSecrets",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/338"
+    }
   }
 ]

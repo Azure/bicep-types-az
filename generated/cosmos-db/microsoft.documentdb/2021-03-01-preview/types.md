@@ -381,6 +381,11 @@
 * **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
 * **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function fetchNodeStatus (Microsoft.DocumentDB/cassandraClusters@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ClusterNodeStatus](#clusternodestatus)
+
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-03-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
 * **ApiVersion**: 2021-03-01-preview
@@ -395,6 +400,101 @@
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2021-03-01-preview
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2021-03-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
 
 ## ApiProperties
 ### Properties
@@ -482,6 +582,22 @@
 ### Properties
 * **name**: string: Name of the Cosmos DB Cassandra table cluster key
 * **orderBy**: string: Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
+
+## ClusterNodeStatus
+### Properties
+* **nodes**: [ClusterNodeStatusNodesItem](#clusternodestatusnodesitem)[]: Information about nodes in the cluster (corresponds to what is returned from nodetool info).
+
+## ClusterNodeStatusNodesItem
+### Properties
+* **address**: string: The node's URL.
+* **datacenter**: string: The Cassandra data center this node resides in.
+* **hostId**: string: The network ID of the node.
+* **load**: string: The amount of file system data in the data directory (e.g., 47.66 KB), excluding all content in the snapshots subdirectories. Because all SSTable data files are included, any data that is not cleaned up (such as TTL-expired cell or tombstoned data) is counted.
+* **owns**: int: The percentage of the data owned by the node per datacenter times the replication factor (e.g., 33.3, or null if the data is not available). For example, a node can own 33% of the ring, but shows 100% if the replication factor is 3. For non-system keyspaces, the endpoint percentage ownership information is shown.
+* **rack**: string: The rack this node is part of.
+* **state**: 'Joining' | 'Leaving' | 'Moving' | 'Normal' | 'Stopped' | string: The state of the node in relation to the cluster.
+* **status**: 'Down' | 'Up' | string: Indicates whether the node is functioning or not.
+* **tokens**: string[]: List of tokens.
 
 ## ClusterResourceProperties
 ### Properties
@@ -651,6 +767,11 @@
 * **primaryMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-write key.
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
+
+## DatabaseAccountListReadOnlyKeysResult
+### Properties
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
 ## DatabaseRestoreResource
@@ -1093,10 +1214,39 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ThroughputPolicyResource
 ### Properties
 * **incrementPercent**: int: Represents the percentage by which throughput can increase every time throughput policy kicks in.
 * **isEnabled**: bool: Determines whether the ThroughputPolicy is active or not
+
+## ThroughputSettingsGetProperties
+### Properties
+* **resource**: [ThroughputSettingsGetPropertiesResource](#throughputsettingsgetpropertiesresource)
+
+## ThroughputSettingsGetPropertiesResource
+### Properties
+* **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
+* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
+* **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
+* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource): Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both.
+* **minimumThroughput**: string (ReadOnly): The minimum throughput of the resource
+* **offerReplacePending**: string (ReadOnly): The throughput replace is pending
+* **throughput**: int: Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both.
+
+## ThroughputSettingsGetResults
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [ThroughputSettingsGetProperties](#throughputsettingsgetproperties): The properties of an Azure Cosmos DB resource throughput
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
 
 ## ThroughputSettingsResourceOrThroughputSettingsGetPropertiesResource
 ### Properties

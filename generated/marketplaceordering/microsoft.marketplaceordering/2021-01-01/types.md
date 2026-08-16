@@ -21,6 +21,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.MarketplaceOrdering/agreements/offers/plans@2021-01-01)
+* **Resource**: Microsoft.MarketplaceOrdering/agreements/offers/plans
+* **ApiVersion**: 2021-01-01
+* **Output**: [OldAgreementTerms](#oldagreementterms)
+
+## Function sign (Microsoft.MarketplaceOrdering/agreements/offers/plans@2021-01-01)
+* **Resource**: Microsoft.MarketplaceOrdering/agreements/offers/plans
+* **ApiVersion**: 2021-01-01
+* **Output**: [OldAgreementTerms](#oldagreementterms)
+
 ## AgreementProperties
 ### Properties
 * **accepted**: bool: If any version of the terms have been accepted, otherwise false.
@@ -41,6 +51,13 @@
 * **publisher**: string: Publisher identifier string of image being deployed.
 * **signDate**: string: Date and time in UTC of when the terms were accepted. This is empty if state is cancelled.
 * **state**: 'Active' | 'Canceled' | string: Whether the agreement is active or cancelled
+
+## OldAgreementTerms
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [OldAgreementProperties](#oldagreementproperties): Represents the properties of the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## SystemData
 ### Properties

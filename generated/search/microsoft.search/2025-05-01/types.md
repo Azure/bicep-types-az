@@ -58,6 +58,11 @@
 * **ApiVersion**: 2025-05-01
 * **Output**: [ListQueryKeysResult](#listquerykeysresult)
 
+## Function upgrade (Microsoft.Search/searchServices@2025-05-01)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2025-05-01
+* **Output**: [SearchService](#searchservice)
+
 ## AccessRule
 ### Properties
 * **name**: string: Name of the access rule
@@ -192,6 +197,18 @@
 * **accessMode**: 'Audit' | 'Enforced' | 'Learning' | string: Access mode of the resource association
 * **name**: string: Name of the resource association
 
+## SearchService
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [Identity](#identity): The identity of the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the search service.
+* **sku**: [Sku](#sku): The SKU of the search service, which determines price tier and capacity limits. This property is required when creating a new search service.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SearchServiceProperties
 ### Properties
 * **authOptions**: [DataPlaneAuthOptions](#dataplaneauthoptions): Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
@@ -244,6 +261,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

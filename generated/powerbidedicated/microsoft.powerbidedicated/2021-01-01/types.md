@@ -28,6 +28,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.PowerBIDedicated/locations@2021-01-01)
+* **Resource**: Microsoft.PowerBIDedicated/locations
+* **ApiVersion**: 2021-01-01
+* **Input**: [CheckCapacityNameAvailabilityParameters](#checkcapacitynameavailabilityparameters)
+* **Output**: [CheckCapacityNameAvailabilityResult](#checkcapacitynameavailabilityresult)
+
 ## AutoScaleVCoreProperties
 ### Properties
 * **capacityLimit**: int: The maximum capacity of an auto scale v-core resource.
@@ -45,6 +51,17 @@
 * **capacity**: int: The capacity of the SKU.
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium' | string: The name of the Azure pricing tier to which the SKU applies.
+
+## CheckCapacityNameAvailabilityParameters
+### Properties
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"}: Name for checking availability.
+* **type**: string: The resource type of PowerBI dedicated.
+
+## CheckCapacityNameAvailabilityResult
+### Properties
+* **message**: string: The detailed message of the request unavailability.
+* **nameAvailable**: bool: Indicator of availability of the capacity name.
+* **reason**: string: The reason of unavailability.
 
 ## DedicatedCapacityAdministrators
 ### Properties

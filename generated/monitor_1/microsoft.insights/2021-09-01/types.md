@@ -56,6 +56,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data
 * **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createNotifications (Microsoft.Insights/actionGroups@2021-09-01)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2021-09-01
+* **Input**: [NotificationRequestBody](#notificationrequestbody)
+* **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
+
 ## AccessModeSettings
 ### Properties
 * **exclusions**: [AccessModeSettingsExclusion](#accessmodesettingsexclusion)[]: List of exclusions that override the default access mode settings for specific private endpoint connections.
@@ -67,6 +73,15 @@
 * **ingestionAccessMode**: 'Open' | 'PrivateOnly' | string: Specifies the access mode of ingestion through the specified private endpoint connection in the exclusion.
 * **privateEndpointConnectionName**: string: The private endpoint connection name associated to the private endpoint on which we want to apply the specific access mode settings.
 * **queryAccessMode**: 'Open' | 'PrivateOnly' | string: Specifies the access mode of queries through the specified private endpoint connection in the exclusion.
+
+## ActionDetail
+### Properties
+* **Detail**: string: The detail of the friendly error message
+* **MechanismType**: string: The mechanism type
+* **Name**: string: The name of the action
+* **SendTime**: string: The send time
+* **Status**: string: The status of the action
+* **SubState**: string: The substatus of the action
 
 ## ActionGroup
 ### Properties
@@ -124,6 +139,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Context
+### Properties
+* **contextType**: string: The context id type
+* **notificationSource**: string: The source of the notification request
+
 ## EmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
@@ -154,6 +174,21 @@
 * **name**: string (Required): The name of the logic app receiver. Names must be unique across all receivers within an action group.
 * **resourceId**: string (Required): The azure resource id of the logic app receiver.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
+
+## NotificationRequestBody
+### Properties
+* **alertType**: string {maxLength: 30} (Required): The value of the supported alert type. Supported alert type values are: servicehealth, metricstaticthreshold, metricsdynamicthreshold, logalertv2, smartalert, webtestalert, logalertv1numresult, logalertv1metricmeasurement, resourcehealth, activitylog, actualcostbudget, forecastedbudget
+* **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+* **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]: The list of AutomationRunbook receivers that are part of this action group.
+* **azureAppPushReceivers**: [AzureAppPushReceiver](#azureapppushreceiver)[]: The list of AzureAppPush receivers that are part of this action group.
+* **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]: The list of azure function receivers that are part of this action group.
+* **emailReceivers**: [EmailReceiver](#emailreceiver)[]: The list of email receivers that are part of this action group.
+* **eventHubReceivers**: [EventHubReceiver](#eventhubreceiver)[]: The list of event hub receivers that are part of this action group.
+* **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]: The list of ITSM receivers that are part of this action group.
+* **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]: The list of logic app receivers that are part of this action group.
+* **smsReceivers**: [SmsReceiver](#smsreceiver)[]: The list of SMS receivers that are part of this action group.
+* **voiceReceivers**: [VoiceReceiver](#voicereceiver)[]: The list of voice receivers that are part of this action group.
+* **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]: The list of webhook receivers that are part of this action group.
 
 ## PrivateEndpoint
 ### Properties
@@ -204,6 +239,14 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TestNotificationDetailsResponse
+### Properties
+* **actionDetails**: [ActionDetail](#actiondetail)[]: The list of action detail
+* **completedTime**: string: The completed time
+* **context**: [Context](#context): The context info
+* **createdTime**: string: The created time
+* **state**: string (Required): The overall state
 
 ## TrackedResourceTags
 ### Properties

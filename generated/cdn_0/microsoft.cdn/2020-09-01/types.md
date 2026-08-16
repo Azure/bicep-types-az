@@ -176,6 +176,79 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/securityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkHostNameAvailability (Microsoft.Cdn/profiles@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2020-09-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## Function checkResourceUsage (Microsoft.Cdn/profiles@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2020-09-01
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2020-09-01
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function generateSsoUri (Microsoft.Cdn/profiles@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2020-09-01
+* **Output**: [SsoUri](#ssouri)
+
+## Function getSupportedOptimizationTypes (Microsoft.Cdn/profiles@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2020-09-01
+* **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
+
+## Function refreshValidationToken (Microsoft.Cdn/profiles/customDomains@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/customDomains
+* **ApiVersion**: 2020-09-01
+* **Output**: [ValidationToken](#validationtoken)
+
+## Function start (Microsoft.Cdn/profiles/endpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2020-09-01
+* **Output**: [Endpoint](#endpoint)
+
+## Function stop (Microsoft.Cdn/profiles/endpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2020-09-01
+* **Output**: [Endpoint](#endpoint)
+
+## Function usages (Microsoft.Cdn/profiles@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2020-09-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/afdEndpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/afdEndpoints
+* **ApiVersion**: 2020-09-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/originGroups@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/originGroups
+* **ApiVersion**: 2020-09-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function usages (Microsoft.Cdn/profiles/ruleSets@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/ruleSets
+* **ApiVersion**: 2020-09-01
+* **Output**: [UsagesListResult](#usageslistresult)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2020-09-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## Function validateCustomDomain (Microsoft.Cdn/profiles/afdEndpoints@2020-09-01)
+* **Resource**: Microsoft.Cdn/profiles/afdEndpoints
+* **ApiVersion**: 2020-09-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
 ## AFDDomainHttpsParameters
 ### Properties
 * **certificateType**: 'CustomerCertificate' | 'ManagedCertificate' | string (Required): Defines the source of the SSL certificate.
@@ -475,6 +548,16 @@
 * **expirationDate**: string (ReadOnly): The date time that the token expires
 * **validationToken**: string (ReadOnly): Challenge used for DNS TXT record or file based validation
 
+## Endpoint
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
@@ -730,6 +813,18 @@
 ### Properties
 * **id**: string: Resource ID.
 
+## ResourceUsage
+### Properties
+* **currentValue**: int (ReadOnly): Actual value of usage on the specified resource type.
+* **limit**: int (ReadOnly): Quota of the specified resource type.
+* **resourceType**: string (ReadOnly): Resource type for which the usage is provided.
+* **unit**: string (ReadOnly): Unit of the usage. e.g. Count.
+
+## ResourceUsageListResult
+### Properties
+* **nextLink**: string: URL to get the next set of custom domain objects if there are any.
+* **value**: [ResourceUsage](#resourceusage)[] (ReadOnly): List of resource usages.
+
 ## ResponseBasedOriginErrorDetectionParameters
 ### Properties
 * **httpErrorRanges**: [HttpErrorRangeParameters](#httperrorrangeparameters)[]: The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
@@ -834,6 +929,14 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_AzureFrontDoor' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'StandardPlus_955BandWidth_ChinaCdn' | 'StandardPlus_AvgBandWidth_ChinaCdn' | 'StandardPlus_ChinaCdn' | 'Standard_955BandWidth_ChinaCdn' | 'Standard_Akamai' | 'Standard_AvgBandWidth_ChinaCdn' | 'Standard_AzureFrontDoor' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon' | string: Name of the pricing tier.
 
+## SsoUri
+### Properties
+* **ssoUriValue**: string (ReadOnly): The URI used to login to the supplemental portal.
+
+## SupportedOptimizationTypesListResult
+### Properties
+* **supportedOptimizationTypes**: ('DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string)[] (ReadOnly): Supported optimization types for a profile.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
@@ -842,6 +945,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that last modified the resource
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -919,4 +1027,36 @@
 ### Properties
 * **paramIndicator**: 'Expires' | 'KeyId' | 'Signature' | string (Required): Indicates the purpose of the parameter
 * **paramName**: string (Required): Parameter name
+
+## Usage
+### Properties
+* **currentValue**: int (Required): The current value of the usage.
+* **id**: string (ReadOnly): Resource identifier.
+* **limit**: int (Required): The limit of usage.
+* **name**: [UsageName](#usagename) (Required): The name of the type of usage.
+* **unit**: 'Count' | string (Required): An enum describing the unit of measurement.
+
+## UsageName
+### Properties
+* **localizedValue**: string: A localized string describing the resource name.
+* **value**: string: A string describing the resource name.
+
+## UsagesListResult
+### Properties
+* **nextLink**: string: URL to get the next set of results.
+* **value**: [Usage](#usage)[]: The list of resource usages.
+
+## ValidateCustomDomainInput
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+
+## ValidateCustomDomainOutput
+### Properties
+* **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
+* **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
+* **reason**: string (ReadOnly): The reason why the custom domain is not valid.
+
+## ValidationToken
+### Properties
+* **token**: string (ReadOnly)
 

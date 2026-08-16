@@ -1954,5 +1954,106 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecRequest",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The command to be executed."
+      },
+      "terminalSize": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The size of the terminal."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecRequestTerminalSize",
+    "properties": {
+      "rows": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The row size of the terminal"
+      },
+      "cols": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The column size of the terminal"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerExecResponse",
+    "properties": {
+      "webSocketUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri for the exec websocket."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The password to start the exec command."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exec",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/124"
+    },
+    "input": {
+      "$ref": "#/122"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerAttachResponse",
+    "properties": {
+      "webSocketUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri for the output stream from the attach."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The password to the output stream from the attach. Send as an Authorization header value when connecting to the websocketUri."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "attach",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/126"
+    }
   }
 ]

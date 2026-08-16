@@ -5196,5 +5196,205 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompareSummary",
+    "properties": {
+      "azurePaasCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The azure PaaS cost."
+      },
+      "azureIaasCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The azure IaaS cost."
+      },
+      "azureAvsCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The AVS cost."
+      },
+      "onPremisesPaasCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS cost."
+      },
+      "onPremisesIaasCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS cost."
+      },
+      "onPremisesAvsCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises AVS cost."
+      },
+      "onPremisesPaasDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS decommissioned cost."
+      },
+      "onPremisesIaasDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS decommissioned cost."
+      },
+      "onPremisesAvsDecommissionedCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The on premises AVS decommissioned cost."
+      },
+      "futureCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "Future state cost which includes Azure cost and Arc enabled on-premises cost based on the final migration percentage."
+      },
+      "azureArcEnabledOnPremisesCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The Azure arc enabled on-premises cost."
+      },
+      "futureAzureArcEnabledOnPremisesCostDetails": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The final azure arc enabled on-premises cost based on the final migration percentage."
+      },
+      "azurePaasCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The Azure PaaS Carbon Emissions details."
+      },
+      "azureIaasCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The Azure IaaS Carbon Emissions details."
+      },
+      "azureAvsCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The Azure AvS Carbon Emissions details."
+      },
+      "onPremisesPaasCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS Carbon Emissions details."
+      },
+      "onPremisesIaasCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS Carbon Emissions details."
+      },
+      "onPremisesAvsCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises Avs Carbon Emissions details."
+      },
+      "onPremisesPaasDecommissionedCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises PaaS decommissioned Carbon Emissions details."
+      },
+      "onPremisesIaasDecommissionedCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises IaaS decommissioned Carbon Emissions details."
+      },
+      "onPremisesAvsDecommissionedCarbonEmissionsDetails": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "The on premises Avs decommissioned Carbon Emissions details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "compareSummary",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/businessCases",
+    "apiVersion": "2024-03-03-preview",
+    "output": {
+      "$ref": "#/331"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportDownloadUrl",
+    "properties": {
+      "businessCaseReportUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getReportDownloadUrl",
+    "resourceType": "Microsoft.Migrate/assessmentProjects/businessCases",
+    "apiVersion": "2024-03-03-preview",
+    "output": {
+      "$ref": "#/333"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
   }
 ]

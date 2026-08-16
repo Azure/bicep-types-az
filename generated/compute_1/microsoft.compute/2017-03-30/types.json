@@ -5624,5 +5624,638 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrantAccessData",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 1
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Time duration in seconds until the SAS access expires."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/408"
+      },
+      {
+        "$ref": "#/409"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUri",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/412"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUriOutput",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/413"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUriRaw",
+    "properties": {
+      "accessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a disk."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/411"
+    },
+    "input": {
+      "$ref": "#/407"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/411"
+    },
+    "input": {
+      "$ref": "#/407"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureParameters",
+    "properties": {
+      "vhdPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The captured virtual hard disk's name prefix."
+      },
+      "destinationContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination container name."
+      },
+      "overwriteVhds": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "Specifies whether to overwrite the destination virtual hard disk, in case of conflict."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/421"
+        },
+        "flags": 0,
+        "description": "Compute-specific operation properties, including output"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResultProperties",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capture",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/420"
+    },
+    "input": {
+      "$ref": "#/419"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertToManagedDisks",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generalize",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInput",
+    "properties": {
+      "commandId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command id."
+      },
+      "script": {
+        "type": {
+          "$ref": "#/432"
+        },
+        "flags": 0,
+        "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/434"
+        },
+        "flags": 0,
+        "description": "The run command parameters."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInputParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/433"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/436"
+        },
+        "flags": 0,
+        "description": "Compute-specific operation properties, including output"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResultProperties",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/435"
+    },
+    "input": {
+      "$ref": "#/431"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/439"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/442"
+        },
+        "flags": 1,
+        "description": "The virtual machine scale set instance ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delete",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/441"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manualupgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/441"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "osRollingUpgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2017-03-30",
+    "output": {
+      "$ref": "#/415"
+    }
   }
 ]

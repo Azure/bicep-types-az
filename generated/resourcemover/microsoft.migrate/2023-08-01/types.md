@@ -26,6 +26,47 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Migrate/moveCollections/moveResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function bulkRemove (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Input**: [BulkRemoveRequest](#bulkremoverequest)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function commit (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Input**: [CommitRequest](#commitrequest)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function discard (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Input**: [DiscardRequest](#discardrequest)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function initiateMove (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Input**: [ResourceMoveRequest](#resourcemoverequest)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function prepare (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Input**: [PrepareRequest](#preparerequest)
+* **Output**: [OperationStatus](#operationstatus)
+
+## Function resolveDependencies (Microsoft.Migrate/moveCollections@2023-08-01)
+* **Resource**: Microsoft.Migrate/moveCollections
+* **ApiVersion**: 2023-08-01
+* **Output**: [OperationStatus](#operationstatus)
+
+## AffectedMoveResource
+### Properties
+* **id**: string (ReadOnly): The affected move resource id.
+* **moveResources**: [AffectedMoveResource](#affectedmoveresource)[] (ReadOnly): The affected move resources.
+* **sourceId**: string (ReadOnly): The affected move resource source id.
+
 ## AutomaticResolutionProperties
 ### Properties
 * **moveResourceId**: string: Gets the MoveResource ARM ID of
@@ -35,6 +76,24 @@ the dependent resource if the resolution type is Automatic.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## BulkRemoveRequest
+### Properties
+* **moveResourceInputType**: 'MoveResourceId' | 'MoveResourceSourceId' | string: Defines the move resource input type.
+* **moveResources**: string[]: Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property.
+* **validateOnly**: bool: Gets or sets a value indicating whether the operation needs to only run pre-requisite.
+
+## CommitRequest
+### Properties
+* **moveResourceInputType**: 'MoveResourceId' | 'MoveResourceSourceId' | string: Defines the move resource input type.
+* **moveResources**: string[] (Required): Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property.
+* **validateOnly**: bool: Gets or sets a value indicating whether the operation needs to only run pre-requisite.
+
+## DiscardRequest
+### Properties
+* **moveResourceInputType**: 'MoveResourceId' | 'MoveResourceSourceId' | string: Defines the move resource input type.
+* **moveResources**: string[] (Required): Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property.
+* **validateOnly**: bool: Gets or sets a value indicating whether the operation needs to only run pre-requisite.
 
 ## Identity
 ### Properties
@@ -97,6 +156,10 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## MoveErrorInfo
+### Properties
+* **moveResources**: [AffectedMoveResource](#affectedmoveresource)[] (ReadOnly): The affected move resources.
 
 ## MoveResourceDependency
 ### Properties
@@ -198,6 +261,34 @@ rule, specifies where network traffic originates from.
 * **sourcePortRange**: string: Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.
 
+## OperationErrorAdditionalInfo
+### Properties
+* **info**: [MoveErrorInfo](#moveerrorinfo) (ReadOnly): The operation error info.
+* **type**: string (ReadOnly): The error type.
+
+## OperationStatus
+### Properties
+* **endTime**: string (ReadOnly): End time.
+* **error**: [OperationStatusError](#operationstatuserror) (ReadOnly): Error stating all error details for the operation.
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Operation name.
+* **properties**: any (ReadOnly): Custom data.
+* **startTime**: string (ReadOnly): Start time.
+* **status**: string (ReadOnly): Status of the operation. ARM expects the terminal status to be one of Succeeded/ Failed/ Canceled. All other values imply that the operation is still running.
+
+## OperationStatusError
+### Properties
+* **additionalInfo**: [OperationErrorAdditionalInfo](#operationerroradditionalinfo)[] (ReadOnly): The additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [OperationStatusError](#operationstatuserror)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+
+## PrepareRequest
+### Properties
+* **moveResourceInputType**: 'MoveResourceId' | 'MoveResourceSourceId' | string: Defines the move resource input type.
+* **moveResources**: string[] (Required): Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property.
+* **validateOnly**: bool: Gets or sets a value indicating whether the operation needs to only run pre-requisite.
+
 ## PublicIPAddressResourceSettingsTags
 ### Properties
 ### Additional Properties
@@ -206,6 +297,12 @@ rule, specifies where network traffic originates from.
 ## PublicIpReference
 ### Properties
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
+
+## ResourceMoveRequest
+### Properties
+* **moveResourceInputType**: 'MoveResourceId' | 'MoveResourceSourceId' | string: Defines the move resource input type.
+* **moveResources**: string[] (Required): Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property.
+* **validateOnly**: bool: Gets or sets a value indicating whether the operation needs to only run pre-requisite.
 
 ## ResourceSettings
 * **Discriminator**: resourceType

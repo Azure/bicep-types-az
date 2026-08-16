@@ -88,6 +88,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validate (Microsoft.Authorization/roleAssignmentScheduleRequests@2024-09-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+* **Output**: [RoleAssignmentScheduleRequest](#roleassignmentschedulerequest)
+
+## Function validate (Microsoft.Authorization/roleEligibilityScheduleRequests@2024-09-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+* **Output**: [RoleEligibilityScheduleRequest](#roleeligibilityschedulerequest)
+
 ## ApprovalSettings
 ### Properties
 * **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage' | string: The type of rule
@@ -216,6 +228,14 @@
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role assignment schedule.
 * **updatedOn**: string: DateTime when role assignment schedule was modified
 
+## RoleAssignmentScheduleRequest
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## RoleAssignmentScheduleRequestProperties
 ### Properties
 * **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
@@ -285,6 +305,14 @@
 * **startDateTime**: string: Start DateTime when role eligibility schedule
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string: The status of the role eligibility schedule.
 * **updatedOn**: string: DateTime when role eligibility schedule was modified
+
+## RoleEligibilityScheduleRequest
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RoleEligibilityScheduleRequestProperties
 ### Properties

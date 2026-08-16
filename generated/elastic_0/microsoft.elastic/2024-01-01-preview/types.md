@@ -36,6 +36,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createOrUpdateExternalUser (Microsoft.Elastic/monitors@2024-01-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ExternalUserInfo](#externaluserinfo)
+* **Output**: [ExternalUserCreationResponse](#externalusercreationresponse)
+
+## Function getBillingInfo (Microsoft.Elastic/monitors@2024-01-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [BillingInfoResponse](#billinginforesponse)
+
+## Function getStatus (Microsoft.Elastic/monitors/openAIIntegrations@2024-01-01-preview)
+* **Resource**: Microsoft.Elastic/monitors/openAIIntegrations
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [OpenAIIntegrationStatusResponse](#openaiintegrationstatusresponse)
+
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2024-01-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2024-01-01-preview
@@ -70,6 +86,16 @@
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2024-01-01-preview
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
+
+## Function vmIngestionDetails (Microsoft.Elastic/monitors@2024-01-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: [VMIngestionDetailsResponse](#vmingestiondetailsresponse)
+
+## BillingInfoResponse
+### Properties
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details
+* **partnerBillingEntity**: [PartnerBillingEntity](#partnerbillingentity): Partner Billing Entity details: Organization Info
 
 ## CompanyInfo
 ### Properties
@@ -153,6 +179,18 @@
 * **id**: string: Id of the elastic filter rule
 * **source**: string: IP of the elastic filter rule
 
+## ExternalUserCreationResponse
+### Properties
+* **created**: bool (ReadOnly): Shows if user is created or updated
+
+## ExternalUserInfo
+### Properties
+* **emailId**: string: Email id of the user to be created or updated
+* **fullName**: string: Full name of the user to be created or updated
+* **password**: string {sensitive}: Password of the user to be created or updated
+* **roles**: string[]: Roles to be assigned for  created or updated user
+* **userName**: string: Username of the user to be created or updated
+
 ## FilteringTag
 ### Properties
 * **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag.
@@ -224,6 +262,20 @@
 * **openAIResourceEndpoint**: string: The API endpoint for Open AI resource
 * **openAIResourceId**: string: The resource name of Open AI resource
 
+## OpenAIIntegrationStatusResponse
+### Properties
+* **properties**: [OpenAIIntegrationStatusResponseProperties](#openaiintegrationstatusresponseproperties): Status of the OpenAI Integration
+
+## OpenAIIntegrationStatusResponseProperties
+### Properties
+* **status**: string: Status of the OpenAI Integration
+
+## PartnerBillingEntity
+### Properties
+* **id**: string: The Elastic Organization Id.
+* **name**: string: The Elastic Organization Name.
+* **partnerEntityUri**: string: Link to the elastic organization page
+
 ## PlanDetails
 ### Properties
 * **offerID**: string: Offer ID of the plan
@@ -262,6 +314,11 @@
 ### Properties
 * **nextLink**: string: Link to the next Vm resource Id, if any.
 * **value**: [VMResources](#vmresources)[]: Results of a list operation.
+
+## VMIngestionDetailsResponse
+### Properties
+* **cloudId**: string: The cloudId of given Elastic monitor resource.
+* **ingestionKey**: string {sensitive}: Ingestion details to install agent on given VM.
 
 ## VMResources
 ### Properties

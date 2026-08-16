@@ -504,5 +504,132 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetReportContent",
+    "properties": {
+      "queries": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "The queries to execute against Storage Discovery data.\nFormat: Base64-encoded JSON object with structure:\n{\"queries\":[{\"name\":\"queryName\",\"query\":\"KQL query\"}]}\nFor query syntax and available tables, see: https://aka.ms/storageDiscoveryQuery"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetReportResult",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "One or more result sets, in the same order as the queries in the request body"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportResultSet",
+    "properties": {
+      "columns": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Array of columns object, present only if the query succeeded"
+      },
+      "rows": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Array of all rows from ADX, present only if the query succeeded"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provides an error about the query, present only if the query fails"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportResultColumn",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the column"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ADX type of the column"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "report",
+    "resourceType": "Microsoft.StorageDiscovery/storageDiscoveryWorkspaces",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateReport",
+    "resourceType": "Microsoft.StorageDiscovery/storageDiscoveryWorkspaces/reports",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/45"
+    }
   }
 ]

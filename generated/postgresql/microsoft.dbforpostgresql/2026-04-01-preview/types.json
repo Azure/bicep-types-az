@@ -5287,5 +5287,757 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityModel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name for which validity and availability was checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of resource. It can be 'Microsoft.DBforPostgreSQL/flexibleServers' or 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints'."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/452"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/450"
+      },
+      {
+        "$ref": "#/451"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/449"
+    },
+    "input": {
+      "$ref": "#/448"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageParameter",
+    "properties": {
+      "virtualNetworkArmResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Virtual network resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageModel",
+    "properties": {
+      "delegatedSubnetsUsage": {
+        "type": {
+          "$ref": "#/457"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "location of the delegated subnet usage"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "subscriptionId of the delegated subnet usage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedSubnetUsage",
+    "properties": {
+      "subnetName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the delegated subnet for which IP addresses are in use"
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Number of IP addresses used by the delegated subnet"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkVirtualNetworkSubnetUsage",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/455"
+    },
+    "input": {
+      "$ref": "#/454"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateNetworkStatus",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier of the subscription."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the resource group."
+      },
+      "serverName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the server."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/466"
+        },
+        "flags": 2,
+        "description": "State of the network migration operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CancelInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/460"
+      },
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/462"
+      },
+      {
+        "$ref": "#/463"
+      },
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/465"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateNetwork",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartMajorVersionUpgradePrecheckRequest",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 1,
+        "description": "The target major version to upgrade to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "18"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "17"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "16"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "15"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "14"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "13"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "12"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "11"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
+      },
+      {
+        "$ref": "#/472"
+      },
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
+      },
+      {
+        "$ref": "#/475"
+      },
+      {
+        "$ref": "#/476"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StartMajorVersionUpgradePrecheckResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The precheck validation ID."
+      },
+      "createTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time when the precheck was created."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/483"
+        },
+        "flags": 0,
+        "description": "The status of the precheck validation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/480"
+      },
+      {
+        "$ref": "#/481"
+      },
+      {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startMajorVersionUpgradePrecheck",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/478"
+    },
+    "input": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the migration to check for validity and availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Type of resource."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 2,
+        "description": "Indicates if the migration name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 2,
+        "description": "Migration name availability reason."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Migration name availability message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkMigrationNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/485"
+    },
+    "input": {
+      "$ref": "#/485"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LtrPreBackupRequest",
+    "properties": {
+      "backupSettings": {
+        "type": {
+          "$ref": "#/491"
+        },
+        "flags": 1,
+        "description": "Backup Settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupSettings",
+    "properties": {
+      "backupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Backup Name for the current backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LtrPreBackupResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 1,
+        "description": "Additional Properties for the pre backup response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionResponseProperties",
+    "properties": {
+      "numberOfContainers": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Number of storage containers the plugin will use during backup. More than one containers may be used for size limitations, parallelism, or redundancy etc."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ltrPreBackup",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/492"
+    },
+    "input": {
+      "$ref": "#/490"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionRequest",
+    "properties": {
+      "targetDetails": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 1,
+        "description": "Backup store detail for target server."
+      },
+      "backupSettings": {
+        "type": {
+          "$ref": "#/491"
+        },
+        "flags": 1,
+        "description": "Backup Settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupStoreDetails",
+    "properties": {
+      "sasUriList": {
+        "type": {
+          "$ref": "#/497"
+        },
+        "flags": 1,
+        "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/366"
+        },
+        "flags": 0,
+        "description": "Long Term Retention Backup Operation Resource Properties"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startLtrBackup",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/498"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceEventActionResponse",
+    "properties": {
+      "maintenanceEventId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The maintenance event name (maintenance ID)."
+      },
+      "serverId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The full Azure resource ID of the server."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/506"
+        },
+        "flags": 0,
+        "description": "The status of the maintenance event."
+      },
+      "plannedStartTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The planned start time of the maintenance event (UTC)."
+      },
+      "plannedEndTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The planned end time of the maintenance event (UTC)."
+      },
+      "appliedNow": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "A value indicating whether this was an apply-now (immediate) action. True for ApplyNow; false for Reschedule."
+      },
+      "lastUpdatedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time this maintenance event record was last updated (UTC)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Planned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rescheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/503"
+      },
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applyNow",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/500"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceEventRescheduleRequest",
+    "properties": {
+      "postponeToDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "New start time in RFC3339 format."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reschedule",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/500"
+    },
+    "input": {
+      "$ref": "#/508"
+    }
   }
 ]

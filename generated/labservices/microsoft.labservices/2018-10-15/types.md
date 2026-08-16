@@ -72,6 +72,35 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getEnvironment (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [EnvironmentOperationsPayload](#environmentoperationspayload)
+* **Output**: [GetEnvironmentResponse](#getenvironmentresponse)
+
+## Function getOperationBatchStatus (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [OperationBatchStatusPayload](#operationbatchstatuspayload)
+* **Output**: [OperationBatchStatusResponse](#operationbatchstatusresponse)
+
+## Function getOperationStatus (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [OperationStatusPayload](#operationstatuspayload)
+* **Output**: [OperationStatusResponse](#operationstatusresponse)
+
+## Function getPersonalPreferences (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [PersonalPreferencesOperationsPayload](#personalpreferencesoperationspayload)
+* **Output**: [GetPersonalPreferencesResponse](#getpersonalpreferencesresponse)
+
+## Function getRegionalAvailability (Microsoft.LabServices/labaccounts@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts
+* **ApiVersion**: 2018-10-15
+* **Output**: [GetRegionalAvailabilityResponse](#getregionalavailabilityresponse)
+
 ## Function listEnvironments (Microsoft.LabServices/users@2018-10-15)
 * **Resource**: Microsoft.LabServices/users
 * **ApiVersion**: 2018-10-15
@@ -94,6 +123,10 @@
 * **provisioningState**: string (ReadOnly): The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
 * **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
 * **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of backing DTL virtual machine with compute and network details.
+
+## EnvironmentOperationsPayload
+### Properties
+* **environmentId**: string (Required): The resourceId of the environment
 
 ## EnvironmentProperties
 ### Properties
@@ -154,6 +187,19 @@
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
 
+## GetEnvironmentResponse
+### Properties
+* **environment**: [EnvironmentDetails](#environmentdetails) (ReadOnly): Details of the environment
+
+## GetPersonalPreferencesResponse
+### Properties
+* **favoriteLabResourceIds**: string[]: Array of favorite lab resource ids
+* **id**: string: Id to be used by the cache orchestrator
+
+## GetRegionalAvailabilityResponse
+### Properties
+* **regionalAvailability**: [RegionalAvailability](#regionalavailability)[]: Availability information for different size categories per region
+
 ## LabAccountProperties
 ### Properties
 * **enabledRegionSelection**: bool: Represents if region selection is enabled
@@ -211,12 +257,44 @@
 * **sshAuthority**: string (ReadOnly): Connection information for Linux
 * **username**: string (ReadOnly): Username of the VM
 
+## OperationBatchStatusPayload
+### Properties
+* **urls**: string[] (Required): The operation url of long running operation
+
+## OperationBatchStatusResponse
+### Properties
+* **items**: [OperationBatchStatusResponseItem](#operationbatchstatusresponseitem)[] (ReadOnly): Gets a collection of items that contain the operation url and status.
+
+## OperationBatchStatusResponseItem
+### Properties
+* **operationUrl**: string (ReadOnly): status of the long running operation for an environment
+* **status**: string (ReadOnly): status of the long running operation for an environment
+
+## OperationStatusPayload
+### Properties
+* **operationUrl**: string (Required): The operation url of long running operation
+
+## OperationStatusResponse
+### Properties
+* **status**: string (ReadOnly): status of the long running operation for an environment
+
+## PersonalPreferencesOperationsPayload
+### Properties
+* **addRemove**: 'Add' | 'Remove' | string: Enum indicating if user is adding or removing a favorite lab
+* **labAccountResourceId**: string: Resource Id of the lab account
+* **labResourceId**: string: Resource Id of the lab to add/remove from the favorites list
+
 ## ReferenceVm
 ### Properties
 * **password**: string: The password of the virtual machine. This will be set to null in GET resource API
 * **userName**: string (Required): The username of the virtual machine
 * **vmResourceId**: string (ReadOnly): VM resource Id for the environment
 * **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): The state details for the reference virtual machine.
+
+## RegionalAvailability
+### Properties
+* **region**: string: Corresponding region
+* **sizeAvailabilities**: [SizeAvailability](#sizeavailability)[]: List of all the size information for the region
 
 ## ResourceSet
 ### Properties
@@ -261,6 +339,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SizeAvailability
+### Properties
+* **isAvailable**: bool: Whether or not this size category is available
+* **sizeCategory**: 'Basic' | 'Performance' | 'Standard' | string: The category of the size (Basic, Standard, Performance).
 
 ## SizeConfigurationProperties
 ### Properties

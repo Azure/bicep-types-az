@@ -2493,5 +2493,145 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrantAccessData",
+    "properties": {
+      "access": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 1
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "Time duration in seconds until the SAS access expires."
+      },
+      "getSecureVMGuestStateSAS": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Set this flag to true to get additional SAS for VM guest state"
+      },
+      "fileFormat": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 0,
+        "description": "Used to specify the file format when making request for SAS on a VHDX file format snapshot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Write"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHDX"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessUri",
+    "properties": {
+      "accessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a disk."
+      },
+      "securityDataAccessSAS": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS uri for accessing a VM guest state."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2023-10-02",
+    "output": {
+      "$ref": "#/186"
+    },
+    "input": {
+      "$ref": "#/178"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2023-10-02",
+    "output": {
+      "$ref": "#/186"
+    },
+    "input": {
+      "$ref": "#/178"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "beginGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2023-10-02",
+    "output": {
+      "$ref": "#/186"
+    },
+    "input": {
+      "$ref": "#/178"
+    }
   }
 ]

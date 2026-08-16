@@ -1421,12 +1421,434 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "ExportDevicesRequest",
+    "properties": {
+      "ExportBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The export blob container URI."
+      },
+      "ExcludeKeys": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "The value indicating whether keys should be excluded during export."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobResponse",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start time of the job."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the job stopped processing."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "The type of the job."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 2,
+        "description": "The status of the job."
+      },
+      "failureReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "If status == failed, this string containing the reason for the failure."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status message for the job."
+      },
+      "parentJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier of the parent job, if any."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "export"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "import"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "backup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "readDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "writeDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "updateDeviceConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "rebootDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "factoryResetDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "firmwareUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enqueued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/103"
+    },
+    "input": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportDevicesRequest",
+    "properties": {
+      "InputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The input blob container URI."
+      },
+      "OutputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The output blob container URI."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/103"
+    },
+    "input": {
+      "$ref": "#/123"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listkeys",
     "resourceType": "Microsoft.Devices/IotHubs/IotHubKeys",
     "apiVersion": "2017-07-01",
     "output": {
       "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateWithNonceDescription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificatePropertiesWithNonce",
+    "properties": {
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's subject name."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's expiration date and time."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's thumbprint."
+      },
+      "isVerified": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Determines whether certificate has been verified."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's create date and time."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's last update date and time."
+      },
+      "verificationCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The certificate's verification code that will be used for proof of possession."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateVerificationCode",
+    "resourceType": "Microsoft.Devices/IotHubs/certificates",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateVerificationDescription",
+    "properties": {
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "base-64 representation of X509 certificate .cer file or just .pem file content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateDescription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "The description of an X509 CA Certificate."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verify",
+    "resourceType": "Microsoft.Devices/IotHubs/certificates",
+    "apiVersion": "2017-07-01",
+    "output": {
+      "$ref": "#/130"
+    },
+    "input": {
+      "$ref": "#/129"
     }
   }
 ]

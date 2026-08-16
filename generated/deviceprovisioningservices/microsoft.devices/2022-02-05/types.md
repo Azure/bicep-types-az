@@ -38,6 +38,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2022-02-05)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2022-02-05
+* **Output**: [VerificationCodeResponse](#verificationcoderesponse)
+
 ## Function listkeys (Microsoft.Devices/provisioningServices@2022-02-05)
 * **Resource**: Microsoft.Devices/provisioningServices
 * **ApiVersion**: 2022-02-05
@@ -48,6 +53,12 @@
 * **ApiVersion**: 2022-02-05
 * **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
 
+## Function verify (Microsoft.Devices/provisioningServices/certificates@2022-02-05)
+* **Resource**: Microsoft.Devices/provisioningServices/certificates
+* **ApiVersion**: 2022-02-05
+* **Input**: [VerificationCodeRequest](#verificationcoderequest)
+* **Output**: [CertificateResponse](#certificateresponse)
+
 ## CertificateProperties
 ### Properties
 * **certificate**: any: base-64 representation of X509 certificate .cer file or just .pem file content.
@@ -57,6 +68,15 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## CertificateResponse
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificateProperties](#certificateproperties): properties of a certificate
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The resource type.
 
 ## IotDpsPropertiesDescription
 ### Properties
@@ -143,4 +163,27 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## VerificationCodeRequest
+### Properties
+* **certificate**: string: base-64 representation of X509 certificate .cer file or just .pem file content.
+
+## VerificationCodeResponse
+### Properties
+* **etag**: string (ReadOnly): Request etag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): Name of certificate.
+* **properties**: [VerificationCodeResponseProperties](#verificationcoderesponseproperties)
+* **type**: string (ReadOnly): The resource type.
+
+## VerificationCodeResponseProperties
+### Properties
+* **certificate**: any: base-64 representation of X509 certificate .cer file or just .pem file content.
+* **created**: string: Certificate created time.
+* **expiry**: string: Code expiry.
+* **isVerified**: bool: Indicate if the certificate is verified by owner of private key.
+* **subject**: string: Certificate subject.
+* **thumbprint**: string: Certificate thumbprint.
+* **updated**: string: Certificate updated time.
+* **verificationCode**: string: Verification code.
 

@@ -37,6 +37,22 @@
 * **properties**: [DetectorResponseProperties](#detectorresponseproperties) (ReadOnly): DetectorResponse resource specific properties
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function retrieveCertificateActions (Microsoft.CertificateRegistration/certificateOrders@2024-04-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-04-01
+* **Output**: [CertificateOrderAction](#certificateorderaction)[]
+
+## Function retrieveEmailHistory (Microsoft.CertificateRegistration/certificateOrders@2024-04-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-04-01
+* **Output**: [CertificateEmail](#certificateemail)[]
+
+## Function retrieveSiteSeal (Microsoft.CertificateRegistration/certificateOrders@2024-04-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-04-01
+* **Input**: [SiteSealRequest](#sitesealrequest)
+* **Output**: [SiteSeal](#siteseal)
+
 ## AppServiceCertificate
 ### Properties
 * **keyVaultId**: string: Key Vault resource Id.
@@ -82,6 +98,16 @@
 * **subject**: string (ReadOnly): Certificate Subject.
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint.
 * **version**: int (ReadOnly): Certificate Version.
+
+## CertificateEmail
+### Properties
+* **emailId**: string: Email id.
+* **timeStamp**: string: Time stamp.
+
+## CertificateOrderAction
+### Properties
+* **actionType**: 'CertificateExpirationWarning' | 'CertificateExpired' | 'CertificateIssued' | 'CertificateOrderCanceled' | 'CertificateOrderCreated' | 'CertificateRevoked' | 'DomainValidationComplete' | 'FraudCleared' | 'FraudDetected' | 'FraudDocumentationRequired' | 'OrgNameChange' | 'OrgValidationComplete' | 'SanDrop' | 'Unknown' (ReadOnly): Action type.
+* **createdAt**: string (ReadOnly): Time at which the certificate action was performed.
 
 ## CertificateOrderContact
 ### Properties
@@ -168,6 +194,15 @@
 * **links**: string[]: Links attribute of sample utterance.
 * **qid**: string: Question id of sample utterance (for stackoverflow questions titles).
 * **text**: string: Text attribute of sample utterance.
+
+## SiteSeal
+### Properties
+* **html**: string (Required): HTML snippet
+
+## SiteSealRequest
+### Properties
+* **lightTheme**: bool: If <code>true</code> use the light color theme for site seal; otherwise, use the default color theme.
+* **locale**: string: Locale of site seal.
 
 ## Status
 ### Properties

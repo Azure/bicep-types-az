@@ -40,6 +40,12 @@
 * **ApiVersion**: 2021-03-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
 
+## Function regenerateKey (Microsoft.AppConfiguration/configurationStores@2021-03-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2021-03-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [ApiKey](#apikey)
+
 ## ApiKey
 ### Properties
 * **connectionString**: string (ReadOnly): A connection string that can be used by supporting clients for authentication.
@@ -115,6 +121,10 @@ A locked key-value may not be modified until it is unlocked.
 * **actionsRequired**: 'None' | 'Recreate' | string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
+
+## RegenerateKeyParameters
+### Properties
+* **id**: string: The id of the key to regenerate.
 
 ## ResourceIdentity
 ### Properties

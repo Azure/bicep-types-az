@@ -87,6 +87,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Dashboard/grafana/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkEnterpriseDetails (Microsoft.Dashboard/grafana@2025-09-01-preview)
+* **Resource**: Microsoft.Dashboard/grafana
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: [EnterpriseDetails](#enterprisedetails)
+
+## Function fetchAvailablePlugins (Microsoft.Dashboard/grafana@2025-09-01-preview)
+* **Resource**: Microsoft.Dashboard/grafana
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: [GrafanaAvailablePluginListResponse](#grafanaavailablepluginlistresponse)
+
 ## AzureMonitorWorkspaceIntegration
 ### Properties
 * **azureMonitorWorkspaceResourceId**: string: The resource Id of the connected Azure Monitor Workspace.
@@ -100,6 +110,23 @@
 ### Properties
 * **marketplaceAutoRenew**: 'Disabled' | 'Enabled' | string: The AutoRenew setting of the Enterprise subscription
 * **marketplacePlanId**: string: The Plan Id of the Azure Marketplace subscription for the Enterprise plugins
+
+## EnterpriseDetails
+### Properties
+* **marketplaceTrialQuota**: [MarketplaceTrialQuota](#marketplacetrialquota): The allocation details of the per subscription free trial slot of the subscription.
+* **saasSubscriptionDetails**: [SaasSubscriptionDetails](#saassubscriptiondetails): SaaS subscription details of a Grafana instance
+
+## GrafanaAvailablePlugin
+### Properties
+* **author**: string (ReadOnly): Grafana plugin author/publisher name
+* **name**: string (ReadOnly): Grafana plugin display name
+* **pluginId**: string (ReadOnly): Grafana plugin id
+* **type**: string (ReadOnly): Grafana plugin type
+
+## GrafanaAvailablePluginListResponse
+### Properties
+* **nextLink**: string
+* **value**: [GrafanaAvailablePlugin](#grafanaavailableplugin)[]
 
 ## GrafanaConfigurations
 ### Properties
@@ -181,6 +208,13 @@ https://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## MarketplaceTrialQuota
+### Properties
+* **availablePromotion**: 'FreeTrial' | 'None' | string: Available enterprise promotion for the subscription
+* **grafanaResourceId**: string: Resource Id of the Grafana resource which is doing the trial.
+* **trialEndAt**: string: The date and time in UTC of when the trial ends.
+* **trialStartAt**: string: The date and time in UTC of when the trial starts.
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string (ReadOnly): The ARM identifier for Private Endpoint
@@ -218,6 +252,13 @@ https://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp
 * **name**: string (Required): The name of the SKU.
 * **size**: 'X1' | 'X2' | string: Specifies the capacity tier of the Grafana instance.
 
+## SaasSubscriptionDetails
+### Properties
+* **offerId**: string: The offer Id of the SaaS subscription.
+* **planId**: string: The plan Id of the SaaS subscription.
+* **publisherId**: string: The publisher Id of the SaaS subscription.
+* **term**: [SubscriptionTerm](#subscriptionterm): The billing term of the SaaS Subscription.
+
 ## Security
 ### Properties
 * **csrfAlwaysCheck**: bool: Set to true to execute the CSRF check even if the login cookie is not in a request (default false).
@@ -240,6 +281,12 @@ https://pkg.go.dev/github.com/go-mail/mail#StartTLSPolicy
 ## Snapshots
 ### Properties
 * **externalEnabled**: bool: Set to false to disable external snapshot publish endpoint
+
+## SubscriptionTerm
+### Properties
+* **endDate**: string: The date and time in UTC of when the billing term ends.
+* **startDate**: string: The date and time in UTC of when the billing term starts.
+* **termUnit**: string: The unit of the billing term.
 
 ## SystemData
 ### Properties

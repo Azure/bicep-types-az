@@ -4534,5 +4534,1920 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name for which availability needs to be checked"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes the Resource type: Microsoft.DataProtection/BackupVaults"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether [name available]."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reason."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/338"
+    },
+    "input": {
+      "$ref": "#/337"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FeatureValidationRequestBase",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "FeatureValidationRequest": {
+        "$ref": "#/341"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureValidationRequest",
+    "properties": {
+      "featureType": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0,
+        "description": "backup support feature type."
+      },
+      "featureName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "backup support feature name."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataSourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureValidationRequest"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FeatureValidationResponseBase",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "FeatureValidationResponse": {
+        "$ref": "#/347"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureValidationResponse",
+    "properties": {
+      "featureType": {
+        "type": {
+          "$ref": "#/350"
+        },
+        "flags": 0,
+        "description": "backup support feature type."
+      },
+      "features": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 0,
+        "description": "Response features"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/361"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataSourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/348"
+      },
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportedFeature",
+    "properties": {
+      "featureName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "support feature type."
+      },
+      "supportStatus": {
+        "type": {
+          "$ref": "#/358"
+        },
+        "flags": 0,
+        "description": "feature support status"
+      },
+      "exposureControlledFeatures": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 0,
+        "description": "support feature type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlphaPreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivatePreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublicPreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenerallyAvailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
+      },
+      {
+        "$ref": "#/354"
+      },
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/357"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/351"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeatureValidationResponse"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFeatureSupport",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/346"
+    },
+    "input": {
+      "$ref": "#/340"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CrossRegionRestoreRequestObject",
+    "properties": {
+      "restoreRequestObject": {
+        "type": {
+          "$ref": "#/364"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore request object."
+      },
+      "crossRegionRestoreDetails": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 1,
+        "description": "Cross region restore details."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AzureBackupRestoreRequest",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "restoreTargetInfo": {
+        "type": {
+          "$ref": "#/365"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore target information."
+      },
+      "sourceDataStoreType": {
+        "type": {
+          "$ref": "#/424"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of the source data store."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified Azure Resource Manager ID of the datasource which is being recovered."
+      },
+      "identityDetails": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 0,
+        "description": "Contains information of the Identity Details for the BI.\r\nIf it is null, default will be considered as System Assigned."
+      }
+    },
+    "elements": {
+      "AzureBackupRestoreWithRehydrationRequest": {
+        "$ref": "#/425"
+      },
+      "AzureBackupRecoveryTimeBasedRestoreRequest": {
+        "$ref": "#/431"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RestoreTargetInfoBase",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "recoveryOption": {
+        "type": {
+          "$ref": "#/367"
+        },
+        "flags": 1,
+        "description": "Recovery Option"
+      },
+      "restoreLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Target Restore region"
+      }
+    },
+    "elements": {
+      "ItemLevelRestoreTargetInfo": {
+        "$ref": "#/368"
+      },
+      "RestoreFilesTargetInfo": {
+        "$ref": "#/411"
+      },
+      "RestoreTargetInfo": {
+        "$ref": "#/418"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailIfExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ItemLevelRestoreTargetInfo",
+    "properties": {
+      "restoreCriteria": {
+        "type": {
+          "$ref": "#/409"
+        },
+        "flags": 1,
+        "description": "Restore Criteria"
+      },
+      "datasourceInfo": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 1,
+        "description": "Information of target DS"
+      },
+      "datasourceSetInfo": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Information of target DS Set"
+      },
+      "datasourceAuthCredentials": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 0,
+        "description": "Credentials to use to authenticate with data source provider."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ItemLevelRestoreCriteria",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "ItemPathBasedRestoreCriteria": {
+        "$ref": "#/370"
+      },
+      "KubernetesClusterRestoreCriteria": {
+        "$ref": "#/373"
+      },
+      "KubernetesClusterVaultTierRestoreCriteria": {
+        "$ref": "#/388"
+      },
+      "KubernetesPVRestoreCriteria": {
+        "$ref": "#/403"
+      },
+      "KubernetesStorageClassRestoreCriteria": {
+        "$ref": "#/405"
+      },
+      "RangeBasedItemLevelRestoreCriteria": {
+        "$ref": "#/407"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ItemPathBasedRestoreCriteria",
+    "properties": {
+      "itemPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The path of the item to be restored. It could be the full path of the item or the path relative to the backup item"
+      },
+      "isPathRelativeToBackupItem": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Flag to specify if the path is relative to backup item or full path"
+      },
+      "subItemPathPrefix": {
+        "type": {
+          "$ref": "#/371"
+        },
+        "flags": 0,
+        "description": "The list of prefix strings to be used as filter criteria during restore. These are relative to the item path specified."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/372"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemPathBasedRestoreCriteria"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterRestoreCriteria",
+    "properties": {
+      "includeClusterScopeResources": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Gets or sets the include cluster resources property. This property if enabled will include cluster scope resources during restore."
+      },
+      "includedNamespaces": {
+        "type": {
+          "$ref": "#/374"
+        },
+        "flags": 0,
+        "description": "Gets or sets the include namespaces property. This property sets the namespaces to be included during restore."
+      },
+      "excludedNamespaces": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Gets or sets the exclude namespaces property. This property sets the namespaces to be excluded during restore."
+      },
+      "includedResourceTypes": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "Gets or sets the include resource types property. This property sets the resource types to be included during restore."
+      },
+      "excludedResourceTypes": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "Gets or sets the exclude resource types property. This property sets the resource types to be excluded during restore."
+      },
+      "labelSelectors": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "Gets or sets the LabelSelectors property. This property sets the resource with such label selectors to be included during restore."
+      },
+      "persistentVolumeRestoreMode": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "Gets or sets the PV (Persistent Volume) Restore Mode property. This property sets whether volumes needs to be restored."
+      },
+      "conflictPolicy": {
+        "type": {
+          "$ref": "#/384"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Conflict Policy property. This property sets policy during conflict of resources during restore."
+      },
+      "namespaceMappings": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Namespace Mappings property. This property sets if namespace needs to be change during restore."
+      },
+      "restoreHookReferences": {
+        "type": {
+          "$ref": "#/386"
+        },
+        "flags": 0,
+        "description": "Gets or sets the restore hook references. This property sets the hook reference to be executed during restore."
+      },
+      "resourceModifierReference": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource modifier reference. This property sets the reference for resource modifier during restore."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/387"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreWithVolumeData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreWithoutVolumeData"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/379"
+      },
+      {
+        "$ref": "#/380"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Skip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterRestoreCriteriaNamespaceMappings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/205"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesClusterRestoreCriteria"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterVaultTierRestoreCriteria",
+    "properties": {
+      "includeClusterScopeResources": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Gets or sets the include cluster resources property. This property if enabled will include cluster scope resources during restore from vault."
+      },
+      "includedNamespaces": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 0,
+        "description": "Gets or sets the include namespaces property. This property sets the namespaces to be included during restore from vault."
+      },
+      "excludedNamespaces": {
+        "type": {
+          "$ref": "#/390"
+        },
+        "flags": 0,
+        "description": "Gets or sets the exclude namespaces property. This property sets the namespaces to be excluded during restore from vault."
+      },
+      "includedResourceTypes": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "Gets or sets the include resource types property. This property sets the resource types to be included during restore from vault."
+      },
+      "excludedResourceTypes": {
+        "type": {
+          "$ref": "#/392"
+        },
+        "flags": 0,
+        "description": "Gets or sets the exclude resource types property. This property sets the resource types to be excluded during restore from vault."
+      },
+      "labelSelectors": {
+        "type": {
+          "$ref": "#/393"
+        },
+        "flags": 0,
+        "description": "Gets or sets the LabelSelectors property. This property sets the resource with such label selectors to be included during restore from vault."
+      },
+      "persistentVolumeRestoreMode": {
+        "type": {
+          "$ref": "#/396"
+        },
+        "flags": 0,
+        "description": "Gets or sets the PV (Persistent Volume) Restore Mode property. This property sets whether volumes needs to be restored from vault."
+      },
+      "conflictPolicy": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Conflict Policy property. This property sets policy during conflict of resources during restore from vault."
+      },
+      "namespaceMappings": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Namespace Mappings property. This property sets if namespace needs to be change during restore from vault."
+      },
+      "restoreHookReferences": {
+        "type": {
+          "$ref": "#/401"
+        },
+        "flags": 0,
+        "description": "Gets or sets the restore hook references. This property sets the hook reference to be executed during restore from vault."
+      },
+      "stagingResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the staging RG Id for creating staging disks and snapshots during restore from vault."
+      },
+      "stagingStorageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the staging Storage Account Id for creating backup extension object store data during restore from vault."
+      },
+      "resourceModifierReference": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource modifier reference. This property sets the reference for resource modifier during restore."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreWithVolumeData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreWithoutVolumeData"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Skip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patch"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterVaultTierRestoreCriteriaNamespaceMappings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/205"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesClusterVaultTierRestoreCriteria"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesPVRestoreCriteria",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Selected persistent volume claim name"
+      },
+      "storageClassName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Selected storage class name for restore operation"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/404"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesPVRestoreCriteria"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesStorageClassRestoreCriteria",
+    "properties": {
+      "selectedStorageClassName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Selected storage class name"
+      },
+      "provisioner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Provisioner of the storage class"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/406"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesStorageClassRestoreCriteria"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RangeBasedItemLevelRestoreCriteria",
+    "properties": {
+      "minMatchingValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "minimum value for range prefix match"
+      },
+      "maxMatchingValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "maximum value for range prefix match"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/408"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RangeBasedItemLevelRestoreCriteria"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemLevelRestoreTargetInfo"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreFilesTargetInfo",
+    "properties": {
+      "targetDetails": {
+        "type": {
+          "$ref": "#/412"
+        },
+        "flags": 1,
+        "description": "Destination of RestoreAsFiles operation, when destination is not a datasource"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/417"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetDetails",
+    "properties": {
+      "filePrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Restore operation may create multiple files inside location pointed by Url\r\nBelow will be the common prefix for all of them"
+      },
+      "restoreTargetLocationType": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 1,
+        "description": "Denotes the target location where the data will be restored,\r\nstring value for the enum {Microsoft.Internal.AzureBackup.DataProtection.Common.Interface.RestoreTargetLocationType}"
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Url denoting the restore destination. It can point to container / file share etc"
+      },
+      "targetResourceArmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Full ARM Id denoting the restore destination. It is the ARM Id pointing to container / file share\r\nThis is optional if the target subscription can be identified with the URL field. If not\r\nthen this is needed if CrossSubscriptionRestore field of BackupVault is in any of the disabled states"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBlobs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFiles"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreFilesTargetInfo"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreTargetInfo",
+    "properties": {
+      "datasourceInfo": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 1,
+        "description": "Information of target DS"
+      },
+      "datasourceSetInfo": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Information of target DS Set"
+      },
+      "datasourceAuthCredentials": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 0,
+        "description": "Credentials to use to authenticate with data source provider."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreTargetInfo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SnapshotStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/420"
+      },
+      {
+        "$ref": "#/421"
+      },
+      {
+        "$ref": "#/422"
+      },
+      {
+        "$ref": "#/423"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRestoreWithRehydrationRequest",
+    "properties": {
+      "rehydrationPriority": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 1,
+        "description": "Priority to be used for rehydration. Values High or Standard"
+      },
+      "rehydrationRetentionDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention duration in ISO 8601 format i.e P10D ."
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/430"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/426"
+      },
+      {
+        "$ref": "#/427"
+      },
+      {
+        "$ref": "#/428"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupRestoreWithRehydrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRecoveryTimeBasedRestoreRequest",
+    "properties": {
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The recovery time in ISO 8601 format example - 2020-08-14T17:30:00.0000000Z."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/432"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupRecoveryTimeBasedRestoreRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CrossRegionRestoreDetails",
+    "properties": {
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "sourceBackupInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationJobExtendedInfo",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name or Arm Id of the job created for this operation."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "crossRegionRestore",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateCrossRegionRestoreRequestObject",
+    "properties": {
+      "restoreRequestObject": {
+        "type": {
+          "$ref": "#/364"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore request object."
+      },
+      "crossRegionRestoreDetails": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 1,
+        "description": "Cross region restore details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCrossRegionRestore",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/436"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FetchSecondaryRPsRequestParameters",
+    "properties": {
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source region in which BackupInstance is located"
+      },
+      "sourceBackupInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM Path of BackupInstance"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRecoveryPointResourceList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/441"
+        },
+        "flags": 0,
+        "description": "List of resources."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri to fetch the next page of resources. Call ListNext() fetches next page of resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRecoveryPointResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 0,
+        "description": "AzureBackupRecoveryPointResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/440"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchSecondaryRecoveryPoints",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/439"
+    },
+    "input": {
+      "$ref": "#/438"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CrossRegionRestoreJobRequest",
+    "properties": {
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "sourceBackupVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupJobResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "AzureBackupJobResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchCrossRegionRestoreJob",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/444"
+    },
+    "input": {
+      "$ref": "#/443"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CrossRegionRestoreJobsRequest",
+    "properties": {
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "sourceBackupVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupJobResourceList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/448"
+        },
+        "flags": 0,
+        "description": "List of resources."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri to fetch the next page of resources. Call ListNext() fetches next page of resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/444"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchCrossRegionRestoreJobs",
+    "resourceType": "Microsoft.DataProtection/locations",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/447"
+    },
+    "input": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerBackupRequest",
+    "properties": {
+      "backupRuleOptions": {
+        "type": {
+          "$ref": "#/451"
+        },
+        "flags": 1,
+        "description": "Name for the Rule of the Policy which needs to be applied for this backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdHocBackupRuleOptions",
+    "properties": {
+      "ruleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "triggerOption": {
+        "type": {
+          "$ref": "#/452"
+        },
+        "flags": 1,
+        "description": "Adhoc backup trigger option"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdhocBackupTriggerOption",
+    "properties": {
+      "retentionTagOverride": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/364"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncBackupInstanceRequest",
+    "properties": {
+      "syncType": {
+        "type": {
+          "$ref": "#/458"
+        },
+        "flags": 0,
+        "description": "Field indicating sync type e.g. to sync only in case of failure or in all cases"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForceResync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/456"
+      },
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateRestoreRequestObject",
+    "properties": {
+      "restoreRequestObject": {
+        "type": {
+          "$ref": "#/364"
+        },
+        "flags": 1,
+        "description": "Gets or sets the restore request object."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateRestore",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesRequest",
+    "properties": {
+      "sourceDataStoreType": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of the source data store."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time for the List Restore Ranges request. ISO 8601 format."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time for the List Restore Ranges request. ISO 8601 format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/462"
+      },
+      {
+        "$ref": "#/463"
+      },
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesResponseResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/467"
+        },
+        "flags": 0,
+        "description": "AzureBackupFindRestorableTimeRangesResponseResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupFindRestorableTimeRangesResponse",
+    "properties": {
+      "restorableTimeRanges": {
+        "type": {
+          "$ref": "#/469"
+        },
+        "flags": 0,
+        "description": "Returns the Restore Ranges available on the Backup Instance."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorableTimeRange",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Start time for the available restore range"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "End time for the available restore range"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "findRestorableTimeRanges",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/461"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateForBackupRequest",
+    "properties": {
+      "backupInstance": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 1,
+        "description": "Backup Instance"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateForBackup",
+    "resourceType": "Microsoft.DataProtection/backupVaults",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/471"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnlockDeleteRequest",
+    "properties": {
+      "resourceGuardOperationRequests": {
+        "type": {
+          "$ref": "#/474"
+        },
+        "flags": 0
+      },
+      "resourceToBeDeleted": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnlockDeleteResponse",
+    "properties": {
+      "unlockDeleteExpiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the time when unlock delete privileges will get expired."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlockDelete",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/475"
+    },
+    "input": {
+      "$ref": "#/473"
+    }
   }
 ]
