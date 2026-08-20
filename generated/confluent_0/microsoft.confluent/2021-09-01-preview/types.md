@@ -24,6 +24,12 @@
 * **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function orgvalidate (Microsoft.Confluent/validations@2021-09-01-preview)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [OrganizationResource](#organizationresource)
+
 ## ConfluentAgreementProperties
 ### Properties
 * **accepted**: bool: If any version of the terms have been accepted, otherwise false.
@@ -44,6 +50,16 @@
 * **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status
 * **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
 
+## OrganizationResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **location**: string: Location of Organization resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [OrganizationResourceProperties](#organizationresourceproperties) (Required): Organization resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
+* **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
+* **type**: string (ReadOnly): The type of the resource.
+
 ## OrganizationResourceProperties
 ### Properties
 * **createdTime**: string (ReadOnly): The creation time of the resource.
@@ -52,6 +68,11 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provision states for confluent RP
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [UserDetail](#userdetail) (Required): Subscriber detail
+
+## OrganizationResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## OrganizationResourceTags
 ### Properties

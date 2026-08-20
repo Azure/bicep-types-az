@@ -15,6 +15,48 @@
 * **type**: 'Microsoft.ComputeBulkActions/locations/launchBulkInstancesOperations' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: Zones in which the LaunchBulkInstancesOperation is available
 
+## Function virtualMachinesCancelOperations (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [CancelOperationsRequest](#canceloperationsrequest)
+* **Output**: [CancelOperationsResponse](#canceloperationsresponse)
+
+## Function virtualMachinesExecuteCreate (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [ExecuteCreateRequest](#executecreaterequest)
+* **Output**: [CreateResourceOperationResponse](#createresourceoperationresponse)
+
+## Function virtualMachinesExecuteDeallocate (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [ExecuteDeallocateRequest](#executedeallocaterequest)
+* **Output**: [DeallocateResourceOperationResponse](#deallocateresourceoperationresponse)
+
+## Function virtualMachinesExecuteDelete (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [ExecuteDeleteRequest](#executedeleterequest)
+* **Output**: [DeleteResourceOperationResponse](#deleteresourceoperationresponse)
+
+## Function virtualMachinesExecuteHibernate (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [ExecuteHibernateRequest](#executehibernaterequest)
+* **Output**: [HibernateResourceOperationResponse](#hibernateresourceoperationresponse)
+
+## Function virtualMachinesExecuteStart (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [ExecuteStartRequest](#executestartrequest)
+* **Output**: [StartResourceOperationResponse](#startresourceoperationresponse)
+
+## Function virtualMachinesGetOperationStatus (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations
+* **ApiVersion**: 2026-02-01-preview
+* **Input**: [GetOperationStatusRequest](#getoperationstatusrequest)
+* **Output**: [GetOperationStatusResponse](#getoperationstatusresponse)
+
 ## AdditionalCapabilities
 ### Properties
 * **hibernationEnabled**: bool: The flag that enables or disables hibernation capability on the VM.
@@ -44,6 +86,15 @@
 * **enabled**: bool: Whether boot diagnostics should be enabled on the Virtual Machine.
 * **storageUri**: string: Uri of the storage account to use for placing the console output and screenshot. If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
 
+## CancelOperationsRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to cancel operations on
+
+## CancelOperationsResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations that were successfully cancelled
+
 ## CapacityReservationProfile
 ### Properties
 * **capacityReservationGroup**: [SubResource](#subresource): Specifies the capacity reservation group resource id that should be used for allocating the virtual machine provided enough capacity has been reserved. Please refer to https://aka.ms/CapacityReservation for more details.
@@ -54,6 +105,13 @@
 The default value will be the latest supported computeApiVersion by LaunchBulkInstancesOperation.
 * **extensions**: [VirtualMachineExtension](#virtualmachineextension)[]: Virtual Machine Extensions Array to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachine.json#/definitions/VirtualMachineExtension"
 * **virtualMachineProfile**: [VirtualMachineProfile](#virtualmachineprofile) (Required): Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachine.json#/definitions/VirtualMachineProperties"
+
+## CreateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the request.
+* **type**: string (Required): The type of resources used in the request eg virtual machines
 
 ## DataDisk
 ### Properties
@@ -70,6 +128,20 @@ The default value will be the latest supported computeApiVersion by LaunchBulkIn
 * **toBeDetached**: bool: Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset.
 * **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
+
+## DeallocateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the request.
+* **type**: string (Required): The type of resources used in the request eg virtual machines
+
+## DeleteResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the request.
+* **type**: string (Required): The type of resources used in the request eg virtual machines
 
 ## DiagnosticsProfile
 ### Properties
@@ -98,6 +170,58 @@ The default value will be the latest supported computeApiVersion by LaunchBulkIn
 ### Properties
 * **enable**: bool: Specifies if event grid and resource graph is enabled for Scheduled event related configurations.
 * **scheduledEventsApiVersion**: string: Specifies the api-version to determine which Scheduled Events configuration schema version will be delivered.
+
+## ExecuteCreateRequest
+### Properties
+* **correlationid**: string: CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resourceConfigParameters**: [ResourceProvisionPayload](#resourceprovisionpayload) (Required): resource creation payload
+
+## ExecuteDeallocateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources): The resources for the request
+
+## ExecuteDeleteRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **forceDeletion**: bool: Forced delete resource item
+* **resources**: [Resources](#resources): The resources for the request
+
+## ExecuteHibernateRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources): The resources for the request
+
+## ExecuteStartRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
+* **resources**: [Resources](#resources): The resources for the request
+
+## ExecutionParameters
+### Properties
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+
+## GetOperationStatusRequest
+### Properties
+* **correlationid**: string (Required): CorrelationId item
+* **operationIds**: string[] (Required): The list of operation ids to get the status of
+
+## GetOperationStatusResponse
+### Properties
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations based on their operation ids
+
+## HibernateResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the request.
+* **type**: string (Required): The type of resources used in the request eg virtual machines
 
 ## HostEndpointSettings
 ### Properties
@@ -263,6 +387,53 @@ The default value will be the latest supported computeApiVersion by LaunchBulkIn
 * **name**: 'Basic' | 'Standard' | string: Specify public IP sku name
 * **tier**: 'Global' | 'Regional' | string: Specify public IP sku tier
 
+## ResourceOperation
+### Properties
+* **errorCode**: string: Resource level error code if it exists
+* **errorDetails**: string: Resource level error details if they exist
+* **operation**: [ResourceOperationDetails](#resourceoperationdetails): Details of the operation performed on a resource
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg Azure Resource Manager ID
+
+## ResourceOperationDetails
+### Properties
+* **completedAt**: string: Time the operation was complete if errors are null
+* **deadline**: string: Deadline for the operation
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: Type of deadline of the operation
+* **operationId**: string (Required): Operation identifier for the unique operation
+* **opType**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Type of operation performed on the resources
+* **resourceId**: string: Unique identifier for the resource involved in the operation, eg Azure Resource Manager ID
+* **resourceOperationError**: [ResourceOperationError](#resourceoperationerror): Operation level errors if they exist
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
+* **state**: 'Blocked' | 'Cancelled' | 'Executing' | 'Failed' | 'PendingExecution' | 'PendingScheduling' | 'Scheduled' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current state of the operation
+* **subscriptionId**: string: Subscription id attached to the request
+* **timezone**: string: Timezone for the operation
+
+## ResourceOperationError
+### Properties
+* **errorCode**: string (Required): Code for the error eg 404, 500
+* **errorDetails**: string (Required): Detailed message about the error
+
+## ResourceProvisionPayload
+### Properties
+* **baseProfile**: [ResourceProvisionPayloadBaseProfile](#resourceprovisionpayloadbaseprofile): JSON object that contains VM properties that are common across all VMs in this batch (if you want to create 100 VMs in this request, and they all have same vmSize, then include vmSize in baseProfile)
+* **resourceCount**: int (Required): Number of VMs to be created
+* **resourceOverrides**: [ResourceProvisionPayloadResourceOverridesItem](#resourceprovisionpayloadresourceoverridesitem)[]: JSON array, that contains VM properties that should to be overridden for each VM in the batch (if you want to create 100 VMs, they all need a distinct computerName property, you pass computerNames for each VM in batch in this array), service will merge baseProfile with VM specific overrides and create a merged VMProfile.
+* **resourcePrefix**: string: if resourceOverrides doesn't contain "name", service will create name based of prefix and ResourceCount e.g. resourceprefix-0,resourceprefix-1..
+
+## ResourceProvisionPayloadBaseProfile
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ResourceProvisionPayloadResourceOverridesItem
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## Resources
+### Properties
+* **ids**: string[] (Required): The resource ids used for the request
+
 ## RetryPolicy
 ### Properties
 * **retryCount**: int: Retry count for user request
@@ -300,6 +471,13 @@ The default value will be the latest supported computeApiVersion by LaunchBulkIn
 ### Properties
 * **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
 * **path**: string: Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+
+## StartResourceOperationResponse
+### Properties
+* **description**: string (Required): The description of the operation response
+* **location**: string (Required): The location of the request eg westus
+* **results**: [ResourceOperation](#resourceoperation)[]: The results from the request.
+* **type**: string (Required): The type of resources used in the request eg virtual machines
 
 ## StorageProfile
 ### Properties

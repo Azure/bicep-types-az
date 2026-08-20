@@ -1715,5 +1715,81 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WipeDeviceOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WipeDeviceOperationResultProperties",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "wipe",
+    "resourceType": "Microsoft.Intune/locations/users/devices",
+    "apiVersion": "2015-01-14-preview",
+    "output": {
+      "$ref": "#/139"
+    }
   }
 ]

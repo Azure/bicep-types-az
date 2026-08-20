@@ -5852,18 +5852,244 @@
   },
   {
     "$type": "ObjectType",
+    "name": "QuotaUpdateParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "The list for update quota."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBaseProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "An enum describing the unit of quota measurement."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/300"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotasResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 2,
+        "description": "The list of workspace quota update result."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateWorkspaceQuotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The maximum permitted quota of the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/307"
+        },
+        "flags": 2,
+        "description": "An enum describing the unit of quota measurement."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0,
+        "description": "Status of update workspace quota."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaBelowClusterMinimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidQuotaExceedsSubscriptionLimit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidVMFamilyName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotSupportedForSku"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotEnabledForRegion"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateQuotas",
+    "resourceType": "Microsoft.MachineLearningServices/locations",
+    "apiVersion": "2020-05-01-preview",
+    "output": {
+      "$ref": "#/304"
+    },
+    "input": {
+      "$ref": "#/299"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AmlComputeNodesInformation",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/308"
+          "$ref": "#/328"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/336"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -5911,7 +6137,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/327"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -5953,22 +6179,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/301"
+        "$ref": "#/321"
       },
       {
-        "$ref": "#/302"
+        "$ref": "#/322"
       },
       {
-        "$ref": "#/303"
+        "$ref": "#/323"
       },
       {
-        "$ref": "#/304"
+        "$ref": "#/324"
       },
       {
-        "$ref": "#/305"
+        "$ref": "#/325"
       },
       {
-        "$ref": "#/306"
+        "$ref": "#/326"
       },
       {
         "$ref": "#/0"
@@ -5978,7 +6204,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/300"
+      "$ref": "#/320"
     }
   },
   {
@@ -6013,25 +6239,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/309"
+        "$ref": "#/329"
       },
       {
-        "$ref": "#/310"
+        "$ref": "#/330"
       },
       {
-        "$ref": "#/311"
+        "$ref": "#/331"
       },
       {
-        "$ref": "#/312"
+        "$ref": "#/332"
       },
       {
-        "$ref": "#/313"
+        "$ref": "#/333"
       },
       {
-        "$ref": "#/314"
+        "$ref": "#/334"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/335"
       },
       {
         "$ref": "#/0"
@@ -6044,7 +6270,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-05-01-preview",
     "output": {
-      "$ref": "#/299"
+      "$ref": "#/319"
     }
   },
   {
@@ -6054,13 +6280,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/319"
+        "$ref": "#/339"
       },
       "Databricks": {
-        "$ref": "#/321"
+        "$ref": "#/341"
       },
       "VirtualMachine": {
-        "$ref": "#/323"
+        "$ref": "#/343"
       }
     }
   },
@@ -6091,7 +6317,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/340"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -6115,7 +6341,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/342"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -6139,7 +6365,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/324"
+          "$ref": "#/344"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -6156,7 +6382,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-05-01-preview",
     "output": {
-      "$ref": "#/318"
+      "$ref": "#/338"
     }
   }
 ]

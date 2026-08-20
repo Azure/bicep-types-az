@@ -35,6 +35,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IoTFirmwareDefense/workspaces/firmwares/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateDownloadUrl (Microsoft.IoTFirmwareDefense/workspaces/firmwares@2024-01-10)
+* **Resource**: Microsoft.IoTFirmwareDefense/workspaces/firmwares
+* **ApiVersion**: 2024-01-10
+* **Output**: [UrlToken](#urltoken)
+
+## Function generateFilesystemDownloadUrl (Microsoft.IoTFirmwareDefense/workspaces/firmwares@2024-01-10)
+* **Resource**: Microsoft.IoTFirmwareDefense/workspaces/firmwares
+* **ApiVersion**: 2024-01-10
+* **Output**: [UrlToken](#urltoken)
+
+## Function generateUploadUrl (Microsoft.IoTFirmwareDefense/workspaces@2024-01-10)
+* **Resource**: Microsoft.IoTFirmwareDefense/workspaces
+* **ApiVersion**: 2024-01-10
+* **Input**: [GenerateUploadUrlRequest](#generateuploadurlrequest)
+* **Output**: [UrlToken](#urltoken)
+
 ## FirmwareProperties
 ### Properties
 * **description**: string: User-specified description of the firmware.
@@ -46,6 +62,10 @@
 * **statusMessages**: [StatusMessage](#statusmessage)[]: A list of errors or other messages generated during firmware analysis
 * **vendor**: string: Firmware vendor.
 * **version**: string: Firmware version.
+
+## GenerateUploadUrlRequest
+### Properties
+* **firmwareId**: string: A unique ID for the firmware to be uploaded.
 
 ## StatusMessage
 ### Properties
@@ -121,6 +141,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UrlToken
+### Properties
+* **url**: string (ReadOnly): SAS URL for creating or accessing a blob file.
 
 ## WorkspaceProperties
 ### Properties

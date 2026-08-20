@@ -99,6 +99,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/businessCases/paasSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function compareSummary (Microsoft.Migrate/assessmentProjects/businessCases@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/businessCases
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [CompareSummary](#comparesummary)
+
+## Function getReportDownloadUrl (Microsoft.Migrate/assessmentProjects/businessCases@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/businessCases
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [ReportDownloadUrl](#reportdownloadurl)
+
 ## AppServiceSku
 ### Properties
 * **cost**: int (ReadOnly): The cost details.
@@ -271,6 +283,30 @@
 ### Properties
 * **compute**: int (Required, ReadOnly): The compute emissions in metric tons of CO2 equivalent (MTCO2e).
 * **storage**: int (Required, ReadOnly): The storage emissions in metric tons of CO2 equivalent (MTCO2e).
+
+## CompareSummary
+### Properties
+* **azureArcEnabledOnPremisesCostDetails**: [CostDetails](#costdetails) (ReadOnly): The Azure arc enabled on-premises cost.
+* **azureAvsCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The Azure AvS Carbon Emissions details.
+* **azureAvsCostDetails**: [CostDetails](#costdetails) (ReadOnly): The AVS cost.
+* **azureIaasCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The Azure IaaS Carbon Emissions details.
+* **azureIaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The azure IaaS cost.
+* **azurePaasCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The Azure PaaS Carbon Emissions details.
+* **azurePaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The azure PaaS cost.
+* **futureAzureArcEnabledOnPremisesCostDetails**: [CostDetails](#costdetails) (ReadOnly): The final azure arc enabled on-premises cost based on the final migration percentage.
+* **futureCostDetails**: [CostDetails](#costdetails) (ReadOnly): Future state cost which includes Azure cost and Arc enabled on-premises cost based on the final migration percentage.
+* **onPremisesAvsCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises Avs Carbon Emissions details.
+* **onPremisesAvsCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises AVS cost.
+* **onPremisesAvsDecommissionedCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises Avs decommissioned Carbon Emissions details.
+* **onPremisesAvsDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises AVS decommissioned cost.
+* **onPremisesIaasCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises IaaS Carbon Emissions details.
+* **onPremisesIaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises IaaS cost.
+* **onPremisesIaasDecommissionedCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises IaaS decommissioned Carbon Emissions details.
+* **onPremisesIaasDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises IaaS decommissioned cost.
+* **onPremisesPaasCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises PaaS Carbon Emissions details.
+* **onPremisesPaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises PaaS cost.
+* **onPremisesPaasDecommissionedCarbonEmissionsDetails**: [CarbonEmissionsDetails](#carbonemissionsdetails) (ReadOnly): The on premises PaaS decommissioned Carbon Emissions details.
+* **onPremisesPaasDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises PaaS decommissioned cost.
 
 ## ComputeSettings
 ### Properties
@@ -606,6 +642,11 @@
 ### Properties
 * **reportStatus**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Unknown' | string (ReadOnly): Report status.
 * **reportType**: 'Excel' | 'Unknown' | string (ReadOnly): Report type.
+
+## ReportDownloadUrl
+### Properties
+* **businessCaseReportUrl**: string (ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (ReadOnly): Expiry date of download url.
 
 ## SecuritySettings
 ### Properties

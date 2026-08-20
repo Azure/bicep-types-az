@@ -97,10 +97,43 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppPlatform/locations@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/locations
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [TestKeys](#testkeys)
+
+## Function getLogFileUrl (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [LogFileUrlResponse](#logfileurlresponse)
+
+## Function getResourceUploadUrl (Microsoft.AppPlatform/Spring/apps@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [ResourceUploadDefinition](#resourceuploaddefinition)
+
 ## Function listTestKeys (Microsoft.AppPlatform/Spring@2021-09-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [TestKeys](#testkeys)
+
+## Function regenerateTestKey (Microsoft.AppPlatform/Spring@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
+* **Output**: [TestKeys](#testkeys)
+
+## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [CustomDomainValidatePayload](#customdomainvalidatepayload)
+* **Output**: [CustomDomainValidateResult](#customdomainvalidateresult)
 
 ## ApplicationInsightsAgentVersions
 ### Properties
@@ -208,6 +241,15 @@
 * **certName**: string: The bound certificate name of domain.
 * **thumbprint**: string: The thumbprint of bound certificate.
 
+## CustomDomainValidatePayload
+### Properties
+* **name**: string (Required): Name to be validated
+
+## CustomDomainValidateResult
+### Properties
+* **isValid**: bool: Indicates if domain name is valid.
+* **message**: string: Message of why domain name is invalid.
+
 ## CustomPersistentDiskProperties
 * **Discriminator**: type
 
@@ -295,6 +337,10 @@
 * **loadTrustStore**: bool: Indicate whether the certificate will be loaded into default trust store, only work for Java runtime.
 * **resourceId**: string (Required): Resource Id of loaded certificate
 
+## LogFileUrlResponse
+### Properties
+* **url**: string (Required): URL of the log file
+
 ## ManagedIdentityProperties
 ### Properties
 * **principalId**: string: Principal Id
@@ -309,6 +355,17 @@
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
+
+## NameAvailability
+### Properties
+* **message**: string: Message why the name is not available
+* **nameAvailable**: bool: Indicates whether the name is available
+* **reason**: string: Reason why the name is not available
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): Name to be checked
+* **type**: string (Required): Type of the resource to check name availability
 
 ## NetworkProfile
 ### Properties
@@ -330,6 +387,10 @@
 * **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
 * **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
+## RegenerateTestKeyRequestPayload
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): Type of the test key
+
 ## RequiredTraffic
 ### Properties
 * **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
@@ -342,6 +403,11 @@
 ### Properties
 * **cpu**: string: Required CPU. 1 core can be represented by 1 or 1000m. This should be 500m or 1 for Basic tier, and {500m, 1, 2, 3, 4} for Standard tier.
 * **memory**: string: Required memory. 1 GB can be represented by 1Gi or 1024Mi. This should be {512Mi, 1Gi, 2Gi} for Basic tier, and {512Mi, 1Gi, 2Gi, ..., 8Gi} for Standard tier.
+
+## ResourceUploadDefinition
+### Properties
+* **relativePath**: string: Source relative path
+* **uploadUrl**: string: Upload URL
 
 ## Sku
 ### Properties

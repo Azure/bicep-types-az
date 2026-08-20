@@ -398,6 +398,68 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource type. Should be always \"Microsoft.SignalRService/SignalR\"."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The SignalR service name to validate. e.g.\"my-signalR-name-here\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Indicates whether the name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The reason of the availability. Required if name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The message of the operation."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.SignalRService/locations",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/34"
+    },
+    "input": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SignalRKeys",
     "properties": {
       "primaryKey": {
@@ -436,7 +498,7 @@
     "resourceType": "Microsoft.SignalRService/SignalR",
     "apiVersion": "2018-10-01",
     "output": {
-      "$ref": "#/33"
+      "$ref": "#/37"
     }
   }
 ]

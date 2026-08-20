@@ -19,7 +19,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [QuotaRequestProperties](#quotarequestproperties) (ReadOnly): Quota request details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## QuotaProperties

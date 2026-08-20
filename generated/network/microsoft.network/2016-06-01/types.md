@@ -210,6 +210,22 @@
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function effectiveNetworkSecurityGroups (Microsoft.Network/networkInterfaces@2016-06-01)
+* **Resource**: Microsoft.Network/networkInterfaces
+* **ApiVersion**: 2016-06-01
+* **Output**: [EffectiveNetworkSecurityGroupListResult](#effectivenetworksecuritygrouplistresult)
+
+## Function effectiveRouteTable (Microsoft.Network/networkInterfaces@2016-06-01)
+* **Resource**: Microsoft.Network/networkInterfaces
+* **ApiVersion**: 2016-06-01
+* **Output**: [EffectiveRouteListResult](#effectiveroutelistresult)
+
+## Function reset (Microsoft.Network/virtualNetworkGateways@2016-06-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2016-06-01
+* **Input**: [VirtualNetworkGateway](#virtualnetworkgateway)
+* **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
+
 ## AddressSpace
 ### Properties
 * **addressPrefixes**: string[]: Gets or sets list of address blocks reserved for this virtual network in CIDR notation
@@ -450,6 +466,50 @@
 ## DhcpOptions
 ### Properties
 * **dnsServers**: string[]: Gets or sets list of DNS servers IP addresses
+
+## EffectiveNetworkSecurityGroup
+### Properties
+* **association**: [EffectiveNetworkSecurityGroupAssociation](#effectivenetworksecuritygroupassociation): Effective NetworkSecurityGroup association
+* **effectiveSecurityRules**: [EffectiveNetworkSecurityRule](#effectivenetworksecurityrule)[]: Gets collection of effective security rules
+* **networkSecurityGroup**: [SubResource](#subresource): Gets the id of network security group that is applied
+
+## EffectiveNetworkSecurityGroupAssociation
+### Properties
+* **networkInterface**: [SubResource](#subresource): Gets the id of network interface if assigned
+* **subnet**: [SubResource](#subresource): Gets the id of subnet if assigned
+
+## EffectiveNetworkSecurityGroupListResult
+### Properties
+* **nextLink**: string: Gets the URL to get the next set of results.
+* **value**: [EffectiveNetworkSecurityGroup](#effectivenetworksecuritygroup)[]: Gets list of effective network security groups
+
+## EffectiveNetworkSecurityRule
+### Properties
+* **access**: 'Allow' | 'Deny' | string: Gets network traffic is allowed or denied
+* **destinationAddressPrefix**: string: Gets destination address prefix
+* **destinationPortRange**: string: Gets destination port or range
+* **direction**: 'Inbound' | 'Outbound' | string: Gets the direction of the rule
+* **expandedDestinationAddressPrefix**: string[]: Gets expanded destination address prefix
+* **expandedSourceAddressPrefix**: string[]: Gets expanded source address prefix
+* **name**: string: Gets the name of the security rule specified by the user (if created by the user)
+* **priority**: int: Gets the priority of the rule
+* **protocol**: '*' | 'Tcp' | 'Udp' | string: Gets Network protocol this rule applies to
+* **sourceAddressPrefix**: string: Gets source address prefix
+* **sourcePortRange**: string: Gets source port or range
+
+## EffectiveRoute
+### Properties
+* **addressPrefix**: string[]: Gets address prefixes of the effective routes in CIDR notation.
+* **name**: string: Gets the name of the user defined route. This is optional.
+* **nextHopIpAddress**: string[]: Gets the IP address of the next hop of the effective route
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string: Gets or sets the type of Azure hop the packet should be sent to.
+* **source**: 'Default' | 'Unknown' | 'User' | 'VirtualNetworkGateway' | string: Gets who created the route
+* **state**: 'Active' | 'Invalid' | string: Gets value of effective route
+
+## EffectiveRouteListResult
+### Properties
+* **nextLink**: string: Gets the URL to get the next set of results.
+* **value**: [EffectiveRoute](#effectiveroute)[]: Gets list of effective routes
 
 ## ExpressRouteCircuitAuthorization
 ### Properties

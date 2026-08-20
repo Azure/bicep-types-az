@@ -190,6 +190,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureResilienceManagement/unifiedResilienceItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function refreshGoalResources (Microsoft.AzureResilienceManagement/goalAssignments@2025-02-01-preview)
+* **Resource**: Microsoft.AzureResilienceManagement/goalAssignments
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: [RefreshGoalResourcesResponse](#refreshgoalresourcesresponse)
+
+## Function updateGoalResources (Microsoft.AzureResilienceManagement/goalAssignments@2025-02-01-preview)
+* **Resource**: Microsoft.AzureResilienceManagement/goalAssignments
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [UpdateGoalResourceRequest](#updategoalresourcerequest)
+* **Output**: [UpdateGoalResourceResponse](#updategoalresourceresponse)
+
 ## AssociatedIdentity
 ### Properties
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Identity type linked with the resource
@@ -445,6 +456,14 @@
 * **goalTemplateId**: string (Required): Arm id of the goal template.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
+
+## GoalResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [GoalResourceProperties](#goalresourceproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## GoalResourceProperties
 ### Properties
@@ -723,6 +742,11 @@ Example: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/pro
 * **selectedProtectionSolutionSetting**: [ResourceBaseProtectionSolutionSetting](#resourcebaseprotectionsolutionsetting): Resource protection solution settings of the protection solutions recovery orchestration resource is protected with.
 * **selectedProtectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string: A setting that indicates the protection solution selected.
 
+## RefreshGoalResourcesResponse
+### Properties
+* **lastRefreshTime**: string: Time when the refresh operation was last performed.
+* **resourceCount**: int: Total count of resources under the goal assignment after refresh.
+
 ## ResourceBaseProtectionSolutionSetting
 * **Discriminator**: protectionSolutionType
 
@@ -813,6 +837,14 @@ Example: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/pro
 * **lastModifiedTime**: string (Required): Last modified time of the unified resilience item.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **recommendations**: [RecommendationsData](#recommendationsdata) (Required): Computed and copied data of Azure recommendations.
+
+## UpdateGoalResourceRequest
+### Properties
+* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+
+## UpdateGoalResourceResponse
+### Properties
+* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
 
 ## UserAssignedIdentity
 ### Properties

@@ -65,6 +65,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function capabilities (Microsoft.RecoveryServices/locations@2025-02-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-02-01
+* **Input**: [ResourceCapabilities](#resourcecapabilities)
+* **Output**: [CapabilitiesResponse](#capabilitiesresponse)
+
+## Function checkNameAvailability (Microsoft.RecoveryServices/locations@2025-02-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-02-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## AssociatedIdentity
 ### Properties
 * **operationIdentityType**: 'SystemAssigned' | 'UserAssigned' | string: Identity type that should be used for an operation.
@@ -75,6 +87,30 @@
 * **alertsForAllFailoverIssues**: 'Disabled' | 'Enabled' | string
 * **alertsForAllJobFailures**: 'Disabled' | 'Enabled' | string
 * **alertsForAllReplicationIssues**: 'Disabled' | 'Enabled' | string
+
+## CapabilitiesProperties
+### Properties
+* **dnsZones**: [DNSZone](#dnszone)[]
+
+## CapabilitiesResponse
+### Properties
+* **properties**: [CapabilitiesResponseProperties](#capabilitiesresponseproperties): Capabilities properties in response
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CapabilitiesResponseProperties
+### Properties
+* **dnsZones**: [DNSZoneResponse](#dnszoneresponse)[]
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string: Resource name for which availability needs to be checked
+* **type**: string: Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string
+* **nameAvailable**: bool
+* **reason**: string
 
 ## ClassicAlertSettings
 ### Properties
@@ -93,6 +129,15 @@
 ## CrossSubscriptionRestoreSettings
 ### Properties
 * **crossSubscriptionRestoreState**: 'Disabled' | 'Enabled' | 'PermanentlyDisabled' | string
+
+## DNSZone
+### Properties
+* **subResource**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string: Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery
+
+## DNSZoneResponse
+### Properties
+* **requiredZoneNames**: string[]: The private link resource Private link DNS zone names.
+* **subResource**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string: Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery
 
 ## IdentityData
 ### Properties
@@ -150,6 +195,11 @@
 ### Properties
 * **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
 * **certificate**: any: The base64 encoded certificate raw data string
+
+## ResourceCapabilities
+### Properties
+* **properties**: [CapabilitiesProperties](#capabilitiesproperties): Capabilities information
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
 
 ## RestoreSettings
 ### Properties

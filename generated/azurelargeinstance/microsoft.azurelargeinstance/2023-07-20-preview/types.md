@@ -26,6 +26,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureLargeInstance/azureLargeStorageInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.AzureLargeInstance/azureLargeInstances@2023-07-20-preview)
+* **Resource**: Microsoft.AzureLargeInstance/azureLargeInstances
+* **ApiVersion**: 2023-07-20-preview
+* **Input**: [ForceState](#forcestate)
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function shutdown (Microsoft.AzureLargeInstance/azureLargeInstances@2023-07-20-preview)
+* **Resource**: Microsoft.AzureLargeInstance/azureLargeInstances
+* **ApiVersion**: 2023-07-20-preview
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
+## Function start (Microsoft.AzureLargeInstance/azureLargeInstances@2023-07-20-preview)
+* **Resource**: Microsoft.AzureLargeInstance/azureLargeInstances
+* **ApiVersion**: 2023-07-20-preview
+* **Output**: [OperationStatusResult](#operationstatusresult)
+
 ## AzureLargeInstanceProperties
 ### Properties
 * **azureLargeInstanceId**: string (ReadOnly): Specifies the Azure Large Instance unique ID.
@@ -53,6 +69,23 @@ identify data disks within the VM and therefore must be unique for each data
 disk attached to a VM.
 * **name**: string: The disk name.
 
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## ForceState
+### Properties
+* **forceState**: 'active' | 'inactive' | string: Whether to force restart by shutting all processes.
+
 ## HardwareProfile
 ### Properties
 * **azureLargeInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S224se' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S448se' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m' | string (ReadOnly): Specifies the Azure Large Instance SKU.
@@ -66,6 +99,18 @@ disk attached to a VM.
 ### Properties
 * **circuitId**: string (ReadOnly): Specifies the circuit id for connecting to express route.
 * **networkInterfaces**: [IpAddress](#ipaddress)[]: Specifies the network interfaces for the Azure Large Instance.
+
+## OperationStatusResult
+### Properties
+* **endTime**: string: The end time of the operation.
+* **error**: [ErrorDetail](#errordetail): If present, details of the operation error.
+* **id**: string: Fully qualified ID for the async operation.
+* **name**: string: Name of the async operation.
+* **operations**: [OperationStatusResult](#operationstatusresult)[]: The operations list.
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Percent of the operation that is complete.
+* **resourceId**: string (ReadOnly): Fully qualified ID of the resource against which the original async operation was started.
+* **startTime**: string: The start time of the operation.
+* **status**: string (Required): Operation status.
 
 ## OsProfile
 ### Properties

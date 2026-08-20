@@ -39,6 +39,12 @@
 * **ApiVersion**: 2023-07-01
 * **Output**: [AccessKeys](#accesskeys)
 
+## Function regenerateKey (Microsoft.Cache/redisEnterprise/databases@2023-07-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2023-07-01
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [AccessKeys](#accesskeys)
+
 ## AccessKeys
 ### Properties
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate
@@ -110,6 +116,10 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' (Required): Which access key to regenerate.
 
 ## Sku
 ### Properties

@@ -37,6 +37,23 @@
 * **properties**: [EventHubConsumerGroupInfoProperties](#eventhubconsumergroupinfoproperties) (ReadOnly): The tags.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportDevices (Microsoft.Devices/IotHubs@2018-01-22)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2018-01-22
+* **Input**: [ExportDevicesRequest](#exportdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
+## Function generateVerificationCode (Microsoft.Devices/IotHubs/certificates@2018-01-22)
+* **Resource**: Microsoft.Devices/IotHubs/certificates
+* **ApiVersion**: 2018-01-22
+* **Output**: [CertificateWithNonceDescription](#certificatewithnoncedescription)
+
+## Function importDevices (Microsoft.Devices/IotHubs@2018-01-22)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2018-01-22
+* **Input**: [ImportDevicesRequest](#importdevicesrequest)
+* **Output**: [JobResponse](#jobresponse)
+
 ## Function listkeys (Microsoft.Devices/IotHubs@2018-01-22)
 * **Resource**: Microsoft.Devices/IotHubs
 * **ApiVersion**: 2018-01-22
@@ -47,6 +64,20 @@
 * **ApiVersion**: 2018-01-22
 * **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
 
+## Function verify (Microsoft.Devices/IotHubs/certificates@2018-01-22)
+* **Resource**: Microsoft.Devices/IotHubs/certificates
+* **ApiVersion**: 2018-01-22
+* **Input**: [CertificateVerificationDescription](#certificateverificationdescription)
+* **Output**: [CertificateDescription](#certificatedescription)
+
+## CertificateDescription
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificateProperties](#certificateproperties): The description of an X509 CA Certificate.
+* **type**: string (ReadOnly): The resource type.
+
 ## CertificateProperties
 ### Properties
 * **created**: string (ReadOnly): The certificate's create date and time.
@@ -55,6 +86,28 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## CertificatePropertiesWithNonce
+### Properties
+* **created**: string (ReadOnly): The certificate's create date and time.
+* **expiry**: string (ReadOnly): The certificate's expiration date and time.
+* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **subject**: string (ReadOnly): The certificate's subject name.
+* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
+* **updated**: string (ReadOnly): The certificate's last update date and time.
+* **verificationCode**: string (ReadOnly): The certificate's verification code that will be used for proof of possession.
+
+## CertificateVerificationDescription
+### Properties
+* **certificate**: string: base-64 representation of X509 certificate .cer file or just .pem file content.
+
+## CertificateWithNonceDescription
+### Properties
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The name of the certificate.
+* **properties**: [CertificatePropertiesWithNonce](#certificatepropertieswithnonce): The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow.
+* **type**: string (ReadOnly): The resource type.
 
 ## CloudToDeviceProperties
 ### Properties
@@ -75,6 +128,11 @@
 * **path**: string (ReadOnly): The Event Hub-compatible name.
 * **retentionTimeInDays**: int: The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
 
+## ExportDevicesRequest
+### Properties
+* **excludeKeys**: bool (Required): The value indicating whether keys should be excluded during export.
+* **exportBlobContainerUri**: string (Required): The export blob container URI.
+
 ## FallbackRouteProperties
 ### Properties
 * **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
@@ -88,6 +146,11 @@
 * **lockDurationAsIso8601**: string: The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+
+## ImportDevicesRequest
+### Properties
+* **inputBlobContainerUri**: string (Required): The input blob container URI.
+* **outputBlobContainerUri**: string (Required): The output blob container URI.
 
 ## IotHubProperties
 ### Properties
@@ -132,6 +195,17 @@
 * **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule.
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
+
+## JobResponse
+### Properties
+* **endTimeUtc**: string (ReadOnly): The time the job stopped processing.
+* **failureReason**: string (ReadOnly): If status == failed, this string containing the reason for the failure.
+* **jobId**: string (ReadOnly): The job identifier.
+* **parentJobId**: string (ReadOnly): The job identifier of the parent job, if any.
+* **startTimeUtc**: string (ReadOnly): The start time of the job.
+* **status**: 'cancelled' | 'completed' | 'enqueued' | 'failed' | 'running' | 'unknown' (ReadOnly): The status of the job.
+* **statusMessage**: string (ReadOnly): The status message for the job.
+* **type**: 'backup' | 'export' | 'factoryResetDevice' | 'firmwareUpdate' | 'import' | 'readDeviceProperties' | 'rebootDevice' | 'unknown' | 'updateDeviceConfiguration' | 'writeDeviceProperties' | string (ReadOnly): The type of the job.
 
 ## MessagingEndpointProperties
 ### Properties

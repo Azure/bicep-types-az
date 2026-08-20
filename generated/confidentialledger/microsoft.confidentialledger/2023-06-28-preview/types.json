@@ -893,5 +893,203 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerBackup",
+    "properties": {
+      "restoreRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region where the backup of the ledger will eventually be restored to."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "SAS URI used to access the backup Fileshare."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerBackupResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Response body stating if the ledger is being backed up."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.ConfidentialLedger/ledgers",
+    "apiVersion": "2023-06-28-preview",
+    "output": {
+      "$ref": "#/83"
+    },
+    "input": {
+      "$ref": "#/81"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerRestore",
+    "properties": {
+      "fileShareName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Fileshare where the ledger backup is stored."
+      },
+      "restoreRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The region the ledger is being restored to."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "SAS URI used to access the backup fileshare."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfidentialLedgerRestoreResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Response body stating if the ledger is being restored."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.ConfidentialLedger/ledgers",
+    "apiVersion": "2023-06-28-preview",
+    "output": {
+      "$ref": "#/86"
+    },
+    "input": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedCCFBackup",
+    "properties": {
+      "restoreRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The region where the backup of the managed CCF resource will eventually be restored to."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "SAS URI used to access the backup Fileshare."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedCCFBackupResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Response body stating if the managed CCF resource is being backed up."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.ConfidentialLedger/managedCCFs",
+    "apiVersion": "2023-06-28-preview",
+    "output": {
+      "$ref": "#/89"
+    },
+    "input": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedCCFRestore",
+    "properties": {
+      "fileShareName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Fileshare where the managed CCF resource backup is stored."
+      },
+      "restoreRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The region the managed CCF resource is being restored to."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "SAS URI used to access the backup Fileshare."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedCCFRestoreResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Response body stating if the managed CCF resource is being restored."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.ConfidentialLedger/managedCCFs",
+    "apiVersion": "2023-06-28-preview",
+    "output": {
+      "$ref": "#/92"
+    },
+    "input": {
+      "$ref": "#/91"
+    }
   }
 ]

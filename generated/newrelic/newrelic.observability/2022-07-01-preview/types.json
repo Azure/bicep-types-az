@@ -1319,11 +1319,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "MetricsRequest",
+    "properties": {
+      "userEmail": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "User Email"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMetricRules",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/114"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricsStatusRequest",
+    "properties": {
+      "azureResourceIds": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Azure resource IDs"
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "User Email"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricsStatusResponse",
+    "properties": {
+      "azureResourceIds": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Azure resource IDs"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMetricStatus",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/124"
+    },
+    "input": {
+      "$ref": "#/122"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AppServicesGetRequest",
     "properties": {
       "azureResourceIds": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "Azure resource IDs"
@@ -1349,7 +1431,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/131"
         },
         "flags": 1,
         "description": "The AppServiceInfo items on this page"
@@ -1393,7 +1475,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/123"
+      "$ref": "#/130"
     }
   },
   {
@@ -1402,10 +1484,126 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2022-07-01-preview",
     "output": {
-      "$ref": "#/122"
+      "$ref": "#/129"
     },
     "input": {
-      "$ref": "#/120"
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SwitchBillingRequest",
+    "properties": {
+      "azureResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure resource Id"
+      },
+      "organizationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Organization id"
+      },
+      "planData": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Plan details"
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "User Email"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NewRelicMonitorResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "switchBilling",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/133"
     }
   },
   {
@@ -1414,7 +1612,7 @@
     "properties": {
       "vmIds": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "VM resource IDs"
@@ -1440,7 +1638,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/141"
         },
         "flags": 1,
         "description": "The VMInfo items on this page"
@@ -1484,7 +1682,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/129"
+      "$ref": "#/140"
     }
   },
   {
@@ -1493,10 +1691,152 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2022-07-01-preview",
     "output": {
-      "$ref": "#/128"
+      "$ref": "#/139"
     },
     "input": {
-      "$ref": "#/126"
+      "$ref": "#/137"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResourceListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 1,
+        "description": "The MonitoredResource items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM id of the resource."
+      },
+      "sendingMetrics": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "Flag indicating if resource is sending metrics to NewRelic."
+      },
+      "reasonForMetricsStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason for why the resource is sending metrics (or why it is not sending)."
+      },
+      "sendingLogs": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Flag indicating if resource is sending logs to NewRelic."
+      },
+      "reasonForLogsStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason for why the resource is sending logs (or why it is not sending)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "monitoredResources",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/143"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMExtensionPayload",
+    "properties": {
+      "ingestionKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Ingestion key of the account"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vmHostPayloads",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/153"
     }
   }
 ]

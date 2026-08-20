@@ -3305,5 +3305,430 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureParameters",
+    "properties": {
+      "vhdPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The captured virtual hard disk's name prefix."
+      },
+      "destinationContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination container name."
+      },
+      "overwriteVhds": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Specifies whether to overwrite the destination virtual hard disk, in case of conflict."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0,
+        "description": "Compute-specific operation properties, including output"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResultProperties",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Operation output data (raw JSON)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capture",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/232"
+    },
+    "input": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation ID"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of the operation"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of the operation"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 2,
+        "description": "Api error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiError",
+    "properties": {
+      "details": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0,
+        "description": "The Api error details"
+      },
+      "innererror": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 0,
+        "description": "The Api inner error"
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target of the particular error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiErrorBase",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target of the particular error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/237"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InnerError",
+    "properties": {
+      "exceptiontype": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The exception type."
+      },
+      "errordetail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The internal error message or exception dump."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generalize",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/246"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 1,
+        "description": "The virtual machine scale set instance ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delete",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/249"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/246"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/246"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/246"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manualupgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    },
+    "input": {
+      "$ref": "#/249"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/235"
+    }
   }
 ]

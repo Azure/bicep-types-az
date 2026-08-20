@@ -48,11 +48,73 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backupAndExport (Microsoft.DBforMySQL/flexibleServers@2022-09-30-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2022-09-30-preview
+* **Input**: [BackupAndExportRequest](#backupandexportrequest)
+* **Output**: [BackupAndExportResponse](#backupandexportresponse)
+
+## Function checkNameAvailability (Microsoft.DBforMySQL/locations@2022-09-30-preview)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2022-09-30-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforMySQL/locations@2022-09-30-preview)
+* **Resource**: Microsoft.DBforMySQL/locations
+* **ApiVersion**: 2022-09-30-preview
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function validateBackup (Microsoft.DBforMySQL/flexibleServers@2022-09-30-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2022-09-30-preview
+* **Output**: [ValidateBackupResponse](#validatebackupresponse)
+
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
+
+## BackupAndExportRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+* **targetDetails**: [BackupStoreDetails](#backupstoredetails) (Required): Backup Target Store Details
+
+## BackupAndExportResponse
+### Properties
+* **endTime**: string: End time
+* **error**: [ErrorResponse](#errorresponse): The BackupAndExport operation error response.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Operation progress (0-100).
+* **properties**: [BackupAndExportResponseProperties](#backupandexportresponseproperties): The response properties of a backup and export operation.
+* **startTime**: string: Start time
+* **status**: 'CancelInProgress' | 'Canceled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded': The operation status
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## BackupAndExportResponseProperties
+### Properties
+* **backupMetadata**: string: Metadata related to backup to be stored for restoring resource in key-value pairs.
+* **datasourceSizeInBytes**: int: Size of datasource in bytes
+* **dataTransferredInBytes**: int: Data transferred in bytes
+
+## BackupSettings
+### Properties
+* **backupFormat**: 'CollatedFormat' | 'None' | string: Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)
+* **backupName**: string {pattern: "(^[a-z0-9]$)|(^[a-z0-9][a-z0-9-]*[a-z0-9]$)"} (Required): The name of the backup.
+
+## BackupStoreDetails
+* **Discriminator**: objectType
+
+### Base Properties
+
+### FullBackupStoreDetails
+#### Properties
+* **objectType**: 'FullBackupStoreDetails' (Required): Type of the specific object - used for deserializing
+* **sasUriList**: string[] (Required): SASUriList of storage containers where backup data is to be streamed/copied.
+
 
 ## DataEncryption
 ### Properties
@@ -61,6 +123,24 @@
 * **primaryKeyURI**: string: Primary key uri
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
+
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): name of the subnet
+* **usage**: int (ReadOnly): Number of used delegated subnets
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorResponse
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## HighAvailability
 ### Properties
@@ -86,6 +166,17 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **reason**: string: Reason for name being unavailable.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## Network
 ### Properties
@@ -169,4 +260,22 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ValidateBackupResponse
+### Properties
+* **properties**: [ValidateBackupResponseProperties](#validatebackupresponseproperties): The response properties of a pre backup operation.
+
+## ValidateBackupResponseProperties
+### Properties
+* **numberOfContainers**: int: Estimated no of storage containers required for resource data to be backed up.
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkResourceId**: string: Virtual network resource id.
+
+## VirtualNetworkSubnetUsageResult
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly): A list of delegated subnet usage
+* **location**: string (ReadOnly): The location name.
+* **subscriptionId**: string (ReadOnly): The subscription id.
 

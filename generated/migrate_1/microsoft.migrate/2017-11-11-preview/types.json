@@ -3305,5 +3305,63 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectKey",
+    "properties": {
+      "workspaceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ID of Migration Project."
+      },
+      "workspaceKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Key of Migration Project."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "keys",
+    "resourceType": "Microsoft.Migrate/projects",
+    "apiVersion": "2017-11-11-preview",
+    "output": {
+      "$ref": "#/346"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "assessmentReportUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Hyperlink to download report."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Expiry date of download url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUrl",
+    "resourceType": "Microsoft.Migrate/projects/groups/assessments",
+    "apiVersion": "2017-11-11-preview",
+    "output": {
+      "$ref": "#/348"
+    }
   }
 ]

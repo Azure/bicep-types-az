@@ -14,6 +14,23 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Quantum/locations@2019-11-04-preview)
+* **Resource**: Microsoft.Quantum/locations
+* **ApiVersion**: 2019-11-04-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string: Name for checking availability.
+* **type**: string: The resource type of Quantum Workspace.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the Namespace.
+* **nameAvailable**: bool: Indicator of availability of the Quantum Workspace resource name.
+* **reason**: string: The reason of unavailability.
+
 ## Provider
 ### Properties
 * **applicationName**: string: The provider's marketplace application display name.

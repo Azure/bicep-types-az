@@ -119,6 +119,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.AzureStackHCI/virtualMachineInstances@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2024-01-01
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
+## Function start (Microsoft.AzureStackHCI/virtualMachineInstances@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2024-01-01
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
+## Function stop (Microsoft.AzureStackHCI/virtualMachineInstances@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2024-01-01
+* **Output**: [VirtualMachineInstance](#virtualmachineinstance)
+
 ## ErrorAdditionalInfo
 ### Properties
 * **info**: any (ReadOnly): The additional info.
@@ -475,6 +490,16 @@
 ### Properties
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
 * **vmConfigAgentVersion**: string: The VM Config Agent full version.
+
+## VirtualMachineInstance
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [Identity](#identity): Identity for the resource.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [VirtualMachineInstanceProperties](#virtualmachineinstanceproperties): Properties under the virtual machine instance resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## VirtualMachineInstanceProperties
 ### Properties

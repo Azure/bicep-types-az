@@ -58,6 +58,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function preBackup (Microsoft.ElasticSan/elasticSans/volumegroups@2024-07-01-preview)
+* **Resource**: Microsoft.ElasticSan/elasticSans/volumegroups
+* **ApiVersion**: 2024-07-01-preview
+* **Input**: [VolumeNameList](#volumenamelist)
+* **Output**: [PreValidationResponse](#prevalidationresponse)
+
+## Function preRestore (Microsoft.ElasticSan/elasticSans/volumegroups@2024-07-01-preview)
+* **Resource**: Microsoft.ElasticSan/elasticSans/volumegroups
+* **ApiVersion**: 2024-07-01-preview
+* **Input**: [DiskSnapshotList](#disksnapshotlist)
+* **Output**: [PreValidationResponse](#prevalidationresponse)
+
+## Function restore (Microsoft.ElasticSan/elasticSans/volumegroups/volumes@2024-07-01-preview)
+* **Resource**: Microsoft.ElasticSan/elasticSans/volumegroups/volumes
+* **ApiVersion**: 2024-07-01-preview
+* **Output**: [Volume](#volume)
+
 ## AutoScaleProperties
 ### Properties
 * **scaleUpProperties**: [ScaleUpProperties](#scaleupproperties): Scale up settings on Elastic San Appliance.
@@ -66,6 +83,10 @@
 ### Properties
 * **policyState**: 'Disabled' | 'Enabled' | string
 * **retentionPeriodDays**: int {minValue: 0}: The number of days to retain the resources after deletion.
+
+## DiskSnapshotList
+### Properties
+* **diskSnapshotIds**: string[] (Required): array of DiskSnapshot ARM IDs
 
 ## ElasticSanProperties
 ### Properties
@@ -128,6 +149,10 @@
 ## NetworkRuleSet
 ### Properties
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
+
+## PreValidationResponse
+### Properties
+* **validationStatus**: string: a status value indicating success or failure of validation
 
 ## PrivateEndpoint
 ### Properties
@@ -206,6 +231,14 @@
 * **action**: 'Allow' | string: The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
 
+## Volume
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [VolumeProperties](#volumeproperties) (Required): Properties of Volume.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## VolumeGroupProperties
 ### Properties
 * **deleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy): The retention policy for the soft deleted volume group and its associated resources.
@@ -216,6 +249,10 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of Private Endpoint Connections.
 * **protocolType**: 'Iscsi' | 'None' | string: Type of storage target
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Restoring' | 'SoftDeleting' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
+
+## VolumeNameList
+### Properties
+* **volumeNames**: string[] (Required): array of volume names
 
 ## VolumeProperties
 ### Properties

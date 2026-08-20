@@ -1,0 +1,39 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "StorageConfigurationInput",
+    "properties": {
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Qualified name of the storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageConfigurationResponse",
+    "properties": {
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateStorageConfiguration",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/2"
+    }
+  }
+]

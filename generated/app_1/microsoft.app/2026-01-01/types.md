@@ -50,15 +50,15 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/agentSpaces/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listConnectorsWithSecrets (Microsoft.App/agentSpaces@2026-01-01)
-* **Resource**: Microsoft.App/agentSpaces
-* **ApiVersion**: 2026-01-01
-* **Output**: [AgentSpaceConnectorCollection](#agentspaceconnectorcollection)
-
 ## Function listConnectorsWithSecrets (Microsoft.App/agents@2026-01-01)
 * **Resource**: Microsoft.App/agents
 * **ApiVersion**: 2026-01-01
 * **Output**: [AgentConnectorCollection](#agentconnectorcollection)
+
+## Function listConnectorsWithSecrets (Microsoft.App/agentSpaces@2026-01-01)
+* **Resource**: Microsoft.App/agentSpaces
+* **ApiVersion**: 2026-01-01
+* **Output**: [AgentSpaceConnectorCollection](#agentspaceconnectorcollection)
 
 ## Function listSecrets (Microsoft.App/agentSpaces/connectors@2026-01-01)
 * **Resource**: Microsoft.App/agentSpaces/connectors
@@ -70,11 +70,32 @@
 * **ApiVersion**: 2026-01-01
 * **Output**: [AgentConnector](#agentconnector)
 
+## Function start (Microsoft.App/agents@2026-01-01)
+* **Resource**: Microsoft.App/agents
+* **ApiVersion**: 2026-01-01
+* **Output**: [Agent](#agent)
+
+## Function stop (Microsoft.App/agents@2026-01-01)
+* **Resource**: Microsoft.App/agents
+* **ApiVersion**: 2026-01-01
+* **Output**: [Agent](#agent)
+
 ## ActionConfiguration
 ### Properties
 * **accessLevel**: 'High' | 'Low' | string: The access level of the action
 * **identity**: string: The identity used by the action
 * **mode**: 'Autonomous' | 'ReadOnly' | 'Review' | string: The mode of the action
+
+## Agent
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [AgentProperties](#agentproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## AgentConnector
 ### Properties
@@ -245,6 +266,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

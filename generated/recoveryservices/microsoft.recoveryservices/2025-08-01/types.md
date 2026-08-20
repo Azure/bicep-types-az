@@ -76,6 +76,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function capabilities (Microsoft.RecoveryServices/locations@2025-08-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-08-01
+* **Input**: [ResourceCapabilities](#resourcecapabilities)
+* **Output**: [CapabilitiesResponse](#capabilitiesresponse)
+
+## Function checkNameAvailability (Microsoft.RecoveryServices/locations@2025-08-01)
+* **Resource**: Microsoft.RecoveryServices/locations
+* **ApiVersion**: 2025-08-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function undelete (Microsoft.RecoveryServices/locations/deletedVaults@2025-08-01)
+* **Resource**: Microsoft.RecoveryServices/locations/deletedVaults
+* **ApiVersion**: 2025-08-01
+* **Input**: [DeletedVaultUndeleteInput](#deletedvaultundeleteinput)
+* **Output**: [DeletedVault](#deletedvault)
+
 ## AssociatedIdentity
 ### Properties
 * **operationIdentityType**: 'SystemAssigned' | 'UserAssigned' | string: Identity type that should be used for an operation.
@@ -86,6 +104,30 @@
 * **alertsForAllFailoverIssues**: 'Disabled' | 'Enabled' | string
 * **alertsForAllJobFailures**: 'Disabled' | 'Enabled' | string
 * **alertsForAllReplicationIssues**: 'Disabled' | 'Enabled' | string
+
+## CapabilitiesProperties
+### Properties
+* **dnsZones**: [DNSZone](#dnszone)[]
+
+## CapabilitiesResponse
+### Properties
+* **properties**: [CapabilitiesResponseProperties](#capabilitiesresponseproperties): Capabilities properties in response
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CapabilitiesResponseProperties
+### Properties
+* **dnsZones**: [DNSZoneResponse](#dnszoneresponse)[]
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string: Resource name for which availability needs to be checked
+* **type**: string: Describes the Resource type: Microsoft.RecoveryServices/Vaults
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string
+* **nameAvailable**: bool
+* **reason**: string
 
 ## ClassicAlertSettings
 ### Properties
@@ -105,11 +147,36 @@
 ### Properties
 * **crossSubscriptionRestoreState**: 'Disabled' | 'Enabled' | 'PermanentlyDisabled' | string
 
+## DeletedVault
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DeletedVaultProperties](#deletedvaultproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## DeletedVaultProperties
 ### Properties
 * **purgeAt**: string (ReadOnly): Time in UTC at which the DeletedVault will be purged.
 * **vaultDeletionTime**: string (ReadOnly): Time in UTC at which the Vault was deleted.
 * **vaultId**: string (ReadOnly): ARM Id of the Vault which was deleted.
+
+## DeletedVaultUndeleteInput
+### Properties
+* **properties**: [DeletedVaultUndeleteInputProperties](#deletedvaultundeleteinputproperties) (Required): Undelete input properties.
+
+## DeletedVaultUndeleteInputProperties
+### Properties
+* **recoveryResourceGroupId**: string (Required): Recovery resource group Id.
+
+## DNSZone
+### Properties
+* **subResource**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string: Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery
+
+## DNSZoneResponse
+### Properties
+* **requiredZoneNames**: string[]: The private link resource Private link DNS zone names.
+* **subResource**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string: Subresource type for vault AzureBackup, AzureBackup_secondary or AzureSiteRecovery
 
 ## IdentityData
 ### Properties
@@ -167,6 +234,11 @@
 ### Properties
 * **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
 * **certificate**: any: The base64 encoded certificate raw data string
+
+## ResourceCapabilities
+### Properties
+* **properties**: [CapabilitiesProperties](#capabilitiesproperties): Capabilities information
+* **type**: string (Required): Describes the Resource type: Microsoft.RecoveryServices/Vaults
 
 ## RestoreSettings
 ### Properties

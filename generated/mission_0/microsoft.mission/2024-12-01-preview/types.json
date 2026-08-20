@@ -3540,5 +3540,333 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApprovalActionRequest",
+    "properties": {
+      "approvalStatus": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 1,
+        "description": "Approval status indicating 'Approved' or 'Rejected'"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApprovalActionResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Confirmation message indicating the result of the operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiatorCallback",
+    "resourceType": "Microsoft.Mission/approvals",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/321"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAddressSpaceAvailabilityRequest",
+    "properties": {
+      "communityResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id of the Community"
+      },
+      "enclaveVirtualNetwork": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 1,
+        "description": "Information about the enclave virtual network"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckAddressSpaceAvailabilityResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "Boolean representing whether the address space is available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkAddressSpaceAvailability",
+    "resourceType": "Microsoft.Mission/communities",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/328"
+    },
+    "input": {
+      "$ref": "#/327"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApprovalCallbackRequest",
+    "properties": {
+      "resourceRequestAction": {
+        "type": {
+          "$ref": "#/335"
+        },
+        "flags": 1,
+        "description": "Resource request action indicating action which needed to be performed upon calling approval-callback post action"
+      },
+      "approvalStatus": {
+        "type": {
+          "$ref": "#/338"
+        },
+        "flags": 1,
+        "description": "Approval status indicating 'Approved' or 'Rejected'"
+      },
+      "approvalCallbackPayload": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Payload requested by client upon approval action"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reset"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/331"
+      },
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/333"
+      },
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalCallback",
+    "resourceType": "Microsoft.Mission/communities/communityEndpoints",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApprovalDeletionCallbackRequest",
+    "properties": {
+      "resourceRequestAction": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 1,
+        "description": "Resource request action indicating action which needed to be performed upon calling approval-deletion-callback post action"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/341"
+      },
+      {
+        "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalDeletionCallback",
+    "resourceType": "Microsoft.Mission/communities/communityEndpoints",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/340"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalCallback",
+    "resourceType": "Microsoft.Mission/enclaveConnections",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalDeletionCallback",
+    "resourceType": "Microsoft.Mission/enclaveConnections",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/340"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalCallback",
+    "resourceType": "Microsoft.Mission/virtualEnclaves",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalDeletionCallback",
+    "resourceType": "Microsoft.Mission/virtualEnclaves",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/340"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalCallback",
+    "resourceType": "Microsoft.Mission/virtualEnclaves/enclaveEndpoints",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approvalDeletionCallback",
+    "resourceType": "Microsoft.Mission/virtualEnclaves/enclaveEndpoints",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/325"
+    },
+    "input": {
+      "$ref": "#/340"
+    }
   }
 ]

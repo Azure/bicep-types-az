@@ -86,6 +86,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2020-09-21-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools
+* **ApiVersion**: 2020-09-21-preview
+* **Input**: [MsixImageURI](#msiximageuri)
+* **Output**: [ExpandMsixImageList](#expandmsiximagelist)
+
 ## ApplicationGroupProperties
 ### Properties
 * **applicationGroupType**: 'Desktop' | 'RemoteApp' | string (Required): Resource Type of ApplicationGroup.
@@ -117,6 +123,34 @@
 * **iconContent**: any (ReadOnly): The icon a 64 bit string as a byte array.
 * **iconHash**: string (ReadOnly): Hash of the icon.
 
+## ExpandMsixImage
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ExpandMsixImageProperties](#expandmsiximageproperties): Detailed properties for ExpandMsixImage
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ExpandMsixImageList
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next page of results.
+* **value**: [ExpandMsixImage](#expandmsiximage)[]: List of MSIX package properties from give MSIX Image.
+
+## ExpandMsixImageProperties
+### Properties
+* **displayName**: string: User friendly Name to be displayed in the portal.
+* **imagePath**: string: VHD/CIM image path on Network Share.
+* **isActive**: bool: Make this version of the package the active one across the hostpool.
+* **isRegularRegistration**: bool: Specifies how to register Package in feed.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
+* **packageAlias**: string: Alias of MSIX Package.
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+* **packageFullName**: string: Package Full Name from appxmanifest.xml.
+* **packageName**: string: Package Name from appxmanifest.xml.
+* **packageRelativePath**: string: Relative Path to the package inside the image.
+* **version**: string: Package Version found in the appxmanifest.xml.
+
 ## HostPoolProperties
 ### Properties
 * **applicationGroupReferences**: string[] (ReadOnly): List of applicationGroup links.
@@ -133,6 +167,10 @@
 * **ssoContext**: string: Path to keyvault containing ssoContext secret.
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
+
+## MsixImageURI
+### Properties
+* **uri**: string: URI to Image
 
 ## MsixPackageApplications
 ### Properties

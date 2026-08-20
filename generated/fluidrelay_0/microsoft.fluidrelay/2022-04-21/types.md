@@ -25,9 +25,20 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System meta data for this resource, including creation and modification information.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers/fluidRelayContainers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getKeys (Microsoft.FluidRelay/fluidRelayServers@2022-04-21)
+* **Resource**: Microsoft.FluidRelay/fluidRelayServers
+* **ApiVersion**: 2022-04-21
+* **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
+
 ## Function listKeys (Microsoft.FluidRelay/fluidRelayServers@2022-04-21)
 * **Resource**: Microsoft.FluidRelay/fluidRelayServers
 * **ApiVersion**: 2022-04-21
+* **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
+
+## Function regenerateKey (Microsoft.FluidRelay/fluidRelayServers@2022-04-21)
+* **Resource**: Microsoft.FluidRelay/fluidRelayServers
+* **ApiVersion**: 2022-04-21
+* **Input**: [RegenerateKeyRequest](#regeneratekeyrequest)
 * **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
 
 ## CustomerManagedKeyEncryptionProperties
@@ -78,6 +89,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+
+## RegenerateKeyRequest
+### Properties
+* **keyName**: 'key1' | 'key2' (Required): The key to regenerate.
 
 ## SystemData
 ### Properties

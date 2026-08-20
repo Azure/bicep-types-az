@@ -855,6 +855,257 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "ExportDevicesRequest",
+    "properties": {
+      "ExportBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The export blob container URI."
+      },
+      "ExcludeKeys": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 1,
+        "description": "The value indicating whether keys should be excluded during export."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobResponse",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start time of the job."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the job stopped processing."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "The type of the job."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 2,
+        "description": "The status of the job."
+      },
+      "failureReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "If status == failed, this string containing the reason for the failure."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status message for the job."
+      },
+      "parentJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job identifier of the parent job, if any."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "export"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "import"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "backup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "readDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "writeDeviceProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "updateDeviceConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "rebootDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "factoryResetDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "firmwareUpdate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enqueued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2016-02-03",
+    "output": {
+      "$ref": "#/70"
+    },
+    "input": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportDevicesRequest",
+    "properties": {
+      "InputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The input blob container URI."
+      },
+      "OutputBlobContainerUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The output blob container URI."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importDevices",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2016-02-03",
+    "output": {
+      "$ref": "#/70"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listkeys",
     "resourceType": "Microsoft.Devices/IotHubs/IotHubKeys",

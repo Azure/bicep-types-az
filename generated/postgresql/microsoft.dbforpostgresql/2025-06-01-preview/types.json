@@ -4552,5 +4552,380 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LtrPreBackupRequest",
+    "properties": {
+      "backupSettings": {
+        "type": {
+          "$ref": "#/387"
+        },
+        "flags": 1,
+        "description": "Backup Settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupSettings",
+    "properties": {
+      "backupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Backup Name for the current backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LtrPreBackupResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 1,
+        "description": "Additional Properties for the pre backup response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionResponseProperties",
+    "properties": {
+      "numberOfContainers": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "Number of storage containers the plugin will use during backup. More than one containers may be used for size limitations, parallelism, or redundancy etc."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ltrPreBackup",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/388"
+    },
+    "input": {
+      "$ref": "#/386"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionRequest",
+    "properties": {
+      "targetDetails": {
+        "type": {
+          "$ref": "#/392"
+        },
+        "flags": 1,
+        "description": "Backup store detail for target server"
+      },
+      "backupSettings": {
+        "type": {
+          "$ref": "#/387"
+        },
+        "flags": 1,
+        "description": "Backup Settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupStoreDetails",
+    "properties": {
+      "sasUriList": {
+        "type": {
+          "$ref": "#/393"
+        },
+        "flags": 1,
+        "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsLongTermRetentionResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/363"
+        },
+        "flags": 0,
+        "description": "Long Term Retention Backup Operation Resource Properties"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startLtrBackup",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/394"
+    },
+    "input": {
+      "$ref": "#/391"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the migration to check for validity and availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Type of resource."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Indicates if the migration name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 2,
+        "description": "Migration name availability reason."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration name availability message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkMigrationNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/396"
+    },
+    "input": {
+      "$ref": "#/396"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityModel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name for which validity and availability was checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of resource. It can be 'Microsoft.DBforPostgreSQL/flexibleServers' or 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints'."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/405"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/402"
+    },
+    "input": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageParameter",
+    "properties": {
+      "virtualNetworkArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Virtual network resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageModel",
+    "properties": {
+      "delegatedSubnetsUsage": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "location of the delegated subnet usage"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "subscriptionId of the delegated subnet usage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedSubnetUsage",
+    "properties": {
+      "subnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the delegated subnet for which IP addresses are in use"
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 2,
+        "description": "Number of IP addresses used by the delegated subnet"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/409"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkVirtualNetworkSubnetUsage",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/408"
+    },
+    "input": {
+      "$ref": "#/407"
+    }
   }
 ]

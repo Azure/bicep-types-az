@@ -6708,5 +6708,239 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityModel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponseModel",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether resource name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reason for resource name unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the message for resource name unavailability."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataReplication/locations",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/445"
+    },
+    "input": {
+      "$ref": "#/444"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPreflightModel",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/450"
+        },
+        "flags": 0,
+        "description": "Gets or sets the list of resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentPreflightResource",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the location of the resource."
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Api version."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/449"
+        },
+        "flags": 0,
+        "description": "Gets or sets the properties of the resource."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/448"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "preflight",
+    "resourceType": "Microsoft.DataReplication/deployments",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/447"
+    },
+    "input": {
+      "$ref": "#/447"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlannedFailoverModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 1,
+        "description": "Planned failover model properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlannedFailoverModelProperties",
+    "properties": {
+      "customProperties": {
+        "type": {
+          "$ref": "#/454"
+        },
+        "flags": 1,
+        "description": "Planned failover model custom properties."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "PlannedFailoverModelCustomProperties",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "HyperVToAzStackHCI": {
+        "$ref": "#/455"
+      },
+      "VMwareToAzStackHCI": {
+        "$ref": "#/457"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVToAzStackHCIPlannedFailoverModelCustomProperties",
+    "properties": {
+      "shutdownSourceVM": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Gets or sets a value indicating whether VM needs to be shut down."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 1,
+        "description": "Discriminator property for PlannedFailoverModelCustomProperties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperVToAzStackHCI"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMwareToAzStackHCIPlannedFailoverModelCustomProperties",
+    "properties": {
+      "shutdownSourceVM": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Gets or sets a value indicating whether VM needs to be shut down."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/458"
+        },
+        "flags": 1,
+        "description": "Discriminator property for PlannedFailoverModelCustomProperties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareToAzStackHCI"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "plannedFailover",
+    "resourceType": "Microsoft.DataReplication/replicationVaults/protectedItems",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/452"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
   }
 ]

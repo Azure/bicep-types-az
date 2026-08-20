@@ -62,6 +62,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/locations/aiModels' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateCost (Microsoft.ContainerService/locations/aiModels@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/locations/aiModels
+* **ApiVersion**: 2026-05-02-preview
+* **Input**: any
+* **Output**: [CalculateCostResponse](#calculatecostresponse)
+
 ## Function listAccessKeys (Microsoft.ContainerService/aiManagers/namespaces@2026-05-02-preview)
 * **Resource**: Microsoft.ContainerService/aiManagers/namespaces
 * **ApiVersion**: 2026-05-02-preview
@@ -76,6 +82,11 @@
 * **Resource**: Microsoft.ContainerService/aiManagers/namespaces
 * **ApiVersion**: 2026-05-02-preview
 * **Output**: [CredentialResults](#credentialresults)
+
+## Function rotateKeys (Microsoft.ContainerService/aiManagers/namespaces@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/aiManagers/namespaces
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: [NamespaceAccessInfo](#namespaceaccessinfo)
 
 ## AIManagerNamespaceProperties
 ### Properties
@@ -110,6 +121,26 @@
 * **maxReplicas**: int {minValue: 1}: The maximum number of replicas. If not specified, the service derives a default from the subscription GPU quota.
 * **minReplicas**: int {minValue: 1} (Required): The minimum number of replicas. Must be at least `1`; scale-to-zero is not supported in autoscale mode (see `ScalingProfile`).
 
+## CalculateCostPlan
+### Properties
+* **feasible**: bool (Required, ReadOnly): Whether the caller can actually deploy this plan today (region availability, GPU quota, model fit, etc.). This field gates the mutually exclusive properties on this model:
+- When `feasible` is `true`: `totalHourlyPrice` is set and `infeasibilityReason` is omitted.
+- When `feasible` is `false`: `infeasibilityReason` is set and `totalHourlyPrice` is omitted.
+* **infeasibilityReason**: [InfeasibilityReason](#infeasibilityreason) (ReadOnly): Reason explaining why the plan is not deployable. This is a per-plan annotation, not an ARM error envelope.
+* **maxAvailableReplicas**: int {minValue: 0} (Required, ReadOnly): Maximum number of replicas the caller's subscription can deploy on this SKU today, computed from the available GPU quota in the target region.
+* **priceAsOf**: string (ReadOnly): UTC timestamp of the price snapshot used for this plan.
+* **quantization**: string (ReadOnly): Resolved quantization on this SKU.
+* **servingPerformanceEstimation**: [ServingPerformanceEstimation](#servingperformanceestimation) (ReadOnly): Estimated relative inference performance of a single model replica on this SKU. Omitted when an estimate is unavailable.
+* **totalHourlyPrice**: int {minValue: 0} (ReadOnly): Projected hourly cost for one replica (`vmsPerReplica` VMs), in `currency`.
+* **vmHourlyPrice**: int {minValue: 0} (Required, ReadOnly): On-demand hourly price for a single VM of this SKU, in `currency`.
+* **vmSize**: string (Required, ReadOnly): Azure VM SKU, e.g. "Standard_ND96isr_H100_v5". Matches the value accepted by `ModelDeploymentProperties.vmSize`.
+* **vmsPerReplica**: int {minValue: 1} (Required, ReadOnly): Number of VMs required to host one replica on this SKU.
+
+## CalculateCostResponse
+### Properties
+* **currency**: string (Required, ReadOnly): ISO 4217 currency code, e.g. "USD".
+* **plans**: [CalculateCostPlan](#calculatecostplan)[] (Required, ReadOnly): Ranked list of GPU SKU pricing plans. Feasible plans first, ordered by `totalHourlyPrice` ascending; infeasible plans last.
+
 ## CredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
@@ -122,6 +153,11 @@
 ## CredentialValue
 ### Properties
 * **inline**: [InlineCredential](#inlinecredential): An inline credential containing a secret value supplied in the request payload.
+
+## InfeasibilityReason
+### Properties
+* **code**: 'InefficientDeployment' | 'InsufficientQuota' | 'RegionUnavailable' | string (Required, ReadOnly): Machine-readable reason code.
+* **message**: string (Required, ReadOnly): Human-readable message accompanying `code`.
 
 ## InlineCredential
 ### Properties
@@ -199,6 +235,11 @@
 ### Properties
 * **autoscale**: [AutoscaleProfile](#autoscaleprofile): Autoscaling configuration. Mutually exclusive with `manual`.
 * **manual**: [ManualScalingProfile](#manualscalingprofile): Manual scaling configuration with a fixed replica count. Mutually exclusive with `autoscale`.
+
+## ServingPerformanceEstimation
+### Properties
+* **relativeLatencyScore**: int {minValue: 0, maxValue: 1} (Required, ReadOnly): Relative inference latency score in `[0, 1]`. Higher is better (`1` matches the best-performing SKU's latency for this model). Note: this is a normalized score, not a raw latency ratio -- a larger value indicates lower latency.
+* **relativeThroughputScore**: int {minValue: 0, maxValue: 1} (Required, ReadOnly): Relative inference throughput score in `[0, 1]`. Higher is better (`1` matches the best-performing SKU's throughput for this model).
 
 ## SystemData
 ### Properties

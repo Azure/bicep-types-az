@@ -2132,5 +2132,216 @@
     "output": {
       "$ref": "#/138"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateTestKeyRequestPayload",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "Type of the test key"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateTestKey",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/138"
+    },
+    "input": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Type of the resource to check name availability"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name to be checked"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Indicates whether the name is available"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason why the name is not available"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Message why the name is not available"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppPlatform/locations",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUploadDefinition",
+    "properties": {
+      "relativePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source relative path"
+      },
+      "uploadUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Upload URL"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getResourceUploadUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainValidatePayload",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name to be validated"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainValidateResult",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Indicates if domain name is valid."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Message of why domain name is invalid."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateDomain",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/152"
+    },
+    "input": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogFileUrlResponse",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "URL of the log file"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getLogFileUrl",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    }
   }
 ]

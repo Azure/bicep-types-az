@@ -1676,32 +1676,91 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource type. Can be \"Microsoft.SignalRService/SignalR\" or \"Microsoft.SignalRService/webPubSub\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource name to validate. e.g.\"my-resource-name\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Indicates whether the name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The reason of the availability. Required if name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The message of the operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.SignalRService/locations",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/145"
+    },
+    "input": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SignalRKeys",
     "properties": {
       "primaryKey": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 4,
         "description": "The primary access key."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 4,
         "description": "The secondary access key."
       },
       "primaryConnectionString": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 4,
         "description": "Connection string constructed via the primaryKey"
       },
       "secondaryConnectionString": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/148"
         },
         "flags": 4,
         "description": "Connection string constructed via the secondaryKey"
@@ -1718,7 +1777,7 @@
     "resourceType": "Microsoft.SignalRService/signalR",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/147"
     }
   }
 ]

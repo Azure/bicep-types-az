@@ -4319,5 +4319,254 @@
     "output": {
       "$ref": "#/237"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteInfo",
+    "properties": {
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 1,
+        "description": "Determines which key is to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotChannelTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/257"
+      },
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratekeys",
+    "resourceType": "Microsoft.BotService/botServices/channels",
+    "apiVersion": "2023-09-15-preview",
+    "output": {
+      "$ref": "#/255"
+    },
+    "input": {
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateEmailSignInUrlResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to sign in url"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateEmailSignInUrlResponseProperties",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Sign in url."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createEmailSignInUrl",
+    "resourceType": "Microsoft.BotService/botServices",
+    "apiVersion": "2023-09-15-preview",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2023-09-15-preview",
+    "output": {
+      "$ref": "#/46"
+    }
   }
 ]

@@ -62,6 +62,12 @@
 * **properties**: [StorageContainerProperties](#storagecontainerproperties) (ReadOnly): The properties of the blob container.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DataLakeAnalytics/locations@2019-11-01-preview)
+* **Resource**: Microsoft.DataLakeAnalytics/locations
+* **ApiVersion**: 2019-11-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityInformation](#nameavailabilityinformation)
+
 ## Function listSasTokens (Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2019-11-01-preview)
 * **Resource**: Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers
 * **ApiVersion**: 2019-11-01-preview
@@ -89,6 +95,11 @@
 * **name**: string (Required): The unique name of the Azure Storage account to add.
 * **properties**: [AddStorageAccountPropertiesOrStorageAccountInformationProperties](#addstorageaccountpropertiesorstorageaccountinformationproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: string (ReadOnly): The resource type.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The Data Lake Analytics name to check availability for.
+* **type**: 'Microsoft.DataLakeAnalytics/accounts' | string (Required): The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeAnalytics/accounts
 
 ## CreateComputePolicyWithAccountParametersOrComputePolicy
 ### Properties
@@ -180,6 +191,12 @@
 * **runtimeVersion**: string (ReadOnly): The runtimeVersion for the Hive MetaStore
 * **serverUri**: string (ReadOnly): The serverUri for the Hive MetaStore
 * **userName**: string (ReadOnly): The userName for the Hive MetaStore
+
+## NameAvailabilityInformation
+### Properties
+* **message**: string (ReadOnly): The message describing why the Data Lake Analytics account name is not available, if nameAvailable is false.
+* **nameAvailable**: bool (ReadOnly): The Boolean value of true or false to indicate whether the Data Lake Analytics account name is available or not.
+* **reason**: string (ReadOnly): The reason why the Data Lake Analytics account name is not available, if nameAvailable is false.
 
 ## SasTokenInformation
 ### Properties

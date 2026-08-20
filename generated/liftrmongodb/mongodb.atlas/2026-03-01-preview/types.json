@@ -923,5 +923,210 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegionsByTierResponse",
+    "properties": {
+      "organizationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Atlas organization id."
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Atlas project id."
+      },
+      "regionsByTier": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 3,
+        "description": "List of cluster tiers and their supported regions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TierRegions",
+    "properties": {
+      "tier": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 1,
+        "description": "Cluster tier name."
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 1,
+        "description": "Supported region names."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FREE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FLEX"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M10"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M30"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clusterTierRegions",
+    "resourceType": "MongoDB.Atlas/organizations/projects",
+    "apiVersion": "2026-03-01-preview",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TierLimitReachedResponse",
+    "properties": {
+      "limits": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 3,
+        "description": "List of project limit statuses."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectLimitStatus",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "Type of the limit."
+      },
+      "maximum": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 1,
+        "description": "Maximum allowed value."
+      },
+      "current": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 1,
+        "description": "Current value."
+      },
+      "isReached": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 1,
+        "description": "Whether the limit has been reached."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FREE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FLEX"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M10"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M30"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/81"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "tierLimitReached",
+    "resourceType": "MongoDB.Atlas/organizations/projects",
+    "apiVersion": "2026-03-01-preview",
+    "output": {
+      "$ref": "#/80"
+    }
   }
 ]

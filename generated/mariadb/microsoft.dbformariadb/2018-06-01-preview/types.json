@@ -1172,5 +1172,70 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "The list of server configurations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Configuration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties of a configuration."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateConfigurations",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/89"
+    },
+    "input": {
+      "$ref": "#/89"
+    }
   }
 ]

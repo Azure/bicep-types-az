@@ -113,6 +113,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exportMetadataSchema (Microsoft.ApiCenter/services@2024-06-01-preview)
+* **Resource**: Microsoft.ApiCenter/services
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [MetadataSchemaExportRequest](#metadataschemaexportrequest)
+* **Output**: [MetadataSchemaExportResult](#metadataschemaexportresult)
+
+## Function exportSpecification (Microsoft.ApiCenter/services/workspaces/apis/versions/definitions@2024-06-01-preview)
+* **Resource**: Microsoft.ApiCenter/services/workspaces/apis/versions/definitions
+* **ApiVersion**: 2024-06-01-preview
+* **Output**: [ApiSpecExportResult](#apispecexportresult)
+
 ## ApiDefinitionProperties
 ### Properties
 * **description**: string: API definition description.
@@ -144,6 +155,11 @@
 * **linkState**: [LinkState](#linkstate) (ReadOnly): The state of the API source link
 * **targetEnvironmentId**: string: The target environment resource ID.
 * **targetLifecycleStage**: 'deprecated' | 'design' | 'development' | 'preview' | 'production' | 'retired' | 'testing' | string: The target lifecycle stage.
+
+## ApiSpecExportResult
+### Properties
+* **format**: 'inline' | 'link' | string: The format of exported result
+* **value**: string: The result of the export operation.
 
 ## ApiVersionProperties
 ### Properties
@@ -226,6 +242,15 @@ identifier field.
 * **deprecated**: bool: Deprecated assignment
 * **entity**: 'api' | 'deployment' | 'environment' | string: The entities this metadata schema component gets applied to.
 * **required**: bool: Required assignment
+
+## MetadataSchemaExportRequest
+### Properties
+* **assignedTo**: 'api' | 'deployment' | 'environment' | string: An entity the metadata schema is requested for.
+
+## MetadataSchemaExportResult
+### Properties
+* **format**: 'inline' | 'link' | string: The export format for the schema
+* **value**: string: The result of the export operation.
 
 ## MetadataSchemaProperties
 ### Properties

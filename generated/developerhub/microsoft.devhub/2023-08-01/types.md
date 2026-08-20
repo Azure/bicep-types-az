@@ -13,6 +13,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevHub/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generatePreviewArtifacts (Microsoft.DevHub/locations@2023-08-01)
+* **Resource**: Microsoft.DevHub/locations
+* **ApiVersion**: 2023-08-01
+* **Input**: [ArtifactGenerationProperties](#artifactgenerationproperties)
+* **Output**: [GeneratePreviewArtifactsResponse](#generatepreviewartifactsresponse)
+
+## Function getGitHubOAuthInfo (Microsoft.DevHub/locations/githuboauth@2023-08-01)
+* **Resource**: Microsoft.DevHub/locations/githuboauth
+* **ApiVersion**: 2023-08-01
+* **Input**: [GitHubOAuthCallRequest](#githuboauthcallrequest)
+* **Output**: [GitHubOAuthInfoResponse](#githuboauthinforesponse)
+
 ## ACR
 ### Properties
 * **acrRegistryName**: string: ACR registry
@@ -48,6 +60,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GeneratePreviewArtifactsResponse
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GitHubOAuthCallRequest
+### Properties
+* **redirectUrl**: string: The URL the client will redirect to on successful authentication. If empty, no redirect will occur.
+
+## GitHubOAuthInfoResponse
+### Properties
+* **authURL**: string: URL for authorizing the Developer Hub GitHub App
+* **token**: string: OAuth token used to make calls to GitHub
 
 ## GitHubWorkflowProfile
 ### Properties

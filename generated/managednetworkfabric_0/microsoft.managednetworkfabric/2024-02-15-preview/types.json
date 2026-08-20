@@ -10505,5 +10505,1420 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForStateUpdate",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/949"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/937"
+      },
+      {
+        "$ref": "#/938"
+      },
+      {
+        "$ref": "#/939"
+      },
+      {
+        "$ref": "#/940"
+      },
+      {
+        "$ref": "#/941"
+      },
+      {
+        "$ref": "#/942"
+      },
+      {
+        "$ref": "#/943"
+      },
+      {
+        "$ref": "#/944"
+      },
+      {
+        "$ref": "#/945"
+      },
+      {
+        "$ref": "#/946"
+      },
+      {
+        "$ref": "#/947"
+      },
+      {
+        "$ref": "#/948"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/951"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/954"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/950"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/953"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/952"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAdministrativeState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/960"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/961"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnderMaintenance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/957"
+      },
+      {
+        "$ref": "#/958"
+      },
+      {
+        "$ref": "#/959"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateConfigurationResponse",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/976"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL for the details of the response."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/964"
+      },
+      {
+        "$ref": "#/965"
+      },
+      {
+        "$ref": "#/966"
+      },
+      {
+        "$ref": "#/967"
+      },
+      {
+        "$ref": "#/968"
+      },
+      {
+        "$ref": "#/969"
+      },
+      {
+        "$ref": "#/970"
+      },
+      {
+        "$ref": "#/971"
+      },
+      {
+        "$ref": "#/972"
+      },
+      {
+        "$ref": "#/973"
+      },
+      {
+        "$ref": "#/974"
+      },
+      {
+        "$ref": "#/975"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/accessControlLists",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceUpdate",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/992"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "successfulDevices": {
+        "type": {
+          "$ref": "#/993"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action applied successfully."
+      },
+      "failedDevices": {
+        "type": {
+          "$ref": "#/994"
+        },
+        "flags": 0,
+        "description": "List of ARM Resource IDs for which the given action failed to apply."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/980"
+      },
+      {
+        "$ref": "#/981"
+      },
+      {
+        "$ref": "#/982"
+      },
+      {
+        "$ref": "#/983"
+      },
+      {
+        "$ref": "#/984"
+      },
+      {
+        "$ref": "#/985"
+      },
+      {
+        "$ref": "#/986"
+      },
+      {
+        "$ref": "#/987"
+      },
+      {
+        "$ref": "#/988"
+      },
+      {
+        "$ref": "#/989"
+      },
+      {
+        "$ref": "#/990"
+      },
+      {
+        "$ref": "#/991"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RebootProperties",
+    "properties": {
+      "rebootType": {
+        "type": {
+          "$ref": "#/1005"
+        },
+        "flags": 0,
+        "description": "Type of reboot to be performed. Example: GracefulRebootWithZTP"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulRebootWithZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulRebootWithoutZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulRebootWithZTP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UngracefulRebootWithoutZTP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1001"
+      },
+      {
+        "$ref": "#/1002"
+      },
+      {
+        "$ref": "#/1003"
+      },
+      {
+        "$ref": "#/1004"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reboot",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/1000"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceRoCommand",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the command."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceROCommands",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1022"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "outputUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Predefined link containing Device RO Command output."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1010"
+      },
+      {
+        "$ref": "#/1011"
+      },
+      {
+        "$ref": "#/1012"
+      },
+      {
+        "$ref": "#/1013"
+      },
+      {
+        "$ref": "#/1014"
+      },
+      {
+        "$ref": "#/1015"
+      },
+      {
+        "$ref": "#/1016"
+      },
+      {
+        "$ref": "#/1017"
+      },
+      {
+        "$ref": "#/1018"
+      },
+      {
+        "$ref": "#/1019"
+      },
+      {
+        "$ref": "#/1020"
+      },
+      {
+        "$ref": "#/1021"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runRoCommand",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/1009"
+    },
+    "input": {
+      "$ref": "#/1008"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceRwCommand",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the command."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommonPostActionResponseForDeviceRWCommands",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/1038"
+        },
+        "flags": 2,
+        "description": "Gets the configuration state."
+      },
+      "outputUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Predefined link containing Device Rw Command output."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorProvisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorDeprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeferredControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingCommit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1026"
+      },
+      {
+        "$ref": "#/1027"
+      },
+      {
+        "$ref": "#/1028"
+      },
+      {
+        "$ref": "#/1029"
+      },
+      {
+        "$ref": "#/1030"
+      },
+      {
+        "$ref": "#/1031"
+      },
+      {
+        "$ref": "#/1032"
+      },
+      {
+        "$ref": "#/1033"
+      },
+      {
+        "$ref": "#/1034"
+      },
+      {
+        "$ref": "#/1035"
+      },
+      {
+        "$ref": "#/1036"
+      },
+      {
+        "$ref": "#/1037"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runRwCommand",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/1025"
+    },
+    "input": {
+      "$ref": "#/1024"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateDeviceAdministrativeState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/1047"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/1048"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RMA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resync"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GracefulQuarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Quarantine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnderMaintenance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
+      },
+      {
+        "$ref": "#/1044"
+      },
+      {
+        "$ref": "#/1045"
+      },
+      {
+        "$ref": "#/1046"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/1040"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateVersion",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/1050"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deprovision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getTopology",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateInfraManagementBfdConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateWorkloadManagementBfdConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpgradeNetworkFabricProperties",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/1062"
+        },
+        "flags": 0,
+        "description": "Action to be performed while upgrading the fabric."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specify the version."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1060"
+      },
+      {
+        "$ref": "#/1061"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/1059"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateConfigurationProperties",
+    "properties": {
+      "validateAction": {
+        "type": {
+          "$ref": "#/1068"
+        },
+        "flags": 0,
+        "description": "Validate action that to be performed"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Configuration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1065"
+      },
+      {
+        "$ref": "#/1066"
+      },
+      {
+        "$ref": "#/1067"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    },
+    "input": {
+      "$ref": "#/1064"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTapRules",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resync",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTaps",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkTaps",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commitConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/979"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateConfiguration",
+    "resourceType": "Microsoft.ManagedNetworkFabric/routePolicies",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/963"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateNpbStaticRouteBfdAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects",
+    "apiVersion": "2024-02-15-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/956"
+    }
   }
 ]

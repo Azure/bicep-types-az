@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Education/studentLabs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateInviteCode (Microsoft.Education/labs@2021-12-01-preview)
+* **Resource**: Microsoft.Education/labs
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [InviteCodeGenerateRequest](#invitecodegeneraterequest)
+* **Output**: [LabDetails](#labdetails)
+
 ## Amount
 ### Properties
 * **currency**: string: The type of currency being used for the value.
@@ -69,12 +75,24 @@
 * **offerType**: 'Academic' | 'Student' | string (ReadOnly): Grant Offer Type
 * **status**: 'Active' | 'Inactive' | string (ReadOnly): Grant status
 
+## InviteCodeGenerateRequest
+### Properties
+* **maxStudentCount**: int: the total number of students that can be accepted to the lab.
+
 ## JoinRequestProperties
 ### Properties
 * **email**: string: join request email
 * **firstName**: string: First Name
 * **lastName**: string: Last Name
 * **status**: 'Denied' | 'Pending' | string: Join request status
+
+## LabDetails
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [LabProperties](#labproperties): Get lab response properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## LabProperties
 ### Properties

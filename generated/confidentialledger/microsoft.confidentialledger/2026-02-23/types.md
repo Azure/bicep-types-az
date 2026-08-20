@@ -13,6 +13,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function filesExport (Microsoft.ConfidentialLedger/ledgers@2026-02-23)
+* **Resource**: Microsoft.ConfidentialLedger/ledgers
+* **ApiVersion**: 2026-02-23
+* **Input**: [ConfidentialLedgerFilesExport](#confidentialledgerfilesexport)
+* **Output**: [ConfidentialLedgerFilesExportResponse](#confidentialledgerfilesexportresponse)
+
 ## AADBasedSecurityPrincipal
 ### Properties
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
@@ -23,6 +29,15 @@
 ### Properties
 * **cert**: string: Public key of the user cert (.pem or .cer)
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+
+## ConfidentialLedgerFilesExport
+### Properties
+* **restoreRegion**: string: The region where the exported ledger files will eventually be restored to.
+* **uri**: string {sensitive} (Required): SAS URI used to access the Fileshare for exporting ledger files.
+
+## ConfidentialLedgerFilesExportResponse
+### Properties
+* **message**: string (ReadOnly): Response body stating if the ledger files are being exported.
 
 ## LedgerProperties
 ### Properties

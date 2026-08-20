@@ -240,6 +240,63 @@
 * **properties**: [WatchlistItemProperties](#watchlistitemproperties): Watchlist Item properties
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function alerts (Microsoft.SecurityInsights/incidents@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2019-01-01-preview
+* **Output**: [IncidentAlertList](#incidentalertlist)
+
+## Function bookmarks (Microsoft.SecurityInsights/incidents@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2019-01-01-preview
+* **Output**: [IncidentBookmarkList](#incidentbookmarklist)
+
+## Function createIndicator (Microsoft.SecurityInsights/threatIntelligence@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
+* **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
+## Function entities (Microsoft.SecurityInsights/incidents@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2019-01-01-preview
+* **Output**: [IncidentEntitiesResponse](#incidententitiesresponse)
+
+## Function expand (Microsoft.SecurityInsights/bookmarks@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/bookmarks
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [BookmarkExpandParameters](#bookmarkexpandparameters)
+* **Output**: [BookmarkExpandResponse](#bookmarkexpandresponse)
+
+## Function expand (Microsoft.SecurityInsights/entities@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/entities
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [EntityExpandParameters](#entityexpandparameters)
+* **Output**: [EntityExpandResponse](#entityexpandresponse)
+
+## Function getInsights (Microsoft.SecurityInsights/entities@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/entities
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [EntityGetInsightsParameters](#entitygetinsightsparameters)
+* **Output**: [EntityGetInsightsResponse](#entitygetinsightsresponse)
+
+## Function getTimeline (Microsoft.SecurityInsights/entities@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/entities
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [EntityTimelineParameters](#entitytimelineparameters)
+* **Output**: [EntityTimelineResponse](#entitytimelineresponse)
+
+## Function queryIndicators (Microsoft.SecurityInsights/threatIntelligence@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [ThreatIntelligenceFilteringCriteria](#threatintelligencefilteringcriteria)
+* **Output**: [ThreatIntelligenceInformationList](#threatintelligenceinformationlist)
+
+## Function replaceTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
+* **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
@@ -314,6 +371,22 @@
 * **triggersOn**: 'Incidents' | string (Required): The type of object the automation rule triggers on
 * **triggersWhen**: 'Created' | string (Required): The type of event the automation rule triggers on
 
+## BookmarkExpandParameters
+### Properties
+* **endTime**: string: The end date filter, so the only expansion results returned are before this date.
+* **expansionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The Id of the expansion to perform.
+* **startTime**: string: The start date filter, so the only expansion results returned are after this date.
+
+## BookmarkExpandResponse
+### Properties
+* **metaData**: [ExpansionResultsMetadata](#expansionresultsmetadata): The metadata from the expansion operation results.
+* **value**: [BookmarkExpandResponseValue](#bookmarkexpandresponsevalue): The expansion result values.
+
+## BookmarkExpandResponseValue
+### Properties
+* **edges**: [ConnectedEntity](#connectedentity)[]: Array of expansion result connected entities
+* **entities**: [Entity](#entity)[]: Array of the expansion result entities.
+
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
@@ -370,10 +443,182 @@
 * **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the client.
 * **userPrincipalName**: string: The user principal name of the client.
 
+## ConnectedEntity
+### Properties
+* **additionalData**: any: key-value pairs for a connected entity mapping
+* **targetEntityId**: string: Entity Id of the connected entity
+
+## Entity
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **type**: string (ReadOnly): Azure resource type
+
 ## EntityCommonPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## EntityEdges
+### Properties
+* **additionalData**: [EntityEdgesAdditionalData](#entityedgesadditionaldata): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **targetEntityId**: string: The target entity Id.
+
+## EntityEdgesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## EntityExpandParameters
+### Properties
+* **endTime**: string: The end date filter, so the only expansion results returned are before this date.
+* **expansionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The Id of the expansion to perform.
+* **startTime**: string: The start date filter, so the only expansion results returned are after this date.
+
+## EntityExpandResponse
+### Properties
+* **metaData**: [ExpansionResultsMetadata](#expansionresultsmetadata): The metadata from the expansion operation results.
+* **value**: [EntityExpandResponseValue](#entityexpandresponsevalue): The expansion result values.
+
+## EntityExpandResponseValue
+### Properties
+* **edges**: [EntityEdges](#entityedges)[]: Array of edges that connects the entity to the list of entities.
+* **entities**: [Entity](#entity)[]: Array of the expansion result entities.
+
+## EntityGetInsightsParameters
+### Properties
+* **addDefaultExtendedTimeRange**: bool: Indicates if query time range should be extended with default time range of the query. Default value is false
+* **endTime**: string (Required): The end timeline date, so the results returned are before this date.
+* **insightQueryIds**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: List of Insights Query Id. If empty, default value is all insights of this entity
+* **startTime**: string (Required): The start timeline date, so the results returned are after this date.
+
+## EntityGetInsightsResponse
+### Properties
+* **metaData**: [GetInsightsResultsMetadata](#getinsightsresultsmetadata): The metadata from the get insights operation results.
+* **value**: [EntityInsightItem](#entityinsightitem)[]: The insights result values.
+
+## EntityInsightItem
+### Properties
+* **chartQueryResults**: [InsightsTableResult](#insightstableresult)[]: Query results for table insights query.
+* **queryId**: string: The query id of the insight
+* **queryTimeInterval**: [EntityInsightItemQueryTimeInterval](#entityinsightitemquerytimeinterval): The Time interval that the query actually executed on.
+* **tableQueryResults**: [InsightsTableResult](#insightstableresult): Query results for table insights query.
+
+## EntityInsightItemQueryTimeInterval
+### Properties
+* **endTime**: string: Insight query end time
+* **startTime**: string: Insight query start time
+
+## EntityTimelineItem
+* **Discriminator**: kind
+
+### Base Properties
+
+### ActivityTimelineItem
+#### Properties
+* **bucketEndTimeUTC**: string (Required): The grouping bucket end time.
+* **bucketStartTimeUTC**: string (Required): The grouping bucket start time.
+* **content**: string (Required): The activity timeline content.
+* **firstActivityTimeUTC**: string (Required): The time of the first activity in the grouping bucket.
+* **kind**: 'Activity' (Required): The entity query kind type.
+* **lastActivityTimeUTC**: string (Required): The time of the last activity in the grouping bucket.
+* **queryId**: string (Required): The activity query id.
+* **title**: string (Required): The activity timeline title.
+
+### BookmarkTimelineItem
+#### Properties
+* **azureResourceId**: string (Required): The bookmark azure resource id.
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
+* **displayName**: string: The bookmark display name.
+* **endTimeUtc**: string: The bookmark end time.
+* **eventTime**: string: The bookmark event time.
+* **kind**: 'Bookmark' (Required): The entity query kind type.
+* **labels**: string[]: List of labels relevant to this bookmark
+* **notes**: string: The notes of the bookmark
+* **startTimeUtc**: string: The bookmark start time.
+
+### SecurityAlertTimelineItem
+#### Properties
+* **alertType**: string (Required): The name of the alert type.
+* **azureResourceId**: string (Required): The alert azure resource id.
+* **description**: string: The alert description.
+* **displayName**: string (Required): The alert name.
+* **endTimeUtc**: string (Required): The alert end time.
+* **kind**: 'SecurityAlert' (Required): The entity query kind type.
+* **productName**: string: The alert product name.
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The alert severity.
+* **startTimeUtc**: string (Required): The alert start time.
+* **timeGenerated**: string (Required): The alert generated time.
+
+
+## EntityTimelineParameters
+### Properties
+* **endTime**: string (Required): The end timeline date, so the results returned are before this date.
+* **kinds**: ('Activity' | 'Bookmark' | 'SecurityAlert' | string)[]: Array of timeline Item kinds.
+* **numberOfBucket**: int: The number of bucket for timeline queries aggregation.
+* **startTime**: string (Required): The start timeline date, so the results returned are after this date.
+
+## EntityTimelineResponse
+### Properties
+* **metaData**: [TimelineResultsMetadata](#timelineresultsmetadata): The metadata from the timeline operation results.
+* **value**: [EntityTimelineItem](#entitytimelineitem)[]: The timeline result values.
+
+## ExpansionResultAggregation
+### Properties
+* **aggregationType**: string: The common type of the aggregation. (for e.g. entity field name)
+* **count**: int (Required): Total number of aggregations of the given kind (and aggregationType if given) in the expansion result.
+* **displayName**: string: The display name of the aggregation by type.
+* **entityKind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the aggregated entity.
+
+## ExpansionResultsMetadata
+### Properties
+* **aggregations**: [ExpansionResultAggregation](#expansionresultaggregation)[]: Information of the aggregated nodes in the expansion result.
+
+## GetInsightsError
+### Properties
+* **errorMessage**: string (Required): the error message
+* **kind**: 'Insight' | string (Required): the query kind
+* **queryId**: string: the query id
+
+## GetInsightsResultsMetadata
+### Properties
+* **errors**: [GetInsightsError](#getinsightserror)[]: information about the failed queries
+* **totalCount**: int (Required): the total items found for the insights request
+
+## HuntingBookmark
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **properties**: [HuntingBookmarkProperties](#huntingbookmarkproperties): HuntingBookmark entity properties
+* **type**: string (ReadOnly): Azure resource type
+
+## HuntingBookmarkProperties
+### Properties
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **created**: string: The time the bookmark was created
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
+* **displayName**: string (Required): The display name of the bookmark
+* **eventTime**: string: The time of the event
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes an incident that relates to bookmark
+* **labels**: string[]: List of labels relevant to this bookmark
+* **notes**: string: The notes of the bookmark
+* **query**: string (Required): The query of the bookmark.
+* **queryResult**: string: The query result of the bookmark.
+* **updated**: string: The last time the bookmark was updated
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
 
 ## IncidentAdditionalData
 ### Properties
@@ -383,12 +628,30 @@
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics associated with incident
 
+## IncidentAlertList
+### Properties
+* **value**: [SecurityAlert](#securityalert)[] (Required): Array of incident alerts.
+
+## IncidentBookmarkList
+### Properties
+* **value**: [HuntingBookmark](#huntingbookmark)[] (Required): Array of incident bookmarks.
+
 ## IncidentCommentProperties
 ### Properties
 * **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
+
+## IncidentEntitiesResponse
+### Properties
+* **entities**: [Entity](#entity)[]: Array of the incident related entities.
+* **metaData**: [IncidentEntitiesResultsMetadata](#incidententitiesresultsmetadata)[]: The metadata from the incident related entities results.
+
+## IncidentEntitiesResultsMetadata
+### Properties
+* **count**: int (Required): Total number of aggregations of the given kind in the incident related entities result.
+* **entityKind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the aggregated entity.
 
 ## IncidentInfo
 ### Properties
@@ -431,6 +694,16 @@
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
 * **title**: string (Required): The title of the incident
 
+## InsightsTableResult
+### Properties
+* **columns**: [InsightsTableResultColumnsItem](#insightstableresultcolumnsitem)[]: Columns Metadata of the table
+* **rows**: string[][]: Rows data of the table
+
+## InsightsTableResultColumnsItem
+### Properties
+* **name**: string: the name of the column
+* **type**: string: the type of the column
+
 ## OfficeConsentProperties
 ### Properties
 * **consentId**: string: Help to easily cascade among the data layers.
@@ -464,6 +737,49 @@
 * **sourceRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation source node
 * **targetRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation target node
 
+## SecurityAlert
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **properties**: [SecurityAlertProperties](#securityalertproperties): SecurityAlert entity properties
+* **type**: string (ReadOnly): Azure resource type
+
+## SecurityAlertProperties
+### Properties
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **alertDisplayName**: string (ReadOnly): The display name of the alert.
+* **alertLink**: string (ReadOnly): The uri link of the alert.
+* **alertType**: string (ReadOnly): The type name of the alert.
+* **compromisedEntity**: string (ReadOnly): Display name of the main entity being reported on.
+* **confidenceLevel**: 'High' | 'Low' | 'Unknown' | string (ReadOnly): The confidence level of this alert.
+* **confidenceReasons**: [SecurityAlertPropertiesConfidenceReasonsItem](#securityalertpropertiesconfidencereasonsitem)[] (ReadOnly): The confidence reasons
+* **confidenceScore**: int (ReadOnly): The confidence score of the alert.
+* **confidenceScoreStatus**: 'Final' | 'InProcess' | 'NotApplicable' | 'NotFinal' | string (ReadOnly): The confidence score calculation status, i.e. indicating if score calculation is pending for this alert, not applicable or final.
+* **description**: string (ReadOnly): Alert description.
+* **endTimeUtc**: string (ReadOnly): The impact end time of the alert (the time of the last event contributing to the alert).
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **intent**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Exploitation' | 'Impact' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | 'Probing' | 'Unknown' | string (ReadOnly): Holds the alert intent stage(s) mapping for this alert.
+* **processingEndTime**: string (ReadOnly): The time the alert was made available for consumption.
+* **productComponentName**: string (ReadOnly): The name of a component inside the product which generated the alert.
+* **productName**: string (ReadOnly): The name of the product which published this alert.
+* **productVersion**: string (ReadOnly): The version of the product generating the alert.
+* **providerAlertId**: string (ReadOnly): The identifier of the alert inside the product which generated the alert.
+* **remediationSteps**: string[] (ReadOnly): Manual action items to take to remediate the alert.
+* **resourceIdentifiers**: any[] (ReadOnly): The list of resource identifiers of the alert.
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the alert
+* **startTimeUtc**: string (ReadOnly): The impact start time of the alert (the time of the first event contributing to the alert).
+* **status**: 'Dismissed' | 'InProgress' | 'New' | 'Resolved' | 'Unknown' | string (ReadOnly): The lifecycle status of the alert.
+* **systemAlertId**: string (ReadOnly): Holds the product identifier of the alert for the product.
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics of the alert
+* **timeGenerated**: string (ReadOnly): The time the alert was generated.
+* **vendorName**: string (ReadOnly): The name of the vendor that raise the alert.
+
+## SecurityAlertPropertiesConfidenceReasonsItem
+### Properties
+* **reason**: string (ReadOnly): The reason's description
+* **reasonType**: string (ReadOnly): The type (category) of the reason
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -486,11 +802,33 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ThreatIntelligenceFilteringCriteria
+### Properties
+* **ids**: string[]: Ids of threat intelligence indicators
+* **includeDisabled**: bool: Parameter to include/exclude disabled indicators.
+* **keywords**: string[]: Keywords for searching threat intelligence indicators
+* **maxConfidence**: int: Maximum confidence.
+* **maxValidUntil**: string: End time for ValidUntil filter.
+* **minConfidence**: int: Minimum confidence.
+* **minValidUntil**: string: Start time for ValidUntil filter.
+* **pageSize**: int: Page size
+* **patternTypes**: string[]: Pattern types
+* **skipToken**: string: Skip token.
+* **sortBy**: [ThreatIntelligenceSortingCriteriaAutoGenerated](#threatintelligencesortingcriteriaautogenerated)[]: Columns to sort by and sorting order
+* **sources**: string[]: Sources of threat intelligence indicators
+* **threatTypes**: string[]: Threat types of threat intelligence indicators
+
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties
 * **language**: string: Language granular marking model
 * **markingRef**: int: marking reference granular marking model
 * **selectors**: string[]: granular marking model selectors
+
+## ThreatIntelligenceIndicatorModelForRequestBody
+### Properties
+* **etag**: string: Etag of the azure resource
+* **kind**: 'indicator' | string (Required): The kind of the entity.
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties): Threat Intelligence Entity properties
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
@@ -530,6 +868,19 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ThreatIntelligenceInformation
+### Properties
+* **etag**: string: Etag of the azure resource
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'indicator' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **type**: string (ReadOnly): Azure resource type
+
+## ThreatIntelligenceInformationList
+### Properties
+* **nextLink**: string (ReadOnly): URL to fetch the next set of information objects.
+* **value**: [ThreatIntelligenceInformation](#threatintelligenceinformation)[] (Required): Array of threat intelligence information objects.
+
 ## ThreatIntelligenceKillChainPhase
 ### Properties
 * **killChainName**: string: Kill chainName name
@@ -544,6 +895,28 @@
 ### Properties
 * **value**: string: Value of parsed pattern
 * **valueType**: string: Type of the value
+
+## ThreatIntelligenceSortingCriteriaAutoGenerated
+### Properties
+* **itemKey**: string: Column name
+* **sortOrder**: 'ascending' | 'descending' | 'unsorted' | string: Sorting order (ascending/descending/unsorted).
+
+## TimelineAggregation
+### Properties
+* **count**: int (Required): the total items found for a kind
+* **kind**: 'Activity' | 'Bookmark' | 'SecurityAlert' | string (Required): the query kind
+
+## TimelineError
+### Properties
+* **errorMessage**: string (Required): the error message
+* **kind**: 'Activity' | 'Bookmark' | 'SecurityAlert' | string (Required): the query kind
+* **queryId**: string: the query id
+
+## TimelineResultsMetadata
+### Properties
+* **aggregations**: [TimelineAggregation](#timelineaggregation)[] (Required): timeline aggregation per kind
+* **errors**: [TimelineError](#timelineerror)[]: information about the failure queries
+* **totalCount**: int (Required): the total items found for the timeline request
 
 ## UserInfo
 ### Properties

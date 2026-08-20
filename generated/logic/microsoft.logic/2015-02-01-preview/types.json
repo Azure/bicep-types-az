@@ -2089,6 +2089,62 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Workflow",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Gets or sets the workflow properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "WorkflowSecretKeys",
     "properties": {
       "primarySecretKey": {
@@ -2113,7 +2169,58 @@
     "resourceType": "Microsoft.Logic/workflows/accessKeys",
     "apiVersion": "2015-02-01-preview",
     "output": {
-      "$ref": "#/179"
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateSecretKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Gets or sets the key type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerate",
+    "resourceType": "Microsoft.Logic/workflows/accessKeys",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/181"
+    },
+    "input": {
+      "$ref": "#/183"
     }
   }
 ]

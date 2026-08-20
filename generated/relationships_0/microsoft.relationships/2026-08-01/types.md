@@ -1,0 +1,61 @@
+# Microsoft.Relationships @ 2026-08-01
+
+## Resource Microsoft.Relationships/dependencyOf@2026-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+### Properties
+* **apiVersion**: '2026-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DependencyOfRelationshipProperties](#dependencyofrelationshipproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Relationships/dependencyOf' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Relationships/serviceGroupMember@2026-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+### Properties
+* **apiVersion**: '2026-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceGroupMemberRelationshipPropertiesV2](#servicegroupmemberrelationshippropertiesv2): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Relationships/serviceGroupMember' (ReadOnly, DeployTimeConstant): The resource type
+
+## DependencyOfRelationshipProperties
+### Properties
+* **metadata**: [RelationshipMetadata](#relationshipmetadata) (ReadOnly): Metadata about the relationship.
+* **originInformation**: [RelationshipOriginInformation](#relationshiporigininformation) (ReadOnly): Information about the origin of the relationship.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the relationship.
+* **sourceId**: string (ReadOnly): The relationship source resource id.
+* **targetId**: string (Required): The relationship target resource id.
+* **targetTenant**: string: The relationship target tenant id.
+
+## RelationshipMetadata
+### Properties
+* **sourceType**: string (Required, ReadOnly): The type of the relationship source resource.
+* **targetType**: string (Required, ReadOnly): The type of the relationship target resource.
+
+## RelationshipOriginInformation
+### Properties
+* **discoveryEngine**: string (ReadOnly): The name of the discovery engine that created the relationship.
+* **relationshipOriginType**: 'ServiceExplicitlyCreated' | 'SystemDiscoveredByRule' | 'UserDiscoveredByRule' | 'UserExplicitlyCreated' | string (Required, ReadOnly): Identifies the origin type of the relationship.
+
+## ServiceGroupMemberRelationshipPropertiesV2
+### Properties
+* **metadata**: [RelationshipMetadata](#relationshipmetadata) (ReadOnly): Metadata about the relationship.
+* **originInformation**: [RelationshipOriginInformation](#relationshiporigininformation) (ReadOnly): Information about the origin of the relationship.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the relationship.
+* **sourceId**: string (Required): The relationship source resource id. Must be a service group.
+* **sourceTenant**: string: The relationship source tenant id.
+* **targetId**: string (ReadOnly): The relationship target resource id. Server-derived from the scoped resource.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+

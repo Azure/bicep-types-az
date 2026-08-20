@@ -39,9 +39,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Communication/emailServices/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function linkNotificationHub (Microsoft.Communication/communicationServices@2022-07-01-preview)
+* **Resource**: Microsoft.Communication/communicationServices
+* **ApiVersion**: 2022-07-01-preview
+* **Input**: [LinkNotificationHubParameters](#linknotificationhubparameters)
+* **Output**: [LinkedNotificationHub](#linkednotificationhub)
+
 ## Function listKeys (Microsoft.Communication/communicationServices@2022-07-01-preview)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2022-07-01-preview
+* **Output**: [CommunicationServiceKeys](#communicationservicekeys)
+
+## Function regenerateKey (Microsoft.Communication/communicationServices@2022-07-01-preview)
+* **Resource**: Microsoft.Communication/communicationServices
+* **ApiVersion**: 2022-07-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
 
 ## CommunicationServiceKeys
@@ -100,6 +112,19 @@
 ### Properties
 * **dataLocation**: string (Required): The location where the email service stores its data at rest.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+
+## LinkedNotificationHub
+### Properties
+* **resourceId**: string: The resource ID of the notification hub
+
+## LinkNotificationHubParameters
+### Properties
+* **connectionString**: string (Required): Connection string for the notification hub
+* **resourceId**: string (Required): The resource ID of the notification hub
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary': The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive).
 
 ## SystemData
 ### Properties

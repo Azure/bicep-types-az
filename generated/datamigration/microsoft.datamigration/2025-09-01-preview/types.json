@@ -17617,6 +17617,187 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The proposed resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type chain (e.g. virtualMachines/extensions)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "If true, the name is valid and available. If false, 'reason' describes why not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1256"
+        },
+        "flags": 0,
+        "description": "The reason why the name is not available, if nameAvailable is false"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The localized reason why the name is not available, if nameAvailable is false"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1254"
+      },
+      {
+        "$ref": "#/1255"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/locations",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1253"
+    },
+    "input": {
+      "$ref": "#/1252"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1253"
+    },
+    "input": {
+      "$ref": "#/1252"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceStatusResponse",
+    "properties": {
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The DMS instance agent version"
+      },
+      "agentConfiguration": {
+        "type": {
+          "$ref": "#/647"
+        },
+        "flags": 0,
+        "description": "Agent Configuration"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'"
+      },
+      "vmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The services virtual machine size, such as 'Standard_D2_v2'"
+      },
+      "supportedTaskTypes": {
+        "type": {
+          "$ref": "#/1260"
+        },
+        "flags": 0,
+        "description": "The list of supported task types"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkStatus",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1259"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteNode",
+    "properties": {
+      "nodeName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of node to delete."
+      },
+      "integrationRuntimeName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of integration runtime."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1262"
+    },
+    "input": {
+      "$ref": "#/1262"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AuthenticationKeys",
     "properties": {
       "authKey1": {
@@ -17641,7 +17822,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1252"
+      "$ref": "#/1264"
     }
   },
   {
@@ -17657,7 +17838,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/1257"
+          "$ref": "#/1269"
         },
         "flags": 2,
         "description": "Integration Runtime node monitoring data."
@@ -17670,7 +17851,7 @@
     "properties": {
       "additionalProperties": {
         "type": {
-          "$ref": "#/1256"
+          "$ref": "#/1268"
         },
         "flags": 2,
         "description": "Unmatched properties from the message are deserialized in this collection."
@@ -17744,7 +17925,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1255"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17753,7 +17934,655 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1254"
+      "$ref": "#/1266"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenAuthKeys",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of authentication key to generate."
+      },
+      "authKey1": {
+        "type": {
+          "$ref": "#/1228"
+        },
+        "flags": 0,
+        "description": "The first authentication key."
+      },
+      "authKey2": {
+        "type": {
+          "$ref": "#/1228"
+        },
+        "flags": 0,
+        "description": "The second authentication key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAuthKeys",
+    "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1271"
+    },
+    "input": {
+      "$ref": "#/1271"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileStorageInfo",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A URI that can be used to access the file content."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/1274"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileStorageInfoHeaders",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "read",
+    "resourceType": "Microsoft.DataMigration/services/projects/files",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1273"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "readwrite",
+    "resourceType": "Microsoft.DataMigration/services/projects/files",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1273"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectTask",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Custom task properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1277"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "command",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/142"
+    },
+    "input": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/serviceTasks",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1277"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationOperationInput",
+    "properties": {
+      "migrationOperationId": {
+        "type": {
+          "$ref": "#/1282"
+        },
+        "flags": 0,
+        "description": "ID tracking migration operation."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseMigrationSqlDb",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1284"
+        },
+        "flags": 0,
+        "description": "Database Migration Resource properties for SQL database."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseMigrationPropertiesSqlDb",
+    "properties": {
+      "migrationStatusDetails": {
+        "type": {
+          "$ref": "#/1285"
+        },
+        "flags": 2,
+        "description": "Detailed migration status. Not included by default."
+      },
+      "targetSqlConnection": {
+        "type": {
+          "$ref": "#/1289"
+        },
+        "flags": 0,
+        "description": "Target SQL DB connection details."
+      },
+      "offlineConfiguration": {
+        "type": {
+          "$ref": "#/1290"
+        },
+        "flags": 2,
+        "description": "Offline configuration."
+      },
+      "tableList": {
+        "type": {
+          "$ref": "#/1291"
+        },
+        "flags": 0,
+        "description": "List of tables to copy."
+      },
+      "sourceSqlConnection": {
+        "type": {
+          "$ref": "#/1289"
+        },
+        "flags": 0,
+        "description": "Source SQL Server connection details."
+      },
+      "sourceDatabaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the source database."
+      },
+      "sourceServerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the source sql server."
+      },
+      "targetDatabaseCollation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database collation to be used for the target database."
+      },
+      "sqlServerInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional property - Resource Id for the source Sql server instance. Validations are performed on this property to ensure that it follows the correct format."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/1297"
+        },
+        "flags": 1
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of the target resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/1303"
+        },
+        "flags": 2,
+        "description": "Provisioning State of migration. ProvisioningState as Succeeded implies that validations have been performed and migration has started."
+      },
+      "migrationStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration status."
+      },
+      "startedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Database migration start time."
+      },
+      "endedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Database migration end time."
+      },
+      "migrationService": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of the Migration Service."
+      },
+      "migrationOperationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID for current migration operation."
+      },
+      "migrationFailureError": {
+        "type": {
+          "$ref": "#/1250"
+        },
+        "flags": 2,
+        "description": "Error details in case of migration failure."
+      },
+      "provisioningError": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error message for migration provisioning failure, if any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDbMigrationStatusDetails",
+    "properties": {
+      "migrationState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current State of Migration."
+      },
+      "sqlDataCopyErrors": {
+        "type": {
+          "$ref": "#/1286"
+        },
+        "flags": 2,
+        "description": "Sql Data Copy errors, if any."
+      },
+      "listOfCopyProgressDetails": {
+        "type": {
+          "$ref": "#/1288"
+        },
+        "flags": 2,
+        "description": "Details on progress of ADF copy activities."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CopyProgressDetails",
+    "properties": {
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Table Name"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status of the Copy activity (InProgress, Succeeded, Failed, Canceled)."
+      },
+      "parallelCopyType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of parallel copy (Dynamic range, Physical partition, none)."
+      },
+      "usedParallelCopies": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "The degree of parallelization."
+      },
+      "dataRead": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Bytes read"
+      },
+      "dataWritten": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Bytes written"
+      },
+      "rowsRead": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Rows read"
+      },
+      "rowsCopied": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Rows Copied"
+      },
+      "copyStart": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Copy Start"
+      },
+      "copyThroughput": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Copy throughput in KBps"
+      },
+      "copyDuration": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Copy Duration in seconds"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1287"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlConnectionInformation",
+    "properties": {
+      "dataSource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Data source."
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Authentication type."
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User name to connect to source SQL."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/1228"
+        },
+        "flags": 0,
+        "description": "Password to connect to source SQL."
+      },
+      "encryptConnection": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Whether to encrypt connection or not."
+      },
+      "trustServerCertificate": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Whether to trust server certificate or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDbOfflineConfiguration",
+    "properties": {
+      "offline": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Offline migration"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlMi"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlVm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MongoToCosmosDbMongo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseMigrationProperties"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1292"
+      },
+      {
+        "$ref": "#/1293"
+      },
+      {
+        "$ref": "#/1294"
+      },
+      {
+        "$ref": "#/1295"
+      },
+      {
+        "$ref": "#/1296"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1298"
+      },
+      {
+        "$ref": "#/1299"
+      },
+      {
+        "$ref": "#/1300"
+      },
+      {
+        "$ref": "#/1301"
+      },
+      {
+        "$ref": "#/1302"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retry",
+    "resourceType": "Microsoft.DataMigration/databaseMigrations",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/1283"
+    },
+    "input": {
+      "$ref": "#/1281"
     }
   }
 ]

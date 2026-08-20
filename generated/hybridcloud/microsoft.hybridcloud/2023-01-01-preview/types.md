@@ -28,6 +28,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCloud/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function discoverResources (Microsoft.HybridCloud/cloudConnectors@2023-01-01-preview)
+* **Resource**: Microsoft.HybridCloud/cloudConnectors
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: [DiscoveredResources](#discoveredresources)
+
 ## CloudConnectionProperties
 ### Properties
 * **cloudConnector**: [ResourceReference](#resourcereference): The cloud connector which discovered the remote resource.
@@ -41,6 +46,24 @@
 * **accountId**: string: Account identifier of the remote cloud.
 * **cloudType**: 'AWS' | string: The cloud connector type.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cloud connector resource.
+
+## DiscoveredResource
+### Properties
+* **body**: string (ReadOnly): Properties of the remote cloud resource.
+* **bodyContentType**: 'Json' | 'Xml' | string (ReadOnly): Content type of the cloud resource body.
+* **id**: string (ReadOnly): Remote cloud resource identifier
+
+## DiscoveredResources
+### Properties
+* **discoveredResources**: [DiscoveredResource](#discoveredresource)[]: List of discovered remote cloud resources.
+* **resourceFilter**: [ResourceFilter](#resourcefilter): Remote cloud resource filter.
+
+## ResourceFilter
+### Properties
+* **name**: string: Remote Resource name to filter on.
+* **region**: string: Remote Resource location/region to filter on.
+* **tag**: string: Remote Resource tags to filter on in key:value format.
+* **type**: string: Remote Resource type to filter on.
 
 ## ResourceReference
 ### Properties

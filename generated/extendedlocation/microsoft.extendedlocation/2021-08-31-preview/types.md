@@ -27,6 +27,26 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ExtendedLocation/customLocations/resourceSyncRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function findTargetResourceGroup (Microsoft.ExtendedLocation/customLocations@2021-08-31-preview)
+* **Resource**: Microsoft.ExtendedLocation/customLocations
+* **ApiVersion**: 2021-08-31-preview
+* **Input**: [CustomLocationFindTargetResourceGroupProperties](#customlocationfindtargetresourcegroupproperties)
+* **Output**: [CustomLocationFindTargetResourceGroupResult](#customlocationfindtargetresourcegroupresult)
+
+## CustomLocationFindTargetResourceGroupProperties
+### Properties
+* **labels**: [CustomLocationFindTargetResourceGroupPropertiesLabels](#customlocationfindtargetresourcegrouppropertieslabels): Labels of the custom resource, this is a map of {key,value} pairs.
+
+## CustomLocationFindTargetResourceGroupPropertiesLabels
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CustomLocationFindTargetResourceGroupResult
+### Properties
+* **matchedResourceSyncRule**: string (ReadOnly): The matching resource sync rule is the particular resource sync rule that matched the match expressions and labels and had lowest priority. This is the rule responsible for mapping the target resource to the target resource group.
+* **targetResourceGroup**: string (ReadOnly): The target resource group of matching resource sync rule. The labels from the request will be used to find out matching resource sync rule against the selector property of the resource sync rule. The one with highest priority will be returned if there are multiple matching rules.
+
 ## CustomLocationProperties
 ### Properties
 * **authentication**: [CustomLocationPropertiesAuthentication](#customlocationpropertiesauthentication): This is optional input that contains the authentication that should be used to generate the namespace.

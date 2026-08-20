@@ -313,6 +313,18 @@
 * **properties**: [ServiceObjectiveProperties](#serviceobjectiveproperties) (ReadOnly): Represents the properties of the resource.
 * **type**: 'Microsoft.Sql/servers/serviceObjectives' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Sql/servers/databases@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2014-04-01
+* **Input**: [ExportRequest](#exportrequest)
+* **Output**: [ImportExportResponse](#importexportresponse)
+
+## Function import (Microsoft.Sql/servers@2014-04-01)
+* **Resource**: Microsoft.Sql/servers
+* **ApiVersion**: 2014-04-01
+* **Input**: [ImportRequest](#importrequest)
+* **Output**: [ImportExportResponse](#importexportresponse)
+
 ## AdvisorProperties
 ### Properties
 * **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
@@ -466,6 +478,15 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **storageMB**: int: Gets storage limit for the database elastic pool in MB.
 * **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
+## ExportRequest
+### Properties
+* **administratorLogin**: string (Required): The name of the SQL administrator.
+* **administratorLoginPassword**: string (Required): The password of the SQL administrator.
+* **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
+* **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
+* **storageUri**: string (Required): The storage uri to use.
+
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string (Required): The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' to represent all Azure-internal IP addresses.
@@ -476,12 +497,54 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
 * **storageType**: string (ReadOnly): The storage type of the geo backup policy.
 
+## ImportExportResponse
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [ImportExportResponseProperties](#importexportresponseproperties): The import/export operation properties.
+* **type**: string (ReadOnly): Resource type.
+
+## ImportExportResponseProperties
+### Properties
+* **blobUri**: string (ReadOnly): The blob uri.
+* **databaseName**: string (ReadOnly): The name of the database.
+* **errorMessage**: string (ReadOnly): The error message returned from the server.
+* **lastModifiedTime**: string (ReadOnly): The operation status last modified time.
+* **queuedTime**: string (ReadOnly): The operation queued time.
+* **requestId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The request type of the operation.
+* **requestType**: string (ReadOnly): The request type of the operation.
+* **serverName**: string (ReadOnly): The name of the server.
+* **status**: string (ReadOnly): The status message returned from the server.
+
 ## ImportExtensionProperties
 ### Properties
 * **administratorLogin**: string (Required): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required): The password of the SQL administrator.
 * **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
 * **operationMode**: 'Import' (Required): The type of import operation being performed. This is always Import.
+* **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
+* **storageUri**: string (Required): The storage uri to use.
+
+## ImportRequest
+### Properties
+* **administratorLogin**: string (Required): The name of the SQL administrator.
+* **administratorLoginPassword**: string (Required): The password of the SQL administrator.
+* **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
+* **databaseName**: string (Required): The name of the database to import.
+* **edition**: 'Basic' | 'Business' | 'BusinessCritical' | 'DataWarehouse' | 'Free' | 'GeneralPurpose' | 'Hyperscale' | 'Premium' | 'PremiumRS' | 'Standard' | 'Stretch' | 'System' | 'System2' | 'Web' | string (Required): The edition for the database being created.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+
+```azurecli
+az sql db list-editions -l <location> -o table
+````
+
+```powershell
+Get-AzSqlServerServiceObjective -Location <location>
+````
+* **maxSizeBytes**: string (Required): The maximum size for the newly imported database.
+* **serviceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (Required): The name of the service objective to assign to the database.
 * **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
 * **storageUri**: string (Required): The storage uri to use.

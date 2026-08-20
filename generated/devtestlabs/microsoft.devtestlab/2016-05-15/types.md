@@ -228,6 +228,24 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function evaluatePolicies (Microsoft.DevTestLab/labs/policysets@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs/policysets
+* **ApiVersion**: 2016-05-15
+* **Input**: [EvaluatePoliciesRequest](#evaluatepoliciesrequest)
+* **Output**: [EvaluatePoliciesResponse](#evaluatepoliciesresponse)
+
+## Function generateArmTemplate (Microsoft.DevTestLab/labs/artifactsources/artifacts@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs/artifactsources/artifacts
+* **ApiVersion**: 2016-05-15
+* **Input**: [GenerateArmTemplateRequest](#generatearmtemplaterequest)
+* **Output**: [ArmTemplateInfo](#armtemplateinfo)
+
+## Function generateUploadUri (Microsoft.DevTestLab/labs@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2016-05-15
+* **Input**: [GenerateUploadUriParameter](#generateuploaduriparameter)
+* **Output**: [GenerateUploadUriResponse](#generateuploaduriresponse)
+
 ## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2016-05-15)
 * **Resource**: Microsoft.DevTestLab/labs/schedules
 * **ApiVersion**: 2016-05-15
@@ -256,6 +274,11 @@
 ### Properties
 * **labVmsShutdown**: [Schedule](#schedule): The auto-shutdown schedule, if one has been set at the lab or lab resource level.
 * **labVmsStartup**: [Schedule](#schedule): The auto-startup schedule, if one has been set at the lab or lab resource level.
+
+## ArmTemplateInfo
+### Properties
+* **parameters**: any: The parameters of the ARM template.
+* **template**: any: The template's contents.
 
 ## ArmTemplateParameterProperties
 ### Properties
@@ -406,6 +429,20 @@
 * **resourceGroupId**: string (ReadOnly): The identifier of the resource group containing the environment's resources.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
+## EvaluatePoliciesProperties
+### Properties
+* **factData**: string: The fact data.
+* **factName**: string: The fact name.
+* **valueOffset**: string: The value offset.
+
+## EvaluatePoliciesRequest
+### Properties
+* **policies**: [EvaluatePoliciesProperties](#evaluatepoliciesproperties)[]: Policies to evaluate.
+
+## EvaluatePoliciesResponse
+### Properties
+* **results**: [PolicySetResult](#policysetresult)[]: Results of evaluating a policy set.
+
 ## Event
 ### Properties
 * **eventName**: 'AutoShutdown' | 'Cost' | string: The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
@@ -437,6 +474,21 @@
 * **publisher**: string: The publisher of the gallery image.
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
+
+## GenerateArmTemplateRequest
+### Properties
+* **fileUploadOptions**: 'None' | 'UploadFilesAndGenerateSasTokens' | string: Options for uploading the files for the artifact. UploadFilesAndGenerateSasTokens is the default value.
+* **location**: string: The location of the virtual machine.
+* **parameters**: [ParameterInfo](#parameterinfo)[]: The parameters of the ARM template.
+* **virtualMachineName**: string: The resource name of the virtual machine.
+
+## GenerateUploadUriParameter
+### Properties
+* **blobName**: string: The blob name of the upload URI.
+
+## GenerateUploadUriResponse
+### Properties
+* **uploadUri**: string: The upload URI for the VHD.
 
 ## HourDetails
 ### Properties
@@ -620,6 +672,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
 * **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
+## ParameterInfo
+### Properties
+* **name**: string: The name of the artifact parameter.
+* **value**: string: The value of the artifact parameter.
+
 ## ParametersValueFileInfo
 ### Properties
 * **fileName**: string: File name.
@@ -640,6 +697,16 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **status**: 'Disabled' | 'Enabled' | string: The status of the policy.
 * **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## PolicySetResult
+### Properties
+* **hasError**: bool: A value indicating whether this policy set evaluation has discovered violations.
+* **policyViolations**: [PolicyViolation](#policyviolation)[]: The list of policy violations.
+
+## PolicyViolation
+### Properties
+* **code**: string: The code of the policy violation.
+* **message**: string: The message of the policy violation.
 
 ## Port
 ### Properties

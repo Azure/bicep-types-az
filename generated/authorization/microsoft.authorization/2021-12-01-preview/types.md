@@ -92,6 +92,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateDownloadUri (Microsoft.Authorization/accessReviewHistoryDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewHistoryDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)
+
 ## AccessReviewActorIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The identity id
@@ -199,7 +204,7 @@
 
 ## AccessReviewInstance
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [AccessReviewInstanceProperties](#accessreviewinstanceproperties): Access Review properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.

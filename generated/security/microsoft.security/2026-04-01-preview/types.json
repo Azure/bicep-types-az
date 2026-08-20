@@ -1148,5 +1148,123 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulesResultsInput",
+    "properties": {
+      "latestScan": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Take results from latest scan."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Expected results to be inserted into the baseline.\nLeave this field empty if latestScan == true."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulesResultsInputResults",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulesResults",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "List of rule results."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuleResults",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Rule results properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "baselineRules",
+    "resourceType": "Microsoft.Security/sqlVulnerabilityAssessments",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
   }
 ]

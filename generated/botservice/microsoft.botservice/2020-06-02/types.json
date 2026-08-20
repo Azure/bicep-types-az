@@ -1966,6 +1966,57 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SiteInfo",
+    "properties": {
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "Determines which key is to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratekeys",
+    "resourceType": "Microsoft.BotService/botServices/channels",
+    "apiVersion": "2020-06-02",
+    "output": {
+      "$ref": "#/112"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ConnectionSetting",
     "properties": {
       "properties": {
@@ -2005,7 +2056,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "Contains resource tags defined as key/value pairs."
@@ -2019,7 +2070,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/131"
         },
         "flags": 0,
         "description": "Required. Gets or sets the Kind of the resource."
@@ -2061,16 +2112,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/122"
+        "$ref": "#/127"
       },
       {
-        "$ref": "#/123"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/124"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/125"
+        "$ref": "#/130"
       },
       {
         "$ref": "#/2"
@@ -2083,7 +2134,7 @@
     "resourceType": "Microsoft.BotService/botServices/connections",
     "apiVersion": "2020-06-02",
     "output": {
-      "$ref": "#/120"
+      "$ref": "#/125"
     }
   }
 ]

@@ -4901,11 +4901,69 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ExportResourceUsageParameters",
+    "properties": {
+      "blobStorageAbsoluteSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The blob storage absolute sas uri with write permission to the container which the usage data needs to be uploaded to."
+      },
+      "usageStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the usage. If not provided, usage will be reported since the beginning of data collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateUploadUriParameter",
+    "properties": {
+      "blobName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The blob name of the upload URI."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateUploadUriResponse",
+    "properties": {
+      "uploadUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The upload URI for the VHD."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateUploadUri",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2016-05-15",
+    "output": {
+      "$ref": "#/272"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ResponseWithContinuationLabVhd",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/276"
         },
         "flags": 0,
         "description": "Results of the list operation."
@@ -4935,7 +4993,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/271"
+      "$ref": "#/275"
     }
   },
   {
@@ -4944,7 +5002,306 @@
     "resourceType": "Microsoft.DevTestLab/labs",
     "apiVersion": "2016-05-15",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/274"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetargetScheduleProperties",
+    "properties": {
+      "currentResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the virtual machine on which the schedule operates"
+      },
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the virtual machine that the schedule should be retargeted to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateArmTemplateRequest",
+    "properties": {
+      "virtualMachineName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource name of the virtual machine."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 0,
+        "description": "The parameters of the ARM template."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the virtual machine."
+      },
+      "fileUploadOptions": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0,
+        "description": "Options for uploading the files for the artifact. UploadFilesAndGenerateSasTokens is the default value."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterInfo",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the artifact parameter."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the artifact parameter."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/280"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UploadFilesAndGenerateSasTokens"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArmTemplateInfo",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 0,
+        "description": "The template's contents."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 0,
+        "description": "The parameters of the ARM template."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateArmTemplate",
+    "resourceType": "Microsoft.DevTestLab/labs/artifactsources/artifacts",
+    "apiVersion": "2016-05-15",
+    "output": {
+      "$ref": "#/285"
+    },
+    "input": {
+      "$ref": "#/279"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotifyParameters",
+    "properties": {
+      "eventName": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 0,
+        "description": "The type of event (i.e. AutoShutdown, Cost)"
+      },
+      "jsonPayload": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Properties for the notification in json format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoShutdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvaluatePoliciesRequest",
+    "properties": {
+      "policies": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 0,
+        "description": "Policies to evaluate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvaluatePoliciesProperties",
+    "properties": {
+      "factName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fact name."
+      },
+      "factData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fact data."
+      },
+      "valueOffset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value offset."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/292"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvaluatePoliciesResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/298"
+        },
+        "flags": 0,
+        "description": "Results of evaluating a policy set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicySetResult",
+    "properties": {
+      "hasError": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "A value indicating whether this policy set evaluation has discovered violations."
+      },
+      "policyViolations": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 0,
+        "description": "The list of policy violations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyViolation",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The code of the policy violation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The message of the policy violation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/295"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "evaluatePolicies",
+    "resourceType": "Microsoft.DevTestLab/labs/policysets",
+    "apiVersion": "2016-05-15",
+    "output": {
+      "$ref": "#/294"
+    },
+    "input": {
+      "$ref": "#/291"
     }
   },
   {
@@ -4953,7 +5310,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/301"
         },
         "flags": 0,
         "description": "Results of the list operation."
@@ -4979,7 +5336,170 @@
     "resourceType": "Microsoft.DevTestLab/labs/schedules",
     "apiVersion": "2016-05-15",
     "output": {
-      "$ref": "#/274"
+      "$ref": "#/300"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AttachDiskProperties",
+    "properties": {
+      "leasedByLabVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource ID of the Lab virtual machine to which the disk is attached."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetachDiskProperties",
+    "properties": {
+      "leasedByLabVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource ID of the Lab VM to which the disk is attached."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataDiskProperties",
+    "properties": {
+      "attachNewDataDiskOptions": {
+        "type": {
+          "$ref": "#/306"
+        },
+        "flags": 0,
+        "description": "Specifies options to attach a new disk to the virtual machine."
+      },
+      "existingLabDiskId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the existing lab disk id to attach to virtual machine."
+      },
+      "hostCaching": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 0,
+        "description": "Caching option for a data disk (i.e. None, ReadOnly, ReadWrite)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AttachNewDataDiskOptions",
+    "properties": {
+      "diskSizeGiB": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Size of the disk to be attached in Gibibytes."
+      },
+      "diskName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the disk to be attached."
+      },
+      "diskType": {
+        "type": {
+          "$ref": "#/309"
+        },
+        "flags": 0,
+        "description": "The storage type for the disk (i.e. Standard, Premium)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadWrite"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplyArtifactsRequest",
+    "properties": {
+      "artifacts": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0,
+        "description": "The list of artifacts to apply."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetachDataDiskProperties",
+    "properties": {
+      "existingLabDiskId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the disk resource ID to detach from virtual machine."
+      }
     }
   },
   {

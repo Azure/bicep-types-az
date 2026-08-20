@@ -145,6 +145,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/usages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function approve (Microsoft.Quota/incomingQuotaTransfers@2026-09-01-preview)
+* **Resource**: Microsoft.Quota/incomingQuotaTransfers
+* **ApiVersion**: 2026-09-01-preview
+* **Input**: [IncomingQuotaTransferApproveRequest](#incomingquotatransferapproverequest)
+* **Output**: [IncomingQuotaTransfer](#incomingquotatransfer)
+
+## Function cancel (Microsoft.Quota/quotaTransfers@2026-09-01-preview)
+* **Resource**: Microsoft.Quota/quotaTransfers
+* **ApiVersion**: 2026-09-01-preview
+* **Input**: [QuotaTransferCancelRequest](#quotatransfercancelrequest)
+* **Output**: [QuotaTransfer](#quotatransfer)
+
+## Function reject (Microsoft.Quota/incomingQuotaTransfers@2026-09-01-preview)
+* **Resource**: Microsoft.Quota/incomingQuotaTransfers
+* **ApiVersion**: 2026-09-01-preview
+* **Input**: [IncomingQuotaTransferRejectRequest](#incomingquotatransferrejectrequest)
+* **Output**: [IncomingQuotaTransfer](#incomingquotatransfer)
+
 ## AllocatedQuotaToSubscriptionList
 ### Properties
 * **value**: [AllocatedToSubscription](#allocatedtosubscription)[]: List of Group Quota Limit allocated to subscriptions.
@@ -231,6 +249,19 @@
 * **requestSubmitTime**: string: The request submission time. The date conforms to the following format specified by the ISO 8601 standard: yyyy-MM-ddTHH:mm:ssZ
 * **subscriptionId**: string: The subscription Id
 
+## IncomingQuotaTransfer
+### Properties
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [IncomingQuotaTransferProperties](#incomingquotatransferproperties): Properties of the incoming quota transfer.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## IncomingQuotaTransferApproveRequest
+### Properties
+* **comment**: string {maxLength: 500}: Optional free-text comment recorded on the transfer.
+
 ## IncomingQuotaTransferProperties
 ### Properties
 * **amount**: int (ReadOnly): Amount being transferred in the resource's native unit.
@@ -248,6 +279,10 @@ as the If-Match value on approve and reject requests.
 * **transferId**: string (ReadOnly): Server-generated identifier of the transfer (matches the URI key).
 * **transferRef**: string (ReadOnly): Fully qualified ARM resource id of the donor-side quotaTransfers resource.
 * **transferStatus**: 'Accepted' | 'Cancelled' | 'Completed' | 'Expired' | 'Failed' | 'Pending' | 'Rejected' | string (ReadOnly): The business status of the transfer.
+
+## IncomingQuotaTransferRejectRequest
+### Properties
+* **reason**: string {maxLength: 500}: Optional free-text reason recorded on the transfer.
 
 ## LimitJsonObject
 * **Discriminator**: limitObjectType
@@ -304,6 +339,19 @@ This parameter is optional because, for some resources like compute, the period 
 * **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): The quota request status.
 * **requestSubmitTime**: string (ReadOnly): The quota request submission time. The date conforms to the following format specified by the ISO 8601 standard: yyyy-MM-ddTHH:mm:ssZ
 * **value**: [SubRequest](#subrequest)[]: Quota request details.
+
+## QuotaTransfer
+### Properties
+* **etag**: string (ReadOnly): "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.")
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [QuotaTransferProperties](#quotatransferproperties): Properties of the quota transfer.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## QuotaTransferCancelRequest
+### Properties
+* **reason**: string {maxLength: 500}: Optional free-text reason recorded on the transfer.
 
 ## QuotaTransferProperties
 ### Properties

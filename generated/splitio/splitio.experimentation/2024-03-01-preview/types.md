@@ -15,6 +15,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'SplitIO.Experimentation/experimentationWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function exchangeToken (SplitIO.Experimentation/experimentationWorkspaces/dataPlaneApplications@2024-03-01-preview)
+* **Resource**: SplitIO.Experimentation/experimentationWorkspaces/dataPlaneApplications
+* **ApiVersion**: 2024-03-01-preview
+* **Input**: [ExchangeTokenParameters](#exchangetokenparameters)
+* **Output**: [ExchangeTokenResult](#exchangetokenresult)
+
 ## AccessPolicy
 ### Properties
 * **applicationId**: string (Required): Application id used for access to the experimentation workspace.
@@ -23,6 +29,15 @@
 ## DataSource
 ### Properties
 * **logAnalytics**: [LogAnalytics](#loganalytics): Log Analytics data source.
+
+## ExchangeTokenParameters
+### Properties
+* **resource**: string (Required): The resource of Split.IO data plane authentication token.
+* **token**: string {sensitive} (Required): The bearer token that is used for exchanging Split.IO data plane authentication token.
+
+## ExchangeTokenResult
+### Properties
+* **token**: string {sensitive} (Required, ReadOnly): The bearer token that is used for Split.IO data plane authentication.
 
 ## ExperimentationWorkspaceProperties
 ### Properties

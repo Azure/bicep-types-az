@@ -56,6 +56,21 @@
 * **tags**: [DataCollectionRuleResourceTags](#datacollectionruleresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createNotifications (Microsoft.Insights/actionGroups@2022-06-01)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2022-06-01
+* **Input**: [NotificationRequestBody](#notificationrequestbody)
+* **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
+
+## ActionDetail
+### Properties
+* **Detail**: string: The detail of the friendly error message
+* **MechanismType**: string: The mechanism type
+* **Name**: string: The name of the action
+* **SendTime**: string: The send time
+* **Status**: string: The status of the action
+* **SubState**: string: The substatus of the action
+
 ## ActionGroup
 ### Properties
 * **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
@@ -110,6 +125,11 @@
 ### Properties
 * **name**: string: The name of the column.
 * **type**: 'boolean' | 'datetime' | 'dynamic' | 'int' | 'long' | 'real' | 'string' | string: The type of the column data.
+
+## Context
+### Properties
+* **contextType**: string: The context id type
+* **notificationSource**: string: The source of the notification request
 
 ## DataCollectionEndpointConfigurationAccess
 ### Properties
@@ -382,6 +402,21 @@ A stream indicates what schema will be used for this data source
 * **name**: string: A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.
 
+## NotificationRequestBody
+### Properties
+* **alertType**: string {maxLength: 30} (Required): The value of the supported alert type. Supported alert type values are: servicehealth, metricstaticthreshold, metricsdynamicthreshold, logalertv2, smartalert, webtestalert, logalertv1numresult, logalertv1metricmeasurement, resourcehealth, activitylog, actualcostbudget, forecastedbudget
+* **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+* **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]: The list of AutomationRunbook receivers that are part of this action group.
+* **azureAppPushReceivers**: [AzureAppPushReceiver](#azureapppushreceiver)[]: The list of AzureAppPush receivers that are part of this action group.
+* **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]: The list of azure function receivers that are part of this action group.
+* **emailReceivers**: [EmailReceiver](#emailreceiver)[]: The list of email receivers that are part of this action group.
+* **eventHubReceivers**: [EventHubReceiver](#eventhubreceiver)[]: The list of event hub receivers that are part of this action group.
+* **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]: The list of ITSM receivers that are part of this action group.
+* **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]: The list of logic app receivers that are part of this action group.
+* **smsReceivers**: [SmsReceiver](#smsreceiver)[]: The list of SMS receivers that are part of this action group.
+* **voiceReceivers**: [VoiceReceiver](#voicereceiver)[]: The list of voice receivers that are part of this action group.
+* **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]: The list of webhook receivers that are part of this action group.
+
 ## PerfCounterDataSource
 ### Properties
 * **counterSpecifiers**: string[]: A list of specifier names of the performance counters you want to collect.
@@ -451,6 +486,14 @@ This name should be unique across all destinations (regardless of type) within t
 This name should be unique across all data sources (regardless of type) within the data collection rule.
 * **streams**: ('Microsoft-Syslog' | string)[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+
+## TestNotificationDetailsResponse
+### Properties
+* **actionDetails**: [ActionDetail](#actiondetail)[]: The list of action detail
+* **completedTime**: string: The completed time
+* **context**: [Context](#context): The context info
+* **createdTime**: string: The created time
+* **state**: string (Required): The overall state
 
 ## UserAssignedIdentities
 ### Properties

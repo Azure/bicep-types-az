@@ -1629,5 +1629,104 @@
     "output": {
       "$ref": "#/152"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "Which access key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/152"
+    },
+    "input": {
+      "$ref": "#/154"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImportClusterParameters",
+    "properties": {
+      "sasUris": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "SAS URIs for the target blobs to import from"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportClusterParameters",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "SAS URI for the target directory to export to"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceUnlinkParameters",
+    "properties": {
+      "ids": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 1,
+        "description": "The resource IDs of the database resources to be unlinked."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
   }
 ]

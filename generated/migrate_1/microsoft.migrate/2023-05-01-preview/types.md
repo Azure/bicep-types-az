@@ -491,6 +491,54 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/webAppCollectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function compareSummary (Microsoft.Migrate/assessmentProjects/businessCases@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/businessCases
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [CompareSummary](#comparesummary)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/aksAssessments@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/aksAssessments
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/assessments@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/assessments
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/avsAssessments@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/avsAssessments
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/sqlAssessments@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/sqlAssessments
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/webAppAssessments@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/webAppAssessments
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function getReportDownloadUrl (Microsoft.Migrate/assessmentProjects/businessCases@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/businessCases
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: any
+* **Output**: [ReportDownloadUrl](#reportdownloadurl)
+
+## Function updateMachines (Microsoft.Migrate/assessmentProjects/groups@2023-05-01-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: [UpdateGroupBody](#updategroupbody)
+* **Output**: [Group](#group)
+
 ## AKSAssessmentDetails
 ### Properties
 * **confidenceRatingInPercentage**: int (ReadOnly): Gets Confidence score.
@@ -1340,6 +1388,18 @@ vCPU VM Sizes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: The status of the last operation.
 * **updatedTimestamp**: string (ReadOnly): Timestamp when collector was last updated.
 
+## CompareSummary
+### Properties
+* **azureAvsCostDetails**: [CostDetails](#costdetails) (ReadOnly): The AVS cost.
+* **azureIaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The azure IaaS cost.
+* **azurePaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The azure PaaS cost.
+* **onPremisesAvsCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises AVS cost.
+* **onPremisesAvsDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises AVS decommissioned cost.
+* **onPremisesIaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises IaaS cost.
+* **onPremisesIaasDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises IaaS decommissioned cost.
+* **onPremisesPaasCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises PaaS cost.
+* **onPremisesPaasDecommissionedCostDetails**: [CostDetails](#costdetails) (ReadOnly): The on premises PaaS decommissioned cost.
+
 ## ComputeResource
 ### Properties
 * **cores**: int (Required, ReadOnly): Gets cores.
@@ -1421,6 +1481,11 @@ vCPU VM Sizes.
 ### Properties
 * **count**: int (ReadOnly): The number of machines with the Virtualization type classification.
 * **virtualizationType**: string (ReadOnly): The Virtualization type.
+
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
 
 ## EntityUptime
 ### Properties
@@ -1533,6 +1598,19 @@ vCPU VM Sizes.
 ## FacilitySettings
 ### Properties
 * **facilitiesCost**: int (Required): The facilities cost.
+
+## Group
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [GroupProperties](#groupproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## GroupBodyProperties
+### Properties
+* **machines**: string[]: List of machine names that are part of this group.
+* **operationType**: 'Add' | 'Remove' | string: Whether to add or remove the machines.
 
 ## GroupProperties
 ### Properties
@@ -1991,6 +2069,11 @@ format.
 * **reportStatus**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Unknown' | string (ReadOnly): Report status.
 * **reportType**: 'Excel' | 'Unknown' | string (ReadOnly): Report type.
 
+## ReportDownloadUrl
+### Properties
+* **businessCaseReportUrl**: string (ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (ReadOnly): Expiry date of download url.
+
 ## SecuritySettings
 ### Properties
 * **serverSecurityCostPerServerPerYear**: int (Required): Physical servers per administrator.
@@ -2357,6 +2440,11 @@ consistent with other targets).
 ### Properties
 * **familyName**: string: Family name.
 * **targetLocations**: string[]: List of locations where ultra disk is supported for this VMfamily.
+
+## UpdateGroupBody
+### Properties
+* **eTag**: string: For optimistic concurrency control.
+* **properties**: [GroupBodyProperties](#groupbodyproperties): Properties of the group.
 
 ## UtilizationData
 ### Properties

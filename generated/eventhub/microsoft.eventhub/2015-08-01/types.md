@@ -67,6 +67,18 @@
 * **ApiVersion**: 2015-08-01
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
+## Function regenerateKeys (Microsoft.EventHub/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function regenerateKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## ConsumerGroupProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Exact time the message was created.
@@ -97,6 +109,10 @@
 * **serviceBusEndpoint**: string: Endpoint you can use to perform Service Bus operations.
 * **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace.
 * **updatedAt**: string: The time the Namespace was updated.
+
+## RegenerateKeysParameters
+### Properties
+* **policykey**: 'PrimaryKey' | 'SecondaryKey': Key that needs to be regenerated.
 
 ## ResourceListKeys
 ### Properties

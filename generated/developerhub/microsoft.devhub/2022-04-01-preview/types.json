@@ -564,5 +564,50 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthCallRequest",
+    "properties": {
+      "redirectUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URL the client will redirect to on successful authentication. If empty, no redirect will occur."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GitHubOAuthInfoResponse",
+    "properties": {
+      "authURL": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL for authorizing the Developer Hub GitHub App"
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OAuth token used to make calls to GitHub"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getGitHubOAuthInfo",
+    "resourceType": "Microsoft.DevHub/locations/githuboauth",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/40"
+    }
   }
 ]

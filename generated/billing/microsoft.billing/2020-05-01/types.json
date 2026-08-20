@@ -4308,5 +4308,516 @@
     "output": {
       "$ref": "#/272"
     }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time in UTC when the download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadDocuments",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/289"
+    },
+    "input": {
+      "$ref": "#/288"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination invoice section id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 0,
+        "description": "The billing properties of a subscription."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/292"
+    },
+    "input": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityResult",
+    "properties": {
+      "isMoveEligible": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Specifies whether the subscription is eligible to be transferred."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingAccountInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MarketplaceNotEnabledOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionTypeNotSupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/302"
+      },
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/304"
+      },
+      {
+        "$ref": "#/305"
+      },
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateMoveEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/294"
+    },
+    "input": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadDocuments",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/289"
+    },
+    "input": {
+      "$ref": "#/318"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferProductRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "The properties of a product."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Billing/billingAccounts/products",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/321"
+    },
+    "input": {
+      "$ref": "#/320"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityResult",
+    "properties": {
+      "isMoveEligible": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Specifies whether the transfer is eligible or not."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneTimePurchaseProductTransferNotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/325"
+      },
+      {
+        "$ref": "#/326"
+      },
+      {
+        "$ref": "#/327"
+      },
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/330"
+      },
+      {
+        "$ref": "#/331"
+      },
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/333"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateMoveEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/products",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/323"
+    },
+    "input": {
+      "$ref": "#/320"
+    }
   }
 ]

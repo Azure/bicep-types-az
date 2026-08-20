@@ -36,6 +36,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Dynatrace.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getAccountCredentials (Dynatrace.Observability/monitors@2021-09-01-preview)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [AccountInfoSecure](#accountinfosecure)
+
+## Function getSSODetails (Dynatrace.Observability/monitors@2021-09-01-preview)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [SSODetailsRequest](#ssodetailsrequest)
+* **Output**: [SSODetailsResponse](#ssodetailsresponse)
+
+## Function getVMHostPayload (Dynatrace.Observability/monitors@2021-09-01-preview)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [VMExtensionPayload](#vmextensionpayload)
+
 ## Function listAppServices (Dynatrace.Observability/monitors@2021-09-01-preview)
 * **Resource**: Dynatrace.Observability/monitors
 * **ApiVersion**: 2021-09-01-preview
@@ -61,6 +77,12 @@
 ### Properties
 * **accountId**: string: Account Id of the account this environment is linked to
 * **regionId**: string: Region in which the account is created
+
+## AccountInfoSecure
+### Properties
+* **accountId**: string (ReadOnly): Account Id of the account this environment is linked to
+* **apiKey**: string {sensitive} (ReadOnly): API Key of the user account
+* **regionId**: string (ReadOnly): Region in which the account is created
 
 ## AppServiceInfo
 ### Properties
@@ -185,6 +207,18 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **planDetails**: string {maxLength: 50}: plan id as published by Dynatrace
 * **usageType**: string {maxLength: 50}: different usage type like PAYG/COMMITTED. this could be enum
 
+## SSODetailsRequest
+### Properties
+* **userPrincipal**: string: user principal id of the user
+
+## SSODetailsResponse
+### Properties
+* **aadDomains**: string[]: array of Aad(azure active directory) domains
+* **adminUsers**: string[]: Array of admin user emails.
+* **isSsoEnabled**: 'Disabled' | 'Enabled' | string: Whether the SSO is enabled for this resource or not.
+* **metadataUrl**: string: URL for Azure AD metadata
+* **singleSignOnUrl**: string: The login URL specific to this Dynatrace Environment
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -211,6 +245,11 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **firstName**: string {maxLength: 50}: First Name of the user
 * **lastName**: string {maxLength: 50}: Last Name of the user
 * **phoneNumber**: string {maxLength: 40}: Phone number of the user used by Dynatrace for contacting them if needed
+
+## VMExtensionPayload
+### Properties
+* **environmentId**: string: Id of the environment created
+* **ingestionKey**: string: Ingestion key of the environment
 
 ## VMHostsListResponse
 ### Properties

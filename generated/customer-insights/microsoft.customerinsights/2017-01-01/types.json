@@ -4347,5 +4347,126 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEnrichingKpis",
+    "resourceType": "Microsoft.CustomerInsights/hubs/profiles",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/321"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SuggestRelationshipLinksResponse",
+    "properties": {
+      "interactionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The interaction name."
+      },
+      "suggestedRelationships": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 2,
+        "description": "Suggested relationships for the type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipsLookup",
+    "properties": {
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relationship profile."
+      },
+      "profilePropertyReferences": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 2,
+        "description": "The property references for the profile type."
+      },
+      "relatedProfileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The related profile."
+      },
+      "relatedProfilePropertyReferences": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 2,
+        "description": "The property references for the related profile type."
+      },
+      "existingRelationshipName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of existing Relationship."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/324"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suggestRelationshipLinks",
+    "resourceType": "Microsoft.CustomerInsights/hubs/interactions",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/138"
+    }
   }
 ]

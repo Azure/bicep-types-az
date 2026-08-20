@@ -73,6 +73,39 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function alerts (Microsoft.SecurityInsights/incidents@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2021-04-01
+* **Output**: [IncidentAlertList](#incidentalertlist)
+
+## Function bookmarks (Microsoft.SecurityInsights/incidents@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2021-04-01
+* **Output**: [IncidentBookmarkList](#incidentbookmarklist)
+
+## Function createIndicator (Microsoft.SecurityInsights/threatIntelligence@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence
+* **ApiVersion**: 2021-04-01
+* **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
+* **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
+## Function entities (Microsoft.SecurityInsights/incidents@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2021-04-01
+* **Output**: [IncidentEntitiesResponse](#incidententitiesresponse)
+
+## Function queryIndicators (Microsoft.SecurityInsights/threatIntelligence@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence
+* **ApiVersion**: 2021-04-01
+* **Input**: [ThreatIntelligenceFilteringCriteria](#threatintelligencefilteringcriteria)
+* **Output**: [ThreatIntelligenceInformationList](#threatintelligenceinformationlist)
+
+## Function replaceTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2021-04-01)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2021-04-01
+* **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
+* **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
 ## ClientInfo
 ### Properties
 * **email**: string: The email of the client.
@@ -80,10 +113,53 @@
 * **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the client.
 * **userPrincipalName**: string: The user principal name of the client.
 
+## Entity
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): Azure resource type
+
 ## EntityCommonPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HuntingBookmark
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **properties**: [HuntingBookmarkProperties](#huntingbookmarkproperties): HuntingBookmark entity properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): Azure resource type
+
+## HuntingBookmarkProperties
+### Properties
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **created**: string: The time the bookmark was created
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
+* **displayName**: string (Required): The display name of the bookmark
+* **eventTime**: string: The time of the event
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes an incident that relates to bookmark
+* **labels**: string[]: List of labels relevant to this bookmark
+* **notes**: string: The notes of the bookmark
+* **query**: string (Required): The query of the bookmark.
+* **queryResult**: string: The query result of the bookmark.
+* **updated**: string: The last time the bookmark was updated
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
 
 ## IncidentAdditionalData
 ### Properties
@@ -93,12 +169,37 @@
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics associated with incident
 
+## IncidentAlertList
+### Properties
+* **value**: [SecurityAlert](#securityalert)[] (Required): Array of incident alerts.
+
+## IncidentBookmarkList
+### Properties
+* **value**: [HuntingBookmark](#huntingbookmark)[] (Required): Array of incident bookmarks.
+
 ## IncidentCommentProperties
 ### Properties
 * **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
+
+## IncidentEntitiesResponse
+### Properties
+* **entities**: [Entity](#entity)[]: Array of the incident related entities.
+* **metaData**: [IncidentEntitiesResultsMetadata](#incidententitiesresultsmetadata)[]: The metadata from the incident related entities results.
+
+## IncidentEntitiesResultsMetadata
+### Properties
+* **count**: int (Required): Total number of aggregations of the given kind in the incident related entities result.
+* **entityKind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the aggregated entity.
+
+## IncidentInfo
+### Properties
+* **incidentId**: string: Incident Id
+* **relationName**: string: Relation Name
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
+* **title**: string: The title of the incident
 
 ## IncidentLabel
 ### Properties
@@ -139,6 +240,50 @@
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
 
+## SecurityAlert
+### Properties
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **properties**: [SecurityAlertProperties](#securityalertproperties): SecurityAlert entity properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): Azure resource type
+
+## SecurityAlertProperties
+### Properties
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **alertDisplayName**: string (ReadOnly): The display name of the alert.
+* **alertLink**: string (ReadOnly): The uri link of the alert.
+* **alertType**: string (ReadOnly): The type name of the alert.
+* **compromisedEntity**: string (ReadOnly): Display name of the main entity being reported on.
+* **confidenceLevel**: 'High' | 'Low' | 'Unknown' | string (ReadOnly): The confidence level of this alert.
+* **confidenceReasons**: [SecurityAlertPropertiesConfidenceReasonsItem](#securityalertpropertiesconfidencereasonsitem)[] (ReadOnly): The confidence reasons
+* **confidenceScore**: int (ReadOnly): The confidence score of the alert.
+* **confidenceScoreStatus**: 'Final' | 'InProcess' | 'NotApplicable' | 'NotFinal' | string (ReadOnly): The confidence score calculation status, i.e. indicating if score calculation is pending for this alert, not applicable or final.
+* **description**: string (ReadOnly): Alert description.
+* **endTimeUtc**: string (ReadOnly): The impact end time of the alert (the time of the last event contributing to the alert).
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **intent**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Exploitation' | 'Impact' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | 'Probing' | 'Unknown' | string (ReadOnly): Holds the alert intent stage(s) mapping for this alert.
+* **processingEndTime**: string (ReadOnly): The time the alert was made available for consumption.
+* **productComponentName**: string (ReadOnly): The name of a component inside the product which generated the alert.
+* **productName**: string (ReadOnly): The name of the product which published this alert.
+* **productVersion**: string (ReadOnly): The version of the product generating the alert.
+* **providerAlertId**: string (ReadOnly): The identifier of the alert inside the product which generated the alert.
+* **remediationSteps**: string[] (ReadOnly): Manual action items to take to remediate the alert.
+* **resourceIdentifiers**: any[] (ReadOnly): The list of resource identifiers of the alert.
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the alert
+* **startTimeUtc**: string (ReadOnly): The impact start time of the alert (the time of the first event contributing to the alert).
+* **status**: 'Dismissed' | 'InProgress' | 'New' | 'Resolved' | 'Unknown' | string (ReadOnly): The lifecycle status of the alert.
+* **systemAlertId**: string (ReadOnly): Holds the product identifier of the alert for the product.
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics of the alert
+* **timeGenerated**: string (ReadOnly): The time the alert was generated.
+* **vendorName**: string (ReadOnly): The name of the vendor that raise the alert.
+
+## SecurityAlertPropertiesConfidenceReasonsItem
+### Properties
+* **reason**: string (ReadOnly): The reason's description
+* **reasonType**: string (ReadOnly): The type (category) of the reason
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -161,11 +306,33 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ThreatIntelligenceFilteringCriteria
+### Properties
+* **ids**: string[]: Ids of threat intelligence indicators
+* **includeDisabled**: bool: Parameter to include/exclude disabled indicators.
+* **keywords**: string[]: Keywords for searching threat intelligence indicators
+* **maxConfidence**: int: Maximum confidence.
+* **maxValidUntil**: string: End time for ValidUntil filter.
+* **minConfidence**: int: Minimum confidence.
+* **minValidUntil**: string: Start time for ValidUntil filter.
+* **pageSize**: int: Page size
+* **patternTypes**: string[]: Pattern types
+* **skipToken**: string: Skip token.
+* **sortBy**: [ThreatIntelligenceSortingCriteria](#threatintelligencesortingcriteria)[]: Columns to sort by and sorting order
+* **sources**: string[]: Sources of threat intelligence indicators
+* **threatTypes**: string[]: Threat types of threat intelligence indicators
+
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties
 * **language**: string: Language granular marking model
 * **markingRef**: int: marking reference granular marking model
 * **selectors**: string[]: granular marking model selectors
+
+## ThreatIntelligenceIndicatorModelForRequestBody
+### Properties
+* **etag**: string: Etag of the azure resource
+* **kind**: 'indicator' | string (Required): The kind of the entity.
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties): Threat Intelligence Entity properties
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
@@ -205,6 +372,20 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ThreatIntelligenceInformation
+### Properties
+* **etag**: string: Etag of the azure resource
+* **id**: string (ReadOnly): Azure resource Id
+* **kind**: 'indicator' | string (Required): The kind of the entity.
+* **name**: string (ReadOnly): Azure resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): Azure resource type
+
+## ThreatIntelligenceInformationList
+### Properties
+* **nextLink**: string (ReadOnly): URL to fetch the next set of information objects.
+* **value**: [ThreatIntelligenceInformation](#threatintelligenceinformation)[] (Required): Array of threat intelligence information objects.
+
 ## ThreatIntelligenceKillChainPhase
 ### Properties
 * **killChainName**: string: Kill chainName name
@@ -219,6 +400,11 @@
 ### Properties
 * **value**: string: Value of parsed pattern
 * **valueType**: string: Type of the value
+
+## ThreatIntelligenceSortingCriteria
+### Properties
+* **itemKey**: string: Column name
+* **sortOrder**: 'ascending' | 'descending' | 'unsorted' | string: Sorting order (ascending/descending/unsorted).
 
 ## UserInfo
 ### Properties

@@ -2594,5 +2594,1171 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingProfileCreationParameters",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing profile name."
+      },
+      "poNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Purchase order number."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Billing address."
+      },
+      "invoiceEmailOptIn": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "If the billing profile is opted in to receive invoices via email."
+      },
+      "enableAzureSKUs": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "Azure skus to enable for this billing profile.."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "billingProfiles",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/12"
+    },
+    "input": {
+      "$ref": "#/152"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceSectionCreationRequest",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the InvoiceSection."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing profile id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invoiceSections",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/10"
+    },
+    "input": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time in UTC at which this download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoices/pricesheet",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/157"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      },
+      "destinationBillingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing profile id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Request parameters to transfer billing subscription."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionResultProperties",
+    "properties": {
+      "billingSubscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing subscription id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections/billingSubscriptions",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityResult",
+    "properties": {
+      "isTransferEligible": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Specifies whether the transfer is eligible or not."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateTransferEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections/billingSubscriptions",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferProductRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      },
+      "destinationBillingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing profile id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductSummary",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "The properties of the product summary."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections/products",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/176"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityResult",
+    "properties": {
+      "isTransferEligible": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Specifies whether the transfer is eligible or not."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneTimePurchaseProductTransferNotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateTransferEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections/products",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/178"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewRequest",
+    "properties": {
+      "autoRenew": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "Request parameters to update auto renew policy a product."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewOperationSummary",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "Summary of update auto renew operation summary properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewOperationSummaryProperties",
+    "properties": {
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date of this asset"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAutoRenew",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections/products",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAutoRenew",
+    "resourceType": "Microsoft.Billing/billingAccounts/products",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InitiateTransferRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "Request parameters to initiate transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InitiateTransferProperties",
+    "properties": {
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Target Usage context for devTest subscriptions."
+      },
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Email Id of recipient for transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 0,
+        "description": "Details of the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferProperties",
+    "properties": {
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer creation time."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer expiration time."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target invoice section Id."
+      },
+      "billingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target billing account Id."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 2,
+        "description": "Overall transfer status."
+      },
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id of recipient of transfer."
+      },
+      "initiatorEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id of initiator of transfer."
+      },
+      "canceledBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id who user canceled the transfer."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer last modification time."
+      },
+      "detailedTransferStatus": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "Detailed transfer status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithErrors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Declined"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetailedTransferStatus",
+    "properties": {
+      "productType": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 2,
+        "description": "Type of product being transferred."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of product being transferred."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 2,
+        "description": "Transfer status."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Error details for transfer execution."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Error",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateTransfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoiceSections",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/201"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptTransferRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0,
+        "description": "Request parameters to accept transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptTransferProperties",
+    "properties": {
+      "productDetails": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0,
+        "description": "Request parameters to accept transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductDetails",
+    "properties": {
+      "productType": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "Type of the product to be transferred."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of product to be transferred."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/225"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecipientTransferDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 0,
+        "description": "Details of the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecipientTransferProperties",
+    "properties": {
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer creation time."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer expiration time."
+      },
+      "allowedProductType": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 2,
+        "description": "Type of subscriptions that can be transferred."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 2,
+        "description": "Overall transfer status."
+      },
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id of recipient of transfer."
+      },
+      "initiatorEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id of initiator of transfer."
+      },
+      "canceledBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email Id who user canceled the transfer."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Transfer last modification time."
+      },
+      "detailedTransferStatus": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 2,
+        "description": "Detailed transfer status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DevTestAzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StandardAzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithErrors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Declined"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/241"
+      },
+      {
+        "$ref": "#/242"
+      },
+      {
+        "$ref": "#/243"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptTransfer",
+    "resourceType": "Microsoft.Billing/transfers",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/230"
+    },
+    "input": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "declineTransfer",
+    "resourceType": "Microsoft.Billing/transfers",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/230"
+    }
   }
 ]

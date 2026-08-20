@@ -174,6 +174,75 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/locations/validatedSolutionRecipes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function configureRemoteSupport (Microsoft.AzureStackHCI/clusters@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2025-10-01
+* **Input**: [RemoteSupportRequest](#remotesupportrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function consentAndInstallDefaultExtensions (Microsoft.AzureStackHCI/clusters/arcSettings@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2025-10-01
+* **Output**: [ArcSetting](#arcsetting)
+
+## Function createArcIdentity (Microsoft.AzureStackHCI/clusters/arcSettings@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2025-10-01
+* **Output**: [ArcIdentityResponse](#arcidentityresponse)
+
+## Function createClusterIdentity (Microsoft.AzureStackHCI/clusters@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2025-10-01
+* **Output**: [ClusterIdentityResponse](#clusteridentityresponse)
+
+## Function extendSoftwareAssuranceBenefit (Microsoft.AzureStackHCI/clusters@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2025-10-01
+* **Input**: [SoftwareAssuranceChangeRequest](#softwareassurancechangerequest)
+* **Output**: [Cluster](#cluster)
+
+## Function generatePassword (Microsoft.AzureStackHCI/clusters/arcSettings@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2025-10-01
+* **Output**: [PasswordCredential](#passwordcredential)
+
+## Function triggerLogCollection (Microsoft.AzureStackHCI/clusters@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2025-10-01
+* **Input**: [LogCollectionRequest](#logcollectionrequest)
+* **Output**: [Cluster](#cluster)
+
+## Function updateSecretsLocations (Microsoft.AzureStackHCI/clusters@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2025-10-01
+* **Input**: [SecretsLocationsChangeRequest](#secretslocationschangerequest)
+* **Output**: [Cluster](#cluster)
+
+## Function validate (Microsoft.AzureStackHCI/edgeDevices@2025-10-01)
+* **Resource**: Microsoft.AzureStackHCI/edgeDevices
+* **ApiVersion**: 2025-10-01
+* **Input**: [ValidateRequest](#validaterequest)
+* **Output**: [ValidateResponse](#validateresponse)
+
+## ArcIdentityResponse
+### Properties
+* **properties**: [ArcIdentityResponseProperties](#arcidentityresponseproperties) (ReadOnly): ArcIdentity properties.
+
+## ArcIdentityResponseProperties
+### Properties
+* **arcApplicationClientId**: string
+* **arcApplicationObjectId**: string
+* **arcApplicationTenantId**: string
+* **arcServicePrincipalObjectId**: string
+
+## ArcSetting
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ArcSettingProperties](#arcsettingproperties): ArcSetting properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ArcSettingProperties
 ### Properties
 * **aggregateState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
@@ -199,10 +268,32 @@
 * **identifier**: string (ReadOnly): assembly identifier for Validated Solution Recipe for AzureStackHCI Cluster
 * **url**: string (ReadOnly): Url of assembly package for Validated Solution Recipe for AzureStackHCI Cluster
 
+## Cluster
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity of Cluster resource
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ClusterDesiredProperties
 ### Properties
 * **diagnosticLevel**: 'Basic' | 'Enhanced' | 'Off' | string: Desired level of diagnostic data emitted by the cluster.
 * **windowsServerSubscription**: 'Disabled' | 'Enabled' | string: Desired state of Windows Server Subscription.
+
+## ClusterIdentityResponse
+### Properties
+* **properties**: [ClusterIdentityResponseProperties](#clusteridentityresponseproperties) (ReadOnly): Cluster identity properties.
+
+## ClusterIdentityResponseProperties
+### Properties
+* **aadApplicationObjectId**: string
+* **aadClientId**: string
+* **aadServicePrincipalObjectId**: string
+* **aadTenantId**: string
 
 ## ClusterNode
 ### Properties
@@ -637,6 +728,15 @@
 * **percentComplete**: int (ReadOnly): The percentage of the job that is complete.
 * **validationStatus**: [EceActionStatus](#eceactionstatus) (ReadOnly): Validation status of job.
 
+## LogCollectionRequest
+### Properties
+* **properties**: [LogCollectionRequestProperties](#logcollectionrequestproperties): Properties for Log Collection Request
+
+## LogCollectionRequestProperties
+### Properties
+* **fromDate**: string (Required): From DateTimeStamp from when logs need to be connected
+* **toDate**: string (Required): To DateTimeStamp till when logs need to be connected
+
 ## LogCollectionSession
 ### Properties
 * **correlationId**: string (ReadOnly): CorrelationId of the log collection
@@ -697,6 +797,13 @@
 * **lastUpdated**: string: Last time this component was updated.
 * **packageType**: string: Package type
 * **version**: string: Package version
+
+## PasswordCredential
+### Properties
+* **endDateTime**: string
+* **keyId**: string
+* **secretText**: string
+* **startDateTime**: string
 
 ## PerNodeExtensionState
 ### Properties
@@ -793,6 +900,16 @@
 * **remoteSupportSessionDetails**: [PerNodeRemoteSupportSession](#pernoderemotesupportsession)[] (ReadOnly)
 * **remoteSupportType**: 'Enable' | 'Revoke' | string (ReadOnly): Remote Support Type for cluster
 
+## RemoteSupportRequest
+### Properties
+* **properties**: [RemoteSupportRequestProperties](#remotesupportrequestproperties): Properties for Remote Support Request
+
+## RemoteSupportRequestProperties
+### Properties
+* **accessLevel**: 'Diagnostics' | 'DiagnosticsAndRepair' | string (ReadOnly): Remote Support Access Level
+* **expirationTimeStamp**: string: Expiration DateTimeStamp when Remote Support Access will be expired
+* **remoteSupportType**: 'Enable' | 'Revoke' | string: Remote Support Type for cluster
+
 ## RemoteSupportSession
 ### Properties
 * **accessLevel**: 'Diagnostics' | 'DiagnosticsAndRepair' | 'None' | string (ReadOnly): The level of access granted during the remote support session.
@@ -846,6 +963,10 @@
 * **secretsLocation**: string (Required): secrets location
 * **secretsType**: 'BackupSecrets' | string (Required): Type of secrets to store
 
+## SecretsLocationsChangeRequest
+### Properties
+* **properties**: [SecretsLocationDetails](#secretslocationdetails)[]: List of secret locations
+
 ## SecurityComplianceStatus
 ### Properties
 * **dataAtRestEncrypted**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): Indicates whether data at-rest encryption is enabled on Azure Stack HCI clustered volumes.
@@ -876,6 +997,14 @@
 * **provisioningState**: string (ReadOnly): Provisioning State
 * **publisherId**: string: Identifier of the Publisher for the offer
 * **skuMappings**: [SkuMappings](#skumappings)[]: Array of SKU mappings
+
+## SoftwareAssuranceChangeRequest
+### Properties
+* **properties**: [SoftwareAssuranceChangeRequestProperties](#softwareassurancechangerequestproperties)
+
+## SoftwareAssuranceChangeRequestProperties
+### Properties
+* **softwareAssuranceIntent**: 'Disable' | 'Enable' | string: Customer Intent for Software Assurance Benefit. This indicates whether the customer wishes to opt in or out of the Software Assurance program, which provides licensing and support benefits.
 
 ## SoftwareAssuranceProperties
 ### Properties
@@ -919,6 +1048,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -1050,4 +1184,13 @@
 ### Properties
 * **recipeContent**: [ValidatedSolutionRecipeContent](#validatedsolutionrecipecontent) (Required): Represents contents of a validated solution recipe.
 * **signature**: string: Represents the signature of the recipe, to be used for ensuring its integrity.
+
+## ValidateRequest
+### Properties
+* **additionalInfo**: string: Additional info required for validation.
+* **edgeDeviceIds**: string[] (Required): Node Ids against which, current node has to be validated.
+
+## ValidateResponse
+### Properties
+* **status**: string (ReadOnly): edge device validation status
 

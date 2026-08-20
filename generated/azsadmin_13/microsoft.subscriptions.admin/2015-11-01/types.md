@@ -134,6 +134,18 @@
 * **provisioningState**: 'Accepted' | 'Failed' | 'NotSpecified' | 'Succeeded' | string: State of the provisioning.
 * **type**: 'Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function link (Microsoft.Subscriptions.Admin/offers@2015-11-01)
+* **Resource**: Microsoft.Subscriptions.Admin/offers
+* **ApiVersion**: 2015-11-01
+* **Input**: [PlanLinkDefinition](#planlinkdefinition)
+* **Output**: [Offer](#offer)
+
+## Function unlink (Microsoft.Subscriptions.Admin/offers@2015-11-01)
+* **Resource**: Microsoft.Subscriptions.Admin/offers
+* **ApiVersion**: 2015-11-01
+* **Input**: [PlanLinkDefinition](#planlinkdefinition)
+* **Output**: [Offer](#offer)
+
 ## AddonPlanDefinition
 ### Properties
 * **maxAcquisitionCount**: int: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
@@ -152,6 +164,15 @@
 ### Properties
 * **tenantId**: string: Tenant unique identifier.
 
+## Offer
+### Properties
+* **id**: string (ReadOnly): URI of the resource.
+* **location**: string: Location of the resource
+* **name**: string (ReadOnly): Name of the resource.
+* **properties**: [OfferProperties](#offerproperties): Represents an offering of services against which a subscription can be created.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
+* **type**: string (ReadOnly): Type of resource.
+
 ## OfferDelegationProperties
 ### Properties
 * **subscriptionId**: string: Identifier of the subscription receiving the delegated offer.
@@ -168,6 +189,12 @@
 * **state**: 'Decommissioned' | 'Private' | 'Public' | string: Offer accessibility state.
 * **subscriptionCount**: int: Current subscription count.
 
+## PlanLinkDefinition
+### Properties
+* **maxAcquisitionCount**: int: The maximum acquisition count by subscribers
+* **planLinkType**: 'Addon' | 'Base' | 'None' | string: Type of the plan link.
+* **planName**: string: Name of the plan.
+
 ## PlanProperties
 ### Properties
 * **description**: string: Description of the plan.
@@ -181,6 +208,11 @@
 ## QuotaProperties
 ### Properties
 * **allowCustomPortalBranding**: bool: Value indicating whether custom portal branding is allowed.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

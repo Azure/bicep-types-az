@@ -76,6 +76,12 @@
 * **ApiVersion**: 2025-03-01-preview
 * **Output**: [AgentPoolQueueStatus](#agentpoolqueuestatus)
 
+## Function scheduleRun (Microsoft.ContainerRegistry/registries@2025-03-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [RunRequest](#runrequest)
+* **Output**: [Run](#run)
+
 ## AgentPoolProperties
 ### Properties
 * **count**: int: The count of agent machine

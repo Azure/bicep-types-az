@@ -641,5 +641,92 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCredentialsParameters",
+    "properties": {
+      "tokenId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource ID of the token for which credentials have to be generated."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expiry date of the generated credentials after which the credentials become invalid."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Specifies name of the password which should be regenerated if any -- password1 or password2."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "password2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCredentialsResult",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The username for a container registry."
+      },
+      "passwords": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The list of passwords for a container registry."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCredentials",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2019-05-01-preview",
+    "output": {
+      "$ref": "#/58"
+    },
+    "input": {
+      "$ref": "#/54"
+    }
   }
 ]

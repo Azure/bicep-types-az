@@ -2095,5 +2095,130 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeNameList",
+    "properties": {
+      "volumeNames": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 1,
+        "description": "array of volume names"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreValidationResponse",
+    "properties": {
+      "validationStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "a status value indicating success or failure of validation"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "preBackup",
+    "resourceType": "Microsoft.ElasticSan/elasticSans/volumegroups",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/190"
+    },
+    "input": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskSnapshotList",
+    "properties": {
+      "diskSnapshotIds": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 1,
+        "description": "array of DiskSnapshot ARM IDs"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "preRestore",
+    "resourceType": "Microsoft.ElasticSan/elasticSans/volumegroups",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/190"
+    },
+    "input": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Volume",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "Properties of Volume."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.ElasticSan/elasticSans/volumegroups/volumes",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/195"
+    }
   }
 ]

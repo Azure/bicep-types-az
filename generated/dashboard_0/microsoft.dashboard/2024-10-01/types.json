@@ -1820,5 +1820,204 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnterpriseDetails",
+    "properties": {
+      "saasSubscriptionDetails": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 0,
+        "description": "SaaS subscription details of a Grafana instance"
+      },
+      "marketplaceTrialQuota": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "The allocation details of the per subscription free trial slot of the subscription."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaasSubscriptionDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The plan Id of the SaaS subscription."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The offer Id of the SaaS subscription."
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The publisher Id of the SaaS subscription."
+      },
+      "term": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "The billing term of the SaaS Subscription."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionTerm",
+    "properties": {
+      "termUnit": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unit of the billing term."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time in UTC of when the billing term starts."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time in UTC of when the billing term ends."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceTrialQuota",
+    "properties": {
+      "availablePromotion": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Available enterprise promotion for the subscription"
+      },
+      "grafanaResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource Id of the Grafana resource which is doing the trial."
+      },
+      "trialStartAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time in UTC of when the trial starts."
+      },
+      "trialEndAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time in UTC of when the trial ends."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FreeTrial"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkEnterpriseDetails",
+    "resourceType": "Microsoft.Dashboard/grafana",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrafanaAvailablePluginListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GrafanaAvailablePlugin",
+    "properties": {
+      "pluginId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Grafana plugin id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Grafana plugin display name"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchAvailablePlugins",
+    "resourceType": "Microsoft.Dashboard/grafana",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/159"
+    }
   }
 ]

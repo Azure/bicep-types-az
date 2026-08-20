@@ -650,6 +650,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/throughputPools/throughputPoolAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.DocumentDB/databaseAccounts/copyJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [CopyJobGetResults](#copyjobgetresults)
+
+## Function cancel (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
+
+## Function complete (Microsoft.DocumentDB/databaseAccounts/copyJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [CopyJobGetResults](#copyjobgetresults)
+
+## Function complete (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
+
+## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [CommandAsyncPostBody](#commandasyncpostbody)
+* **Output**: [CommandPublicResource](#commandpublicresource)
+
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2025-05-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
 * **ApiVersion**: 2025-05-01-preview
@@ -664,6 +690,227 @@
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2025-05-01-preview
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
+
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MergeParameters](#mergeparameters)
+* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
+
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MergeParameters](#mergeparameters)
+* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
+
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MergeParameters](#mergeparameters)
+* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
+
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MergeParameters](#mergeparameters)
+* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
+
+## Function pause (Microsoft.DocumentDB/databaseAccounts/copyJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [CopyJobGetResults](#copyjobgetresults)
+
+## Function pause (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
+
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function resume (Microsoft.DocumentDB/databaseAccounts/copyJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [CopyJobGetResults](#copyjobgetresults)
+
+## Function resume (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/tables@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
+
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2025-05-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
+* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
 ## AccessRule
 ### Properties
@@ -728,6 +975,10 @@
 ## AzureBlobSourceSinkDetails
 ### Properties
 * **endpointUrl**: string {pattern: "^https?://[^/$.?# ]+.[^ ]*$"} (Required): Azure Blob container endpoint.
+
+## BackupInformation
+### Properties
+* **continuousBackupInformation**: [ContinuousBackupInformation](#continuousbackupinformation) (ReadOnly): Information about the status of continuous backups.
 
 ## BackupPolicy
 * **Discriminator**: type
@@ -993,6 +1244,27 @@
 * **name**: string: Name of the Cosmos DB Cassandra table column
 * **type**: string: Type of the Cosmos DB Cassandra table column
 
+## CommandAsyncPostBody
+### Properties
+* **arguments**: any: The arguments for the command to be run
+* **cassandra-stop-start**: bool: If true, stops cassandra before executing the command and then start it again
+* **command**: string (Required): The command which should be run
+* **host**: string (Required): IP address of the cassandra host to run the command on
+* **readWrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
+
+## CommandPublicResource
+### Properties
+* **arguments**: any: The arguments for the command to be run
+* **cassandraStopStart**: bool: If true, stops cassandra before executing the command and then start it again
+* **command**: string: The command which should be run
+* **commandId**: string: The unique id of command
+* **host**: string: IP address of the cassandra host to run the command on
+* **isAdmin**: bool: Whether command has admin privileges
+* **outputFile**: string: The name of the file where the result is written.
+* **readWrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
+* **result**: string: Result output of the command.
+* **status**: 'Done' | 'Enqueue' | 'Failed' | 'Finished' | 'Processing' | 'Running' | string: Status of the command.
+
 ## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
@@ -1027,9 +1299,24 @@
 * **systemKey**: bool (ReadOnly): Indicates if the container is using a system generated partition key
 * **version**: int {minValue: 1, maxValue: 2}: Indicates the version of the partition key definition
 
+## ContinuousBackupInformation
+### Properties
+* **latestRestorableTimestamp**: string: The latest restorable timestamp for a resource.
+
+## ContinuousBackupRestoreLocation
+### Properties
+* **location**: string: The name of the continuous backup restore location.
+
 ## ContinuousModeProperties
 ### Properties
 * **tier**: 'Continuous30Days' | 'Continuous7Days' | string: Enum to indicate type of Continuos backup mode
+
+## CopyJobGetResults
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the database account.
+* **name**: string (ReadOnly): The name of the database account.
+* **properties**: [CopyJobProperties](#copyjobproperties) (Required): The properties of a Copy Job
+* **type**: string (ReadOnly): The type of Azure resource.
 
 ## CopyJobProperties
 ### Properties
@@ -1210,6 +1497,11 @@
 * **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
+## DatabaseAccountListReadOnlyKeysResult
+### Properties
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
+
 ## DatabaseRestoreResource
 ### Properties
 * **collectionNames**: string[]: The names of the collections available for restore.
@@ -1274,6 +1566,13 @@
 * **databaseName**: string (Required)
 * **remoteAccountName**: string
 
+
+## DataTransferJobGetResults
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the database account.
+* **name**: string (ReadOnly): The name of the database account.
+* **properties**: [DataTransferJobProperties](#datatransferjobproperties): The properties of a DataTransfer Job
+* **type**: string (ReadOnly): The type of Azure resource.
 
 ## DataTransferJobProperties
 ### Properties
@@ -1512,6 +1811,10 @@
 * **name**: string (ReadOnly): The regional service name.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
+## MergeParameters
+### Properties
+* **isDryRun**: bool: Specifies whether the operation is a real merge operation or a simulation.
+
 ## MongoDBCollectionCreateUpdatePropertiesOrMongoDBCollectionGetProperties
 ### Properties
 * **options**: [CreateUpdateOptionsOrMongoDBCollectionGetPropertiesOptions](#createupdateoptionsormongodbcollectiongetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
@@ -1682,6 +1985,43 @@
 * **id**: string: The id for the permission.
 * **notDataActions**: string[]: An array of data actions that are denied.
 
+## PhysicalPartitionId
+### Properties
+* **id**: string (Required): Id of a physical partition
+
+## PhysicalPartitionStorageInfo
+### Properties
+* **id**: string (ReadOnly): The unique identifier of the partition.
+* **storageInKB**: int (ReadOnly): The storage in KB for the physical partition.
+
+## PhysicalPartitionStorageInfoCollection
+### Properties
+* **physicalPartitionStorageInfoCollection**: [PhysicalPartitionStorageInfo](#physicalpartitionstorageinfo)[] (ReadOnly): List of physical partitions and their properties.
+
+## PhysicalPartitionThroughputInfoResource
+### Properties
+* **id**: string (Required): Id of a physical partition
+* **targetThroughput**: int: Target throughput of a physical partition
+* **throughput**: int: Throughput of a physical partition
+
+## PhysicalPartitionThroughputInfoResult
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [PhysicalPartitionThroughputInfoResultProperties](#physicalpartitionthroughputinforesultproperties): The properties of an Azure Cosmos DB PhysicalPartitionThroughputInfoResult object
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
+
+## PhysicalPartitionThroughputInfoResultProperties
+### Properties
+* **resource**: [PhysicalPartitionThroughputInfoResultPropertiesResource](#physicalpartitionthroughputinforesultpropertiesresource): properties of physical partition throughput info
+
+## PhysicalPartitionThroughputInfoResultPropertiesResource
+### Properties
+* **physicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[]: Array of physical partition throughput info objects
+
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -1735,6 +2075,26 @@
 * **suggestedAccessRules**: [AccessRule](#accessrule)[] (ReadOnly): Access rules that can be added to the network security profile (NSP) to remediate the issue.
 * **suggestedResourceIds**: string[] (ReadOnly): Fully qualified resource IDs of suggested resources that can be associated to the network security perimeter (NSP) to remediate the issue.
 
+## RedistributeThroughputParameters
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [RedistributeThroughputProperties](#redistributethroughputproperties) (Required): Properties to redistribute throughput parameters object
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
+
+## RedistributeThroughputProperties
+### Properties
+* **resource**: [RedistributeThroughputPropertiesResource](#redistributethroughputpropertiesresource) (Required): The standard JSON format of a resource throughput
+
+## RedistributeThroughputPropertiesResource
+### Properties
+* **sourcePhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
+* **targetPhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
+* **throughputPolicy**: 'custom' | 'equal' | 'none' | string (Required): ThroughputPolicy to apply for throughput redistribution
+
 ## ResourceAssociation
 ### Properties
 * **accessMode**: 'Audit' | 'Enforced' | 'Learning' | string: Access mode of the resource association
@@ -1756,6 +2116,24 @@
 * **restoreWithTtlDisabled**: bool: Specifies whether the restored account will have Time-To-Live disabled upon the successful restore.
 * **sourceBackupLocation**: string: The source backup location for restore.
 * **tablesToRestore**: string[]: List of specific tables available for restore.
+
+## RetrieveThroughputParameters
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [RetrieveThroughputProperties](#retrievethroughputproperties) (Required): Properties to retrieve throughput parameters object
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
+
+## RetrieveThroughputProperties
+### Properties
+* **resource**: [RetrieveThroughputPropertiesResource](#retrievethroughputpropertiesresource) (Required): The standard JSON format of a resource throughput
+
+## RetrieveThroughputPropertiesResource
+### Properties
+* **physicalPartitionIds**: [PhysicalPartitionId](#physicalpartitionid)[] (Required): Array of PhysicalPartitionId objects.
 
 ## Role
 ### Properties
@@ -2080,6 +2458,26 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ThroughputBucketResource
 ### Properties
 * **id**: int (Required): Represents the throughput bucket id
@@ -2101,6 +2499,33 @@
 ### Properties
 * **maxThroughput**: int: Value for throughput to be shared among CosmosDB resources in the pool.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Initializing' | 'InternallyReady' | 'Online' | 'Succeeded' | 'Uninitialized' | 'Updating' | string: A provisioning state of the ThroughputPool.
+
+## ThroughputSettingsGetProperties
+### Properties
+* **resource**: [ThroughputSettingsGetPropertiesResource](#throughputsettingsgetpropertiesresource)
+
+## ThroughputSettingsGetPropertiesResource
+### Properties
+* **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
+* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
+* **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
+* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource): Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both.
+* **instantMaximumThroughput**: string (ReadOnly): The offer throughput value to instantly scale up without triggering splits
+* **minimumThroughput**: string (ReadOnly): The minimum throughput of the resource
+* **offerReplacePending**: string (ReadOnly): The throughput replace is pending
+* **softAllowedMaximumThroughput**: string (ReadOnly): The maximum throughput value or the maximum maxThroughput value (for autoscale) that can be specified
+* **throughput**: int: Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both.
+* **throughputBuckets**: [ThroughputBucketResource](#throughputbucketresource)[]: Array of Throughput Bucket limits to be applied to the Cosmos DB container
+
+## ThroughputSettingsGetResults
+### Properties
+* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (ReadOnly): The name of the ARM resource.
+* **properties**: [ThroughputSettingsGetProperties](#throughputsettingsgetproperties): The properties of an Azure Cosmos DB resource throughput
+* **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: string (ReadOnly): The type of Azure resource.
 
 ## ThroughputSettingsResourceOrThroughputSettingsGetPropertiesResource
 ### Properties

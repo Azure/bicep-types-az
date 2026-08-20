@@ -36,6 +36,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Dynatrace.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getMetricStatus (Dynatrace.Observability/monitors@2023-04-27)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2023-04-27
+* **Output**: [MetricsStatusResponse](#metricsstatusresponse)
+
+## Function getSSODetails (Dynatrace.Observability/monitors@2023-04-27)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2023-04-27
+* **Input**: [SSODetailsRequest](#ssodetailsrequest)
+* **Output**: [SSODetailsResponse](#ssodetailsresponse)
+
+## Function getVMHostPayload (Dynatrace.Observability/monitors@2023-04-27)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2023-04-27
+* **Output**: [VMExtensionPayload](#vmextensionpayload)
+
 ## Function listAppServices (Dynatrace.Observability/monitors@2023-04-27)
 * **Resource**: Dynatrace.Observability/monitors
 * **ApiVersion**: 2023-04-27
@@ -149,6 +165,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
 * **sendingMetrics**: 'Disabled' | 'Enabled' | string: Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
 
+## MetricsStatusResponse
+### Properties
+* **azureResourceIds**: string[]: Azure resource IDs
+
 ## MonitoredResource
 ### Properties
 * **id**: string: The ARM id of the resource.
@@ -186,6 +206,18 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **planDetails**: string: plan id as published by Dynatrace
 * **usageType**: string: different usage type like PAYG/COMMITTED. this could be enum
 
+## SSODetailsRequest
+### Properties
+* **userPrincipal**: string (Required): user principal id of the user
+
+## SSODetailsResponse
+### Properties
+* **aadDomains**: string[]: array of Aad(azure active directory) domains
+* **adminUsers**: string[]: Array of admin user emails.
+* **isSsoEnabled**: 'Disabled' | 'Enabled' | string: Whether the SSO is enabled for this resource or not.
+* **metadataUrl**: string: URL for Azure AD metadata
+* **singleSignOnUrl**: string: The login URL specific to this Dynatrace Environment
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -212,6 +244,11 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **firstName**: string: First Name of the user
 * **lastName**: string: Last Name of the user
 * **phoneNumber**: string {maxLength: 40}: Phone number of the user used by Dynatrace for contacting them if needed
+
+## VMExtensionPayload
+### Properties
+* **environmentId**: string: Id of the environment created
+* **ingestionKey**: string: Ingestion key of the environment
 
 ## VMHostsListResponse
 ### Properties

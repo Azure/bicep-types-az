@@ -1773,11 +1773,291 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AnalysisCreate",
+    "properties": {
+      "config": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisCreateConfig",
+    "properties": {
+      "rootFile": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The root file of the NGINX config file(s). It must match one of the files' filepath."
+      },
+      "files": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0
+      },
+      "protectedFiles": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0
+      },
+      "package": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Nginx Configuration Package"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NginxConfigurationProtectedFileRequest",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The content of the protected file. This value is a PUT only value. If you perform a GET request on this value, it will be empty because it is a protected file."
+      },
+      "virtualPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The virtual path of the protected file."
+      },
+      "contentHash": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The hash of the content of the file. This value is used to determine if the file has changed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The status of the analysis."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisResultData",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisDiagnostic",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the error"
+      },
+      "directive": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "file": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "the filepath of the most relevant config file"
+      },
+      "line": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "rule": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnosticItem",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique identifier for the diagnostic."
+      },
+      "directive": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "file": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The filepath of the most relevant config file."
+      },
+      "line": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "rule": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "level": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 1,
+        "description": "Warning or Info"
+      },
+      "category": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Category of warning like Best-practices, Recommendation, Security etc."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Info"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "analyze",
+    "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/146"
+    },
+    "input": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "NginxDeploymentDefaultWafPolicyListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/158"
         },
         "flags": 0
       },
@@ -1810,7 +2090,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/157"
     }
   },
   {
@@ -1819,7 +2099,7 @@
     "resourceType": "Nginx.NginxPlus/nginxDeployments",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/156"
     }
   }
 ]

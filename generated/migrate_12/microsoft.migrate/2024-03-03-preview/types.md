@@ -22,6 +22,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Migrate/assessmentProjects/webAppCompoundAssessments/summaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/webAppCompoundAssessments@2024-03-03-preview)
+* **Resource**: Microsoft.Migrate/assessmentProjects/webAppCompoundAssessments
+* **ApiVersion**: 2024-03-03-preview
+* **Input**: any
+* **Output**: [DownloadUrl](#downloadurl)
+
 ## CompoundAssessmentDetails
 ### Properties
 * **createdTimestamp**: string: Timestamp when the assessment was created.
@@ -52,6 +58,11 @@
 * **numberOfWebAppsPerType**: [WebAppsPerType](#webappspertype)[]: Number of web apps per type.
 * **numberOfWebServers**: int (Required): Number of web servers.
 * **numberOfWebServersPerType**: [WebServersPerType](#webserverspertype)[]: Number of web servers per type.
+
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (Required, ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (Required, ReadOnly): Expiry date of download url.
 
 ## ManagementDetails
 ### Properties

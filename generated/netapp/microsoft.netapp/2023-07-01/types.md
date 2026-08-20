@@ -130,10 +130,56 @@
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Volume group properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkFilePathAvailability (Microsoft.NetApp/locations@2023-07-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2023-07-01
+* **Input**: [FilePathAvailabilityRequest](#filepathavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.NetApp/locations@2023-07-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2023-07-01
+* **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function checkQuotaAvailability (Microsoft.NetApp/locations@2023-07-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2023-07-01
+* **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
+* **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function getGroupIdListForLdapUser (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2023-07-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2023-07-01
+* **Input**: [GetGroupIdListForLdapUserRequest](#getgroupidlistforldapuserrequest)
+* **Output**: [GetGroupIdListForLdapUserResponse](#getgroupidlistforldapuserresponse)
+
+## Function getMetadata (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2023-07-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes
+* **ApiVersion**: 2023-07-01
+* **Output**: [SubvolumeModel](#subvolumemodel)
+
 ## Function listReplications (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2023-07-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2023-07-01
 * **Output**: [ListReplications](#listreplications)
+
+## Function populateAvailabilityZone (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2023-07-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2023-07-01
+* **Output**: [Volume](#volume)
+
+## Function queryNetworkSiblingSet (Microsoft.NetApp/locations@2023-07-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2023-07-01
+* **Input**: [QueryNetworkSiblingSetRequest](#querynetworksiblingsetrequest)
+* **Output**: [NetworkSiblingSet](#networksiblingset)
+
+## Function updateNetworkSiblingSet (Microsoft.NetApp/locations@2023-07-01)
+* **Resource**: Microsoft.NetApp/locations
+* **ApiVersion**: 2023-07-01
+* **Input**: [UpdateNetworkSiblingSetRequest](#updatenetworksiblingsetrequest)
+* **Output**: [NetworkSiblingSet](#networksiblingset)
 
 ## AccountEncryption
 ### Properties
@@ -185,6 +231,12 @@
 * **volumesAssigned**: int (ReadOnly): Volumes using current backup policy
 * **weeklyBackupsToKeep**: int: Weekly backups count to keep
 
+## CheckAvailabilityResponse
+### Properties
+* **isAvailable**: bool: <code>true</code> indicates name is valid and available. <code>false</code> indicates the name is invalid, unavailable, or both.
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that resource name is already in use, and direct them to select a different name.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: <code>Invalid</code> indicates the name provided does not match Azure App Service naming requirements. <code>AlreadyExists</code> indicates that the name is already in use and is therefore unavailable.
+
 ## DailySchedule
 ### Properties
 * **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
@@ -214,6 +266,19 @@
 * **ruleIndex**: int: Order index
 * **unixReadOnly**: bool: Read only access
 * **unixReadWrite**: bool: Read and write access
+
+## FilePathAvailabilityRequest
+### Properties
+* **name**: string (Required): File path to verify.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+
+## GetGroupIdListForLdapUserRequest
+### Properties
+* **username**: string {minLength: 1, maxLength: 255} (Required): username is required to fetch the group to which user is part of
+
+## GetGroupIdListForLdapUserResponse
+### Properties
+* **groupIdsForLdapUser**: string[]: Group Id list
 
 ## HourlySchedule
 ### Properties
@@ -261,6 +326,20 @@
 * **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
+## NetworkSiblingSet
+### Properties
+* **networkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string: Network features available to the volume, or current state of update.
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"}: Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **networkSiblingSetStateId**: string: Network sibling set state Id identifying the current state of the sibling set.
+* **nicInfoList**: [NicInfo](#nicinfo)[]: List of NIC information
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the status of the NetworkSiblingSet at the time the operation was called.
+* **subnetId**: string: The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
+## NicInfo
+### Properties
+* **ipAddress**: string (ReadOnly): ipAddress
+* **volumeResourceIds**: string[]: Volume resource Ids
+
 ## PlacementKeyValuePairs
 ### Properties
 * **key**: string (Required): Key for an application specific parameter for the placement of volumes in the volume group
@@ -278,6 +357,17 @@
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in MiB/s
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in MiB/s
 
+## QueryNetworkSiblingSetRequest
+### Properties
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
+## QuotaAvailabilityRequest
+### Properties
+* **name**: string (Required): Name of the resource to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
+
 ## Replication
 ### Properties
 * **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
@@ -292,6 +382,12 @@
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string (ReadOnly): Id
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
+
+## ResourceNameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **resourceGroup**: string (Required): Resource group name.
+* **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
 
 ## ResourceTags
 ### Properties
@@ -317,6 +413,26 @@
 ### Properties
 * **current**: int (ReadOnly): The current quota value.
 * **default**: int (ReadOnly): The default quota value.
+
+## SubvolumeModel
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [SubvolumeModelProperties](#subvolumemodelproperties): It represents the minimal properties of the subvolume.
+* **type**: string (ReadOnly): Resource type
+
+## SubvolumeModelProperties
+### Properties
+* **accessedTimeStamp**: string: Most recent access time and date
+* **bytesUsed**: int: Bytes used
+* **changedTimeStamp**: string: Most recent change time and date
+* **creationTimeStamp**: string: Creation time and date
+* **modifiedTimeStamp**: string: Most recent modification time and date
+* **parentPath**: string: Path to the parent subvolume
+* **path**: string: Path to the subvolume
+* **permissions**: string: Permissions of the subvolume
+* **provisioningState**: string: Azure lifecycle management
+* **size**: int: Size of subvolume
 
 ## SubvolumeProperties
 ### Properties
@@ -364,6 +480,18 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UpdateNetworkSiblingSetRequest
+### Properties
+* **networkFeatures**: 'Basic' | 'Basic_Standard' | 'Standard' | 'Standard_Basic' | string (Required): Network features available to the volume, some such
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): Network Sibling Set ID for a group of volumes sharing networking resources in a subnet.
+* **networkSiblingSetStateId**: string (Required): Network sibling set state Id identifying the current state of the sibling set.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes. Example /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/{mySubnet}
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -373,6 +501,18 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## Volume
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
 
 ## VolumeBackups
 ### Properties

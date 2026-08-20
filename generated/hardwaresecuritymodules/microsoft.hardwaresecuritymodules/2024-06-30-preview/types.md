@@ -42,9 +42,62 @@
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
+## Function backup (Microsoft.HardwareSecurityModules/cloudHsmClusters@2024-06-30-preview)
+* **Resource**: Microsoft.HardwareSecurityModules/cloudHsmClusters
+* **ApiVersion**: 2024-06-30-preview
+* **Input**: [BackupRequestProperties](#backuprequestproperties)
+* **Output**: [BackupResult](#backupresult)
+
+## Function restore (Microsoft.HardwareSecurityModules/cloudHsmClusters@2024-06-30-preview)
+* **Resource**: Microsoft.HardwareSecurityModules/cloudHsmClusters
+* **ApiVersion**: 2024-06-30-preview
+* **Input**: [RestoreRequestProperties](#restorerequestproperties)
+* **Output**: [RestoreResult](#restoreresult)
+
+## Function validateBackupProperties (Microsoft.HardwareSecurityModules/cloudHsmClusters@2024-06-30-preview)
+* **Resource**: Microsoft.HardwareSecurityModules/cloudHsmClusters
+* **ApiVersion**: 2024-06-30-preview
+* **Input**: [BackupRequestProperties](#backuprequestproperties)
+* **Output**: [BackupResult](#backupresult)
+
+## Function validateRestoreProperties (Microsoft.HardwareSecurityModules/cloudHsmClusters@2024-06-30-preview)
+* **Resource**: Microsoft.HardwareSecurityModules/cloudHsmClusters
+* **ApiVersion**: 2024-06-30-preview
+* **Input**: [RestoreRequestProperties](#restorerequestproperties)
+* **Output**: [RestoreResult](#restoreresult)
+
 ## ApiEntityReference
 ### Properties
 * **resourceId**: string: The Azure resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
+## BackupRequestProperties
+### Properties
+* **azureStorageBlobContainerUri**: string (Required): The Azure blob storage container Uri which contains the backup
+* **token**: string {sensitive}: The SAS token pointing to an Azure blob storage container. This property is reserved for Azure Backup Service.
+
+## BackupRestoreBaseResultProperties
+### Properties
+* **endTime**: string (ReadOnly): The end time of the backup/restore operation in UTC
+* **error**: [ErrorDetail](#errordetail): Error encountered, if any, during the backup/restore operation.
+* **jobId**: string: Identifier for the backup/restore operation.
+* **startTime**: string (ReadOnly): The start time of the backup/restore operation in UTC
+* **status**: 'Cancelled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Status of the backup/restore operation
+* **statusDetails**: string: The status details of backup/restore operation
+
+## BackupResult
+### Properties
+* **properties**: [BackupResultProperties](#backupresultproperties): Properties of the Cloud HSM Cluster
+
+## BackupResultProperties
+### Properties
+* **azureStorageBlobContainerUri**: string: The Azure blob storage container Uri which contains the backup
+* **backupId**: string: The ID of the backup.
+* **endTime**: string (ReadOnly): The end time of the backup/restore operation in UTC
+* **error**: [ErrorDetail](#errordetail): Error encountered, if any, during the backup/restore operation.
+* **jobId**: string: Identifier for the backup/restore operation.
+* **startTime**: string (ReadOnly): The start time of the backup/restore operation in UTC
+* **status**: 'Cancelled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Status of the backup/restore operation
+* **statusDetails**: string: The status details of backup/restore operation
 
 ## CloudHsmClusterProperties
 ### Properties
@@ -75,6 +128,19 @@
 * **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -118,6 +184,16 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RestoreRequestProperties
+### Properties
+* **azureStorageBlobContainerUri**: string (Required): The Azure blob storage container Uri which contains the backup
+* **backupId**: string (Required): An autogenerated unique string ID for labeling the backup. It contains both a UUID and a date timestamp.
+* **token**: string {sensitive}: The SAS token pointing to an Azure blob storage container. This property is reserved for Azure Backup Service.
+
+## RestoreResult
+### Properties
+* **properties**: [BackupRestoreBaseResultProperties](#backuprestorebaseresultproperties): Backup and Restore operation common properties
 
 ## Sku
 ### Properties

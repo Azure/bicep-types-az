@@ -82,10 +82,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/locations/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2025-02-01-preview)
+* **Resource**: Microsoft.AppConfiguration/locations
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2025-02-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
+
+## Function regenerateKey (Microsoft.AppConfiguration/configurationStores@2025-02-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [ApiKey](#apikey)
 
 ## ApiKey
 ### Properties
@@ -100,6 +112,11 @@
 ### Properties
 * **nextLink**: string: The link to the next page of items
 * **value**: [ApiKey](#apikey)[] (Required): The ApiKey items on this page
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+* **type**: 'Microsoft.AppConfiguration/configurationStores' | string (Required): The resource type to check for name availability.
 
 ## ConfigurationStoreProperties
 ### Properties
@@ -179,6 +196,12 @@ A locked key-value may not be modified until it is unlocked.
 ### Properties
 * **id**: string: Resource identifier of a Managed-On-Behalf-Of broker resource
 
+## NameAvailabilityStatus
+### Properties
+* **message**: string (ReadOnly): If any, the error message that provides more detail for the reason that the name is not available.
+* **nameAvailable**: bool (ReadOnly): The value indicating whether the resource name is available.
+* **reason**: string (ReadOnly): If any, the reason that the name is not available.
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string: The resource Id for private endpoint
@@ -207,6 +230,10 @@ A locked key-value may not be modified until it is unlocked.
 * **actionsRequired**: 'None' | 'Recreate' | string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
+
+## RegenerateKeyParameters
+### Properties
+* **id**: string: The id of the key to regenerate.
 
 ## ReplicaProperties
 ### Properties

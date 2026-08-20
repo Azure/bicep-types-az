@@ -52,6 +52,12 @@
 * **ApiVersion**: 2025-06-20-preview
 * **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
 
+## Function regenerateKey (Microsoft.FluidRelay/fluidRelayServers@2025-06-20-preview)
+* **Resource**: Microsoft.FluidRelay/fluidRelayServers
+* **ApiVersion**: 2025-06-20-preview
+* **Input**: [RegenerateKeyRequest](#regeneratekeyrequest)
+* **Output**: [FluidRelayServerKeys](#fluidrelayserverkeys)
+
 ## CustomerManagedKeyEncryptionProperties
 ### Properties
 * **keyEncryptionKeyIdentity**: [CustomerManagedKeyEncryptionPropertiesKeyEncryptionKeyIdentity](#customermanagedkeyencryptionpropertieskeyencryptionkeyidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
@@ -140,6 +146,10 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyRequest
+### Properties
+* **keyName**: 'key1' | 'key2' (Required): The key to regenerate.
 
 ## SystemData
 ### Properties

@@ -547,6 +547,50 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/serverlessEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backfill (Microsoft.MachineLearningServices/workspaces/featuresets/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/featuresets/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [FeaturesetVersionBackfillRequest](#featuresetversionbackfillrequest)
+* **Output**: [FeaturesetVersionBackfillResponse](#featuresetversionbackfillresponse)
+
+## Function diagnose (Microsoft.MachineLearningServices/workspaces@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [DiagnoseWorkspaceParameters](#diagnoseworkspaceparameters)
+* **Output**: [DiagnoseResponseResult](#diagnoseresponseresult)
+
+## Function exportLabels (Microsoft.MachineLearningServices/workspaces/labelingJobs@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [ExportSummary](#exportsummary)
+* **Output**: [ExportSummary](#exportsummary)
+
+## Function getAllowedVmSizesForResize (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [VirtualMachineSizeListResult](#virtualmachinesizelistresult)
+
+## Function getLogs (Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [DeploymentLogsRequest](#deploymentlogsrequest)
+* **Output**: [DeploymentLogs](#deploymentlogs)
+
+## Function getStatus (Microsoft.MachineLearningServices/workspaces/inferencePools@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/inferencePools
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [PoolStatus](#poolstatus)
+
+## Function getStatus (Microsoft.MachineLearningServices/workspaces/inferencePools/groups@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/inferencePools/groups
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [GroupStatus](#groupstatus)
+
+## Function getStatus (Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/serverlessEndpoints
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [ServerlessEndpointStatus](#serverlessendpointstatus)
+
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/computes
 * **ApiVersion**: 2023-08-01-preview
@@ -602,6 +646,86 @@
 * **ApiVersion**: 2023-08-01-preview
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
 
+## Function package (Microsoft.MachineLearningServices/registries/models/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/registries/models/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PackageRequest](#packagerequest)
+* **Output**: [PackageResponse](#packageresponse)
+
+## Function package (Microsoft.MachineLearningServices/workspaces/models/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/models/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PackageRequest](#packagerequest)
+* **Output**: [PackageResponse](#packageresponse)
+
+## Function pause (Microsoft.MachineLearningServices/workspaces/labelingJobs@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [LabelingJobProperties](#labelingjobproperties)
+
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function provisionManagedNetwork (Microsoft.MachineLearningServices/workspaces@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [ManagedNetworkProvisionOptions](#managednetworkprovisionoptions)
+* **Output**: [ManagedNetworkProvisionStatus](#managednetworkprovisionstatus)
+
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/serverlessEndpoints
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: [EndpointAuthKeys](#endpointauthkeys)
+
+## Function removeRegions (Microsoft.MachineLearningServices/registries@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/registries
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [Registry](#registry)
+* **Output**: [Registry](#registry)
+
+## Function resume (Microsoft.MachineLearningServices/workspaces/labelingJobs@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [LabelingJobProperties](#labelingjobproperties)
+
+## Function startPendingUpload (Microsoft.MachineLearningServices/registries/codes/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/registries/codes/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
+* **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function startPendingUpload (Microsoft.MachineLearningServices/registries/data/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/registries/data/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
+* **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function startPendingUpload (Microsoft.MachineLearningServices/registries/models/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/registries/models/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
+* **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function startPendingUpload (Microsoft.MachineLearningServices/workspaces/codes/versions@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/codes/versions
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
+* **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateQuotas (Microsoft.MachineLearningServices/locations@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/locations
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
+* **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
+
 ## AccountKeyDatastoreSecrets
 ### Properties
 * **key**: string: Storage account key.
@@ -610,6 +734,12 @@
 ## AcrDetails
 ### Properties
 * **systemCreatedAcrAccount**: [SystemCreatedAcrAccount](#systemcreatedacraccount): Details of system created ACR account to be used for the Registry
+
+## ActualCapacityInfo
+### Properties
+* **allocated**: int: Gets or sets the total number of instances for the group.
+* **assignmentFailed**: int: Gets or sets the number of instances which failed to successfully complete assignment.
+* **assignmentSuccess**: int: Gets or sets the number of instances which successfully completed assignment.
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -895,6 +1025,17 @@ Only 'Accuracy' is supported for Text-NER, so user need not set this explicitly.
 * **maxNodeCount**: int
 * **minNodeCount**: int
 
+## BaseEnvironmentSource
+* **Discriminator**: baseEnvironmentSourceType
+
+### Base Properties
+
+### BaseEnvironmentId
+#### Properties
+* **baseEnvironmentSourceType**: 'EnvironmentAsset' (Required): [Required] Base environment type.
+* **resourceId**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] Resource id accepting ArmId or AzureMlId.
+
+
 ## BatchDeploymentConfiguration
 * **Discriminator**: deploymentConfigurationType
 
@@ -974,6 +1115,13 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **createHostPath**: bool: Indicate whether to create host path.
 * **propagation**: string: Type of Bind Option
 * **selinux**: string: Mention the selinux options.
+
+## BlobReferenceForConsumptionDto
+### Properties
+* **blobUri**: string: Blob URI path for client to upload data.
+Example: https://blob.windows.core.net/Container/Path
+* **credential**: [PendingUploadCredentialDto](#pendinguploadcredentialdto): Credential info to access storage account
+* **storageAccountArmId**: string: Arm ID of the storage account to use
 
 ## BuildContext
 ### Properties
@@ -1685,6 +1833,15 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 * **dataType**: 'uri_folder' (Required): [Required] Specifies the type of data.
 
 
+## DeploymentLogs
+### Properties
+* **content**: string: The retrieved online deployment logs.
+
+## DeploymentLogsRequest
+### Properties
+* **containerType**: 'InferenceServer' | 'ModelDataCollector' | 'StorageInitializer' | string: The type of container to retrieve logs from.
+* **tail**: int: The maximum number of lines to tail.
+
 ## DeploymentResourceConfiguration
 ### Properties
 * **instanceCount**: int: Optional number of instances or nodes used by the compute target.
@@ -1693,6 +1850,95 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 * **maxInstanceCount**: int: Optional max allowed number of instances or nodes to be used by the compute target.
 For use with elastic training, currently supported by PyTorch distribution type only.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
+
+## DiagnoseRequestProperties
+### Properties
+* **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
+* **containerRegistry**: [DiagnoseRequestPropertiesContainerRegistry](#diagnoserequestpropertiescontainerregistry): Setting for diagnosing dependent container registry
+* **dnsResolution**: [DiagnoseRequestPropertiesDnsResolution](#diagnoserequestpropertiesdnsresolution): Setting for diagnosing dns resolution
+* **keyVault**: [DiagnoseRequestPropertiesKeyVault](#diagnoserequestpropertieskeyvault): Setting for diagnosing dependent key vault
+* **nsg**: [DiagnoseRequestPropertiesNsg](#diagnoserequestpropertiesnsg): Setting for diagnosing network security group
+* **others**: [DiagnoseRequestPropertiesOthers](#diagnoserequestpropertiesothers): Setting for diagnosing unclassified category of problems
+* **requiredResourceProviders**: [DiagnoseRequestPropertiesRequiredResourceProviders](#diagnoserequestpropertiesrequiredresourceproviders): Setting for diagnosing the presence of required resource providers in the workspace.
+* **resourceLock**: [DiagnoseRequestPropertiesResourceLock](#diagnoserequestpropertiesresourcelock): Setting for diagnosing resource lock
+* **storageAccount**: [DiagnoseRequestPropertiesStorageAccount](#diagnoserequestpropertiesstorageaccount): Setting for diagnosing dependent storage account
+* **udr**: [DiagnoseRequestPropertiesUdr](#diagnoserequestpropertiesudr): Setting for diagnosing user defined routing
+
+## DiagnoseRequestPropertiesApplicationInsights
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesContainerRegistry
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesDnsResolution
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesKeyVault
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesNsg
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesOthers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesRequiredResourceProviders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesResourceLock
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesStorageAccount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseRequestPropertiesUdr
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DiagnoseResponseResult
+### Properties
+* **value**: [DiagnoseResponseResultValue](#diagnoseresponseresultvalue)
+
+## DiagnoseResponseResultValue
+### Properties
+* **applicationInsightsResults**: [DiagnoseResult](#diagnoseresult)[]
+* **containerRegistryResults**: [DiagnoseResult](#diagnoseresult)[]
+* **dnsResolutionResults**: [DiagnoseResult](#diagnoseresult)[]
+* **keyVaultResults**: [DiagnoseResult](#diagnoseresult)[]
+* **networkSecurityRuleResults**: [DiagnoseResult](#diagnoseresult)[]
+* **otherResults**: [DiagnoseResult](#diagnoseresult)[]
+* **resourceLockResults**: [DiagnoseResult](#diagnoseresult)[]
+* **storageAccountResults**: [DiagnoseResult](#diagnoseresult)[]
+* **userDefinedRouteResults**: [DiagnoseResult](#diagnoseresult)[]
+
+## DiagnoseResult
+### Properties
+* **code**: string (ReadOnly): Code for workspace setup error
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Level of workspace setup error
+* **message**: string (ReadOnly): Message of workspace setup error
+
+## DiagnoseWorkspaceParameters
+### Properties
+* **value**: [DiagnoseRequestProperties](#diagnoserequestproperties)
 
 ## DistributionConfiguration
 * **Discriminator**: distributionType
@@ -1780,6 +2026,13 @@ with encryption
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
+## EndpointAuthToken
+### Properties
+* **accessToken**: string: Access token for endpoint authentication.
+* **expiryTimeUtc**: int: Access token expiry time (UTC).
+* **refreshAfterTimeUtc**: int: Refresh access token after time (UTC).
+* **tokenType**: string: Access token type.
+
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -1866,6 +2119,45 @@ with encryption
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
 
+## EstimatedVMPrice
+### Properties
+* **osType**: 'Linux' | 'Windows' | string (Required): Operating system type used by the VM.
+* **retailPrice**: int (Required): The price charged for using the VM.
+* **vmTier**: 'LowPriority' | 'Spot' | 'Standard' | string (Required): The type of the VM.
+
+## EstimatedVMPrices
+### Properties
+* **billingCurrency**: 'USD' | string (Required): Three lettered code specifying the currency of the VM price. Example: USD
+* **unitOfMeasure**: 'OneHour' | string (Required): The unit of time measurement for the specified VM price. Example: OneHour
+* **values**: [EstimatedVMPrice](#estimatedvmprice)[] (Required): The list of estimated prices for using a VM of a particular OS type, tier, etc.
+
+## ExportSummary
+* **Discriminator**: format
+
+### Base Properties
+* **endDateTime**: string (ReadOnly): The time when the export was completed.
+* **exportedRowCount**: int (ReadOnly): The total number of labeled datapoints exported.
+* **labelingJobId**: string (ReadOnly): Name and identifier of the job containing exported labels.
+* **startDateTime**: string (ReadOnly): The time when the export was requested.
+
+### CocoExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'Coco' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### CsvExportSummary
+#### Properties
+* **containerName**: string (ReadOnly): The container name to which the labels will be exported.
+* **format**: 'CSV' (Required): [Required] The format of exported labels, also as the discriminator.
+* **snapshotPath**: string (ReadOnly): The output path where the labels will be exported.
+
+### DatasetExportSummary
+#### Properties
+* **format**: 'Dataset' (Required): [Required] The format of exported labels, also as the discriminator.
+* **labeledAssetName**: string (ReadOnly): The unique name of the labeled data asset.
+
+
 ## FeatureAttributionDriftMonitoringSignalFeatureDataTypeOverride
 ### Properties
 ### Additional Properties
@@ -1902,6 +2194,37 @@ with encryption
 ## FeaturesetSpecification
 ### Properties
 * **path**: string: Specifies the spec path
+
+## FeaturesetVersionBackfillRequest
+### Properties
+* **dataAvailabilityStatus**: ('Complete' | 'Incomplete' | 'None' | 'Pending' | string)[]: Specified the data availability status that you want to backfill
+* **description**: string: Specifies description
+* **displayName**: string: Specifies description
+* **featureWindow**: [FeatureWindow](#featurewindow): Specifies the backfill feature window to be materialized
+* **jobId**: string: Specify the jobId to retry the failed materialization
+* **properties**: [FeaturesetVersionBackfillRequestProperties](#featuresetversionbackfillrequestproperties): Specifies the properties
+* **resource**: [MaterializationComputeResource](#materializationcomputeresource): Specifies the compute resource settings
+* **sparkConfiguration**: [FeaturesetVersionBackfillRequestSparkConfiguration](#featuresetversionbackfillrequestsparkconfiguration): Specifies the spark compute settings
+* **tags**: [FeaturesetVersionBackfillRequestTags](#featuresetversionbackfillrequesttags): Specifies the tags
+
+## FeaturesetVersionBackfillRequestProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FeaturesetVersionBackfillRequestSparkConfiguration
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FeaturesetVersionBackfillRequestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FeaturesetVersionBackfillResponse
+### Properties
+* **jobIds**: string[]: List of jobs submitted as part of the backfill request.
 
 ## FeaturesetVersionProperties
 ### Properties
@@ -1944,6 +2267,11 @@ with encryption
 * **computeRuntime**: [ComputeRuntimeDto](#computeruntimedto)
 * **offlineStoreConnectionName**: string
 * **onlineStoreConnectionName**: string
+
+## FeatureWindow
+### Properties
+* **featureWindowEnd**: string: Specifies the feature window end time
+* **featureWindowStart**: string: Specifies the feature window start time
 
 ## FlavorData
 ### Properties
@@ -2020,6 +2348,13 @@ If null, a default value will be set depending on the selected metric.
 * **metric**: 'TotalTokenCount' | 'TotalTokenCountPerGroup' | string (Required): [Required] Gets or sets the feature attribution metric to calculate.
 * **threshold**: [MonitoringThreshold](#monitoringthreshold): Gets or sets the threshold value.
 If null, a default value will be set depending on the selected metric.
+
+## GroupStatus
+### Properties
+* **actualCapacityInfo**: [ActualCapacityInfo](#actualcapacityinfo): Gets or sets the actual capacity info for the group.
+* **bonusExtraCapacity**: int: Gets or sets capacity used from the pool's reserved capacity.
+* **endpointCount**: int: Gets or sets the actual number of endpoints in the group.
+* **requestedCapacity**: int: Gets or sets the request number of instances for the group.
 
 ## HDInsightProperties
 ### Properties
@@ -2364,6 +2699,32 @@ optional
 * **properties**: [PropertiesBaseProperties](#propertiesbaseproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the pool.
 * **requestConfiguration**: [RequestConfiguration](#requestconfiguration): Request configuration for the inference pool.
+
+## InferencingServer
+* **Discriminator**: serverType
+
+### Base Properties
+
+### AzureMLBatchInferencingServer
+#### Properties
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for AML batch inferencing server.
+* **serverType**: 'AzureMLBatch' (Required): [Required] Inferencing server type for various targets.
+
+### AzureMLOnlineInferencingServer
+#### Properties
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for AML inferencing server.
+* **serverType**: 'AzureMLOnline' (Required): [Required] Inferencing server type for various targets.
+
+### CustomInferencingServer
+#### Properties
+* **inferenceConfiguration**: [OnlineInferenceConfiguration](#onlineinferenceconfiguration): Inference configuration for custom inferencing.
+* **serverType**: 'Custom' (Required): [Required] Inferencing server type for various targets.
+
+### TritonInferencingServer
+#### Properties
+* **inferenceConfiguration**: [OnlineInferenceConfiguration](#onlineinferenceconfiguration): Inference configuration for Triton.
+* **serverType**: 'Triton' (Required): [Required] Inferencing server type for various targets.
+
 
 ## InstanceResourceSchema
 ### Properties
@@ -2796,6 +3157,10 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **userStorageArmId**: string (ReadOnly): The arm Id key of the workspace storage
 * **userStorageKey**: string {sensitive} (ReadOnly): The access key of the workspace storage
 
+## ManagedNetworkProvisionOptions
+### Properties
+* **includeSpark**: bool
+
 ## ManagedNetworkProvisionStatus
 ### Properties
 * **sparkReady**: bool
@@ -2868,6 +3233,11 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
 * **uri**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
+## ModelConfiguration
+### Properties
+* **mode**: 'Copy' | 'Download' | string: Input delivery mode for the model.
+* **mountPath**: string: Relative mounting path of the model in the target image.
+
 ## ModelContainerProperties
 ### Properties
 * **description**: string: The asset description text.
@@ -2877,6 +3247,13 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the model container.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
+## ModelPackageInput
+### Properties
+* **inputType**: 'UriFile' | 'UriFolder' | string (Required): [Required] Type of the input included in the target image.
+* **mode**: 'Copy' | 'Download' | string: Input delivery mode of the input.
+* **mountPath**: string: Relative mount path of the input in the target image.
+* **path**: [PackageInputPathBase](#packageinputpathbase) (Required): [Required] Location of the input.
 
 ## ModelPerformanceMetricThresholdBase
 * **Discriminator**: modelType
@@ -3317,6 +3694,19 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### Additional Properties
 * **Additional Properties Type**: int
 
+## OnlineInferenceConfiguration
+### Properties
+* **configurations**: [OnlineInferenceConfigurationConfigurations](#onlineinferenceconfigurationconfigurations): Additional configurations
+* **entryScript**: string: Entry script or command to invoke.
+* **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
+* **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
+* **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
+
+## OnlineInferenceConfigurationConfigurations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## OnlineRequestSettings
 ### Properties
 * **maxConcurrentRequestsPerInstance**: int: The number of maximum concurrent requests per node allowed per deployment. Defaults to 1.
@@ -3373,10 +3763,109 @@ Defaults to 5000ms.
 * **type**: 'ServiceTag' (Required): Type of a managed network outbound rule of a machine learning workspace.
 
 
+## PackageInputPathBase
+* **Discriminator**: inputPathType
+
+### Base Properties
+
+### PackageInputPathId
+#### Properties
+* **inputPathType**: 'PathId' (Required): [Required] Input path type for package inputs.
+* **resourceId**: string: Input resource id.
+
+### PackageInputPathVersion
+#### Properties
+* **inputPathType**: 'PathVersion' (Required): [Required] Input path type for package inputs.
+* **resourceName**: string: Input resource name.
+* **resourceVersion**: string: Input resource version.
+
+### PackageInputPathUrl
+#### Properties
+* **inputPathType**: 'Url' (Required): [Required] Input path type for package inputs.
+* **url**: string: Input path url.
+
+
+## PackageRequest
+### Properties
+* **baseEnvironmentSource**: [BaseEnvironmentSource](#baseenvironmentsource): Base environment to start with.
+* **environmentVariables**: [PackageRequestEnvironmentVariables](#packagerequestenvironmentvariables): Collection of environment variables.
+* **inferencingServer**: [InferencingServer](#inferencingserver) (Required): [Required] Inferencing server configurations.
+* **inputs**: [ModelPackageInput](#modelpackageinput)[]: Collection of inputs.
+* **modelConfiguration**: [ModelConfiguration](#modelconfiguration): Model configuration including the mount mode.
+* **properties**: [PackageRequestProperties](#packagerequestproperties): Property dictionary. Properties can be added, removed, and updated.
+* **tags**: [PackageRequestTags](#packagerequesttags): Tag dictionary. Tags can be added, removed, and updated.
+* **targetEnvironmentId**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] Arm ID of the target environment to be created by package operation.
+
+## PackageRequestEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageRequestProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageRequestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageResponse
+### Properties
+* **baseEnvironmentSource**: [BaseEnvironmentSource](#baseenvironmentsource) (ReadOnly): Base environment to start with.
+* **buildId**: string (ReadOnly): Build id of the image build operation.
+* **buildState**: 'Failed' | 'NotStarted' | 'Running' | 'Succeeded' | string (ReadOnly): Build state of the image build operation.
+* **environmentVariables**: [PackageResponseEnvironmentVariables](#packageresponseenvironmentvariables) (ReadOnly): Collection of environment variables.
+* **inferencingServer**: [InferencingServer](#inferencingserver) (ReadOnly): Inferencing server configurations.
+* **inputs**: [ModelPackageInput](#modelpackageinput)[] (ReadOnly): Collection of inputs.
+* **logUrl**: string (ReadOnly): Log url of the image build operation.
+* **modelConfiguration**: [ModelConfiguration](#modelconfiguration) (ReadOnly): Model configuration including the mount mode.
+* **properties**: [PackageResponseProperties](#packageresponseproperties) (ReadOnly): Property dictionary. Tags can be added, removed, and updated.
+* **tags**: [PackageResponseTags](#packageresponsetags) (ReadOnly): Tag dictionary. Tags can be added, removed, and updated.
+* **targetEnvironmentId**: string (ReadOnly): Asset ID of the target environment created by package operation.
+
+## PackageResponseEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageResponseProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PackageResponseTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Password
 ### Properties
 * **name**: string {sensitive} (ReadOnly)
 * **value**: string {sensitive} (ReadOnly)
+
+## PendingUploadCredentialDto
+* **Discriminator**: credentialType
+
+### Base Properties
+
+### SASCredentialDto
+#### Properties
+* **credentialType**: 'SAS' (Required): [Required] Credential type used to authentication with storage.
+* **sasUri**: string {sensitive}: Full SAS Uri, including the storage, container/blob path and SAS token
+
+
+## PendingUploadRequestDto
+### Properties
+* **pendingUploadId**: string: If PendingUploadId = null then random guid will be used.
+* **pendingUploadType**: 'None' | 'TemporaryBlobReference' | string: TemporaryBlobReference is the only supported type
+
+## PendingUploadResponseDto
+### Properties
+* **blobReferenceForConsumption**: [BlobReferenceForConsumptionDto](#blobreferenceforconsumptiondto): Container level read, write, list SAS
+* **pendingUploadId**: string: ID for this upload request
+* **pendingUploadType**: 'None' | 'TemporaryBlobReference' | string: TemporaryBlobReference is the only supported type
 
 ## PersonalComputeInstanceSettings
 ### Properties
@@ -3413,6 +3902,13 @@ Defaults to 5000ms.
 ## PoolModelConfiguration
 ### Properties
 * **modelId**: string: The URI path to the model.
+
+## PoolStatus
+### Properties
+* **actualCapacity**: int: Gets or sets the actual number of instances in the pool.
+* **groupCount**: int: Gets or sets the actual number of groups in the pool.
+* **requestedCapacity**: int: Gets or sets the requested number of instances for the pool.
+* **reservedCapacity**: int: Gets or sets the number of instances in the pool reserved by the system.
 
 ## PredictionDriftMetricThresholdBase
 * **Discriminator**: dataType
@@ -3517,6 +4013,18 @@ Defaults to 5000ms.
 * **jobTier**: 'Basic' | 'Null' | 'Premium' | 'Spot' | 'Standard' | string: Controls the compute job tier
 * **priority**: int: Controls the priority of the job on a compute.
 
+## QuotaBaseProperties
+### Properties
+* **id**: string: Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **type**: string: Specifies the resource type.
+* **unit**: 'Count' | string: An enum describing the unit of quota measurement.
+
+## QuotaUpdateParameters
+### Properties
+* **location**: string: Region of workspace quota to be updated.
+* **value**: [QuotaBaseProperties](#quotabaseproperties)[]: The list for update quota.
+
 ## Recurrence
 ### Properties
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week' | string: [Required] The frequency to trigger schedule.
@@ -3545,6 +4053,24 @@ If not present, the schedule will run indefinitely
 * **timeZone**: string: Specifies time zone in which the schedule runs.
 TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
 * **triggerType**: 'Cron' | 'Recurrence' | string (Required): [Required]
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
+
+## Registry
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [RegistryProperties](#registryproperties) (Required): [Required] Additional attributes of the entity.
+* **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RegistryListCredentialsResult
 ### Properties
@@ -3962,6 +4488,15 @@ will be allocated capacity from the specified capacity reservation group.
 * **offer**: [ServerlessOffer](#serverlessoffer) (Required): [Required] The publisher-defined Serverless Offer to provision the endpoint with.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the endpoint.
 
+## ServerlessEndpointStatus
+### Properties
+* **metrics**: [ServerlessEndpointStatusMetrics](#serverlessendpointstatusmetrics) (ReadOnly): The model-specific metrics from the backing inference endpoint.
+
+## ServerlessEndpointStatusMetrics
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ServerlessInferenceEndpoint
 ### Properties
 * **headers**: [ServerlessInferenceEndpointHeaders](#serverlessinferenceendpointheaders) (ReadOnly): Specifies any required headers to target this serverless endpoint.
@@ -4322,6 +4857,11 @@ If 'Custom' is selected then user can specify additional inputs to customize how
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TrialComponent
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
@@ -4361,6 +4901,19 @@ The expression should follow NCronTab format.
 * **triggerType**: 'Recurrence' (Required): [Required]
 
 
+## UpdateWorkspaceQuotas
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **limit**: int: The maximum permitted quota of the resource.
+* **status**: 'Failure' | 'InvalidQuotaBelowClusterMinimum' | 'InvalidQuotaExceedsSubscriptionLimit' | 'InvalidVMFamilyName' | 'OperationNotEnabledForRegion' | 'OperationNotSupportedForSku' | 'Success' | 'Undefined' | string: Status of update workspace quota.
+* **type**: string (ReadOnly): Specifies the resource type.
+* **unit**: 'Count' | string (ReadOnly): An enum describing the unit of quota measurement.
+
+## UpdateWorkspaceQuotasResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result.
+* **value**: [UpdateWorkspaceQuotas](#updateworkspacequotas)[] (ReadOnly): The list of workspace quota update result.
+
 ## UserAccountCredentials
 ### Properties
 * **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
@@ -4389,6 +4942,24 @@ The expression should follow NCronTab format.
 * **notebookServerPort**: int: Notebook server port open for ssh connections.
 * **sshPort**: int: Port open for ssh connections.
 * **virtualMachineSize**: string: Virtual Machine size
+
+## VirtualMachineSize
+### Properties
+* **estimatedVMPrices**: [EstimatedVMPrices](#estimatedvmprices): The estimated price information for using a VM.
+* **family**: string (ReadOnly): The family name of the virtual machine size.
+* **gpus**: int (ReadOnly): The number of gPUs supported by the virtual machine size.
+* **lowPriorityCapable**: bool (ReadOnly): Specifies if the virtual machine size supports low priority VMs.
+* **maxResourceVolumeMB**: int (ReadOnly): The resource volume size, in MB, allowed by the virtual machine size.
+* **memoryGB**: int (ReadOnly): The amount of memory, in GB, supported by the virtual machine size.
+* **name**: string (ReadOnly): The name of the virtual machine size.
+* **osVhdSizeMB**: int (ReadOnly): The OS VHD disk size, in MB, allowed by the virtual machine size.
+* **premiumIO**: bool (ReadOnly): Specifies if the virtual machine size supports premium IO.
+* **supportedComputeTypes**: string[]: Specifies the compute types supported by the virtual machine size.
+* **vCPUs**: int (ReadOnly): The number of vCPUs supported by the virtual machine size.
+
+## VirtualMachineSizeListResult
+### Properties
+* **value**: [VirtualMachineSize](#virtualmachinesize)[]: The list of virtual machine sizes supported by AmlCompute.
 
 ## VirtualMachineSshCredentials
 ### Properties

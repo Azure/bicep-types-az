@@ -3692,5 +3692,101 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverGroup",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverGroupTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/failoverGroups",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/277"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/servers/failoverGroups",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/277"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncAgentKeyProperties",
+    "properties": {
+      "syncAgentKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Key of sync agent."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateKey",
+    "resourceType": "Microsoft.Sql/servers/syncAgents",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/281"
+    }
   }
 ]

@@ -92,12 +92,52 @@
 * **systemData**: [PolicyModelSystemData](#policymodelsystemdata) (ReadOnly)
 * **type**: 'Microsoft.DataReplication/replicationVaults/replicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DataReplication/locations@2021-02-16-preview)
+* **Resource**: Microsoft.DataReplication/locations
+* **ApiVersion**: 2021-02-16-preview
+* **Input**: [CheckNameAvailabilityModel](#checknameavailabilitymodel)
+* **Output**: [CheckNameAvailabilityResponseModel](#checknameavailabilityresponsemodel)
+
+## Function plannedFailover (Microsoft.DataReplication/replicationVaults/protectedItems@2021-02-16-preview)
+* **Resource**: Microsoft.DataReplication/replicationVaults/protectedItems
+* **ApiVersion**: 2021-02-16-preview
+* **Input**: [PlannedFailoverModel](#plannedfailovermodel)
+* **Output**: [PlannedFailoverModel](#plannedfailovermodel)
+
+## Function preflight (Microsoft.DataReplication/deployments@2021-02-16-preview)
+* **Resource**: Microsoft.DataReplication/deployments
+* **ApiVersion**: 2021-02-16-preview
+* **Input**: [DeploymentPreflightModel](#deploymentpreflightmodel)
+* **Output**: [DeploymentPreflightModel](#deploymentpreflightmodel)
+
 ## AzStackHCIClusterProperties
 ### Properties
 * **clusterName**: string {minLength: 1} (Required): Gets or sets the AzStackHCICluster FQDN name.
 * **resourceName**: string {minLength: 1} (Required): Gets or sets the AzStackHCICluster resource name.
 * **storageAccountName**: string {minLength: 1} (Required): Gets or sets the Storage account name.
 * **storageContainers**: [StorageContainerProperties](#storagecontainerproperties)[] (Required): Gets or sets the list of AzStackHCICluster Storage Container.
+
+## CheckNameAvailabilityModel
+### Properties
+* **name**: string: Gets or sets the resource name.
+* **type**: string: Gets or sets the resource type.
+
+## CheckNameAvailabilityResponseModel
+### Properties
+* **message**: string: Gets or sets the message for resource name unavailability.
+* **nameAvailable**: bool: Gets or sets a value indicating whether resource name is available or not.
+* **reason**: string: Gets or sets the reason for resource name unavailability.
+
+## DeploymentPreflightModel
+### Properties
+* **resources**: [DeploymentPreflightResource](#deploymentpreflightresource)[]: Gets or sets the list of resources.
+
+## DeploymentPreflightResource
+### Properties
+* **apiVersion**: string: Gets or sets the Api version.
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string: Gets or sets the resource name.
+* **type**: string: Gets or sets the resource type.
 
 ## DraModelCustomProperties
 * **Discriminator**: instanceType
@@ -313,6 +353,30 @@ service.
 * **severity**: string (ReadOnly): Gets or sets the error severity.
 * **source**: string (ReadOnly): Gets or sets the error source.
 * **summary**: string (ReadOnly): Gets or sets the error summary.
+
+## PlannedFailoverModel
+### Properties
+* **properties**: [PlannedFailoverModelProperties](#plannedfailovermodelproperties) (Required): Planned failover model properties.
+
+## PlannedFailoverModelCustomProperties
+* **Discriminator**: instanceType
+
+### Base Properties
+
+### HyperVToAzStackHCIPlannedFailoverModelCustomProperties
+#### Properties
+* **instanceType**: 'HyperVToAzStackHCI' (Required): Gets or sets the instance type.
+* **shutdownSourceVM**: bool (Required): Gets or sets a value indicating whether VM needs to be shut down.
+
+### VMwareToAzStackHCIPlannedFailoverModelCustomProperties
+#### Properties
+* **instanceType**: 'VMwareToAzStackHCI' (Required): Gets or sets the instance type.
+* **shutdownSourceVM**: bool (Required): Gets or sets a value indicating whether VM needs to be shut down.
+
+
+## PlannedFailoverModelProperties
+### Properties
+* **customProperties**: [PlannedFailoverModelCustomProperties](#plannedfailovermodelcustomproperties) (Required): Planned failover model custom properties.
 
 ## PolicyModelCustomProperties
 * **Discriminator**: instanceType

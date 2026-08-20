@@ -50,10 +50,41 @@
 * **properties**: [PaymentMethodProperties](#paymentmethodproperties) (ReadOnly): The properties of a payment method.
 * **type**: 'Microsoft.Billing/paymentMethods' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function merge (Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2021-10-01
+* **Input**: [BillingSubscriptionMergeRequest](#billingsubscriptionmergerequest)
+* **Output**: [BillingSubscription](#billingsubscription)
+
+## Function move (Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2021-10-01
+* **Input**: [MoveBillingSubscriptionRequest](#movebillingsubscriptionrequest)
+* **Output**: [BillingSubscription](#billingsubscription)
+
+## Function split (Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2021-10-01
+* **Input**: [BillingSubscriptionSplitRequest](#billingsubscriptionsplitrequest)
+* **Output**: [BillingSubscription](#billingsubscription)
+
+## Function validateMoveEligibility (Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2021-10-01
+* **Input**: [MoveBillingSubscriptionRequest](#movebillingsubscriptionrequest)
+* **Output**: [ValidateMoveBillingSubscriptionEligibilityResult](#validatemovebillingsubscriptioneligibilityresult)
+
 ## Amount
 ### Properties
 * **currency**: string (ReadOnly): The currency for the amount value.
 * **value**: int (ReadOnly): Amount value.
+
+## BillingSubscription
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BillingSubscriptionProperties](#billingsubscriptionproperties): The billing properties of a subscription.
+* **type**: string (ReadOnly): Resource type.
 
 ## BillingSubscriptionAliasProperties
 ### Properties
@@ -95,6 +126,11 @@
 * **termDuration**: string: The duration for which you can use the subscription. Example P1Y and P1M
 * **termEndDate**: string (ReadOnly): The end date of the term in UTC time.
 * **termStartDate**: string (ReadOnly): The start date of the term in UTC time.
+
+## BillingSubscriptionMergeRequest
+### Properties
+* **quantity**: int: The quantity of the source billing subscription that will be merged with the target billing subscription.
+* **targetBillingSubscriptionName**: string: The ID of the target billing subscription that will be merged with the source subscription provided in the request.
 
 ## BillingSubscriptionProperties
 ### Properties
@@ -146,10 +182,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## BillingSubscriptionSplitRequest
+### Properties
+* **billingFrequency**: string: The billing frequency of the target subscription in the ISO8601 format. Example: P1M, P3M, P1Y
+* **quantity**: int: The quantity of the target product to which the subscription needs to be split into.
+* **targetProductTypeId**: string: The ID of the target product to which the subscription needs to be split into. This value is not same as the value returned in Get API call and can be retrieved from Catalog API to know the product id to split into.
+* **targetSkuId**: string: The ID of the target product to which the subscription needs to be split into. This value is not same as the value returned in Get API call and can be retrieved from Catalog API to know the sku id to split into.
+* **termDuration**: string: The term duration of the target in ISO8601 format product to which the subscription needs to be split into. Example: P1M, P1Y
+
 ## EnrollmentAccountSubscriptionDetails
 ### Properties
 * **enrollmentAccountStartDate**: string (ReadOnly): The enrollment Account and the subscription association start date. This field is available only for the Enterprise Agreement billing accounts.
 * **subscriptionEnrollmentAccountStatus**: 'Active' | 'Cancelled' | 'Deleted' | 'Expired' | 'TransferredOut' | 'Transferring' | string (ReadOnly): The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts.
+
+## MoveBillingSubscriptionRequest
+### Properties
+* **destinationEnrollmentAccountId**: string: The destination enrollment account id.
+* **destinationInvoiceSectionId**: string: The destination invoice section id.
 
 ## NextBillingCycleDetails
 ### Properties
@@ -199,4 +248,15 @@
 ### Properties
 * **description**: string (ReadOnly): The name of the reseller.
 * **resellerId**: string (ReadOnly): The MPN ID of the reseller.
+
+## ValidateMoveBillingSubscriptionEligibilityError
+### Properties
+* **code**: 'AccountIsLocked' | 'AssetHasCap' | 'AssetNotActive' | 'BillingAccountInactive' | 'BillingProfilePastDue' | 'CrossBillingAccountNotAllowed' | 'DestinationBillingProfileInactive' | 'DestinationBillingProfileNotFound' | 'DestinationBillingProfilePastDue' | 'DestinationInvoiceSectionInactive' | 'DestinationInvoiceSectionNotFound' | 'InsufficientPermissionOnDestination' | 'InsufficientPermissionOnSource' | 'InvalidDestination' | 'InvalidSource' | 'InvoiceSectionIsRestricted' | 'MarketplaceNotEnabledOnDestination' | 'ProductInactive' | 'ProductNotFound' | 'ProductTypeNotSupported' | 'SourceBillingProfilePastDue' | 'SourceInvoiceSectionInactive' | 'SubscriptionNotActive' | 'SubscriptionTypeNotSupported' | string: Error code for the billing subscription move validation.
+* **details**: string: Detailed error message explaining the error.
+* **message**: string: The error message.
+
+## ValidateMoveBillingSubscriptionEligibilityResult
+### Properties
+* **errorDetails**: [ValidateMoveBillingSubscriptionEligibilityError](#validatemovebillingsubscriptioneligibilityerror): Validation error details.
+* **isMoveEligible**: bool (ReadOnly): Specifies whether the subscription is eligible to move.
 

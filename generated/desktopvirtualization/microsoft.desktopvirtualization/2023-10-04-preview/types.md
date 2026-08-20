@@ -194,12 +194,45 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2023-10-04-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools
+* **ApiVersion**: 2023-10-04-preview
+* **Input**: [MsixImageURI](#msiximageuri)
+* **Output**: [ExpandMsixImageList](#expandmsiximagelist)
+
+## Function importAppAttachPackageInfo (Microsoft.DesktopVirtualization/hostPools@2023-10-04-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools
+* **ApiVersion**: 2023-10-04-preview
+* **Input**: [ImportPackageInfoRequest](#importpackageinforequest)
+* **Output**: [AppAttachPackageList](#appattachpackagelist)
+
+## Function retrieveRegistrationToken (Microsoft.DesktopVirtualization/hostPools@2023-10-04-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools
+* **ApiVersion**: 2023-10-04-preview
+* **Output**: [RegistrationInfo](#registrationinfo)
+
 ## AgentUpdateProperties
 ### Properties
 * **maintenanceWindows**: [MaintenanceWindowProperties](#maintenancewindowproperties)[]: List of maintenance windows. Maintenance windows are 2 hours long.
 * **maintenanceWindowTimeZone**: string: Time zone for maintenance as defined in https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-5.0. Must be set if useLocalTime is true.
 * **type**: 'Default' | 'Scheduled' | string: The type of maintenance for session host components.
 * **useSessionHostLocalTime**: bool: Whether to use localTime of the virtual machine.
+
+## AppAttachPackage
+### Properties
+* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **location**: string: The geo-location where the resource lives
+* **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+* **name**: string (ReadOnly): The name of the resource
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
+* **properties**: [AppAttachPackageProperties](#appattachpackageproperties) (Required): Detailed properties for App Attach Package
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## AppAttachPackageInfoProperties
 ### Properties
@@ -219,6 +252,11 @@
 * **packageName**: string: Package Name from appxmanifest.xml.
 * **packageRelativePath**: string: Relative Path to the package inside the image.
 * **version**: string: Package Version found in the appxmanifest.xml.
+
+## AppAttachPackageList
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next page of results.
+* **value**: [AppAttachPackage](#appattachpackage)[]: List of App Attach Package definitions.
 
 ## AppAttachPackageProperties
 ### Properties
@@ -264,6 +302,36 @@
 * **iconHash**: string (ReadOnly): Hash of the icon.
 * **objectId**: string (ReadOnly): ObjectId of Desktop. (internal use)
 
+## ExpandMsixImage
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ExpandMsixImageProperties](#expandmsiximageproperties): Detailed properties for ExpandMsixImage
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## ExpandMsixImageList
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next page of results.
+* **value**: [ExpandMsixImage](#expandmsiximage)[]: List of MSIX package properties from give MSIX Image.
+
+## ExpandMsixImageProperties
+### Properties
+* **certificateExpiry**: string: Date certificate expires, found in the appxmanifest.xml.
+* **certificateName**: string: Certificate name found in the appxmanifest.xml.
+* **displayName**: string: User friendly Name to be displayed in the portal.
+* **imagePath**: string: VHD/CIM image path on Network Share.
+* **isActive**: bool: Make this version of the package the active one across the hostpool.
+* **isRegularRegistration**: bool: Specifies how to register Package in feed.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
+* **packageAlias**: string: Alias of MSIX Package.
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+* **packageFullName**: string: Package Full Name from appxmanifest.xml.
+* **packageName**: string: Package Name from appxmanifest.xml.
+* **packageRelativePath**: string: Relative Path to the package inside the image.
+* **version**: string: Package Version found in the appxmanifest.xml.
+
 ## HostPoolProperties
 ### Properties
 * **agentUpdate**: [AgentUpdateProperties](#agentupdateproperties): The session host configuration for updating agent, monitoring agent, and stack component.
@@ -291,10 +359,19 @@
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
 
+## ImportPackageInfoRequest
+### Properties
+* **packageArchitecture**: 'ALL' | 'ARM' | 'ARM64' | 'Neutral' | 'x64' | 'x86' | 'x86a64' | string: Possible device architectures that an app attach package can be configured for
+* **path**: string: URI to Image
+
 ## MaintenanceWindowProperties
 ### Properties
 * **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week.
 * **hour**: int: The update start hour of the day. (0 - 23)
+
+## MsixImageURI
+### Properties
+* **uri**: string: URI to Image
 
 ## MsixPackageApplications
 ### Properties
@@ -376,6 +453,11 @@
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## ResourceModelWithAllowedPropertySetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceModelWithAllowedPropertySetTags
 ### Properties

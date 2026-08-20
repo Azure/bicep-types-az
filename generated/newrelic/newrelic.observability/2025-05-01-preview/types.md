@@ -36,6 +36,34 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'NewRelic.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getBillingInfo (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [BillingInfoResponse](#billinginforesponse)
+
+## Function getMetricRules (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MetricsRequest](#metricsrequest)
+* **Output**: [MetricRules](#metricrules)
+
+## Function getMetricStatus (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [MetricsStatusRequest](#metricsstatusrequest)
+* **Output**: [MetricsStatusResponse](#metricsstatusresponse)
+
+## Function latestLinkedSaaS (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [LatestLinkedSaaSResponse](#latestlinkedsaasresponse)
+
+## Function linkSaaS (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [SaaSData](#saasdata)
+* **Output**: [NewRelicMonitorResource](#newrelicmonitorresource)
+
 ## Function listAppServices (NewRelic.Observability/monitors@2025-05-01-preview)
 * **Resource**: NewRelic.Observability/monitors
 * **ApiVersion**: 2025-05-01-preview
@@ -59,6 +87,28 @@
 * **ApiVersion**: 2025-05-01-preview
 * **Output**: [LinkedResourceListResponse](#linkedresourcelistresponse)
 
+## Function monitoredResources (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function resubscribe (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [ResubscribeProperties](#resubscribeproperties)
+* **Output**: [NewRelicMonitorResource](#newrelicmonitorresource)
+
+## Function switchBilling (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [SwitchBillingRequest](#switchbillingrequest)
+* **Output**: [NewRelicMonitorResource](#newrelicmonitorresource)
+
+## Function vmHostPayloads (NewRelic.Observability/monitors@2025-05-01-preview)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2025-05-01-preview
+* **Output**: [VMExtensionPayload](#vmextensionpayload)
+
 ## AccountInfo
 ### Properties
 * **accountId**: string: Account id
@@ -80,6 +130,11 @@
 ### Properties
 * **nextLink**: string: The link to the next page of items
 * **value**: [AppServiceInfo](#appserviceinfo)[] (Required): The AppServiceInfo items on this page
+
+## BillingInfoResponse
+### Properties
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details
+* **partnerBillingEntity**: [PartnerBillingEntity](#partnerbillingentity): Partner Billing Entity details: Organization Info
 
 ## ConnectedPartnerResourceProperties
 ### Properties
@@ -108,6 +163,11 @@
 * **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
 * **vmIds**: string[]: VM resource IDs
 
+## LatestLinkedSaaSResponse
+### Properties
+* **isHiddenSaaS**: bool: Flag indicating if the SaaS resource is hidden
+* **saaSResourceId**: string: SaaS resource id
+
 ## LinkedResource
 ### Properties
 * **id**: string: The ARM id of the linked resource.
@@ -132,11 +192,47 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## MarketplaceSaaSInfo
+### Properties
+* **billedAzureSubscriptionId**: string: The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into.
+* **marketplaceResourceId**: string: Marketplace Subscription Details: Resource URI
+* **marketplaceStatus**: string: Marketplace Subscription Details: SaaS Subscription Status
+* **marketplaceSubscriptionId**: string: Marketplace Subscription Id. This is a GUID-formatted string.
+* **marketplaceSubscriptionName**: string: Marketplace Subscription Details: SAAS Name
+* **offerId**: string: Offer Id of the Marketplace offer,
+* **publisherId**: string: Publisher Id of the Marketplace offer.
+
 ## MetricRules
 ### Properties
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics.
 * **sendMetrics**: 'Disabled' | 'Enabled' | string: Flag specifying if metrics should be sent for the Monitor resource.
 * **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Reusable representation of an email address
+
+## MetricsRequest
+### Properties
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
+
+## MetricsStatusRequest
+### Properties
+* **azureResourceIds**: string[]: Azure resource IDs
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
+
+## MetricsStatusResponse
+### Properties
+* **azureResourceIds**: string[]: Azure resource IDs
+
+## MonitoredResource
+### Properties
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string: Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending logs to NewRelic.
+* **sendingMetrics**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending metrics to NewRelic.
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [MonitoredResource](#monitoredresource)[] (Required): The MonitoredResource items on this page
 
 ## MonitoredSubscription
 ### Properties
@@ -175,6 +271,17 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **singleSignOnProperties**: [NewRelicSingleSignOnProperties](#newrelicsinglesignonproperties): date when plan was applied
 * **userId**: string: User id
 
+## NewRelicMonitorResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MonitorProperties](#monitorproperties) (Required): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## NewRelicSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
@@ -186,12 +293,27 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ### Properties
 * **organizationId**: string: Organization id
 
+## PartnerBillingEntity
+### Properties
+* **organizationId**: string: The New Relic Organization Id.
+* **organizationName**: string: The New Relic Organization Name.
+
 ## PlanData
 ### Properties
 * **billingCycle**: string: Different billing cycles like Monthly/Weekly.
 * **effectiveDate**: string: date when plan was applied
 * **planDetails**: string: plan id as published by NewRelic
 * **usageType**: 'COMMITTED' | 'PAYG' | string: Different usage type like PAYG/COMMITTED. this could be enum
+
+## ResubscribeProperties
+### Properties
+* **offerId**: string: Offer Id of the NewRelic offer that needs to be resubscribed
+* **organizationId**: string: Organization Id of the NewRelic Organization that needs to be resubscribed
+* **planId**: string: Newly selected plan Id to create the new Marketplace subscription for Resubscribe
+* **publisherId**: string: Publisher Id of the NewRelic offer that needs to be resubscribed
+* **resourceGroup**: string: Newly selected Azure resource group in which the new Marketplace subscription will be created for Resubscribe
+* **subscriptionId**: string: Newly selected Azure Subscription Id in which the new Marketplace subscription will be created for Resubscribe
+* **termId**: string: Newly selected term Id to create the new Marketplace subscription for Resubscribe
 
 ## SaaSData
 ### Properties
@@ -203,6 +325,13 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **patchOperation**: 'Active' | 'AddBegin' | 'AddComplete' | 'DeleteBegin' | 'DeleteComplete' | string (WriteOnly): The operation for the patch on the resource.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of the resource
 
+## SwitchBillingRequest
+### Properties
+* **azureResourceId**: string: Azure resource Id
+* **organizationId**: string: Organization id
+* **planData**: [PlanData](#plandata): Plan details
+* **userEmail**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Reusable representation of an email address
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -211,6 +340,11 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -234,6 +368,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **firstName**: string {maxLength: 50}: First name
 * **lastName**: string {maxLength: 50}: Last name
 * **phoneNumber**: string {maxLength: 40}: Contact phone number
+
+## VMExtensionPayload
+### Properties
+* **ingestionKey**: string: Ingestion key of the account
 
 ## VMHostsListResponse
 ### Properties

@@ -26,16 +26,50 @@
 * **sku**: [SkuName](#skuname) (ReadOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function availableScopes (Microsoft.Capacity/reservationOrders/reservations@2019-04-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2019-04-01
+* **Input**: [AvailableScopeRequest](#availablescoperequest)
+* **Output**: [Properties](#properties)
+
+## Function merge (Microsoft.Capacity/reservationOrders@2019-04-01)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2019-04-01
+* **Input**: [MergeRequest](#mergerequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function split (Microsoft.Capacity/reservationOrders@2019-04-01)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2019-04-01
+* **Input**: [SplitRequest](#splitrequest)
+* **Output**: [ReservationResponse](#reservationresponse)[]
+
 ## AppliedScopeProperties
 ### Properties
 * **displayName**: string: Management group display name
 * **managementGroupId**: string: Management group ID of the format /providers/Microsoft.Management/managementGroups/{managementGroupId}
 * **tenantId**: string: Tenant ID of the applied scope type
 
+## AvailableScopeRequest
+### Properties
+* **properties**: [AvailableScopeRequestProperties](#availablescoperequestproperties): List of scopes for which availability should be checked
+
+## AvailableScopeRequestProperties
+### Properties
+* **scopes**: string[]: Scopes to be checked for availability
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
 * **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' | string
+
+## MergeProperties
+### Properties
+* **sources**: string[]: Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## MergeRequest
+### Properties
+* **properties**: [MergeProperties](#mergeproperties)
 
 ## PaymentDetail
 ### Properties
@@ -51,6 +85,10 @@
 ### Properties
 * **amount**: int
 * **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
+
+## Properties
+### Properties
+* **properties**: [SubscriptionScopeProperties](#subscriptionscopeproperties)
 
 ## PurchaseRequest
 ### Properties
@@ -175,7 +213,26 @@
 * **swapDestination**: string: Reservation Resource Id that the original resource gets swapped to. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 * **swapSource**: string: Resource Id of the Source Reservation that gets swapped. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
+## ScopeProperties
+### Properties
+* **reason**: string
+* **scope**: string
+* **valid**: bool
+
 ## SkuName
 ### Properties
 * **name**: string
+
+## SplitProperties
+### Properties
+* **quantities**: int[]: List of the quantities in the new reservations to create.
+* **reservationId**: string: Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## SplitRequest
+### Properties
+* **properties**: [SplitProperties](#splitproperties)
+
+## SubscriptionScopeProperties
+### Properties
+* **scopes**: [ScopeProperties](#scopeproperties)[]
 

@@ -5397,5 +5397,50 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualHardDiskUploadRequest",
+    "properties": {
+      "azureManagedDiskUploadUrl": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The Azure managed disk SAS URL to upload the virtual hard disk to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualHardDiskUploadResponse",
+    "properties": {
+      "virtualHardDiskId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Resource ID for a Virtual Hard Disk."
+      },
+      "uploadStatus": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 0,
+        "description": "The upload status of the virtual hard disk"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upload",
+    "resourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/428"
+    },
+    "input": {
+      "$ref": "#/427"
+    }
   }
 ]

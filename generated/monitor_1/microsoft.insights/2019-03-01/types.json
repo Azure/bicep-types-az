@@ -630,5 +630,18 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableRequest",
+    "properties": {
+      "receiverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the receiver to resubscribe."
+      }
+    }
   }
 ]

@@ -1394,5 +1394,141 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanLinkDefinition",
+    "properties": {
+      "planName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the plan."
+      },
+      "planLinkType": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Type of the plan link."
+      },
+      "maxAcquisitionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The maximum acquisition count by subscribers"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Base"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Addon"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Offer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Represents an offering of services against which a subscription can be created."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URI of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "link",
+    "resourceType": "Microsoft.Subscriptions.Admin/offers",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlink",
+    "resourceType": "Microsoft.Subscriptions.Admin/offers",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/97"
+    }
   }
 ]

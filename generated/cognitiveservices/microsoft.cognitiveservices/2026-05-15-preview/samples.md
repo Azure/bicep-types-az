@@ -95,9 +95,9 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/computes@2026-05-
   identity: {
     type: 'None'
   }
-  location: 'eastus'
   properties: {
     computeType: 'Cluster'
+    location: 'eastus'
     pools: [
       {
         name: 'default'
@@ -106,7 +106,6 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/computes@2026-05-
         vmPriority: 'Regular'
       }
     ]
-    subnetArmId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rgcognitiveservices/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/default'
   }
 }
 ```
@@ -123,11 +122,11 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/computes@2026-05-
       }
     }
   }
-  location: 'eastus'
   properties: {
     computeType: 'ContainerInstance'
     idleTimeBeforeShutdown: 'PT30M'
     imageLink: 'mcr.microsoft.com/azureml/curated/pytorch-gpu:latest'
+    location: 'eastus'
     sshSettings: {
       adminEnabled: true
       sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQ...'

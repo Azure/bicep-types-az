@@ -39,6 +39,12 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function move (Microsoft.MachineLearning/commitmentPlans/commitmentAssociations@2016-05-01-preview)
+* **Resource**: Microsoft.MachineLearning/commitmentPlans/commitmentAssociations
+* **ApiVersion**: 2016-05-01-preview
+* **Input**: [MoveCommitmentAssociationRequest](#movecommitmentassociationrequest)
+* **Output**: [CommitmentAssociation](#commitmentassociation)
+
 ## AssetItem
 ### Properties
 * **id**: string: Asset's Id.
@@ -77,6 +83,16 @@
 * **type**: 'Boolean' | 'Integer' | 'Number' | 'String' | string (Required): Data type of the column.
 * **x-ms-isnullable**: bool: Flag indicating if the type supports null values or not.
 * **x-ms-isordered**: bool: Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+
+## CommitmentAssociation
+### Properties
+* **etag**: string: An entity tag used to enforce optimistic concurrency.
+* **id**: string (ReadOnly): Resource Id.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [CommitmentAssociationProperties](#commitmentassociationproperties): The properties of the commitment association resource.
+* **tags**: [Tags](#tags): User-defined tags for the resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## CommitmentAssociationProperties
 ### Properties
@@ -196,6 +212,10 @@
 ### Additional Properties
 * **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
 
+## MoveCommitmentAssociationRequest
+### Properties
+* **destinationPlanId**: string: The ARM ID of the commitment plan to re-parent the commitment association to.
+
 ## OutputPort
 ### Properties
 * **type**: 'Dataset' | string: Port data type.
@@ -251,6 +271,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ColumnSpecification](#columnspecification)
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Tags
 ### Properties

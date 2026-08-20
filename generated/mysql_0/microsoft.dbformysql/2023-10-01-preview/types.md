@@ -59,6 +59,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/maintenances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backupAndExport (Microsoft.DBforMySQL/flexibleServers@2023-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [BackupAndExportRequest](#backupandexportrequest)
+* **Output**: [BackupAndExportResponse](#backupandexportresponse)
+
+## Function cutoverMigration (Microsoft.DBforMySQL/flexibleServers@2023-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [Server](#server)
+
+## Function validateBackup (Microsoft.DBforMySQL/flexibleServers@2023-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [ValidateBackupResponse](#validatebackupresponse)
+
 ## AdvancedThreatProtectionProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
@@ -71,6 +87,46 @@
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
 
+## BackupAndExportRequest
+### Properties
+* **backupSettings**: [BackupSettings](#backupsettings) (Required): Backup Settings
+* **targetDetails**: [BackupStoreDetails](#backupstoredetails) (Required): Backup Target Store Details
+
+## BackupAndExportResponse
+### Properties
+* **endTime**: string: End time
+* **error**: [ErrorDetail](#errordetail): The error object.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **percentComplete**: int {minValue: 0, maxValue: 100}: Operation progress (0-100).
+* **properties**: [BackupAndExportResponseProperties](#backupandexportresponseproperties): The response properties of a backup and export operation.
+* **startTime**: string: Start time
+* **status**: 'CancelInProgress' | 'Canceled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded': The operation status
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## BackupAndExportResponseProperties
+### Properties
+* **backupMetadata**: string: Metadata related to backup to be stored for restoring resource in key-value pairs.
+* **datasourceSizeInBytes**: int: Size of datasource in bytes
+* **dataTransferredInBytes**: int: Data transferred in bytes
+
+## BackupSettings
+### Properties
+* **backupFormat**: 'CollatedFormat' | 'Raw' | string: Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)
+* **backupName**: string {pattern: "(^[a-z0-9]$)|(^[a-z0-9][a-z0-9-]*[a-z0-9]$)"} (Required): The name of the backup.
+
+## BackupStoreDetails
+* **Discriminator**: objectType
+
+### Base Properties
+
+### FullBackupStoreDetails
+#### Properties
+* **objectType**: 'FullBackupStoreDetails' (Required): Type of the specific object - used for deserializing
+* **sasUriList**: string[] (Required): SASUriList of storage containers where backup data is to be streamed/copied.
+
+
 ## DataEncryption
 ### Properties
 * **geoBackupKeyURI**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
@@ -78,6 +134,19 @@
 * **primaryKeyURI**: string: Primary key uri
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): The additional info.
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## HighAvailability
 ### Properties
@@ -161,6 +230,18 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
+## Server
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [MySQLServerIdentity](#mysqlserveridentity): The cmk identity for the server.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [MySQLServerSku](#mysqlserversku): The SKU (pricing tier) of the server.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ServerBackupProperties
 ### Properties
 * **backupType**: string: Backup type.
@@ -219,4 +300,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ValidateBackupResponse
+### Properties
+* **properties**: [ValidateBackupResponseProperties](#validatebackupresponseproperties): The response properties of a pre backup operation.
+
+## ValidateBackupResponseProperties
+### Properties
+* **numberOfContainers**: int: Estimated no of storage containers required for resource data to be backed up.
 

@@ -1029,5 +1029,104 @@
     "output": {
       "$ref": "#/75"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of the key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.AppConfiguration/configurationStores",
+    "apiVersion": "2021-10-01-preview",
+    "output": {
+      "$ref": "#/76"
+    },
+    "input": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 1,
+        "description": "The resource type to check for name availability."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppConfiguration/configurationStores"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The value indicating whether the resource name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration/locations",
+    "apiVersion": "2021-10-01-preview",
+    "output": {
+      "$ref": "#/84"
+    },
+    "input": {
+      "$ref": "#/81"
+    }
   }
 ]

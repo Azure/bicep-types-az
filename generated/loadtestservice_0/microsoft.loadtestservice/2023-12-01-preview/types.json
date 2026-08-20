@@ -791,5 +791,152 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBucketRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Request object of new quota for a quota bucket."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBucketRequestProperties",
+    "properties": {
+      "currentUsage": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Current quota usage of the quota bucket."
+      },
+      "currentQuota": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Current quota limit of the quota bucket."
+      },
+      "newQuota": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "New quota limit of the quota bucket."
+      },
+      "dimensions": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Dimensions for new quota request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaBucketRequestPropertiesDimensions",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Subscription Id dimension for new quota request of the quota bucket."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Location dimension for new quota request of the quota bucket."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckQuotaAvailabilityResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "Check quota availability response properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckQuotaAvailabilityResponseProperties",
+    "properties": {
+      "isAvailable": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "True/False indicating whether the quota request be granted based on availability."
+      },
+      "availabilityStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message indicating additional details to add to quota support request."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkAvailability",
+    "resourceType": "Microsoft.LoadTestService/locations/quotas",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/64"
+    }
   }
 ]

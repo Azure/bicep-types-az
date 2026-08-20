@@ -25,6 +25,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.SignalRService/locations@2020-07-01-preview)
+* **Resource**: Microsoft.SignalRService/locations
+* **ApiVersion**: 2020-07-01-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function listKeys (Microsoft.SignalRService/signalR@2020-07-01-preview)
 * **Resource**: Microsoft.SignalRService/signalR
 * **ApiVersion**: 2020-07-01-preview
@@ -48,6 +54,17 @@ It also appears in the aud (audience) claim of the issued token.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
+
+## NameAvailability
+### Properties
+* **message**: string: The message of the operation.
+* **nameAvailable**: bool: Indicates whether the name is available or not.
+* **reason**: string: The reason of the availability. Required if name is not available.
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): The SignalR service name to validate. e.g."my-signalR-name-here"
+* **type**: string (Required): The resource type. Can be "Microsoft.SignalRService/SignalR" or "Microsoft.SignalRService/webPubSub"
 
 ## NetworkACL
 ### Properties

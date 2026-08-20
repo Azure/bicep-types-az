@@ -57,6 +57,16 @@
 * **properties**: [MachineProperties](#machineproperties) (ReadOnly): Properties of the machine.
 * **type**: 'Microsoft.Migrate/projects/machines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/projects/groups/assessments@2017-11-11-preview)
+* **Resource**: Microsoft.Migrate/projects/groups/assessments
+* **ApiVersion**: 2017-11-11-preview
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function keys (Microsoft.Migrate/projects@2017-11-11-preview)
+* **Resource**: Microsoft.Migrate/projects
+* **ApiVersion**: 2017-11-11-preview
+* **Output**: [ProjectKey](#projectkey)
+
 ## AssessedDisk
 ### Properties
 * **gigabytesConsumed**: int (ReadOnly): Gigabytes of storage consumed by this disk.
@@ -150,6 +160,11 @@
 * **gigabytesAllocated**: int (ReadOnly): Gigabytes of storage provisioned for this disk.
 * **gigabytesConsumed**: int (ReadOnly): Gigabytes of storage consumed by this disk.
 
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (ReadOnly): Expiry date of download url.
+
 ## GroupProperties
 ### Properties
 * **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
@@ -190,6 +205,11 @@
 ### Properties
 * **ipAddresses**: string[] (ReadOnly): List of IP Addresses on the network adapter.
 * **macAddress**: string (ReadOnly): MAC Address of the network adapter.
+
+## ProjectKey
+### Properties
+* **workspaceId**: string (ReadOnly): ID of Migration Project.
+* **workspaceKey**: string (ReadOnly): Key of Migration Project.
 
 ## ProjectProperties
 ### Properties

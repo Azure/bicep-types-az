@@ -174,6 +174,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Chaos/workspaces/scenarios/runs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getExecutionDetails (Microsoft.Chaos/experiments/executions@2026-05-01-preview)
+* **Resource**: Microsoft.Chaos/experiments/executions
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: [ExperimentExecutionDetails](#experimentexecutiondetails)
+
 ## ActionDependency
 ### Properties
 * **name**: string (Required): Name of the action this depends on.
@@ -192,10 +197,26 @@
 * **supportedTargetTypes**: [ActionSupportedTargetType](#actionsupportedtargettype)[] (ReadOnly): List of target types supported by this action.
 * **version**: string (ReadOnly): The version of the action (e.g., "1.0.0").
 
+## ActionStatus
+### Properties
+* **actionId**: string (ReadOnly): The id of the action status.
+* **actionName**: string (ReadOnly): The name of the action status.
+* **endTime**: string (ReadOnly): String that represents the end time of the action.
+* **startTime**: string (ReadOnly): String that represents the start time of the action.
+* **status**: string (ReadOnly): The status of the action.
+* **targets**: [ExperimentExecutionActionTargetDetailsProperties](#experimentexecutionactiontargetdetailsproperties)[] (ReadOnly): The array of targets.
+
 ## ActionSupportedTargetType
 ### Properties
 * **requiredPermissions**: string[]: List of Azure permissions required for this target type.
 * **targetType**: string: The Azure resource type (e.g., "Microsoft.Compute/virtualMachines").
+
+## BranchStatus
+### Properties
+* **actions**: [ActionStatus](#actionstatus)[] (ReadOnly): The array of actions.
+* **branchId**: string (ReadOnly): The id of the branch status.
+* **branchName**: string (ReadOnly): The name of the branch status.
+* **status**: string (ReadOnly): The status of the branch.
 
 ## CapabilityProperties
 ### Properties
@@ -341,6 +362,40 @@ Mutually exclusive with `physicalZones` — set one or the other, not both.
 ### Properties
 * **objectId**: string (Required, ReadOnly): The identity object id.
 * **tenantId**: string (Required, ReadOnly): The identity tenant id.
+
+## ExperimentExecutionActionTargetDetailsError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message
+
+## ExperimentExecutionActionTargetDetailsProperties
+### Properties
+* **error**: [ExperimentExecutionActionTargetDetailsError](#experimentexecutionactiontargetdetailserror) (ReadOnly): The error of the action.
+* **status**: string (ReadOnly): The status of the execution.
+* **target**: string (ReadOnly): The target for the action.
+* **targetCompletedTime**: string (ReadOnly): String that represents the completed date time.
+* **targetFailedTime**: string (ReadOnly): String that represents the failed date time.
+
+## ExperimentExecutionDetails
+### Properties
+* **id**: string (ReadOnly): String of the fully qualified resource ID.
+* **name**: string (ReadOnly): String of the resource name.
+* **properties**: [ExperimentExecutionDetailsProperties](#experimentexecutiondetailsproperties) (ReadOnly): The properties of the experiment execution details.
+* **type**: string (ReadOnly): String of the resource type.
+
+## ExperimentExecutionDetailsProperties
+### Properties
+* **failureReason**: string (ReadOnly): The reason why the execution failed.
+* **lastActionAt**: string (ReadOnly): String that represents the last action date time.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Resource provisioning state. Not currently in use for executions.
+* **runInformation**: [ExperimentExecutionDetailsPropertiesRunInformation](#experimentexecutiondetailspropertiesruninformation) (ReadOnly): The information of the experiment run.
+* **startedAt**: string (ReadOnly): String that represents the start date time.
+* **status**: string (ReadOnly): The status of the execution.
+* **stoppedAt**: string (ReadOnly): String that represents the stop date time.
+
+## ExperimentExecutionDetailsPropertiesRunInformation
+### Properties
+* **steps**: [StepStatus](#stepstatus)[] (ReadOnly): The steps of the experiment run.
 
 ## ExperimentExecutionProperties
 ### Properties
@@ -513,6 +568,13 @@ requested physical zones, and per-subscription logical zone mappings.
 * **resources**: [ScenarioRunResource](#scenariorunresource)[] (Required, ReadOnly): The resources associated with the specified action.
 * **startedAt**: string (ReadOnly): When the action was started.
 * **state**: 'Canceled' | 'Canceling' | 'Failed' | 'FailingOnError' | 'Pending' | 'Running' | 'Skipped' | 'Starting' | 'Stopping' | 'Succeeded' | string (Required, ReadOnly): The state of the action.
+
+## StepStatus
+### Properties
+* **branches**: [BranchStatus](#branchstatus)[] (ReadOnly): The array of branches.
+* **status**: string (ReadOnly): The value of the status of the step.
+* **stepId**: string (ReadOnly): The id of the step.
+* **stepName**: string (ReadOnly): The name of the step.
 
 ## SystemData
 ### Properties

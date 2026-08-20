@@ -3048,6 +3048,50 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FailOver",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailOverProperties",
+    "properties": {
+      "primaryLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Query parameter for the new primary location after failover."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.ServiceBus/namespaces",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/199"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryConnectionString": {
@@ -3107,7 +3151,84 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateAccessKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "The access key to regenerate."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/202"
+    },
+    "input": {
+      "$ref": "#/204"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FailoverPropertiesProperties",
+    "properties": {
+      "IsSafeFailover": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
+      }
     }
   },
   {
@@ -3116,7 +3237,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/202"
     }
   },
   {
@@ -3125,7 +3246,19 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/202"
+    },
+    "input": {
+      "$ref": "#/204"
     }
   },
   {
@@ -3134,7 +3267,19 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2023-01-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/202"
+    },
+    "input": {
+      "$ref": "#/204"
     }
   }
 ]

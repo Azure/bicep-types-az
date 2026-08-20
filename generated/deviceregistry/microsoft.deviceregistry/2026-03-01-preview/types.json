@@ -5818,5 +5818,204 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceMigrateRequest",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/372"
+        },
+        "flags": 0,
+        "description": "Scope of the migrate resources operation."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/373"
+        },
+        "flags": 0,
+        "description": "List of asset resources to be migrated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resources"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceMigrateResponse",
+    "properties": {
+      "migrateResults": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "List of migrate results containing result of each asset migrate operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateResult",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource Id of the asset resource."
+      },
+      "result": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 2,
+        "description": "The result of the migrate operation."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 0,
+        "description": "The error if the migrate operation is not successful."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/377"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Error",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error code for classification of errors (ex: '400', '404', '500', etc.)."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Human-readable helpful error message to provide additional context for error (e.g.,: “Capability ID 'foo' does not exist”)."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 2,
+        "description": "Array of error details that describe the status of each error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/375"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.DeviceRegistry/namespaces",
+    "apiVersion": "2026-03-01-preview",
+    "output": {
+      "$ref": "#/374"
+    },
+    "input": {
+      "$ref": "#/370"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceCredentialsRevokeRequest",
+    "properties": {
+      "disable": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Indicates whether to disable the device(s) after revoking credentials. Prevents new credentials to be issued."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceCredentialsRevokeResponse",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Indicates whether revocation succeeded or failed."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 0,
+        "description": "Error details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revoke",
+    "resourceType": "Microsoft.DeviceRegistry/namespaces/devices",
+    "apiVersion": "2026-03-01-preview",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/383"
+    }
   }
 ]

@@ -26,6 +26,22 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function retrieveCertificateActions (Microsoft.CertificateRegistration/certificateOrders@2020-06-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2020-06-01
+* **Output**: [CertificateOrderAction](#certificateorderaction)[]
+
+## Function retrieveEmailHistory (Microsoft.CertificateRegistration/certificateOrders@2020-06-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2020-06-01
+* **Output**: [CertificateEmail](#certificateemail)[]
+
+## Function retrieveSiteSeal (Microsoft.CertificateRegistration/certificateOrders@2020-06-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2020-06-01
+* **Input**: [SiteSealRequest](#sitesealrequest)
+* **Output**: [SiteSeal](#siteseal)
+
 ## AppServiceCertificate
 ### Properties
 * **keyVaultId**: string: Key Vault resource Id.
@@ -71,6 +87,32 @@
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint.
 * **version**: int (ReadOnly): Certificate Version.
 
+## CertificateEmail
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [CertificateEmailProperties](#certificateemailproperties): CertificateEmail resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## CertificateEmailProperties
+### Properties
+* **emailId**: string: Email id.
+* **timeStamp**: string: Time stamp.
+
+## CertificateOrderAction
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [CertificateOrderActionProperties](#certificateorderactionproperties): CertificateOrderAction resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## CertificateOrderActionProperties
+### Properties
+* **actionType**: 'CertificateExpirationWarning' | 'CertificateExpired' | 'CertificateIssued' | 'CertificateOrderCanceled' | 'CertificateOrderCreated' | 'CertificateRevoked' | 'DomainValidationComplete' | 'FraudCleared' | 'FraudDetected' | 'FraudDocumentationRequired' | 'OrgNameChange' | 'OrgValidationComplete' | 'SanDrop' | 'Unknown' (ReadOnly): Action type.
+* **createdAt**: string (ReadOnly): Time at which the certificate action was performed.
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
@@ -80,4 +122,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SiteSeal
+### Properties
+* **html**: string (Required): HTML snippet
+
+## SiteSealRequest
+### Properties
+* **lightTheme**: bool: If <code>true</code> use the light color theme for site seal; otherwise, use the default color theme.
+* **locale**: string: Locale of site seal.
 

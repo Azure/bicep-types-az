@@ -1479,11 +1479,24 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CollectionAdminUpdate",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the object identifier of the admin."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "BatchFeatureRequest",
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "Set of features"
@@ -1502,7 +1515,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "Features with enabled status"
@@ -1517,7 +1530,7 @@
     "name": "BatchFeatureStatusFeatures",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/122"
+      "$ref": "#/123"
     }
   },
   {
@@ -1526,10 +1539,10 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/121"
+      "$ref": "#/122"
     },
     "input": {
-      "$ref": "#/119"
+      "$ref": "#/120"
     }
   },
   {
@@ -1538,10 +1551,10 @@
     "resourceType": "Microsoft.Purview/locations",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/121"
+      "$ref": "#/122"
     },
     "input": {
-      "$ref": "#/119"
+      "$ref": "#/120"
     }
   }
 ]

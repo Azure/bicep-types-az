@@ -26,6 +26,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createOrUpdateExternalUser (Microsoft.Elastic/monitors@2023-05-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-05-01-preview
+* **Input**: [ExternalUserInfo](#externaluserinfo)
+* **Output**: [ExternalUserCreationResponse](#externalusercreationresponse)
+
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2023-05-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2023-05-01-preview
@@ -55,6 +61,11 @@
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2023-05-01-preview
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
+
+## Function vmIngestionDetails (Microsoft.Elastic/monitors@2023-05-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-05-01-preview
+* **Output**: [VMIngestionDetailsResponse](#vmingestiondetailsresponse)
 
 ## CompanyInfo
 ### Properties
@@ -120,6 +131,18 @@
 * **description**: string: Description of the elastic filter rule
 * **id**: string: Id of the elastic filter rule
 * **source**: string: IP of the elastic filter rule
+
+## ExternalUserCreationResponse
+### Properties
+* **created**: bool (ReadOnly): Shows if user is created or updated
+
+## ExternalUserInfo
+### Properties
+* **emailId**: string: Email id of the user to be created or updated
+* **fullName**: string: Full name of the user to be created or updated
+* **password**: string {sensitive}: Password of the user to be created or updated
+* **roles**: string[]: Roles to be assigned for  created or updated user
+* **userName**: string: Username of the user to be created or updated
 
 ## FilteringTag
 ### Properties
@@ -208,6 +231,11 @@
 ### Properties
 * **nextLink**: string: Link to the next Vm resource Id, if any.
 * **value**: [VMResources](#vmresources)[]: Results of a list operation.
+
+## VMIngestionDetailsResponse
+### Properties
+* **cloudId**: string: The cloudId of given Elastic monitor resource.
+* **ingestionKey**: string {sensitive}: Ingestion details to install agent on given VM.
 
 ## VMResources
 ### Properties

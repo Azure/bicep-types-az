@@ -2355,6 +2355,38 @@
   },
   {
     "$type": "ObjectType",
+    "name": "BatchAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 1,
+        "description": "The type of account key to regenerate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "BatchAccountKeys",
     "properties": {
       "accountName": {
@@ -2382,11 +2414,419 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/169"
+    },
+    "input": {
+      "$ref": "#/165"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2018-12-01",
     "output": {
-      "$ref": "#/165"
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivateApplicationPackageParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The format of the application package binary file."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPackage",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The properties associated with the Application Package."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/173"
+    },
+    "input": {
+      "$ref": "#/172"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 1,
+        "description": "The resource type. Must be set to Microsoft.Batch/batchAccounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Batch/batchAccounts"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Batch/locations",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/177"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Certificate",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0,
+        "description": "The properties associated with the certificate."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 2
+      },
+      "provisioningStateTransitionTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the certificate entered its current state."
+      },
+      "previousProvisioningState": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 2,
+        "description": "The previous provisioned state of the resource"
+      },
+      "previousProvisioningStateTransitionTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time at which the certificate entered its previous state."
+      },
+      "publicData": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The public key of the certificate."
+      },
+      "deleteCertificateError": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "This is only returned when the certificate provisioningState is 'Failed'."
+      },
+      "thumbprintAlgorithm": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "This must match the first portion of the certificate name. Currently required to be 'SHA1'."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "This must match the thumbprint from the name."
+      },
+      "format": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pfx"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cer"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelDelete",
+    "resourceType": "Microsoft.Batch/batchAccounts/certificates",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Pool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The properties associated with the pool."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ETag of the resource, used for concurrency statements."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableAutoScale",
+    "resourceType": "Microsoft.Batch/batchAccounts/pools",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopResize",
+    "resourceType": "Microsoft.Batch/batchAccounts/pools",
+    "apiVersion": "2018-12-01",
+    "output": {
+      "$ref": "#/196"
     }
   }
 ]

@@ -81,6 +81,28 @@
 * **tags**: [NodeTypeTags](#nodetypetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getazresiliencystatus (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-06-01-preview
+* **Output**: [ManagedAzResiliencyStatus](#managedazresiliencystatus)
+
+## Function getFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationIdContent](#faultsimulationidcontent)
+* **Output**: [FaultSimulation](#faultsimulation)
+
+## Function getFaultSimulation (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationIdContent](#faultsimulationidcontent)
+* **Output**: [FaultSimulation](#faultsimulation)
+
+## Function getMaintenanceWindowStatus (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-06-01-preview
+* **Output**: [ManagedMaintenanceWindowStatus](#managedmaintenancewindowstatus)
+
 ## Function listFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
 * **Resource**: Microsoft.ServiceFabric/managedClusters
 * **ApiVersion**: 2025-06-01-preview
@@ -90,6 +112,30 @@
 * **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
 * **ApiVersion**: 2025-06-01-preview
 * **Output**: [FaultSimulationListResult](#faultsimulationlistresult)
+
+## Function startFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationContentWrapper](#faultsimulationcontentwrapper)
+* **Output**: [FaultSimulation](#faultsimulation)
+
+## Function startFaultSimulation (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationContentWrapper](#faultsimulationcontentwrapper)
+* **Output**: [FaultSimulation](#faultsimulation)
+
+## Function stopFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationIdContent](#faultsimulationidcontent)
+* **Output**: [FaultSimulation](#faultsimulation)
+
+## Function stopFaultSimulation (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-06-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [FaultSimulationIdContent](#faultsimulationidcontent)
+* **Output**: [FaultSimulation](#faultsimulation)
 
 ## AdditionalNetworkInterfaceConfiguration
 ### Properties
@@ -262,12 +308,20 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 * **zones**: string[]: Indicates the zones of the fault simulation.
 
 
+## FaultSimulationContentWrapper
+### Properties
+* **parameters**: [FaultSimulationContent](#faultsimulationcontent) (Required): Parameters for Fault Simulation start action.
+
 ## FaultSimulationDetails
 ### Properties
 * **clusterId**: string: unique identifier for the cluster resource.
 * **nodeTypeFaultSimulation**: [NodeTypeFaultSimulation](#nodetypefaultsimulation)[]: List of node type simulations associated with the cluster fault simulation.
 * **operationId**: string: unique identifier for the operation associated with the fault simulation.
 * **parameters**: [FaultSimulationContent](#faultsimulationcontent): Fault simulation parameters.
+
+## FaultSimulationIdContent
+### Properties
+* **simulationId**: string (Required): unique identifier for the fault simulation.
 
 ## FaultSimulationListResult
 ### Properties
@@ -305,6 +359,11 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 * **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
 * **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
+
+## ManagedAzResiliencyStatus
+### Properties
+* **baseResourceStatus**: [ResourceAzStatus](#resourceazstatus)[]: List of Managed VM Sizes for Service Fabric Managed Clusters.
+* **isClusterZoneResilient**: bool (ReadOnly): URL to get the next set of Managed VM Sizes if there are any.
 
 ## ManagedClusterProperties
 ### Properties
@@ -364,6 +423,16 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## ManagedMaintenanceWindowStatus
+### Properties
+* **canApplyUpdates**: bool (ReadOnly): If updates can be applied.
+* **isRegionReady**: bool (ReadOnly): Indicates if the region is ready to configure maintenance windows.
+* **isWindowActive**: bool (ReadOnly): If maintenance window is active.
+* **isWindowEnabled**: bool (ReadOnly): If maintenance window is enabled on this cluster.
+* **lastWindowEndTimeUTC**: string (ReadOnly): Last window end time in UTC.
+* **lastWindowStartTimeUTC**: string (ReadOnly): Last window start time in UTC.
+* **lastWindowStatusUpdateAtUTC**: string (ReadOnly): Last window update time in UTC.
 
 ## NetworkSecurityRule
 ### Properties
@@ -501,6 +570,13 @@ should be split between the partition ‘Count’
 * **ipTags**: [IpTag](#iptag)[]: Specifies the list of IP tags associated with the public IP address.
 * **name**: string (Required): Name of the network interface.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6' | string: Specifies whether the IP configuration's public IP is IPv4 or IPv6. Default is IPv4.
+
+## ResourceAzStatus
+### Properties
+* **details**: string (ReadOnly): Zone resiliency status details for the resource.
+* **isZoneResilient**: bool (ReadOnly): VM Size name.
+* **resourceName**: string (ReadOnly): VM Size properties.
+* **resourceType**: string (ReadOnly): VM Size id.
 
 ## RollingUpgradeMonitoringPolicy
 ### Properties

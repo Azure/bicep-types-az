@@ -71,6 +71,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function validateCustomDomain (Microsoft.Network/frontDoors@2025-10-01)
+* **Resource**: Microsoft.Network/frontDoors
+* **ApiVersion**: 2025-10-01
+* **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
+* **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
 ## Backend
 ### Properties
 * **address**: string: Location of the backend (IP address or FQDN)
@@ -432,6 +438,16 @@
 ## SubResource
 ### Properties
 * **id**: string: Resource ID.
+
+## ValidateCustomDomainInput
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+
+## ValidateCustomDomainOutput
+### Properties
+* **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
+* **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
+* **reason**: string (ReadOnly): The reason why the custom domain is not valid.
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties

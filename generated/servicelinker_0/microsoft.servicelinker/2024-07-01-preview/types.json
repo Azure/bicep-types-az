@@ -2490,11 +2490,282 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "generateConfigurations",
+    "resourceType": "Microsoft.ServiceLinker/linkers",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listConfigurations",
     "resourceType": "Microsoft.ServiceLinker/linkers",
     "apiVersion": "2024-07-01-preview",
     "output": {
       "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "The validation result detail."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validated Linker id."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validation operation status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateResult",
+    "properties": {
+      "linkerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The linker name."
+      },
+      "isConnectionAvailable": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "A boolean value indicating whether the connection is available or not"
+      },
+      "reportStartTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the validation report."
+      },
+      "reportEndTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the validation report."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id of the Linker source application."
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of target service."
+      },
+      "authType": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      },
+      "validationDetail": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 0,
+        "description": "The detail of validation result"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "systemAssignedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "userAssignedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "servicePrincipalSecret"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "servicePrincipalCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secret"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "accessKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "userAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "easyAuthMicrosoftEntraID"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResultItem",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The validation item name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of validation item"
+      },
+      "result": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "The result of validation"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message of validation result"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code of validation result"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/214"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateLinker",
+    "resourceType": "Microsoft.ServiceLinker/linkers",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/203"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateConfigurations",
+    "resourceType": "Microsoft.ServiceLinker/locations/connectors",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.ServiceLinker/locations/connectors",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/203"
     }
   }
 ]

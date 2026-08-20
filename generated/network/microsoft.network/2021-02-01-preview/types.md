@@ -252,6 +252,18 @@
 * **Input**: [QueryRequestOptions](#queryrequestoptions)
 * **Output**: [NetworkManagerEffectiveSecurityAdminRulesListResult](#networkmanagereffectivesecurityadminruleslistresult)
 
+## Function reconcile (Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2021-02-01-preview)
+* **Resource**: Microsoft.Network/networkSecurityPerimeters/resourceAssociations
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: any
+* **Output**: any
+
+## Function reconcile (Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2021-02-01-preview)
+* **Resource**: Microsoft.Network/networkSecurityPerimeters/profiles/accessRules
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: any
+* **Output**: any
+
 ## ActiveBaseSecurityAdminRule
 * **Discriminator**: kind
 

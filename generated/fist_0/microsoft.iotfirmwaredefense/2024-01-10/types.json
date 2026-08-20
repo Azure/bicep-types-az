@@ -929,5 +929,61 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlToken",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "SAS URL for creating or accessing a blob file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDownloadUrl",
+    "resourceType": "Microsoft.IoTFirmwareDefense/workspaces/firmwares",
+    "apiVersion": "2024-01-10",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateFilesystemDownloadUrl",
+    "resourceType": "Microsoft.IoTFirmwareDefense/workspaces/firmwares",
+    "apiVersion": "2024-01-10",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateUploadUrlRequest",
+    "properties": {
+      "firmwareId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A unique ID for the firmware to be uploaded."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateUploadUrl",
+    "resourceType": "Microsoft.IoTFirmwareDefense/workspaces",
+    "apiVersion": "2024-01-10",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/67"
+    }
   }
 ]

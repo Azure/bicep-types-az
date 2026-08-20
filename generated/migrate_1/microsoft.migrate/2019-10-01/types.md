@@ -132,6 +132,17 @@
 * **properties**: [CollectorProperties](#collectorproperties)
 * **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUrl (Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups/assessments
+* **ApiVersion**: 2019-10-01
+* **Output**: [DownloadUrl](#downloadurl)
+
+## Function updateMachines (Microsoft.Migrate/assessmentProjects/groups@2019-10-01)
+* **Resource**: Microsoft.Migrate/assessmentProjects/groups
+* **ApiVersion**: 2019-10-01
+* **Input**: [UpdateGroupBody](#updategroupbody)
+* **Output**: [Group](#group)
+
 ## AssessedDisk
 ### Properties
 * **displayName**: string (ReadOnly): User friendly name of the assessed disk.
@@ -272,6 +283,24 @@
 * **displayName**: string (ReadOnly): User friendly name of the disk.
 * **gigabytesAllocated**: int (ReadOnly): Gigabytes of storage provisioned for this disk.
 
+## DownloadUrl
+### Properties
+* **assessmentReportUrl**: string (ReadOnly): Hyperlink to download report.
+* **expirationTime**: string (ReadOnly): Expiry date of download url.
+
+## Group
+### Properties
+* **eTag**: string: For optimistic concurrency control.
+* **id**: string (ReadOnly): Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
+* **name**: string (ReadOnly): Name of the group.
+* **properties**: [GroupProperties](#groupproperties) (Required): Properties of the group.
+* **type**: string (ReadOnly): Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
+
+## GroupBodyProperties
+### Properties
+* **machines**: string[]: List of machine names that are part of this group.
+* **operationType**: 'Add' | 'Remove' | string: Whether to add or remove the machines.
+
 ## GroupProperties
 ### Properties
 * **areAssessmentsRunning**: bool (ReadOnly): If the assessments are in running state.
@@ -370,6 +399,11 @@
 ## ResourceId
 ### Properties
 * **id**: string (ReadOnly)
+
+## UpdateGroupBody
+### Properties
+* **eTag**: string: For optimistic concurrency control.
+* **properties**: [GroupBodyProperties](#groupbodyproperties): Properties of the group.
 
 ## VmFamily
 ### Properties

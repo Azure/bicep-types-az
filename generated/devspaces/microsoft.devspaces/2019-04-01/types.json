@@ -251,6 +251,38 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ContainerHostMapping",
+    "properties": {
+      "containerHostResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM ID of the Container Host resource"
+      },
+      "mappedControllerResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ARM ID of the mapped Controller resource"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkContainerHostMapping",
+    "resourceType": "Microsoft.DevSpaces/locations",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/21"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListConnectionDetailsParameters",
     "properties": {
       "targetContainerHostResourceId": {
@@ -268,7 +300,7 @@
     "properties": {
       "connectionDetailsList": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/29"
         },
         "flags": 0,
         "description": "List of Azure Dev Spaces Controller connection details."
@@ -281,7 +313,7 @@
     "properties": {
       "orchestratorSpecificConnectionDetails": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "Base class for types that supply values used to connect to container orchestrators"
@@ -295,7 +327,7 @@
     "baseProperties": {},
     "elements": {
       "Kubernetes": {
-        "$ref": "#/25"
+        "$ref": "#/27"
       }
     }
   },
@@ -312,7 +344,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/28"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -326,7 +358,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/23"
+      "$ref": "#/25"
     }
   },
   {
@@ -335,10 +367,10 @@
     "resourceType": "Microsoft.DevSpaces/controllers",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/22"
+      "$ref": "#/24"
     },
     "input": {
-      "$ref": "#/21"
+      "$ref": "#/23"
     }
   }
 ]

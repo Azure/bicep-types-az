@@ -3117,5 +3117,18 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompleteDatabaseRestoreDefinition",
+    "properties": {
+      "lastBackupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The last backup name to apply"
+      }
+    }
   }
 ]

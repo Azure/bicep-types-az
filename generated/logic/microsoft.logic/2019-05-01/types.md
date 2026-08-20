@@ -258,6 +258,12 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateUpgradedDefinition (Microsoft.Logic/workflows@2019-05-01)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2019-05-01
+* **Input**: [GenerateUpgradedDefinitionParameters](#generateupgradeddefinitionparameters)
+* **Output**: any
+
 ## Function listCallbackUrl (Microsoft.Logic/workflows@2019-05-01)
 * **Resource**: Microsoft.Logic/workflows
 * **ApiVersion**: 2019-05-01
@@ -330,6 +336,12 @@
 * **Resource**: Microsoft.Logic/workflows
 * **ApiVersion**: 2019-05-01
 * **Output**: any
+
+## Function regenerateAccessKey (Microsoft.Logic/integrationAccounts@2019-05-01)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2019-05-01
+* **Input**: [RegenerateActionParameter](#regenerateactionparameter)
+* **Output**: [IntegrationAccount](#integrationaccount)
 
 ## AgreementContent
 ### Properties
@@ -774,10 +786,24 @@
 * **connector**: [FlowEndpoints](#flowendpoints): The connector endpoints.
 * **workflow**: [FlowEndpoints](#flowendpoints): The workflow endpoints.
 
+## GenerateUpgradedDefinitionParameters
+### Properties
+* **targetSchemaVersion**: string: The target schema version.
+
 ## GetCallbackUrlParameters
 ### Properties
 * **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
 * **notAfter**: string: The expiry time.
+
+## IntegrationAccount
+### Properties
+* **id**: string (ReadOnly): The resource id.
+* **location**: string: The resource location.
+* **name**: string (ReadOnly): Gets the resource name.
+* **properties**: [IntegrationAccountProperties](#integrationaccountproperties): The integration account properties.
+* **sku**: [IntegrationAccountSku](#integrationaccountsku): The sku.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **type**: string (ReadOnly): Gets the resource type.
 
 ## IntegrationAccountAgreementProperties
 ### Properties
@@ -1000,6 +1026,10 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week.
 * **occurrence**: int: The occurrence.
 
+## RegenerateActionParameter
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+
 ## RepetitionIndex
 ### Properties
 * **itemIndex**: int (Required): The index.
@@ -1023,6 +1053,11 @@
 * **id**: string: The resource id.
 * **name**: string (ReadOnly): Gets the resource name.
 * **type**: string (ReadOnly): Gets the resource type.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

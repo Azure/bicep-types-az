@@ -40,6 +40,12 @@
 * **Input**: [AccountSasParameters](#accountsasparameters)
 * **Output**: [MapsAccountSasToken](#mapsaccountsastoken)
 
+## Function regenerateKey (Microsoft.Maps/accounts@2023-08-01-preview)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [MapsKeySpecification](#mapskeyspecification)
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## AccountSasParameters
 ### Properties
 * **expiry**: string (Required): The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z". Maximum duration allowed is 24 hours between `start` and `expiry`.
@@ -111,6 +117,10 @@
 ## MapsAccountSasToken
 ### Properties
 * **accountSasToken**: string (ReadOnly): The shared access signature access token.
+
+## MapsKeySpecification
+### Properties
+* **keyType**: 'primary' | 'secondary' | string (Required): Whether the operation refers to the primary or secondary key.
 
 ## Sku
 ### Properties

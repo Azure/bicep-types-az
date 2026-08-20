@@ -84,6 +84,42 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function beginGetAccess (Microsoft.Compute/disks@2026-03-02)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2026-03-02
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function beginGetAccess (Microsoft.Compute/snapshots@2026-03-02)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2026-03-02
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function beginGetAccess (Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints@2026-03-02)
+* **Resource**: Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints
+* **ApiVersion**: 2026-03-02
+* **Input**: [GrantAccessData](#grantaccessdata)
+* **Output**: [AccessUri](#accessuri)
+
+## Function updateImmutabilityPolicy (Microsoft.Compute/snapshots@2026-03-02)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2026-03-02
+* **Input**: [ImmutabilityPolicyData](#immutabilitypolicydata)
+* **Output**: [Snapshot](#snapshot)
+
+## Function updateImmutabilityPolicyLock (Microsoft.Compute/snapshots@2026-03-02)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2026-03-02
+* **Input**: [ImmutabilityPolicyLockData](#immutabilitypolicylockdata)
+* **Output**: [Snapshot](#snapshot)
+
+## AccessUri
+### Properties
+* **accessSAS**: string (ReadOnly): A SAS uri for accessing a disk.
+* **securityDataAccessSAS**: string (ReadOnly): A SAS uri for accessing a VM guest state.
+* **securityMetadataAccessSAS**: string (ReadOnly): A SAS uri for accessing a VM metadata.
+
 ## ApiError
 ### Properties
 * **code**: string: The error code.
@@ -256,6 +292,13 @@
 * **name**: string: The name of the extended location.
 * **type**: 'EdgeZone' | string: The type of the extended location.
 
+## GrantAccessData
+### Properties
+* **access**: 'None' | 'Read' | 'Write' | string (Required): The Access Level, accepted values include None, Read, Write.
+* **durationInSeconds**: int (Required): Time duration in seconds until the SAS access expires.
+* **fileFormat**: 'VHD' | 'VHDX' | string: Used to specify the file format when making request for SAS on a VHDX file format snapshot
+* **getSecureVMGuestStateSAS**: bool: Set this flag to true to get additional SAS for VM guest state
+
 ## ImageDiskReference
 ### Properties
 * **communityGalleryImageId**: string: A relative uri containing a community Azure Compute Gallery image reference.
@@ -270,6 +313,16 @@
 * **policyExpirationTime**: string (ReadOnly): The time when the immutability policy will expire on the snapshot.
 * **policyStartTime**: string (ReadOnly): The time when the immutability policy was set on the snapshot.
 * **type**: 'Locked' | 'Unlocked' | string (ReadOnly): The type of the immutability policy.
+
+## ImmutabilityPolicyData
+### Properties
+* **immutabilityDurationDays**: int {minValue: 1} (Required): The immutability duration for the snapshot, in number of days.
+* **type**: 'Locked' | 'Unlocked' | string (Required): The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period.
+
+## ImmutabilityPolicyLockData
+### Properties
+* **immutabilityDurationDays**: int {minValue: 0} (Required): The immutability duration for the snapshot, in number of days.
+* **type**: 'Locked' | 'Unlocked' | string (Required): The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period.
 
 ## InnerError
 ### Properties
@@ -323,6 +376,19 @@
 ### Properties
 * **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
 
+## Snapshot
+### Properties
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the snapshot will be created. Extended location cannot be changed.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **location**: string (Required): The geo-location where the resource lives
+* **managedBy**: string (ReadOnly): Unused. Always Null.
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot resource properties.
+* **sku**: [SnapshotSku](#snapshotsku): The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SnapshotProperties
 ### Properties
 * **completionPercent**: int: Percentage complete for the background copy when a resource is created via the CopyStart operation.
@@ -375,6 +441,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

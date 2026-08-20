@@ -9277,5 +9277,125 @@
     },
     "readableScopes": 16,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshGoalResourcesResponse",
+    "properties": {
+      "resourceCount": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Total count of resources under the goal assignment after refresh."
+      },
+      "lastRefreshTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time when the refresh operation was last performed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshGoalResources",
+    "resourceType": "Microsoft.AzureResilienceManagement/goalAssignments",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/836"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGoalResourceRequest",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/840"
+        },
+        "flags": 1,
+        "description": "List of update goal resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GoalResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/565"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/839"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateGoalResourceResponse",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/842"
+        },
+        "flags": 1,
+        "description": "List of update goal resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/839"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateGoalResources",
+    "resourceType": "Microsoft.AzureResilienceManagement/goalAssignments",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/841"
+    },
+    "input": {
+      "$ref": "#/838"
+    }
   }
 ]

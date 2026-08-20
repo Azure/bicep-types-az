@@ -24,6 +24,12 @@
 * **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createInvitation (Microsoft.Confluent/organizations/access@2023-08-22)
+* **Resource**: Microsoft.Confluent/organizations/access
+* **ApiVersion**: 2023-08-22
+* **Input**: [AccessInviteUserAccountModel](#accessinviteuseraccountmodel)
+* **Output**: [InvitationRecord](#invitationrecord)
+
 ## Function listClusters (Microsoft.Confluent/organizations/access@2023-08-22)
 * **Resource**: Microsoft.Confluent/organizations/access
 * **ApiVersion**: 2023-08-22
@@ -59,6 +65,30 @@
 * **ApiVersion**: 2023-08-22
 * **Input**: [ListAccessRequestModel](#listaccessrequestmodel)
 * **Output**: [AccessListUsersSuccessResponse](#accesslistuserssuccessresponse)
+
+## Function orgvalidate (Microsoft.Confluent/validations@2023-08-22)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2023-08-22
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [OrganizationResource](#organizationresource)
+
+## Function orgvalidateV2 (Microsoft.Confluent/validations@2023-08-22)
+* **Resource**: Microsoft.Confluent/validations
+* **ApiVersion**: 2023-08-22
+* **Input**: [OrganizationResource](#organizationresource)
+* **Output**: [ValidationResponse](#validationresponse)
+
+## AccessInvitedUserDetails
+### Properties
+* **auth_type**: string: Auth type of the user
+* **invitedEmail**: string: UPN/Email of the user who is being invited
+
+## AccessInviteUserAccountModel
+### Properties
+* **email**: string: Email of the logged in user
+* **invitedUserDetails**: [AccessInvitedUserDetails](#accessinviteduserdetails): Details of the user who is being invited
+* **organizationId**: string: Id of the organization
+* **upn**: string: Upn of the logged in user
 
 ## AccessListClusterSuccessResponse
 ### Properties
@@ -219,6 +249,16 @@
 * **termId**: string {maxLength: 50}: Offer Plan Term Id
 * **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
 
+## OrganizationResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **location**: string: Location of Organization resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [OrganizationResourceProperties](#organizationresourceproperties) (Required): Organization resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
+* **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
+* **type**: string (ReadOnly): The type of the resource.
+
 ## OrganizationResourceProperties
 ### Properties
 * **createdTime**: string (ReadOnly): The creation time of the resource.
@@ -228,6 +268,11 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provision states for confluent RP
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [UserDetail](#userdetail) (Required): Subscriber detail
+
+## OrganizationResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## OrganizationResourceTags
 ### Properties
@@ -276,4 +321,13 @@
 * **id**: string: Id of the user
 * **kind**: string: Type of account
 * **metadata**: [MetadataEntity](#metadataentity): Metadata of the record
+
+## ValidationResponse
+### Properties
+* **info**: [ValidationResponseInfo](#validationresponseinfo): Info from the response
+
+## ValidationResponseInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

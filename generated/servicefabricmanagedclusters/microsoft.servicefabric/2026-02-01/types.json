@@ -4766,5 +4766,138 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedMaintenanceWindowStatus",
+    "properties": {
+      "isWindowEnabled": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If maintenance window is enabled on this cluster."
+      },
+      "isRegionReady": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Indicates if the region is ready to configure maintenance windows."
+      },
+      "isWindowActive": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If maintenance window is active."
+      },
+      "canApplyUpdates": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "If updates can be applied."
+      },
+      "lastWindowStatusUpdateAtUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window update time in UTC."
+      },
+      "lastWindowStartTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window start time in UTC."
+      },
+      "lastWindowEndTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last window end time in UTC."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMaintenanceWindowStatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2026-02-01",
+    "output": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedAzResiliencyStatus",
+    "properties": {
+      "baseResourceStatus": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 0,
+        "description": "List of Managed VM Sizes for Service Fabric Managed Clusters."
+      },
+      "isClusterZoneResilient": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "URL to get the next set of Managed VM Sizes if there are any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceAzStatus",
+    "properties": {
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM Size properties."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM Size id."
+      },
+      "isZoneResilient": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "VM Size name."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Zone resiliency status details for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/326"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getazresiliencystatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2026-02-01",
+    "output": {
+      "$ref": "#/325"
+    }
   }
 ]

@@ -13,6 +13,17 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function attach (Microsoft.ContainerInstance/containerGroups/containers@2020-11-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2020-11-01
+* **Output**: [ContainerAttachResponse](#containerattachresponse)
+
+## Function exec (Microsoft.ContainerInstance/containerGroups/containers@2020-11-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups/containers
+* **ApiVersion**: 2020-11-01
+* **Input**: [ContainerExecRequest](#containerexecrequest)
+* **Output**: [ContainerExecResponse](#containerexecresponse)
+
 ## AzureFileVolume
 ### Properties
 * **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
@@ -30,9 +41,29 @@
 * **name**: string (Required): The user-provided name of the container instance.
 * **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
+## ContainerAttachResponse
+### Properties
+* **password**: string: The password to the output stream from the attach. Send as an Authorization header value when connecting to the websocketUri.
+* **webSocketUri**: string: The uri for the output stream from the attach.
+
 ## ContainerExec
 ### Properties
 * **command**: string[]: The commands to execute within the container.
+
+## ContainerExecRequest
+### Properties
+* **command**: string: The command to be executed.
+* **terminalSize**: [ContainerExecRequestTerminalSize](#containerexecrequestterminalsize): The size of the terminal.
+
+## ContainerExecRequestTerminalSize
+### Properties
+* **cols**: int: The column size of the terminal
+* **rows**: int: The row size of the terminal
+
+## ContainerExecResponse
+### Properties
+* **password**: string: The password to start the exec command.
+* **webSocketUri**: string: The uri for the exec websocket.
 
 ## ContainerGroupDiagnostics
 ### Properties

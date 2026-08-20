@@ -782,11 +782,201 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ValidateResult",
+    "properties": {
+      "linkerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The linker name."
+      },
+      "isConnectionAvailable": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "A boolean value indicating whether the connection is available or not"
+      },
+      "reportStartTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time of the validation report."
+      },
+      "reportEndTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end time of the validation report."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id of the linker source application."
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of target service."
+      },
+      "authType": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      },
+      "validationDetail": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The detail of validation result"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "systemAssignedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "userAssignedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "servicePrincipalSecret"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "servicePrincipalCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secret"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResultItem",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The validation item name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of validation item"
+      },
+      "result": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The result of validation"
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message of validation result"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code of validation result"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateLinker",
+    "resourceType": "Microsoft.ServiceLinker/linkers",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SourceConfigurationResult",
     "properties": {
       "configurations": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "The configuration properties for source resource."
@@ -816,7 +1006,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/64"
+      "$ref": "#/78"
     }
   },
   {
@@ -825,7 +1015,7 @@
     "resourceType": "Microsoft.ServiceLinker/linkers",
     "apiVersion": "2022-01-01-preview",
     "output": {
-      "$ref": "#/63"
+      "$ref": "#/77"
     }
   }
 ]

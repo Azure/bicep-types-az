@@ -5452,5 +5452,71 @@
     "output": {
       "$ref": "#/533"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID of the private link resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the private link resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      },
+      "groupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The group ID of the resource."
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/540"
+        },
+        "flags": 0,
+        "description": "RequiredMembers of the resource"
+      },
+      "privateLinkServiceID": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The private link service ID of the resource, this field is exposed only to NRP internally."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolvePrivateLinkServiceId",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2020-11-01",
+    "output": {
+      "$ref": "#/539"
+    },
+    "input": {
+      "$ref": "#/539"
+    }
   }
 ]

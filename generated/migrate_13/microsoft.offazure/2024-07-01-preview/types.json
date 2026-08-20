@@ -12645,11 +12645,350 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SasUriResponse",
+    "properties": {
+      "jobArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the job ARM ID."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SAS URI."
+      },
+      "importType": {
+        "type": {
+          "$ref": "#/849"
+        },
+        "flags": 0,
+        "description": "Gets or sets the import type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureMigrateCSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RVToolsXlsx"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/847"
+      },
+      {
+        "$ref": "#/848"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteImportedMachines",
+    "resourceType": "Microsoft.OffAzure/importSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/846"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportUri",
+    "resourceType": "Microsoft.OffAzure/importSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/846"
+    },
+    "input": {
+      "$ref": "#/846"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importUri",
+    "resourceType": "Microsoft.OffAzure/importSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/846"
+    },
+    "input": {
+      "$ref": "#/846"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorSummaryRequest",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Appliance Name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteErrorSummary",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Appliance Name."
+      },
+      "discoveryScopeErrorSummaries": {
+        "type": {
+          "$ref": "#/855"
+        },
+        "flags": 1,
+        "description": "Gets the error message."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to fetch more models."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveryScopeErrorSummary",
+    "properties": {
+      "affectedResourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Gets or sets the affected resource type."
+      },
+      "affectedObjectsCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "Count of affected objects."
+      },
+      "discoveryScope": {
+        "type": {
+          "$ref": "#/860"
+        },
+        "flags": 1,
+        "description": "Gets or sets the count of affected objects."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppsAndRoles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DependencyMap"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StaticData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLServerConnectionInfo"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/856"
+      },
+      {
+        "$ref": "#/857"
+      },
+      {
+        "$ref": "#/858"
+      },
+      {
+        "$ref": "#/859"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "errorSummary",
+    "resourceType": "Microsoft.OffAzure/masterSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/853"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshArcStatus",
+    "resourceType": "Microsoft.OffAzure/masterSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeErrorSummary",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerSiteUsageResponse",
+    "properties": {
+      "runAsAccounts": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "Gets or sets the number of run as accounts in the site."
+      },
+      "serverCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "Gets or sets the number of servers part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeusage",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/864"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportApplications",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportMachineErrorsRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/868"
+        },
+        "flags": 0,
+        "description": "Gets or sets the properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestExportMachineErrorsProperties",
+    "properties": {
+      "discoveryScope": {
+        "type": {
+          "$ref": "#/873"
+        },
+        "flags": 0,
+        "description": "Gets or sets the discovery scope."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppsAndRoles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DependencyMap"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StaticData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLServerConnectionInfo"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/869"
+      },
+      {
+        "$ref": "#/870"
+      },
+      {
+        "$ref": "#/871"
+      },
+      {
+        "$ref": "#/872"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportMachineErrors",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/867"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SiteHealthSummaryCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/854"
+          "$ref": "#/883"
         },
         "flags": 1,
         "description": "Gets the list of SiteHealthSummary."
@@ -12739,14 +13078,14 @@
       },
       "affectedResources": {
         "type": {
-          "$ref": "#/848"
+          "$ref": "#/877"
         },
         "flags": 0,
         "description": "Gets or sets the affected resources."
       },
       "fabricLayoutUpdateSources": {
         "type": {
-          "$ref": "#/853"
+          "$ref": "#/882"
         },
         "flags": 0,
         "description": "Gets or sets sources of the exception."
@@ -12775,13 +13114,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/849"
+        "$ref": "#/878"
       },
       {
-        "$ref": "#/850"
+        "$ref": "#/879"
       },
       {
-        "$ref": "#/851"
+        "$ref": "#/880"
       },
       {
         "$ref": "#/2"
@@ -12791,13 +13130,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/852"
+      "$ref": "#/881"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/847"
+      "$ref": "#/876"
     }
   },
   {
@@ -12806,7 +13145,517 @@
     "resourceType": "Microsoft.OffAzure/serverSites",
     "apiVersion": "2024-07-01-preview",
     "output": {
-      "$ref": "#/846"
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSite",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerSiteUsage",
+    "properties": {
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of run as accounts in the site."
+      },
+      "serverCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of servers part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/886"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateMachineDepMapStatus",
+    "properties": {
+      "machines": {
+        "type": {
+          "$ref": "#/890"
+        },
+        "flags": 0,
+        "description": "Gets or sets the machine collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapMachineInput",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the ARM id of the machine."
+      },
+      "isDependencyMapToBeEnabled": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether dependency mapping is to be enabled or not."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/889"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateDependencyMapStatus",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/888"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineMetadataCollection",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/895"
+        },
+        "flags": 1,
+        "description": "The list of Machine MetaData."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineMetadata",
+    "properties": {
+      "machineArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "arm id of the machine."
+      },
+      "dependencyMapping": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "value representing state of dependency mapping (enabled/disabled)."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/894"
+        },
+        "flags": 1,
+        "description": "machine tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineMetadataTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/893"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateProperties",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/892"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsClientGroupMembersRequest",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "id of machine"
+      },
+      "processGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "process group name"
+      },
+      "processName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "name of process"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "end time"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/898"
+        },
+        "flags": 0,
+        "description": "optional filters"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsDependencyMapRequestFilters",
+    "properties": {
+      "machineIds": {
+        "type": {
+          "$ref": "#/899"
+        },
+        "flags": 0,
+        "description": "array of machine ids"
+      },
+      "processIds": {
+        "type": {
+          "$ref": "#/900"
+        },
+        "flags": 0,
+        "description": "array of process Ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clientGroupMembers",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/897"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsExportDependenciesRequest",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "end time"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDependencies",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/902"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsScopeMapRequest",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "end time"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/898"
+        },
+        "flags": 0,
+        "description": "optional filters"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCoarseMap",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/904"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsSingleMachineDetailedMapRequest",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "id of machine"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "end time"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/898"
+        },
+        "flags": 0,
+        "description": "optional filters"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDetailedMap",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/906"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DependencyMapServiceMapextensionsServerGroupMembersRequest",
+    "properties": {
+      "serverPort": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "port of server"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "end time"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/898"
+        },
+        "flags": 0,
+        "description": "optional filters"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "serverGroupMembers",
+    "resourceType": "Microsoft.OffAzure/serverSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/908"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeErrorSummary",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmwareSiteUsage",
+    "properties": {
+      "machineCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of machines discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of run as accounts in the site."
+      },
+      "vCenterCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of vCenters part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeusage",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/911"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportApplications",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportMachineErrors",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/867"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportMachinesRequest",
+    "properties": {
+      "filter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "filter options."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportMachines",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/915"
     }
   },
   {
@@ -12815,7 +13664,292 @@
     "resourceType": "Microsoft.OffAzure/vmwareSites",
     "apiVersion": "2024-07-01-preview",
     "output": {
-      "$ref": "#/846"
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/911"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clientGroupMembers",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/897"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDependencies",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/902"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCoarseMap",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/904"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDetailedMap",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/906"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "serverGroupMembers",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/908"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateDependencyMapStatus",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/888"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateProperties",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/892"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateMachineRunAsAccount",
+    "properties": {
+      "machines": {
+        "type": {
+          "$ref": "#/928"
+        },
+        "flags": 0,
+        "description": "Gets or sets the machine collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunAsAccountMachineInput",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the ARM id of the machine."
+      },
+      "runAsAccountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "run as AccountId"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/927"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateRunAsAccount",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/926"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateMachineTags",
+    "properties": {
+      "machines": {
+        "type": {
+          "$ref": "#/933"
+        },
+        "flags": 0,
+        "description": "Gets or sets the machine collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TagsMachineInput",
+    "properties": {
+      "machineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the ARM id of the machine."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/932"
+        },
+        "flags": 0,
+        "description": "run as AccountId"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TagsMachineInputTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/931"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateTags",
+    "resourceType": "Microsoft.OffAzure/vmwareSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/930"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeErrorSummary",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HypervSiteUsage",
+    "properties": {
+      "machineCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of machines discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of run as accounts in the site."
+      },
+      "hostCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of hosts part of the site."
+      },
+      "clusterCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of clusters part of the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "computeusage",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/936"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportApplications",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportMachineErrors",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/867"
     }
   },
   {
@@ -12824,7 +13958,392 @@
     "resourceType": "Microsoft.OffAzure/hypervSites",
     "apiVersion": "2024-07-01-preview",
     "output": {
-      "$ref": "#/846"
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/936"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clientGroupMembers",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/897"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportDependencies",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/902"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCoarseMap",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/904"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDetailedMap",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/906"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "serverGroupMembers",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/908"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateDependencyMapStatus",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/888"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateProperties",
+    "resourceType": "Microsoft.OffAzure/hypervSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/892"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "errorSummary",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/853"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportSqlServerErrors",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportSqlServersRequest",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Appliance Name."
+      },
+      "filter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "filter options."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportSqlServers",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/951"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlSiteRefreshBody",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the appliance name of the agent in the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/953"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlSiteUsage",
+    "properties": {
+      "serverCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of servers discovered in the site."
+      },
+      "databaseCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of databases discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of run as accounts in the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/955"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "errorSummary",
+    "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/854"
+    },
+    "input": {
+      "$ref": "#/853"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportWebAppsRequest",
+    "properties": {
+      "filter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "filter options."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportInventory",
+    "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/958"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProxySiteRefreshBody",
+    "properties": {
+      "applianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the appliance name of the agent in the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/960"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebAppSiteUsage",
+    "properties": {
+      "webServerCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of web servers discovered in the site."
+      },
+      "webApplicationCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of web applications discovered in the site."
+      },
+      "runAsAccountCount": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Gets or sets the number of run as accounts in the site."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "summary",
+    "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/962"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebAppPropertiesCollection",
+    "properties": {
+      "webApps": {
+        "type": {
+          "$ref": "#/967"
+        },
+        "flags": 0,
+        "description": "Gets or sets the list of web app properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebAppProperties",
+    "properties": {
+      "webAppArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the arm id of the web app."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/966"
+        },
+        "flags": 0,
+        "description": "Gets or sets Tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebAppPropertiesTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/965"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateProperties",
+    "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    },
+    "input": {
+      "$ref": "#/964"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.OffAzure/vmwareSites/machines",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.OffAzure/vmwareSites/machines",
+    "apiVersion": "2024-07-01-preview",
+    "output": {
+      "$ref": "#/613"
     }
   }
 ]

@@ -70,6 +70,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL/locations@2022-03-08-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2022-03-08-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
+## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforPostgreSQL/locations@2022-03-08-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/locations
+* **ApiVersion**: 2022-03-08-preview
+* **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
+* **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
 ## AdministratorPropertiesForAddOrAdministratorProperties
 ### Properties
 * **objectId**: string (ReadOnly): The objectId of the Active Directory administrator.
@@ -88,6 +100,11 @@
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
 
 ## ConfigurationProperties
 ### Properties
@@ -114,6 +131,11 @@
 * **primaryUserAssignedIdentityId**: string: Resource Id for the User assigned identity to be used for data encryption for primary server.
 * **type**: 'AzureKeyVault' | 'SystemAssigned' | string: Data encryption type to depict if it is System assigned vs Azure Key vault.
 
+## DelegatedSubnetUsage
+### Properties
+* **subnetName**: string (ReadOnly): Name of the delegated subnet for which IP addresses are in use
+* **usage**: int (ReadOnly): Number of IP addresses used by the delegated subnet
+
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
@@ -131,6 +153,14 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **name**: string (ReadOnly): name of the PostgreSQL server.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+* **type**: string (ReadOnly): type of the server
 
 ## Network
 ### Properties
@@ -203,4 +233,14 @@
 ### Properties
 * **clientId**: string: the client identifier of the Service Principal which this identity represents.
 * **principalId**: string: the object identifier of the Service Principal which this identity represents.
+
+## VirtualNetworkSubnetUsageParameter
+### Properties
+* **virtualNetworkArmResourceId**: string: Virtual network resource id.
+
+## VirtualNetworkSubnetUsageResult
+### Properties
+* **delegatedSubnetsUsage**: [DelegatedSubnetUsage](#delegatedsubnetusage)[] (ReadOnly)
+* **location**: string (ReadOnly): location of the delegated subnet usage
+* **subscriptionId**: string (ReadOnly): subscriptionId of the delegated subnet usage
 

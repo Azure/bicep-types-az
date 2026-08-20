@@ -333,6 +333,11 @@
 * **ApiVersion**: 2020-06-01-preview
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
 
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2020-06-01-preview
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
 ## ApiProperties
 ### Properties
 * **serverVersion**: '3.2' | '3.6' | string: Describes the ServerVersion of an a MongoDB account.
@@ -559,6 +564,11 @@
 * **primaryMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-write key.
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
+
+## DatabaseAccountListReadOnlyKeysResult
+### Properties
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
 ## DatabaseRestoreResource

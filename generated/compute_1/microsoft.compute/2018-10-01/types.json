@@ -6386,5 +6386,469 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureParameters",
+    "properties": {
+      "vhdPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The captured virtual hard disk's name prefix."
+      },
+      "destinationContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The destination container name."
+      },
+      "overwriteVhds": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Specifies whether to overwrite the destination virtual hard disk, in case of conflict."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineCaptureResult",
+    "properties": {
+      "$schema": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the schema of the captured virtual machine"
+      },
+      "contentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the version of the content"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "parameters of the captured virtual machine"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/497"
+        },
+        "flags": 2,
+        "description": "a list of resource items of the captured virtual machine"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "capture",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/496"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineReimageParameters",
+    "properties": {
+      "tempDisk": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInput",
+    "properties": {
+      "commandId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command id."
+      },
+      "script": {
+        "type": {
+          "$ref": "#/501"
+        },
+        "flags": 0,
+        "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 0,
+        "description": "The run command parameters."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandInputParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The run command parameter value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/502"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/505"
+        },
+        "flags": 0,
+        "description": "Run command operation response."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/504"
+    },
+    "input": {
+      "$ref": "#/500"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/508"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/510"
+        },
+        "flags": 1,
+        "description": "The virtual machine scale set instance ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetReimageParameters",
+    "properties": {
+      "instanceIds": {
+        "type": {
+          "$ref": "#/512"
+        },
+        "flags": 0,
+        "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
+      },
+      "tempDisk": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineScaleSetVMReimageParameters",
+    "properties": {
+      "tempDisk": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/504"
+    },
+    "input": {
+      "$ref": "#/500"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestRateByIntervalInput",
+    "properties": {
+      "intervalLength": {
+        "type": {
+          "$ref": "#/520"
+        },
+        "flags": 1,
+        "description": "Interval value in minutes used to create LogAnalytics call rate logs."
+      },
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreeMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FiveMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThirtyMins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SixtyMins"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/518"
+      },
+      {
+        "$ref": "#/519"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOperationResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/522"
+        },
+        "flags": 2,
+        "description": "LogAnalyticsOutput"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAnalyticsOutput",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Output file Uri path to blob container."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRequestRateByInterval",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/521"
+    },
+    "input": {
+      "$ref": "#/515"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottledRequestsInput",
+    "properties": {
+      "blobContainerSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to."
+      },
+      "fromTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "From time of the query"
+      },
+      "toTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "To time of the query"
+      },
+      "groupByThrottlePolicy": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Throttle Policy applied."
+      },
+      "groupByOperationName": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Operation Name."
+      },
+      "groupByResourceName": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Group query result by Resource Name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getThrottledRequests",
+    "resourceType": "Microsoft.Compute/locations/logAnalytics",
+    "apiVersion": "2018-10-01",
+    "output": {
+      "$ref": "#/521"
+    },
+    "input": {
+      "$ref": "#/524"
+    }
   }
 ]

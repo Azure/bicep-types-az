@@ -11028,5 +11028,1987 @@
     },
     "readableScopes": 4,
     "writableScopes": 4
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationsDefinition",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the operation."
+      },
+      "isDataAction": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Indicates whether the operation applies to data-plane."
+      },
+      "origin": {
+        "type": {
+          "$ref": "#/936"
+        },
+        "flags": 0,
+        "description": "The origin."
+      },
+      "display": {
+        "type": {
+          "$ref": "#/937"
+        },
+        "flags": 1,
+        "description": "Display information of the operation."
+      },
+      "actionType": {
+        "type": {
+          "$ref": "#/940"
+        },
+        "flags": 0,
+        "description": "The action type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "Anything"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/933"
+      },
+      {
+        "$ref": "#/934"
+      },
+      {
+        "$ref": "#/935"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationsDefinitionDisplay",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The provider."
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The operation."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The description."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/938"
+      },
+      {
+        "$ref": "#/939"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/932"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateOperations",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/941"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckinManifestParams",
+    "properties": {
+      "environment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The environment supplied to the checkin manifest operation."
+      },
+      "baselineArmManifestLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The baseline ARM manifest location supplied to the checkin manifest operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckinManifestInfo",
+    "properties": {
+      "isCheckedIn": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "Whether the manifest is checked in."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The status message."
+      },
+      "pullRequest": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The pull request."
+      },
+      "commitId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The commit id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkinManifest",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/944"
+    },
+    "input": {
+      "$ref": "#/943"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifest",
+    "properties": {
+      "providerAuthentication": {
+        "type": {
+          "$ref": "#/947"
+        },
+        "flags": 0,
+        "description": "The provider authentication."
+      },
+      "providerAuthorizations": {
+        "type": {
+          "$ref": "#/949"
+        },
+        "flags": 0,
+        "description": "The provider authorizations."
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The namespace."
+      },
+      "services": {
+        "type": {
+          "$ref": "#/950"
+        },
+        "flags": 0,
+        "description": "The services."
+      },
+      "serviceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The service name."
+      },
+      "providerVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The provider version."
+      },
+      "providerType": {
+        "type": {
+          "$ref": "#/959"
+        },
+        "flags": 0,
+        "description": "The provider type."
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/960"
+        },
+        "flags": 0,
+        "description": "The required features."
+      },
+      "featuresRule": {
+        "type": {
+          "$ref": "#/961"
+        },
+        "flags": 0,
+        "description": "The features rule."
+      },
+      "requestHeaderOptions": {
+        "type": {
+          "$ref": "#/965"
+        },
+        "flags": 0,
+        "description": "The request header options."
+      },
+      "resourceTypes": {
+        "type": {
+          "$ref": "#/1073"
+        },
+        "flags": 0,
+        "description": "The resource types."
+      },
+      "management": {
+        "type": {
+          "$ref": "#/1074"
+        },
+        "flags": 0,
+        "description": "The resource provider management."
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/1086"
+        },
+        "flags": 0,
+        "description": "The capabilities."
+      },
+      "crossTenantTokenValidation": {
+        "type": {
+          "$ref": "#/1089"
+        },
+        "flags": 0,
+        "description": "The cross tenant token validation."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "The metadata."
+      },
+      "globalNotificationEndpoints": {
+        "type": {
+          "$ref": "#/1090"
+        },
+        "flags": 0,
+        "description": "The global notification endpoints."
+      },
+      "reRegisterSubscriptionMetadata": {
+        "type": {
+          "$ref": "#/1091"
+        },
+        "flags": 0,
+        "description": "The re-register subscription metadata."
+      },
+      "enableTenantLinkedNotification": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Whether tenant linked notification is enabled."
+      },
+      "notifications": {
+        "type": {
+          "$ref": "#/1092"
+        },
+        "flags": 0,
+        "description": "The notifications."
+      },
+      "linkedNotificationRules": {
+        "type": {
+          "$ref": "#/1093"
+        },
+        "flags": 0,
+        "description": "The linked notification rules."
+      },
+      "resourceProviderAuthorizationRules": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "The resource provider authorization rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestProviderAuthentication",
+    "properties": {
+      "allowedAudiences": {
+        "type": {
+          "$ref": "#/948"
+        },
+        "flags": 1,
+        "description": "The allowed audiences."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/135"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hidden"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistrationFree"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LegacyRegistrationRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TenantOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AuthorizationFree"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/951"
+      },
+      {
+        "$ref": "#/952"
+      },
+      {
+        "$ref": "#/953"
+      },
+      {
+        "$ref": "#/954"
+      },
+      {
+        "$ref": "#/955"
+      },
+      {
+        "$ref": "#/956"
+      },
+      {
+        "$ref": "#/957"
+      },
+      {
+        "$ref": "#/958"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestFeaturesRule",
+    "properties": {
+      "requiredFeaturesPolicy": {
+        "type": {
+          "$ref": "#/964"
+        },
+        "flags": 1,
+        "description": "The required feature policy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/962"
+      },
+      {
+        "$ref": "#/963"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestRequestHeaderOptions",
+    "properties": {
+      "optInHeaders": {
+        "type": {
+          "$ref": "#/978"
+        },
+        "flags": 0,
+        "description": "The opt in headers."
+      },
+      "optOutHeaders": {
+        "type": {
+          "$ref": "#/981"
+        },
+        "flags": 0,
+        "description": "The opt out headers."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedUserToken"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedAuxiliaryTokens"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnboundedClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroupAncestorsEncoded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkVnetTrafficTag"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroupLocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientPrincipalNameEncoded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MSIResourceIdEncoded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/966"
+      },
+      {
+        "$ref": "#/967"
+      },
+      {
+        "$ref": "#/968"
+      },
+      {
+        "$ref": "#/969"
+      },
+      {
+        "$ref": "#/970"
+      },
+      {
+        "$ref": "#/971"
+      },
+      {
+        "$ref": "#/972"
+      },
+      {
+        "$ref": "#/973"
+      },
+      {
+        "$ref": "#/974"
+      },
+      {
+        "$ref": "#/975"
+      },
+      {
+        "$ref": "#/976"
+      },
+      {
+        "$ref": "#/977"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemDataCreatedByLastModifiedBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/979"
+      },
+      {
+        "$ref": "#/980"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceType",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type name."
+      },
+      "routingType": {
+        "type": {
+          "$ref": "#/997"
+        },
+        "flags": 0,
+        "description": "The resource routing type."
+      },
+      "additionalOptions": {
+        "type": {
+          "$ref": "#/1000"
+        },
+        "flags": 0,
+        "description": "The additional options."
+      },
+      "crossTenantTokenValidation": {
+        "type": {
+          "$ref": "#/1003"
+        },
+        "flags": 0,
+        "description": "The cross tenant token validation."
+      },
+      "resourceValidation": {
+        "type": {
+          "$ref": "#/1007"
+        },
+        "flags": 0,
+        "description": "The resource validation."
+      },
+      "allowedUnauthorizedActions": {
+        "type": {
+          "$ref": "#/1008"
+        },
+        "flags": 0,
+        "description": "The allowed unauthorized actions."
+      },
+      "allowedUnauthorizedActionsExtensions": {
+        "type": {
+          "$ref": "#/1009"
+        },
+        "flags": 0,
+        "description": "The allowed unauthorized actions extensions."
+      },
+      "authorizationActionMappings": {
+        "type": {
+          "$ref": "#/1010"
+        },
+        "flags": 0,
+        "description": "The authorization action mappings."
+      },
+      "linkedAccessChecks": {
+        "type": {
+          "$ref": "#/1011"
+        },
+        "flags": 0,
+        "description": "The linked access checks."
+      },
+      "defaultApiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The default api version."
+      },
+      "loggingRules": {
+        "type": {
+          "$ref": "#/1012"
+        },
+        "flags": 0,
+        "description": "The logging rules."
+      },
+      "throttlingRules": {
+        "type": {
+          "$ref": "#/1013"
+        },
+        "flags": 0,
+        "description": "The throttling rules."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/1014"
+        },
+        "flags": 0,
+        "description": "The endpoints."
+      },
+      "marketplaceType": {
+        "type": {
+          "$ref": "#/1019"
+        },
+        "flags": 0,
+        "description": "The marketplace type."
+      },
+      "identityManagement": {
+        "type": {
+          "$ref": "#/1020"
+        },
+        "flags": 0,
+        "description": "The identity management."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "The metadata."
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/1027"
+        },
+        "flags": 0,
+        "description": "The required features."
+      },
+      "featuresRule": {
+        "type": {
+          "$ref": "#/1028"
+        },
+        "flags": 0,
+        "description": "The features rule."
+      },
+      "subscriptionStateRules": {
+        "type": {
+          "$ref": "#/1032"
+        },
+        "flags": 0,
+        "description": "The subscription state rules."
+      },
+      "serviceTreeInfos": {
+        "type": {
+          "$ref": "#/1033"
+        },
+        "flags": 0,
+        "description": "The service tree infos."
+      },
+      "requestHeaderOptions": {
+        "type": {
+          "$ref": "#/1034"
+        },
+        "flags": 0,
+        "description": "The request header options."
+      },
+      "skuLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The sku link."
+      },
+      "disallowedActionVerbs": {
+        "type": {
+          "$ref": "#/1051"
+        },
+        "flags": 0,
+        "description": "The disallowed action verbs."
+      },
+      "templateDeploymentPolicy": {
+        "type": {
+          "$ref": "#/1052"
+        },
+        "flags": 0,
+        "description": "The template deployment policy."
+      },
+      "extendedLocations": {
+        "type": {
+          "$ref": "#/1065"
+        },
+        "flags": 0,
+        "description": "The extended locations."
+      },
+      "linkedOperationRules": {
+        "type": {
+          "$ref": "#/1066"
+        },
+        "flags": 0,
+        "description": "The linked operation rules."
+      },
+      "resourceDeletionPolicy": {
+        "type": {
+          "$ref": "#/1070"
+        },
+        "flags": 0,
+        "description": "The resource deletion policy."
+      },
+      "quotaRule": {
+        "type": {
+          "$ref": "#/592"
+        },
+        "flags": 0,
+        "description": "The quota rule."
+      },
+      "notifications": {
+        "type": {
+          "$ref": "#/1071"
+        },
+        "flags": 0,
+        "description": "The notifications."
+      },
+      "linkedNotificationRules": {
+        "type": {
+          "$ref": "#/1072"
+        },
+        "flags": 0,
+        "description": "The linked notification rules."
+      },
+      "resourceProviderAuthorizationRules": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "The resource provider authorization rules."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProxyOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HostBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Extension"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tenant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fanout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocationBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CascadeExtension"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChildFanout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CascadeAuthorizedExtension"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BypassEndpointSelectionOptimization"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocationMapping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceFanout"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/983"
+      },
+      {
+        "$ref": "#/984"
+      },
+      {
+        "$ref": "#/985"
+      },
+      {
+        "$ref": "#/986"
+      },
+      {
+        "$ref": "#/987"
+      },
+      {
+        "$ref": "#/988"
+      },
+      {
+        "$ref": "#/989"
+      },
+      {
+        "$ref": "#/990"
+      },
+      {
+        "$ref": "#/991"
+      },
+      {
+        "$ref": "#/992"
+      },
+      {
+        "$ref": "#/993"
+      },
+      {
+        "$ref": "#/994"
+      },
+      {
+        "$ref": "#/995"
+      },
+      {
+        "$ref": "#/996"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectedAsyncOperationPolling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectedAsyncOperationPollingAuditOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/998"
+      },
+      {
+        "$ref": "#/999"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnsureSecureValidation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PassthroughInsecureToken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1001"
+      },
+      {
+        "$ref": "#/1002"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReservedWords"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProfaneWords"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1004"
+      },
+      {
+        "$ref": "#/1005"
+      },
+      {
+        "$ref": "#/1006"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/454"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddOn"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bypass"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Store"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1015"
+      },
+      {
+        "$ref": "#/1016"
+      },
+      {
+        "$ref": "#/1017"
+      },
+      {
+        "$ref": "#/1018"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeIdentityManagement",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/1026"
+        },
+        "flags": 0,
+        "description": "The type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Actor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DelegatedResourceIdentity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1021"
+      },
+      {
+        "$ref": "#/1022"
+      },
+      {
+        "$ref": "#/1023"
+      },
+      {
+        "$ref": "#/1024"
+      },
+      {
+        "$ref": "#/1025"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeFeaturesRule",
+    "properties": {
+      "requiredFeaturesPolicy": {
+        "type": {
+          "$ref": "#/1031"
+        },
+        "flags": 1,
+        "description": "The required feature policy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1029"
+      },
+      {
+        "$ref": "#/1030"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/529"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRequestHeaderOptions",
+    "properties": {
+      "optInHeaders": {
+        "type": {
+          "$ref": "#/1047"
+        },
+        "flags": 0,
+        "description": "The opt in headers."
+      },
+      "optOutHeaders": {
+        "type": {
+          "$ref": "#/1050"
+        },
+        "flags": 0,
+        "description": "The opt out headers."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedUserToken"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedAuxiliaryTokens"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnboundedClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroupAncestorsEncoded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateLinkVnetTrafficTag"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroupLocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientPrincipalNameEncoded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MSIResourceIdEncoded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1035"
+      },
+      {
+        "$ref": "#/1036"
+      },
+      {
+        "$ref": "#/1037"
+      },
+      {
+        "$ref": "#/1038"
+      },
+      {
+        "$ref": "#/1039"
+      },
+      {
+        "$ref": "#/1040"
+      },
+      {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
+      },
+      {
+        "$ref": "#/1044"
+      },
+      {
+        "$ref": "#/1045"
+      },
+      {
+        "$ref": "#/1046"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemDataCreatedByLastModifiedBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1048"
+      },
+      {
+        "$ref": "#/1049"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeTemplateDeploymentPolicy",
+    "properties": {
+      "capabilities": {
+        "type": {
+          "$ref": "#/1055"
+        },
+        "flags": 1,
+        "description": "The capabilities."
+      },
+      "preflightOptions": {
+        "type": {
+          "$ref": "#/1061"
+        },
+        "flags": 1,
+        "description": "The preflight options."
+      },
+      "preflightNotifications": {
+        "type": {
+          "$ref": "#/1064"
+        },
+        "flags": 0,
+        "description": "The preflight notifications."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preflight"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1053"
+      },
+      {
+        "$ref": "#/1054"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidationRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeploymentRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TestOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegisteredOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1056"
+      },
+      {
+        "$ref": "#/1057"
+      },
+      {
+        "$ref": "#/1058"
+      },
+      {
+        "$ref": "#/1059"
+      },
+      {
+        "$ref": "#/1060"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnregisteredSubscriptions"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1062"
+      },
+      {
+        "$ref": "#/1063"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/545"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/640"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cascade"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Force"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1067"
+      },
+      {
+        "$ref": "#/1068"
+      },
+      {
+        "$ref": "#/1069"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/236"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/605"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/982"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestManagement",
+    "properties": {
+      "schemaOwners": {
+        "type": {
+          "$ref": "#/1075"
+        },
+        "flags": 0,
+        "description": "The schema owners."
+      },
+      "manifestOwners": {
+        "type": {
+          "$ref": "#/1076"
+        },
+        "flags": 0,
+        "description": "The manifest owners."
+      },
+      "authorizationOwners": {
+        "type": {
+          "$ref": "#/1077"
+        },
+        "flags": 0,
+        "description": "The authorization owners."
+      },
+      "incidentRoutingService": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The incident routing service."
+      },
+      "incidentRoutingTeam": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The incident routing team."
+      },
+      "incidentContactEmail": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The incident contact email."
+      },
+      "serviceTreeInfos": {
+        "type": {
+          "$ref": "#/1078"
+        },
+        "flags": 0,
+        "description": "The service tree infos."
+      },
+      "resourceAccessPolicy": {
+        "type": {
+          "$ref": "#/1082"
+        },
+        "flags": 0,
+        "description": "The resource access policy."
+      },
+      "resourceAccessRoles": {
+        "type": {
+          "$ref": "#/1083"
+        },
+        "flags": 0,
+        "description": "The resource access roles."
+      },
+      "expeditedRolloutSubmitters": {
+        "type": {
+          "$ref": "#/1084"
+        },
+        "flags": 0,
+        "description": "List of expedited rollout submitters."
+      },
+      "errorResponseMessageOptions": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "Options for error response messages."
+      },
+      "expeditedRolloutMetadata": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "Metadata for expedited rollout."
+      },
+      "canaryManifestOwners": {
+        "type": {
+          "$ref": "#/1085"
+        },
+        "flags": 0,
+        "description": "List of manifest owners for canary."
+      },
+      "pcCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The profit center code for the subscription."
+      },
+      "profitCenterProgramId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The profit center program id for the subscription."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisReadAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisActionAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1079"
+      },
+      {
+        "$ref": "#/1080"
+      },
+      {
+        "$ref": "#/1081"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/205"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnsureSecureValidation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PassthroughInsecureToken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1087"
+      },
+      {
+        "$ref": "#/1088"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestReRegisterSubscriptionMetadata",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "Whether it's enabled or not."
+      },
+      "concurrencyLimit": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 0,
+        "description": "The concurrency limit."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/236"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/245"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateManifest",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/946"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FrontloadPayload",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1096"
+        },
+        "flags": 1,
+        "description": "Properties of the frontload payload."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FrontloadPayloadProperties",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The operation type."
+      },
+      "providerNamespace": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The provider namespace."
+      },
+      "frontloadLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The frontload location."
+      },
+      "copyFromLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The copy from location."
+      },
+      "environmentType": {
+        "type": {
+          "$ref": "#/1103"
+        },
+        "flags": 1,
+        "description": "The environment type."
+      },
+      "serviceFeatureFlag": {
+        "type": {
+          "$ref": "#/1106"
+        },
+        "flags": 1,
+        "description": "The service feature flag."
+      },
+      "includeResourceTypes": {
+        "type": {
+          "$ref": "#/1107"
+        },
+        "flags": 1,
+        "description": "The resource types to include."
+      },
+      "excludeResourceTypes": {
+        "type": {
+          "$ref": "#/1108"
+        },
+        "flags": 1,
+        "description": "The resource types to exclude."
+      },
+      "overrideManifestLevelFields": {
+        "type": {
+          "$ref": "#/803"
+        },
+        "flags": 1,
+        "description": "The manifest level fields to override."
+      },
+      "overrideEndpointLevelFields": {
+        "type": {
+          "$ref": "#/805"
+        },
+        "flags": 1,
+        "description": "The endpoint level fields to override."
+      },
+      "ignoreFields": {
+        "type": {
+          "$ref": "#/1109"
+        },
+        "flags": 1,
+        "description": "The fields to ignore."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prod"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mooncake"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fairfax"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1097"
+      },
+      {
+        "$ref": "#/1098"
+      },
+      {
+        "$ref": "#/1099"
+      },
+      {
+        "$ref": "#/1100"
+      },
+      {
+        "$ref": "#/1101"
+      },
+      {
+        "$ref": "#/1102"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotCreate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1104"
+      },
+      {
+        "$ref": "#/1105"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateNewRegionFrontloadManifest",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/946"
+    },
+    "input": {
+      "$ref": "#/1095"
+    }
   }
 ]

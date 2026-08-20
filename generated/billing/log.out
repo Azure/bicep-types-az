@@ -1,5 +1,5 @@
 Generating types for 'specification/billing/resource-manager/Microsoft.Billing/Billing/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -21,6 +21,7 @@ warning | Skipping Transactions_ListByInvoiceSection due to required query param
 warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodStartDate"
 warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodEndDate"
 warning | Skipping Transactions_ListByBillingProfile due to required query parameter "type"
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -147,8 +148,11 @@ warning | Skipping Invoices_ListByBillingAccount due to required query parameter
 warning | Skipping Invoices_ListByBillingAccount due to required query parameter "periodEndDate"
 warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodStartDate"
 warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Invoices_DownloadInvoice due to required query parameter "downloadToken"
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodStartDate"
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodEndDate"
+warning | Skipping Invoices_DownloadBillingSubscriptionInvoice due to required query parameter "downloadToken"
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -356,6 +360,7 @@ warning | Skipping Invoices_ListByBillingProfile due to required query parameter
 warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodEndDate"
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodStartDate"
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodEndDate"
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -487,6 +492,7 @@ warning | Skipping Transactions_ListByCustomerName due to required query paramet
 warning | Skipping Transactions_ListByInvoiceSectionName due to required query parameter "startDate"
 warning | Skipping Transactions_ListByInvoiceSectionName due to required query parameter "endDate"
 warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingProperty': Found mismatch between type segments (1) and name segments (0)
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

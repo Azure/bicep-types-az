@@ -55,6 +55,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/troubleshooters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.Help/troubleshooters@2024-03-01-preview)
+* **Resource**: Microsoft.Help/troubleshooters
+* **ApiVersion**: 2024-03-01-preview
+* **Output**: [RestartTroubleshooterResponse](#restarttroubleshooterresponse)
+
 ## AutomatedCheckResult
 ### Properties
 * **result**: string: Insight Article Content
@@ -165,6 +170,10 @@
 * **regex**: string: Regex used for the input validation.
 * **validationErrorMessage**: string: Validation Error Message.
 * **validationScope**: 'GuidFormat' | 'IpAddressFormat' | 'None' | 'NumberOnlyFormat' | 'URLFormat' | string: Validation scope
+
+## RestartTroubleshooterResponse
+### Properties
+* **troubleshooterResourceName**: string (ReadOnly): Updated TroubleshooterResource Name .
 
 ## SearchResult
 ### Properties

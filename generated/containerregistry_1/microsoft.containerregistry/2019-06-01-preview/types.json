@@ -2840,6 +2840,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "scheduleRun",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2019-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/50"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SourceUploadDefinition",
     "properties": {
@@ -2865,7 +2877,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/200"
     }
   },
   {
@@ -2894,7 +2906,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/runs",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/201"
+      "$ref": "#/202"
     }
   },
   {
@@ -2958,7 +2970,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/taskRuns",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/203"
+      "$ref": "#/204"
     }
   },
   {
@@ -3009,7 +3021,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -3037,7 +3049,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/205"
+      "$ref": "#/206"
     }
   }
 ]

@@ -60,6 +60,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function share (Microsoft.Compute/galleries@2020-09-30)
+* **Resource**: Microsoft.Compute/galleries
+* **ApiVersion**: 2020-09-30
+* **Input**: [SharingUpdate](#sharingupdate)
+* **Output**: [SharingUpdate](#sharingupdate)
+
 ## DataDiskImageEncryption
 ### Properties
 * **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
@@ -246,6 +252,11 @@
 ### Properties
 * **ids**: string[]: A list of subscription/tenant ids the gallery is aimed to be shared to.
 * **type**: 'AADTenants' | 'Subscriptions' | string: This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+
+## SharingUpdate
+### Properties
+* **groups**: [SharingProfileGroup](#sharingprofilegroup)[]: A list of sharing profile groups.
+* **operationType**: 'Add' | 'Remove' | 'Reset' | string (Required): This property allows you to specify the operation type of gallery sharing update. <br><br> Possible values are: <br><br> **Add** <br><br> **Remove** <br><br> **Reset**
 
 ## TargetRegion
 ### Properties

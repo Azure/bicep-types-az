@@ -1451,11 +1451,88 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Data Lake Analytics name to check availability for."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 1,
+        "description": "The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeAnalytics/accounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeAnalytics/accounts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInformation",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "The Boolean value of true or false to indicate whether the Data Lake Analytics account name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the Data Lake Analytics account name is not available, if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The message describing why the Data Lake Analytics account name is not available, if nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataLakeAnalytics/locations",
+    "apiVersion": "2019-11-01-preview",
+    "output": {
+      "$ref": "#/113"
+    },
+    "input": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SasTokenInformationListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/118"
         },
         "flags": 2,
         "description": "The results of the list operation."
@@ -1485,7 +1562,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/111"
+      "$ref": "#/117"
     }
   },
   {
@@ -1494,7 +1571,7 @@
     "resourceType": "Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers",
     "apiVersion": "2019-11-01-preview",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/116"
     }
   }
 ]

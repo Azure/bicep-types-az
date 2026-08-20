@@ -87,6 +87,11 @@
 * **reminderNotificationsEnabled**: bool (WriteOnly): Flag to indicate whether sending reminder emails to reviewers are enabled.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateDownloadUri (Microsoft.Authorization/accessReviewHistoryDefinitions/instances@2021-11-16-preview)
+* **Resource**: Microsoft.Authorization/accessReviewHistoryDefinitions/instances
+* **ApiVersion**: 2021-11-16-preview
+* **Output**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)
+
 ## AccessReviewActorIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The identity id

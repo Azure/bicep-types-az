@@ -54,6 +54,12 @@
 * **ApiVersion**: 2020-11-01
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2020-11-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2020-11-01
+* **Input**: [PrivateLinkResource](#privatelinkresource)
+* **Output**: [PrivateLinkResource](#privatelinkresource)
+
 ## AccessProfile
 ### Properties
 * **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
@@ -414,6 +420,15 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkResource
+### Properties
+* **groupId**: string: The group ID of the resource.
+* **id**: string: The ID of the private link resource.
+* **name**: string: The name of the private link resource.
+* **privateLinkServiceID**: string (ReadOnly): The private link service ID of the resource, this field is exposed only to NRP internally.
+* **requiredMembers**: string[]: RequiredMembers of the resource
+* **type**: string: The resource type.
 
 ## PrivateLinkServiceConnectionState
 ### Properties

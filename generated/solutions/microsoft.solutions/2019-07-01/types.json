@@ -1800,6 +1800,153 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UpdateAccessDefinition",
+    "properties": {
+      "approver": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The approver name."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "The JIT request metadata."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      },
+      "subStatus": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitRequestMetadata",
+    "properties": {
+      "originRequestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The origin request id."
+      },
+      "requestorId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The requestor id."
+      },
+      "tenantDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The publisher's tenant name."
+      },
+      "subjectDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subject display name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Elevate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timeout"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
     "name": "ListTokenRequest",
     "properties": {
       "authorizationAudience": {
@@ -1811,7 +1958,7 @@
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "The user assigned identities."
@@ -1830,7 +1977,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "The array of managed identity tokens."
@@ -1895,7 +2042,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/147"
+      "$ref": "#/160"
     }
   },
   {
@@ -1904,10 +2051,10 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2019-07-01",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/159"
     },
     "input": {
-      "$ref": "#/144"
+      "$ref": "#/157"
     }
   }
 ]
